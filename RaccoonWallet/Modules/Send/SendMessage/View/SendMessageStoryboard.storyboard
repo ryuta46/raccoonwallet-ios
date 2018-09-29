@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Send Message View Controller-->
+        <scene sceneID="4uP-dw-sQY">
+            <objects>
+                <viewController storyboardIdentifier="SendMessageView" modalPresentationStyle="currentContext" id="0N3-Wq-2vd" customClass="SendMessageViewController" customModule="RaccoonWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="right" id="mFq-7D-Phs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yW4-RM-Ybf">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="F2l-8S-JMg">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="m3p-VH-lfb"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="hHR-L6-eWM"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F9O-2P-tcR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8k-WH-Woz">
+                                <rect key="frame" x="4" y="72" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3kB-83-0m3" firstAttribute="trailing" secondItem="F9O-2P-tcR" secondAttribute="trailing" id="0hX-sW-vro"/>
+                            <constraint firstItem="F9O-2P-tcR" firstAttribute="leading" secondItem="3kB-83-0m3" secondAttribute="leading" id="6p4-pg-hyl"/>
+                            <constraint firstItem="3kB-83-0m3" firstAttribute="bottom" secondItem="F9O-2P-tcR" secondAttribute="bottom" id="MFM-GD-i1T"/>
+                            <constraint firstItem="F9O-2P-tcR" firstAttribute="top" secondItem="yW4-RM-Ybf" secondAttribute="bottom" id="RRM-XU-CEN"/>
+                            <constraint firstItem="H8k-WH-Woz" firstAttribute="top" secondItem="yW4-RM-Ybf" secondAttribute="bottom" constant="8" id="kvK-mc-IQP"/>
+                            <constraint firstItem="yW4-RM-Ybf" firstAttribute="leading" secondItem="3kB-83-0m3" secondAttribute="leading" id="mGU-0W-Zhy"/>
+                            <constraint firstItem="H8k-WH-Woz" firstAttribute="leading" secondItem="3kB-83-0m3" secondAttribute="leading" constant="4" id="mNy-KN-qg3"/>
+                            <constraint firstItem="yW4-RM-Ybf" firstAttribute="top" secondItem="3kB-83-0m3" secondAttribute="top" id="mp7-nj-Ant"/>
+                            <constraint firstItem="yW4-RM-Ybf" firstAttribute="trailing" secondItem="3kB-83-0m3" secondAttribute="trailing" id="xgs-Ob-ub0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3kB-83-0m3"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="MFM-GD-i1T" id="JGR-1w-J4f"/>
+                        <outlet property="cancel" destination="m3p-VH-lfb" id="mJ9-zt-oLm"/>
+                        <outlet property="messageInput" destination="F9O-2P-tcR" id="QuA-md-oGh"/>
+                        <outlet property="navigationBar" destination="yW4-RM-Ybf" id="cwb-wH-UN2"/>
+                        <outlet property="ok" destination="hHR-L6-eWM" id="1LT-Vu-Onj"/>
+                        <outlet property="placeholder" destination="H8k-WH-Woz" id="trm-kE-AQT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htF-N7-RCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354.39999999999998" y="63.418290854572717"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,21 @@
+//
+//  <%= module_name %>Presenter.swift
+//  RaccoonWallet
+//
+//  Created by Taizo Kusuda on <%= date %>.
+//  Copyright © 2018年 T TECH, LIMITED LIABILITY CO. All rights reserved.
+//
+
+import Foundation
+
+class <%= module_name %>Presenter: BasePresenter {
+    weak var view: <%= module_name %>View?
+    var interactor: <%= module_name %>UseCase!
+    var router: <%= module_name %>Wireframe!
+}
+
+extension <%= module_name %>Presenter: <%= module_name %>Presentation {
+}
+
+extension <%= module_name %>Presenter: <%= module_name %>InteractorOutput {
+}

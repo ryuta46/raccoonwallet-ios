@@ -1,0 +1,20 @@
+//
+//  <%= module_name %>ViewController.swift
+//  RaccoonWallet
+//
+//  Created by Taizo Kusuda on <%= date %>.
+//  Copyright © 2018年 T TECH, LIMITED LIABILITY CO. All rights reserved.
+//
+
+import UIKit
+
+class <%= module_name %>ViewController: BaseViewController {
+    var presenter: <%= module_name %>Presentation! { didSet {basePresenter = presenter} }
+    
+    override func setup() {
+        super.setup()
+    }
+}
+
+extension <%= module_name %>ViewController: <%= module_name %>View {
+}

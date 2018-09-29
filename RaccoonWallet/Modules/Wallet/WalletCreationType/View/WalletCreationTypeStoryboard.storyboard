@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wallet Creation Type View Controller-->
+        <scene sceneID="4uP-dw-sQY">
+            <objects>
+                <viewController storyboardIdentifier="WalletCreationTypeView" id="0N3-Wq-2vd" customClass="WalletCreationTypeViewController" customModule="RaccoonWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mtQ-k8-Vb7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pkx-uy-i9X">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3UE-Qw-Rj4" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="16" width="288" height="207"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_new_card" translatesAutoresizingMaskIntoConstraints="NO" id="mhC-1X-gCs">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="135"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mhC-1X-gCs" secondAttribute="height" multiplier="656:308" id="VJI-Zl-u4h"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KB-S3-BkK" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                                <rect key="frame" x="64" y="151" width="160" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="kVK-JU-db1"/>
+                                                </constraints>
+                                                <state key="normal" title="Create New Wallet"/>
+                                                <connections>
+                                                    <action selector="onTouchedNewButton:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="uGd-y1-n8G"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="8KB-S3-BkK" secondAttribute="bottom" constant="16" id="4yR-JO-3tv"/>
+                                            <constraint firstAttribute="trailing" secondItem="8KB-S3-BkK" secondAttribute="trailing" constant="64" id="5NH-0c-Bm4"/>
+                                            <constraint firstAttribute="trailing" secondItem="mhC-1X-gCs" secondAttribute="trailing" id="AtP-x7-RIv"/>
+                                            <constraint firstItem="mhC-1X-gCs" firstAttribute="leading" secondItem="3UE-Qw-Rj4" secondAttribute="leading" id="a2U-DD-fAH"/>
+                                            <constraint firstItem="8KB-S3-BkK" firstAttribute="top" secondItem="mhC-1X-gCs" secondAttribute="bottom" constant="16" id="fKN-EH-BjR"/>
+                                            <constraint firstItem="mhC-1X-gCs" firstAttribute="top" secondItem="3UE-Qw-Rj4" secondAttribute="top" id="inT-qt-cWd"/>
+                                            <constraint firstItem="8KB-S3-BkK" firstAttribute="leading" secondItem="3UE-Qw-Rj4" secondAttribute="leading" constant="64" id="ina-rF-Eo3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u5V-JF-nQw" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="239" width="288" height="207.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_login_card" translatesAutoresizingMaskIntoConstraints="NO" id="nim-59-vrj">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="135.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="nim-59-vrj" secondAttribute="height" multiplier="656:308" id="GQk-S1-XiW"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtW-LY-62m" customClass="BlueButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                                <rect key="frame" x="64" y="151.5" width="160" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="ASI-Au-vBP"/>
+                                                </constraints>
+                                                <state key="normal" title="LOGIN"/>
+                                                <connections>
+                                                    <action selector="onTouchedImportButton:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="T9k-if-xC7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="nim-59-vrj" firstAttribute="top" secondItem="u5V-JF-nQw" secondAttribute="top" id="6jm-l0-d4h"/>
+                                            <constraint firstAttribute="trailing" secondItem="GtW-LY-62m" secondAttribute="trailing" constant="64" id="CQG-ny-Pxr"/>
+                                            <constraint firstItem="GtW-LY-62m" firstAttribute="top" secondItem="nim-59-vrj" secondAttribute="bottom" constant="16" id="GM8-Zz-L29"/>
+                                            <constraint firstAttribute="bottom" secondItem="GtW-LY-62m" secondAttribute="bottom" constant="16" id="IIu-Sc-ziS"/>
+                                            <constraint firstAttribute="trailing" secondItem="nim-59-vrj" secondAttribute="trailing" id="KK5-H7-xA6"/>
+                                            <constraint firstItem="nim-59-vrj" firstAttribute="leading" secondItem="u5V-JF-nQw" secondAttribute="leading" id="fkf-KP-5rm"/>
+                                            <constraint firstItem="GtW-LY-62m" firstAttribute="leading" secondItem="u5V-JF-nQw" secondAttribute="leading" constant="64" id="rDR-Qq-esY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3UE-Qw-Rj4" firstAttribute="leading" secondItem="Pkx-uy-i9X" secondAttribute="leading" constant="16" id="GX0-F8-djx"/>
+                                    <constraint firstItem="3UE-Qw-Rj4" firstAttribute="width" secondItem="Pkx-uy-i9X" secondAttribute="width" constant="-32" id="H6V-Ai-qhW"/>
+                                    <constraint firstAttribute="bottom" secondItem="u5V-JF-nQw" secondAttribute="bottom" constant="16" id="Sid-PB-bKY"/>
+                                    <constraint firstItem="3UE-Qw-Rj4" firstAttribute="top" secondItem="Pkx-uy-i9X" secondAttribute="top" constant="16" id="a2F-52-7lM"/>
+                                    <constraint firstAttribute="trailing" secondItem="3UE-Qw-Rj4" secondAttribute="trailing" constant="16" id="chJ-cq-04c"/>
+                                    <constraint firstItem="u5V-JF-nQw" firstAttribute="top" secondItem="3UE-Qw-Rj4" secondAttribute="bottom" constant="16" id="pp5-Xt-JZd"/>
+                                    <constraint firstItem="u5V-JF-nQw" firstAttribute="leading" secondItem="Pkx-uy-i9X" secondAttribute="leading" constant="16" id="qDW-Ja-ww3"/>
+                                    <constraint firstItem="u5V-JF-nQw" firstAttribute="top" secondItem="3UE-Qw-Rj4" secondAttribute="bottom" constant="16" id="weF-Ik-XOQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="u5V-JF-nQw" secondAttribute="trailing" constant="16" id="xcP-wa-EL2"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xJa-3o-AcC" firstAttribute="bottom" secondItem="Pkx-uy-i9X" secondAttribute="bottom" id="SbL-ym-RMQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Pkx-uy-i9X" secondAttribute="trailing" id="WBU-zD-ekG"/>
+                            <constraint firstItem="Pkx-uy-i9X" firstAttribute="leading" secondItem="mtQ-k8-Vb7" secondAttribute="leading" id="b4Z-Fn-8eu"/>
+                            <constraint firstItem="Pkx-uy-i9X" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" id="hFO-u6-ax9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xJa-3o-AcC"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginCard" destination="u5V-JF-nQw" id="qgU-lr-0oD"/>
+                        <outlet property="newCard" destination="3UE-Qw-Rj4" id="daB-Iq-qPU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htF-N7-RCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-356.25" y="63.380281690140848"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heroimage_login_card" width="656" height="308"/>
+        <image name="heroimage_new_card" width="656" height="308"/>
+    </resources>
+</document>

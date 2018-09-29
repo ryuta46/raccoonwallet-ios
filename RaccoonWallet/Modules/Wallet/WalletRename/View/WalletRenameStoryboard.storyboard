@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wallet Rename View Controller-->
+        <scene sceneID="4uP-dw-sQY">
+            <objects>
+                <viewController storyboardIdentifier="WalletRenameView" modalPresentationStyle="overCurrentContext" id="0N3-Wq-2vd" customClass="WalletRenameViewController" customModule="RaccoonWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="right" id="hNd-Og-2kS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHo-eq-FML">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="fPt-JY-rzR">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="x8F-IC-enK"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="BSS-Vo-gem"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_wallet_large2" translatesAutoresizingMaskIntoConstraints="NO" id="95S-kV-t0P">
+                                <rect key="frame" x="0.0" y="64" width="375" height="210.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="95S-kV-t0P" secondAttribute="height" multiplier="720:404" id="5BX-IX-f22"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QB4-R0-ujM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="64"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_walletbar" translatesAutoresizingMaskIntoConstraints="NO" id="r7U-Yh-c1o">
+                                        <rect key="frame" x="58" y="-8" width="260" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="XC9-IS-cPI"/>
+                                            <constraint firstAttribute="width" secondItem="r7U-Yh-c1o" secondAttribute="height" multiplier="556:116" id="jFR-71-LmL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rBj-Ln-UjR">
+                                        <rect key="frame" x="98" y="0.0" width="180" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onChangedName:" destination="0N3-Wq-2vd" eventType="editingChanged" id="uVq-0V-YKG"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="225-B9-zuj"/>
+                                    <constraint firstItem="rBj-Ln-UjR" firstAttribute="top" secondItem="cSI-un-5R2" secondAttribute="top" id="ETK-F0-vuT"/>
+                                    <constraint firstItem="rBj-Ln-UjR" firstAttribute="trailing" secondItem="r7U-Yh-c1o" secondAttribute="trailing" constant="-40" id="GfT-cg-OLH"/>
+                                    <constraint firstItem="r7U-Yh-c1o" firstAttribute="centerX" secondItem="QB4-R0-ujM" secondAttribute="centerX" id="VPQ-NA-mjY"/>
+                                    <constraint firstItem="rBj-Ln-UjR" firstAttribute="leading" secondItem="r7U-Yh-c1o" secondAttribute="leading" constant="40" id="WEa-55-Kde"/>
+                                    <constraint firstItem="r7U-Yh-c1o" firstAttribute="top" secondItem="cSI-un-5R2" secondAttribute="top" constant="-8" id="jEK-hR-RCV"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="cSI-un-5R2"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dHo-eq-FML" firstAttribute="top" secondItem="fPT-4S-1he" secondAttribute="top" id="2Wi-fa-eKB"/>
+                            <constraint firstItem="dHo-eq-FML" firstAttribute="trailing" secondItem="fPT-4S-1he" secondAttribute="trailing" id="8x2-7d-OUc"/>
+                            <constraint firstItem="QB4-R0-ujM" firstAttribute="top" secondItem="dHo-eq-FML" secondAttribute="bottom" id="96X-gi-G5g"/>
+                            <constraint firstItem="fPT-4S-1he" firstAttribute="trailing" secondItem="QB4-R0-ujM" secondAttribute="trailing" id="CFX-4S-I1L"/>
+                            <constraint firstItem="dHo-eq-FML" firstAttribute="leading" secondItem="fPT-4S-1he" secondAttribute="leading" id="Dab-F5-gXh"/>
+                            <constraint firstItem="QB4-R0-ujM" firstAttribute="leading" secondItem="fPT-4S-1he" secondAttribute="leading" id="Xpc-gc-9eO"/>
+                            <constraint firstItem="fPT-4S-1he" firstAttribute="trailing" secondItem="95S-kV-t0P" secondAttribute="trailing" id="cQx-Kf-jsF"/>
+                            <constraint firstItem="95S-kV-t0P" firstAttribute="top" secondItem="dHo-eq-FML" secondAttribute="bottom" id="eZx-CA-Vrg"/>
+                            <constraint firstItem="95S-kV-t0P" firstAttribute="leading" secondItem="fPT-4S-1he" secondAttribute="leading" id="f8k-Cg-jAb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fPT-4S-1he"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancel" destination="x8F-IC-enK" id="uD5-JN-WSh"/>
+                        <outlet property="name" destination="rBj-Ln-UjR" id="9V8-bu-QBw"/>
+                        <outlet property="navigation" destination="dHo-eq-FML" id="Vlc-1g-vC9"/>
+                        <outlet property="ok" destination="BSS-Vo-gem" id="tGh-J9-2Um"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htF-N7-RCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354.39999999999998" y="63.418290854572717"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heroimage_wallet_large2" width="720" height="404"/>
+        <image name="image_walletbar" width="556" height="116"/>
+    </resources>
+</document>

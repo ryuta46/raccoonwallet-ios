@@ -1,0 +1,293 @@
+/* 
+  localizable.strings
+  RaccoonWallet
+
+  Created by Taizo Kusuda on 2018/09/14.
+  Copyright © 2018年 T TECH, LIMITED LIABILITY CO. All rights reserved.
+*/
+
+"common_app_title" = "RaccoonWallet";
+"common_done" = "完了";
+"common_success" = "SUCCESS";
+"common_coming_soon" = "カミングスーン";
+"common_privacy_policy_caution" = "アプリの利用を開始する前に、ご確認ください。";
+"common_privacy_policy" = "利用規約とプライバシーポリシー";
+"common_security_lesson" = "セキュリティレッスン";
+"common_pin_settings" = "PINコードの設定";
+"common_pin_retry" = "PIN Code が一致しません。\nもう一度";
+"common_pin_registration_message_0" = "アプリ本体を保護するためのPINコードを設定します。6桁のPINコードを入力してください。\n確認のため二度入力します。\n※数字の繰り返しや誕生日などを含むコードはセキュリティの観点からおすすめしません。\n";
+
+"common_pin_registration_message_1" = "このPINコードを忘れた場合、アプリの操作ができなくなります。忘れないようにしてください。ただしPINコードを忘れた場合でもウォレットのXEMが無くなるわけではありません。\nアドレスごとの秘密鍵を紛失した場合のみ資産にアクセスできなくなります。";
+
+"common_pin_registration_complete" = "アプリ本体を保護するための6桁のPINコードが設定されました。";
+
+"common_mosaic_list" = "モザイク一覧";
+"common_destination" = "送り先";
+"common_fee" = "手数料";
+"common_amount" = "金額";
+"common_invalid_address" = "無効なアドレスです";
+"common_message" = "メッセージ";
+"common_message_input" = "メッセージを入力";
+
+"common_address" = "アドレス";
+"common_backup" = "バックアップ";
+"common_delete" = "削除";
+
+"common_public_key" = "公開鍵";
+"common_not_select" = "未選択";
+"common_not_get" = "未取得";
+
+
+"common_address_book" = "アドレス帳";
+"common_mosaic_gallery" = "モザイクギャラリー";
+"common_donation" = "寄付";
+"common_settings" = "設定";
+
+"common_general" = "一般";
+"common_security" = "セキュリティ";
+
+"common_touchID" = "指紋認証";
+"common_faceID" = "顔認証";
+
+"common_biometrics_enable_title" = "%@によるアクセス設定";
+"common_biometrics_enable_message" = "%@を使用してアプリのロックを解除できるように設定できます。\nOKを押すと、設定を完了します。";
+
+"common_biometrics_enable_success_title" = "SUCCESS！";
+"common_biometrics_enable_success_message" = "%@を使用したログインが設定されました。";
+
+"common_qr_import" = "QRコードのインポート";
+
+"common_invalid_password" = "パスワードが一致しません";
+
+"common_error_network" = "通信エラー";
+
+"common_error_pin_not_set" = "PINコードが未設定です。先にPINコードの設定を行ってください。";
+"common_error_account_repair" = "アカウント情報の復元に失敗しました。";
+"common_error_insufficient_balance" = "残高が足りません！";
+"common_error_decode_message" = "メッセージの復元に失敗しました";
+
+"common_error_go_send_title" = "送信画面に移動できません";
+"common_error_go_send_pin_message" = "PINが設定されていないため、送信画面に移動できません。\n送金操作を行うには、設定からPINの設定を行ってください。";
+"common_error_go_send_pin_button" = "PIN設定画面に移動する";
+"common_error_go_send_no_wallet_message" = "ウォレットが選択されていないため、送信画面に移動できません。\n送金操作を行うには、ウォレットを選択してください。";
+"common_error_go_send_no_wallet_button" = "ウォレット選択画面に移動する";
+
+"common_never_remind" = "再度表示させない";
+
+"common_wallet_balance" = "ウォレット残高";
+
+
+"about_title" = "About This APP";
+"about_app_concept" = "信頼性が高く\n使いやすいUIで、\n仮想通貨をもっと楽しく。\n\nラクーンウォレットは、これら３つを目標に\n作られた仮想通貨ウォレットです。";
+
+"about_official_site" = "公式サイト | raccoonwallet.com";
+"about_discord" = "公式DISCORDサーバー | 紹介リンク";
+"about_open_source" = "オープンソースライセンス";
+"about_review" = "レビューを書く";
+
+"create_wallet_tutorial_title" = "Welcome to Raccoon Wallet";
+"create_wallet_tutorial_message" = "やあ。はじめまして。\nラクーンウォレットへようこそ。\n気分はどう？\n\nさてこれから君がラクーンを始めるにあたって、僕がガイダンスしていくんだけど、何よりまず、君にはウォレットの準備をしてもらいたい。\n次の画面で新しくウォレットを作るか、それともすでにブロックチェーンに登録済みのアカウントでログインするかを選んでくれるかい？";
+
+"donation_title" = "おや?寄付してくれるのかい!?";
+"donation_detail_title" = "開発の励みになるよ〜";
+
+"donation_android_engineer_name" = "Android Developper";
+"donation_android_engineer_role" = "エンジニア";
+"donation_android_engineer_detail" = "God of Raccoon。創造主でエンジニア。\nすべてはココからはじまった。彼らがいなかったらラクーンは存在していない。\nRaccoonのAndroidエンジニアは二人。@YukiYamadaJPと@Riberd_Puzzle1だ。\n\n・リードエンジニア / コア開発者\n・ベースアプリ（NEM総合アプリ） 開発\n・Android版アプリ開発";
+
+"donation_designer_name" = "Rhime";
+"donation_designer_role" = "UIデザイナー";
+
+"donation_designer_detail" = "Raccoonの名付け親。デザイナー。\nこのアプリふざけてんなぁと思ったら、この人のせい。\nラクーンにおけるデザインの大体は、この人が作った。\n使いやすいアプリの構造を考えたりする情報アーキテクチャも兼任した。\n\n・総合コンテンツデザイナー\n・Android / iOSアプリのIA/UI/UXデザイン\n・ビジュアルデザイン/ブランディング（ロゴ・サイト）";
+
+"donation_ios_engineer_name" = "Ryuta";
+"donation_ios_engineer_role" = "iOSエンジニア";
+"donation_ios_engineer_detail" = "Raccoonの命綱。iOSエンジニア。最強の後衛。\n将棋で例えるなら飛車。\nラクーンを林檎の楽園へといざなう。\n\n・Android→iOS版アプリ移植・開発主任\n・nem-kotlinの創造主。";
+
+"first_tutorial_button" = "GET STARTED";
+"first_tutorial_title" = "Hello,NEM. Hello,UX.";
+"first_tutorial_message1" = "支払いの新世代へ。";
+"first_tutorial_message2" = "信頼の革新を手のひらに。";
+"first_tutorial_message3" = "愉快でイマドキな金融の形。";
+
+"gallery_no_mosaic_title" = "モザイクなど存在しない。";
+"gallery_no_mosaic_message" = "お見せできるモザイクは、これっぽっちもないよ。\n涙がちょちょ切れるほどコレクションに励もう。";
+
+"lesson_introduction_message" = "やあ。セキュリティレッスンを受けに来たのかい？\n感心感心\nよーし、それじゃあ早速やっていこう。\n\nじゃあ、まず最初に君のことを教えてくれないかい？\n次の画面で自分に合うものを選択してくれ。\n特別にみんなに最適なレッスン用意したからさ。";
+
+"lesson_level_title" = "セレクトユアレベル！";
+"lesson_level_beginner_title" = "NEM初心者です！";
+"lesson_level_beginner_setup" = "秘密鍵のバックアップ+PINコード設定";
+"lesson_level_beginner_message" = "ようこそNEMの世界へ。";
+"lesson_level_importer_title" = "秘密鍵からのログインです";
+"lesson_level_importer_setup" = "PINコード設定";
+"lesson_level_importer_message" = "ラクーンを選んでくれてありがとう〜";
+"lesson_level_expert_title" = "ラクーンユーザーです";
+"lesson_level_expert_setup" = "ウォレットのバックアップ";
+"lesson_level_expert_message" = "毎度どうも。今日もいい天気ですね。";
+
+"lesson_beginner_title" = "ニュービーな君へ";
+"lesson_beginner_message" = "NEM初心者の君へ捧ぐメッセージ！\n知っている人もいるかもしれないけど、秘密鍵というのは仮想通貨にとって、すごく大事なものなんだ。NEMの場合もそれは同じだよ。バックアップはしっかりね。\n\nそれからアプリ本体のPINコード。\nスマホをもし落としてしまったりしたとき、アプリにロックをかけておかないと、勝手に送金されてしまうかもしれないよ。\nどっちも大事だ。これから対策していくよ。\n準備はいいかい？\nそれじゃあ、やっていこう。";
+
+"lesson_beginner_backup_end_title" = "次はPINの設定だ！";
+"lesson_beginner_backup_end_message" = "また会ったな。\nウォレットのバックアップはできたかい？\nさあ次は、アプリのPINコード設定だ。\n\nグッドラック！";
+
+"lesson_importer_message" = "NEMユーザーのあなた！\nラクーンウォレットを選んでくれて嬉しいよ。すでによく知っている君には、僕から説明することはあまりないかな。\nここの画面から、PINコードを設定できるから、サクッと設定しといてくれ。\n\nもし秘密鍵のバックアップを取り忘れてたなら、初心者のカードからレッスンを受けてね。";
+
+"lesson_end_title" = "お疲れ様！";
+"lesson_beginner_end_message" = "すばらしい！！\nこれで君も立派なクリプトコイナーというわけだ。\n感慨深いね。\n\nてなわけで、セキュリティレッスンは以上で終わり。\n暇があったらメニューからヘルプも覗くと良いよ。\nまあ後は使いながら覚えていってくれ。\n月に叢雲花に風。\nさよならだけが人生さ。\nまた会おうぜ。グッドラック。";
+"lesson_importer_end_message" = "レッスンお疲れ様。仮想通貨の活動をラクーンで行うことを選択した君を後悔させないように頑張るよ。\nこのウォレット自体の使い方は、メニューからアクセスできるヘルプから学習してほしい。\n\nゆく河の流れは絶えずして、しかももとの水にあらず。\nいづかたより来たりて、いづかたへか去る君との出会いに感謝するよ。\nグッドラック。";
+"lesson_expert_end_message" = "いつもラクーンウォレットを使ってくれてありがとう。\n\nてなわけで、セキュリティレッスンは以上で終わり。\nウォレットにもそろそろ慣れてきたんじゃないかい？\nとはいえ事前の対策を疎かにはしないでね。\n\n曾子曰く、人生とは、\n死而後巳（死してのち巳む）。\nくたばって初めて油断できるのさ。\nまた会おうぜ。グッドラック。";
+
+"lesson_expert_title" = "秘密鍵のバックアップ";
+"lesson_expert_message" = "あっ、なんだ君か。\nそうそう、聞いてよ。最近、人にものを教えるのって大変だなって痛感してるんだ。なんでも３倍理解してないとダメだとか。僕の苦労も報われるといいのだけど。\nそう思わない？\nえ？秘密鍵のバックアップ？次の画面だよ。\nそうそう、それでさ～。";
+
+"lesson_cancel_pin_title" = "　おっと！";
+"lesson_cancel_pin_message" = "もうPINは設定してあるみたいだね。\nOKを押してレッスンを終えてもらっていいよ。\nお疲れ様！";
+
+
+"lesson_pin_end_title" = "お疲れ様、よかったら%@も";
+"lesson_pin_end_message" = "PIN設定できたみたいだね。\nいい調子だ。\nさてレッスンもこれで最後。\n\n実は合わせて%@でアプリにアクセスできるように設定できるんだけど、ここで設定しておくかい？";
+"lesson_pin_end_set_ok" = "%@を設定する";
+"lesson_pin_end_home" = "レッスンを終える";
+
+"lesson_pin_end_not_available_title" = "おっと！";
+"lesson_pin_end_not_available_message" = "端末自体の%@が未設定のようです。\niOSの設定画面に移動して、%@の設定を開始しますか？";
+
+
+"qrlab_amount_headline" = "指定金額を受け取る";
+"qrlab_list_headline" = "売り物リスト機能を使う";
+"qrlab_register_headline" = "QRレジスター";
+"qrlab_register_description" = "対応コードをスキャンして、合計金額を請求するQRコードを生成する";
+
+"qrlab_amount_title" = "金額の指定";
+
+
+"send_destination" = "送信先";
+"send_input_address" = "送信先アドレスを入力";
+
+"send_newbie_caution_title" = "気をつけて。送り先はニュービーだ";
+"send_newbie_caution_message" = "君が送ろうとしているアドレスは、これまで一度もブロックチェーン上で活動していない新参者みたいだね。とはいえアドレスがちゃんとした形式なら、送金は可能だよ。\nアドレスは正しいか、送り先は信頼できるか、よく確かめてから手続きしてね。";
+
+"send_amount_title" = "金額を入力";
+"send_amount_setting" = "送金操作";
+"send_mosaic_setting" = "モザイク添付";
+
+"send_mode_select_title" = "送信モードを選んでね";
+"send_mode_select_message" = "メッセージを添付しますか？";
+"send_standard_title" = "STANDARD SEND";
+"send_standard_hint" = "メッセージは添付せずに送金します。";
+"send_standard_message" = "普通の送金でいいよ";
+
+
+"send_message_title" = "Message SEND";
+"send_message_hint" = "1024文字以内。取引所への認証番号にも使うよ。";
+"send_message_message" = "トランザクションにメッセージを添えます";
+
+"send_confirmation_title" = "送金の最終確認画面です";
+"send_confirmation_ready" = "準備はいいですか？";
+"send_confirmation_pin" = "PIN画面を表示します";
+"send_confirmation_biometrics" = "%@で送金します";
+"send_confirmation_dialog_message" = "この画面で指紋認証またはPINの認証が完了すると、送金が完了します。\n表示された情報をよくご確認の上、操作してください。";
+
+"send_complete_title" = "送金完了！";
+"send_complete_message" = "NEM/XEM\nの送金が完了しました";
+
+"send_amount_with_xem" = "XEMを一緒に送る";
+
+"send_message_type_select_title" = "メッセージタイプを選択";
+
+"send_message_standard_title" = "通常のメッセージ";
+"send_message_standard_message" = "普通のお手紙です。\nお礼の言葉を添えたりするときは、こっちでいいと思うよ。\n認証番号もこっち。";
+
+"send_message_encryption_title" = "暗号化メッセージ";
+"send_message_encryption_message" = "軍事レベルの暗号化技術でプライバシーを確保しましょう。認証番号などに使う場合は、問題の原因になるからオススメしないよ！";
+
+"send_message_no_public_key_title" = "送り先が暗号化メッセージに対応していません。";
+"send_message_no_public_key_message" = "暗号化メッセージを送るには、暗号化に必要な公開鍵と呼ばれるコードを送り先が所持している必要があります。\n現在指定されている送り先は公開鍵を所持していないため、暗号化メッセージは送れません。";
+
+
+"setting_language_select" = "言語選択";
+"setting_notification_setting" = "通知設定";
+"setting_change_password" = "PINコードの設定・変更";
+"setting_require_biometrics" = "%@の要求";
+"setting_require_pin_on_launch" = "起動時にPIN入力を要求する";
+"setting_go_to_security_lesson" = "セキュリティレッスンを受ける";
+
+"setting_node_select" = "ノード選択";
+
+"setting_pin_not_available_title" = "おっと!";
+"setting_pin_not_available_message" = "PINの設定がまだのようですね。先にPINの設定をしてください。";
+
+"transaction_list_title" = "トランザクション一覧";
+"transaction_detail_title" = "トランザクション詳細";
+"transaction_no_transaction_title" = "おっと。まだ取引はないみたい。";
+
+"transaction_no_transaction_message" = "トランザクションが発生したら\nここに一覧で表示されるよ。";
+
+"transaction_message_is_encrypted" = "メッセージは暗号化されています";
+"transaction_failed_to_decrypt" =  "復号に失敗しました";
+
+
+"wallet_select" = "ウォレットを選択";
+"wallet_not_select_message" = "ウォレットが選択されていません";
+
+"wallet_no_wallet_title" = "ウォレットがないみたい。";
+"wallet_no_wallet_message" = "上のボタンからウォレットを作成するか\nアカウントをリンクすると、ここに一覧で表示されるよ。";
+"wallet_name_title" = "ようこそ、お客人";
+"wallet_name_message" = "ハロー。ウェルカム・トゥ・ラクーン。\n早速、君のウォレットを作っていこう。\nまず最初に、ウォレットにイケてる名前をつけてくれ。";
+"wallet_name_input" = "一番いいウォレットネームを";
+"wallet_create_title" = "準備完了";
+
+"wallet_create_message_0" = "すばらしい！ウォレット作成完了です。\nあっという間。驚いた？\nとりあえず君のアドレスはこんな感じ。";
+"wallet_create_message_1" = "…上に出てきたナンバーは何かって？\nウォレットのメンテンスしたいときは押すが良い。\nこの画面では動作しないからあとで試してみてくれ。";
+
+"wallet_end_title" = "お疲れ様！レッスンはどう？";
+"wallet_end_message" = "以上でウォレットの新規作成作業は完了です。\nこのままウォレットのバックアップなどを行いたい人はレッスンに移動してね。\n\nとりあえず今のままで使い始めたい人は\nHOME からスキップもできるよ。";
+
+"wallet_import_title" = "秘密鍵のインポート";
+"wallet_import_message" = "開けゴマ！\n1. NEMの秘密鍵を入力する。\nもしくはQRコードで読み取りましょう。\n2. あなたのNEMアカウントをラクーンにリンクします！";
+
+"wallet_invalid_key" = "無効な秘密鍵です";
+"wallet_login_name_title" = "Walletの名前をインポート";
+"wallet_login_name_message" = "グレイト！\nアカウントのリンクが正常に行われました。\nウォレットに名前をつけると便利です。";
+
+
+"wallet_login_end_title" = "リンク完了";
+"wallet_login_end_message" = "いいセンスだ。\n以上でリンク作業は完了しました。ウォレットの変更や追加をしたい場合は、\nウォレットバーのボタンから管理画面に\nアクセスしてみてくださいね。\nもし時間があるなら、この後のセキュリティレッスンの受講をオススメします。PINコードの設定やウォレットのバックアップを行うぞ。";
+
+"wallet_settings_title" = "ウォレットの設定";
+"wallet_settings_general" = "一般設定";
+"wallet_settings_detail" = "ウォレットの詳細";
+"wallet_settings_address" = "ウォレットのアドレス";
+"wallet_settings_backup" = "ウォレットのバックアップ";
+"wallet_settings_rename" = "ウォレットの名前を変更する";
+"wallet_settings_delete" = "ウォレットを削除";
+
+"wallet_key_caution_title" = "プライベートキー(秘密鍵)について";
+"wallet_key_caution_message" = "プライベートキー（秘密鍵）はあなたのアカウント情報において最も重要であり、機密事項として注意して取り扱わなければなりません。\n\nプライベートキーは、関連する資金と資産を制御し、あなたのアカウントを元に戻すために必要なものであり、この知識は誰もが身につける必要があります。\n\nこのプライベートキーは、決してなくさないようにしてください。 また絶対に外部に漏れないように注意して扱ってください。";
+
+"wallet_key_backup_title" = "スクリーンショットに撮るのは危険です。";
+"wallet_key_backup_message" = "紙に書き留める、またはパスワード管理アプリ・ソフトウェアを使って厳重に保管してください。";
+
+"wallet_delete_caution_message" = "ウォレットを削除します。\n秘密鍵がないと復元できなくなります。\n本当にウォレットを削除しますか？";
+
+"wallet_detail_title" = "ウォレットの詳細";
+"wallet_detail_structure" = "ウォレット構成 (m-of-n)";
+"wallet_detail_importance" = "重要性スコア";
+
+"wallet_detail_general" = "一般情報";
+
+"wallet_rename_title" = "ウォレット名変更";
+"wallet_rename_hint" = "新しいウォレット名";
+
+"wallet_go_home_caution1_title" = "おっと！";
+"wallet_go_home_caution1_message" = "ほんとにHOMEに行くのかい？\nセキュリティはちゃんとしといたほうがいいよ。";
+
+"wallet_go_home_caution2_title" = "ほんとに？";
+"wallet_go_home_caution2_message" = "ほんとにほんとだね？止めはしないよ。\nもしウォレットのバックアップやPINコードを設定したくなったら、ウォレットバーやメニューのアプリ設定からいつでも行えるよ。それにレッスンもアプリ設定のセキュリティの項目から受講できるからね。";
+
+"wallet_import_nano_password_title" = "パスワード入力";
+"wallet_import_nano_password_headline" = "NanoWalletのパスワードを入力";
+"wallet_import_nano_password_message" = "NanoWalletで生成したQRコードからNEMアカウントをリンクしようとしています。\nこの操作には、NanoWalletのパスワードの入力が必要です。";
+"wallet_import_nano_password_hint" = "パスワードを入れてね";

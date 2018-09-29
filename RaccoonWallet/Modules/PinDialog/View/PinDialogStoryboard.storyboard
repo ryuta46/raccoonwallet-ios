@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pin Dialog View Controller-->
+        <scene sceneID="4uP-dw-sQY">
+            <objects>
+                <viewController storyboardIdentifier="PinDialogView" modalPresentationStyle="overCurrentContext" id="0N3-Wq-2vd" customClass="PinDialogViewController" customModule="RaccoonWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mtQ-k8-Vb7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="49j-fo-P1F">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ENs-v9-iy1">
+                                        <rect key="frame" x="0.0" y="0.5" width="320" height="459"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_icon" translatesAutoresizingMaskIntoConstraints="NO" id="f22-0I-CJr">
+                                                <rect key="frame" x="112" y="0.0" width="96" height="96"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="96" id="ZQH-4u-BuU"/>
+                                                    <constraint firstAttribute="width" secondItem="f22-0I-CJr" secondAttribute="height" multiplier="1:1" id="hTW-Sp-Zhk"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check PIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxj-Qg-la6">
+                                                <rect key="frame" x="111" y="112" width="98" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FuU-Yd-GI3">
+                                                <rect key="frame" x="96" y="152" width="128" height="15"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlv-GJ-0Oc" customClass="PinInputView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="14.5" height="15"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="xlv-GJ-0Oc" secondAttribute="height" multiplier="1:1" id="7cL-QJ-GSY"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeR-AT-aGo" customClass="PinInputView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                        <rect key="frame" x="22.5" y="0.0" width="15" height="15"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="IeR-AT-aGo" secondAttribute="height" multiplier="1:1" id="u5B-Rv-u2e"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1s-kK-4Pm" customClass="PinInputView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                        <rect key="frame" x="45.5" y="0.0" width="14.5" height="15"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="z1s-kK-4Pm" secondAttribute="height" multiplier="1:1" id="s7i-9t-SwR"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVJ-np-d25" customClass="PinInputView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                        <rect key="frame" x="68" y="0.0" width="14.5" height="15"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="bVJ-np-d25" secondAttribute="height" multiplier="1:1" id="c0x-RI-9eL"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkB-Ly-cPZ" customClass="PinInputView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                        <rect key="frame" x="90.5" y="0.0" width="15" height="15"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="KkB-Ly-cPZ" secondAttribute="height" multiplier="1:1" id="iwB-Qd-UZo"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAt-W1-NXi" customClass="PinInputView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                        <rect key="frame" x="113.5" y="0.0" width="14.5" height="15"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="rAt-W1-NXi" secondAttribute="height" multiplier="1:1" id="lmF-CW-aKl"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="128" id="2VR-w7-dHg"/>
+                                                    <constraint firstItem="bVJ-np-d25" firstAttribute="width" secondItem="bVJ-np-d25" secondAttribute="height" multiplier="1:1" id="M0n-7L-HIW"/>
+                                                    <constraint firstItem="KkB-Ly-cPZ" firstAttribute="width" secondItem="KkB-Ly-cPZ" secondAttribute="height" multiplier="1:1" id="UEL-s5-gTG"/>
+                                                    <constraint firstItem="rAt-W1-NXi" firstAttribute="width" secondItem="rAt-W1-NXi" secondAttribute="height" multiplier="1:1" id="cS4-GJ-bn6"/>
+                                                    <constraint firstItem="IeR-AT-aGo" firstAttribute="width" secondItem="IeR-AT-aGo" secondAttribute="height" multiplier="1:1" id="fso-44-H11"/>
+                                                    <constraint firstItem="z1s-kK-4Pm" firstAttribute="width" secondItem="z1s-kK-4Pm" secondAttribute="height" multiplier="1:1" id="jDA-LB-9mE"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s9S-sW-Qya">
+                                                <rect key="frame" x="41.5" y="183" width="237" height="276"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="PrP-cj-6Kh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="237" height="63"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdf-I8-sRj" customClass="PinNumberView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="63" id="BQ9-rx-Yql"/>
+                                                                    <constraint firstAttribute="width" secondItem="Xdf-I8-sRj" secondAttribute="height" multiplier="1:1" id="oor-yI-AfX"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0h-HP-j7U" customClass="PinNumberView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                                <rect key="frame" x="87" y="0.0" width="63" height="63"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="W0h-HP-j7U" secondAttribute="height" multiplier="1:1" id="Qj3-k0-JsO"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQs-hC-MUw" customClass="PinNumberView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                                <rect key="frame" x="174" y="0.0" width="63" height="63"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="iQs-hC-MUw" secondAttribute="height" multiplier="1:1" id="Hbb-KB-5yS"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="R6M-qE-Pps">
+                                                        <rect key="frame" x="0.0" y="71" width="237" height="63"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gab-wG-9uo" customClass="PinNumberView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="gab-wG-9uo" secondAttribute="height" multiplier="1:1" id="5b9-hu-ZCh"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfF-3J-Qfw" customClass="PinNumberView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                                <rect key="frame" x="87" y="0.0" width="63" height="63"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="vfF-3J-Qfw" secondAttribute="height" multiplier="1:1" id="WFJ-WW-oP9"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vg4-lK-GL2" customClass="PinNumberView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                                <rect key="frame" x="174" y="0.0" width="63" height="63"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="vg4-lK-GL2" secondAttribute="height" multiplier="1:1" id="f5I-Ee-YoO"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="b2R-Hy-wBT">
+                                                        <rect key="frame" x="0.0" y="142" width="237" height="63"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yg6-um-qHZ" customClass="PinNumberView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="yg6-um-qHZ" secondAttribute="height" multiplier="1:1" id="1Cd-wm-MEm"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMb-2v-ZcO" customClass="PinNumberView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                                <rect key="frame" x="87" y="0.0" width="63" height="63"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="LMb-2v-ZcO" secondAttribute="height" multiplier="1:1" id="BiV-0t-btO"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgG-8m-Bkk" customClass="PinNumberView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                                <rect key="frame" x="174" y="0.0" width="63" height="63"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="bgG-8m-Bkk" secondAttribute="height" multiplier="1:1" id="51A-WZ-OKZ"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quj-iw-qbE" customClass="PinNumberView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                        <rect key="frame" x="87" y="213" width="63" height="63"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="quj-iw-qbE" secondAttribute="height" multiplier="1:1" id="zbH-Ch-EQn"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="R6M-qE-Pps" firstAttribute="width" secondItem="PrP-cj-6Kh" secondAttribute="width" id="4f5-zx-Bsf"/>
+                                                    <constraint firstItem="b2R-Hy-wBT" firstAttribute="width" secondItem="PrP-cj-6Kh" secondAttribute="width" id="ARk-dw-udq"/>
+                                                    <constraint firstItem="quj-iw-qbE" firstAttribute="width" secondItem="Xdf-I8-sRj" secondAttribute="width" id="Es9-uk-Fia"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYs-BO-r8C">
+                                <rect key="frame" x="8" y="28" width="48" height="48"/>
+                                <state key="normal" image="icon_back"/>
+                                <connections>
+                                    <action selector="onTouchedBack:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="1Ga-70-eDI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.76470588240000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BYs-BO-r8C" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" constant="8" id="3B5-RW-yk1"/>
+                            <constraint firstItem="49j-fo-P1F" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" id="8Ms-fG-rw2"/>
+                            <constraint firstItem="xJa-3o-AcC" firstAttribute="trailing" secondItem="49j-fo-P1F" secondAttribute="trailing" id="9uO-2i-XHP"/>
+                            <constraint firstItem="49j-fo-P1F" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" id="Lrg-1s-ffd"/>
+                            <constraint firstItem="xJa-3o-AcC" firstAttribute="bottom" secondItem="49j-fo-P1F" secondAttribute="bottom" id="OlJ-1s-o3c"/>
+                            <constraint firstItem="BYs-BO-r8C" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" constant="8" id="iH9-Qq-4vj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xJa-3o-AcC"/>
+                    </view>
+                    <connections>
+                        <outlet property="back" destination="BYs-BO-r8C" id="uP8-k8-o2j"/>
+                        <outlet property="message" destination="Mxj-Qg-la6" id="7xO-MP-9sT"/>
+                        <outlet property="pinInput0" destination="xlv-GJ-0Oc" id="qqT-cU-JiC"/>
+                        <outlet property="pinInput1" destination="IeR-AT-aGo" id="Y5h-zk-feS"/>
+                        <outlet property="pinInput2" destination="z1s-kK-4Pm" id="vMw-My-bfx"/>
+                        <outlet property="pinInput3" destination="bVJ-np-d25" id="ZVw-xU-Mll"/>
+                        <outlet property="pinInput4" destination="KkB-Ly-cPZ" id="hEd-5M-EZM"/>
+                        <outlet property="pinInput5" destination="rAt-W1-NXi" id="pZD-ad-Zjt"/>
+                        <outlet property="pinNumber0" destination="quj-iw-qbE" id="rDV-ug-ZtN"/>
+                        <outlet property="pinNumber1" destination="Xdf-I8-sRj" id="G5W-oW-eBk"/>
+                        <outlet property="pinNumber2" destination="W0h-HP-j7U" id="CWs-yR-Jbz"/>
+                        <outlet property="pinNumber3" destination="iQs-hC-MUw" id="tAw-bB-oyl"/>
+                        <outlet property="pinNumber4" destination="gab-wG-9uo" id="svz-II-67w"/>
+                        <outlet property="pinNumber5" destination="vfF-3J-Qfw" id="grA-aR-2Z4"/>
+                        <outlet property="pinNumber6" destination="vg4-lK-GL2" id="Pme-ub-CbH"/>
+                        <outlet property="pinNumber7" destination="yg6-um-qHZ" id="LKs-jy-nPA"/>
+                        <outlet property="pinNumber8" destination="LMb-2v-ZcO" id="UHy-AL-ptL"/>
+                        <outlet property="pinNumber9" destination="bgG-8m-Bkk" id="RYh-df-mF5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htF-N7-RCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-356.25" y="61.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_back" width="48" height="48"/>
+        <image name="top_icon" width="440" height="440"/>
+    </resources>
+</document>

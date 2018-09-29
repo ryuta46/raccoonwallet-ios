@@ -1,0 +1,38 @@
+//
+//  <%= module_name %>Contract.swift
+//  RaccoonWallet
+//
+//  Created by Taizo Kusuda on <%= date %>
+//  Copyright © 2018年 T TECH, LIMITED LIABILITY CO. All rights reserved.
+//
+
+import UIKit
+
+
+//sourcery: AutoMockable
+protocol <%= module_name %>View: BaseView {
+    var presenter: <%= module_name %>Presentation! { get set }
+}
+
+//sourcery: AutoMockable
+protocol <%= module_name %>Presentation: BasePresentation {
+    var view: <%= module_name %>View? { get set }
+    var interactor: <%= module_name %>UseCase! { get set }
+    var router: <%= module_name %>Wireframe! { get set }
+}
+
+//sourcery: AutoMockable
+protocol <%= module_name %>UseCase: class {
+    var output: <%= module_name %>InteractorOutput! { get set }
+}
+
+//sourcery: AutoMockable
+protocol <%= module_name %>InteractorOutput: class {
+}
+
+//sourcery: AutoMockable
+protocol <%= module_name %>Wireframe: class {
+    var viewController: UIViewController? { get set }
+
+    static func assembleModule() -> UIViewController
+}

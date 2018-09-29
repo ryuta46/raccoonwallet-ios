@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SCAN-->
+        <scene sceneID="4uP-dw-sQY">
+            <objects>
+                <viewController storyboardIdentifier="ScanTabView" id="0N3-Wq-2vd" customClass="ScanTabViewController" customModule="RaccoonWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mtQ-k8-Vb7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1k-M8-LRN" customClass="QrScannerView" customModule="RaccoonWallet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xJa-3o-AcC" firstAttribute="bottom" secondItem="j1k-M8-LRN" secondAttribute="bottom" id="2RT-Dm-2mn"/>
+                            <constraint firstItem="j1k-M8-LRN" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" id="5xZ-ZT-hta"/>
+                            <constraint firstItem="j1k-M8-LRN" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" id="brD-Jv-z9k"/>
+                            <constraint firstItem="xJa-3o-AcC" firstAttribute="trailing" secondItem="j1k-M8-LRN" secondAttribute="trailing" id="gh0-98-zlP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xJa-3o-AcC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SCAN" image="bottom_nav_scan" id="Lab-bT-uwH"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="scannerView" destination="j1k-M8-LRN" id="BWL-cW-aDD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htF-N7-RCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354" y="64"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottom_nav_scan" width="25" height="25"/>
+    </resources>
+</document>

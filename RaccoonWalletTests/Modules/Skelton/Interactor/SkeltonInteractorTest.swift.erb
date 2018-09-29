@@ -1,0 +1,26 @@
+//
+//  <%= module_name %>InteractorTest.swift
+//  RaccoonWallet
+//
+//  Created by Taizo Kusuda on <%= date %>
+//  Copyright © 2018年 T TECH, LIMITED LIABILITY CO. All rights reserved.
+//
+
+import Foundation
+import XCTest
+import SwiftyMocky
+
+@testable import RaccoonWallet
+
+class <%= module_name %>InteractorTest: XCTestCase {
+    var interactor: <%= module_name %>Interactor!
+    var interactorOutput: <%= module_name %>InteractorOutput!
+
+    override func setUp() {
+        TestSettings.setUp()
+        interactor = <%= module_name %>Interactor()
+        interactorOutput = <%= module_name %>InteractorOutputMock()
+        interactor.output = interactorOutput
+    }
+    
+}

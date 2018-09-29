@@ -1,0 +1,5 @@
+**/xcuserdata
+.idea
+**/GoogleService-Info.plist
+Pods
+.DS_Store

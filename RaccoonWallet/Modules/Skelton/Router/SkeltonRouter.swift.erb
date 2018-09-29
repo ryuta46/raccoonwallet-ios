@@ -1,0 +1,33 @@
+//
+//  <%= module_name %>Router.swift
+//  RaccoonWallet
+//
+//  Created by Taizo Kusuda on <%= date %>.
+//  Copyright © 2018年 T TECH, LIMITED LIABILITY CO. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+class <%= module_name %>Router: <%= module_name %>Wireframe {
+    weak var viewController: UIViewController?
+    
+    static func assembleModule() -> UIViewController {
+        let view = R.storyboard.<%= module_name_camel %>Storyboard.<%= module_name_camel %>View()!
+        let presenter = <%= module_name %>Presenter()
+        let interactor = <%= module_name %>Interactor()
+        let router = <%= module_name %>Router()
+        
+        view.presenter = presenter
+        
+        presenter.view = view
+        presenter.interactor = interactor
+        presenter.router = router
+        
+        interactor.output = presenter
+        
+        router.viewController = view
+        return view
+    }
+}
+

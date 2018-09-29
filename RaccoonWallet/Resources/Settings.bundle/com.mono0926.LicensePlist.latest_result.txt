@@ -1,0 +1,166 @@
+name: APIKit, nameSpecified: 
+body: Copyright (c) 2015 -…
+version: 3.2.1
+
+name: Crashlytics, nameSpecified: 
+body: Fabric: Copyright 20…
+version: 3.10.7
+
+name: CryptoSwift, nameSpecified: 
+body: Copyright (C) 2014-2…
+version: 0.11.0
+
+name: DDMathParser, nameSpecified: 
+body: Copyright (c) 2010-2…
+version: 2.0.0
+
+name: DLRadioButton, nameSpecified: 
+body: Copyright (c) 2014 X…
+version: 1.4.12
+
+name: Fabric, nameSpecified: 
+body: Fabric: Copyright 20…
+version: 1.7.11
+
+name: Firebase, nameSpecified: 
+body: Copyright 2018 Googl…
+version: 5.7.0
+
+name: FirebaseAnalytics, nameSpecified: 
+body: Copyright 2018 Googl…
+version: 5.1.1
+
+name: FirebaseCore, nameSpecified: 
+body: 
+                   …
+version: 5.1.2
+
+name: FirebaseInstanceID, nameSpecified: 
+body: Copyright 2018 Googl…
+version: 3.2.1
+
+name: FontAwesome.swift, nameSpecified: 
+body: Copyright (c) 2014-p…
+version: 1.4.3
+
+name: GoogleAppMeasurement, nameSpecified: 
+body: Copyright 2018 Googl…
+version: 5.1.1
+
+name: GoogleUtilities, nameSpecified: 
+body: 
+                   …
+version: 5.2.2
+
+name: KeychainAccess, nameSpecified: 
+body: The MIT License (MIT…
+version: 3.1.1
+
+name: LicensePlist, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 1.8.8
+
+name: MaterialComponents, nameSpecified: 
+body: 
+                   …
+version: 60.3.0
+
+name: MDFInternationalization, nameSpecified: 
+body: 
+                   …
+version: 1.1.0
+
+name: MDFTextAccessibility, nameSpecified: 
+body: 
+                   …
+version: 1.2.0
+
+name: nanopb, nameSpecified: 
+body: Copyright (c) 2011 P…
+version: 0.3.8
+
+name: NemSwift, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 0.3.0
+
+name: NVActivityIndicatorView, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.3.0
+
+name: ObjcExceptionBridging, nameSpecified: 
+body: The MIT License (MIT…
+version: 1.0.1
+
+name: R.swift, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+name: R.swift.Library, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.0.0
+
+name: Realm, nameSpecified: 
+body: TABLE OF CONTENTS
+
+1…
+version: 3.7.6
+
+name: RealmSwift, nameSpecified: 
+body: TABLE OF CONTENTS
+
+1…
+version: 3.7.6
+
+name: REFrostedViewController, nameSpecified: 
+body: Copyright (c) 2013 R…
+version: 2.4.8
+
+name: Result, nameSpecified: 
+body: The MIT License (MIT…
+version: 3.2.4
+
+name: RxBlocking, nameSpecified: 
+body: **The MIT License**
+…
+version: 4.2.0
+
+name: RxCocoa, nameSpecified: 
+body: **The MIT License**
+…
+version: 4.2.0
+
+name: RxSwift, nameSpecified: 
+body: **The MIT License**
+…
+version: 4.2.0
+
+name: RxSwift, nameSpecified: 
+body: **The MIT License**
+…
+version: 4.2.0
+
+name: Sourcery, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 0.14.0
+
+name: SwiftyMocky, nameSpecified: 
+body: Copyright (c) 2017 P…
+version: 2.0.3
+
+name: XCGLogger, nameSpecified: 
+body: The MIT License (MIT…
+version: 6.0.4
+
+name: ZXingObjC, nameSpecified: 
+body:                     …
+version: 3.2.2
+
+add-version-numbers: false
+
+LicensePlist Version: 1.8.3

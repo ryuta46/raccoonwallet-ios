@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionView" customModule="RaccoonWallet" customModuleProvider="target">
+            <connections>
+                <outlet property="amount" destination="sI2-fx-Ba2" id="Rgu-Bc-A85"/>
+                <outlet property="date" destination="FSn-cB-QeA" id="SU6-Pb-XcC"/>
+                <outlet property="directionImage" destination="qnc-ke-A5k" id="tRF-uB-5Wr"/>
+                <outlet property="multisigDirectionImage" destination="YL0-a7-TB2" id="8DJ-pK-f7d"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="36"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="DOX-Ja-vN4">
+                    <rect key="frame" x="0.0" y="0.0" width="500" height="16"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/23, 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSn-cB-QeA">
+                            <rect key="frame" x="0.0" y="2" width="79.5" height="12"/>
+                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_transaction_receive_red" translatesAutoresizingMaskIntoConstraints="NO" id="qnc-ke-A5k">
+                            <rect key="frame" x="85.5" y="0.0" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="xHq-IV-C1G"/>
+                                <constraint firstAttribute="width" constant="16" id="ytb-Y7-Ahd"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_multisignature_red" translatesAutoresizingMaskIntoConstraints="NO" id="YL0-a7-TB2">
+                            <rect key="frame" x="107.5" y="0.0" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="fpO-PB-WHL"/>
+                                <constraint firstAttribute="width" constant="16" id="zob-Jm-j15"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="1,000,000 XEM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sI2-fx-Ba2">
+                            <rect key="frame" x="129.5" y="1" width="370.5" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DOX-Ja-vN4" secondAttribute="trailing" id="hY8-QK-pFR"/>
+                <constraint firstItem="DOX-Ja-vN4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="n80-gm-tdJ"/>
+                <constraint firstItem="DOX-Ja-vN4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="sTZ-P1-PGJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="52" y="-777"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_multisignature_red" width="24" height="24"/>
+        <image name="icon_transaction_receive_red" width="24" height="24"/>
+    </resources>
+</document>

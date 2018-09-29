@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wallet Import Name View Controller-->
+        <scene sceneID="4uP-dw-sQY">
+            <objects>
+                <viewController storyboardIdentifier="WalletImportNameView" id="0N3-Wq-2vd" customClass="WalletImportNameViewController" customModule="RaccoonWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c8E-xT-nAw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrJ-dF-rLy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_login_large" translatesAutoresizingMaskIntoConstraints="NO" id="jcP-kg-jnX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="210.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="jcP-kg-jnX" secondAttribute="height" multiplier="720:404" id="nTg-2o-6yB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4W-yU-dDk">
+                                        <rect key="frame" x="8" y="226.5" width="359" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JbL-fz-6Ow">
+                                        <rect key="frame" x="16" y="267.5" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="onChangedName:" destination="0N3-Wq-2vd" eventType="editingChanged" id="BAT-0i-zwY"/>
+                                            <action selector="onEndedName:" destination="0N3-Wq-2vd" eventType="editingDidEndOnExit" id="ylR-EU-qeB"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lba-Or-v8S" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                        <rect key="frame" x="155" y="321.5" width="64" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="ubQ-9d-2uU"/>
+                                        </constraints>
+                                        <state key="normal" title="OK"/>
+                                        <connections>
+                                            <action selector="onTouchedOk:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="r6W-K2-XKJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jcP-kg-jnX" firstAttribute="top" secondItem="FrJ-dF-rLy" secondAttribute="top" id="5QL-lg-eid"/>
+                                    <constraint firstItem="JbL-fz-6Ow" firstAttribute="leading" secondItem="FrJ-dF-rLy" secondAttribute="leading" constant="16" id="AEX-t3-l3U"/>
+                                    <constraint firstItem="JbL-fz-6Ow" firstAttribute="top" secondItem="i4W-yU-dDk" secondAttribute="bottom" constant="24" id="Lu7-QN-Zbh"/>
+                                    <constraint firstAttribute="trailing" secondItem="jcP-kg-jnX" secondAttribute="trailing" id="QeU-da-DRN"/>
+                                    <constraint firstItem="Lba-Or-v8S" firstAttribute="top" secondItem="JbL-fz-6Ow" secondAttribute="bottom" constant="24" id="UFP-UG-cbC"/>
+                                    <constraint firstItem="i4W-yU-dDk" firstAttribute="top" secondItem="jcP-kg-jnX" secondAttribute="bottom" constant="16" id="jeD-E8-tAh"/>
+                                    <constraint firstItem="i4W-yU-dDk" firstAttribute="leading" secondItem="FrJ-dF-rLy" secondAttribute="leading" constant="8" id="kaD-MP-MJ4"/>
+                                    <constraint firstItem="jcP-kg-jnX" firstAttribute="width" secondItem="FrJ-dF-rLy" secondAttribute="width" id="lVd-ne-zEg"/>
+                                    <constraint firstAttribute="trailing" secondItem="JbL-fz-6Ow" secondAttribute="trailing" constant="16" id="sCa-ZV-tot"/>
+                                    <constraint firstAttribute="trailing" secondItem="i4W-yU-dDk" secondAttribute="trailing" constant="8" id="teY-i4-ba0"/>
+                                    <constraint firstItem="Lba-Or-v8S" firstAttribute="centerX" secondItem="FrJ-dF-rLy" secondAttribute="centerX" id="x0i-UQ-nPv"/>
+                                    <constraint firstItem="jcP-kg-jnX" firstAttribute="leading" secondItem="FrJ-dF-rLy" secondAttribute="leading" id="zxe-da-toL"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4mK-jX-YpF" firstAttribute="trailing" secondItem="FrJ-dF-rLy" secondAttribute="trailing" id="1Tl-xa-Pl6"/>
+                            <constraint firstItem="FrJ-dF-rLy" firstAttribute="top" secondItem="4mK-jX-YpF" secondAttribute="top" id="2Wi-Rz-t2M"/>
+                            <constraint firstItem="4mK-jX-YpF" firstAttribute="bottom" secondItem="FrJ-dF-rLy" secondAttribute="bottom" id="6pl-ae-cpz"/>
+                            <constraint firstItem="FrJ-dF-rLy" firstAttribute="top" secondItem="4mK-jX-YpF" secondAttribute="top" id="9g9-CM-nSE"/>
+                            <constraint firstItem="FrJ-dF-rLy" firstAttribute="leading" secondItem="4mK-jX-YpF" secondAttribute="leading" id="G2U-TC-mHR"/>
+                            <constraint firstItem="FrJ-dF-rLy" firstAttribute="trailing" secondItem="4mK-jX-YpF" secondAttribute="trailing" id="cnE-uO-Xcl"/>
+                            <constraint firstItem="FrJ-dF-rLy" firstAttribute="leading" secondItem="4mK-jX-YpF" secondAttribute="leading" id="mwJ-gS-Th5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4mK-jX-YpF"/>
+                    </view>
+                    <connections>
+                        <outlet property="message" destination="i4W-yU-dDk" id="iTm-M6-6aI"/>
+                        <outlet property="name" destination="JbL-fz-6Ow" id="ino-Sr-WCa"/>
+                        <outlet property="ok" destination="Lba-Or-v8S" id="1Fu-Rh-SMZ"/>
+                        <outlet property="scrollView" destination="FrJ-dF-rLy" id="7uE-tX-qpd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htF-N7-RCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354.39999999999998" y="63.418290854572717"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heroimage_login_large" width="720" height="404"/>
+    </resources>
+</document>

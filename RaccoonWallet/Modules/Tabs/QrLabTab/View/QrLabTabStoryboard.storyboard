@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--QR Lab-->
+        <scene sceneID="4uP-dw-sQY">
+            <objects>
+                <viewController storyboardIdentifier="QrLabTabView" id="0N3-Wq-2vd" customClass="QrLabViewController" customModule="RaccoonWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jwb-iq-fcr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yom-h5-fSt">
+                                <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_qr_labo_small" translatesAutoresizingMaskIntoConstraints="NO" id="MkQ-PX-GTK">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MkQ-PX-GTK" secondAttribute="height" multiplier="720:200" id="i1Q-YM-gPs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pi1-hp-pbQ">
+                                        <rect key="frame" x="16" y="105" width="288" height="320"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" verticalHuggingPriority="254" translatesAutoresizingMaskIntoConstraints="NO" id="lW1-Sg-IKF" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="64"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJv-Ve-tfM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon_dentaku" translatesAutoresizingMaskIntoConstraints="NO" id="3Z2-yz-gBp">
+                                                                <rect key="frame" x="12" y="12" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="ach-LG-yG4"/>
+                                                                    <constraint firstAttribute="width" secondItem="3Z2-yz-gBp" secondAttribute="height" multiplier="1:1" id="nVd-oW-oHL"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.0" green="0.76470588240000004" blue="0.69803921570000005" alpha="1" colorSpace="deviceRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="1Io-DK-KHh"/>
+                                                            <constraint firstItem="3Z2-yz-gBp" firstAttribute="centerY" secondItem="mJv-Ve-tfM" secondAttribute="centerY" id="I8a-Hy-1lq"/>
+                                                            <constraint firstItem="3Z2-yz-gBp" firstAttribute="centerX" secondItem="mJv-Ve-tfM" secondAttribute="centerX" id="tqg-Q2-h6P"/>
+                                                            <constraint firstAttribute="width" secondItem="mJv-Ve-tfM" secondAttribute="height" multiplier="1:1" id="ubx-c5-S9H"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="指定金額を受け取る" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gk6-2Z-oVt">
+                                                        <rect key="frame" x="80" y="21.5" width="208" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Gk6-2Z-oVt" firstAttribute="leading" secondItem="mJv-Ve-tfM" secondAttribute="trailing" constant="16" id="8PJ-99-dSj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Gk6-2Z-oVt" secondAttribute="trailing" id="DK4-A8-Vuw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="mJv-Ve-tfM" secondAttribute="bottom" id="HXX-yu-Oim"/>
+                                                    <constraint firstItem="mJv-Ve-tfM" firstAttribute="leading" secondItem="lW1-Sg-IKF" secondAttribute="leading" id="Mte-Nu-6N7"/>
+                                                    <constraint firstItem="Gk6-2Z-oVt" firstAttribute="centerY" secondItem="lW1-Sg-IKF" secondAttribute="centerY" id="Rzm-X5-7zG"/>
+                                                    <constraint firstItem="mJv-Ve-tfM" firstAttribute="top" secondItem="lW1-Sg-IKF" secondAttribute="top" id="cdb-On-kok"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" verticalHuggingPriority="254" translatesAutoresizingMaskIntoConstraints="NO" id="mWU-fe-JuF" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="80" width="288" height="64"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVk-eC-SU5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon_list" translatesAutoresizingMaskIntoConstraints="NO" id="7Vy-95-EtN">
+                                                                <rect key="frame" x="12" y="12" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="7Vy-95-EtN" secondAttribute="height" multiplier="1:1" id="WKC-Yg-boM"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.0" green="0.76470588240000004" blue="0.69803921570000005" alpha="1" colorSpace="deviceRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="dVk-eC-SU5" secondAttribute="height" multiplier="1:1" id="9Qx-hx-XIN"/>
+                                                            <constraint firstItem="7Vy-95-EtN" firstAttribute="centerY" secondItem="dVk-eC-SU5" secondAttribute="centerY" id="gza-gf-Nqz"/>
+                                                            <constraint firstItem="7Vy-95-EtN" firstAttribute="centerX" secondItem="dVk-eC-SU5" secondAttribute="centerX" id="sqI-1t-5vk"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="売り物リスト機能を使う" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovN-Hl-ZH8">
+                                                        <rect key="frame" x="80" y="21.5" width="208" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="ovN-Hl-ZH8" firstAttribute="centerY" secondItem="mWU-fe-JuF" secondAttribute="centerY" id="24m-WR-gaI"/>
+                                                    <constraint firstAttribute="bottom" secondItem="dVk-eC-SU5" secondAttribute="bottom" id="JPM-vW-rXn"/>
+                                                    <constraint firstItem="dVk-eC-SU5" firstAttribute="leading" secondItem="mWU-fe-JuF" secondAttribute="leading" id="OgT-PN-LYu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ovN-Hl-ZH8" secondAttribute="trailing" id="PYo-iY-csr"/>
+                                                    <constraint firstItem="dVk-eC-SU5" firstAttribute="top" secondItem="mWU-fe-JuF" secondAttribute="top" id="Xaa-vh-EgD"/>
+                                                    <constraint firstItem="ovN-Hl-ZH8" firstAttribute="leading" secondItem="dVk-eC-SU5" secondAttribute="trailing" constant="16" id="ix2-an-h7B"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" verticalHuggingPriority="254" translatesAutoresizingMaskIntoConstraints="NO" id="pnI-ub-rRh" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="160" width="288" height="160"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJZ-s6-8yX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="160"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon_register_84px" translatesAutoresizingMaskIntoConstraints="NO" id="yUL-Wd-gfy">
+                                                                <rect key="frame" x="20" y="36" width="88" height="88"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="yUL-Wd-gfy" secondAttribute="height" multiplier="1:1" id="AJB-4C-2V8"/>
+                                                                    <constraint firstAttribute="height" constant="88" id="H7n-fp-Xmh"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.0" green="0.76470588240000004" blue="0.69803921570000005" alpha="1" colorSpace="deviceRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="128" id="0Gf-HP-eRR"/>
+                                                            <constraint firstItem="yUL-Wd-gfy" firstAttribute="centerY" secondItem="tJZ-s6-8yX" secondAttribute="centerY" id="VrP-rP-giW"/>
+                                                            <constraint firstItem="yUL-Wd-gfy" firstAttribute="centerX" secondItem="tJZ-s6-8yX" secondAttribute="centerX" id="ZhC-IP-yBU"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pCd-ju-hJv">
+                                                        <rect key="frame" x="144" y="16" width="128" height="128"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRレジスター" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcs-ef-Aq6">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="対応コードをスキャンして、合計金額を請求するQRコードを生成する" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsr-Oh-1uk">
+                                                                <rect key="frame" x="0.0" y="28.5" width="128" height="72"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カミングスーン" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bN-en-DUw">
+                                                                <rect key="frame" x="0.0" y="108.5" width="128" height="19.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="tJZ-s6-8yX" firstAttribute="leading" secondItem="pnI-ub-rRh" secondAttribute="leading" id="73N-AC-T29"/>
+                                                    <constraint firstAttribute="bottom" secondItem="tJZ-s6-8yX" secondAttribute="bottom" id="E3m-hj-p6R"/>
+                                                    <constraint firstItem="pCd-ju-hJv" firstAttribute="top" secondItem="pnI-ub-rRh" secondAttribute="top" constant="16" id="YGp-ov-sRd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="pCd-ju-hJv" secondAttribute="trailing" constant="16" id="cYC-7O-7W8"/>
+                                                    <constraint firstItem="tJZ-s6-8yX" firstAttribute="top" secondItem="pnI-ub-rRh" secondAttribute="top" id="laR-c1-tnE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="pCd-ju-hJv" secondAttribute="bottom" constant="16" id="mOW-gK-I7B"/>
+                                                    <constraint firstItem="pCd-ju-hJv" firstAttribute="leading" secondItem="tJZ-s6-8yX" secondAttribute="trailing" constant="16" id="sFZ-Tm-yOT"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="dVk-eC-SU5" firstAttribute="width" secondItem="mJv-Ve-tfM" secondAttribute="width" id="juU-4g-SVb"/>
+                                            <constraint firstItem="7Vy-95-EtN" firstAttribute="width" secondItem="3Z2-yz-gBp" secondAttribute="width" id="kcM-3r-rod"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pi1-hp-pbQ" firstAttribute="leading" secondItem="Yom-h5-fSt" secondAttribute="leading" constant="16" id="6Kt-9D-Dek"/>
+                                    <constraint firstItem="pi1-hp-pbQ" firstAttribute="top" secondItem="MkQ-PX-GTK" secondAttribute="bottom" constant="16" id="LKk-lW-Gqg"/>
+                                    <constraint firstItem="MkQ-PX-GTK" firstAttribute="top" secondItem="Yom-h5-fSt" secondAttribute="top" id="Sfq-Dt-GPf"/>
+                                    <constraint firstAttribute="bottom" secondItem="pi1-hp-pbQ" secondAttribute="bottom" constant="16" id="ZJ4-y3-dEm"/>
+                                    <constraint firstAttribute="trailing" secondItem="MkQ-PX-GTK" secondAttribute="trailing" id="hau-AY-V1f"/>
+                                    <constraint firstItem="MkQ-PX-GTK" firstAttribute="leading" secondItem="Yom-h5-fSt" secondAttribute="leading" id="hjx-Jr-QGB"/>
+                                    <constraint firstAttribute="trailing" secondItem="pi1-hp-pbQ" secondAttribute="trailing" constant="16" id="t14-de-u0e"/>
+                                    <constraint firstItem="pi1-hp-pbQ" firstAttribute="width" secondItem="Yom-h5-fSt" secondAttribute="width" constant="-32" id="tLU-pu-74E"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7T4-aP-SaC" customClass="WalletBar" customModule="RaccoonWallet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="320" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Wda-pg-7bd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pdC-9v-n0Z" firstAttribute="trailing" secondItem="Yom-h5-fSt" secondAttribute="trailing" id="AuI-7T-n2j"/>
+                            <constraint firstItem="Yom-h5-fSt" firstAttribute="leading" secondItem="pdC-9v-n0Z" secondAttribute="leading" id="Pa8-Qc-i3k"/>
+                            <constraint firstItem="7T4-aP-SaC" firstAttribute="trailing" secondItem="pdC-9v-n0Z" secondAttribute="trailing" id="VFY-lX-xEi"/>
+                            <constraint firstItem="7T4-aP-SaC" firstAttribute="leading" secondItem="pdC-9v-n0Z" secondAttribute="leading" id="a3x-7z-c46"/>
+                            <constraint firstItem="Yom-h5-fSt" firstAttribute="top" secondItem="pdC-9v-n0Z" secondAttribute="top" id="cYx-A6-v5R"/>
+                            <constraint firstItem="7T4-aP-SaC" firstAttribute="top" secondItem="pdC-9v-n0Z" secondAttribute="top" id="tEo-yR-SU5"/>
+                            <constraint firstItem="pdC-9v-n0Z" firstAttribute="bottom" secondItem="Yom-h5-fSt" secondAttribute="bottom" id="wVY-rj-4hJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pdC-9v-n0Z"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="QR Lab" image="bottom_nav_qr_lab" id="xGX-Uy-1ET">
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="amount" destination="lW1-Sg-IKF" id="u2U-5S-ad3"/>
+                        <outlet property="amountHeadline" destination="Gk6-2Z-oVt" id="vlt-de-hCI"/>
+                        <outlet property="list" destination="mWU-fe-JuF" id="AwC-H3-hHv"/>
+                        <outlet property="listHeadline" destination="ovN-Hl-ZH8" id="bKt-jt-olq"/>
+                        <outlet property="register" destination="pnI-ub-rRh" id="6CV-e9-pmC"/>
+                        <outlet property="registerDescription" destination="hsr-Oh-1uk" id="umC-Ns-q4w"/>
+                        <outlet property="registerHeadline" destination="fcs-ef-Aq6" id="AAd-og-7FL"/>
+                        <outlet property="registerHint" destination="3bN-en-DUw" id="avu-Zj-kww"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htF-N7-RCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-356.25" y="62.323943661971832"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottom_nav_qr_lab" width="25" height="25"/>
+        <image name="heroimage_qr_labo_small" width="720" height="200"/>
+        <image name="icon_dentaku" width="73" height="73"/>
+        <image name="icon_list" width="73" height="73"/>
+        <image name="icon_register_84px" width="168" height="168"/>
+    </resources>
+</document>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wallet Address View Controller-->
+        <scene sceneID="4uP-dw-sQY">
+            <objects>
+                <viewController storyboardIdentifier="WalletAddressView" id="0N3-Wq-2vd" customClass="WalletAddressViewController" customModule="RaccoonWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mtQ-k8-Vb7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38U-4X-tIr">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_send_small" translatesAutoresizingMaskIntoConstraints="NO" id="VTT-My-OqO">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="VTT-My-OqO" secondAttribute="height" multiplier="720:200" id="118-8e-wJH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c84-Rp-Ntg">
+                                        <rect key="frame" x="60" y="105" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="0eh-yn-BQ5"/>
+                                            <constraint firstAttribute="width" secondItem="c84-Rp-Ntg" secondAttribute="height" multiplier="1:1" id="MX7-yS-ivZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoZ-PF-s2e">
+                                        <rect key="frame" x="109" y="321" width="102" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.76470588240000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldy-J5-Iaa" customClass="AddressLabel" customModule="RaccoonWallet" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="358" width="304" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ldy-J5-Iaa" secondAttribute="bottom" constant="8" id="5oc-k2-H8H"/>
+                                    <constraint firstItem="c84-Rp-Ntg" firstAttribute="centerX" secondItem="38U-4X-tIr" secondAttribute="centerX" id="71R-ta-vbW"/>
+                                    <constraint firstItem="zoZ-PF-s2e" firstAttribute="top" secondItem="c84-Rp-Ntg" secondAttribute="bottom" constant="16" id="IPl-8H-Lm8"/>
+                                    <constraint firstItem="VTT-My-OqO" firstAttribute="leading" secondItem="38U-4X-tIr" secondAttribute="leading" id="SAf-ad-1HI"/>
+                                    <constraint firstItem="Ldy-J5-Iaa" firstAttribute="centerX" secondItem="38U-4X-tIr" secondAttribute="centerX" id="W5p-wb-9xg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ldy-J5-Iaa" secondAttribute="trailing" constant="8" id="bkb-06-PJg"/>
+                                    <constraint firstItem="zoZ-PF-s2e" firstAttribute="centerX" secondItem="38U-4X-tIr" secondAttribute="centerX" id="g2J-cC-LLy"/>
+                                    <constraint firstItem="c84-Rp-Ntg" firstAttribute="top" secondItem="VTT-My-OqO" secondAttribute="bottom" constant="16" id="gy8-WT-2VE"/>
+                                    <constraint firstItem="Ldy-J5-Iaa" firstAttribute="top" secondItem="zoZ-PF-s2e" secondAttribute="bottom" constant="16" id="hXe-PD-3s1"/>
+                                    <constraint firstItem="Ldy-J5-Iaa" firstAttribute="leading" secondItem="38U-4X-tIr" secondAttribute="leading" constant="8" id="hfW-7q-fed"/>
+                                    <constraint firstItem="VTT-My-OqO" firstAttribute="width" secondItem="38U-4X-tIr" secondAttribute="width" id="kTQ-0k-f8D"/>
+                                    <constraint firstAttribute="trailing" secondItem="VTT-My-OqO" secondAttribute="trailing" id="lOP-6g-XEz"/>
+                                    <constraint firstItem="VTT-My-OqO" firstAttribute="top" secondItem="38U-4X-tIr" secondAttribute="top" id="nAX-gb-09D"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWe-LW-2jL" customClass="WalletBar" customModule="RaccoonWallet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="320" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="rad-K1-Vjs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xJa-3o-AcC" firstAttribute="bottom" secondItem="38U-4X-tIr" secondAttribute="bottom" id="7pu-zd-H4g"/>
+                            <constraint firstItem="38U-4X-tIr" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" id="F2f-Va-kDw"/>
+                            <constraint firstAttribute="trailing" secondItem="38U-4X-tIr" secondAttribute="trailing" id="Qwf-z1-yQv"/>
+                            <constraint firstItem="zWe-LW-2jL" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" id="Sw8-1F-F4M"/>
+                            <constraint firstItem="zWe-LW-2jL" firstAttribute="leading" secondItem="mtQ-k8-Vb7" secondAttribute="leading" id="WYx-P7-hMY"/>
+                            <constraint firstItem="38U-4X-tIr" firstAttribute="leading" secondItem="mtQ-k8-Vb7" secondAttribute="leading" id="bKL-Lq-2G0"/>
+                            <constraint firstAttribute="trailing" secondItem="zWe-LW-2jL" secondAttribute="trailing" id="he1-QO-S9V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xJa-3o-AcC"/>
+                    </view>
+                    <connections>
+                        <outlet property="address" destination="Ldy-J5-Iaa" id="xmr-m1-Qqe"/>
+                        <outlet property="addressQr" destination="c84-Rp-Ntg" id="H95-Gd-GTU"/>
+                        <outlet property="addressTitle" destination="zoZ-PF-s2e" id="p4a-ec-EjA"/>
+                        <outlet property="walletBar" destination="zWe-LW-2jL" id="jZW-zd-l29"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htF-N7-RCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354.375" y="63.380281690140848"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heroimage_send_small" width="720" height="200"/>
+    </resources>
+</document>

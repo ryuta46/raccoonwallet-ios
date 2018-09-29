@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Send Message Type View Controller-->
+        <scene sceneID="4uP-dw-sQY">
+            <objects>
+                <viewController storyboardIdentifier="SendMessageTypeView" id="0N3-Wq-2vd" customClass="SendMessageTypeViewController" customModule="RaccoonWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FSi-DZ-zaL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_send_small" translatesAutoresizingMaskIntoConstraints="NO" id="oxd-Wt-Mb6">
+                                <rect key="frame" x="0.0" y="44" width="375" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oxd-Wt-Mb6" secondAttribute="height" multiplier="720:200" id="hNv-Hr-bPg"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxl-yG-BOC" customClass="WalletBar" customModule="RaccoonWallet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="375" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="uEq-nP-fw5"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Dw7-MA-P7W">
+                                <rect key="frame" x="16" y="180" width="343" height="290"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oCm-hZ-xj5">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="129"/>
+                                        <subviews>
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="753" translatesAutoresizingMaskIntoConstraints="NO" id="oWQ-Hb-EWW">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="129"/>
+                                                <subviews>
+                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lo9-d0-LXl">
+                                                        <rect key="frame" x="32" y="0.0" width="64" height="64"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_message_standard" translatesAutoresizingMaskIntoConstraints="NO" id="91h-51-2g6">
+                                                                <rect key="frame" x="8.6666666666666643" y="8" width="48" height="48"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="48" id="ZIH-jt-qaw"/>
+                                                                    <constraint firstAttribute="width" secondItem="91h-51-2g6" secondAttribute="height" multiplier="1:1" id="krQ-Cc-wsu"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Lo9-d0-LXl" secondAttribute="height" multiplier="1:1" id="8JB-Mc-JfW"/>
+                                                            <constraint firstItem="91h-51-2g6" firstAttribute="centerY" secondItem="Lo9-d0-LXl" secondAttribute="centerY" id="GFp-2a-S3e"/>
+                                                            <constraint firstAttribute="width" constant="64" id="WJ8-3Y-xck"/>
+                                                            <constraint firstItem="91h-51-2g6" firstAttribute="centerX" secondItem="Lo9-d0-LXl" secondAttribute="centerX" id="neE-CX-YPs"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通常のメッセージ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikG-pg-TRe">
+                                                        <rect key="frame" x="6.9999999999999929" y="72" width="114.33333333333331" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="ikG-pg-TRe" firstAttribute="top" secondItem="Lo9-d0-LXl" secondAttribute="bottom" constant="8" id="IQ5-de-Sqk"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ikG-pg-TRe" secondAttribute="bottom" constant="40" id="KYp-CD-TwA"/>
+                                                    <constraint firstItem="Lo9-d0-LXl" firstAttribute="top" secondItem="oWQ-Hb-EWW" secondAttribute="top" id="Zt9-AO-fAk"/>
+                                                    <constraint firstItem="ikG-pg-TRe" firstAttribute="centerX" secondItem="Lo9-d0-LXl" secondAttribute="centerX" id="uKV-LY-n8T"/>
+                                                    <constraint firstItem="Lo9-d0-LXl" firstAttribute="leading" secondItem="oWQ-Hb-EWW" secondAttribute="leading" constant="32" id="wsi-I1-xpq"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYc-jB-I1b">
+                                                <rect key="frame" x="175.66666666666663" y="0.0" width="167.33333333333337" height="77.666666666666671"/>
+                                                <string key="text">普通のお手紙です。
+お礼の言葉を添えたりするときは、こっちでいいと思うよ。
+認証番号もこっち</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KPT-sA-ewM">
+                                        <rect key="frame" x="0.0" y="161" width="343" height="129"/>
+                                        <subviews>
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWd-Xm-a7m">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="129"/>
+                                                <subviews>
+                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xbc-NW-G1p">
+                                                        <rect key="frame" x="32" y="0.0" width="64" height="64"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_message_encryption" translatesAutoresizingMaskIntoConstraints="NO" id="dPj-TM-M04">
+                                                                <rect key="frame" x="8.6666666666666643" y="8" width="48" height="48"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="dPj-TM-M04" secondAttribute="height" multiplier="1:1" id="27c-Pp-aNi"/>
+                                                                    <constraint firstAttribute="width" constant="48" id="r25-We-ZvK"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="dPj-TM-M04" firstAttribute="centerY" secondItem="Xbc-NW-G1p" secondAttribute="centerY" id="Bgp-46-iHz"/>
+                                                            <constraint firstAttribute="width" secondItem="Xbc-NW-G1p" secondAttribute="height" multiplier="1:1" id="PpY-Up-gdQ"/>
+                                                            <constraint firstItem="dPj-TM-M04" firstAttribute="centerX" secondItem="Xbc-NW-G1p" secondAttribute="centerX" id="k8G-oY-Rqy"/>
+                                                            <constraint firstAttribute="width" constant="64" id="kYZ-WH-e3n"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通常のメッセージ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01d-hl-IRS">
+                                                        <rect key="frame" x="6.9999999999999929" y="72" width="114.33333333333331" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Xbc-NW-G1p" firstAttribute="leading" secondItem="AWd-Xm-a7m" secondAttribute="leading" constant="32" id="3B5-NT-2eo"/>
+                                                    <constraint firstAttribute="bottom" secondItem="01d-hl-IRS" secondAttribute="bottom" constant="40" id="cls-5d-L7O"/>
+                                                    <constraint firstItem="01d-hl-IRS" firstAttribute="top" secondItem="Xbc-NW-G1p" secondAttribute="bottom" constant="8" id="gpB-Gx-j9c"/>
+                                                    <constraint firstItem="Xbc-NW-G1p" firstAttribute="top" secondItem="AWd-Xm-a7m" secondAttribute="top" id="qF5-sb-HF5"/>
+                                                    <constraint firstItem="01d-hl-IRS" firstAttribute="centerX" secondItem="Xbc-NW-G1p" secondAttribute="centerX" id="zV9-e5-qAC"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pL-KN-4QZ">
+                                                <rect key="frame" x="175.66666666666663" y="0.0" width="167.33333333333337" height="77.666666666666671"/>
+                                                <string key="text">普通のお手紙です。
+お礼の言葉を添えたりするときは、こっちでいいと思うよ。
+認証番号もこっち</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oxd-Wt-Mb6" firstAttribute="leading" secondItem="s5L-4T-fEF" secondAttribute="leading" id="6Sl-M3-Feb"/>
+                            <constraint firstItem="Wxl-yG-BOC" firstAttribute="leading" secondItem="s5L-4T-fEF" secondAttribute="leading" id="7o8-Ay-8rq"/>
+                            <constraint firstItem="Dw7-MA-P7W" firstAttribute="leading" secondItem="s5L-4T-fEF" secondAttribute="leading" constant="16" id="BVc-Dp-NuY"/>
+                            <constraint firstItem="oxd-Wt-Mb6" firstAttribute="top" secondItem="s5L-4T-fEF" secondAttribute="top" id="gb7-5D-BMN"/>
+                            <constraint firstItem="s5L-4T-fEF" firstAttribute="trailing" secondItem="Wxl-yG-BOC" secondAttribute="trailing" id="oBg-to-E1S"/>
+                            <constraint firstItem="Dw7-MA-P7W" firstAttribute="top" secondItem="oxd-Wt-Mb6" secondAttribute="bottom" constant="32" id="oac-DS-Hg3"/>
+                            <constraint firstItem="s5L-4T-fEF" firstAttribute="trailing" secondItem="oxd-Wt-Mb6" secondAttribute="trailing" id="s6G-32-ftX"/>
+                            <constraint firstItem="s5L-4T-fEF" firstAttribute="trailing" secondItem="Dw7-MA-P7W" secondAttribute="trailing" constant="16" id="wvc-jo-SCk"/>
+                            <constraint firstItem="Wxl-yG-BOC" firstAttribute="top" secondItem="s5L-4T-fEF" secondAttribute="top" id="zL2-P7-M8N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s5L-4T-fEF"/>
+                    </view>
+                    <connections>
+                        <outlet property="encryptionContents" destination="KPT-sA-ewM" id="ui3-m2-PbQ"/>
+                        <outlet property="encryptionHeadline" destination="01d-hl-IRS" id="gPZ-Gx-TaC"/>
+                        <outlet property="encryptionIconContainer" destination="Xbc-NW-G1p" id="Nnr-8Y-peb"/>
+                        <outlet property="encryptionMessage" destination="9pL-KN-4QZ" id="9G2-Vv-Xqm"/>
+                        <outlet property="standardContents" destination="oCm-hZ-xj5" id="vhP-Kk-11F"/>
+                        <outlet property="standardHeadline" destination="ikG-pg-TRe" id="uOp-aW-wSt"/>
+                        <outlet property="standardIconContainer" destination="Lo9-d0-LXl" id="jUF-OX-dnU"/>
+                        <outlet property="standardMessage" destination="WYc-jB-I1b" id="0PZ-3X-zf7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htF-N7-RCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354.39999999999998" y="63.418290854572717"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heroimage_send_small" width="720" height="200"/>
+        <image name="icon_message_encryption" width="96" height="96"/>
+        <image name="icon_message_standard" width="96" height="96"/>
+    </resources>
+</document>

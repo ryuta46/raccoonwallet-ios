@@ -1,0 +1,19 @@
+sources:
+  - ./RaccoonWallet
+  - ./RaccoonWalletTests
+templates:
+  - ./Pods/SwiftyMocky/Sources/Templates
+output:
+  ./RaccoonWalletTests
+args:
+  testable:
+    - RaccoonWallet
+  import:
+    - NemSwift
+    - RxSwift
+    - RxBlocking
+  excludedSwiftLintRules:
+    - force_cast
+    - function_body_length
+    - line_length
+    - vertical_whitespace
