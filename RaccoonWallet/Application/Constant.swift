@@ -46,4 +46,6 @@ class Constant {
     static let oaMosaicImageKey = "oa:"
     static let oaMosaicImagePrefix = "https://s3.amazonaws.com/open-apostille-nemgallary-production/"
     static let oaMosaicImageSuffix = ".jpg"
+    
+    static let popupDuration: TimeInterval = 3.0
 }

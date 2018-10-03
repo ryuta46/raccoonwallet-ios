@@ -35,8 +35,10 @@ extension UIViewController {
     func showInfoPopup(_ message: String) {
         let snackbarMessage = MDCSnackbarMessage()
         snackbarMessage.text = message
+        snackbarMessage.duration = Constant.popupDuration
         
         let manager = MDCSnackbarManager()
+
         manager.setBottomOffset(tabBarController?.tabBar.frame.height ?? 0)
 
         manager.show(snackbarMessage)
@@ -45,7 +47,8 @@ extension UIViewController {
     func showErrorPopup(_ message: String) {
         let snackbarMessage = MDCSnackbarMessage()
         snackbarMessage.text = message
-
+        snackbarMessage.duration = Constant.popupDuration
+        
         let manager = MDCSnackbarManager()
         manager.snackbarMessageViewBackgroundColor = Theme.error
         manager.setBottomOffset(tabBarController?.tabBar.frame.height ?? 0)
