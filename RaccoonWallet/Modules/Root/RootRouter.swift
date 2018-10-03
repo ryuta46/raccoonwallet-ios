@@ -69,7 +69,7 @@ class RootNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setStatusBarColor()
-
+        setupNavigationBarShadow()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -118,5 +118,17 @@ class RootNavigationController: UINavigationController {
                 }
             }
         }
+    }
+    
+    private func setupNavigationBarShadow() {
+        navigationBar.isTranslucent = false
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage()
+        
+        navigationBar.layer.shadowColor = Constant.shadowColor
+        navigationBar.layer.shadowOffset = Constant.shadowOffset
+        navigationBar.layer.shadowRadius = Constant.shadowRadius
+        navigationBar.layer.shadowOpacity = Constant.shadowOpacity
+        navigationBar.layer.masksToBounds = false
     }
 }
