@@ -37,6 +37,9 @@ class HomeTabViewController: BaseViewController {
         transactionViews = [
             transaction0, transaction1, transaction2, transaction3
         ]
+        transactionViews.forEach { transactionView in
+            transactionView.date.font = UIFont.monospacedDigitSystemFont(ofSize: transactionView.date.font.pointSize, weight: UIFont.Weight.light)
+        }
 
         balanceCard.setOnTouchedHandler {
             self.presenter.didClickBalance()

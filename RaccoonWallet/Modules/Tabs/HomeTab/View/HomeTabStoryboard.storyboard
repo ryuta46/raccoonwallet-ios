@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygB-Ky-ZYY" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
-                                        <rect key="frame" x="12" y="48" width="296" height="139"/>
+                                        <rect key="frame" x="14" y="60" width="292" height="184.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab_home_balance" translatesAutoresizingMaskIntoConstraints="NO" id="rne-38-Qka">
                                                 <rect key="frame" x="16" y="0.0" width="64" height="28"/>
@@ -32,14 +32,13 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_home_balance_background" translatesAutoresizingMaskIntoConstraints="NO" id="SoI-3A-RBH">
-                                                <rect key="frame" x="136" y="94.5" width="160" height="44.5"/>
+                                                <rect key="frame" x="16" y="108" width="276" height="76.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="160" id="Mkz-8v-d67"/>
                                                     <constraint firstAttribute="width" secondItem="SoI-3A-RBH" secondAttribute="height" multiplier="379:105" id="rdG-5N-Acz"/>
                                                 </constraints>
                                             </imageView>
-                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fgG-Ie-eEo">
-                                                <rect key="frame" x="12" y="52" width="252" height="55"/>
+                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fgG-Ie-eEo">
+                                                <rect key="frame" x="12" y="61" width="252" height="63"/>
                                                 <subviews>
                                                     <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="50i-T8-TXm">
                                                         <rect key="frame" x="0.0" y="0.0" width="252" height="27.5"/>
@@ -59,7 +58,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JPY : 2,000,000,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U04-rb-UQM">
-                                                        <rect key="frame" x="0.0" y="35.5" width="252" height="19.5"/>
+                                                        <rect key="frame" x="0.0" y="43.5" width="252" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -69,21 +68,41 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="fgG-Ie-eEo" secondAttribute="trailing" constant="32" id="FhV-ZR-YDF"/>
+                                            <constraint firstAttribute="trailing" secondItem="fgG-Ie-eEo" secondAttribute="trailing" constant="28" id="FhV-ZR-YDF"/>
                                             <constraint firstItem="rne-38-Qka" firstAttribute="top" secondItem="ygB-Ky-ZYY" secondAttribute="top" id="IAu-Ku-6cS"/>
                                             <constraint firstAttribute="bottom" secondItem="SoI-3A-RBH" secondAttribute="bottom" id="Ipu-ND-jPN"/>
+                                            <constraint firstItem="fgG-Ie-eEo" firstAttribute="centerY" secondItem="ygB-Ky-ZYY" secondAttribute="centerY" id="KB0-P6-czo"/>
+                                            <constraint firstAttribute="width" secondItem="ygB-Ky-ZYY" secondAttribute="height" multiplier="3:1" id="RwA-g7-Gvi"/>
                                             <constraint firstItem="fgG-Ie-eEo" firstAttribute="leading" secondItem="ygB-Ky-ZYY" secondAttribute="leading" constant="12" id="Xjh-nz-eeS"/>
                                             <constraint firstAttribute="trailing" secondItem="SoI-3A-RBH" secondAttribute="trailing" id="XrW-XL-fLM"/>
-                                            <constraint firstItem="fgG-Ie-eEo" firstAttribute="top" secondItem="rne-38-Qka" secondAttribute="bottom" constant="24" id="Zw1-QW-yzo"/>
-                                            <constraint firstAttribute="bottom" secondItem="fgG-Ie-eEo" secondAttribute="bottom" constant="32" id="nuX-GE-4eS"/>
+                                            <constraint firstAttribute="width" secondItem="ygB-Ky-ZYY" secondAttribute="height" multiplier="348:220" id="gbV-sJ-Ory"/>
+                                            <constraint firstItem="SoI-3A-RBH" firstAttribute="leading" secondItem="ygB-Ky-ZYY" secondAttribute="leading" constant="16" id="iCF-B6-in1"/>
                                             <constraint firstItem="rne-38-Qka" firstAttribute="leading" secondItem="ygB-Ky-ZYY" secondAttribute="leading" constant="16" id="vTv-oF-ZbF"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="RwA-g7-Gvi"/>
+                                                <exclude reference="gbV-sJ-Ory"/>
+                                                <exclude reference="iCF-B6-in1"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="gbV-sJ-Ory"/>
+                                                <include reference="iCF-B6-in1"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="RwA-g7-Gvi"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyR-lO-od2" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
-                                        <rect key="frame" x="12" y="203" width="296" height="130"/>
+                                        <rect key="frame" x="14" y="260.5" width="292" height="124"/>
                                         <subviews>
                                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OmK-Sl-YgG" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                <rect key="frame" x="208" y="32" width="80" height="80"/>
+                                                <rect key="frame" x="196" y="22" width="80" height="80"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_home_transaction" translatesAutoresizingMaskIntoConstraints="NO" id="mfS-3x-jSQ">
                                                         <rect key="frame" x="17" y="14.5" width="46" height="51"/>
@@ -108,39 +127,39 @@
                                                     <constraint firstAttribute="width" secondItem="Ta3-xC-jbQ" secondAttribute="height" multiplier="128:56" id="pqc-Fk-kCY"/>
                                                 </constraints>
                                             </imageView>
-                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="bch-VM-E05">
-                                                <rect key="frame" x="8" y="32" width="192" height="90"/>
+                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="bch-VM-E05">
+                                                <rect key="frame" x="12" y="36" width="176" height="68"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7q-wy-E2q" customClass="TransactionView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="192" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="176" height="16.5"/>
                                                         <color key="backgroundColor" red="0.40000000000000002" green="0.69411764710000001" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJB-Oq-MHW" customClass="TransactionView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="23" width="192" height="21"/>
+                                                        <rect key="frame" x="0.0" y="17.5" width="176" height="16"/>
                                                         <color key="backgroundColor" red="0.40000000000000002" green="0.69411764710000001" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pal-ad-N54" customClass="TransactionView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="46" width="192" height="21"/>
+                                                        <rect key="frame" x="0.0" y="34.5" width="176" height="16.5"/>
                                                         <color key="backgroundColor" red="0.40000000000000002" green="0.69411764710000001" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ph6-eX-z6X" customClass="TransactionView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="69" width="192" height="21"/>
+                                                        <rect key="frame" x="0.0" y="52" width="176" height="16"/>
                                                         <color key="backgroundColor" red="0.40000000000000002" green="0.69411764710000001" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </view>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dmi-FR-ac3">
-                                                <rect key="frame" x="8" y="32" width="192" height="90"/>
+                                                <rect key="frame" x="12" y="36" width="176" height="68"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_empty1_small" translatesAutoresizingMaskIntoConstraints="NO" id="YXa-oI-ANg">
-                                                        <rect key="frame" x="0.0" y="21" width="48" height="48"/>
+                                                        <rect key="frame" x="0.0" y="10" width="48" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="YXa-oI-ANg" secondAttribute="height" multiplier="1:1" id="guz-f9-fQ3"/>
                                                             <constraint firstAttribute="width" constant="48" id="hiw-4j-RXq"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no current transaction" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uT3-bp-ARe">
-                                                        <rect key="frame" x="48" y="30.5" width="144" height="29"/>
+                                                        <rect key="frame" x="48" y="19.5" width="128" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -150,23 +169,23 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="bch-VM-E05" firstAttribute="leading" secondItem="jyR-lO-od2" secondAttribute="leading" constant="8" id="58c-g4-Fsv"/>
-                                            <constraint firstItem="bch-VM-E05" firstAttribute="top" secondItem="Ta3-xC-jbQ" secondAttribute="bottom" constant="4" id="8Tg-PW-0bV"/>
+                                            <constraint firstItem="bch-VM-E05" firstAttribute="leading" secondItem="jyR-lO-od2" secondAttribute="leading" constant="12" id="58c-g4-Fsv"/>
+                                            <constraint firstItem="bch-VM-E05" firstAttribute="top" secondItem="Ta3-xC-jbQ" secondAttribute="bottom" constant="8" id="8Tg-PW-0bV"/>
                                             <constraint firstItem="Ta3-xC-jbQ" firstAttribute="leading" secondItem="jyR-lO-od2" secondAttribute="leading" constant="16" id="ECz-Op-2Mx"/>
                                             <constraint firstItem="dmi-FR-ac3" firstAttribute="trailing" secondItem="bch-VM-E05" secondAttribute="trailing" id="G9F-ii-CDH"/>
                                             <constraint firstItem="dmi-FR-ac3" firstAttribute="top" secondItem="bch-VM-E05" secondAttribute="top" id="GG6-1F-Ev2"/>
                                             <constraint firstItem="dmi-FR-ac3" firstAttribute="leading" secondItem="bch-VM-E05" secondAttribute="leading" id="HRx-ZO-NMe"/>
-                                            <constraint firstItem="OmK-Sl-YgG" firstAttribute="top" secondItem="jyR-lO-od2" secondAttribute="top" constant="32" id="J18-do-Oj5"/>
-                                            <constraint firstAttribute="height" constant="130" id="Min-DR-cPt"/>
+                                            <constraint firstAttribute="height" constant="124" id="Min-DR-cPt"/>
+                                            <constraint firstItem="OmK-Sl-YgG" firstAttribute="centerY" secondItem="jyR-lO-od2" secondAttribute="centerY" id="Ufk-S9-O20"/>
                                             <constraint firstItem="dmi-FR-ac3" firstAttribute="bottom" secondItem="bch-VM-E05" secondAttribute="bottom" id="VE3-1k-9Y9"/>
                                             <constraint firstItem="OmK-Sl-YgG" firstAttribute="leading" secondItem="bch-VM-E05" secondAttribute="trailing" constant="8" id="aai-tL-2TJ"/>
                                             <constraint firstItem="Ta3-xC-jbQ" firstAttribute="top" secondItem="jyR-lO-od2" secondAttribute="top" id="atg-z4-ntX"/>
-                                            <constraint firstAttribute="trailing" secondItem="OmK-Sl-YgG" secondAttribute="trailing" constant="8" id="qaZ-w8-VN7"/>
-                                            <constraint firstAttribute="bottom" secondItem="bch-VM-E05" secondAttribute="bottom" constant="8" id="trI-8d-dbX"/>
+                                            <constraint firstAttribute="trailing" secondItem="OmK-Sl-YgG" secondAttribute="trailing" constant="16" id="qaZ-w8-VN7"/>
+                                            <constraint firstAttribute="bottom" secondItem="bch-VM-E05" secondAttribute="bottom" constant="20" id="trI-8d-dbX"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebN-bL-svk" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
-                                        <rect key="frame" x="12" y="349" width="296" height="85"/>
+                                        <rect key="frame" x="14" y="400.5" width="292" height="85"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab_home_harvest" translatesAutoresizingMaskIntoConstraints="NO" id="e1B-7f-Y5d">
                                                 <rect key="frame" x="16" y="0.0" width="64" height="28"/>
@@ -176,10 +195,10 @@
                                                 </constraints>
                                             </imageView>
                                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12h-BF-Jq4" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                <rect key="frame" x="208" y="32" width="80" height="36"/>
+                                                <rect key="frame" x="196" y="24.5" width="80" height="36"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_home_harvest" translatesAutoresizingMaskIntoConstraints="NO" id="44G-Sp-rGo">
-                                                        <rect key="frame" x="24" y="6" width="32" height="24"/>
+                                                        <rect key="frame" x="24" y="6.5" width="32" height="23.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="32" id="dqm-sZ-27u"/>
                                                             <constraint firstAttribute="width" secondItem="44G-Sp-rGo" secondAttribute="height" multiplier="61:45" id="nfo-35-Jl9"/>
@@ -195,7 +214,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DxY-sR-uAH">
-                                                <rect key="frame" x="8" y="12" width="192" height="69"/>
+                                                <rect key="frame" x="8" y="12" width="180" height="69"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_empty2_small" translatesAutoresizingMaskIntoConstraints="NO" id="KeE-RW-ueg">
                                                         <rect key="frame" x="0.0" y="10.5" width="48" height="48"/>
@@ -205,7 +224,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="You have no current harvesting." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRD-XT-NPM">
-                                                        <rect key="frame" x="48" y="20" width="144" height="29"/>
+                                                        <rect key="frame" x="48" y="20" width="132" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -215,29 +234,29 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="12h-BF-Jq4" firstAttribute="top" secondItem="ebN-bL-svk" secondAttribute="top" constant="32" id="5FG-lp-oYW"/>
                                             <constraint firstItem="e1B-7f-Y5d" firstAttribute="leading" secondItem="ebN-bL-svk" secondAttribute="leading" constant="16" id="6Dj-8T-Us9"/>
+                                            <constraint firstItem="12h-BF-Jq4" firstAttribute="centerY" secondItem="ebN-bL-svk" secondAttribute="centerY" id="Hor-Na-Dv4"/>
                                             <constraint firstItem="e1B-7f-Y5d" firstAttribute="top" secondItem="ebN-bL-svk" secondAttribute="top" id="Lwy-3L-hcH"/>
                                             <constraint firstItem="DxY-sR-uAH" firstAttribute="leading" secondItem="ebN-bL-svk" secondAttribute="leading" constant="8" id="jrW-U1-AEq"/>
                                             <constraint firstAttribute="bottom" secondItem="DxY-sR-uAH" secondAttribute="bottom" constant="4" id="kLb-Ho-VqL"/>
                                             <constraint firstItem="12h-BF-Jq4" firstAttribute="leading" secondItem="DxY-sR-uAH" secondAttribute="trailing" constant="8" id="kRZ-68-miK"/>
-                                            <constraint firstAttribute="trailing" secondItem="12h-BF-Jq4" secondAttribute="trailing" constant="8" id="tqf-jp-GV6"/>
+                                            <constraint firstAttribute="trailing" secondItem="12h-BF-Jq4" secondAttribute="trailing" constant="16" id="tqf-jp-GV6"/>
                                             <constraint firstItem="DxY-sR-uAH" firstAttribute="top" secondItem="e1B-7f-Y5d" secondAttribute="bottom" constant="-16" id="uLy-kv-3Hi"/>
                                             <constraint firstAttribute="height" constant="85" id="vN5-2t-dER"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ygB-Ky-ZYY" secondAttribute="trailing" constant="12" id="GkL-hH-jzU"/>
+                                    <constraint firstAttribute="trailing" secondItem="ygB-Ky-ZYY" secondAttribute="trailing" constant="14" id="GkL-hH-jzU"/>
                                     <constraint firstItem="jyR-lO-od2" firstAttribute="width" secondItem="ygB-Ky-ZYY" secondAttribute="width" id="VuG-uG-JpB"/>
-                                    <constraint firstItem="ygB-Ky-ZYY" firstAttribute="width" secondItem="oCm-h4-AzK" secondAttribute="width" constant="-24" id="WMg-Cj-xeA"/>
-                                    <constraint firstItem="ygB-Ky-ZYY" firstAttribute="top" secondItem="oCm-h4-AzK" secondAttribute="top" constant="48" id="Wz3-Lh-ik9"/>
+                                    <constraint firstItem="ygB-Ky-ZYY" firstAttribute="width" secondItem="oCm-h4-AzK" secondAttribute="width" constant="-28" id="WMg-Cj-xeA"/>
+                                    <constraint firstItem="ygB-Ky-ZYY" firstAttribute="top" secondItem="oCm-h4-AzK" secondAttribute="top" constant="60" id="Wz3-Lh-ik9"/>
                                     <constraint firstItem="ebN-bL-svk" firstAttribute="top" secondItem="jyR-lO-od2" secondAttribute="bottom" constant="16" id="djR-Vu-gBO"/>
                                     <constraint firstItem="ebN-bL-svk" firstAttribute="centerX" secondItem="oCm-h4-AzK" secondAttribute="centerX" id="hSh-OK-VZr"/>
                                     <constraint firstItem="jyR-lO-od2" firstAttribute="top" secondItem="ygB-Ky-ZYY" secondAttribute="bottom" constant="16" id="jgj-cR-3Vd"/>
                                     <constraint firstItem="ebN-bL-svk" firstAttribute="width" secondItem="ygB-Ky-ZYY" secondAttribute="width" id="kj4-6H-rj6"/>
                                     <constraint firstAttribute="bottom" secondItem="ebN-bL-svk" secondAttribute="bottom" constant="16" id="sIV-ne-00p"/>
-                                    <constraint firstItem="ygB-Ky-ZYY" firstAttribute="leading" secondItem="oCm-h4-AzK" secondAttribute="leading" constant="12" id="x0y-fh-vk6"/>
+                                    <constraint firstItem="ygB-Ky-ZYY" firstAttribute="leading" secondItem="oCm-h4-AzK" secondAttribute="leading" constant="14" id="x0y-fh-vk6"/>
                                     <constraint firstItem="jyR-lO-od2" firstAttribute="centerX" secondItem="oCm-h4-AzK" secondAttribute="centerX" id="yMs-Ap-zOo"/>
                                 </constraints>
                             </scrollView>

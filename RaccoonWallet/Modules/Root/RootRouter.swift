@@ -14,7 +14,7 @@ class RootRouter: RootWireframe {
 
     func presentScreen(in window: UIWindow) {
         NemSwiftConfiguration.logLevel = .none
-        NemService.nis = URL(string: ApplicationSetting.shared.nisUrl) ?? URL(string: "https://nismain.ttechdev.com:7891")!
+        NemService.nis = URL(string: ApplicationSetting.shared.nisUrl) ?? URL(string: "http://176.9.68.110:7890")!
 
         window.makeKeyAndVisible()
 

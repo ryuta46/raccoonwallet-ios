@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,36 +23,46 @@
             <rect key="frame" x="0.0" y="0.0" width="500" height="36"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="DOX-Ja-vN4">
-                    <rect key="frame" x="0.0" y="0.0" width="500" height="16"/>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DOX-Ja-vN4">
+                    <rect key="frame" x="0.0" y="0.0" width="500" height="13.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/23, 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSn-cB-QeA">
-                            <rect key="frame" x="0.0" y="2" width="79.5" height="12"/>
-                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="12"/>
+                            <rect key="frame" x="0.0" y="1.5" width="51" height="11"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_transaction_receive_red" translatesAutoresizingMaskIntoConstraints="NO" id="qnc-ke-A5k">
-                            <rect key="frame" x="85.5" y="0.0" width="16" height="16"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gti-a3-BgW">
+                            <rect key="frame" x="59" y="6.5" width="0.0" height="1"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="16" id="xHq-IV-C1G"/>
-                                <constraint firstAttribute="width" constant="16" id="ytb-Y7-Ahd"/>
+                                <constraint firstAttribute="width" id="h1H-cY-7tI"/>
+                                <constraint firstAttribute="height" constant="1" id="hH2-fU-9hx"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_transaction_receive_red" translatesAutoresizingMaskIntoConstraints="NO" id="qnc-ke-A5k">
+                            <rect key="frame" x="67" y="1" width="12" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="qnc-ke-A5k" secondAttribute="height" multiplier="1:1" id="cTb-gv-8SL"/>
+                                <constraint firstAttribute="width" constant="12" id="ytb-Y7-Ahd"/>
                             </constraints>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_multisignature_red" translatesAutoresizingMaskIntoConstraints="NO" id="YL0-a7-TB2">
-                            <rect key="frame" x="107.5" y="0.0" width="16" height="16"/>
+                            <rect key="frame" x="87" y="1" width="12" height="12"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="16" id="fpO-PB-WHL"/>
-                                <constraint firstAttribute="width" constant="16" id="zob-Jm-j15"/>
+                                <constraint firstAttribute="width" secondItem="YL0-a7-TB2" secondAttribute="height" multiplier="1:1" id="t6y-2D-Zuv"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="1,000,000 XEM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sI2-fx-Ba2">
-                            <rect key="frame" x="129.5" y="1" width="370.5" height="14.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <rect key="frame" x="107" y="0.0" width="393" height="13.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="YL0-a7-TB2" firstAttribute="width" secondItem="qnc-ke-A5k" secondAttribute="width" id="XrC-AF-cPq"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,7 +73,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="52" y="-777"/>
+            <point key="canvasLocation" x="51.200000000000003" y="-777.21139430284859"/>
         </view>
     </objects>
     <resources>
