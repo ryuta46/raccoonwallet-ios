@@ -68,7 +68,6 @@ class RootNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setStatusBarColor()
         setupNavigationBarShadow()
     }
 

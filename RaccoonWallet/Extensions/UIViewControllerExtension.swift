@@ -20,12 +20,6 @@ extension UIViewController {
         }
     }
 
-    func setStatusBarColor() {
-        let statusBar = UIView(frame: UIApplication.shared.statusBarFrame)
-        statusBar.backgroundColor = Theme.primary
-        view.addSubview(statusBar)
-    }
-
     func hideBackTitle() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
