@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import REFrostedViewController
 import FirebaseCore
 
 @UIApplicationMain
@@ -47,6 +48,80 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
+            if let url = userActivity.webpageURL {
+                if let components = URLComponents(url: url, resolvingAgainstBaseURL: true),
+                    let host = components.host, let queries = components.queryItems {
+                    
+                    let queryDictionary = Dictionary(uniqueKeysWithValues: queries.compactMap{ $0.value == nil ? nil : ( $0.name, $0.value!) })
+                    
+                    guard host == "ryuta46.com" else {
+                        return false
+                    }
+
+                    guard let address = queryDictionary["addr"],
+                        let amountString = queryDictionary["amount"],
+                        let amount = UInt64(amountString) else {
+                            return false
+                    }
+                    let msg = queryDictionary["msg"]
+
+                    var sendTransaction = SendTransaction(address: address, publicKey: nil)
+                    sendTransaction.mosaics = [MosaicDetail.xem(amount)]
+                    sendTransaction.message = msg
+                    sendTransaction.messageType = .plain
+
+                    DeepLinNavigation().presentSendConfirmation(sendTransaction)
+                }
+            }
+        }
+        return true
+    }
+
+
+    class DeepLinNavigation {
+        var navigationController: UINavigationController? = nil
+
+        func presentSendConfirmation(_ sendTransaction: SendTransaction) {
+            let frontViewController: UIViewController?
+            let errorDialog: UIViewController?
+
+            if !PinPreference.shared.saved {
+                frontViewController = nil
+                errorDialog = MessageDialogPreset.createErrorNotSetPin { result in
+                    if result == .ok {
+                        self.navigationController?.pushViewController(SettingTopRouter.assembleModule(), animated: true)
+                    }
+                }
+            } else if WalletHelper.activeWallet == nil {
+                frontViewController = nil
+                errorDialog = MessageDialogPreset.createErrorNotSelectWallet { result in
+                    if result == .ok {
+                        self.navigationController?.pushViewControllerFromTop(WalletSelectRouter.assembleModule())
+                    }
+                }
+            } else {
+                frontViewController = SendConfirmationRouter.assembleModule(sendTransaction)
+                errorDialog = nil
+            }
+
+            if let root = RootRouter.assembleRootController(withFront: frontViewController) as? REFrostedViewController,
+               let navigationController = root.contentViewController as? UINavigationController,
+               let rootViewController = UIApplication.shared.keyWindow?.rootViewController {
+
+                rootViewController.dismiss(animated: false) {
+                    self.navigationController = navigationController
+                    rootViewController.present(root, animated: false) {
+                        if let errorDialog = errorDialog {
+                            navigationController.present(errorDialog, animated: true)
+                        }
+                    }
+                }
+            }
+        }
     }
 
 }

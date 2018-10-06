@@ -15,6 +15,9 @@ class RootRouter: RootWireframe {
     func presentScreen(in window: UIWindow) {
         NemSwiftConfiguration.logLevel = .none
         NemService.nis = URL(string: ApplicationSetting.shared.nisUrl) ?? URL(string: "http://176.9.68.110:7890")!
+        
+        let config = URLSessionConfiguration.default
+        config.timeoutIntervalForRequest = 10
 
         window.makeKeyAndVisible()
 
@@ -56,15 +59,7 @@ class RootRouter: RootWireframe {
 class RootNavigationController: UINavigationController {
     var locked: Bool = false
     var isFirstDisplay = true
-    
-    var topMostViewController: UIViewController? {
-        var topMostViewController = UIApplication.shared.keyWindow?.rootViewController
-        
-        while topMostViewController?.presentedViewController != nil {
-            topMostViewController = topMostViewController?.presentedViewController
-        }
-        return topMostViewController
-    }
+    var reservedView: UIViewController? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,8 +86,7 @@ class RootNavigationController: UINavigationController {
     @objc func onWillEnterForeground(_ notification: Notification?) {
         showLockDialog()
     }
-
-
+    
     private func showLockDialog() {
         guard !locked else{
             return
@@ -107,6 +101,11 @@ class RootNavigationController: UINavigationController {
             let dialog = PinDialogRouter.assembleModule(forRegistration: false, cancelable: false) { pin in
                 if pin != nil{
                     self.locked = false
+                    // if navigation is reserved, push the page
+                    if let reservedView = self.reservedView {
+                        self.pushViewController(reservedView, animated: true)
+                        self.reservedView = nil
+                    }
                 }
             }
             
@@ -129,5 +128,13 @@ class RootNavigationController: UINavigationController {
         navigationBar.layer.shadowRadius = Constant.shadowRadius
         navigationBar.layer.shadowOpacity = Constant.shadowOpacity
         navigationBar.layer.masksToBounds = false
+    }
+    
+    func reserveNavigation(_ viewController: UIViewController) {
+        if PinPreference.shared.saved && ApplicationSetting.shared.isPinRequiredOnLaunch {
+            reservedView = viewController
+        } else {
+            pushViewController(viewController, animated: true)
+        }
     }
 }
