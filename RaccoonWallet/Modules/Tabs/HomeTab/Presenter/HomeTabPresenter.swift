@@ -87,6 +87,8 @@ extension HomeTabPresenter: HomeTabInteractorOutput {
     func balanceFetchFailed(_ error: Error) {
         balanceLoading = false
         view?.showBalanceError()
+
+        endLoadingIfAllDone()
     }
 
     func transferTransactionDetailFetched(_ transactions: [TransferTransactionDetail]) {
