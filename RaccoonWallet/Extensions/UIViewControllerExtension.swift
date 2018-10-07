@@ -11,15 +11,6 @@ import MaterialComponents.MaterialSnackbar
 import NVActivityIndicatorView
 
 extension UIViewController {
-    var topMostViewController: UIViewController? {
-
-        var topMostViewController = UIApplication.shared.keyWindow?.rootViewController
-
-        while topMostViewController?.presentedViewController != nil {
-            topMostViewController = topMostViewController?.presentedViewController
-        }
-        return topMostViewController
-    }
 
     func resetRootViewController() {
         if let _ = navigationController?.viewControllers[safe: 0] as? TopViewController {

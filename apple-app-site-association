@@ -1,0 +1,11 @@
+{
+  "applinks": {
+       "apps": [],
+        "details": [
+           {
+               "appID":"NQ3LYTWKVQ.com.ttechsoft.RaccoonWallet",
+               "paths":[ "/payment" ]
+           }
+         ]
+    }
+}

@@ -61,6 +61,15 @@ class RootNavigationController: UINavigationController {
     var isFirstDisplay = true
     var reservedView: UIViewController? = nil
 
+    var topMostViewController: UIViewController? {
+        var topMostViewController = UIApplication.shared.keyWindow?.rootViewController
+
+        while topMostViewController?.presentedViewController != nil {
+            topMostViewController = topMostViewController?.presentedViewController
+        }
+        return topMostViewController
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBarShadow()
@@ -86,7 +95,8 @@ class RootNavigationController: UINavigationController {
     @objc func onWillEnterForeground(_ notification: Notification?) {
         showLockDialog()
     }
-    
+
+
     private func showLockDialog() {
         guard !locked else{
             return
@@ -103,7 +113,7 @@ class RootNavigationController: UINavigationController {
                     self.locked = false
                     // if navigation is reserved, push the page
                     if let reservedView = self.reservedView {
-                        self.pushViewController(reservedView, animated: true)
+                        self.forceMove(to: reservedView)
                         self.reservedView = nil
                     }
                 }
@@ -134,7 +144,28 @@ class RootNavigationController: UINavigationController {
         if PinPreference.shared.saved && ApplicationSetting.shared.isPinRequiredOnLaunch {
             reservedView = viewController
         } else {
-            pushViewController(viewController, animated: true)
+            forceMove(to: viewController)
+        }
+    }
+
+    func forceMove(to viewController: UIViewController) {
+        let presentView : () -> Void = {
+            // go back to home
+            self.popToRootViewController(animated: false)
+            // then move to
+            if viewController.modalPresentationStyle == .overCurrentContext {
+                self.present(viewController, animated: false)
+            } else {
+                self.pushViewController(viewController, animated: false)
+            }
+        }
+
+        if let presentedViewController = presentedViewController {// remove modal dialog
+            presentedViewController.dismiss(animated: false) {
+                presentView()
+            }
+        } else {
+            presentView()
         }
     }
 }
