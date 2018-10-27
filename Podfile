@@ -30,6 +30,7 @@ target 'RaccoonWallet' do
   pod 'REFrostedViewController', '~> 2.4'
   pod 'LicensePlist'
   pod 'Nuke', '~> 7.0'
+  pod 'BCryptSwift'
 
   target 'RaccoonWalletTests' do
 

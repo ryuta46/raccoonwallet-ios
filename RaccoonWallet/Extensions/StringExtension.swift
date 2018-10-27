@@ -9,6 +9,8 @@
 import Foundation
 import CryptoSwift
 import NemSwift
+import BCryptSwift
+
 
 extension String {
     func prettyAddress() -> String {
@@ -33,37 +35,18 @@ extension String {
 }
 
 extension String {
-
-    func encryptWithPBKDF2(salt: [UInt8]? = nil) throws -> String{
-        let aSalt: [UInt8]
-        if salt != nil {
-            aSalt = salt!
-        } else {
-            aSalt = try KeyProvider.generateSalt()
+    func encryptWithBcrypt() throws -> String {
+        let salt = BCryptSwift.generateSaltWithNumberOfRounds(10)
+        guard let hash = BCryptSwift.hashPassword(self, withSalt: salt) else {
+            throw NSError(domain: "Failed to hash pin code", code: 0)
         }
-
-        return ConvertUtil.toHexString(aSalt + (try KeyProvider.deriveKey(password: self, salt: aSalt)))
+        return hash
     }
 
-    func verifyWithPBKDF2(_ password: String) -> Bool{
-        guard let parsed = parseAsPBKDF2() else {
-            return false
-        }
-        guard let key = try? KeyProvider.deriveKey(password: password, salt: parsed.salt) else {
-            return false
-        }
-        return key == parsed.encrypted
+    func verifyWithBcrypt(_ password: String) -> Bool {
+        return BCryptSwift.verifyPassword(password, matchesHash: self) ?? false
     }
 
-    private func parseAsPBKDF2() -> (salt:[UInt8], encrypted: [UInt8])? {
-        let encrypted = ConvertUtil.toByteArray(self)
-        guard  encrypted.count >= KeyProvider.PBKDF2_SALT_SIZE else {
-            return nil
-        }
-        let salt = encrypted[0..<KeyProvider.PBKDF2_SALT_SIZE].map { $0 }
-        let encryptedBody = encrypted.dropFirst(KeyProvider.PBKDF2_SALT_SIZE).map { $0 }
-        return (salt: salt, encrypted: encryptedBody)
-    }
 
     func hasOnly(_ characterSet: CharacterSet) -> Bool {
         return self.trimmingCharacters(in: characterSet).count <= 0
