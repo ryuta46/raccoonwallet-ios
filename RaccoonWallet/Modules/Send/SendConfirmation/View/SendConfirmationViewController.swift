@@ -21,13 +21,8 @@ class SendConfirmationViewController: BaseViewController {
     @IBOutlet weak var messageHeadline: UILabel!
     @IBOutlet weak var message: UILabel!
     
+    @IBOutlet weak var confirmation: UIButton!
     
-    @IBOutlet weak var bottomPanel: UIView!
-    @IBOutlet weak var ready: UILabel!
-    @IBOutlet weak var revealImage: UIImageView!
-    @IBOutlet weak var revealMessage: UILabel!
-    @IBOutlet weak var confirmation: UILabel!
-
     var loadingView: FullScreenLoadingView!
 
     private var bottomPanelInk: MDCInkTouchController!
@@ -41,29 +36,32 @@ class SendConfirmationViewController: BaseViewController {
         destinationHeadline.text = R.string.localizable.common_destination()
         messageHeadline.text = R.string.localizable.common_message()
         
-        ready.text = R.string.localizable.send_confirmation_ready()
-        ready.textColor = Theme.secondary
-        revealMessage.textColor = Theme.secondary
-
         loadingView = createFullScreenLoadingView()
 
-        setupBottomPanel()
+        confirmation.setTitle(R.string.localizable.send_confirmation_button(), for: .normal)
+        confirmation.setTitleColor(UIColor.white, for: .normal)
+        confirmation.backgroundColor = Theme.primary
     }
 
-    private func setupBottomPanel() {
-        // ripple effect
-        bottomPanelInk = MDCInkTouchController(view: bottomPanel)
-        bottomPanelInk.addInkView()
-
-        bottomPanel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTouchedBottomPanel(_:))))
-        bottomPanel.addShadow(location: .top)
-    }
-    @objc func onTouchedBottomPanel(_ sender: Any) {
+    @IBAction func onTouchedConfirmation(_ sender: Any) {
         presenter.didClickBottomPanel()
     }
 }
 
 extension SendConfirmationViewController: PinDialogMixinViewController {
+    func showPinDialog(presenter: PinDialogMixinPresentation) {
+        let dialog = PinDialogRouter.assembleModule(forRegistration: false,
+                                                    cancelable: true,
+                                                    message: R.string.localizable.send_confirmation_pin_message()
+        ) { pin in
+            if let pin = pin {
+                presenter.didValidatePin(pin)
+            } else {
+                presenter.didCancelPin()
+            }
+        }
+        navigationController?.present(dialog, animated: true)
+    }
 }
 
 extension SendConfirmationViewController: SendConfirmationView {
@@ -100,10 +98,5 @@ extension SendConfirmationViewController: SendConfirmationView {
     }
     func hideLoading() {
         loadingView.stopLoading()
-    }
-
-    func showConfirmationMessage(_ icon: UIImage, _ message: String) {
-        revealImage.image = icon
-        revealMessage.text = message
     }
 }

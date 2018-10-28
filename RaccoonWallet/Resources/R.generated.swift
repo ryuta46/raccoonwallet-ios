@@ -1340,6 +1340,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let setting_pin_not_available_message = Rswift.StringResource(key: "setting_pin_not_available_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: PINを入力して送金を確定する
+      /// 
+      /// Locales: en, ja
+      static let send_confirmation_pin_message = Rswift.StringResource(key: "send_confirmation_pin_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: PINコードが未設定です。先にPINコードの設定を行ってください。
       /// 
       /// Locales: en, ja
@@ -1356,10 +1360,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let lesson_level_importer_setup = Rswift.StringResource(key: "lesson_level_importer_setup", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: PIN画面を表示します
-      /// 
-      /// Locales: en, ja
-      static let send_confirmation_pin = Rswift.StringResource(key: "send_confirmation_pin", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: PIN設定できたみたいだね。 いい調子だ。 さてレッスンもこれで最後。  実は合わせて%@でアプリにアクセスできるように設定できるんだけど、ここで設定しておくかい？
       /// 
       /// Locales: en, ja
@@ -1664,6 +1664,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let lesson_level_title = Rswift.StringResource(key: "lesson_level_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: タップして認証画面を表示
+      /// 
+      /// Locales: en, ja
+      static let send_confirmation_button = Rswift.StringResource(key: "send_confirmation_button", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: トランザクションが発生したら ここに一覧で表示されるよ。
       /// 
       /// Locales: en, ja
@@ -1928,10 +1932,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let send_newbie_caution_title = Rswift.StringResource(key: "send_newbie_caution_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: 準備はいいですか？
-      /// 
-      /// Locales: en, ja
-      static let send_confirmation_ready = Rswift.StringResource(key: "send_confirmation_ready", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 準備完了
       /// 
       /// Locales: en, ja
@@ -2215,6 +2215,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("setting_pin_not_available_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: PINを入力して送金を確定する
+      /// 
+      /// Locales: en, ja
+      static func send_confirmation_pin_message(_: Void = ()) -> String {
+        return NSLocalizedString("send_confirmation_pin_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: PINコードが未設定です。先にPINコードの設定を行ってください。
       /// 
       /// Locales: en, ja
@@ -2241,13 +2248,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func lesson_level_importer_setup(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_importer_setup", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: PIN画面を表示します
-      /// 
-      /// Locales: en, ja
-      static func send_confirmation_pin(_: Void = ()) -> String {
-        return NSLocalizedString("send_confirmation_pin", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: PIN設定できたみたいだね。 いい調子だ。 さてレッスンもこれで最後。  実は合わせて%@でアプリにアクセスできるように設定できるんだけど、ここで設定しておくかい？
@@ -2782,6 +2782,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("lesson_level_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: タップして認証画面を表示
+      /// 
+      /// Locales: en, ja
+      static func send_confirmation_button(_: Void = ()) -> String {
+        return NSLocalizedString("send_confirmation_button", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: トランザクションが発生したら ここに一覧で表示されるよ。
       /// 
       /// Locales: en, ja
@@ -3242,13 +3249,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func send_newbie_caution_title(_: Void = ()) -> String {
         return NSLocalizedString("send_newbie_caution_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: 準備はいいですか？
-      /// 
-      /// Locales: en, ja
-      static func send_confirmation_ready(_: Void = ()) -> String {
-        return NSLocalizedString("send_confirmation_ready", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 準備完了
@@ -4169,7 +4169,6 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "heroimage_send_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_send_small' is used in storyboard 'SendConfirmationStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon_pin_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_pin_small' is used in storyboard 'SendConfirmationStoryboard', but couldn't be loaded.") }
         if _R.storyboard.sendConfirmationStoryboard().sendConfirmationView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'sendConfirmationView' could not be loaded from storyboard 'SendConfirmationStoryboard' as 'SendConfirmationViewController'.") }
       }
       

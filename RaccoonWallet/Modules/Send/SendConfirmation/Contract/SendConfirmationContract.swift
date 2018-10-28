@@ -22,8 +22,6 @@ protocol SendConfirmationView: BaseView, PinDialogMixinView {
 
     func showLoading()
     func hideLoading()
-
-    func showConfirmationMessage(_ icon: UIImage, _ message: String)
 }
 
 //sourcery: AutoMockable

@@ -23,13 +23,6 @@ class SendConfirmationPresenter: BasePresenter {
         view?.showFee(MosaicDetail.xem(transaction.fee).amountDescription)
         view?.showDestination(sendTransaction.address.prettyAddress())
         view?.showMessage(sendTransaction.message ?? "")
-
-        if !ApplicationSetting.shared.isEnabledBiometry {
-            view?.showConfirmationMessage(R.image.icon_pin_small()!, R.string.localizable.send_confirmation_pin())
-        } else {
-            view?.showConfirmationMessage(R.image.icon_fingerprint_small()!, R.string.localizable.send_confirmation_biometrics(LocalAuthenticationHelper.checkBiometrics().description))
-        }
-
     }
 
     override func viewDidAppear() {
