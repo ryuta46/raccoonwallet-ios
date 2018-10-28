@@ -4,7 +4,6 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:ryuta46.com</string>
 		<string>applinks:raccoonwallet.com</string>
 		<string>applinks:raccoonwallet.page.link</string>
 	</array>

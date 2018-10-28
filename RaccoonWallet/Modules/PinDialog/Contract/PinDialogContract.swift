@@ -49,7 +49,11 @@ protocol PinDialogInteractorOutput: class {
 protocol PinDialogWireframe: class {
     var viewController: UIViewController? { get set }
 
-    static func assembleModule(forRegistration: Bool, cancelable: Bool, handler: ((String?) -> Void)?) -> UIViewController
+    static func assembleModule(
+        forRegistration: Bool,
+        cancelable: Bool,
+        message: String?,
+        handler: ((String?) -> Void)?) -> UIViewController
 
     func dismiss(pin: String?, _ handler: ((String?) -> Void)?)
 }
