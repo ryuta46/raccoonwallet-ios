@@ -22,8 +22,6 @@ class IntroductionConceptViewController: BaseViewController {
         concept.text = R.string.localizable.first_tutorial_title()
         getStarted.setTitle(R.string.localizable.first_tutorial_button(), for: .normal)
 
-        setStatusBarColor()
-
         scrollView.delegate = self
     }
     @IBAction func onTouchedGetStarted(_ sender: Any) {

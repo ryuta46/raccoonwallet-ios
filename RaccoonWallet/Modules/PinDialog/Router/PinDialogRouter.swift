@@ -12,7 +12,11 @@ import UIKit
 class PinDialogRouter: PinDialogWireframe {
     weak var viewController: UIViewController?
 
-    static func assembleModule(forRegistration: Bool, cancelable: Bool = true, handler: ((String?) -> Void)? = nil) -> UIViewController {
+    static func assembleModule(
+        forRegistration: Bool,
+        cancelable: Bool = true,
+        message: String? = nil,
+        handler: ((String?) -> Void)? = nil) -> UIViewController {
         let view = R.storyboard.pinDialogStoryboard.pinDialogView()!
         let presenter = PinDialogPresenter()
         let interactor = PinDialogInteractor()
@@ -26,6 +30,7 @@ class PinDialogRouter: PinDialogWireframe {
         presenter.handler = handler
         presenter.isRegisterMode = forRegistration
         presenter.cancelable = cancelable
+        presenter.message = message
         
         interactor.output = presenter
         

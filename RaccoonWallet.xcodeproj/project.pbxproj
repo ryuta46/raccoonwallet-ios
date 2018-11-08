@@ -18,9 +18,6 @@
 		5F0A44FE21368A2C000342D6 /* Calculator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0A44FB21368A2C000342D6 /* Calculator.xib */; };
 		5F0A450021369089000342D6 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A44FF21369089000342D6 /* Calculator.swift */; };
 		5F0A450221369089000342D6 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A44FF21369089000342D6 /* Calculator.swift */; };
-		5F0A4512213B36A0000342D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F0A4511213B36A0000342D6 /* GoogleService-Info.plist */; };
-		5F0A4513213B36A0000342D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F0A4511213B36A0000342D6 /* GoogleService-Info.plist */; };
-		5F0A4514213B36A0000342D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F0A4511213B36A0000342D6 /* GoogleService-Info.plist */; };
 		5F0F73272148674C00015784 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5F0F73262148674C00015784 /* Settings.bundle */; };
 		5F672D4E2122813A0018B163 /* RaccoonWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F672D4D2122813A0018B163 /* RaccoonWalletUITests.swift */; };
 		5F672D68212289710018B163 /* SessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F672D67212289710018B163 /* SessionExtension.swift */; };
@@ -237,6 +234,7 @@
 		5FAF015A212E0BEC0092B110 /* LessonLevelRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF014A212E0BEC0092B110 /* LessonLevelRouter.swift */; };
 		5FAF015C212E0BEC0092B110 /* LessonLevelRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF014A212E0BEC0092B110 /* LessonLevelRouter.swift */; };
 		5FAF015E212E2A050092B110 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F672D782122AE720018B163 /* CardView.swift */; };
+		5FB683E821686CE2003EE6C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FB683E721686CE1003EE6C4 /* GoogleService-Info.plist */; };
 		5FD411C1213CC1D400C89151 /* SendAmountPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FD411C0213CC1D400C89151 /* SendAmountPage.xib */; };
 		5FD411C2213CC1D400C89151 /* SendAmountPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FD411C0213CC1D400C89151 /* SendAmountPage.xib */; };
 		5FD411C3213CC1D400C89151 /* SendAmountPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FD411C0213CC1D400C89151 /* SendAmountPage.xib */; };
@@ -830,7 +828,6 @@
 		5F0A44FA2130F320000342D6 /* RaccoonWallet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RaccoonWallet-Bridging-Header.h"; sourceTree = "<group>"; };
 		5F0A44FB21368A2C000342D6 /* Calculator.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Calculator.xib; sourceTree = "<group>"; };
 		5F0A44FF21369089000342D6 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
-		5F0A4511213B36A0000342D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F0F73262148674C00015784 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		5F672D2A2122813A0018B163 /* RaccoonWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaccoonWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F672D3E2122813A0018B163 /* RaccoonWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaccoonWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -954,6 +951,8 @@
 		5FAF0146212E0BEC0092B110 /* LessonLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonLevelViewController.swift; sourceTree = "<group>"; };
 		5FAF0148212E0BEC0092B110 /* LessonLevelInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonLevelInteractor.swift; sourceTree = "<group>"; };
 		5FAF014A212E0BEC0092B110 /* LessonLevelRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonLevelRouter.swift; sourceTree = "<group>"; };
+		5FB683E721686CE1003EE6C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5FB683E921689D09003EE6C4 /* RaccoonWallet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RaccoonWallet.entitlements; sourceTree = "<group>"; };
 		5FD411C0213CC1D400C89151 /* SendAmountPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendAmountPage.xib; sourceTree = "<group>"; };
 		5FD411C4213CC1EA00C89151 /* SendAmountPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAmountPage.swift; sourceTree = "<group>"; };
 		5FD411D3213E193F00C89151 /* TestSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSettings.swift; sourceTree = "<group>"; };
@@ -1355,7 +1354,8 @@
 		5F672D2C2122813A0018B163 /* RaccoonWallet */ = {
 			isa = PBXGroup;
 			children = (
-				5F0A4511213B36A0000342D6 /* GoogleService-Info.plist */,
+				5FB683E921689D09003EE6C4 /* RaccoonWallet.entitlements */,
+				5FB683E721686CE1003EE6C4 /* GoogleService-Info.plist */,
 				5F672D7A2122D56D0018B163 /* Application */,
 				5F672D742122AE690018B163 /* Enums */,
 				5F672D5F212287FB0018B163 /* Extensions */,
@@ -4807,6 +4807,11 @@
 				TargetAttributes = {
 					5F672D292122813A0018B163 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					5F672D3D2122813A0018B163 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -4847,7 +4852,6 @@
 				5FD411C1213CC1D400C89151 /* SendAmountPage.xib in Resources */,
 				5F7C589E212968C900026047 /* WalletNewNameStoryboard.storyboard in Resources */,
 				5F672EC921259FF70018B163 /* WalletSelectStoryboard.storyboard in Resources */,
-				5F0A4512213B36A0000342D6 /* GoogleService-Info.plist in Resources */,
 				5F7C587F2129570A00026047 /* WalletCreationTypeStoryboard.storyboard in Resources */,
 				5F7C5953212D32EB00026047 /* MessageDialogStoryboard.storyboard in Resources */,
 				5F7C5962212DF16600026047 /* Assets.xcassets in Resources */,
@@ -4903,6 +4907,7 @@
 				69057AEEBE14B986A760E362 /* DonationDetailStoryboard.storyboard in Resources */,
 				690573B8C25375229B0FD8B0 /* SettingTopStoryboard.storyboard in Resources */,
 				69057AA2AE10C48EF07B696B /* NodeSelectStoryboard.storyboard in Resources */,
+				5FB683E821686CE2003EE6C4 /* GoogleService-Info.plist in Resources */,
 				690575679013BBF5073333AA /* MosaicDetailStoryboard.storyboard in Resources */,
 				69057278D424B6F8CABE83DD /* MosaicListStoryboard.storyboard in Resources */,
 				69057EBD97CE6CB93FC47147 /* IntroductionConceptStoryboard.storyboard in Resources */,
@@ -4952,7 +4957,6 @@
 				69057FC9BB2F7E244EA63C43 /* QrLabAmountStoryboard.storyboard in Resources */,
 				690575FFD97B9EEE608E893C /* QrLabInvoiceStoryboard.storyboard in Resources */,
 				690578863652EC0C1188D80E /* ReceiveTabStoryboard.storyboard in Resources */,
-				5F0A4513213B36A0000342D6 /* GoogleService-Info.plist in Resources */,
 				69057CAFD858067314330CD1 /* SendTabStoryboard.storyboard in Resources */,
 				69057F5E1B2636C8B2746E65 /* SendEndStoryboard.storyboard in Resources */,
 				690579CBD5E38573D462DEA3 /* SendModeStoryboard.storyboard in Resources */,
@@ -5004,7 +5008,6 @@
 				690570646A777EA497E0EB13 /* QrLabAmountStoryboard.storyboard in Resources */,
 				69057FA03560AFB6BBA805B8 /* QrLabInvoiceStoryboard.storyboard in Resources */,
 				69057AC36BD8AAC3EEAC1576 /* ReceiveTabStoryboard.storyboard in Resources */,
-				5F0A4514213B36A0000342D6 /* GoogleService-Info.plist in Resources */,
 				69057B28E3531740415C1C2B /* SendTabStoryboard.storyboard in Resources */,
 				69057642711A64FBAF241822 /* SendEndStoryboard.storyboard in Resources */,
 				690577F072790697B2BF2C97 /* SendModeStoryboard.storyboard in Resources */,
@@ -5044,6 +5047,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RaccoonWallet/Pods-RaccoonWallet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/APIKit/APIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/BCryptSwift/BCryptSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/DDMathParser/MathParser.framework",
 				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
@@ -5071,6 +5075,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BCryptSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MathParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
@@ -5997,6 +6002,8 @@
 			baseConfigurationReference = 2ACD9542055E837A26770C81 /* Pods-RaccoonWallet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RaccoonWallet/RaccoonWallet.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NQ3LYTWKVQ;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -6007,6 +6014,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttechsoft.RaccoonWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -6017,6 +6025,8 @@
 			baseConfigurationReference = 555985AE14DAC9A873513946 /* Pods-RaccoonWallet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RaccoonWallet/RaccoonWallet.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NQ3LYTWKVQ;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -6027,6 +6037,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttechsoft.RaccoonWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

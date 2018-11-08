@@ -1,6 +1,7 @@
 PODS:
   - APIKit (3.2.1):
     - Result (~> 3.0)
+  - BCryptSwift (1.1)
   - Crashlytics (3.10.8):
     - Fabric (~> 1.7.12)
   - CryptoSwift (0.12.0)
@@ -153,6 +154,7 @@ PODS:
   - ZXingObjC/All (3.2.2)
 
 DEPENDENCIES:
+  - BCryptSwift
   - Crashlytics (~> 3.10.2)
   - DDMathParser (from `https://github.com/davedelong/DDMathParser.git`, branch `swift4`)
   - DLRadioButton (~> 1.4)
@@ -183,6 +185,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - APIKit
+    - BCryptSwift
     - Crashlytics
     - CryptoSwift
     - DLRadioButton
@@ -230,6 +233,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   APIKit: a39ff72ac44efc15513fd1b98800f63c525be61b
+  BCryptSwift: f69992ea5685f6714260842c2770688043b89ab2
   Crashlytics: 058dc1ba579f6c100bc60a6878703779bff383c4
   CryptoSwift: 1c07ca50843dd48bc54e6ea53d7a4dba3b645716
   DDMathParser: 74cddd0aa652cfed79e68fdd076f1ee63ab43a16
@@ -266,6 +270,6 @@ SPEC CHECKSUMS:
   XCGLogger: 4fc1bc0bdd5828cb8dc8da7a843536cda1bea8f3
   ZXingObjC: 2c95a0dc52daac69b23ec78fad8fa2fec05f8981
 
-PODFILE CHECKSUM: da1066c4a238466ace39d72a6d753437416d572c
+PODFILE CHECKSUM: 67605ab2348e65986d7dbdcae10082261a518daa
 
 COCOAPODS: 1.5.3

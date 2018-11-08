@@ -20,12 +20,6 @@ extension UIViewController {
         }
     }
 
-    func setStatusBarColor() {
-        let statusBar = UIView(frame: UIApplication.shared.statusBarFrame)
-        statusBar.backgroundColor = Theme.primary
-        view.addSubview(statusBar)
-    }
-
     func hideBackTitle() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
@@ -41,8 +35,10 @@ extension UIViewController {
     func showInfoPopup(_ message: String) {
         let snackbarMessage = MDCSnackbarMessage()
         snackbarMessage.text = message
+        snackbarMessage.duration = Constant.popupDuration
         
         let manager = MDCSnackbarManager()
+
         manager.setBottomOffset(tabBarController?.tabBar.frame.height ?? 0)
 
         manager.show(snackbarMessage)
@@ -51,7 +47,8 @@ extension UIViewController {
     func showErrorPopup(_ message: String) {
         let snackbarMessage = MDCSnackbarMessage()
         snackbarMessage.text = message
-
+        snackbarMessage.duration = Constant.popupDuration
+        
         let manager = MDCSnackbarManager()
         manager.snackbarMessageViewBackgroundColor = Theme.error
         manager.setBottomOffset(tabBarController?.tabBar.frame.height ?? 0)

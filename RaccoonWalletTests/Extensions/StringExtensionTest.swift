@@ -20,22 +20,22 @@ class StringExtensionTest: XCTestCase {
         XCTAssertEqual(output, input.prettyAddress())
     }
     
-    func testEncryptWithPBKDF2() {
+    func testEncryptWithBcrypt() {
         let input = "password"
-        let encrypted = try! input.encryptWithPBKDF2()
+        let encrypted = try! input.encryptWithBcrypt()
         
-        XCTAssertTrue(encrypted.verifyWithPBKDF2(input))
-        XCTAssertFalse(encrypted.verifyWithPBKDF2("foobar"))
+        XCTAssertTrue(encrypted.verifyWithBcrypt(input))
+        XCTAssertFalse(encrypted.verifyWithBcrypt("foobar"))
 
     }
-    func testEncryptWithPBKDF2Time() {
+    func testEncryptWithBcryptTime() {
         let input = "password"
-        let encrypted = try! input.encryptWithPBKDF2()
-        let iteration = 100
+        let encrypted = try! input.encryptWithBcrypt()
+        let iteration = 5
         
         let start = Date()
         for i in 0..<iteration {
-            XCTAssertFalse(encrypted.verifyWithPBKDF2(String(i)))
+            XCTAssertFalse(encrypted.verifyWithBcrypt(String(i)))
         }
         let elapsed = Date().timeIntervalSince(start)
         print("Average: \(elapsed / Double(iteration))")

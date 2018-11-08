@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,17 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12c-AG-HAv" customClass="WalletBar" customModule="RaccoonWallet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="WFE-HQ-s1T"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.zPosition">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSG-DU-kD9">
                                 <rect key="frame" x="0.0" y="20" width="375" height="599"/>
                                 <subviews>
@@ -124,77 +112,38 @@
                                     <constraint firstAttribute="bottom" secondItem="aby-Q8-GMP" secondAttribute="bottom" id="qyf-kd-E19"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUt-DA-Fge">
-                                <rect key="frame" x="0.0" y="619" width="375" height="48"/>
-                                <subviews>
-                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yzJ-q8-PFU">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRG-XG-4ks">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_pin_small" translatesAutoresizingMaskIntoConstraints="NO" id="wLn-At-hP6">
-                                                        <rect key="frame" x="171.5" y="6" width="32" height="32"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="wLn-At-hP6" secondAttribute="height" multiplier="1:1" id="38A-Ip-01o"/>
-                                                            <constraint firstAttribute="width" constant="32" id="44j-05-Xmo"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="準備は良いですか？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlP-SO-314">
-                                                        <rect key="frame" x="0.0" y="15" width="171.5" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="PIN画面を表示します" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvm-7F-hTs">
-                                                        <rect key="frame" x="203.5" y="15" width="171.5" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="gvm-7F-hTs" firstAttribute="centerY" secondItem="yRG-XG-4ks" secondAttribute="centerY" id="DZU-xI-KrC"/>
-                                                    <constraint firstItem="vlP-SO-314" firstAttribute="leading" secondItem="yRG-XG-4ks" secondAttribute="leading" id="L4l-RV-ECK"/>
-                                                    <constraint firstAttribute="trailing" secondItem="gvm-7F-hTs" secondAttribute="trailing" id="Pnf-8y-kUv"/>
-                                                    <constraint firstItem="gvm-7F-hTs" firstAttribute="width" secondItem="vlP-SO-314" secondAttribute="width" id="b6R-gt-IBE"/>
-                                                    <constraint firstItem="wLn-At-hP6" firstAttribute="centerY" secondItem="yRG-XG-4ks" secondAttribute="centerY" id="fk2-k4-ZF2"/>
-                                                    <constraint firstItem="vlP-SO-314" firstAttribute="centerY" secondItem="yRG-XG-4ks" secondAttribute="centerY" id="hUo-lm-hC2"/>
-                                                    <constraint firstItem="gvm-7F-hTs" firstAttribute="leading" secondItem="wLn-At-hP6" secondAttribute="trailing" id="q3d-GW-IhA"/>
-                                                    <constraint firstItem="wLn-At-hP6" firstAttribute="leading" secondItem="vlP-SO-314" secondAttribute="trailing" id="uX5-AC-bEA"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPU-Cy-piv" customClass="PrimaryPanel" customModule="RaccoonWallet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44" width="375" height="4"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="4" id="9Mk-E3-rQx"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12c-AG-HAv" customClass="WalletBar" customModule="RaccoonWallet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="yzJ-q8-PFU" secondAttribute="bottom" id="LWd-Ap-puy"/>
-                                    <constraint firstAttribute="trailing" secondItem="yzJ-q8-PFU" secondAttribute="trailing" id="Udo-Ff-rWC"/>
-                                    <constraint firstItem="yzJ-q8-PFU" firstAttribute="leading" secondItem="BUt-DA-Fge" secondAttribute="leading" id="VOo-t8-Wpb"/>
-                                    <constraint firstItem="yzJ-q8-PFU" firstAttribute="top" secondItem="BUt-DA-Fge" secondAttribute="top" id="aXr-zc-0vB"/>
-                                    <constraint firstAttribute="height" constant="48" id="xdJ-a1-fqp"/>
+                                    <constraint firstAttribute="height" constant="64" id="WFE-HQ-s1T"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.zPosition">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVd-1w-swE">
+                                <rect key="frame" x="0.0" y="619" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="CWi-dk-de0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onTouchedConfirmation:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="i0B-Fu-sI7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WcX-Py-KbR" firstAttribute="trailing" secondItem="12c-AG-HAv" secondAttribute="trailing" id="7Pn-aM-B3M"/>
-                            <constraint firstItem="BUt-DA-Fge" firstAttribute="leading" secondItem="WcX-Py-KbR" secondAttribute="leading" id="Ckz-cu-z4t"/>
                             <constraint firstItem="rSG-DU-kD9" firstAttribute="top" secondItem="WcX-Py-KbR" secondAttribute="top" id="JJW-4c-teh"/>
-                            <constraint firstItem="WcX-Py-KbR" firstAttribute="trailing" secondItem="BUt-DA-Fge" secondAttribute="trailing" id="WRI-iD-ASV"/>
+                            <constraint firstItem="MVd-1w-swE" firstAttribute="top" secondItem="rSG-DU-kD9" secondAttribute="bottom" id="YBf-o6-48N"/>
+                            <constraint firstItem="MVd-1w-swE" firstAttribute="trailing" secondItem="WcX-Py-KbR" secondAttribute="trailing" id="bKt-NW-B7h"/>
                             <constraint firstItem="rSG-DU-kD9" firstAttribute="leading" secondItem="WcX-Py-KbR" secondAttribute="leading" id="cr9-EW-nyV"/>
-                            <constraint firstItem="WcX-Py-KbR" firstAttribute="bottom" secondItem="BUt-DA-Fge" secondAttribute="bottom" id="g6l-2W-57n"/>
+                            <constraint firstItem="MVd-1w-swE" firstAttribute="leading" secondItem="WcX-Py-KbR" secondAttribute="leading" id="geh-dA-ac0"/>
+                            <constraint firstItem="WcX-Py-KbR" firstAttribute="bottom" secondItem="MVd-1w-swE" secondAttribute="bottom" id="i3u-Sd-opr"/>
                             <constraint firstItem="12c-AG-HAv" firstAttribute="leading" secondItem="WcX-Py-KbR" secondAttribute="leading" id="m1C-iJ-CbN"/>
-                            <constraint firstItem="BUt-DA-Fge" firstAttribute="top" secondItem="rSG-DU-kD9" secondAttribute="bottom" id="qUc-2t-N4U"/>
                             <constraint firstItem="12c-AG-HAv" firstAttribute="top" secondItem="WcX-Py-KbR" secondAttribute="top" id="wNj-B1-io9"/>
                             <constraint firstItem="WcX-Py-KbR" firstAttribute="trailing" secondItem="rSG-DU-kD9" secondAttribute="trailing" id="zTI-Df-3Ap"/>
                         </constraints>
@@ -203,17 +152,13 @@
                     <connections>
                         <outlet property="amount" destination="4XF-7e-Ukv" id="Iz4-Sh-y8N"/>
                         <outlet property="amountHeadline" destination="A4b-7j-1mP" id="o40-T3-FUQ"/>
-                        <outlet property="bottomPanel" destination="BUt-DA-Fge" id="8T3-QT-nbn"/>
-                        <outlet property="confirmation" destination="gvm-7F-hTs" id="RRU-T9-3Aq"/>
+                        <outlet property="confirmation" destination="MVd-1w-swE" id="wjI-t4-zhD"/>
                         <outlet property="destination" destination="v1J-Hk-fwS" id="cZf-Gp-tma"/>
                         <outlet property="destinationHeadline" destination="QXf-I3-WMa" id="DzR-av-D8v"/>
                         <outlet property="fee" destination="EnB-Hj-aGg" id="rcl-nn-NA9"/>
                         <outlet property="feeHeadline" destination="CU9-ze-WUF" id="vEa-OW-ae3"/>
                         <outlet property="message" destination="suK-uP-39V" id="ts7-Q3-6dv"/>
                         <outlet property="messageHeadline" destination="cnD-1T-T8s" id="lBR-9H-Mql"/>
-                        <outlet property="ready" destination="vlP-SO-314" id="iDM-BE-0ka"/>
-                        <outlet property="revealImage" destination="wLn-At-hP6" id="6wg-aI-xtp"/>
-                        <outlet property="revealMessage" destination="gvm-7F-hTs" id="nsJ-wD-Y2W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htF-N7-RCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -223,6 +168,5 @@
     </scenes>
     <resources>
         <image name="heroimage_send_small" width="720" height="200"/>
-        <image name="icon_pin_small" width="160" height="160"/>
     </resources>
 </document>

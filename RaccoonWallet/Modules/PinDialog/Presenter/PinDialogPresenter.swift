@@ -16,6 +16,7 @@ class PinDialogPresenter : BasePresenter {
     var handler: ((String?) -> Void)?
     var isRegisterMode: Bool!
     var cancelable: Bool!
+    var message: String?
 
     var pin: String = ""
     var pinCache: String = ""
@@ -35,7 +36,7 @@ class PinDialogPresenter : BasePresenter {
 
         if PinPreference.shared.saved {
             state = .check
-            view?.showMessage("Check PIN")
+            view?.showMessage(message ?? "Check PIN")
 
             if ApplicationSetting.shared.isEnabledBiometry {
                 PinPreference.shared.getForBiometrics(
@@ -54,7 +55,7 @@ class PinDialogPresenter : BasePresenter {
             state = .registration
             oldPin = PinPreference.DEFAULT_PIN
 
-            view?.showMessage("Enter PIN")
+            view?.showMessage(message ?? "Enter PIN")
             DispatchQueue.main.async {
                 self.view?.showRegistrationMessage()
             }
@@ -81,7 +82,7 @@ extension PinDialogPresenter : PinDialogPresentation {
                 pinCache = pin
                 pin = ""
                 state = .confirmation
-                view?.showMessage("Confirm PIN")
+                view?.showMessage(message ?? "Confirm PIN")
                 view?.showInputted(pin.count)
             case .confirmation:
                 if pin == pinCache {
@@ -110,7 +111,7 @@ extension PinDialogPresenter : PinDialogInteractorOutput {
                 pin = ""
 
                 view?.showInputted(pin.count)
-                view?.showMessage("Enter PIN")
+                view?.showMessage(message ?? "Enter PIN")
                 view?.showRegistrationMessage()
 
             } else {

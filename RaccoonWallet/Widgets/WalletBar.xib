@@ -22,26 +22,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_walletbar" translatesAutoresizingMaskIntoConstraints="NO" id="8Ik-N8-fHH">
-                    <rect key="frame" x="45" y="-8" width="260" height="54"/>
+                    <rect key="frame" x="41" y="-6" width="268" height="56"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="8Ik-N8-fHH" secondAttribute="height" multiplier="556:116" id="Sxh-nn-7ij"/>
-                        <constraint firstAttribute="width" constant="260" id="zcK-oK-4V8"/>
+                        <constraint firstAttribute="width" constant="268" id="zcK-oK-4V8"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EZ-7K-4tm">
-                    <rect key="frame" x="85" y="8" width="164" height="19.5"/>
+                    <rect key="frame" x="81" y="10" width="166" height="19.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCP-ZN-T1v" customClass="WalletBarButton" customModule="RaccoonWallet" customModuleProvider="target">
-                    <rect key="frame" x="249" y="6" width="24" height="24"/>
+                    <rect key="frame" x="247" y="6" width="28" height="28"/>
                     <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="24" id="iR1-67-Xdg"/>
-                        <constraint firstAttribute="height" constant="24" id="t7w-Pg-s84"/>
+                        <constraint firstAttribute="width" constant="28" id="iR1-67-Xdg"/>
+                        <constraint firstAttribute="height" constant="28" id="t7w-Pg-s84"/>
                     </constraints>
-                    <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                    <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                     <state key="normal" image="icon_wallet"/>
                     <connections>
                         <action selector="onTouchedWalletIcon:" destination="-1" eventType="touchUpInside" id="G8v-ZK-ysW"/>
@@ -50,9 +50,9 @@
             </subviews>
             <constraints>
                 <constraint firstItem="7EZ-7K-4tm" firstAttribute="leading" secondItem="8Ik-N8-fHH" secondAttribute="leading" constant="40" id="CiO-uo-gKV"/>
-                <constraint firstItem="8Ik-N8-fHH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-8" id="FO5-P4-wac"/>
-                <constraint firstItem="7EZ-7K-4tm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="OD9-qt-D3q"/>
-                <constraint firstItem="CCP-ZN-T1v" firstAttribute="trailing" secondItem="8Ik-N8-fHH" secondAttribute="trailing" constant="-32" id="XQH-ob-XTg"/>
+                <constraint firstItem="8Ik-N8-fHH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-6" id="FO5-P4-wac"/>
+                <constraint firstItem="7EZ-7K-4tm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="OD9-qt-D3q"/>
+                <constraint firstItem="CCP-ZN-T1v" firstAttribute="trailing" secondItem="8Ik-N8-fHH" secondAttribute="trailing" constant="-34" id="XQH-ob-XTg"/>
                 <constraint firstItem="CCP-ZN-T1v" firstAttribute="centerY" secondItem="7EZ-7K-4tm" secondAttribute="centerY" id="ZqB-wO-sbq"/>
                 <constraint firstItem="8Ik-N8-fHH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hZI-3W-Vua"/>
                 <constraint firstItem="CCP-ZN-T1v" firstAttribute="leading" secondItem="7EZ-7K-4tm" secondAttribute="trailing" id="llS-vi-dyq"/>

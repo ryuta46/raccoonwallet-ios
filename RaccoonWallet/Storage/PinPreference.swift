@@ -29,7 +29,7 @@ class PinPreference {
     }
     
     func save(_ pin: String) throws{
-        let encrypted = try pin.encryptWithPBKDF2()
+        let encrypted = try pin.encryptWithBcrypt()
         try keychain.set(encrypted, key: PinPreference.KEY_PIN_CODE_HASH)
     }
     
@@ -42,7 +42,7 @@ class PinPreference {
             return false
         }
 
-        return encrypted?.verifyWithPBKDF2(pin) ?? false
+        return encrypted?.verifyWithBcrypt(pin) ?? false
     }
     
     var saved: Bool {
