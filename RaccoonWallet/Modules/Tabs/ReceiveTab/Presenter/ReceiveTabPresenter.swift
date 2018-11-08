@@ -16,7 +16,7 @@ class ReceiveTabPresenter: BasePresenter{
     override func viewWillAppear() {
         if let wallet = WalletHelper.activeWallet {
             view?.showAddress(wallet.address.prettyAddress())
-            if let addressQr = InvoiceQr.fromAddress(address: wallet.address).toJson() {
+            if let addressQr = InvoiceQr.fromAddress(address: wallet.address, name: wallet.name).toJson() {
                 view?.showQr(addressQr)
             }
         } else {

@@ -26,7 +26,7 @@ class QrLabInvoicePresenter: BasePresenter {
 
     override func viewWillAppear() {
         if let wallet = WalletHelper.activeWallet {
-            if let invoiceQr = InvoiceQr.fromXemAmount(address: wallet.address, xem: amount).toJson() {
+            if let invoiceQr = InvoiceQr.fromXemAmount(address: wallet.address, name: wallet.name, xem: amount).toJson() {
                 view?.showQr(invoiceQr)
             }
 
