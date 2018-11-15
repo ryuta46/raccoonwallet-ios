@@ -58,7 +58,9 @@ extension ScanTabPresenter: ScanTabPresentation {
         sendTransaction = SendTransaction(address: plainAddress, publicKey: nil)
 
         if let amount = invoice.data.amount {
-            sendTransaction.mosaics = [MosaicDetail.xem(amount)]
+            if amount > 0 {
+                sendTransaction.mosaics = [MosaicDetail.xem(amount)]
+            }
         }
         if let message = invoice.data.msg {
             sendTransaction.message = message
