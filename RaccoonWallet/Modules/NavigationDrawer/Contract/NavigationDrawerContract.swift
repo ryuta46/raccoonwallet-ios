@@ -47,7 +47,7 @@ protocol NavigationDrawerWireframe: class {
 
     static func assembleModule() -> UIViewController
 
-    func dismiss()
+    func presentHome()
     func presentAddressBook()
     func presentGallery()
     func presentDonation()
