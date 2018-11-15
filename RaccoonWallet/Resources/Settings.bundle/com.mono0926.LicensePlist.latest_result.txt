@@ -2,13 +2,17 @@ name: APIKit, nameSpecified:
 body: Copyright (c) 2015 -…
 version: 3.2.1
 
+name: BCryptSwift, nameSpecified: 
+body: Copyright (c) 2017 F…
+version: 1.1
+
 name: Crashlytics, nameSpecified: 
 body: Fabric: Copyright 20…
-version: 3.10.7
+version: 3.10.9
 
 name: CryptoSwift, nameSpecified: 
 body: Copyright (C) 2014-2…
-version: 0.11.0
+version: 0.13.0
 
 name: DDMathParser, nameSpecified: 
 body: Copyright (c) 2010-2…
@@ -20,52 +24,52 @@ version: 1.4.12
 
 name: Fabric, nameSpecified: 
 body: Fabric: Copyright 20…
-version: 1.7.11
+version: 1.7.13
 
 name: Firebase, nameSpecified: 
 body: Copyright 2018 Googl…
-version: 5.7.0
+version: 5.12.0
 
 name: FirebaseAnalytics, nameSpecified: 
 body: Copyright 2018 Googl…
-version: 5.1.1
+version: 5.3.0
 
 name: FirebaseCore, nameSpecified: 
 body: 
                    …
-version: 5.1.2
+version: 5.1.7
 
 name: FirebaseInstanceID, nameSpecified: 
 body: Copyright 2018 Googl…
-version: 3.2.1
+version: 3.3.0
 
 name: FontAwesome.swift, nameSpecified: 
 body: Copyright (c) 2014-p…
-version: 1.4.3
+version: 1.4.6
 
 name: GoogleAppMeasurement, nameSpecified: 
 body: Copyright 2018 Googl…
-version: 5.1.1
+version: 5.3.0
 
 name: GoogleUtilities, nameSpecified: 
 body: 
                    …
-version: 5.2.2
+version: 5.3.5
 
 name: KeychainAccess, nameSpecified: 
 body: The MIT License (MIT…
-version: 3.1.1
+version: 3.1.2
 
 name: LicensePlist, nameSpecified: 
 body: MIT License
 
 Copyrig…
-version: 1.8.8
+version: 1.9.1
 
 name: MaterialComponents, nameSpecified: 
 body: 
                    …
-version: 60.3.0
+version: 68.2.0
 
 name: MDFInternationalization, nameSpecified: 
 body: 
@@ -79,17 +83,21 @@ version: 1.2.0
 
 name: nanopb, nameSpecified: 
 body: Copyright (c) 2011 P…
-version: 0.3.8
+version: 0.3.901
 
 name: NemSwift, nameSpecified: 
 body: MIT License
 
 Copyrig…
-version: 0.3.0
+version: 0.3.2
+
+name: Nuke, nameSpecified: 
+body: The MIT License (MIT…
+version: 7.5.1
 
 name: NVActivityIndicatorView, nameSpecified: 
 body: The MIT License (MIT…
-version: 4.3.0
+version: 4.4.0
 
 name: ObjcExceptionBridging, nameSpecified: 
 body: The MIT License (MIT…
@@ -107,13 +115,13 @@ name: Realm, nameSpecified:
 body: TABLE OF CONTENTS
 
 1…
-version: 3.7.6
+version: 3.11.1
 
 name: RealmSwift, nameSpecified: 
 body: TABLE OF CONTENTS
 
 1…
-version: 3.7.6
+version: 3.11.1
 
 name: REFrostedViewController, nameSpecified: 
 body: Copyright (c) 2013 R…
@@ -123,35 +131,45 @@ name: Result, nameSpecified:
 body: The MIT License (MIT…
 version: 3.2.4
 
+name: RxAtomic, nameSpecified: 
+body: **The MIT License**
+…
+version: 4.4.0
+
+name: RxAtomic, nameSpecified: 
+body: **The MIT License**
+…
+version: 4.4.0
+
 name: RxBlocking, nameSpecified: 
 body: **The MIT License**
 …
-version: 4.2.0
+version: 4.4.0
 
 name: RxCocoa, nameSpecified: 
 body: **The MIT License**
 …
-version: 4.2.0
+version: 4.4.0
 
 name: RxSwift, nameSpecified: 
 body: **The MIT License**
 …
-version: 4.2.0
+version: 4.4.0
 
 name: RxSwift, nameSpecified: 
 body: **The MIT License**
 …
-version: 4.2.0
+version: 4.4.0
 
 name: Sourcery, nameSpecified: 
 body: MIT License
 
 Copyrig…
-version: 0.14.0
+version: 0.15.0
 
 name: SwiftyMocky, nameSpecified: 
 body: Copyright (c) 2017 P…
-version: 2.0.3
+version: 3.0.0
 
 name: XCGLogger, nameSpecified: 
 body: The MIT License (MIT…
