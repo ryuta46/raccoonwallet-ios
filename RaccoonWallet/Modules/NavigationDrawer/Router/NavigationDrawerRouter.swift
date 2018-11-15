@@ -31,8 +31,12 @@ class NavigationDrawerRouter: NavigationDrawerWireframe {
         return view
     }
 
-    func dismiss() {
-        viewController?.frostedViewController.hideMenuViewController()
+    func presentHome() {
+        dismiss()
+        if let navigationController = viewController?.frostedViewController.contentViewController as? UINavigationController,
+            let topViewController = navigationController.visibleViewController as? TopViewController {
+            topViewController.showHome()
+        }
     }
 
     func presentAddressBook() {
@@ -56,6 +60,10 @@ class NavigationDrawerRouter: NavigationDrawerWireframe {
 
     func presentSetting() {
         present(SettingTopRouter.assembleModule())
+    }
+
+    private func dismiss() {
+        viewController?.frostedViewController.hideMenuViewController()
     }
 
     private func present(_ destinationViewController: UIViewController) {
