@@ -28,7 +28,7 @@ class NavigationDrawerPresenter: BasePresenter {
 
 extension NavigationDrawerPresenter: NavigationDrawerPresentation {
     func didClickHome() {
-        router.dismiss()
+        router.presentHome()
     }
 
     func didClickAddressBook() {

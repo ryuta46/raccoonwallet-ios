@@ -25,7 +25,7 @@ extension String {
     }
 
     func normalizePrivateKey() -> String {
-        if self.starts(with: "00") {
+        if self.count == (Constant.privateKeyLength + 1) * 2 && self.starts(with: "00") {
             return String(self.dropFirst(2))
         } else {
             return self

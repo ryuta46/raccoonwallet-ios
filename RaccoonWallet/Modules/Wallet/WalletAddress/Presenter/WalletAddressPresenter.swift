@@ -17,7 +17,7 @@ class WalletAddressPresenter : BasePresenter {
     override func viewDidLoad() {
         view?.showWallet(wallet)
 
-        if let addressQr = InvoiceQr.fromAddress(address: wallet.address).toJson() {
+        if let addressQr = InvoiceQr.fromAddress(address: wallet.address, name: wallet.name).toJson() {
             view?.showQr(addressQr)
         }
     }

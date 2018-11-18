@@ -42,7 +42,7 @@ extension WalletImportKeyPresenter: WalletImportKeyPresentation {
     }
 
     func didClickOk() {
-        guard ConvertUtil.toByteArray(key).count == Constant.privateKeyLength else {
+        guard ConvertUtil.toByteArray(key.normalizePrivateKey()).count == Constant.privateKeyLength else {
             view?.showError(R.string.localizable.wallet_invalid_key())
             return
         }

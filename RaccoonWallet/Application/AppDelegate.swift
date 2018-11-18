@@ -9,6 +9,8 @@
 import UIKit
 import REFrostedViewController
 import FirebaseCore
+import Crashlytics
+import Fabric
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Logger.setup()
         // setup firebase
         FirebaseApp.configure()
+        Fabric.with([Crashlytics.self])
 
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)

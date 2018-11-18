@@ -14,6 +14,14 @@
 		</dict>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/BCryptSwift</string>
+			<key>Title</key>
+			<string>BCryptSwift</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/Crashlytics</string>
 			<key>Title</key>
 			<string>Crashlytics</string>
@@ -166,6 +174,14 @@
 		</dict>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/Nuke</string>
+			<key>Title</key>
+			<string>Nuke</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/NVActivityIndicatorView</string>
 			<key>Title</key>
 			<string>NVActivityIndicatorView</string>
@@ -225,6 +241,14 @@
 			<string>com.mono0926.LicensePlist/Result</string>
 			<key>Title</key>
 			<string>Result</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/RxAtomic</string>
+			<key>Title</key>
+			<string>RxAtomic</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>

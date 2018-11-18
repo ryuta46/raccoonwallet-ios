@@ -13,30 +13,30 @@ struct InvoiceQr: Codable {
     let type: Int
     let data: InvoiceQrInner
 
-    static func fromAddress(address: String) -> InvoiceQr {
+    static func fromAddress(address: String, name: String) -> InvoiceQr {
         return InvoiceQr(
                 v: 2,
                 type: 2,
                 data: InvoiceQrInner(
                         addr: address,
-                        name: "",
+                        name: name,
                         amount: 0,
                         msg: "")
         )
     }
 
-    static func fromXemAmount(address: String, xem: Decimal) -> InvoiceQr {
+    static func fromXemAmount(address: String, name: String, xem: Decimal) -> InvoiceQr {
         let microXem = ((xem * pow(Decimal(10), Int(Currency.xem.precision))).round() as NSDecimalNumber).uint64Value
-        return fromXemQuantity(address: address, microXem: microXem)
+        return fromXemQuantity(address: address, name: name, microXem: microXem)
     }
 
-    static func fromXemQuantity(address: String, microXem: UInt64) -> InvoiceQr {
+    static func fromXemQuantity(address: String, name: String, microXem: UInt64) -> InvoiceQr {
         return InvoiceQr(
                 v: 2,
                 type: 2,
                 data: InvoiceQrInner(
                         addr: address,
-                        name: "",
+                        name: name,
                         amount: microXem,
                         msg: "")
         )

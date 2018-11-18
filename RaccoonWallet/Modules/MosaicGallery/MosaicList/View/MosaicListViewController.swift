@@ -73,8 +73,8 @@ extension MosaicListViewController: MosaicListView {
 
         //emptyView.isHidden = true
         //loadingView.switchTo(view: mosaicList)
-        //self.mosaics = mosaics
-        //mosaicList.reloadData()
+        self.mosaics = mosaics
+        mosaicList.reloadData()
     }
 
     func showMosaicDetail(_ mosaic: MosaicImageUrl) {
