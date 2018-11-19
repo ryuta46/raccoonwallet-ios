@@ -13,6 +13,7 @@ extension UIImageView {
 
     func setQrText(_ qrText: String) {
         let hints = ZXEncodeHints()
+        hints.encoding = String.Encoding.utf8.rawValue
 
         let scale = UIScreen.main.scale
         if let writer = ZXMultiFormatWriter.writer() as? ZXMultiFormatWriter{
