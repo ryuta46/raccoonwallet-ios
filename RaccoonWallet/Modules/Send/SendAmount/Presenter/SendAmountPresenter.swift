@@ -25,6 +25,7 @@ class SendAmountPresenter : BasePresenter {
     var activePageIndex: Int = 0
     var activeFormula: String = "0"
     var mosaicWithXem: Bool = false
+    var currentAddress: String = ""
 
     private var mosaicAmountDescriptions: [String] {
         return selectedMosaics.enumerated().map {
@@ -48,6 +49,12 @@ class SendAmountPresenter : BasePresenter {
     }
 
     override func viewWillAppear() {
+        if let wallet = WalletHelper.activeWallet {
+            if currentAddress == wallet.address {
+                return
+            }
+        }
+
         let xem = selectedMosaics.first(where: {mosaicDetail in mosaicDetail.isXem()}) ?? MosaicDetail.xem(0)
         selectedMosaics = [xem]
         fetchMosaicOwned()
@@ -56,6 +63,7 @@ class SendAmountPresenter : BasePresenter {
     private func fetchMosaicOwned() {
         syncAmountsWithView()
         if let wallet = WalletHelper.activeWallet {
+            currentAddress = wallet.address
             view?.showLoading()
             interactor.fetchMosaicOwned(wallet.address)
         } else {
