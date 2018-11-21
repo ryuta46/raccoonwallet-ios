@@ -25,6 +25,7 @@ class SendAmountPresenter : BasePresenter {
     var activePageIndex: Int = 0
     var activeFormula: String = "0"
     var mosaicWithXem: Bool = false
+    var currentAddress: String = ""
 
     private var mosaicAmountDescriptions: [String] {
         return selectedMosaics.enumerated().map {
@@ -44,11 +45,25 @@ class SendAmountPresenter : BasePresenter {
 
     override func viewDidLoad() {
         view?.showAmount()
-
         selectedMosaics = [MosaicDetail.xem(0)]
-        syncAmountsWithView()
+    }
 
+    override func viewWillAppear() {
         if let wallet = WalletHelper.activeWallet {
+            if currentAddress == wallet.address {
+                return
+            }
+        }
+
+        let xem = selectedMosaics.first(where: {mosaicDetail in mosaicDetail.isXem()}) ?? MosaicDetail.xem(0)
+        selectedMosaics = [xem]
+        fetchMosaicOwned()
+    }
+    
+    private func fetchMosaicOwned() {
+        syncAmountsWithView()
+        if let wallet = WalletHelper.activeWallet {
+            currentAddress = wallet.address
             view?.showLoading()
             interactor.fetchMosaicOwned(wallet.address)
         } else {
@@ -135,7 +150,7 @@ extension SendAmountPresenter : SendAmountPresentation {
         syncAmountsWithView()
 
         if selectedNonXemMosaics.count == 0 {
-            view?.hideMosaicWithXem()
+            view?.hideMosaicWithXem(animated: true)
         }
     }
 
@@ -167,10 +182,9 @@ extension SendAmountPresenter : SendAmountPresentation {
 extension SendAmountPresenter : SendAmountInteractorOutput {
     func mosaicOwnedFetched(_ mosaics: [MosaicDetail]) {
         ownedMosaics = mosaics.filter { !$0.isXem() }
-
-
+        
         view?.showMosaicOwned(ownedMosaics, selected: selectedMosaics)
-        view?.hideMosaicWithXem()
+        view?.hideMosaicWithXem(animated: false)
     }
 
     func mosaicOwnedFetchFailed(_ error: Error) {

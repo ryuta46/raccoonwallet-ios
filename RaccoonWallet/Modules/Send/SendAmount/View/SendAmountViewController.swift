@@ -93,7 +93,12 @@ class SendAmountViewController : BaseViewController {
     @IBAction func onChangedMosaicWithXem(_ sender: Any) {
         presenter.didChangeMosaicWithXem(mosaicWithXem.isOn)
     }
-
+    
+    // To reserve mosaicWithXem's space, show the view temporally
+    override func viewWillAppear(_ animated: Bool) {
+        mosaicWithXemContainer.isHidden = false
+        super.viewWillAppear(animated)
+    }
 }
 extension SendAmountViewController: MDCTabBarDelegate {
     public func tabBar(_ tabBar: MDCTabBar, didSelect item: UITabBarItem) {
@@ -152,20 +157,28 @@ extension SendAmountViewController: SendAmountView {
     }
 
     func showLoading() {
+        // Ideally, mosaicWithXem should be hidden during loading.
+        // But if do so, the layout is collapsed and mosaicWithXem never be shown even when the view should be shown.
+        // To avoid this, the alpha is used.
+        mosaicWithXemContainer.alpha = 0
+        ownedMosaics = []
+        selectedMosaics = []
+        mosaicList.reloadData()
     }
 
     func showMosaicWithXem() {
         mosaicContents.showSubview(mosaicWithXemContainer, visible: true, animated: true)
     }
 
-    func hideMosaicWithXem() {
-        mosaicContents.showSubview(mosaicWithXemContainer, visible: false, animated: true)
+    func hideMosaicWithXem(animated: Bool) {
+        mosaicContents.showSubview(mosaicWithXemContainer, visible: false, animated: animated)
     }
 
     func showMosaicOwned(_ mosaics: [MosaicDetail], selected: [MosaicDetail]) {
         ownedMosaics = mosaics
         selectedMosaics = selected
-
+        mosaicWithXemContainer.alpha = 1
+        
         mosaicList.reloadData()
     }
 }
