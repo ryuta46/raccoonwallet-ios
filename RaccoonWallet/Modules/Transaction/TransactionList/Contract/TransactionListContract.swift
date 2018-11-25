@@ -35,7 +35,7 @@ protocol TransactionListPresentation: BasePresentation {
 protocol TransactionListUseCase: class {
     var output: TransactionListInteractorOutput! { get set }
 
-    func fetchTransferTransactionDetail(_ address: String, id: Int?)
+    func fetchTransferTransactionDetail(_ address: String, withUnconfirmed: Bool, id: Int?)
 }
 
 //sourcery: AutoMockable

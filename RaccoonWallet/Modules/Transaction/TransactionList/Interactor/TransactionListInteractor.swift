@@ -11,7 +11,7 @@ import Foundation
 class TransactionListInteractor: NemServiceInteractor, TransactionListUseCase {
     weak var output: TransactionListInteractorOutput!
 
-    func fetchTransferTransactionDetail(_ address: String, id: Int?) {
-        fetchTransferTransactionDetail(address, output, withUnconfirmed: true, id: id)
+    func fetchTransferTransactionDetail(_ address: String, withUnconfirmed: Bool, id: Int?) {
+        fetchTransferTransactionDetail(address, output, withUnconfirmed: withUnconfirmed, id: id)
     }
 }
