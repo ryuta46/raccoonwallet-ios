@@ -21,7 +21,7 @@ protocol SendAmountView: BaseView {
 
     func showLoading()
     func showMosaicWithXem()
-    func hideMosaicWithXem()
+    func hideMosaicWithXem(animated: Bool)
     func showMosaicOwned(_ mosaics: [MosaicDetail], selected: [MosaicDetail])
 }
 
