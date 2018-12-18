@@ -69,7 +69,7 @@ extension TransactionListPresenter: TransactionListPresentation {
         view?.showLoadingTop()
         if let wallet = WalletHelper.activeWallet {
             currentAddress = wallet.address
-            interactor.fetchTransferTransactionDetail(wallet.address, id: lastId)
+            interactor.fetchTransferTransactionDetail(wallet.address, withUnconfirmed: true, id: lastId)
         } else{
             view?.showError(R.string.localizable.wallet_not_select_message())
         }
@@ -82,7 +82,7 @@ extension TransactionListPresenter: TransactionListPresentation {
         isLoading = true
         view?.showLoadingBottom()
         if let wallet = WalletHelper.activeWallet {
-            interactor.fetchTransferTransactionDetail(wallet.address, id: lastId)
+            interactor.fetchTransferTransactionDetail(wallet.address, withUnconfirmed: false, id: lastId)
         } else{
             view?.showError(R.string.localizable.wallet_not_select_message())
         }
@@ -93,11 +93,13 @@ extension TransactionListPresenter: TransactionListPresentation {
 extension TransactionListPresenter: TransactionListInteractorOutput {
     func transferTransactionDetailFetched(_ transactions: [TransferTransactionDetail]) {
         self.transactions += transactions
+        
+        let confirmedTransactions = transactions.filter { !$0.isUnconfirmed }
 
-        if transactions.isEmpty {
+        if confirmedTransactions.isEmpty {
             noNext = true
         } else {
-            lastId = transactions.last?.id
+            lastId = confirmedTransactions.last?.id
         }
 
         if self.transactions.isEmpty {
@@ -126,6 +128,7 @@ extension TransactionListPresenter: TransactionListInteractorOutput {
             noNext = true
         }
         isLoading = false
+        view?.hideLoading()
         view?.showError(R.string.localizable.common_error_network())
     }
 }
