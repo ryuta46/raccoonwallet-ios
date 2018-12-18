@@ -58,9 +58,9 @@ extension MosaicListPresenter: MosaicListPresentation {
             if let xemBookImageUrl = xemBookImages.first(where: { $0.identifier == mosaic.identifier }) {
                 // for xem book image
                 return xemBookImageUrl
-            } else if mosaic.description.contains(Constant.oaMosaicImageKey) {
+            } else if let description = mosaic.description, description.contains(Constant.oaMosaicImageKey) {
                 // for open apostille image
-                let imageName = mosaic.description.replacingOccurrences(of: Constant.oaMosaicImageKey, with: "")
+                let imageName = description.replacingOccurrences(of: Constant.oaMosaicImageKey, with: "")
                 return MosaicImageUrl(
                         namespace: mosaic.namespace,
                         name: mosaic.mosaic,

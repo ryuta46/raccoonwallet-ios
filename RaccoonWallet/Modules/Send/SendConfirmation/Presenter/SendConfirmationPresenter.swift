@@ -81,7 +81,7 @@ class SendConfirmationPresenter: BasePresenter {
                     publicKey: keyPair.publicKey,
                     network: NemConfiguration.transactionNetwork,
                     recipientAddress: sendTransaction.address,
-                    mosaics: sendTransaction.mosaics.map { $0.asTransferMosaic },
+                    mosaics: sendTransaction.mosaics.compactMap { $0.asTransferMosaic },
                     messageType: sendTransaction.messageType,
                     message: messageBytes ?? [])
         }

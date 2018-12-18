@@ -250,7 +250,7 @@ class NemService {
 
                     // fetch mosaic definition
                     return Single.zip(definitionNeedMosaics.map { (namespace, names) in
-                        fetchMosaicDefinitions(namespace, names)
+                        fetchMosaicDefinitions(namespace, names).catchErrorJustReturn([])
                     }).map { (mosaicDefinitions: [[MosaicDefinition]]) -> [TransferTransactionDetail] in
                         // flat [[MosaicDefinition]] -> [MosaicDefinition]
                         let definitions = mosaicDefinitions.reduce([]) {(result, element) in result + element} + cachedDefinitions

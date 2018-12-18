@@ -10,11 +10,11 @@ struct MosaicDetail {
     let namespace: String
     let mosaic: String
     let quantity: UInt64
-    let supply: UInt64
-    let divisibility: Int
-    let description: String
+    let supply: UInt64?
+    let divisibility: Int?
+    let description: String?
 
-    init(namespace: String, mosaic: String, quantity: UInt64, supply: UInt64, divisibility: Int, description: String) {
+    init(namespace: String, mosaic: String, quantity: UInt64, supply: UInt64?, divisibility: Int?, description: String?) {
         self.namespace = namespace
         self.mosaic = mosaic
         self.quantity = quantity
@@ -36,10 +36,12 @@ struct MosaicDetail {
     }
 
     var amount: Decimal {
+        let divisibility = self.divisibility ?? 0
         return Decimal.from(quantity).scale10(-divisibility)
     }
 
     func replaced(amount: Decimal) -> MosaicDetail {
+        let divisibility = self.divisibility ?? 0
         let quantity = (amount.scale10(divisibility) as NSDecimalNumber).uint64Value
         return replaced(quantity: quantity)
     }
@@ -51,11 +53,19 @@ struct MosaicDetail {
         if isXem() {
             return "\(amount) XEM"
         } else {
-            return "\(amount) \(identifier)"
+            if (divisibility == nil) {
+                return "\(quantity) \(identifier) (undefined mosaic)"
+            } else {
+                return "\(amount) \(identifier)"    
+            }
+
         }
     }
 
-    var asTransferMosaic: TransferMosaic {
+    var asTransferMosaic: TransferMosaic? {
+        guard let supply = self.supply, let divisibility = self.divisibility else {
+            return nil
+        }
         return TransferMosaic(namespace: namespace, mosaic: mosaic, quantity: quantity, supply: supply, divisibility: divisibility)
     }
 
