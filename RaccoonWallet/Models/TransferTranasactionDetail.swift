@@ -55,8 +55,17 @@ struct TransferTransactionDetail {
                 }
 
                 guard let definition = mosaicDefinitions.filter({ definition in mosaic.mosaicId.description == definition.id.description }).first else {
-                    Logger.shared.error("No satisfied mosaic definition.")
-                    return nil
+                    Logger.shared.warning("No satisfied mosaic definition.")
+                    mosaicAmounts.append(
+                            MosaicDetail(
+                                    namespace: mosaic.mosaicId.namespaceId,
+                                    mosaic: mosaic.mosaicId.name,
+                                    quantity: UInt64(mosaic.quantity),
+                                    supply: nil,
+                                    divisibility: nil,
+                                    description: nil
+                            ))
+                    continue
                 }
                 guard let initialSupply = definition.initialSupply, let divisibility = definition.divisibility else{
                     Logger.shared.error("No initialSupply or divisibility.")
@@ -70,7 +79,7 @@ struct TransferTransactionDetail {
                                 supply: initialSupply,
                                 divisibility: divisibility,
                                 description: definition.description
-                                ))
+                        ))
             }
             self.mosaics = mosaicAmounts
         } else {
