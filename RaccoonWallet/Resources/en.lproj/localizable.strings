@@ -76,6 +76,7 @@
 
 "common_wallet_balance" = "ウォレット残高";
 
+"common_copy_to_clipboard" = "クリップボードにコピーしました";
 
 "about_title" = "About This APP";
 "about_app_concept" = "信頼性が高く\n使いやすいUIで、\n仮想通貨をもっと楽しく。\n\nラクーンウォレットは、これら３つを目標に\n作られた仮想通貨ウォレットです。";

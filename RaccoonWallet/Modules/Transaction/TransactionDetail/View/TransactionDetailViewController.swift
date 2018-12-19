@@ -53,9 +53,7 @@ class TransactionDetailViewController: BaseViewController {
 
         peer.textColor = Theme.secondary
         fromHeadline.textColor = Theme.secondary
-        fromAddress.textColor = Theme.primary
         toHeadline.textColor = Theme.secondary
-        toAddress.textColor = Theme.primary
         amountHeadline.textColor = Theme.secondary
         amount.textColor = Theme.secondary
         feeHeadline.textColor = Theme.secondary
@@ -63,7 +61,6 @@ class TransactionDetailViewController: BaseViewController {
         blockHeadline.textColor = Theme.secondary
         block.textColor = Theme.secondary
         transactionHashHeadline.textColor = Theme.secondary
-        transactionHash.textColor = Theme.primary
         messageHeadline.textColor = Theme.secondary
         message.textColor = Theme.secondary
 
@@ -115,7 +112,7 @@ extension TransactionDetailViewController: TransactionDetailView {
             mosaics.text = transaction.mosaics.map { $0.amountDescription }.joined(separator: "\n")
         }
         block.text = transaction.block?.description ?? "-"
-        transactionHash.text = transaction.hash ?? "-"
+        transactionHash.text = transaction.hash ?? ""
     }
 
     func showMessage(_ message: String) {
