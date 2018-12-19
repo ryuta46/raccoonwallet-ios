@@ -1250,7 +1250,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 202 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 203 localization keys.
     struct localizable {
       /// en translation: %@で送金します
       /// 
@@ -1644,6 +1644,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let wallet_login_name_message = Rswift.StringResource(key: "wallet_login_name_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: クリップボードにコピーしました
+      /// 
+      /// Locales: en, ja
+      static let common_copy_to_clipboard = Rswift.StringResource(key: "common_copy_to_clipboard", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: スクリーンショットに撮るのは危険です。
       /// 
       /// Locales: en, ja
@@ -2745,6 +2749,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func wallet_login_name_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_login_name_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: クリップボードにコピーしました
+      /// 
+      /// Locales: en, ja
+      static func common_copy_to_clipboard(_: Void = ()) -> String {
+        return NSLocalizedString("common_copy_to_clipboard", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: スクリーンショットに撮るのは危険です。
