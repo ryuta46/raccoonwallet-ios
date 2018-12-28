@@ -9,7 +9,7 @@ target 'RaccoonWallet' do
   pod "NemSwift"
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~> 4.0'
-  pod 'R.swift'
+  pod 'R.swift', '~> 4.0.0'
   pod 'NVActivityIndicatorView'
   pod 'RealmSwift'
   pod 'DLRadioButton', '~> 1.4'

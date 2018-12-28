@@ -183,7 +183,7 @@ class NemService {
 
 
     static func fetchMosaicDefinition(_ namespace: String, id: Int? = nil, pageSize: Int? = nil) -> Single<[MosaicDefinitionMetaDataPair]> {
-        return Session.rx_send(NISAPI.NamespaceMosaicDefintionPage(namespace: namespace, id: id, pageSize: pageSize)).map { definitions in
+        return Session.rx_send(NISAPI.NamespaceMosaicDefinitionPage(namespace: namespace, id: id, pageSize: pageSize)).map { definitions in
             definitions.data
         }
     }
