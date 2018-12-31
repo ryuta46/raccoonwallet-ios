@@ -408,6 +408,7 @@
 		6905744B6D182887D02DA5DE /* QrLabAmountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905782E70BC9D3BEF4224A4 /* QrLabAmountPresenter.swift */; };
 		6905744D2C675D649D64AE6E /* WalletRenameContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905716D045D41E5F398D37D /* WalletRenameContract.swift */; };
 		69057451793062B66FD671CA /* ScanTabPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690574E45FABD436BA85D621 /* ScanTabPresenter.swift */; };
+		69057459D8F33668DF5FB4A5 /* HarvestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6905717CFA5F4691D4DA3904 /* HarvestView.xib */; };
 		6905745B59109F72C8E10982 /* LessonBeginnerBackupEndContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690578BB7FB96186805FCFFF /* LessonBeginnerBackupEndContract.swift */; };
 		6905745EF08E8513F7C502A8 /* NavigationDrawerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905794ACB79FE46353EAF6B /* NavigationDrawerContract.swift */; };
 		6905747385DC638B04F749AA /* WalletBackupCautionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69057577AC8762172BFCE5FA /* WalletBackupCautionStoryboard.storyboard */; };
@@ -639,6 +640,7 @@
 		69057AE496F4279BA272C4E8 /* SendModePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690575673796E80D68639D32 /* SendModePresenter.swift */; };
 		69057AE746D4238572E4B8CB /* WalletImportKeyContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690574DF7376D894F930E127 /* WalletImportKeyContract.swift */; };
 		69057AEEBE14B986A760E362 /* DonationDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6905718DC9871ABE3BAE8771 /* DonationDetailStoryboard.storyboard */; };
+		69057AF1009E9FD67B3D05A2 /* HarvestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6905717CFA5F4691D4DA3904 /* HarvestView.xib */; };
 		69057AF45E3AD45500BCD5D8 /* PrimaryCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057861B9E9DA52DFE60507 /* PrimaryCircleButton.swift */; };
 		69057B025C7F417BD1FA0B21 /* BaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057DE776707C3A038A4D9C /* BaseContract.swift */; };
 		69057B09352EF1CB603EF880 /* LessonEndPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057978744210D542AE0E98 /* LessonEndPresenter.swift */; };
@@ -666,6 +668,7 @@
 		69057BAD684013648832C4F9 /* QrLabTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690570EC1CE06CE3647D2A4E /* QrLabTabRouter.swift */; };
 		69057BB37D3E010B465B5004 /* TransactionDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690578CE5F7292943C38E2BD /* TransactionDetailInteractor.swift */; };
 		69057BBA0DCD8D859D642F24 /* SendEndRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057FB60F44F0ABB3F222E9 /* SendEndRouter.swift */; };
+		69057BC759059ED8C2378019 /* HarvestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6905717CFA5F4691D4DA3904 /* HarvestView.xib */; };
 		69057BCE08F79C09971CAEA7 /* NodeSelectContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905794F395640DB433946B0 /* NodeSelectContract.swift */; };
 		69057BD317479480C31D5CB1 /* WalletBackupCautionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905774B0780D2FAE2DC8457 /* WalletBackupCautionPresenter.swift */; };
 		69057BD931FDC2699824EC3D /* WalletRenameStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69057F23E3813AA91A9E89D5 /* WalletRenameStoryboard.storyboard */; };
@@ -986,6 +989,7 @@
 		6905716D045D41E5F398D37D /* WalletRenameContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletRenameContract.swift; sourceTree = "<group>"; };
 		6905716EAA4DB1FFB19F6FAC /* MosaicListContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosaicListContract.swift; sourceTree = "<group>"; };
 		6905717B299F35628410E72D /* QrLabAmountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrLabAmountViewController.swift; sourceTree = "<group>"; };
+		6905717CFA5F4691D4DA3904 /* HarvestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HarvestView.xib; sourceTree = "<group>"; };
 		6905718DC9871ABE3BAE8771 /* DonationDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DonationDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		6905719DB36D5CC0FABD62AF /* ScanTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanTabViewController.swift; sourceTree = "<group>"; };
 		690571A2755F3011BA1ECC0C /* TransactionListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListCell.swift; sourceTree = "<group>"; };
@@ -1598,6 +1602,7 @@
 				5F672E152124FC9E0018B163 /* HomeTabViewController.swift */,
 				5F672E2F212534CE0018B163 /* TransactionView.swift */,
 				5F672E2B212534C10018B163 /* TransactionView.xib */,
+				6905717CFA5F4691D4DA3904 /* HarvestView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4916,6 +4921,7 @@
 				69057EBD97CE6CB93FC47147 /* IntroductionConceptStoryboard.storyboard in Resources */,
 				690572CA607387BB2FEE44E6 /* IntroductionMessageStoryboard.storyboard in Resources */,
 				690570E5CA1261229BC8ADE1 /* QrScannerDialogStoryboard.storyboard in Resources */,
+				69057BC759059ED8C2378019 /* HarvestView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4967,6 +4973,7 @@
 				690578C20BA63EE75018D197 /* SendMessageStoryboard.storyboard in Resources */,
 				690572B89DEEB8D75FDBE8E5 /* SendMessageTypeStoryboard.storyboard in Resources */,
 				6905701091293D8CAE161788 /* SendConfirmationStoryboard.storyboard in Resources */,
+				69057459D8F33668DF5FB4A5 /* HarvestView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5018,6 +5025,7 @@
 				69057844F58E380F0B9A943F /* SendMessageStoryboard.storyboard in Resources */,
 				69057AAB6C20FA73A783867C /* SendMessageTypeStoryboard.storyboard in Resources */,
 				6905795D495A575914AC8F8D /* SendConfirmationStoryboard.storyboard in Resources */,
+				69057AF1009E9FD67B3D05A2 /* HarvestView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
