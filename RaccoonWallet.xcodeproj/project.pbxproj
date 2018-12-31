@@ -268,6 +268,7 @@
 		690570313140AA221F85BF25 /* LessonBeginnerBackupEndPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057ABF005E72F8CC4074BE /* LessonBeginnerBackupEndPresenter.swift */; };
 		690570315E80D7F833617C25 /* DonationTopStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69057C82C50F53CCF590F39C /* DonationTopStoryboard.storyboard */; };
 		690570331A81857BCC6E02DA /* WalletSettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690578DAB495A2B33E983ECE /* WalletSettingRouter.swift */; };
+		69057036AD5772D8BA674E14 /* HarvestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905723E5C4B2E28FDC4DE5C /* HarvestView.swift */; };
 		69057044724CF5E515AE3C9A /* SendAmountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690579EB0ADD97DFE9F15FFD /* SendAmountPresenter.swift */; };
 		6905705249D1C45635F14130 /* WalletImportNanoPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905759AE1A88251C793621E /* WalletImportNanoPasswordInteractor.swift */; };
 		690570526DC45918CCA8E645 /* WalletImportNanoPasswordContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057AF99390C7E5119371B2 /* WalletImportNanoPasswordContract.swift */; };
@@ -321,6 +322,7 @@
 		69057187C11C364F90A9B917 /* NemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690578A1B8BD170C3EE04AD7 /* NemNode.swift */; };
 		69057188C43BC9BA94E59DDE /* WalletImportEndContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690578B28CB86BD87D29C6C6 /* WalletImportEndContract.swift */; };
 		690571A742B922263B1F9792 /* SendModeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69057A21A140E719D003DC4B /* SendModeStoryboard.storyboard */; };
+		690571A93236ACD16F1DEE63 /* HarvestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905723E5C4B2E28FDC4DE5C /* HarvestView.swift */; };
 		690571AD9F1443C915FC5388 /* SendMessageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690577BCBDB3E8BB2BE82375 /* SendMessageInteractor.swift */; };
 		690571C41782E40680898874 /* WalletDeleteContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057902F203416BA3C6EDDE /* WalletDeleteContract.swift */; };
 		690571C77AB18132CB032995 /* WalletAddressInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690573D4BDB140964E3C2EA7 /* WalletAddressInteractor.swift */; };
@@ -1005,6 +1007,7 @@
 		6905722B488B1CCAA39EC95A /* LessonEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonEndViewController.swift; sourceTree = "<group>"; };
 		6905722C8E7C6E416F0FE8F3 /* IntroductionConceptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionConceptViewController.swift; sourceTree = "<group>"; };
 		690572365DF26A4283807AE0 /* WalletImportKeyRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletImportKeyRouter.swift; sourceTree = "<group>"; };
+		6905723E5C4B2E28FDC4DE5C /* HarvestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarvestView.swift; sourceTree = "<group>"; };
 		69057240F94CC0A89C7238E7 /* WalletBackupContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletBackupContract.swift; sourceTree = "<group>"; };
 		69057244EDE37CCEA13BEB9B /* WalletImportEndPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletImportEndPresenter.swift; sourceTree = "<group>"; };
 		69057256C4D2EF3A0B8F0B86 /* DonationDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationDetailInteractor.swift; sourceTree = "<group>"; };
@@ -1603,6 +1606,7 @@
 				5F672E2F212534CE0018B163 /* TransactionView.swift */,
 				5F672E2B212534C10018B163 /* TransactionView.xib */,
 				6905717CFA5F4691D4DA3904 /* HarvestView.xib */,
+				6905723E5C4B2E28FDC4DE5C /* HarvestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -5584,6 +5588,7 @@
 				690577151F69253F0F5CC625 /* QrScannerDialogPresenter.swift in Sources */,
 				69057BDA89CDC21EA8255D36 /* QrScannerDialogInteractor.swift in Sources */,
 				69057415E6E35DBE15D51238 /* PrimaryCopyableLabel.swift in Sources */,
+				690571A93236ACD16F1DEE63 /* HarvestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5868,6 +5873,7 @@
 				69057A0CA26D42E385C8549A /* InvoiceQr.swift in Sources */,
 				69057D6E085498023D0F38EC /* WalletQr.swift in Sources */,
 				690577FF7A464BADD8EFE878 /* SendTransaction.swift in Sources */,
+				69057036AD5772D8BA674E14 /* HarvestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
