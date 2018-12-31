@@ -17,6 +17,13 @@ class NemServiceTest: XCTestCase {
         TestSettings.setUp()
     }
 
+    func testGetHarvest() {
+        NemService.nis = URL(string: "https://nismain.ttechdev.com:7891")!
+        let result = try! NemService.fetchHarvest("NBZMQO7ZPBYNBDUR7F75MAKA2S3DHDCIFG775N3D").toBlocking().first()!
+        print(result)
+        XCTAssertNotNil(result)
+
+    }
     func testGetMosaicDefinitions() {
         let result = try! NemService.fetchMosaicDefinitions("ename", ["ecoin0"]).toBlocking().first()!
         print(result)

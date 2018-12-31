@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 102 images.
+  /// This `R.image` struct is generated, and contains static references to 103 images.
   struct image {
     /// Image `bottom_nav_home`.
     static let bottom_nav_home = Rswift.ImageResource(bundle: R.hostingBundle, name: "bottom_nav_home")
@@ -122,6 +122,8 @@ struct R: Rswift.Validatable {
     static let icon_dialog_success = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_dialog_success")
     /// Image `icon_fingerprint_small`.
     static let icon_fingerprint_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_fingerprint_small")
+    /// Image `icon_harvest_small`.
+    static let icon_harvest_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_harvest_small")
     /// Image `icon_home_harvest`.
     static let icon_home_harvest = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_home_harvest")
     /// Image `icon_home_home_green`.
@@ -433,6 +435,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_fingerprint_small", bundle: ..., traitCollection: ...)`
     static func icon_fingerprint_small(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_fingerprint_small, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_harvest_small", bundle: ..., traitCollection: ...)`
+    static func icon_harvest_small(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_harvest_small, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_home_harvest", bundle: ..., traitCollection: ...)`
@@ -768,10 +775,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 6 nibs.
   struct nib {
     /// Nib `Calculator`.
     static let calculator = _R.nib._Calculator()
+    /// Nib `HarvestView`.
+    static let harvestView = _R.nib._HarvestView()
     /// Nib `PinNumberView`.
     static let pinNumberView = _R.nib._PinNumberView()
     /// Nib `SendAmountPage`.
@@ -784,6 +793,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "Calculator", in: bundle)`
     static func calculator(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.calculator)
+    }
+    
+    /// `UINib(name: "HarvestView", in: bundle)`
+    static func harvestView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.harvestView)
     }
     
     /// `UINib(name: "PinNumberView", in: bundle)`
@@ -3514,6 +3528,7 @@ struct _R: Rswift.Validatable {
   struct nib: Rswift.Validatable {
     static func validate() throws {
       try _WalletBar.validate()
+      try _HarvestView.validate()
       try _TransactionView.validate()
     }
     
@@ -3523,6 +3538,21 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _HarvestView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "HarvestView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon_harvest_small", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_harvest_small' is used in nib 'HarvestView', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

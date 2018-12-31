@@ -28,6 +28,9 @@ class HomeTabViewController: BaseViewController {
     @IBOutlet weak var transactionContent: UIStackView!
     @IBOutlet weak var transactionEmpty: UIStackView!
 
+    @IBOutlet weak var harvestEmpty: UIStackView!
+    @IBOutlet weak var harvestView: HarvestView!
+    
     var loadingView: FullScreenLoadingView!
     var refreshControl: UIRefreshControl!
     
@@ -70,6 +73,8 @@ extension HomeTabViewController: HomeTabView {
         localCurrency.text = "-"
         transactionContent.isHidden = true
         transactionEmpty.isHidden = true
+        harvestEmpty.isHidden = true
+        harvestView.isHidden = true
         
         loadingView.startLoading()
     }
@@ -130,15 +135,23 @@ extension HomeTabViewController: HomeTabView {
     }
 
     func showHarvestEmpty() {
-
+        harvestEmpty.isHidden = false
     }
 
     func showHarvest(_ harvests: [Harvest]) {
+        guard let lastHarvest = harvests.first else {
+            showHarvestEmpty()
+            return
+        }
+        harvestView.date.font = UIFont.monospacedDigitSystemFont(ofSize: harvestView.date.font.pointSize, weight: UIFont.Weight.light)
+        harvestView.date.text = lastHarvest.timeStamp.dateAsTimestamp().dateString
+        harvestView.amount.text = MosaicDetail.xem(lastHarvest.totalFee).amountDescription
 
+        harvestView.isHidden = false
     }
 
     func showHarvestError() {
-
+        showHarvestEmpty()
     }
 
 }

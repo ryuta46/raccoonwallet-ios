@@ -30,6 +30,11 @@ class NemService {
         })
     }
 
+    static func fetchHarvest(_ address: String) -> Single<Harvests> {
+        return Session.rx_send(NISAPI.AccountHarvests(address: address))
+    }
+
+
     static func fetchMosaicOwned(_ address: String) -> Single<[Mosaic]> {
         return Session.rx_send(NISAPI.AccountMosaicOwned(address: address)).map({ mosaics in
             return mosaics.data

@@ -105,8 +105,13 @@ extension NemServiceUseCase where Self: RxDisposable {
     }
 
     func fetchHarvest(_ address: String, _ output: NemServiceHarvestOutput) {
-        // Todo: harvest
-        output.harvestFetched([])
+        NemService
+                .fetchHarvest(address)
+                .subscribe(
+                        onSuccess: { harvests in output.harvestFetched(harvests.data)},
+                        onError: { error in output.harvestFetchFailed(error)}
+                )
+                .disposed(by: disposeBag)
     }
 
     func fetchPublicKey(_ address: String, _ output: NemServicePublicKeyOutput) {
