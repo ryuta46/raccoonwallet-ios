@@ -1264,7 +1264,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 203 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 204 localization keys.
     struct localizable {
       /// en translation: %@で送金します
       /// 
@@ -1874,6 +1874,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let common_done = Rswift.StringResource(key: "common_done", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 定義されていないネームスペースです
+      /// 
+      /// Locales: en, ja
+      static let send_invalid_namespace = Rswift.StringResource(key: "send_invalid_namespace", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 寄付
       /// 
       /// Locales: en, ja
@@ -3141,6 +3145,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func common_done(_: Void = ()) -> String {
         return NSLocalizedString("common_done", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 定義されていないネームスペースです
+      /// 
+      /// Locales: en, ja
+      static func send_invalid_namespace(_: Void = ()) -> String {
+        return NSLocalizedString("send_invalid_namespace", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 寄付

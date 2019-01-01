@@ -53,6 +53,12 @@ protocol NemServiceTransferTransactionDetailOutput: class {
     func transferTransactionDetailFetchFailed(_ error: Error)
 }
 
+protocol NemServiceNamespaceOutput: class {
+    func namespaceFetched(_ namespace: Namespace)
+    func namespaceFetchFailed(_ error: Error)
+}
+
+
 protocol NemServiceUseCase {
 }
 
@@ -140,6 +146,16 @@ extension NemServiceUseCase where Self: RxDisposable {
                 .subscribe(
                         onSuccess: { result in output.transactionSent(result)},
                         onError: { error in output.transactionSendFailed(error)}
+                )
+                .disposed(by: disposeBag)
+    }
+
+    func fetchNamespace(_ namespace: String, _ output: NemServiceNamespaceOutput) {
+        NemService
+                .fetchNamespace(namespace)
+                .subscribe(
+                        onSuccess: { result in output.namespaceFetched(result)},
+                        onError: { error in output.namespaceFetchFailed(error)}
                 )
                 .disposed(by: disposeBag)
     }

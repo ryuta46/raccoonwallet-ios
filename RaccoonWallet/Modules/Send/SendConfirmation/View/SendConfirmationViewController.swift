@@ -85,8 +85,12 @@ extension SendConfirmationViewController: SendConfirmationView {
         self.fee.text = fee
     }
 
-    func showDestination(_ destination: String) {
-        self.destination.text = destination
+    func showDestination(_ destination: String, _ namespace: String) {
+        if namespace.isEmpty {
+            self.destination.text = destination
+        } else {
+            self.destination.text = "\(namespace)\n(\(destination))" 
+        }
     }
 
     func showMessage(_ message: String) {
