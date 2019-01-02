@@ -283,4 +283,8 @@ class NemService {
                     }
                 }
     }
+
+    static func fetchNamespace(_ namespace: String) -> Single<Namespace> {
+        return Session.rx_send(NISAPI.Namespace(namespace: namespace))
+    }
 }

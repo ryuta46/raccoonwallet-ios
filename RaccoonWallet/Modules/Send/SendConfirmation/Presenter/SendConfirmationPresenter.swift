@@ -21,7 +21,7 @@ class SendConfirmationPresenter: BasePresenter {
         view?.showAmounts(sendTransaction.mosaics.map {$0.amountDescription} )
         let transaction = createDummyTransaction()
         view?.showFee(MosaicDetail.xem(transaction.fee).amountDescription)
-        view?.showDestination(sendTransaction.address.prettyAddress())
+        view?.showDestination(sendTransaction.address.prettyAddress(), sendTransaction.namespace)
         view?.showMessage(sendTransaction.message ?? "")
     }
 

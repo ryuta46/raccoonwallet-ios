@@ -42,9 +42,10 @@ protocol SendTabUseCase: class {
     var output: SendTabInteractorOutput! { get set }
 
     func fetchPublicKey(_ address: String)
+    func fetchNamespace(_ address: String)
 }
 
-protocol SendTabInteractorOutput: NemServicePublicKeyOutput {
+protocol SendTabInteractorOutput: NemServicePublicKeyOutput, NemServiceNamespaceOutput {
 }
 
 protocol SendTabWireframe: class {
@@ -52,7 +53,7 @@ protocol SendTabWireframe: class {
 
     static func assembleModule() -> UIViewController
 
-    func presentSendAmount(destination: String, destinationPublicKey: String?)
+    func presentSendAmount(destination: String, destinationPublicKey: String?, namespace: String)
 
     func presentSetting()
     func presentWalletSelect()

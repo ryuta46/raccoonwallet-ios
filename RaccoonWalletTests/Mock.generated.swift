@@ -16256,10 +16256,10 @@ class SendConfirmationViewMock: SendConfirmationView, Mock {
 		perform?(`fee`)
     }
 
-    func showDestination(_ destination: String) {
-        addInvocation(.m_showDestination__destination(Parameter<String>.value(`destination`)))
-		let perform = methodPerformValue(.m_showDestination__destination(Parameter<String>.value(`destination`))) as? (String) -> Void
-		perform?(`destination`)
+    func showDestination(_ destination: String, _ namespace: String) {
+        addInvocation(.m_showDestination__destination_namespace(Parameter<String>.value(`destination`), Parameter<String>.value(`namespace`)))
+		let perform = methodPerformValue(.m_showDestination__destination_namespace(Parameter<String>.value(`destination`), Parameter<String>.value(`namespace`))) as? (String, String) -> Void
+		perform?(`destination`, `namespace`)
     }
 
     func showMessage(_ message: String) {
@@ -16315,7 +16315,7 @@ class SendConfirmationViewMock: SendConfirmationView, Mock {
         case m_showCaution
         case m_showAmounts__amounts(Parameter<[String]>)
         case m_showFee__fee(Parameter<String>)
-        case m_showDestination__destination(Parameter<String>)
+        case m_showDestination__destination_namespace(Parameter<String>, Parameter<String>)
         case m_showMessage__message(Parameter<String>)
         case m_showLoading
         case m_hideLoading
@@ -16337,8 +16337,9 @@ class SendConfirmationViewMock: SendConfirmationView, Mock {
             case (.m_showFee__fee(let lhsFee), .m_showFee__fee(let rhsFee)):
                 guard Parameter.compare(lhs: lhsFee, rhs: rhsFee, with: matcher) else { return false } 
                 return true 
-            case (.m_showDestination__destination(let lhsDestination), .m_showDestination__destination(let rhsDestination)):
+            case (.m_showDestination__destination_namespace(let lhsDestination, let lhsNamespace), .m_showDestination__destination_namespace(let rhsDestination, let rhsNamespace)):
                 guard Parameter.compare(lhs: lhsDestination, rhs: rhsDestination, with: matcher) else { return false } 
+                guard Parameter.compare(lhs: lhsNamespace, rhs: rhsNamespace, with: matcher) else { return false } 
                 return true 
             case (.m_showMessage__message(let lhsMessage), .m_showMessage__message(let rhsMessage)):
                 guard Parameter.compare(lhs: lhsMessage, rhs: rhsMessage, with: matcher) else { return false } 
@@ -16376,7 +16377,7 @@ class SendConfirmationViewMock: SendConfirmationView, Mock {
             case .m_showCaution: return 0
             case let .m_showAmounts__amounts(p0): return p0.intValue
             case let .m_showFee__fee(p0): return p0.intValue
-            case let .m_showDestination__destination(p0): return p0.intValue
+            case let .m_showDestination__destination_namespace(p0, p1): return p0.intValue + p1.intValue
             case let .m_showMessage__message(p0): return p0.intValue
             case .m_showLoading: return 0
             case .m_hideLoading: return 0
@@ -16415,9 +16416,9 @@ class SendConfirmationViewMock: SendConfirmationView, Mock {
         static func showFee(_ fee: Parameter<String>) -> Verify { return Verify(method: .m_showFee__fee(`fee`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `fee` label")
 		static func showFee(fee: Parameter<String>) -> Verify { return Verify(method: .m_showFee__fee(`fee`))}
-        static func showDestination(_ destination: Parameter<String>) -> Verify { return Verify(method: .m_showDestination__destination(`destination`))}
-        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `destination` label")
-		static func showDestination(destination: Parameter<String>) -> Verify { return Verify(method: .m_showDestination__destination(`destination`))}
+        static func showDestination(_ destination: Parameter<String>, _ namespace: Parameter<String>) -> Verify { return Verify(method: .m_showDestination__destination_namespace(`destination`, `namespace`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `destination` label, remove `namespace` label")
+		static func showDestination(destination: Parameter<String>, namespace: Parameter<String>) -> Verify { return Verify(method: .m_showDestination__destination_namespace(`destination`, `namespace`))}
         static func showMessage(_ message: Parameter<String>) -> Verify { return Verify(method: .m_showMessage__message(`message`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `message` label")
 		static func showMessage(message: Parameter<String>) -> Verify { return Verify(method: .m_showMessage__message(`message`))}
@@ -16457,12 +16458,12 @@ class SendConfirmationViewMock: SendConfirmationView, Mock {
 		static func showFee(fee: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
             return Perform(method: .m_showFee__fee(`fee`), performs: perform)
         }
-        static func showDestination(_ destination: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
-            return Perform(method: .m_showDestination__destination(`destination`), performs: perform)
+        static func showDestination(_ destination: Parameter<String>, _ namespace: Parameter<String>, perform: @escaping (String, String) -> Void) -> Perform {
+            return Perform(method: .m_showDestination__destination_namespace(`destination`, `namespace`), performs: perform)
         }
-        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `destination` label")
-		static func showDestination(destination: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
-            return Perform(method: .m_showDestination__destination(`destination`), performs: perform)
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `destination` label, remove `namespace` label")
+		static func showDestination(destination: Parameter<String>, namespace: Parameter<String>, perform: @escaping (String, String) -> Void) -> Perform {
+            return Perform(method: .m_showDestination__destination_namespace(`destination`, `namespace`), performs: perform)
         }
         static func showMessage(_ message: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
             return Perform(method: .m_showMessage__message(`message`), performs: perform)

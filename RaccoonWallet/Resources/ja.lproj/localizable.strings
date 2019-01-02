@@ -170,6 +170,8 @@
 "send_newbie_caution_title" = "気をつけて。送り先はニュービーだ";
 "send_newbie_caution_message" = "君が送ろうとしているアドレスは、これまで一度もブロックチェーン上で活動していない新参者みたいだね。とはいえアドレスがちゃんとした形式なら、送金は可能だよ。\nアドレスは正しいか、送り先は信頼できるか、よく確かめてから手続きしてね。";
 
+"send_invalid_namespace" = "定義されていないネームスペースです";
+
 "send_amount_title" = "金額を入力";
 "send_amount_setting" = "送金操作";
 "send_mosaic_setting" = "モザイク添付";

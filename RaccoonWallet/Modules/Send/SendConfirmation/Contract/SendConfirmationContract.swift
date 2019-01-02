@@ -17,7 +17,7 @@ protocol SendConfirmationView: BaseView, PinDialogMixinView {
 
     func showAmounts(_ amounts: [String])
     func showFee(_ fee: String)
-    func showDestination(_ destination: String)
+    func showDestination(_ destination: String, _ namespace: String)
     func showMessage(_ message: String)
 
     func showLoading()
