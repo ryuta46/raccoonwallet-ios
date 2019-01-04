@@ -35,7 +35,8 @@ struct TransferTransactionDetail {
         timeStamp = transaction.timeStamp
         fee = UInt64(transaction.fee)
         isMultisig = transaction.isMultisig
-        sender = Address(publicKey: ConvertUtil.toByteArray(transaction.signer), network: NemConfiguration.addressNetwork).value
+        let senderPublicKey = transaction.otherTrans?.signer ?? transaction.signer
+        sender = Address(publicKey: ConvertUtil.toByteArray(senderPublicKey), network: NemConfiguration.addressNetwork).value
 
         let transferTransaction = transaction.isTransfer ? transaction : transaction.otherTrans!
 
