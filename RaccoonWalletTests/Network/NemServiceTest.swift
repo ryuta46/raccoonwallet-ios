@@ -17,19 +17,33 @@ class NemServiceTest: XCTestCase {
         TestSettings.setUp()
     }
 
+    func testGetHarvest() {
+        NemService.nis = URL(string: "https://nismain.ttechdev.com:7891")!
+        let result = try! NemService.fetchHarvest("NBZMQO7ZPBYNBDUR7F75MAKA2S3DHDCIFG775N3D").toBlocking().first()!
+        print(result)
+        XCTAssertNotNil(result)
+
+    }
     func testGetMosaicDefinitions() {
-        let result = try! NemService.fetchMosaicDefinitions("ttech", ["ryuta"]).toBlocking().first()!
+        let result = try! NemService.fetchMosaicDefinitions("ename", ["ecoin0"]).toBlocking().first()!
         print(result)
         XCTAssertNotNil(result)
     }
 
-    func testGetMosaicDefinitionsNone() {
-        let result = try! NemService.fetchMosaicDefinitions("ttech", ["ryutaaaaa"]).toBlocking().first()!
-        XCTAssertNil(result)
+    func testGetMosaicDefinitionsWithUndefinedMosaicName() {
+        XCTAssertThrowsError(try NemService.fetchMosaicDefinitions("ename", ["ryutaaaaa"]).toBlocking().first()){ error in
+            print(error)
+        }
+    }
+
+    func testGetMosaicDefinitionsWithUndefinedNamespace() {
+        XCTAssertThrowsError(try NemService.fetchMosaicDefinitions("enameeeeeeeeeeeeeeeeeeeee", ["ecoin0"]).toBlocking().first()){ error in
+            print(error)
+        }
     }
 
     func testGetMosaicDefinitionsMulti() {
-        let result = try! NemService.fetchMosaicDefinitions("ttech", ["ryuta", "ryuta1k"]).toBlocking().first()!
+        let result = try! NemService.fetchMosaicDefinitions("ename", ["ecoin0", "ecoin1"]).toBlocking().first()!
         print(result)
         XCTAssertNotNil(result)
     }
@@ -41,17 +55,24 @@ class NemServiceTest: XCTestCase {
         print(result)
         XCTAssertGreaterThan(result.count, 0)
 
-        let mosaic = result.first { detail in detail.identifier == "ttech:ryuta" }!
+        let mosaic = result.first { detail in detail.identifier == "ename:ecoin1" }!
 
         XCTAssertGreaterThan(mosaic.amount, 0)
-        XCTAssertEqual(mosaic.description, "Test mosaic for NEM API")
+        XCTAssertEqual(mosaic.description, "ecoin1")
 
         XCTAssertNotNil(result)
     }
 
     func testFetchTransferTransactionDetail() {
-        let result = try! NemService.fetchTransferTransactionDetail(TestSettings.address, withUnconfirmed: true).toBlocking().first()!
-        print(result)
-        XCTAssertNotNil(result)
+        var id: Int? = nil
+        while(true) {
+            let result: [TransferTransactionDetail] = try! NemService.fetchTransferTransactionDetail(TestSettings.address, withUnconfirmed: true, id: id).toBlocking().first()!
+            print(result)
+
+            if result.isEmpty {
+                break
+            }
+            id = result.last!.id!
+        }
     }
 }

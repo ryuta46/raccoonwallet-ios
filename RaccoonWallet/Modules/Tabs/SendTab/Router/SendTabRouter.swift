@@ -30,12 +30,13 @@ class SendTabRouter: SendTabWireframe {
         return view
     }
 
-    func presentSendAmount(destination: String, destinationPublicKey: String?) {
+    func presentSendAmount(destination: String, destinationPublicKey: String?, namespace: String) {
         viewController?.pushWithNavigation(
                 SendAmountRouter.assembleModule(
                         SendTransaction(
                                 address: destination,
-                                publicKey: destinationPublicKey
+                                publicKey: destinationPublicKey,
+                                namespace: namespace
                         )
                 )
         )

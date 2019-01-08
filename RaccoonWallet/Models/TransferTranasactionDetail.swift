@@ -35,7 +35,8 @@ struct TransferTransactionDetail {
         timeStamp = transaction.timeStamp
         fee = UInt64(transaction.fee)
         isMultisig = transaction.isMultisig
-        sender = Address(publicKey: ConvertUtil.toByteArray(transaction.signer), network: NemConfiguration.addressNetwork).value
+        let senderPublicKey = transaction.otherTrans?.signer ?? transaction.signer
+        sender = Address(publicKey: ConvertUtil.toByteArray(senderPublicKey), network: NemConfiguration.addressNetwork).value
 
         let transferTransaction = transaction.isTransfer ? transaction : transaction.otherTrans!
 
@@ -55,8 +56,17 @@ struct TransferTransactionDetail {
                 }
 
                 guard let definition = mosaicDefinitions.filter({ definition in mosaic.mosaicId.description == definition.id.description }).first else {
-                    Logger.shared.error("No satisfied mosaic definition.")
-                    return nil
+                    Logger.shared.warning("No satisfied mosaic definition.")
+                    mosaicAmounts.append(
+                            MosaicDetail(
+                                    namespace: mosaic.mosaicId.namespaceId,
+                                    mosaic: mosaic.mosaicId.name,
+                                    quantity: UInt64(mosaic.quantity),
+                                    supply: nil,
+                                    divisibility: nil,
+                                    description: nil
+                            ))
+                    continue
                 }
                 guard let initialSupply = definition.initialSupply, let divisibility = definition.divisibility else{
                     Logger.shared.error("No initialSupply or divisibility.")
@@ -70,7 +80,7 @@ struct TransferTransactionDetail {
                                 supply: initialSupply,
                                 divisibility: divisibility,
                                 description: definition.description
-                                ))
+                        ))
             }
             self.mosaics = mosaicAmounts
         } else {

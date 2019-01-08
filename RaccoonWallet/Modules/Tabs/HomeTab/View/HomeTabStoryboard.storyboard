@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="epg-xq-t5a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="epg-xq-t5a">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -213,8 +213,15 @@
                                                     <constraint firstAttribute="width" constant="80" id="eNU-ZZ-pJR"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4p-tb-5EK" customClass="HarvestView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                <rect key="frame" x="12" y="30.5" width="176" height="32"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="IgE-2Y-U8W"/>
+                                                </constraints>
+                                            </view>
                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DxY-sR-uAH">
-                                                <rect key="frame" x="8" y="12" width="180" height="69"/>
+                                                <rect key="frame" x="12" y="12" width="176" height="69"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_empty2_small" translatesAutoresizingMaskIntoConstraints="NO" id="KeE-RW-ueg">
                                                         <rect key="frame" x="0.0" y="10.5" width="48" height="48"/>
@@ -224,7 +231,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="You have no current harvesting." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRD-XT-NPM">
-                                                        <rect key="frame" x="48" y="20" width="132" height="29"/>
+                                                        <rect key="frame" x="48" y="20" width="128" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -235,11 +242,14 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="e1B-7f-Y5d" firstAttribute="leading" secondItem="ebN-bL-svk" secondAttribute="leading" constant="16" id="6Dj-8T-Us9"/>
+                                            <constraint firstItem="Q4p-tb-5EK" firstAttribute="centerY" secondItem="DxY-sR-uAH" secondAttribute="centerY" id="8n3-Mp-0Ra"/>
                                             <constraint firstItem="12h-BF-Jq4" firstAttribute="centerY" secondItem="ebN-bL-svk" secondAttribute="centerY" id="Hor-Na-Dv4"/>
+                                            <constraint firstItem="Q4p-tb-5EK" firstAttribute="trailing" secondItem="DxY-sR-uAH" secondAttribute="trailing" id="Lsh-O5-0wQ"/>
                                             <constraint firstItem="e1B-7f-Y5d" firstAttribute="top" secondItem="ebN-bL-svk" secondAttribute="top" id="Lwy-3L-hcH"/>
-                                            <constraint firstItem="DxY-sR-uAH" firstAttribute="leading" secondItem="ebN-bL-svk" secondAttribute="leading" constant="8" id="jrW-U1-AEq"/>
+                                            <constraint firstItem="DxY-sR-uAH" firstAttribute="leading" secondItem="ebN-bL-svk" secondAttribute="leading" constant="12" id="jrW-U1-AEq"/>
                                             <constraint firstAttribute="bottom" secondItem="DxY-sR-uAH" secondAttribute="bottom" constant="4" id="kLb-Ho-VqL"/>
                                             <constraint firstItem="12h-BF-Jq4" firstAttribute="leading" secondItem="DxY-sR-uAH" secondAttribute="trailing" constant="8" id="kRZ-68-miK"/>
+                                            <constraint firstItem="Q4p-tb-5EK" firstAttribute="leading" secondItem="DxY-sR-uAH" secondAttribute="leading" id="ryl-ij-6Cz"/>
                                             <constraint firstAttribute="trailing" secondItem="12h-BF-Jq4" secondAttribute="trailing" constant="16" id="tqf-jp-GV6"/>
                                             <constraint firstItem="DxY-sR-uAH" firstAttribute="top" secondItem="e1B-7f-Y5d" secondAttribute="bottom" constant="-16" id="uLy-kv-3Hi"/>
                                             <constraint firstAttribute="height" constant="85" id="vN5-2t-dER"/>
@@ -286,6 +296,8 @@
                     <connections>
                         <outlet property="balanceCard" destination="ygB-Ky-ZYY" id="crK-Wj-5BR"/>
                         <outlet property="balanceContent" destination="fgG-Ie-eEo" id="cEv-Di-O8y"/>
+                        <outlet property="harvestEmpty" destination="DxY-sR-uAH" id="X1I-Hn-4La"/>
+                        <outlet property="harvestView" destination="Q4p-tb-5EK" id="43G-8I-RMj"/>
                         <outlet property="localCurrency" destination="U04-rb-UQM" id="YDb-OU-9wz"/>
                         <outlet property="scrollView" destination="oCm-h4-AzK" id="Lcs-7Z-txB"/>
                         <outlet property="transaction0" destination="J7q-wy-E2q" id="xpK-2I-BzM"/>

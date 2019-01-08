@@ -21,7 +21,7 @@ class SendConfirmationPresenter: BasePresenter {
         view?.showAmounts(sendTransaction.mosaics.map {$0.amountDescription} )
         let transaction = createDummyTransaction()
         view?.showFee(MosaicDetail.xem(transaction.fee).amountDescription)
-        view?.showDestination(sendTransaction.address.prettyAddress())
+        view?.showDestination(sendTransaction.address.prettyAddress(), sendTransaction.namespace)
         view?.showMessage(sendTransaction.message ?? "")
     }
 
@@ -81,7 +81,7 @@ class SendConfirmationPresenter: BasePresenter {
                     publicKey: keyPair.publicKey,
                     network: NemConfiguration.transactionNetwork,
                     recipientAddress: sendTransaction.address,
-                    mosaics: sendTransaction.mosaics.map { $0.asTransferMosaic },
+                    mosaics: sendTransaction.mosaics.compactMap { $0.asTransferMosaic },
                     messageType: sendTransaction.messageType,
                     message: messageBytes ?? [])
         }

@@ -16,4 +16,8 @@ class SendTabInteractor: NemServiceInteractor, SendTabUseCase {
     func fetchPublicKey(_ address: String) {
         fetchPublicKey(address, output)
     }
+
+    func fetchNamespace(_ address: String) {
+        fetchNamespace(address, output)
+    }
 }

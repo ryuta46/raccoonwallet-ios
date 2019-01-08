@@ -30,6 +30,11 @@ class NemService {
         })
     }
 
+    static func fetchHarvest(_ address: String) -> Single<Harvests> {
+        return Session.rx_send(NISAPI.AccountHarvests(address: address))
+    }
+
+
     static func fetchMosaicOwned(_ address: String) -> Single<[Mosaic]> {
         return Session.rx_send(NISAPI.AccountMosaicOwned(address: address)).map({ mosaics in
             return mosaics.data
@@ -183,7 +188,7 @@ class NemService {
 
 
     static func fetchMosaicDefinition(_ namespace: String, id: Int? = nil, pageSize: Int? = nil) -> Single<[MosaicDefinitionMetaDataPair]> {
-        return Session.rx_send(NISAPI.NamespaceMosaicDefintionPage(namespace: namespace, id: id, pageSize: pageSize)).map { definitions in
+        return Session.rx_send(NISAPI.NamespaceMosaicDefinitionPage(namespace: namespace, id: id, pageSize: pageSize)).map { definitions in
             definitions.data
         }
     }
@@ -250,7 +255,7 @@ class NemService {
 
                     // fetch mosaic definition
                     return Single.zip(definitionNeedMosaics.map { (namespace, names) in
-                        fetchMosaicDefinitions(namespace, names)
+                        fetchMosaicDefinitions(namespace, names).catchErrorJustReturn([])
                     }).map { (mosaicDefinitions: [[MosaicDefinition]]) -> [TransferTransactionDetail] in
                         // flat [[MosaicDefinition]] -> [MosaicDefinition]
                         let definitions = mosaicDefinitions.reduce([]) {(result, element) in result + element} + cachedDefinitions
@@ -277,5 +282,9 @@ class NemService {
                         return (unconfirmed + confirmed).compactMap { $0 }
                     }
                 }
+    }
+
+    static func fetchNamespace(_ namespace: String) -> Single<Namespace> {
+        return Session.rx_send(NISAPI.Namespace(namespace: namespace))
     }
 }
