@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 class Theme {
-    static let primary = UIColor(hex: "00c3b2")
+    static let primary = UIColor(hex: "00c8c8")
 
     static let primaryDisabled = UIColor(hex: "00c3b2")
     static let secondary = UIColor(hex: "929292")

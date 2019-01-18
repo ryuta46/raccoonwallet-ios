@@ -786,6 +786,7 @@
 		69057F8904340BFE26FDCCD5 /* PinDialogMixinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057916065E21D084AB14E8 /* PinDialogMixinView.swift */; };
 		69057F897454CFC313F94C94 /* WalletAddressStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69057F1BC9979890B470BB0A /* WalletAddressStoryboard.storyboard */; };
 		69057F8BD7A4A959DE05C16C /* NodeSelectInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905705D2106828158A582CD /* NodeSelectInteractor.swift */; };
+		69057F93BB3A222647BC1580 /* PrimaryTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905769BCCED4D04876E4FE8 /* PrimaryTextButton.swift */; };
 		69057F949BA05339D0854556 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057683D3148068700576B4 /* Developer.swift */; };
 		69057F976DBE086AE8EB713A /* WalletImportKeyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 690576EC72A9305F5B9E22AE /* WalletImportKeyStoryboard.storyboard */; };
 		69057FA03560AFB6BBA805B8 /* QrLabInvoiceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69057AADAEC413449100C69E /* QrLabInvoiceStoryboard.storyboard */; };
@@ -1093,6 +1094,7 @@
 		69057688B50791E89CB7FEAE /* BalanceDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceDetailPresenter.swift; sourceTree = "<group>"; };
 		6905769910DFDD7E69707519 /* WalletRenameInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletRenameInteractor.swift; sourceTree = "<group>"; };
 		6905769BA62BF6173BE9C427 /* SendModeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendModeInteractor.swift; sourceTree = "<group>"; };
+		6905769BCCED4D04876E4FE8 /* PrimaryTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryTextButton.swift; sourceTree = "<group>"; };
 		690576AC0A6E54E1E36E4B4E /* LessonPinEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonPinEndViewController.swift; sourceTree = "<group>"; };
 		690576B0E15EB00B0C7A14AD /* LessonBeginnerBackupEndStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LessonBeginnerBackupEndStoryboard.storyboard; sourceTree = "<group>"; };
 		690576B3AFB331CCC9F05F8A /* WalletBackupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletBackupViewController.swift; sourceTree = "<group>"; };
@@ -1462,25 +1464,25 @@
 		5F672D64212288090018B163 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				69057BFC20AFC7979234E642 /* About */,
+				69057D299D6EBEFF858F2D58 /* Balance */,
+				6905779EAE37C1AFBA6CB22D /* Base */,
+				69057242BEB0DEEEC2C94488 /* Donation */,
+				690575FF7FEBA32740307FB2 /* Introduction */,
 				5FAF0118212DF9940092B110 /* Lesson */,
 				5F7C5941212D32EB00026047 /* MessageDialog */,
-				5F672DBE212450610018B163 /* Root */,
-				5F672DD02124F0930018B163 /* Tabs */,
-				5F672DEF2124F09C0018B163 /* Top */,
-				5F672EB321259FF70018B163 /* Wallet */,
+				6905748E899C881137C1FB19 /* MosaicGallery */,
+				690576B37BE18DE09551DB9E /* NavigationDrawer */,
 				69057462E4E0BE8B9F1EFEC4 /* PinDialog */,
 				69057BF4444C983E812533A8 /* QrLab */,
-				6905758555EB2CC70E7D5771 /* Send */,
-				6905779EAE37C1AFBA6CB22D /* Base */,
-				690575E748E4E383DFB65E61 /* Transaction */,
-				69057D299D6EBEFF858F2D58 /* Balance */,
-				690576B37BE18DE09551DB9E /* NavigationDrawer */,
-				69057BFC20AFC7979234E642 /* About */,
-				69057242BEB0DEEEC2C94488 /* Donation */,
-				6905748E899C881137C1FB19 /* MosaicGallery */,
-				69057976743CF8EBBE6E7E94 /* Setting */,
-				690575FF7FEBA32740307FB2 /* Introduction */,
 				6905747C4741DF00B39193FA /* QrScannerDialog */,
+				5F672DBE212450610018B163 /* Root */,
+				6905758555EB2CC70E7D5771 /* Send */,
+				69057976743CF8EBBE6E7E94 /* Setting */,
+				5F672DD02124F0930018B163 /* Tabs */,
+				5F672DEF2124F09C0018B163 /* Top */,
+				690575E748E4E383DFB65E61 /* Transaction */,
+				5F672EB321259FF70018B163 /* Wallet */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1520,6 +1522,7 @@
 				5F8EA5E5215EC47600646E6E /* LoadingIndicatorView.swift */,
 				5F8EA5E9215F4B7400646E6E /* WalletBarButton.swift */,
 				690579F85C7F2ABE17B715F6 /* PrimaryCopyableLabel.swift */,
+				6905769BCCED4D04876E4FE8 /* PrimaryTextButton.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -2557,9 +2560,9 @@
 		690572E62E647F52233C53AD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057165FBC89CFBCEDA2702 /* AboutViewController.swift */,
-				69057D86AB2A9235DE90ADF5 /* AboutStoryboard.storyboard */,
 				690574582D8F62BB6F960548 /* AboutCell.swift */,
+				69057D86AB2A9235DE90ADF5 /* AboutStoryboard.storyboard */,
+				69057165FBC89CFBCEDA2702 /* AboutViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4085,11 +4088,11 @@
 		69057BFC20AFC7979234E642 /* About */ = {
 			isa = PBXGroup;
 			children = (
-				690572E62E647F52233C53AD /* View */,
-				690571C052EAA2C4A8E07D6B /* Router */,
 				69057011F7E03EFAC369BAB0 /* Contract */,
-				69057E2D03D3C026CBF50EF4 /* Presenter */,
 				69057B3B90943A1A0DA8CD14 /* Interactor */,
+				69057E2D03D3C026CBF50EF4 /* Presenter */,
+				690571C052EAA2C4A8E07D6B /* Router */,
+				690572E62E647F52233C53AD /* View */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -5589,6 +5592,7 @@
 				69057BDA89CDC21EA8255D36 /* QrScannerDialogInteractor.swift in Sources */,
 				69057415E6E35DBE15D51238 /* PrimaryCopyableLabel.swift in Sources */,
 				690571A93236ACD16F1DEE63 /* HarvestView.swift in Sources */,
+				69057F93BB3A222647BC1580 /* PrimaryTextButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
