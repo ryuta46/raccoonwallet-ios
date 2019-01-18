@@ -32,7 +32,6 @@ class AboutViewController: BaseViewController {
         message.text = R.string.localizable.about_app_concept()
 
         privacyButton.setTitle(R.string.localizable.common_privacy_policy(), for: .normal)
-        privacyButton.setTitleColor(Theme.primary, for: .normal)
 
         menuList.delegate = self
         menuList.dataSource = self
