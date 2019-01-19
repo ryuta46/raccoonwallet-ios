@@ -24,40 +24,32 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hfG-WI-GvF">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="539.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVz-ke-OeJ" customClass="PrimaryPanel" customModule="RaccoonWallet" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVz-ke-OeJ" customClass="BaseBackgroundPanel" customModule="RaccoonWallet" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="371.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="qqy-Qt-inD">
                                                         <rect key="frame" x="16" y="16" width="288" height="323.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xBe-bh-bFl">
-                                                                <rect key="frame" x="44" y="0.0" width="200" height="184"/>
+                                                                <rect key="frame" x="64" y="0.0" width="160" height="149"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_icon" translatesAutoresizingMaskIntoConstraints="NO" id="4P4-th-A62">
-                                                                        <rect key="frame" x="36" y="0.0" width="128" height="128"/>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_logo" translatesAutoresizingMaskIntoConstraints="NO" id="4P4-th-A62">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="149"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="128" id="icc-HS-fbe"/>
-                                                                            <constraint firstAttribute="width" secondItem="4P4-th-A62" secondAttribute="height" multiplier="1:1" id="sSU-Kf-Mzc"/>
-                                                                        </constraints>
-                                                                    </imageView>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_logotype" translatesAutoresizingMaskIntoConstraints="NO" id="yFo-2M-TyI">
-                                                                        <rect key="frame" x="0.0" y="128" width="200" height="56"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="yFo-2M-TyI" secondAttribute="height" multiplier="800:224" id="Rbj-Zg-DLw"/>
-                                                                            <constraint firstAttribute="width" constant="200" id="Zb0-mp-n5F"/>
+                                                                            <constraint firstAttribute="width" constant="160" id="icc-HS-fbe"/>
+                                                                            <constraint firstAttribute="width" secondItem="4P4-th-A62" secondAttribute="height" multiplier="160:149" id="sSU-Kf-Mzc"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                 </subviews>
                                                             </stackView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOv-vM-YKM">
-                                                                <rect key="frame" x="6.5" y="216" width="275.5" height="107.5"/>
+                                                                <rect key="frame" x="6.5" y="181" width="275.5" height="142.5"/>
                                                                 <string key="text">信頼性が高く、
 使いやすいUIで、
 仮想通貨をもっと楽しく。
 
 ラクーンウォレットは、これら３つを目標に作られた仮想通貨ウォレットです。</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -156,8 +148,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="about_logo" width="160" height="149"/>
         <image name="icon_link" width="48" height="48"/>
-        <image name="top_icon" width="440" height="440"/>
-        <image name="top_logotype" width="400" height="112"/>
     </resources>
 </document>

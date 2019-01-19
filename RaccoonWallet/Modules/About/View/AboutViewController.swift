@@ -69,6 +69,14 @@ extension AboutViewController: UITableViewDelegate {
         default: break
         }
     }
+
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return Constant.tableHeaderHeight
+    }
+
+    public func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = Theme.slightAccentBackground
+    }
 }
 
 extension AboutViewController: UITableViewDataSource {
