@@ -48,10 +48,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 104 images.
+  /// This `R.image` struct is generated, and contains static references to 105 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
+    /// Image `about_open_external`.
+    static let about_open_external = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_open_external")
     /// Image `bottom_nav_home`.
     static let bottom_nav_home = Rswift.ImageResource(bundle: R.hostingBundle, name: "bottom_nav_home")
     /// Image `bottom_nav_qr_lab`.
@@ -262,6 +264,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "about_logo", bundle: ..., traitCollection: ...)`
     static func about_logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.about_logo, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "about_open_external", bundle: ..., traitCollection: ...)`
+    static func about_open_external(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.about_open_external, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "bottom_nav_home", bundle: ..., traitCollection: ...)`
@@ -3703,7 +3710,7 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "about_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'about_logo' is used in storyboard 'AboutStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon_link") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_link' is used in storyboard 'AboutStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "about_open_external") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'about_open_external' is used in storyboard 'AboutStoryboard', but couldn't be loaded.") }
         if _R.storyboard.aboutStoryboard().aboutView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'aboutView' could not be loaded from storyboard 'AboutStoryboard' as 'AboutViewController'.") }
       }
       
