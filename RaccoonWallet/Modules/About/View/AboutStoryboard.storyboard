@@ -82,7 +82,7 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_link" translatesAutoresizingMaskIntoConstraints="NO" id="oMK-KY-506">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_open_external" translatesAutoresizingMaskIntoConstraints="NO" id="oMK-KY-506">
                                                                     <rect key="frame" x="288" y="10" width="24" height="24"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="24" id="CV7-o1-jIi"/>
@@ -149,6 +149,6 @@
     </scenes>
     <resources>
         <image name="about_logo" width="160" height="149"/>
-        <image name="icon_link" width="48" height="48"/>
+        <image name="about_open_external" width="24" height="24"/>
     </resources>
 </document>
