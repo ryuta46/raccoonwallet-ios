@@ -8,10 +8,14 @@
 
 import Foundation
 
-class BalanceDetailInteractor: NemServiceInteractor, BalanceDetailUseCase {
+class BalanceDetailInteractor: NemServiceInteractor, RateServiceUseCase, BalanceDetailUseCase {
     weak var output: BalanceDetailInteractorOutput!
 
     func fetchMosaicOwned(_ address: String) {
         fetchMosaicOwned(address, output)
+    }
+
+    func fetchRate(_ currency: Currency) {
+        fetchRate(currency, output)
     }
 }
