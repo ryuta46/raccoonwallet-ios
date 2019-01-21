@@ -12,17 +12,13 @@ import NVActivityIndicatorView
 
 class BalanceDetailViewController: BaseViewController {
     var presenter: BalanceDetailPresentation! { didSet {basePresenter = presenter} }
-    
-    @IBOutlet weak var xem: UILabel!
 
-    @IBOutlet weak var xemContents: UIStackView!
+    @IBOutlet weak var balanceCard: BalanceCard!
     @IBOutlet weak var mosaicListHeadline: UILabel!
     @IBOutlet weak var mosaicList: UITableView!
     @IBOutlet weak var mosaicListHeight: NSLayoutConstraint!
-
+    
     var loadingView: FullScreenLoadingView!
-    //var xemLoading: LoadingView!
-    //var mosaicListLoading: LoadingView!
     var mosaics: [MosaicDetail] = []
     override func setup() {
         super.setup()
@@ -35,8 +31,6 @@ class BalanceDetailViewController: BaseViewController {
         mosaicList.dataSource = self
         mosaicList.delegate = self
 
-        //xemLoading = LoadingView(target: xemContents)
-        //mosaicListLoading = LoadingView(target: mosaicList)
         loadingView = createFullScreenLoadingView()
     }
 
@@ -48,25 +42,35 @@ class BalanceDetailViewController: BaseViewController {
 
 extension BalanceDetailViewController: BalanceDetailView {
     func showBalanceLoading() {
-        xem.text = "-"
+        balanceCard.clearXem()
+        balanceCard.clearLocalCurrency()
         loadingView.startLoading()
-        //xemLoading.startLoading()
     }
 
-    func showBalance(_ xem: String) {
-        self.xem.text = xem
+    func showBalance(_ xem: Decimal) {
+        balanceCard.setXem(xem)
         loadingView.stopLoading()
-        //xemLoading.stopLoading()
     }
 
     func showMosaicListLoading() {
-        //mosaicListLoading.startLoading()
     }
 
     func showMosaics(_ mosaics: [MosaicDetail]) {
         self.mosaics = mosaics
-        //mosaicListLoading.stopLoading()
         mosaicList.reloadData()
+    }
+
+    func showBalanceError() {
+        balanceCard.clearXem()
+        balanceCard.clearLocalCurrency()
+    }
+
+    func showLocalCurrency(_ value: Decimal, _ unit: Currency) {
+        balanceCard.setLocalCurrency(value, unit)
+    }
+
+    func showLocalCurrencyError() {
+        balanceCard.clearLocalCurrency()
     }
 }
 
