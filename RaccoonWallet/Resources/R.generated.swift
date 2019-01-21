@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 105 images.
+  /// This `R.image` struct is generated, and contains static references to 106 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -98,6 +98,8 @@ struct R: Rswift.Validatable {
     static let icon_addressbook = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_addressbook")
     /// Image `icon_back`.
     static let icon_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_back")
+    /// Image `icon_balance`.
+    static let icon_balance = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_balance")
     /// Image `icon_box_next`.
     static let icon_box_next = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_box_next")
     /// Image `icon_caution`.
@@ -379,6 +381,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_back", bundle: ..., traitCollection: ...)`
     static func icon_back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_back, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_balance", bundle: ..., traitCollection: ...)`
+    static func icon_balance(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_balance, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_box_next", bundle: ..., traitCollection: ...)`
@@ -789,8 +796,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 6 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 7 nibs.
   struct nib {
+    /// Nib `BalanceCard`.
+    static let balanceCard = _R.nib._BalanceCard()
     /// Nib `Calculator`.
     static let calculator = _R.nib._Calculator()
     /// Nib `HarvestView`.
@@ -803,6 +812,11 @@ struct R: Rswift.Validatable {
     static let transactionView = _R.nib._TransactionView()
     /// Nib `WalletBar`.
     static let walletBar = _R.nib._WalletBar()
+    
+    /// `UINib(name: "BalanceCard", in: bundle)`
+    static func balanceCard(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.balanceCard)
+    }
     
     /// `UINib(name: "Calculator", in: bundle)`
     static func calculator(_: Void = ()) -> UIKit.UINib {
@@ -3554,7 +3568,23 @@ struct _R: Rswift.Validatable {
     static func validate() throws {
       try _WalletBar.validate()
       try _HarvestView.validate()
+      try _BalanceCard.validate()
       try _TransactionView.validate()
+    }
+    
+    struct _BalanceCard: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "BalanceCard"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon_balance", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_balance' is used in nib 'BalanceCard', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
     }
     
     struct _Calculator: Rswift.NibResourceType {
@@ -3727,8 +3757,6 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "image_home_balance_background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_home_balance_background' is used in storyboard 'BalanceDetailStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "tab_home_balance") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'tab_home_balance' is used in storyboard 'BalanceDetailStoryboard', but couldn't be loaded.") }
         if _R.storyboard.balanceDetailStoryboard().balanceDetailView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'balanceDetailView' could not be loaded from storyboard 'BalanceDetailStoryboard' as 'BalanceDetailViewController'.") }
       }
       

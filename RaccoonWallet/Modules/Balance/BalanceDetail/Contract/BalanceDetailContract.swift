@@ -13,7 +13,12 @@ protocol BalanceDetailView: BaseView {
     var presenter: BalanceDetailPresentation! { get set }
 
     func showBalanceLoading()
-    func showBalance(_ xem: String)
+
+    func showBalance(_ xem: Decimal)
+    func showBalanceError()
+    func showLocalCurrency(_ value: Decimal, _ unit: Currency)
+    func showLocalCurrencyError()
+
     func showMosaicListLoading()
     func showMosaics(_ mosaics: [MosaicDetail])
 }
@@ -30,10 +35,13 @@ protocol BalanceDetailUseCase: class {
     var output: BalanceDetailInteractorOutput! { get set }
 
     func fetchMosaicOwned(_ address: String)
+    func fetchRate(_ currency: Currency)
 }
 
 //sourcery: AutoMockable
-protocol BalanceDetailInteractorOutput: NemServiceMosaicOwnedOutput {
+protocol BalanceDetailInteractorOutput:
+        NemServiceMosaicOwnedOutput,
+        RateServiceInteractorOutput {
 }
 
 //sourcery: AutoMockable

@@ -18,7 +18,6 @@ class HomeTabInteractor: NemServiceInteractor, RateServiceUseCase, HomeTabUseCas
 
     func fetchRate(_ currency: Currency) {
         fetchRate(currency, output)
-        fetchRate(currency, output)
     }
 
     func fetchTransferTransactionDetail(_ address: String) {
