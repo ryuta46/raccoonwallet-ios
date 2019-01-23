@@ -13,14 +13,28 @@ class IntroductionConceptViewController: BaseViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageIndicator: UIPageControl!
-    @IBOutlet weak var concept: UILabel!
-    @IBOutlet weak var message: UILabel!
     @IBOutlet weak var getStarted: UIButton!
+    @IBOutlet weak var concept1: UILabel!
+    @IBOutlet weak var message1: UILabel!
+    @IBOutlet weak var concept2: UILabel!
+    @IBOutlet weak var message2: UILabel!
+    @IBOutlet weak var concept3: UILabel!
+    @IBOutlet weak var message3: UILabel!
     override func setup() {
         super.setup()
         
-        concept.text = R.string.localizable.first_tutorial_title()
+//        concept.text = R.string.localizable.first_tutorial_title()
         getStarted.setTitle(R.string.localizable.first_tutorial_button(), for: .normal)
+        
+        concept1.text = R.string.localizable.first_tutorial_title1()
+        concept2.text = R.string.localizable.first_tutorial_title2()
+        concept3.text = R.string.localizable.first_tutorial_title3()
+        message1.text = R.string.localizable.first_tutorial_message1()
+        message2.text = R.string.localizable.first_tutorial_message2()
+        message3.text = R.string.localizable.first_tutorial_message3()
+        
+        pageIndicator.currentPageIndicatorTintColor = Theme.primary
+        pageIndicator.pageIndicatorTintColor = Theme.primaryDisabled
 
         scrollView.delegate = self
     }
@@ -47,15 +61,4 @@ extension IntroductionConceptViewController: UIScrollViewDelegate {
 
 
 extension IntroductionConceptViewController: IntroductionConceptView {
-    func showMessage(_ message: String) {
-        self.message.text = message
-    }
-
-    func showGetStarted() {
-        getStarted.isHidden = false
-    }
-
-    func hideGetStarted() {
-        getStarted.isHidden = true
-    }
 }
