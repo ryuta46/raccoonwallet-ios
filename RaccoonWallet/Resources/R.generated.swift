@@ -220,6 +220,8 @@ struct R: Rswift.Validatable {
     static let image_harvest_background = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_harvest_background")
     /// Image `image_home_balance_background`.
     static let image_home_balance_background = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_home_balance_background")
+    /// Image `image_key`.
+    static let image_key = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_key")
     /// Image `image_lesson_card1`.
     static let image_lesson_card1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_lesson_card1")
     /// Image `image_lesson_card2`.
@@ -228,12 +230,6 @@ struct R: Rswift.Validatable {
     static let image_lesson_card3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_lesson_card3")
     /// Image `image_menu_default`.
     static let image_menu_default = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_menu_default")
-    /// Image `image_onboard1`.
-    static let image_onboard1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_onboard1")
-    /// Image `image_onboard2`.
-    static let image_onboard2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_onboard2")
-    /// Image `image_onboard3`.
-    static let image_onboard3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_onboard3")
     /// Image `image_send_card1`.
     static let image_send_card1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_send_card1")
     /// Image `image_send_card2`.
@@ -246,8 +242,12 @@ struct R: Rswift.Validatable {
     static let image_usepin = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_usepin")
     /// Image `image_walletbar`.
     static let image_walletbar = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_walletbar")
+    /// Image `image_www_human`.
+    static let image_www_human = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_www_human")
     /// Image `logo_pyoko`.
     static let logo_pyoko = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_pyoko")
+    /// Image `logo_raccoon_color`.
+    static let logo_raccoon_color = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_raccoon_color")
     /// Image `logo`.
     static let logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo")
     /// Image `tab_home_balance`.
@@ -688,6 +688,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.image_home_balance_background, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "image_key", bundle: ..., traitCollection: ...)`
+    static func image_key(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.image_key, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "image_lesson_card1", bundle: ..., traitCollection: ...)`
     static func image_lesson_card1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.image_lesson_card1, compatibleWith: traitCollection)
@@ -706,21 +711,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "image_menu_default", bundle: ..., traitCollection: ...)`
     static func image_menu_default(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.image_menu_default, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "image_onboard1", bundle: ..., traitCollection: ...)`
-    static func image_onboard1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.image_onboard1, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "image_onboard2", bundle: ..., traitCollection: ...)`
-    static func image_onboard2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.image_onboard2, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "image_onboard3", bundle: ..., traitCollection: ...)`
-    static func image_onboard3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.image_onboard3, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "image_send_card1", bundle: ..., traitCollection: ...)`
@@ -753,6 +743,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.image_walletbar, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "image_www_human", bundle: ..., traitCollection: ...)`
+    static func image_www_human(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.image_www_human, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "logo", bundle: ..., traitCollection: ...)`
     static func logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.logo, compatibleWith: traitCollection)
@@ -761,6 +756,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "logo_pyoko", bundle: ..., traitCollection: ...)`
     static func logo_pyoko(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.logo_pyoko, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "logo_raccoon_color", bundle: ..., traitCollection: ...)`
+    static func logo_raccoon_color(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.logo_raccoon_color, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "tab_home_balance", bundle: ..., traitCollection: ...)`
@@ -1292,7 +1292,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 204 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 206 localization keys.
     struct localizable {
       /// en translation: %@で送金します
       /// 
@@ -1330,18 +1330,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let donation_android_engineer_name = Rswift.StringResource(key: "donation_android_engineer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: GET STARTED
-      /// 
-      /// Locales: en, ja
-      static let first_tutorial_button = Rswift.StringResource(key: "first_tutorial_button", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: God of Raccoon。創造主でエンジニア。 すべてはココからはじまった。彼らがいなかったらラクーンは存在していない。 RaccoonのAndroidエンジニアは二人。@YukiYamadaJPと@Riberd_Puzzle1だ。  ・リードエンジニア / コア開発者 ・ベースアプリ（NEM総合アプリ） 開発 ・Android版アプリ開発
       /// 
       /// Locales: en, ja
       static let donation_android_engineer_detail = Rswift.StringResource(key: "donation_android_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Hello,NEM. Hello,UX.
-      /// 
-      /// Locales: en, ja
-      static let first_tutorial_title = Rswift.StringResource(key: "first_tutorial_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Message SEND
       /// 
       /// Locales: en, ja
@@ -1510,6 +1502,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let donation_title = Rswift.StringResource(key: "donation_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: お会いできて光栄です。 ブロックチェーンを使った新しい経済活動を 一緒にはじめましょう
+      /// 
+      /// Locales: en, ja
+      static let first_tutorial_message1 = Rswift.StringResource(key: "first_tutorial_message1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: お疲れ様、よかったら%@も
       /// 
       /// Locales: en, ja
@@ -1542,6 +1538,22 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let lesson_beginner_end_message = Rswift.StringResource(key: "lesson_beginner_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: すべてが暗号通貨ベースで設計され、 すべてが新しい考え方で動く、 ニューエコノミープラットフォーム。 魅力的な体験は、ここからはじまります。
+      /// 
+      /// Locales: en, ja
+      static let first_tutorial_message2 = Rswift.StringResource(key: "first_tutorial_message2", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: すべての人に経済を。
+      /// 
+      /// Locales: en, ja
+      static let first_tutorial_title3 = Rswift.StringResource(key: "first_tutorial_title3", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: はじめまして
+      /// 
+      /// Locales: en, ja
+      static let first_tutorial_title1 = Rswift.StringResource(key: "first_tutorial_title1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: はじめる
+      /// 
+      /// Locales: en, ja
+      static let first_tutorial_button = Rswift.StringResource(key: "first_tutorial_button", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: ほんとにHOMEに行くのかい？ セキュリティはちゃんとしといたほうがいいよ。
       /// 
       /// Locales: en, ja
@@ -1858,10 +1870,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let wallet_end_message = Rswift.StringResource(key: "wallet_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: 信頼の革新を手のひらに。
+      /// en translation: 信頼の革新を手のひらに
       /// 
       /// Locales: en, ja
-      static let first_tutorial_message2 = Rswift.StringResource(key: "first_tutorial_message2", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      static let first_tutorial_title2 = Rswift.StringResource(key: "first_tutorial_title2", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 信頼性が高く 使いやすいUIで、 仮想通貨をもっと楽しく。  ラクーンウォレットは、これら３つを目標に 作られた仮想通貨ウォレットです。
       /// 
       /// Locales: en, ja
@@ -1918,10 +1930,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let transaction_failed_to_decrypt = Rswift.StringResource(key: "transaction_failed_to_decrypt", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: 愉快でイマドキな金融の形。
-      /// 
-      /// Locales: en, ja
-      static let first_tutorial_message3 = Rswift.StringResource(key: "first_tutorial_message3", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 手数料
       /// 
       /// Locales: en, ja
@@ -1934,10 +1942,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let common_touchID = Rswift.StringResource(key: "common_touchID", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: 支払いの新世代へ。
-      /// 
-      /// Locales: en, ja
-      static let first_tutorial_message1 = Rswift.StringResource(key: "first_tutorial_message1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 新しいウォレット名
       /// 
       /// Locales: en, ja
@@ -2018,6 +2022,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let wallet_key_backup_message = Rswift.StringResource(key: "wallet_key_backup_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 自由と共創の新経済が待っています。
+      /// 
+      /// Locales: en, ja
+      static let first_tutorial_message3 = Rswift.StringResource(key: "first_tutorial_message3", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 言語選択
       /// 
       /// Locales: en, ja
@@ -2174,25 +2182,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("donation_android_engineer_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: GET STARTED
-      /// 
-      /// Locales: en, ja
-      static func first_tutorial_button(_: Void = ()) -> String {
-        return NSLocalizedString("first_tutorial_button", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: God of Raccoon。創造主でエンジニア。 すべてはココからはじまった。彼らがいなかったらラクーンは存在していない。 RaccoonのAndroidエンジニアは二人。@YukiYamadaJPと@Riberd_Puzzle1だ。  ・リードエンジニア / コア開発者 ・ベースアプリ（NEM総合アプリ） 開発 ・Android版アプリ開発
       /// 
       /// Locales: en, ja
       static func donation_android_engineer_detail(_: Void = ()) -> String {
         return NSLocalizedString("donation_android_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Hello,NEM. Hello,UX.
-      /// 
-      /// Locales: en, ja
-      static func first_tutorial_title(_: Void = ()) -> String {
-        return NSLocalizedString("first_tutorial_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Message SEND
@@ -2489,6 +2483,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("donation_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: お会いできて光栄です。 ブロックチェーンを使った新しい経済活動を 一緒にはじめましょう
+      /// 
+      /// Locales: en, ja
+      static func first_tutorial_message1(_: Void = ()) -> String {
+        return NSLocalizedString("first_tutorial_message1", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: お疲れ様、よかったら%@も
       /// 
       /// Locales: en, ja
@@ -2543,6 +2544,34 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func lesson_beginner_end_message(_: Void = ()) -> String {
         return NSLocalizedString("lesson_beginner_end_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: すべてが暗号通貨ベースで設計され、 すべてが新しい考え方で動く、 ニューエコノミープラットフォーム。 魅力的な体験は、ここからはじまります。
+      /// 
+      /// Locales: en, ja
+      static func first_tutorial_message2(_: Void = ()) -> String {
+        return NSLocalizedString("first_tutorial_message2", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: すべての人に経済を。
+      /// 
+      /// Locales: en, ja
+      static func first_tutorial_title3(_: Void = ()) -> String {
+        return NSLocalizedString("first_tutorial_title3", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: はじめまして
+      /// 
+      /// Locales: en, ja
+      static func first_tutorial_title1(_: Void = ()) -> String {
+        return NSLocalizedString("first_tutorial_title1", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: はじめる
+      /// 
+      /// Locales: en, ja
+      static func first_tutorial_button(_: Void = ()) -> String {
+        return NSLocalizedString("first_tutorial_button", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: ほんとにHOMEに行くのかい？ セキュリティはちゃんとしといたほうがいいよ。
@@ -3098,11 +3127,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("wallet_end_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: 信頼の革新を手のひらに。
+      /// en translation: 信頼の革新を手のひらに
       /// 
       /// Locales: en, ja
-      static func first_tutorial_message2(_: Void = ()) -> String {
-        return NSLocalizedString("first_tutorial_message2", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func first_tutorial_title2(_: Void = ()) -> String {
+        return NSLocalizedString("first_tutorial_title2", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 信頼性が高く 使いやすいUIで、 仮想通貨をもっと楽しく。  ラクーンウォレットは、これら３つを目標に 作られた仮想通貨ウォレットです。
@@ -3203,13 +3232,6 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("transaction_failed_to_decrypt", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: 愉快でイマドキな金融の形。
-      /// 
-      /// Locales: en, ja
-      static func first_tutorial_message3(_: Void = ()) -> String {
-        return NSLocalizedString("first_tutorial_message3", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: 手数料
       /// 
       /// Locales: en, ja
@@ -3229,13 +3251,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func common_touchID(_: Void = ()) -> String {
         return NSLocalizedString("common_touchID", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: 支払いの新世代へ。
-      /// 
-      /// Locales: en, ja
-      static func first_tutorial_message1(_: Void = ()) -> String {
-        return NSLocalizedString("first_tutorial_message1", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 新しいウォレット名
@@ -3376,6 +3391,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func wallet_key_backup_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_key_backup_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 自由と共創の新経済が待っています。
+      /// 
+      /// Locales: en, ja
+      static func first_tutorial_message3(_: Void = ()) -> String {
+        return NSLocalizedString("first_tutorial_message3", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 言語選択
@@ -3838,9 +3860,9 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "image_onboard3") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_onboard3' is used in storyboard 'IntroductionConceptStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "image_onboard1") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_onboard1' is used in storyboard 'IntroductionConceptStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "image_onboard2") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_onboard2' is used in storyboard 'IntroductionConceptStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "image_www_human") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_www_human' is used in storyboard 'IntroductionConceptStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "image_key") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_key' is used in storyboard 'IntroductionConceptStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "logo_raccoon_color") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo_raccoon_color' is used in storyboard 'IntroductionConceptStoryboard', but couldn't be loaded.") }
         if _R.storyboard.introductionConceptStoryboard().introductionConceptView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'introductionConceptView' could not be loaded from storyboard 'IntroductionConceptStoryboard' as 'IntroductionConceptViewController'.") }
       }
       

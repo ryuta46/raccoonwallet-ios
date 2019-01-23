@@ -13,7 +13,7 @@ class Theme {
     static let baseBackground = UIColor(hex: "fafafa")
     static let slightAccentBackground = UIColor(hex: "f2f2f2")
 
-    static let primaryDisabled = UIColor(hex: "00c3b2")
+    static let primaryDisabled = UIColor(hex: "00c8c8", alpha: 0.16)
     static let secondary = UIColor(hex: "929292")
 
     static let accent = UIColor(hex: "82B1FF")

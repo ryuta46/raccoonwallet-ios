@@ -105,11 +105,13 @@
 "donation_ios_engineer_role" = "iOSエンジニア";
 "donation_ios_engineer_detail" = "Raccoonの命綱。iOSエンジニア。最強の後衛。\n将棋で例えるなら飛車。\nラクーンを林檎の楽園へといざなう。\n\n・Android→iOS版アプリ移植・開発主任\n・nem-kotlinの創造主。";
 
-"first_tutorial_button" = "GET STARTED";
-"first_tutorial_title" = "Hello,NEM. Hello,UX.";
-"first_tutorial_message1" = "支払いの新世代へ。";
-"first_tutorial_message2" = "信頼の革新を手のひらに。";
-"first_tutorial_message3" = "愉快でイマドキな金融の形。";
+"first_tutorial_button" = "はじめる";
+"first_tutorial_title1" = "はじめまして";
+"first_tutorial_title2" = "信頼の革新を手のひらに";
+"first_tutorial_title3" = "すべての人に経済を。";
+"first_tutorial_message1" = "お会いできて光栄です。\nブロックチェーンを使った新しい経済活動を\n一緒にはじめましょう";
+"first_tutorial_message2" = "すべてが暗号通貨ベースで設計され、\nすべてが新しい考え方で動く、\nニューエコノミープラットフォーム。\n魅力的な体験は、ここからはじまります。";
+"first_tutorial_message3" = "自由と共創の新経済が待っています。";
 
 "gallery_no_mosaic_title" = "モザイクなど存在しない。";
 "gallery_no_mosaic_message" = "お見せできるモザイクは、これっぽっちもないよ。\n涙がちょちょ切れるほどコレクションに励もう。";
