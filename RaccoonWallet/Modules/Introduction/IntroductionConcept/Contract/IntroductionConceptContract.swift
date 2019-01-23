@@ -12,10 +12,6 @@ import UIKit
 //sourcery: AutoMockable
 protocol IntroductionConceptView: BaseView {
     var presenter: IntroductionConceptPresentation! { get set }
-
-    func showMessage(_ message: String)
-    func showGetStarted()
-    func hideGetStarted()
 }
 
 //sourcery: AutoMockable
