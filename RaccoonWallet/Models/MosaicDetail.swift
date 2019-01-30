@@ -49,6 +49,10 @@ struct MosaicDetail {
         return MosaicDetail(namespace: namespace, mosaic: mosaic, quantity: quantity, supply: supply, divisibility: divisibility, description: description)
     }
 
+    func replaced(supply: UInt64?) -> MosaicDetail {
+        return MosaicDetail(namespace: namespace, mosaic: mosaic, quantity: quantity, supply: supply, divisibility: divisibility, description: description)
+    }
+
     var amountDescription: String {
         if isXem() {
             return "\(amount) XEM"

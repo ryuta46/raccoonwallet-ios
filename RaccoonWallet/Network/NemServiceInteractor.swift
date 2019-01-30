@@ -74,10 +74,9 @@ extension NemServiceUseCase where Self: RxDisposable {
     }
 
 
-    func fetchMosaicOwned(_ address: String, _ output: NemServiceMosaicOwnedOutput, noUseCache: Bool = false) {
-
+    func fetchMosaicOwned(_ address: String, _ output: NemServiceMosaicOwnedOutput, noUseCache: Bool = false, fetchesSupply: Bool = false) {
         NemService
-                .fetchMosaicOwnedWithDefinition(address, noUseCache: noUseCache)
+                .fetchMosaicOwnedWithDefinition(address, noUseCache: noUseCache, fetchesSupply: fetchesSupply)
                 .subscribe(
                         onSuccess: { mosaics in output.mosaicOwnedFetched(mosaics) },
                         onError: { error in output.mosaicOwnedFetchFailed(error) }

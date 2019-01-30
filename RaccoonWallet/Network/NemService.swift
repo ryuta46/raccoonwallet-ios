@@ -41,11 +41,37 @@ class NemService {
         })
     }
 
-    static func fetchMosaicOwnedWithDefinition(_ address: String, noUseCache: Bool = false) -> Single<[MosaicDetail]> {
-        return fetchMosaicOwned(address)
-            .map { fetchMosaicDetails(from: $0, noUseCache: noUseCache) }
-                .flatMap {$0}
+    static func fetchMosaicSupply(_ mosaicId: MosaicId) -> Single<MosaicSupply> {
+        return Session.rx_send(NISAPI.MosaicSupply(mosaicId: mosaicId))
+    }
 
+    static func fetchMosaicOwnedWithDefinition(_ address: String, noUseCache: Bool = false, fetchesSupply: Bool = false) -> Single<[MosaicDetail]> {
+        if fetchesSupply {
+            return fetchMosaicOwned(address)
+                    .map { mosaics in
+                        Single.zip(fetchMosaicDetails(from: mosaics, noUseCache: noUseCache),
+                                        fetchMosaicSupply(from: mosaics))
+                                .map {
+                                    let mosaicDetailList: [MosaicDetail] = $0.0
+                                    let mosaicSupplyList: [MosaicSupply] = $0.1
+
+                                    return mosaicDetailList.map { mosaicDetail in
+                                        let supply = mosaicSupplyList.first(where: { $0.mosaicId.fullName == mosaicDetail.identifier })
+                                        return mosaicDetail.replaced(supply: supply?.supply)
+                                    }
+                                }
+                    }
+                    .flatMap {$0}
+        } else {
+            return fetchMosaicOwned(address)
+                    .map { fetchMosaicDetails(from: $0, noUseCache: noUseCache) }
+                    .flatMap {$0}
+        }
+
+    }
+
+    static func fetchMosaicSupply(from mosaics: [Mosaic]) -> Single<[MosaicSupply]> {
+        return Single.zip(mosaics.map { mosaic in fetchMosaicSupply(mosaic.mosaicId) })
     }
 
     static func fetchMosaicDetails(from mosaics: [Mosaic], noUseCache: Bool = false) -> Single<[MosaicDetail]>{
