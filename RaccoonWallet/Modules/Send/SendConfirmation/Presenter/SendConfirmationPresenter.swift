@@ -25,7 +25,7 @@ class SendConfirmationPresenter: BasePresenter {
         
         if sendTransaction.isOnlyXem {
             let transaction = createDummyTransaction()
-            view?.showAmounts(transaction.mosaics?.map {$0.amountDescription} ?? [])
+            view?.showAmounts([MosaicDetail.xem(transaction.amount).amountDescription])
             view?.showFee(MosaicDetail.xem(transaction.fee).amountDescription)
         } else {
             view?.showFee("")
