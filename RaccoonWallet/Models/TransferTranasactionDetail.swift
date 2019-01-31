@@ -62,13 +62,12 @@ struct TransferTransactionDetail {
                                     namespace: mosaic.mosaicId.namespaceId,
                                     mosaic: mosaic.mosaicId.name,
                                     quantity: UInt64(mosaic.quantity),
-                                    supply: nil,
                                     divisibility: nil,
                                     description: nil
                             ))
                     continue
                 }
-                guard let initialSupply = definition.initialSupply, let divisibility = definition.divisibility else{
+                guard let divisibility = definition.divisibility else{
                     Logger.shared.error("No initialSupply or divisibility.")
                     return nil
                 }
@@ -77,7 +76,6 @@ struct TransferTransactionDetail {
                                 namespace: definition.id.namespaceId,
                                 mosaic: definition.id.name,
                                 quantity: UInt64(mosaic.quantity),
-                                supply: initialSupply,
                                 divisibility: divisibility,
                                 description: definition.description
                         ))

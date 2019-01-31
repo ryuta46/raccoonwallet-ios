@@ -13,6 +13,6 @@ class SendAmountInteractor: NemServiceInteractor, SendAmountUseCase {
     weak var output: SendAmountInteractorOutput!
 
     func fetchMosaicOwned(_ address: String) {
-        fetchMosaicOwned(address, output, fetchesSupply: true)
+        fetchMosaicOwned(address, output)
     }
 }

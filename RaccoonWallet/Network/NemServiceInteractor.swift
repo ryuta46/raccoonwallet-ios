@@ -28,6 +28,12 @@ protocol NemServiceMosaicDefinitionOutput: class {
     func mosaicDefinitionFetchFailed(_ error: Error)
 }
 
+protocol NemServiceMosaicSupplyListOutput: class {
+    func mosaicSupplyListFetched(_ mosaicSupplyList: [MosaicSupply])
+    func mosaicSupplyListFetchFailed(_ error: Error)
+}
+
+
 protocol NemServiceHarvestOutput: class {
     func harvestFetched(_ harvests: [Harvest])
     func harvestFetchFailed(_ error: Error)
@@ -74,16 +80,30 @@ extension NemServiceUseCase where Self: RxDisposable {
     }
 
 
-    func fetchMosaicOwned(_ address: String, _ output: NemServiceMosaicOwnedOutput, noUseCache: Bool = false, fetchesSupply: Bool = false) {
+    func fetchMosaicOwned(_ address: String, _ output: NemServiceMosaicOwnedOutput, noUseCache: Bool = false) {
         NemService
-                .fetchMosaicOwnedWithDefinition(address, noUseCache: noUseCache, fetchesSupply: fetchesSupply)
+                .fetchMosaicOwnedWithDefinition(address, noUseCache: noUseCache)
                 .subscribe(
-                        onSuccess: { mosaics in output.mosaicOwnedFetched(mosaics) },
-                        onError: { error in output.mosaicOwnedFetchFailed(error) }
-                )
-                .disposed(by: disposeBag)
+                    onSuccess: { mosaics in output.mosaicOwnedFetched(mosaics) },
+                    onError: { error in output.mosaicOwnedFetchFailed(error) }
+            )
+            .disposed(by: disposeBag)
 
     }
+    
+    func fetchMosaicSupplyList(_ mosaicIds: [MosaicId], _ output: NemServiceMosaicSupplyListOutput) {
+        NemService
+                .fetchMosaicSupply(mosaicIds)
+                .subscribe(
+                    onSuccess: { mosaicSupplyList in output.mosaicSupplyListFetched(mosaicSupplyList) },
+                    onError: { error in output.mosaicSupplyListFetchFailed(error) }
+            )
+            .disposed(by: disposeBag)
+    }
+    
+
+    
+
 
     func fetchTransaction(_ address: String, _ output: NemServiceTransactionOutput) {
         NemService
@@ -95,7 +115,7 @@ extension NemServiceUseCase where Self: RxDisposable {
                 .disposed(by: disposeBag)
 
     }
-
+    
     func fetchTransferTransactionDetail(_ address: String,
                                         _ output: NemServiceTransferTransactionDetailOutput,
                                         withUnconfirmed: Bool,

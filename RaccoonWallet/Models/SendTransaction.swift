@@ -23,4 +23,8 @@ struct SendTransaction {
         self.publicKey = publicKey
         self.namespace = namespace
     }
+    
+    var isOnlyXem: Bool {
+        return mosaics.count == 1 && mosaics[0].isXem()
+    }
 }
