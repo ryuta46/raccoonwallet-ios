@@ -38,11 +38,12 @@ protocol SendConfirmationPresentation: BasePresentation, PinDialogMixinPresentat
 protocol SendConfirmationUseCase: class {
     var output: SendConfirmationInteractorOutput! { get set }
 
+    func fetchMosaicSupply(_ mosaicIds: [MosaicId])
     func sendTransaction(_ request: [UInt8], _ keyPair: KeyPair)
 }
 
 //sourcery: AutoMockable
-protocol SendConfirmationInteractorOutput: NemServiceSendTransactionOutput {
+protocol SendConfirmationInteractorOutput: NemServiceMosaicSupplyListOutput, NemServiceSendTransactionOutput {
 }
 
 //sourcery: AutoMockable

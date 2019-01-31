@@ -10,22 +10,20 @@ struct MosaicDetail {
     let namespace: String
     let mosaic: String
     let quantity: UInt64
-    let supply: UInt64?
     let divisibility: Int?
     let description: String?
 
-    init(namespace: String, mosaic: String, quantity: UInt64, supply: UInt64?, divisibility: Int?, description: String?) {
+    init(namespace: String, mosaic: String, quantity: UInt64, divisibility: Int?, description: String?) {
         self.namespace = namespace
         self.mosaic = mosaic
         self.quantity = quantity
-        self.supply = supply
         self.divisibility = divisibility
         self.description = description
     }
 
 
     static func xem(_ quantity: UInt64) -> MosaicDetail {
-        return MosaicDetail(namespace: "nem", mosaic: "xem", quantity: quantity, supply: 8_999_999_999, divisibility: 6, description: "")
+        return MosaicDetail(namespace: "nem", mosaic: "xem", quantity: quantity, divisibility: 6, description: "")
     }
     func isXem() -> Bool {
         let xem = MosaicDetail.xem(0)
@@ -46,7 +44,11 @@ struct MosaicDetail {
         return replaced(quantity: quantity)
     }
     func replaced(quantity: UInt64) -> MosaicDetail {
-        return MosaicDetail(namespace: namespace, mosaic: mosaic, quantity: quantity, supply: supply, divisibility: divisibility, description: description)
+        return MosaicDetail(namespace: namespace, mosaic: mosaic, quantity: quantity, divisibility: divisibility, description: description)
+    }
+
+    func replaced(supply: UInt64?) -> MosaicDetail {
+        return MosaicDetail(namespace: namespace, mosaic: mosaic, quantity: quantity, divisibility: divisibility, description: description)
     }
 
     var amountDescription: String {
@@ -62,8 +64,12 @@ struct MosaicDetail {
         }
     }
 
-    var asTransferMosaic: TransferMosaic? {
-        guard let supply = self.supply, let divisibility = self.divisibility else {
+    func convertToTransferMosaicOfXem() -> TransferMosaic {
+        return TransferMosaic(namespace: "nem", mosaic: "xem", quantity: quantity, supply: 8_999_999_999, divisibility: 6)
+    }
+    
+    func convertToTransferMosaic(supply: UInt64) -> TransferMosaic? {
+        guard let divisibility = self.divisibility else {
             return nil
         }
         return TransferMosaic(namespace: namespace, mosaic: mosaic, quantity: quantity, supply: supply, divisibility: divisibility)
