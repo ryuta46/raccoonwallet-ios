@@ -11,6 +11,10 @@ import NemSwift
 
 class SendConfirmationInteractor: NemServiceInteractor, SendConfirmationUseCase {
     weak var output: SendConfirmationInteractorOutput!
+    
+    func fetchMosaicSupply(_ mosaicIds: [MosaicId]) {
+        fetchMosaicSupplyList(mosaicIds, output)
+    }
 
     func sendTransaction(_ request: [UInt8], _ keyPair: KeyPair) {
         sendTransaction(request, keyPair, output)

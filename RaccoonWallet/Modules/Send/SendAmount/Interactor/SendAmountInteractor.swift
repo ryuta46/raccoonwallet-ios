@@ -15,7 +15,4 @@ class SendAmountInteractor: NemServiceInteractor, SendAmountUseCase {
     func fetchMosaicOwned(_ address: String) {
         fetchMosaicOwned(address, output)
     }
-
-
-
 }

@@ -14,15 +14,29 @@ class SendConfirmationPresenter: BasePresenter {
     var interactor: SendConfirmationUseCase!
     var router: SendConfirmationWireframe!
     var sendTransaction: SendTransaction!
+    
+    var mosaicSupplyList: [MosaicSupply] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view?.showAmounts(sendTransaction.mosaics.map {$0.amountDescription} )
-        let transaction = createDummyTransaction()
-        view?.showFee(MosaicDetail.xem(transaction.fee).amountDescription)
         view?.showDestination(sendTransaction.address.prettyAddress(), sendTransaction.namespace)
         view?.showMessage(sendTransaction.message ?? "")
+        
+        if sendTransaction.isOnlyXem {
+            let transaction = createDummyTransaction()
+            view?.showAmounts([MosaicDetail.xem(transaction.amount).amountDescription])
+            view?.showFee(MosaicDetail.xem(transaction.fee).amountDescription)
+        } else {
+            view?.showFee("")
+            view?.showAmounts([])
+            view?.showLoading()
+            interactor.fetchMosaicSupply(
+                sendTransaction.mosaics
+                    .filter { !$0.isXem() }
+                    .map { MosaicId(namespaceId: $0.namespace, name: $0.mosaic) }
+            )
+        }
     }
 
     override func viewDidAppear() {
@@ -68,7 +82,7 @@ class SendConfirmationPresenter: BasePresenter {
             }
         }
 
-        if sendTransaction.mosaics.count == 1 && sendTransaction.mosaics[0].isXem() {
+        if sendTransaction.isOnlyXem {
             return TransferTransactionHelper.generateTransfer(
                     publicKey: keyPair.publicKey,
                     network: NemConfiguration.transactionNetwork,
@@ -77,11 +91,21 @@ class SendConfirmationPresenter: BasePresenter {
                     messageType: sendTransaction.messageType,
                     message: messageBytes ?? [])
         } else {
+
             return TransferTransactionHelper.generateMosaicTransfer(
                     publicKey: keyPair.publicKey,
                     network: NemConfiguration.transactionNetwork,
                     recipientAddress: sendTransaction.address,
-                    mosaics: sendTransaction.mosaics.compactMap { $0.asTransferMosaic },
+                    mosaics: sendTransaction.mosaics.compactMap { mosaicDetail in
+                        if mosaicDetail.isXem() {
+                            return mosaicDetail.convertToTransferMosaicOfXem()
+                        } else {
+                            guard let supply = mosaicSupplyList.first(where: { $0.mosaicId.fullName == mosaicDetail.identifier }) else {
+                                return nil
+                            }
+                            return mosaicDetail.convertToTransferMosaic(supply: supply.supply)
+                        }
+                    },
                     messageType: sendTransaction.messageType,
                     message: messageBytes ?? [])
         }
@@ -121,6 +145,22 @@ extension SendConfirmationPresenter: SendConfirmationPresentation {
 }
 
 extension SendConfirmationPresenter: SendConfirmationInteractorOutput {
+    
+    func mosaicSupplyListFetched(_ mosaicSupplyList: [MosaicSupply]) {
+        view?.hideLoading()
+        self.mosaicSupplyList = mosaicSupplyList
+
+        let transaction = createDummyTransaction()
+        view?.showAmounts(transaction.mosaics?.map {$0.amountDescription} ?? [])
+        view?.showFee(MosaicDetail.xem(transaction.fee).amountDescription)
+    }
+
+    func mosaicSupplyListFetchFailed(_ error: Error) {
+        view?.hideLoading()
+        view?.showError(R.string.localizable.common_error_network())
+    }
+    
+
     func transactionSent(_ result: NemAnnounceResult) {
         view?.hideLoading()
         if result.isSuccess {
