@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 106 images.
+  /// This `R.image` struct is generated, and contains static references to 107 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -68,6 +68,8 @@ struct R: Rswift.Validatable {
     static let heroimage_login_card = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_login_card")
     /// Image `heroimage_login_large`.
     static let heroimage_login_large = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_login_large")
+    /// Image `heroimage_logo`.
+    static let heroimage_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_logo")
     /// Image `heroimage_new_card`.
     static let heroimage_new_card = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_new_card")
     /// Image `heroimage_new_large`.
@@ -306,6 +308,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "heroimage_login_large", bundle: ..., traitCollection: ...)`
     static func heroimage_login_large(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.heroimage_login_large, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "heroimage_logo", bundle: ..., traitCollection: ...)`
+    static func heroimage_logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.heroimage_logo, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "heroimage_new_card", bundle: ..., traitCollection: ...)`
@@ -1574,10 +1581,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let lesson_cancel_pin_message = Rswift.StringResource(key: "lesson_cancel_pin_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: やあ。はじめまして。 ラクーンウォレットへようこそ。 気分はどう？  さてこれから君がラクーンを始めるにあたって、僕がガイダンスしていくんだけど、何よりまず、君にはウォレットの準備をしてもらいたい。 次の画面で新しくウォレットを作るか、それともすでにブロックチェーンに登録済みのアカウントでログインするかを選んでくれるかい？
-      /// 
-      /// Locales: en, ja
-      static let create_wallet_tutorial_message = Rswift.StringResource(key: "create_wallet_tutorial_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: やあ。セキュリティレッスンを受けに来たのかい？ 感心感心 よーし、それじゃあ早速やっていこう。  じゃあ、まず最初に君のことを教えてくれないかい？ 次の画面で自分に合うものを選択してくれ。 特別にみんなに最適なレッスン用意したからさ。
       /// 
       /// Locales: en, ja
@@ -1942,6 +1945,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let common_touchID = Rswift.StringResource(key: "common_touchID", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 改めまして、こんにちは。 ラクーンウォレットへようこそ。  さてこれからあなたがラクーンを始めるにあたって、まずはウォレットの準備をお願いしたいと思います。 次の画面で新しくウォレットを作るか、それともすでにブロックチェーンに登録済みのアカウントでログインするかを選んでいただけますか？
+      /// 
+      /// Locales: en, ja
+      static let create_wallet_tutorial_message = Rswift.StringResource(key: "create_wallet_tutorial_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 新しいウォレット名
       /// 
       /// Locales: en, ja
@@ -2609,13 +2616,6 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("lesson_cancel_pin_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: やあ。はじめまして。 ラクーンウォレットへようこそ。 気分はどう？  さてこれから君がラクーンを始めるにあたって、僕がガイダンスしていくんだけど、何よりまず、君にはウォレットの準備をしてもらいたい。 次の画面で新しくウォレットを作るか、それともすでにブロックチェーンに登録済みのアカウントでログインするかを選んでくれるかい？
-      /// 
-      /// Locales: en, ja
-      static func create_wallet_tutorial_message(_: Void = ()) -> String {
-        return NSLocalizedString("create_wallet_tutorial_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: やあ。セキュリティレッスンを受けに来たのかい？ 感心感心 よーし、それじゃあ早速やっていこう。  じゃあ、まず最初に君のことを教えてくれないかい？ 次の画面で自分に合うものを選択してくれ。 特別にみんなに最適なレッスン用意したからさ。
       /// 
       /// Locales: en, ja
@@ -3253,6 +3253,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("common_touchID", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: 改めまして、こんにちは。 ラクーンウォレットへようこそ。  さてこれからあなたがラクーンを始めるにあたって、まずはウォレットの準備をお願いしたいと思います。 次の画面で新しくウォレットを作るか、それともすでにブロックチェーンに登録済みのアカウントでログインするかを選んでいただけますか？
+      /// 
+      /// Locales: en, ja
+      static func create_wallet_tutorial_message(_: Void = ()) -> String {
+        return NSLocalizedString("create_wallet_tutorial_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: 新しいウォレット名
       /// 
       /// Locales: en, ja
@@ -3879,7 +3886,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_seclesson_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_seclesson_large' is used in storyboard 'IntroductionMessageStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_logo' is used in storyboard 'IntroductionMessageStoryboard', but couldn't be loaded.") }
         if _R.storyboard.introductionMessageStoryboard().introductionMessageView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'introductionMessageView' could not be loaded from storyboard 'IntroductionMessageStoryboard' as 'IntroductionMessageViewController'.") }
       }
       
