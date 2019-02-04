@@ -24,18 +24,29 @@ class MessageDialogPresenter : BasePresenter {
 
     override func viewDidLoad() {
         let icon: UIImage
-        let color: UIColor
-        if style == .caution {
+        let headerColor: UIColor
+        let buttonColor: UIColor
+        switch style! {
+        case .normal:
+            icon = R.image.logo_raccoon_color()!
+            headerColor = Theme.baseBackground
+            buttonColor = Theme.primary
+        case .caution:
             icon = R.image.icon_dialog_error()!
-            color = Theme.caution
-        }
-        else {
-            icon = R.image.logo_pyoko()!
-            color = Theme.primary
+            headerColor = Theme.caution
+            buttonColor = Theme.caution
+        case .success:
+            icon = R.image.icon_dialog_success()!
+            headerColor = Theme.baseBackground
+            buttonColor = Theme.primary
+        case .biometrics:
+            icon = R.image.icon_dialog_fingerprint()!
+            headerColor = Theme.baseBackground
+            buttonColor = Theme.primary
         }
 
-        view?.showHeader(icon: icon, background: color)
-        view?.showOk(text: okText, color: color)
+        view?.showHeader(icon: icon, background: headerColor)
+        view?.showOk(text: okText, color: buttonColor)
         view?.showHeadline(headline)
         view?.showMessage(messages)
         view?.showActions(mode)

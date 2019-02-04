@@ -41,7 +41,7 @@ class PinDialogPresenter : BasePresenter {
             if ApplicationSetting.shared.isEnabledBiometry {
                 PinPreference.shared.getForBiometrics(
                         onSuccess: { pin in
-                            self.pin = pin
+                            self.pin = String(pin.prefix(PinDialogPresenter.PIN_LENGTH))
                             DispatchQueue.main.async {
                                 self.proceed()
                             }
@@ -65,7 +65,9 @@ class PinDialogPresenter : BasePresenter {
 
 extension PinDialogPresenter : PinDialogPresentation {
     func didClickNumber(_ number: Int) {
-        pin += String(number)
+        if (pin.count < PinDialogPresenter.PIN_LENGTH) {
+            pin += String(number)
+        }
         proceed()
     }
     func didClickCancel() {
@@ -73,6 +75,7 @@ extension PinDialogPresenter : PinDialogPresentation {
     }
 
     private func proceed() {
+        let pin = self.pin
         view?.showInputted(pin.count)
         if pin.count == PinDialogPresenter.PIN_LENGTH {
             switch state {
@@ -80,18 +83,18 @@ extension PinDialogPresenter : PinDialogPresentation {
                 interactor.validateCode(pin)
             case .registration:
                 pinCache = pin
-                pin = ""
+                self.pin = ""
                 state = .confirmation
                 view?.showMessage(message ?? "Confirm PIN")
-                view?.showInputted(pin.count)
+                view?.showInputted(self.pin.count)
             case .confirmation:
                 if pin == pinCache {
                     interactor.registerCode(oldPin, pin)
                 } else {
                     // retry
-                    pin = ""
+                    self.pin = ""
                     view?.showResult(false)
-                    view?.showInputted(pin.count)
+                    view?.showInputted(self.pin.count)
                 }
             }
         }
@@ -101,16 +104,16 @@ extension PinDialogPresenter : PinDialogPresentation {
 }
 
 extension PinDialogPresenter : PinDialogInteractorOutput {
-    func pinValidated(_ result: Bool) {
+    func pinValidated(_ result: Bool, _ pin: String) {
         view?.showResult(result)
 
         if result {
             if isRegisterMode {
                 state = .registration
                 oldPin = pin
-                pin = ""
+                self.pin = ""
 
-                view?.showInputted(pin.count)
+                view?.showInputted(self.pin.count)
                 view?.showMessage(message ?? "Enter PIN")
                 view?.showRegistrationMessage()
 
@@ -118,12 +121,12 @@ extension PinDialogPresenter : PinDialogInteractorOutput {
                 router.dismiss(pin: pin, handler)
             }
         } else {
-            pin = ""
-            view?.showInputted(pin.count)
+            self.pin = ""
+            view?.showInputted(self.pin.count)
         }
     }
 
-    func pinRegistered(_ result: Bool) {
+    func pinRegistered(_ result: Bool, _ pin: String) {
         if result {
             router.dismiss(pin: pin, handler)
         } else {

@@ -18,15 +18,14 @@ class LessonPinEndViewController : BaseViewController, PinDialogMixinViewControl
     override func setup() {
         super.setup()
 
-        let biometrics = LocalAuthenticationHelper.checkBiometrics()
-        title = R.string.localizable.lesson_pin_end_title(biometrics.description)
+        title = R.string.localizable.lesson_pin_end_title()
         navigationItem.hidesBackButton = true
 
         hideBackTitle()
 
-        message.text = R.string.localizable.lesson_pin_end_message(biometrics.description)
+        message.text = R.string.localizable.lesson_pin_end_message()
 
-        setting.setTitle(R.string.localizable.lesson_pin_end_set_ok(biometrics.description), for: .normal)
+        setting.setTitle(R.string.localizable.lesson_pin_end_set_ok(), for: .normal)
         lessonEnd.setTitle(R.string.localizable.lesson_pin_end_home(), for: .normal)
     }
 
@@ -45,6 +44,7 @@ extension LessonPinEndViewController: LessonPinEndView {
                 headline: R.string.localizable.common_biometrics_enable_title(biometrics.description),
                 messages: [R.string.localizable.common_biometrics_enable_message(biometrics.description)],
                 mode: .selectable,
+                style: .biometrics,
                 isCancelableOnTouchedOutside: true) { [weak self] result in
             guard result == .ok else {
                 return
@@ -59,7 +59,8 @@ extension LessonPinEndViewController: LessonPinEndView {
         let biometrics = LocalAuthenticationHelper.checkBiometrics()
         let dialog = MessageDialogRouter.assembleModule(
                 headline: R.string.localizable.common_biometrics_enable_success_title(),
-                messages: [R.string.localizable.common_biometrics_enable_success_message(biometrics.description)]) { _ in
+                messages: [R.string.localizable.common_biometrics_enable_success_message(biometrics.description)],
+                style: .success) { _ in
             self.presenter.didClickSuccessOk()
         }
 

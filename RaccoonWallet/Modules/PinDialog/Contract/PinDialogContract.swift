@@ -41,8 +41,8 @@ protocol PinDialogUseCase: class {
 
 //sourcery: AutoMockable
 protocol PinDialogInteractorOutput: class {
-    func pinValidated(_ result: Bool)
-    func pinRegistered(_ result: Bool)
+    func pinValidated(_ result: Bool, _ pin: String)
+    func pinRegistered(_ result: Bool, _ pin: String)
 }
 
 //sourcery: AutoMockable

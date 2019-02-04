@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,14 +21,17 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOo-py-rbj">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_seclesson_large" translatesAutoresizingMaskIntoConstraints="NO" id="Ky8-FR-lC8">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ky8-FR-lC8">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="179.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Ky8-FR-lC8" secondAttribute="height" multiplier="720:404" id="0Tk-CX-ufh"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dj-JQ-IMW">
-                                        <rect key="frame" x="8" y="195.5" width="304" height="17"/>
+                                        <rect key="frame" x="58" y="195.5" width="204" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="204" id="Gjx-xS-MVA"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -37,38 +40,39 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="7dj-JQ-IMW" secondAttribute="bottom" constant="104" id="0IG-Sy-LGd"/>
                                     <constraint firstItem="Ky8-FR-lC8" firstAttribute="width" secondItem="rOo-py-rbj" secondAttribute="width" id="717-Fp-E4p"/>
-                                    <constraint firstAttribute="trailing" secondItem="7dj-JQ-IMW" secondAttribute="trailing" constant="8" id="7y7-f1-LSR"/>
                                     <constraint firstAttribute="trailing" secondItem="Ky8-FR-lC8" secondAttribute="trailing" id="CQy-QS-nsE"/>
                                     <constraint firstItem="Ky8-FR-lC8" firstAttribute="top" secondItem="rOo-py-rbj" secondAttribute="top" id="EQ2-Qx-LZ7"/>
                                     <constraint firstItem="Ky8-FR-lC8" firstAttribute="leading" secondItem="rOo-py-rbj" secondAttribute="leading" id="FXs-2w-x9q"/>
                                     <constraint firstItem="7dj-JQ-IMW" firstAttribute="top" secondItem="Ky8-FR-lC8" secondAttribute="bottom" constant="16" id="GnK-Yv-UAs"/>
-                                    <constraint firstItem="7dj-JQ-IMW" firstAttribute="leading" secondItem="rOo-py-rbj" secondAttribute="leading" constant="8" id="lwu-9b-mBy"/>
+                                    <constraint firstItem="7dj-JQ-IMW" firstAttribute="centerX" secondItem="rOo-py-rbj" secondAttribute="centerX" id="ct9-RU-IRh"/>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zy-Cx-mzN">
                                 <rect key="frame" x="0.0" y="460" width="320" height="108"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="igE-48-rUD">
-                                        <rect key="frame" x="32" y="16" width="256" height="76"/>
+                                        <rect key="frame" x="64" y="10" width="192" height="88"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ng-p8-FKL" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="256" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFb-0y-ha4" customClass="PrimaryRoundedButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="192" height="36"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="256" id="shi-nO-U6s"/>
-                                                </constraints>
-                                                <state key="normal" title="OK"/>
-                                                <connections>
-                                                    <action selector="onTouchedLessonEnd:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="z5d-9x-3fN"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFb-0y-ha4" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="46" width="256" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="256" id="dnw-lh-BvH"/>
+                                                    <constraint firstAttribute="height" constant="36" id="S9Q-0m-rXH"/>
+                                                    <constraint firstAttribute="width" constant="192" id="dnw-lh-BvH"/>
                                                 </constraints>
                                                 <state key="normal" title="OK"/>
                                                 <connections>
                                                     <action selector="onTouchedSet:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="a07-7u-MNt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ng-p8-FKL" customClass="PrimaryGhostButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="52" width="192" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="sKA-8R-fW1"/>
+                                                    <constraint firstAttribute="width" constant="192" id="shi-nO-U6s"/>
+                                                </constraints>
+                                                <state key="normal" title="OK"/>
+                                                <connections>
+                                                    <action selector="onTouchedLessonEnd:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="z5d-9x-3fN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -106,6 +110,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heroimage_seclesson_large" width="720" height="404"/>
+        <image name="heroimage_logo" width="360" height="202"/>
     </resources>
 </document>

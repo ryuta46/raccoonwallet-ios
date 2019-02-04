@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,6 +23,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_wallet_small" translatesAutoresizingMaskIntoConstraints="NO" id="r05-PO-nt2">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="r05-PO-nt2" secondAttribute="height" multiplier="720:200" id="m4o-od-okc"/>
                                         </constraints>
@@ -65,36 +66,25 @@
                                     <constraint firstItem="r05-PO-nt2" firstAttribute="top" secondItem="3aL-kd-4TF" secondAttribute="top" id="p4W-la-DrA"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Tk-EO-RXR">
-                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dla-DM-jfP" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
-                                        <rect key="frame" x="123.5" y="17" width="128" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="128" id="fRR-B5-lnI"/>
-                                        </constraints>
-                                        <state key="normal" title="OK"/>
-                                        <connections>
-                                            <action selector="onTouchedOk:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="3Kd-Bh-aep"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="0.8039997799295775" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dla-DM-jfP" customClass="PrimaryRoundedButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                <rect key="frame" x="139.5" y="607" width="96" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="3gw-pg-zbi"/>
-                                    <constraint firstItem="dla-DM-jfP" firstAttribute="centerX" secondItem="3Tk-EO-RXR" secondAttribute="centerX" id="O0o-WS-ZfG"/>
-                                    <constraint firstItem="dla-DM-jfP" firstAttribute="centerY" secondItem="3Tk-EO-RXR" secondAttribute="centerY" id="fX3-4r-hnY"/>
+                                    <constraint firstAttribute="width" constant="96" id="fRR-B5-lnI"/>
+                                    <constraint firstAttribute="height" constant="36" id="hCf-pb-xEu"/>
                                 </constraints>
-                            </view>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="onTouchedOk:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="3Kd-Bh-aep"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3aL-kd-4TF" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" id="0MZ-Ch-Fig"/>
-                            <constraint firstAttribute="bottom" secondItem="3Tk-EO-RXR" secondAttribute="bottom" id="1fa-wJ-tKk"/>
-                            <constraint firstItem="xJa-3o-AcC" firstAttribute="trailing" secondItem="3Tk-EO-RXR" secondAttribute="trailing" id="7b2-LM-1v7"/>
                             <constraint firstItem="3aL-kd-4TF" firstAttribute="leading" secondItem="mtQ-k8-Vb7" secondAttribute="leading" id="NBq-yc-JfH"/>
                             <constraint firstAttribute="trailing" secondItem="3aL-kd-4TF" secondAttribute="trailing" id="eKl-nk-El4"/>
-                            <constraint firstItem="3Tk-EO-RXR" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" id="tNe-E5-Omk"/>
+                            <constraint firstItem="dla-DM-jfP" firstAttribute="centerX" secondItem="mtQ-k8-Vb7" secondAttribute="centerX" id="jEC-i0-Z7a"/>
+                            <constraint firstItem="xJa-3o-AcC" firstAttribute="bottom" secondItem="dla-DM-jfP" secondAttribute="bottom" constant="24" id="nox-Lo-Mx3"/>
                             <constraint firstItem="xJa-3o-AcC" firstAttribute="bottom" secondItem="3aL-kd-4TF" secondAttribute="bottom" id="xUj-ke-vac"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xJa-3o-AcC"/>
@@ -110,7 +100,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heroimage_wallet_small" width="720" height="200"/>
+        <image name="heroimage_wallet_small" width="360" height="100"/>
         <image name="icon_caution" width="32" height="32"/>
     </resources>
 </document>

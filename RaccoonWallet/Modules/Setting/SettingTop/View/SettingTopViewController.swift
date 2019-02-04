@@ -123,6 +123,7 @@ extension SettingTopViewController: SettingTopView {
                 headline: R.string.localizable.common_biometrics_enable_title(biometrics.description),
                 messages: [R.string.localizable.common_biometrics_enable_message(biometrics.description)],
                 mode: .selectable,
+                style: .biometrics,
                 isCancelableOnTouchedOutside: true) { [weak self] result in
             guard result == .ok else {
                 self?.presenter.didClickCancelBiometrics()
@@ -138,7 +139,8 @@ extension SettingTopViewController: SettingTopView {
         let biometrics = LocalAuthenticationHelper.checkBiometrics()
         let dialog = MessageDialogRouter.assembleModule(
                 headline: R.string.localizable.common_biometrics_enable_success_title(),
-                messages: [R.string.localizable.common_biometrics_enable_success_message(biometrics.description)]) { _ in
+                messages: [R.string.localizable.common_biometrics_enable_success_message(biometrics.description)],
+                style: .success) { _ in
         }
 
         navigationController?.present(dialog, animated: true)

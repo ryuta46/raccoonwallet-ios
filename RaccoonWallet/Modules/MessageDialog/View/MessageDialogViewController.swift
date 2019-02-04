@@ -39,9 +39,6 @@ class MessageDialogViewController: BaseViewController {
         messagePages.delegate = self
         messagePager.addTarget(self, action: #selector(onTouchedPager(_:)), for: .valueChanged)
 
-        okChoice.backgroundColor = Theme.primary
-        cancelChoice.backgroundColor = Theme.secondary
-        
         okForever.setTitleColor(Theme.primary, for: .normal)
         okForever.setTitle(R.string.localizable.common_never_remind(), for: .normal)
         okOnce.setTitleColor(Theme.primary, for: .normal)
@@ -94,7 +91,7 @@ extension MessageDialogViewController: MessageDialogView{
         okOnce.setTitle(text, for: .normal)
 
         ok.backgroundColor = color
-        okChoice.backgroundColor = color
+        okChoice.setTitleColor(color, for: .normal)
         okOnce.setTitleColor(color, for: .normal)
     }
 
@@ -120,8 +117,8 @@ extension MessageDialogViewController: MessageDialogView{
 
     func showActions(_ mode: MessageDialogMode) {
         ok.isHidden = mode != .show
-        okBottomSpace.isHidden = mode != .show
         choices.isHidden = mode != .selectable
+        okBottomSpace.isHidden = mode == .neverRemind
         neverRemindChoices.isHidden = mode != .neverRemind
     }
 }

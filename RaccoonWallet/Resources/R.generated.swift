@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 107 images.
+  /// This `R.image` struct is generated, and contains static references to 106 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -250,8 +250,6 @@ struct R: Rswift.Validatable {
     static let logo_pyoko = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_pyoko")
     /// Image `logo_raccoon_color`.
     static let logo_raccoon_color = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_raccoon_color")
-    /// Image `logo`.
-    static let logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo")
     /// Image `tab_home_balance`.
     static let tab_home_balance = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_home_balance")
     /// Image `tab_home_harvest`.
@@ -753,11 +751,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "image_www_human", bundle: ..., traitCollection: ...)`
     static func image_www_human(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.image_www_human, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "logo", bundle: ..., traitCollection: ...)`
-    static func logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.logo, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "logo_pyoko", bundle: ..., traitCollection: ...)`
@@ -1301,6 +1294,18 @@ struct R: Rswift.Validatable {
   struct string {
     /// This `R.string.localizable` struct is generated, and contains static references to 206 localization keys.
     struct localizable {
+      /// en translation: 
+      /// 
+      /// Locales: en, ja
+      static let lesson_pin_end_message = Rswift.StringResource(key: "lesson_pin_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 
+      /// 
+      /// Locales: en, ja
+      static let lesson_pin_end_set_ok = Rswift.StringResource(key: "lesson_pin_end_set_ok", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 
+      /// 
+      /// Locales: en, ja
+      static let lesson_pin_end_title = Rswift.StringResource(key: "lesson_pin_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: %@で送金します
       /// 
       /// Locales: en, ja
@@ -1321,10 +1326,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let common_biometrics_enable_message = Rswift.StringResource(key: "common_biometrics_enable_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: %@を設定する
-      /// 
-      /// Locales: en, ja
-      static let lesson_pin_end_set_ok = Rswift.StringResource(key: "lesson_pin_end_set_ok", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 1024文字以内。取引所への認証番号にも使うよ。
       /// 
       /// Locales: en, ja
@@ -1401,10 +1402,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let lesson_level_importer_setup = Rswift.StringResource(key: "lesson_level_importer_setup", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: PIN設定できたみたいだね。 いい調子だ。 さてレッスンもこれで最後。  実は合わせて%@でアプリにアクセスできるように設定できるんだけど、ここで設定しておくかい？
-      /// 
-      /// Locales: en, ja
-      static let lesson_pin_end_message = Rswift.StringResource(key: "lesson_pin_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: PIN設定画面に移動する
       /// 
       /// Locales: en, ja
@@ -1513,10 +1510,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let first_tutorial_message1 = Rswift.StringResource(key: "first_tutorial_message1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: お疲れ様、よかったら%@も
-      /// 
-      /// Locales: en, ja
-      static let lesson_pin_end_title = Rswift.StringResource(key: "lesson_pin_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: お疲れ様！
       /// 
       /// Locales: en, ja
@@ -2126,6 +2119,27 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static let common_faceID = Rswift.StringResource(key: "common_faceID", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       
+      /// en translation: 
+      /// 
+      /// Locales: en, ja
+      static func lesson_pin_end_message(_: Void = ()) -> String {
+        return NSLocalizedString("lesson_pin_end_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 
+      /// 
+      /// Locales: en, ja
+      static func lesson_pin_end_set_ok(_: Void = ()) -> String {
+        return NSLocalizedString("lesson_pin_end_set_ok", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 
+      /// 
+      /// Locales: en, ja
+      static func lesson_pin_end_title(_: Void = ()) -> String {
+        return NSLocalizedString("lesson_pin_end_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: %@で送金します
       /// 
       /// Locales: en, ja
@@ -2159,13 +2173,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func common_biometrics_enable_message(_ value1: String) -> String {
         return String(format: NSLocalizedString("common_biometrics_enable_message", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
-      }
-      
-      /// en translation: %@を設定する
-      /// 
-      /// Locales: en, ja
-      static func lesson_pin_end_set_ok(_ value1: String) -> String {
-        return String(format: NSLocalizedString("lesson_pin_end_set_ok", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
       /// en translation: 1024文字以内。取引所への認証番号にも使うよ。
@@ -2299,13 +2306,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func lesson_level_importer_setup(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_importer_setup", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: PIN設定できたみたいだね。 いい調子だ。 さてレッスンもこれで最後。  実は合わせて%@でアプリにアクセスできるように設定できるんだけど、ここで設定しておくかい？
-      /// 
-      /// Locales: en, ja
-      static func lesson_pin_end_message(_ value1: String) -> String {
-        return String(format: NSLocalizedString("lesson_pin_end_message", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
       /// en translation: PIN設定画面に移動する
@@ -2495,13 +2495,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func first_tutorial_message1(_: Void = ()) -> String {
         return NSLocalizedString("first_tutorial_message1", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: お疲れ様、よかったら%@も
-      /// 
-      /// Locales: en, ja
-      static func lesson_pin_end_title(_ value1: String) -> String {
-        return String(format: NSLocalizedString("lesson_pin_end_title", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
       /// en translation: お疲れ様！
@@ -3918,7 +3911,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_seclesson_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_seclesson_large' is used in storyboard 'LessonBeginnerBackupEndStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_logo' is used in storyboard 'LessonBeginnerBackupEndStoryboard', but couldn't be loaded.") }
         if _R.storyboard.lessonBeginnerBackupEndStoryboard().lessonBeginnerBackupEndView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'lessonBeginnerBackupEndView' could not be loaded from storyboard 'LessonBeginnerBackupEndStoryboard' as 'LessonBeginnerBackupEndViewController'.") }
       }
       
@@ -3935,7 +3928,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_seclesson_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_seclesson_large' is used in storyboard 'LessonBeginnerStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_logo' is used in storyboard 'LessonBeginnerStoryboard', but couldn't be loaded.") }
         if _R.storyboard.lessonBeginnerStoryboard().lessonBeginnerView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'lessonBeginnerView' could not be loaded from storyboard 'LessonBeginnerStoryboard' as 'LessonBeginnerViewController'.") }
       }
       
@@ -3952,7 +3945,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_seclesson_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_seclesson_large' is used in storyboard 'LessonEndStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_logo' is used in storyboard 'LessonEndStoryboard', but couldn't be loaded.") }
         if _R.storyboard.lessonEndStoryboard().lessonEndView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'lessonEndView' could not be loaded from storyboard 'LessonEndStoryboard' as 'LessonEndViewController'.") }
       }
       
@@ -3969,7 +3962,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_seclesson_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_seclesson_large' is used in storyboard 'LessonExpertStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_logo' is used in storyboard 'LessonExpertStoryboard', but couldn't be loaded.") }
         if _R.storyboard.lessonExpertStoryboard().lessonExpertView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'lessonExpertView' could not be loaded from storyboard 'LessonExpertStoryboard' as 'LessonExpertViewController'.") }
       }
       
@@ -3986,7 +3979,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_seclesson_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_seclesson_large' is used in storyboard 'LessonImporterStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_logo' is used in storyboard 'LessonImporterStoryboard', but couldn't be loaded.") }
         if _R.storyboard.lessonImporterStoryboard().lessonImporterView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'lessonImporterView' could not be loaded from storyboard 'LessonImporterStoryboard' as 'LessonImporterViewController'.") }
       }
       
@@ -4003,7 +3996,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_seclesson_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_seclesson_large' is used in storyboard 'LessonIntroductionStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_logo' is used in storyboard 'LessonIntroductionStoryboard', but couldn't be loaded.") }
         if _R.storyboard.lessonIntroductionStoryboard().lessonIntroductionView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'lessonIntroductionView' could not be loaded from storyboard 'LessonIntroductionStoryboard' as 'LessonIntroductionViewController'.") }
       }
       
@@ -4020,7 +4013,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_seclesson_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_seclesson_small' is used in storyboard 'LessonLevelStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "logo_raccoon_color") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo_raccoon_color' is used in storyboard 'LessonLevelStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "image_lesson_card1") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_lesson_card1' is used in storyboard 'LessonLevelStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "image_lesson_card2") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_lesson_card2' is used in storyboard 'LessonLevelStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "image_lesson_card3") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_lesson_card3' is used in storyboard 'LessonLevelStoryboard', but couldn't be loaded.") }
@@ -4040,7 +4033,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_seclesson_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_seclesson_large' is used in storyboard 'LessonPinEndStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_logo' is used in storyboard 'LessonPinEndStoryboard', but couldn't be loaded.") }
         if _R.storyboard.lessonPinEndStoryboard().lessonPinEndView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'lessonPinEndView' could not be loaded from storyboard 'LessonPinEndStoryboard' as 'LessonPinEndViewController'.") }
       }
       
@@ -4057,7 +4050,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "logo_pyoko") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo_pyoko' is used in storyboard 'MessageDialogStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "logo_raccoon_color") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo_raccoon_color' is used in storyboard 'MessageDialogStoryboard', but couldn't be loaded.") }
         if _R.storyboard.messageDialogStoryboard().messageDialogView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'messageDialogView' could not be loaded from storyboard 'MessageDialogStoryboard' as 'MessageDialogViewController'.") }
       }
       
