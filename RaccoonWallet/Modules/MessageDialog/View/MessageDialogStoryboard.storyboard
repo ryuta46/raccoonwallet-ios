@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhK-2e-mdK">
-                                <rect key="frame" x="16" y="56" width="343" height="555"/>
+                                <rect key="frame" x="16" y="62" width="343" height="543"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIh-dP-z8I">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="96"/>
@@ -40,7 +40,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lIG-Na-ElW">
-                                        <rect key="frame" x="0.0" y="112" width="343" height="443"/>
+                                        <rect key="frame" x="0.0" y="112" width="343" height="431"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIh-m4-f3K">
                                                 <rect key="frame" x="147.5" y="0.0" width="48" height="24"/>
@@ -100,42 +100,50 @@
                                                     <action selector="onTouchedOk:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="GDR-J3-VKa"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1Q-tN-QGe">
-                                                <rect key="frame" x="0.0" y="255" width="343" height="8"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="8" id="GtM-l3-GMG"/>
-                                                </constraints>
-                                            </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VNF-Lq-73q">
-                                                <rect key="frame" x="0.0" y="279" width="343" height="48"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNF-Lq-73q">
+                                                <rect key="frame" x="0.0" y="255" width="343" height="36"/>
                                                 <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8K-7f-MKW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="36"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="36" id="dv4-qG-4Q1"/>
+                                                        </constraints>
+                                                    </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4e-z5-l4s">
-                                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="48"/>
-                                                        <color key="backgroundColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="171" y="0.0" width="86" height="36"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="86" id="PCm-Ca-HmJ"/>
+                                                        </constraints>
                                                         <state key="normal" title="CANCEL">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="onTouchedCancelChoice:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="QcO-2l-piD"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyR-LJ-LyZ">
-                                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="48"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.76470588240000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="257" y="0.0" width="86" height="36"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="86" id="AeT-aM-3Va"/>
+                                                        </constraints>
                                                         <state key="normal" title=" OK ">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleColor" red="0.0" green="0.76470588240000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="onTouchedOkChoice:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="WBk-TD-flQ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="bOQ-Ac-WL7"/>
-                                                </constraints>
                                             </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1Q-tN-QGe">
+                                                <rect key="frame" x="0.0" y="307" width="343" height="8"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="8" id="GtM-l3-GMG"/>
+                                                </constraints>
+                                            </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jKH-FF-RnS">
-                                                <rect key="frame" x="0.0" y="343" width="343" height="100"/>
+                                                <rect key="frame" x="0.0" y="331" width="343" height="100"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Brf-QY-xVw">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="2"/>
@@ -178,11 +186,11 @@
                                             <constraint firstAttribute="trailing" secondItem="e1Q-tN-QGe" secondAttribute="trailing" id="6sz-8b-DEH"/>
                                             <constraint firstAttribute="trailing" secondItem="QPz-b3-O1e" secondAttribute="trailing" constant="8" id="A3X-SR-BbF"/>
                                             <constraint firstItem="jKH-FF-RnS" firstAttribute="leading" secondItem="lIG-Na-ElW" secondAttribute="leading" id="D7d-i5-NOg"/>
+                                            <constraint firstItem="VNF-Lq-73q" firstAttribute="leading" secondItem="lIG-Na-ElW" secondAttribute="leading" id="DGT-Uh-jUZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="VNF-Lq-73q" secondAttribute="trailing" id="JbH-9d-RtV"/>
                                             <constraint firstAttribute="trailing" secondItem="ZHH-wY-eNc" secondAttribute="trailing" id="Vhm-M1-t1k"/>
                                             <constraint firstItem="QPz-b3-O1e" firstAttribute="leading" secondItem="lIG-Na-ElW" secondAttribute="leading" constant="8" id="djh-kO-AS3"/>
                                             <constraint firstAttribute="trailing" secondItem="jKH-FF-RnS" secondAttribute="trailing" id="eJy-a8-BW7"/>
-                                            <constraint firstAttribute="trailing" secondItem="VNF-Lq-73q" secondAttribute="trailing" id="fvJ-nW-ZCZ"/>
-                                            <constraint firstItem="VNF-Lq-73q" firstAttribute="leading" secondItem="lIG-Na-ElW" secondAttribute="leading" id="h6Z-kG-2UI"/>
                                             <constraint firstItem="ZHH-wY-eNc" firstAttribute="leading" secondItem="lIG-Na-ElW" secondAttribute="leading" id="puH-2g-Aol"/>
                                             <constraint firstItem="e1Q-tN-QGe" firstAttribute="leading" secondItem="lIG-Na-ElW" secondAttribute="leading" id="qCK-7v-oSD"/>
                                         </constraints>

@@ -149,9 +149,9 @@
 "lesson_cancel_pin_message" = "もうPINは設定してあるみたいだね。\nOKを押してレッスンを終えてもらっていいよ。\nお疲れ様！";
 
 
-"lesson_pin_end_title" = "お疲れ様、よかったら%@も";
-"lesson_pin_end_message" = "PIN設定できたみたいだね。\nいい調子だ。\nさてレッスンもこれで最後。\n\n実は合わせて%@でアプリにアクセスできるように設定できるんだけど、ここで設定しておくかい？";
-"lesson_pin_end_set_ok" = "%@を設定する";
+"lesson_pin_end_title" = "";
+"lesson_pin_end_message" = "PIN設定ができたみたいですね。\nさてレッスンもこれで最後です。\n\n実は合わせて生体認証でアプリにアクセスできるように設定できるのですが、ここで設定しておきますか？";
+"lesson_pin_end_set_ok" = "生体認証を設定する";
 "lesson_pin_end_home" = "レッスンを終える";
 
 "lesson_pin_end_not_available_title" = "おっと！";

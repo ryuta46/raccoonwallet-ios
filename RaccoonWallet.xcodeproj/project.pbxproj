@@ -210,8 +210,8 @@
 		5F8EA5E6215EC47600646E6E /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EA5E5215EC47600646E6E /* LoadingIndicatorView.swift */; };
 		5F8EA5E8215ED2DF00646E6E /* MosaicDefinitionCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EA5E7215ED2DF00646E6E /* MosaicDefinitionCache.swift */; };
 		5F8EA5EA215F4B7400646E6E /* WalletBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EA5E9215F4B7400646E6E /* WalletBarButton.swift */; };
-		5F99EC97220273A3002253CC /* TransferMosaicExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F99EC96220273A3002253CC /* TransferMosaicExtension.swift */; };
 		5F99EC9521F80C98002253CC /* PrimaryRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F99EC9421F80C98002253CC /* PrimaryRoundedButton.swift */; };
+		5F99EC97220273A3002253CC /* TransferMosaicExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F99EC96220273A3002253CC /* TransferMosaicExtension.swift */; };
 		5FAF0117212DF7FE0092B110 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C596D212DF5ED00026047 /* R.generated.swift */; };
 		5FAF0125212DF9940092B110 /* LessonIntroductionContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF011B212DF9940092B110 /* LessonIntroductionContract.swift */; };
 		5FAF0126212DF9940092B110 /* LessonIntroductionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF011D212DF9940092B110 /* LessonIntroductionPresenter.swift */; };
@@ -347,6 +347,7 @@
 		69057229A364CC5C1F08FFDD /* LessonBeginnerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057BEC5C80AD6D6C3733B3 /* LessonBeginnerRouter.swift */; };
 		69057231062293F470DC82BE /* SendTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057846D15F57CB9F29E2B0 /* SendTabViewController.swift */; };
 		6905723914071B866B66682E /* QrLabAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905717B299F35628410E72D /* QrLabAmountViewController.swift */; };
+		6905724996208F2A13CE41BD /* PrimaryGhostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057EE0517BDAEE46267426 /* PrimaryGhostButton.swift */; };
 		690572673A8C962697F72677 /* TransactionListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905712BAD443E9B38D4C29A /* TransactionListContract.swift */; };
 		69057272C8E1A0C215E9A609 /* SendAmountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057D653B904AD84BEF3AA2 /* SendAmountRouter.swift */; };
 		69057278D424B6F8CABE83DD /* MosaicListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69057A622DBE30E9EE31E731 /* MosaicListStoryboard.storyboard */; };
@@ -958,8 +959,8 @@
 		5F8EA5E5215EC47600646E6E /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		5F8EA5E7215ED2DF00646E6E /* MosaicDefinitionCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicDefinitionCache.swift; sourceTree = "<group>"; };
 		5F8EA5E9215F4B7400646E6E /* WalletBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletBarButton.swift; sourceTree = "<group>"; };
-		5F99EC96220273A3002253CC /* TransferMosaicExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferMosaicExtension.swift; sourceTree = "<group>"; };
 		5F99EC9421F80C98002253CC /* PrimaryRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryRoundedButton.swift; sourceTree = "<group>"; };
+		5F99EC96220273A3002253CC /* TransferMosaicExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferMosaicExtension.swift; sourceTree = "<group>"; };
 		5FAF011B212DF9940092B110 /* LessonIntroductionContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonIntroductionContract.swift; sourceTree = "<group>"; };
 		5FAF011D212DF9940092B110 /* LessonIntroductionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonIntroductionPresenter.swift; sourceTree = "<group>"; };
 		5FAF011F212DF9940092B110 /* LessonIntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonIntroductionViewController.swift; sourceTree = "<group>"; };
@@ -1286,6 +1287,7 @@
 		69057EC2ADB87AFE1E2A174B /* ScanTabInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanTabInteractor.swift; sourceTree = "<group>"; };
 		69057EDBA0E3D13F43276DFE /* LessonExpertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonExpertPresenter.swift; sourceTree = "<group>"; };
 		69057EDE72F8F0C4F060B36A /* ReceiveTabInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveTabInteractor.swift; sourceTree = "<group>"; };
+		69057EE0517BDAEE46267426 /* PrimaryGhostButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryGhostButton.swift; sourceTree = "<group>"; };
 		69057EF3281315F4B79B87F5 /* ScanTabContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanTabContract.swift; sourceTree = "<group>"; };
 		69057EF7ACA1DB44C2D0D570 /* MosaicImageUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosaicImageUrl.swift; sourceTree = "<group>"; };
 		69057F027EF994A45EFC8E2F /* NavigationDrawerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDrawerPresenter.swift; sourceTree = "<group>"; };
@@ -1546,6 +1548,7 @@
 				690572E1F3D59A046A8F9237 /* WalletBar.swift */,
 				5F672ED22125A0A90018B163 /* WalletBar.xib */,
 				5F8EA5E9215F4B7400646E6E /* WalletBarButton.swift */,
+				69057EE0517BDAEE46267426 /* PrimaryGhostButton.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -5625,6 +5628,7 @@
 				69057F93BB3A222647BC1580 /* PrimaryTextButton.swift in Sources */,
 				69057074DD47E54B793CF2A0 /* BaseBackgroundPanel.swift in Sources */,
 				69057A352B11C9C13B8F7771 /* SlightAccentBackgroundPanel.swift in Sources */,
+				6905724996208F2A13CE41BD /* PrimaryGhostButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

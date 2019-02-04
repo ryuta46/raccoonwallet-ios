@@ -26,16 +26,23 @@ class MessageDialogPresenter : BasePresenter {
         let icon: UIImage
         let headerColor: UIColor
         let buttonColor: UIColor
-        if style == .caution {
-            icon = R.image.icon_dialog_error()!
-            headerColor = Theme.caution
-            buttonColor = Theme.caution
-        }
-        else {
+        switch style! {
+        case .normal:
             icon = R.image.logo_raccoon_color()!
             headerColor = Theme.baseBackground
             buttonColor = Theme.primary
-            
+        case .caution:
+            icon = R.image.icon_dialog_error()!
+            headerColor = Theme.caution
+            buttonColor = Theme.caution
+        case .success:
+            icon = R.image.icon_dialog_success()!
+            headerColor = Theme.baseBackground
+            buttonColor = Theme.primary
+        case .biometrics:
+            icon = R.image.icon_dialog_fingerprint()!
+            headerColor = Theme.baseBackground
+            buttonColor = Theme.primary
         }
 
         view?.showHeader(icon: icon, background: headerColor)

@@ -43,12 +43,17 @@ extension LessonPinEndPresenter: LessonPinEndPresentation {
             PinPreference.shared.saveForBiometrics(pin,
                     onSuccess: { [weak self] in
                         ApplicationSetting.shared.isEnabledBiometry = true
-                        self?.view?.showBiometricsSuccessDialog()
+                        DispatchQueue.main.async {
+                            self?.view?.showBiometricsSuccessDialog()
+                        }
+
                     },
                     onError: { [weak self] error in
-                        self?.view?.showError(error.localizedDescription)
+                        DispatchQueue.main.async {
+                            self?.view?.showError(error.localizedDescription)
+                        }
                     } )
-        } catch let error {
+        } catch let error {           
             view?.showError(error.localizedDescription)
         }
     }

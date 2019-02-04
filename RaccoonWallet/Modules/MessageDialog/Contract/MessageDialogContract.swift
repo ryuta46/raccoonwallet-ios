@@ -18,6 +18,8 @@ enum MessageDialogMode {
 enum MessageDialogStyle {
     case normal
     case caution
+    case success
+    case biometrics
 }
 
 enum MessageDialogResult {
