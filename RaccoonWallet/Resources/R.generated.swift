@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 107 images.
+  /// This `R.image` struct is generated, and contains static references to 106 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -250,8 +250,6 @@ struct R: Rswift.Validatable {
     static let logo_pyoko = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_pyoko")
     /// Image `logo_raccoon_color`.
     static let logo_raccoon_color = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_raccoon_color")
-    /// Image `logo`.
-    static let logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo")
     /// Image `tab_home_balance`.
     static let tab_home_balance = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_home_balance")
     /// Image `tab_home_harvest`.
@@ -753,11 +751,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "image_www_human", bundle: ..., traitCollection: ...)`
     static func image_www_human(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.image_www_human, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "logo", bundle: ..., traitCollection: ...)`
-    static func logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.logo, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "logo_pyoko", bundle: ..., traitCollection: ...)`
@@ -4020,7 +4013,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_seclesson_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_seclesson_small' is used in storyboard 'LessonLevelStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "logo_raccoon_color") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo_raccoon_color' is used in storyboard 'LessonLevelStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "image_lesson_card1") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_lesson_card1' is used in storyboard 'LessonLevelStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "image_lesson_card2") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_lesson_card2' is used in storyboard 'LessonLevelStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "image_lesson_card3") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_lesson_card3' is used in storyboard 'LessonLevelStoryboard', but couldn't be loaded.") }

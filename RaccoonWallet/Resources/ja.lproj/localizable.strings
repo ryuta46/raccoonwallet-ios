@@ -118,16 +118,16 @@
 
 "lesson_introduction_message" = "ようこそいらっしゃいました！\nセキュリティレッスンですね？\n特別にみなさんに最適なレッスン用意してあります！\n早速やっていきましょう。\n\nそれでは、まず最初にあなたのことを教えてくれますか？\n次の画面でご自分に合うものを選択してみてください。";
 
-"lesson_level_title" = "セレクトユアレベル！";
-"lesson_level_beginner_title" = "NEM初心者です！";
+"lesson_level_title" = "";
+"lesson_level_beginner_title" = "ラクーンで暗号通貨を始めます。";
 "lesson_level_beginner_setup" = "秘密鍵のバックアップ+PINコード設定";
-"lesson_level_beginner_message" = "ようこそNEMの世界へ。";
-"lesson_level_importer_title" = "秘密鍵からのログインです";
+"lesson_level_beginner_message" = "ようこそラクーンウォレットへ！";
+"lesson_level_importer_title" = "秘密鍵からのログインです。";
 "lesson_level_importer_setup" = "PINコード設定";
-"lesson_level_importer_message" = "ラクーンを選んでくれてありがとう〜";
-"lesson_level_expert_title" = "ラクーンユーザーです";
+"lesson_level_importer_message" = "ラクーンを選んでいただき感謝します。";
+"lesson_level_expert_title" = "ラクーンユーザーです。";
 "lesson_level_expert_setup" = "ウォレットのバックアップ";
-"lesson_level_expert_message" = "毎度どうも。今日もいい天気ですね。";
+"lesson_level_expert_message" = "いつもありがとう。今日もいい天気ですね。";
 
 "lesson_beginner_title" = "ニュービーな君へ";
 "lesson_beginner_message" = "NEM初心者の君へ捧ぐメッセージ！\n知っている人もいるかもしれないけど、秘密鍵というのは仮想通貨にとって、すごく大事なものなんだ。NEMの場合もそれは同じだよ。バックアップはしっかりね。\n\nそれからアプリ本体のPINコード。\nスマホをもし落としてしまったりしたとき、アプリにロックをかけておかないと、勝手に送金されてしまうかもしれないよ。\nどっちも大事だ。これから対策していくよ。\n準備はいいかい？\nそれじゃあ、やっていこう。";
