@@ -4003,7 +4003,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_seclesson_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_seclesson_large' is used in storyboard 'LessonIntroductionStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_logo' is used in storyboard 'LessonIntroductionStoryboard', but couldn't be loaded.") }
         if _R.storyboard.lessonIntroductionStoryboard().lessonIntroductionView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'lessonIntroductionView' could not be loaded from storyboard 'LessonIntroductionStoryboard' as 'LessonIntroductionViewController'.") }
       }
       
