@@ -3962,7 +3962,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_seclesson_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_seclesson_large' is used in storyboard 'LessonExpertStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_logo' is used in storyboard 'LessonExpertStoryboard', but couldn't be loaded.") }
         if _R.storyboard.lessonExpertStoryboard().lessonExpertView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'lessonExpertView' could not be loaded from storyboard 'LessonExpertStoryboard' as 'LessonExpertViewController'.") }
       }
       
@@ -3979,7 +3979,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_seclesson_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_seclesson_large' is used in storyboard 'LessonImporterStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_logo' is used in storyboard 'LessonImporterStoryboard', but couldn't be loaded.") }
         if _R.storyboard.lessonImporterStoryboard().lessonImporterView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'lessonImporterView' could not be loaded from storyboard 'LessonImporterStoryboard' as 'LessonImporterViewController'.") }
       }
       

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJF-ck-jOL">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_seclesson_large" translatesAutoresizingMaskIntoConstraints="NO" id="Tqo-ft-zVb">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Tqo-ft-zVb">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="210.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Tqo-ft-zVb" secondAttribute="height" multiplier="720:404" id="jHP-at-JLd"/>
@@ -45,36 +45,25 @@
                                     <constraint firstItem="rHz-Py-0J2" firstAttribute="leading" secondItem="fJF-ck-jOL" secondAttribute="leading" constant="8" id="mk0-kA-gbo"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpb-dh-UKM">
-                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KB0-27-gZG" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
-                                        <rect key="frame" x="123.5" y="17" width="128" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="128" id="k3a-Lc-SvO"/>
-                                        </constraints>
-                                        <state key="normal" title="OK"/>
-                                        <connections>
-                                            <action selector="onTouchedOk:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="iIA-P9-16H"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.7976177377" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KB0-27-gZG" customClass="PrimaryRoundedButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                <rect key="frame" x="139.5" y="607" width="96" height="36"/>
                                 <constraints>
-                                    <constraint firstItem="KB0-27-gZG" firstAttribute="centerY" secondItem="Wpb-dh-UKM" secondAttribute="centerY" id="4gf-rA-UTg"/>
-                                    <constraint firstAttribute="height" constant="64" id="AEe-8O-Y0Y"/>
-                                    <constraint firstItem="KB0-27-gZG" firstAttribute="centerX" secondItem="Wpb-dh-UKM" secondAttribute="centerX" id="jkF-df-gWI"/>
+                                    <constraint firstAttribute="height" constant="36" id="Fif-sn-xhk"/>
+                                    <constraint firstAttribute="width" constant="96" id="k3a-Lc-SvO"/>
                                 </constraints>
-                            </view>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="onTouchedOk:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="iIA-P9-16H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="e9e-gR-ki9" firstAttribute="bottom" secondItem="fJF-ck-jOL" secondAttribute="bottom" id="19B-FV-mii"/>
                             <constraint firstItem="fJF-ck-jOL" firstAttribute="trailing" secondItem="e9e-gR-ki9" secondAttribute="trailing" id="6HQ-RL-Yxq"/>
-                            <constraint firstItem="e9e-gR-ki9" firstAttribute="trailing" secondItem="Wpb-dh-UKM" secondAttribute="trailing" id="WsR-0G-e0h"/>
+                            <constraint firstItem="KB0-27-gZG" firstAttribute="centerX" secondItem="frb-nV-Kit" secondAttribute="centerX" id="MLs-Sc-5LI"/>
                             <constraint firstItem="fJF-ck-jOL" firstAttribute="leading" secondItem="frb-nV-Kit" secondAttribute="leading" id="ek8-eJ-fDc"/>
-                            <constraint firstItem="Wpb-dh-UKM" firstAttribute="leading" secondItem="frb-nV-Kit" secondAttribute="leading" id="hQz-Ac-G25"/>
-                            <constraint firstItem="e9e-gR-ki9" firstAttribute="bottom" secondItem="Wpb-dh-UKM" secondAttribute="bottom" id="o8I-iK-cAw"/>
+                            <constraint firstItem="e9e-gR-ki9" firstAttribute="bottom" secondItem="KB0-27-gZG" secondAttribute="bottom" constant="24" id="hQY-qK-ac3"/>
                             <constraint firstItem="fJF-ck-jOL" firstAttribute="top" secondItem="e9e-gR-ki9" secondAttribute="top" id="vB5-5c-Oez"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e9e-gR-ki9"/>
@@ -89,6 +78,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heroimage_seclesson_large" width="720" height="404"/>
+        <image name="heroimage_logo" width="360" height="202"/>
     </resources>
 </document>

@@ -21,7 +21,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTN-xS-KQe">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_seclesson_large" translatesAutoresizingMaskIntoConstraints="NO" id="4C2-ss-ZWD">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_logo" translatesAutoresizingMaskIntoConstraints="NO" id="4C2-ss-ZWD">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="210.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="4C2-ss-ZWD" secondAttribute="height" multiplier="720:404" id="bH6-wq-tH4"/>
@@ -45,7 +45,7 @@
                                     <constraint firstItem="ME1-sa-L6V" firstAttribute="leading" secondItem="eTN-xS-KQe" secondAttribute="leading" constant="8" id="a5B-6I-ad0"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVd-k0-dUJ" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVd-k0-dUJ" customClass="PrimaryRoundedButton" customModule="RaccoonWallet" customModuleProvider="target">
                                 <rect key="frame" x="123.5" y="613" width="128" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="Wze-lt-RPb"/>
@@ -77,6 +77,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heroimage_seclesson_large" width="720" height="404"/>
+        <image name="heroimage_logo" width="360" height="202"/>
     </resources>
 </document>
