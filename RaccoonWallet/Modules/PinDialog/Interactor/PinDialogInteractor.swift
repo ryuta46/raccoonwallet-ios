@@ -15,7 +15,7 @@ class PinDialogInteractor: PinDialogUseCase {
         DispatchQueue.global().async { [weak self] in
             let result = PinPreference.shared.verify(pin)
             DispatchQueue.main.async {
-                self?.output.pinValidated(result)
+                self?.output.pinValidated(result, pin)
             }
         }
     }
@@ -31,11 +31,11 @@ class PinDialogInteractor: PinDialogUseCase {
                 storage.update(wallets)
 
                 DispatchQueue.main.async {
-                    self?.output.pinRegistered(true)
+                    self?.output.pinRegistered(true, newCode)
                 }
             } catch {
                 DispatchQueue.main.async {
-                    self?.output.pinRegistered(false)
+                    self?.output.pinRegistered(false, newCode)
                 }
             }
         }

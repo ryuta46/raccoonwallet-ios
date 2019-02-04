@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,37 +45,25 @@
                                     <constraint firstItem="ME1-sa-L6V" firstAttribute="leading" secondItem="eTN-xS-KQe" secondAttribute="leading" constant="8" id="a5B-6I-ad0"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZP-2d-SHR">
-                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVd-k0-dUJ" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
-                                        <rect key="frame" x="123.5" y="17" width="128" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="128" id="Wze-lt-RPb"/>
-                                        </constraints>
-                                        <state key="normal" title="OK"/>
-                                        <connections>
-                                            <action selector="onTouchedOk:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="4fa-mv-B3E"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.7976177377" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVd-k0-dUJ" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                <rect key="frame" x="123.5" y="613" width="128" height="30"/>
                                 <constraints>
-                                    <constraint firstItem="tVd-k0-dUJ" firstAttribute="centerX" secondItem="RZP-2d-SHR" secondAttribute="centerX" id="AG2-dn-Td4"/>
-                                    <constraint firstAttribute="height" constant="64" id="T4v-Qb-naR"/>
-                                    <constraint firstItem="tVd-k0-dUJ" firstAttribute="centerY" secondItem="RZP-2d-SHR" secondAttribute="centerY" id="jxN-Mh-Z1i"/>
+                                    <constraint firstAttribute="width" constant="128" id="Wze-lt-RPb"/>
                                 </constraints>
-                            </view>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="onTouchedOk:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="4fa-mv-B3E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eTN-xS-KQe" firstAttribute="leading" secondItem="zWe-0S-SlN" secondAttribute="leading" id="8R1-5X-aJt"/>
-                            <constraint firstItem="e1c-OZ-NVm" firstAttribute="trailing" secondItem="RZP-2d-SHR" secondAttribute="trailing" id="IUA-b7-nz5"/>
-                            <constraint firstItem="e1c-OZ-NVm" firstAttribute="bottom" secondItem="RZP-2d-SHR" secondAttribute="bottom" id="Oh2-O0-RXc"/>
+                            <constraint firstItem="e1c-OZ-NVm" firstAttribute="bottom" secondItem="tVd-k0-dUJ" secondAttribute="bottom" constant="24" id="I60-rk-wyu"/>
                             <constraint firstItem="eTN-xS-KQe" firstAttribute="top" secondItem="e1c-OZ-NVm" secondAttribute="top" id="Th3-1M-4fc"/>
+                            <constraint firstItem="tVd-k0-dUJ" firstAttribute="centerX" secondItem="zWe-0S-SlN" secondAttribute="centerX" id="Xh1-RJ-xWb"/>
                             <constraint firstItem="e1c-OZ-NVm" firstAttribute="bottom" secondItem="eTN-xS-KQe" secondAttribute="bottom" id="dPN-pC-yk6"/>
                             <constraint firstItem="eTN-xS-KQe" firstAttribute="trailing" secondItem="e1c-OZ-NVm" secondAttribute="trailing" id="g72-my-Xav"/>
-                            <constraint firstItem="RZP-2d-SHR" firstAttribute="leading" secondItem="zWe-0S-SlN" secondAttribute="leading" id="yki-5O-T3g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e1c-OZ-NVm"/>
                     </view>
