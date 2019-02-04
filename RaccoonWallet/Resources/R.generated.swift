@@ -4050,7 +4050,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "logo_pyoko") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo_pyoko' is used in storyboard 'MessageDialogStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "logo_raccoon_color") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo_raccoon_color' is used in storyboard 'MessageDialogStoryboard', but couldn't be loaded.") }
         if _R.storyboard.messageDialogStoryboard().messageDialogView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'messageDialogView' could not be loaded from storyboard 'MessageDialogStoryboard' as 'MessageDialogViewController'.") }
       }
       
