@@ -14,7 +14,6 @@ protocol NavigationDrawerView: BaseView {
     var presenter: NavigationDrawerPresentation! { get set }
 
     func showName(_ name: String)
-    func showAddress(_ address: String)
 }
 
 //sourcery: AutoMockable

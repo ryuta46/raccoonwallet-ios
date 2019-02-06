@@ -48,12 +48,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 106 images.
+  /// This `R.image` struct is generated, and contains static references to 109 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
     /// Image `about_open_external`.
     static let about_open_external = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_open_external")
+    /// Image `account_icon_default`.
+    static let account_icon_default = Rswift.ImageResource(bundle: R.hostingBundle, name: "account_icon_default")
     /// Image `bottom_nav_home`.
     static let bottom_nav_home = Rswift.ImageResource(bundle: R.hostingBundle, name: "bottom_nav_home")
     /// Image `bottom_nav_qr_lab`.
@@ -64,6 +66,8 @@ struct R: Rswift.Validatable {
     static let bottom_nav_scan = Rswift.ImageResource(bundle: R.hostingBundle, name: "bottom_nav_scan")
     /// Image `bottom_nav_send`.
     static let bottom_nav_send = Rswift.ImageResource(bundle: R.hostingBundle, name: "bottom_nav_send")
+    /// Image `drawer_account_image_default`.
+    static let drawer_account_image_default = Rswift.ImageResource(bundle: R.hostingBundle, name: "drawer_account_image_default")
     /// Image `heroimage_login_card`.
     static let heroimage_login_card = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_login_card")
     /// Image `heroimage_login_large`.
@@ -158,6 +162,8 @@ struct R: Rswift.Validatable {
     static let icon_menu_about = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu_about")
     /// Image `icon_menu_addressbook`.
     static let icon_menu_addressbook = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu_addressbook")
+    /// Image `icon_menu_donate`.
+    static let icon_menu_donate = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu_donate")
     /// Image `icon_menu_faucet`.
     static let icon_menu_faucet = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu_faucet")
     /// Image `icon_menu_help`.
@@ -273,6 +279,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.about_open_external, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "account_icon_default", bundle: ..., traitCollection: ...)`
+    static func account_icon_default(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.account_icon_default, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "bottom_nav_home", bundle: ..., traitCollection: ...)`
     static func bottom_nav_home(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.bottom_nav_home, compatibleWith: traitCollection)
@@ -296,6 +307,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "bottom_nav_send", bundle: ..., traitCollection: ...)`
     static func bottom_nav_send(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.bottom_nav_send, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "drawer_account_image_default", bundle: ..., traitCollection: ...)`
+    static func drawer_account_image_default(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.drawer_account_image_default, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "heroimage_login_card", bundle: ..., traitCollection: ...)`
@@ -531,6 +547,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_menu_addressbook", bundle: ..., traitCollection: ...)`
     static func icon_menu_addressbook(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_menu_addressbook, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_menu_donate", bundle: ..., traitCollection: ...)`
+    static func icon_menu_donate(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_menu_donate, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_menu_faucet", bundle: ..., traitCollection: ...)`
@@ -4101,13 +4122,13 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "icon_menu_home") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_menu_home' is used in storyboard 'NavigationDrawerStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon_menu_setting") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_menu_setting' is used in storyboard 'NavigationDrawerStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon_menu_faucet") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_menu_faucet' is used in storyboard 'NavigationDrawerStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "drawer_account_image_default") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'drawer_account_image_default' is used in storyboard 'NavigationDrawerStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_menu_mosaic") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_menu_mosaic' is used in storyboard 'NavigationDrawerStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_menu_donate") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_menu_donate' is used in storyboard 'NavigationDrawerStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_menu_about") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_menu_about' is used in storyboard 'NavigationDrawerStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_menu_addressbook") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_menu_addressbook' is used in storyboard 'NavigationDrawerStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "image_menu_default") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_menu_default' is used in storyboard 'NavigationDrawerStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "logo_pyoko") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo_pyoko' is used in storyboard 'NavigationDrawerStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "account_icon_default") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'account_icon_default' is used in storyboard 'NavigationDrawerStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_menu_setting") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_menu_setting' is used in storyboard 'NavigationDrawerStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_menu_help") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_menu_help' is used in storyboard 'NavigationDrawerStoryboard', but couldn't be loaded.") }
         if _R.storyboard.navigationDrawerStoryboard().navigationDrawerView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'navigationDrawerView' could not be loaded from storyboard 'NavigationDrawerStoryboard' as 'NavigationDrawerViewController'.") }
       }
