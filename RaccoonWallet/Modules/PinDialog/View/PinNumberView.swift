@@ -40,7 +40,7 @@ class PinNumberView: UIView {
         self.addSubview(view)
 
         backgroundColor = UIColor.clear
-        numberButton.layer.borderColor = UIColor.white.cgColor
+        numberButton.layer.borderColor = UIColor.black.cgColor
         numberButton.layer.borderWidth = 2
 
         numberButton.layer.cornerRadius = 10.0

@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 109 images.
+  /// This `R.image` struct is generated, and contains static references to 110 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -256,6 +256,8 @@ struct R: Rswift.Validatable {
     static let logo_pyoko = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_pyoko")
     /// Image `logo_raccoon_color`.
     static let logo_raccoon_color = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_raccoon_color")
+    /// Image `pin_dialog_delete`.
+    static let pin_dialog_delete = Rswift.ImageResource(bundle: R.hostingBundle, name: "pin_dialog_delete")
     /// Image `tab_home_balance`.
     static let tab_home_balance = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_home_balance")
     /// Image `tab_home_harvest`.
@@ -782,6 +784,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "logo_raccoon_color", bundle: ..., traitCollection: ...)`
     static func logo_raccoon_color(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.logo_raccoon_color, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "pin_dialog_delete", bundle: ..., traitCollection: ...)`
+    static func pin_dialog_delete(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pin_dialog_delete, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "tab_home_balance", bundle: ..., traitCollection: ...)`
@@ -4163,8 +4170,9 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if UIKit.UIImage(named: "pin_dialog_delete") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'pin_dialog_delete' is used in storyboard 'PinDialogStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_back") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_back' is used in storyboard 'PinDialogStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "top_icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'top_icon' is used in storyboard 'PinDialogStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "logo_raccoon_color") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo_raccoon_color' is used in storyboard 'PinDialogStoryboard', but couldn't be loaded.") }
         if _R.storyboard.pinDialogStoryboard().pinDialogView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'pinDialogView' could not be loaded from storyboard 'PinDialogStoryboard' as 'PinDialogViewController'.") }
       }
       

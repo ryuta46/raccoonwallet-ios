@@ -28,6 +28,7 @@ protocol PinDialogPresentation: BasePresentation {
     var router: PinDialogWireframe! { get set }
     
     func didClickNumber(_ number: Int)
+    func didClickDelete()
     func didClickCancel()
 }
 

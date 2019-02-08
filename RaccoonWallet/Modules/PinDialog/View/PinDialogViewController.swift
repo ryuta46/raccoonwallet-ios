@@ -35,6 +35,8 @@ class PinDialogViewController: BaseViewController{
     var pinInputs: [PinInputView]!
     var pinNumbers: [PinNumberView]!
 
+    @IBOutlet weak var deleteButton: UIButton!
+    
     override func setup() {
         super.setup()
 
@@ -67,10 +69,31 @@ class PinDialogViewController: BaseViewController{
             pair.element.number = pair.offset
             pair.element.delegate = self
         }
+        
+        deleteButton.setImage(self.createImageFromUIColor(color: UIColor.white), for: .highlighted)
     }
     
     @IBAction func onTouchedBack(_ sender: Any) {
         presenter.didClickCancel()
+    }
+    
+    @IBAction func onTouchedDelete(_ sender: Any) {
+        presenter.didClickDelete()
+    }
+    
+    private func createImageFromUIColor(color: UIColor) -> UIImage? {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
+
+        context.setFillColor(color.cgColor)
+        context.fill(rect)
+
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
     }
 }
 

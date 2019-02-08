@@ -67,11 +67,18 @@ extension PinDialogPresenter : PinDialogPresentation {
     func didClickNumber(_ number: Int) {
         if (pin.count < PinDialogPresenter.PIN_LENGTH) {
             pin += String(number)
+            proceed()
         }
-        proceed()
     }
     func didClickCancel() {
         router.dismiss(pin: nil, handler)
+    }
+    
+    func didClickDelete() {
+        if pin.count > 0 && pin.count < PinDialogPresenter.PIN_LENGTH{
+            pin = String(pin.prefix(pin.count - 1))
+            view?.showInputted(pin.count)
+        }
     }
 
     private func proceed() {
