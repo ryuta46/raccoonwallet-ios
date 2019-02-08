@@ -12,7 +12,7 @@ class PinInputView: UIView {
     var isInputted: Bool = false {
         didSet {
             if isInputted {
-                backgroundColor = UIColor.white
+                backgroundColor = UIColor.darkGray
             } else {
                 backgroundColor = UIColor.clear
             }
@@ -31,7 +31,7 @@ class PinInputView: UIView {
 
     private func setup() {
         backgroundColor = UIColor.clear
-        layer.borderColor = UIColor.white.cgColor
+        layer.borderColor = UIColor.darkGray.cgColor
         layer.borderWidth = 2
 
         layer.cornerRadius = 5.0
