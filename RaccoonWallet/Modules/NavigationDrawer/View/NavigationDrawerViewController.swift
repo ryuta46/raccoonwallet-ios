@@ -13,7 +13,6 @@ class NavigationDrawerViewController: BaseViewController {
     
     @IBOutlet weak var statusBackground: UIView!
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var address: UILabel!
     @IBOutlet weak var homeItem: UIStackView!
     @IBOutlet weak var homeLabel: UILabel!
     @IBOutlet weak var addressBookItem: UIStackView!
@@ -32,7 +31,7 @@ class NavigationDrawerViewController: BaseViewController {
     override func setup() {
         super.setup()
 
-        statusBackground.backgroundColor = Theme.primary
+//        statusBackground.backgroundColor = Theme.primary
         
         homeLabel.text = "HOME"
         addressBookLabel.text = R.string.localizable.common_address_book()
@@ -84,9 +83,5 @@ class NavigationDrawerViewController: BaseViewController {
 extension NavigationDrawerViewController: NavigationDrawerView {
     func showName(_ name: String) {
         self.name.text = name
-    }
-
-    func showAddress(_ address: String) {
-        self.address.text = address
     }
 }

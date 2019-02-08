@@ -18,10 +18,8 @@ class NavigationDrawerPresenter: BasePresenter {
 
         if let wallet = WalletHelper.activeWallet {
             view?.showName(wallet.name)
-            view?.showAddress(wallet.address.prettyAddress())
         } else {
             view?.showName(R.string.localizable.common_not_select())
-            view?.showAddress("-")
         }
     }
 }
