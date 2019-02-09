@@ -9,10 +9,14 @@
 import Foundation
 import RxSwift
 
-class SendAmountInteractor: NemServiceInteractor, SendAmountUseCase {
+class SendAmountInteractor: NemServiceInteractor, RateServiceUseCase, SendAmountUseCase {
     weak var output: SendAmountInteractorOutput!
 
     func fetchMosaicOwned(_ address: String) {
         fetchMosaicOwned(address, output)
+    }
+
+    func fetchRate(_ currency: Currency) {
+        fetchRate(currency, output)
     }
 }

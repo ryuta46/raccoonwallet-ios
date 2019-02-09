@@ -14,38 +14,69 @@ class SendAmountPresenter : BasePresenter {
     var interactor: SendAmountUseCase!
     var router: SendAmountWireframe!
     var sendTransaction: SendTransaction!
-    var selectedMosaics: [MosaicDetail] = []
-    var selectedNonXemMosaics: [MosaicDetail] {
+    private var selectedMosaics: [MosaicDetail] = []
+    private var selectedNonXemMosaics: [MosaicDetail] {
         return selectedMosaics.filter { !$0.isXem() }
     }
-    var isXemSelected: Bool {
+    private var isXemSelected: Bool {
         return selectedMosaics.contains { $0.isXem() }
     }
-    var ownedMosaics: [MosaicDetail] = []
-    var activePageIndex: Int = 0
-    var activeFormula: String = "0"
-    var mosaicWithXem: Bool = false
-    var currentAddress: String = ""
+    private var ownedXem: MosaicDetail? = nil
+    private var ownedMosaics: [MosaicDetail] = []
+    private var activePageIndex: Int = 0
+    private var activeFormula: String = "0"
+    private var mosaicWithXem: Bool = false
+    private var currentAddress: String = ""
 
-    private var mosaicAmountDescriptions: [String] {
+
+    private var localCurrencyRate: Decimal? = nil
+    // TODO: How to decide this ?
+    private let localCurrency = Currency.jpy
+
+    private var mosaicDescriptions: [SendMosaicDescription] {
         return selectedMosaics.enumerated().map {
             let index = $0.0
             let mosaic = $0.1
+
+            let amountDescription: String
+
             if index == activePageIndex {
                 if mosaic.isXem() {
-                    return activeFormula + " XEM"
+                    amountDescription = activeFormula + " XEM"
                 } else {
-                    return activeFormula + " \(mosaic.identifier)"
+                    amountDescription = activeFormula + " \(mosaic.identifier)"
                 }
             } else {
-                return mosaic.amountDescription
+                amountDescription = mosaic.amountDescription
             }
+
+            let balanceDescription: String?
+            let localCurrencyDescription: String?
+            if mosaic.isXem() {
+                balanceDescription = ownedXem?.amountDescription
+                if let rate = localCurrencyRate {
+                    let localCurrencyValue = (mosaic.amount * rate).round(localCurrency.precision)
+                    localCurrencyDescription = "= \(localCurrencyValue.description) \(localCurrency.rawValue)"
+                } else {
+                    localCurrencyDescription = nil
+                }
+
+            } else {
+                balanceDescription = ownedMosaics.first(where: { $0.identifier == mosaic.identifier })?.amountDescription
+                localCurrencyDescription = nil
+            }
+
+            return SendMosaicDescription(
+                    amount: amountDescription,
+                    localCurrency: localCurrencyDescription,
+                    balance: balanceDescription)
         }
     }
 
     override func viewDidLoad() {
         view?.showAmount()
         selectedMosaics = [MosaicDetail.xem(0)]
+        interactor.fetchRate(localCurrency)
     }
 
     override func viewWillAppear() {
@@ -89,17 +120,17 @@ extension SendAmountPresenter : SendAmountPresentation {
             activeFormula = activeMosaic.amount.description
             view?.setFormula(activeFormula)
         }
-        view?.setAmounts(mosaicAmountDescriptions)
+        view?.setSendMosaicDescriptions(mosaicDescriptions)
     }
 
     func didChangeFormula(_ formula: String) {
         activeFormula = formula
-        view?.setAmounts(mosaicAmountDescriptions)
+        view?.setSendMosaicDescriptions(mosaicDescriptions)
     }
     func didCalculateFormula(_ value: Decimal) {
         if let activeMosaic = selectedMosaics[safe: activePageIndex] {
             selectedMosaics[activePageIndex] = activeMosaic.replaced(amount: value)
-            view?.setAmounts(mosaicAmountDescriptions)
+            view?.setSendMosaicDescriptions(mosaicDescriptions)
         }
     }
 
@@ -172,7 +203,7 @@ extension SendAmountPresenter : SendAmountPresentation {
         sortSelectedMosaics()
         activePageIndex = 0
         activeFormula = selectedMosaics[0].amount.description
-        view?.setAmounts(mosaicAmountDescriptions)
+        view?.setSendMosaicDescriptions(mosaicDescriptions)
         view?.showFirstAmountPage()
         view?.setFormula(activeFormula)
     }
@@ -181,8 +212,11 @@ extension SendAmountPresenter : SendAmountPresentation {
 
 extension SendAmountPresenter : SendAmountInteractorOutput {
     func mosaicOwnedFetched(_ mosaics: [MosaicDetail]) {
+        ownedXem = mosaics.first(where: { $0.isXem() })
         ownedMosaics = mosaics.filter { !$0.isXem() }
-        
+
+
+        view?.setSendMosaicDescriptions(mosaicDescriptions)
         view?.showMosaicOwned(ownedMosaics, selected: selectedMosaics)
         view?.hideMosaicWithXem(animated: false)
     }
@@ -190,4 +224,16 @@ extension SendAmountPresenter : SendAmountInteractorOutput {
     func mosaicOwnedFetchFailed(_ error: Error) {
         view?.showError(R.string.localizable.common_error_network())
     }
+}
+
+extension SendAmountPresenter : RateServiceInteractorOutput {
+    func rateFetched(_ rate: Decimal) {
+        localCurrencyRate = rate
+        view?.setSendMosaicDescriptions(mosaicDescriptions)
+    }
+
+    func rateFetchFailed(_ error: Error) {
+        view?.showError(R.string.localizable.common_error_network())
+    }
+
 }
