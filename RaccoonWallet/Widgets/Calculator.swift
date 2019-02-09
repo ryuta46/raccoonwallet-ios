@@ -32,7 +32,8 @@ class Calculator: UIView {
     
     @IBOutlet weak var clear: UIButton!
     
-    @IBOutlet weak var go: OrangeSolidButton!
+    @IBOutlet weak var maxInput: UIButton!
+    @IBOutlet weak var go: UIButton!
     @IBOutlet weak var minus: UIButton!
     @IBOutlet weak var plus: UIButton!
     @IBOutlet weak var mult: UIButton!
@@ -61,11 +62,13 @@ class Calculator: UIView {
         view.frame = self.bounds
         self.addSubview(view)
 
-        minus.backgroundColor = Theme.primary
-        plus.backgroundColor = Theme.primary
-        mult.backgroundColor = Theme.primary
-        divide.backgroundColor = Theme.primary
-        equal.backgroundColor = Theme.primary
+        clear.backgroundColor = Theme.baseBackground
+        minus.backgroundColor = Theme.baseBackground
+        plus.backgroundColor = Theme.baseBackground
+        mult.backgroundColor = Theme.baseBackground
+        divide.backgroundColor = Theme.baseBackground
+        equal.backgroundColor = Theme.baseBackground
+        maxInput.backgroundColor = Theme.baseBackground
 
         let numbers = [
             number0, number1, number2, number3, number4,
@@ -115,6 +118,8 @@ class Calculator: UIView {
         clearFormula()
     }
 
+    @IBAction func onTouchedMax(_ sender: Any) {
+    }
     @objc func onTouchedGo(_ sender: Any) {
         if let evaluated = try? formula.evaluate() {
             let value = Decimal(evaluated).round(precision)
@@ -197,12 +202,12 @@ class Calculator: UIView {
     }
 
     private func notifyFormulaCalculated(_ value: Decimal) {
-        delegate?.onCalculated(value)
+        delegate?.onCalculated(max(value, 0))
     }
 
 
     private func notifyFormulaConfirmed(_ value: Decimal) {
-        delegate?.onConfirmed(value)
+        delegate?.onConfirmed(max(value, 0))
     }
 
 
