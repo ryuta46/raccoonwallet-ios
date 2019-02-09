@@ -8,6 +8,12 @@
 
 import UIKit
 
+struct SendMosaicDescription {
+    let amount: String
+    let localCurrency: String?
+    let balance: String?
+}
+
 //sourcery: AutoMockable
 protocol SendAmountView: BaseView {
     var presenter: SendAmountPresentation! { get set }
@@ -16,7 +22,7 @@ protocol SendAmountView: BaseView {
     func showMosaic()
 
     func showFirstAmountPage()
-    func setAmounts(_ amounts: [String])
+    func setSendMosaicDescriptions(_ mosaicDescriptions: [SendMosaicDescription])
     func setFormula(_ formula: String)
 
     func showLoading()
@@ -50,10 +56,11 @@ protocol SendAmountUseCase: class {
     var output: SendAmountInteractorOutput! { get set }
 
     func fetchMosaicOwned(_ address: String)
+    func fetchRate(_ currency: Currency)
 }
 
 //sourcery: AutoMockable
-protocol SendAmountInteractorOutput: NemServiceMosaicOwnedOutput {
+protocol SendAmountInteractorOutput: NemServiceMosaicOwnedOutput, RateServiceInteractorOutput {
 }
 
 //sourcery: AutoMockable

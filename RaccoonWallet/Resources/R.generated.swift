@@ -1320,7 +1320,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 206 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 207 localization keys.
     struct localizable {
       /// en translation: 
       /// 
@@ -2002,6 +2002,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let lesson_beginner_backup_end_title = Rswift.StringResource(key: "lesson_beginner_backup_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 残高
+      /// 
+      /// Locales: en, ja
+      static let common_balance = Rswift.StringResource(key: "common_balance", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 残高が足りません！
       /// 
       /// Locales: en, ja
@@ -3337,6 +3341,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("lesson_beginner_backup_end_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: 残高
+      /// 
+      /// Locales: en, ja
+      static func common_balance(_: Void = ()) -> String {
+        return NSLocalizedString("common_balance", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: 残高が足りません！
       /// 
       /// Locales: en, ja
@@ -4295,7 +4306,6 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_send_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_send_small' is used in storyboard 'SendAmountStoryboard', but couldn't be loaded.") }
         if _R.storyboard.sendAmountStoryboard().sendAmountView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'sendAmountView' could not be loaded from storyboard 'SendAmountStoryboard' as 'SendAmountViewController'.") }
       }
       

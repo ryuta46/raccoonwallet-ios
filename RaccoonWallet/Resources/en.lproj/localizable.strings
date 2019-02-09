@@ -25,6 +25,7 @@
 "common_destination" = "送り先";
 "common_fee" = "手数料";
 "common_amount" = "金額";
+"common_balance" = "残高";
 "common_invalid_address" = "無効なアドレスです";
 "common_message" = "メッセージ";
 "common_message_input" = "メッセージを入力";

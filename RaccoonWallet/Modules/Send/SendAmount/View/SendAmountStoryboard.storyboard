@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,37 +18,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_send_small" translatesAutoresizingMaskIntoConstraints="NO" id="873-xU-PUR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="104"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="873-xU-PUR" secondAttribute="height" multiplier="720:200" id="d8i-85-hIs"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNf-zh-N3T" customClass="WalletBar" customModule="RaccoonWallet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="ueq-gd-lSZ"/>
+                                    <constraint firstAttribute="height" constant="48" id="ueq-gd-lSZ"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmO-bu-fu2">
-                                <rect key="frame" x="0.0" y="164" width="375" height="8"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="8"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="09p-FR-bI4"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOT-YO-i56">
-                                <rect key="frame" x="0.0" y="124" width="375" height="48"/>
+                                <rect key="frame" x="0.0" y="68" width="375" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="15C-RP-dht"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="of7-E8-0Ve">
-                                <rect key="frame" x="0.0" y="180" width="375" height="487"/>
+                                <rect key="frame" x="0.0" y="124" width="375" height="543"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yjj-6p-HVS">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="355.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="396.5"/>
                                         <subviews>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="1" translatesAutoresizingMaskIntoConstraints="NO" id="OLM-uz-iEN">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="32"/>
@@ -59,13 +53,13 @@
                                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.76470588240000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                             </pageControl>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="254" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOu-ea-Kc5">
-                                                <rect key="frame" x="0.0" y="32" width="375" height="56.5"/>
+                                                <rect key="frame" x="0.0" y="32" width="375" height="97.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gB8-dS-8ln">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEi-hk-YYK" customClass="SendAmountPage" customModule="RaccoonWallet" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                         </subviews>
@@ -81,7 +75,7 @@
                                                 </constraints>
                                             </scrollView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCR-sJ-LhM" customClass="Calculator" customModule="RaccoonWallet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="88.5" width="375" height="267"/>
+                                                <rect key="frame" x="0.0" y="129.5" width="375" height="267"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -91,7 +85,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pyS-S4-4v9">
-                                        <rect key="frame" x="0.0" y="355.5" width="375" height="131.5"/>
+                                        <rect key="frame" x="0.0" y="396.5" width="375" height="146.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FCX-XZ-jDK">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="31"/>
@@ -111,7 +105,7 @@
                                                 </subviews>
                                             </stackView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="247" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z2H-dU-qbj">
-                                                <rect key="frame" x="0.0" y="39" width="375" height="92.5"/>
+                                                <rect key="frame" x="0.0" y="39" width="375" height="107.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sendAmountMosaicCell" textLabel="i4t-k3-rv8" detailTextLabel="7BN-Er-y1e" style="IBUITableViewCellStyleValue1" id="fTc-eR-SqZ">
@@ -147,18 +141,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="873-xU-PUR" firstAttribute="top" secondItem="ZLz-50-8tk" secondAttribute="top" id="5qT-HX-eVa"/>
-                            <constraint firstItem="uOT-YO-i56" firstAttribute="top" secondItem="873-xU-PUR" secondAttribute="bottom" id="Aro-jF-1r0"/>
+                            <constraint firstItem="uOT-YO-i56" firstAttribute="top" secondItem="BNf-zh-N3T" secondAttribute="bottom" id="AU7-Z8-a7I"/>
                             <constraint firstItem="of7-E8-0Ve" firstAttribute="top" secondItem="lmO-bu-fu2" secondAttribute="bottom" constant="8" id="B5s-tQ-dT4"/>
                             <constraint firstItem="BNf-zh-N3T" firstAttribute="top" secondItem="ZLz-50-8tk" secondAttribute="top" id="DSf-Vw-5yC"/>
                             <constraint firstItem="BNf-zh-N3T" firstAttribute="leading" secondItem="E4u-ZL-3IK" secondAttribute="leading" id="GTv-m8-upy"/>
                             <constraint firstItem="ZLz-50-8tk" firstAttribute="trailing" secondItem="lmO-bu-fu2" secondAttribute="trailing" id="HRp-ls-xHi"/>
                             <constraint firstAttribute="bottom" secondItem="of7-E8-0Ve" secondAttribute="bottom" id="JEK-x7-JUy"/>
                             <constraint firstItem="ZLz-50-8tk" firstAttribute="trailing" secondItem="of7-E8-0Ve" secondAttribute="trailing" id="MVZ-j4-yBk"/>
-                            <constraint firstItem="ZLz-50-8tk" firstAttribute="trailing" secondItem="873-xU-PUR" secondAttribute="trailing" id="Nav-G0-6fm"/>
                             <constraint firstItem="ZLz-50-8tk" firstAttribute="trailing" secondItem="uOT-YO-i56" secondAttribute="trailing" id="Sfh-Kb-f54"/>
                             <constraint firstItem="lmO-bu-fu2" firstAttribute="leading" secondItem="ZLz-50-8tk" secondAttribute="leading" id="Uaa-eh-HPg"/>
-                            <constraint firstItem="873-xU-PUR" firstAttribute="leading" secondItem="ZLz-50-8tk" secondAttribute="leading" id="dB7-hI-h0D"/>
                             <constraint firstItem="of7-E8-0Ve" firstAttribute="leading" secondItem="ZLz-50-8tk" secondAttribute="leading" id="esw-Pf-8Fu"/>
                             <constraint firstItem="uOT-YO-i56" firstAttribute="leading" secondItem="ZLz-50-8tk" secondAttribute="leading" id="pfi-8L-Bl1"/>
                             <constraint firstAttribute="trailing" secondItem="BNf-zh-N3T" secondAttribute="trailing" id="qNJ-hR-bY9"/>
@@ -188,7 +179,4 @@
             <point key="canvasLocation" x="-354.39999999999998" y="63.418290854572717"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="heroimage_send_small" width="720" height="200"/>
-    </resources>
 </document>

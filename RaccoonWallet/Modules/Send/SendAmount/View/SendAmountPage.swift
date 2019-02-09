@@ -11,7 +11,11 @@ import UIKit
 class SendAmountPage: UIView {
     @IBOutlet weak var headline: UILabel!
     @IBOutlet weak var amount: UILabel!
-
+    @IBOutlet weak var balanceHeadline: UILabel!
+    @IBOutlet weak var balance: UILabel!
+    @IBOutlet weak var localCurrencyAmount: UILabel!
+    
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -27,8 +31,8 @@ class SendAmountPage: UIView {
         view.frame = self.bounds
         self.addSubview(view)
 
-        headline.textColor = Theme.primary
         headline.text = R.string.localizable.common_amount()
+        balance.text = R.string.localizable.common_balance()
     }
 
 }

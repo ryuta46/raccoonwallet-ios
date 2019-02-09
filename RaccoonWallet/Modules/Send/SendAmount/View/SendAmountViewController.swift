@@ -126,13 +126,13 @@ extension SendAmountViewController: SendAmountView {
         amountPageIndicator.currentPage = 0
     }
 
-    func setAmounts(_ amounts: [String]) {
-        if amounts.count != amountPages.subviews.count {
+    func setSendMosaicDescriptions(_ mosaicDescriptions: [SendMosaicDescription]) {
+        if mosaicDescriptions.count != amountPages.subviews.count {
             // clear old subviews
             let oldSubviews = amountPages.subviews
             oldSubviews.forEach { $0.removeFromSuperview() }
             // add pages
-            for _ in 0..<amounts.count {
+            for _ in 0..<mosaicDescriptions.count {
                 let page = SendAmountPage(frame: amountPageScrollView.bounds)
                 amountPages.addArrangedSubview(page)
 
@@ -140,14 +140,16 @@ extension SendAmountViewController: SendAmountView {
                 page.heightAnchor.constraint(equalTo: amountPages.heightAnchor, multiplier: 1).isActive = true
             }
             amountPages.layoutIfNeeded()
-            amountPageIndicator.numberOfPages = amounts.count
+            amountPageIndicator.numberOfPages = mosaicDescriptions.count
         }
 
-        amounts.enumerated().forEach {
+        mosaicDescriptions.enumerated().forEach {
             let index = $0.0
-            let value = $0.1
+            let mosaicDescription = $0.1
             if let page = amountPages.subviews[safe: index] as? SendAmountPage {
-                page.amount.text = value
+                page.amount.text = mosaicDescription.amount
+                page.localCurrencyAmount.text = mosaicDescription.localCurrency ?? " "
+                page.balance.text = mosaicDescription.balance ?? " "
             }
         }
     }

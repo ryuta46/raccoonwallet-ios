@@ -186,7 +186,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="92" height="128"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                    <state key="normal">
+                                    <state key="normal" title=" ">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
