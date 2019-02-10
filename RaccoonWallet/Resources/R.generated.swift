@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 109 images.
+  /// This `R.image` struct is generated, and contains static references to 112 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -108,6 +108,8 @@ struct R: Rswift.Validatable {
     static let icon_balance = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_balance")
     /// Image `icon_box_next`.
     static let icon_box_next = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_box_next")
+    /// Image `icon_caution-1`.
+    static let icon_caution1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_caution-1")
     /// Image `icon_caution`.
     static let icon_caution = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_caution")
     /// Image `icon_check_gray_on`.
@@ -238,6 +240,10 @@ struct R: Rswift.Validatable {
     static let image_lesson_card3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_lesson_card3")
     /// Image `image_menu_default`.
     static let image_menu_default = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_menu_default")
+    /// Image `image_send_message_encrypted`.
+    static let image_send_message_encrypted = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_send_message_encrypted")
+    /// Image `image_send_message_plain`.
+    static let image_send_message_plain = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_send_message_plain")
     /// Image `image_send_mode`.
     static let image_send_mode = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_send_mode")
     /// Image `image_transaction_background_bottom`.
@@ -417,6 +423,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_caution", bundle: ..., traitCollection: ...)`
     static func icon_caution(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_caution, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_caution-1", bundle: ..., traitCollection: ...)`
+    static func icon_caution1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_caution1, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_check_gray", bundle: ..., traitCollection: ...)`
@@ -737,6 +748,16 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "image_menu_default", bundle: ..., traitCollection: ...)`
     static func image_menu_default(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.image_menu_default, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "image_send_message_encrypted", bundle: ..., traitCollection: ...)`
+    static func image_send_message_encrypted(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.image_send_message_encrypted, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "image_send_message_plain", bundle: ..., traitCollection: ...)`
+    static func image_send_message_plain(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.image_send_message_plain, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "image_send_mode", bundle: ..., traitCollection: ...)`
@@ -1313,7 +1334,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 209 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 210 localization keys.
     struct localizable {
       /// en translation: 
       /// 
@@ -1819,7 +1840,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let send_mode_select_message = Rswift.StringResource(key: "send_mode_select_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: メッセージタイプを選択
+      /// en translation: メッセージタイプの暗号化設定
       /// 
       /// Locales: en, ja
       static let send_message_type_select_title = Rswift.StringResource(key: "send_message_type_select_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
@@ -1919,6 +1940,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let common_delete = Rswift.StringResource(key: "common_delete", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 取引所入金時の認証番号に使う場合は問題の原因になりますので、絶対に暗号化は指定しないでください
+      /// 
+      /// Locales: en, ja
+      static let send_message_encrypted_caution = Rswift.StringResource(key: "send_message_encrypted_caution", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 君が送ろうとしているアドレスは、これまで一度もブロックチェーン上で活動していない新参者みたいだね。とはいえアドレスがちゃんとした形式なら、送金は可能だよ。 アドレスは正しいか、送り先は信頼できるか、よく確かめてから手続きしてね。
       /// 
       /// Locales: en, ja
@@ -1967,10 +1992,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let wallet_rename_hint = Rswift.StringResource(key: "wallet_rename_hint", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: 普通のお手紙です。 お礼の言葉を添えたりするときは、こっちでいいと思うよ。 認証番号もこっち。
-      /// 
-      /// Locales: en, ja
-      static let send_message_standard_message = Rswift.StringResource(key: "send_message_standard_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 普通の送金でいいよ
       /// 
       /// Locales: en
@@ -1978,7 +1999,7 @@ struct R: Rswift.Validatable {
       /// en translation: 暗号化メッセージ
       /// 
       /// Locales: en, ja
-      static let send_message_encryption_title = Rswift.StringResource(key: "send_message_encryption_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      static let send_message_encrypted_title = Rswift.StringResource(key: "send_message_encrypted_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 暗号化メッセージを送るには、暗号化に必要な公開鍵と呼ばれるコードを送り先が所持している必要があります。 現在指定されている送り先は公開鍵を所持していないため、暗号化メッセージは送れません。
       /// 
       /// Locales: en, ja
@@ -2063,10 +2084,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let setting_require_pin_on_launch = Rswift.StringResource(key: "setting_require_pin_on_launch", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: 軍事レベルの暗号化技術でプライバシーを確保しましょう。認証番号などに使う場合は、問題の原因になるからオススメしないよ！
+      /// en translation: 軍事レベルの暗号化技術でメッセージを安全に送信します
       /// 
       /// Locales: en, ja
-      static let send_message_encryption_message = Rswift.StringResource(key: "send_message_encryption_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      static let send_message_encrypted_description = Rswift.StringResource(key: "send_message_encrypted_description", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 送り先
       /// 
       /// Locales: en, ja
@@ -2110,7 +2131,11 @@ struct R: Rswift.Validatable {
       /// en translation: 通常のメッセージ
       /// 
       /// Locales: en, ja
-      static let send_message_standard_title = Rswift.StringResource(key: "send_message_standard_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      static let send_message_plain_title = Rswift.StringResource(key: "send_message_plain_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 通常のメッセージです。 取引所への認証番号を入力する際は、必ずこちらで行いましょう。
+      /// 
+      /// Locales: en, ja
+      static let send_message_plain_description = Rswift.StringResource(key: "send_message_plain_description", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 通知設定
       /// 
       /// Locales: en, ja
@@ -3034,7 +3059,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("send_mode_select_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: メッセージタイプを選択
+      /// en translation: メッセージタイプの暗号化設定
       /// 
       /// Locales: en, ja
       static func send_message_type_select_title(_: Void = ()) -> String {
@@ -3209,6 +3234,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("common_delete", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: 取引所入金時の認証番号に使う場合は問題の原因になりますので、絶対に暗号化は指定しないでください
+      /// 
+      /// Locales: en, ja
+      static func send_message_encrypted_caution(_: Void = ()) -> String {
+        return NSLocalizedString("send_message_encrypted_caution", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: 君が送ろうとしているアドレスは、これまで一度もブロックチェーン上で活動していない新参者みたいだね。とはいえアドレスがちゃんとした形式なら、送金は可能だよ。 アドレスは正しいか、送り先は信頼できるか、よく確かめてから手続きしてね。
       /// 
       /// Locales: en, ja
@@ -3293,13 +3325,6 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("wallet_rename_hint", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: 普通のお手紙です。 お礼の言葉を添えたりするときは、こっちでいいと思うよ。 認証番号もこっち。
-      /// 
-      /// Locales: en, ja
-      static func send_message_standard_message(_: Void = ()) -> String {
-        return NSLocalizedString("send_message_standard_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: 普通の送金でいいよ
       /// 
       /// Locales: en
@@ -3310,8 +3335,8 @@ struct R: Rswift.Validatable {
       /// en translation: 暗号化メッセージ
       /// 
       /// Locales: en, ja
-      static func send_message_encryption_title(_: Void = ()) -> String {
-        return NSLocalizedString("send_message_encryption_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func send_message_encrypted_title(_: Void = ()) -> String {
+        return NSLocalizedString("send_message_encrypted_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 暗号化メッセージを送るには、暗号化に必要な公開鍵と呼ばれるコードを送り先が所持している必要があります。 現在指定されている送り先は公開鍵を所持していないため、暗号化メッセージは送れません。
@@ -3461,11 +3486,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("setting_require_pin_on_launch", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: 軍事レベルの暗号化技術でプライバシーを確保しましょう。認証番号などに使う場合は、問題の原因になるからオススメしないよ！
+      /// en translation: 軍事レベルの暗号化技術でメッセージを安全に送信します
       /// 
       /// Locales: en, ja
-      static func send_message_encryption_message(_: Void = ()) -> String {
-        return NSLocalizedString("send_message_encryption_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func send_message_encrypted_description(_: Void = ()) -> String {
+        return NSLocalizedString("send_message_encrypted_description", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 送り先
@@ -3541,8 +3566,15 @@ struct R: Rswift.Validatable {
       /// en translation: 通常のメッセージ
       /// 
       /// Locales: en, ja
-      static func send_message_standard_title(_: Void = ()) -> String {
-        return NSLocalizedString("send_message_standard_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func send_message_plain_title(_: Void = ()) -> String {
+        return NSLocalizedString("send_message_plain_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 通常のメッセージです。 取引所への認証番号を入力する際は、必ずこちらで行いましょう。
+      /// 
+      /// Locales: en, ja
+      static func send_message_plain_description(_: Void = ()) -> String {
+        return NSLocalizedString("send_message_plain_description", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 通知設定
@@ -4389,9 +4421,9 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_send_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_send_small' is used in storyboard 'SendMessageTypeStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon_message_encryption") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_message_encryption' is used in storyboard 'SendMessageTypeStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon_message_standard") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_message_standard' is used in storyboard 'SendMessageTypeStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "image_send_message_encrypted") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_send_message_encrypted' is used in storyboard 'SendMessageTypeStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_caution") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_caution' is used in storyboard 'SendMessageTypeStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "image_send_message_plain") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_send_message_plain' is used in storyboard 'SendMessageTypeStoryboard', but couldn't be loaded.") }
         if _R.storyboard.sendMessageTypeStoryboard().sendMessageTypeView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'sendMessageTypeView' could not be loaded from storyboard 'SendMessageTypeStoryboard' as 'SendMessageTypeViewController'.") }
       }
       
