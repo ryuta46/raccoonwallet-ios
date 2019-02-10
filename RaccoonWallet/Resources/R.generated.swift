@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 112 images.
+  /// This `R.image` struct is generated, and contains static references to 111 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -108,8 +108,6 @@ struct R: Rswift.Validatable {
     static let icon_balance = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_balance")
     /// Image `icon_box_next`.
     static let icon_box_next = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_box_next")
-    /// Image `icon_caution-1`.
-    static let icon_caution1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_caution-1")
     /// Image `icon_caution`.
     static let icon_caution = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_caution")
     /// Image `icon_check_gray_on`.
@@ -423,11 +421,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_caution", bundle: ..., traitCollection: ...)`
     static func icon_caution(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_caution, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "icon_caution-1", bundle: ..., traitCollection: ...)`
-    static func icon_caution1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_caution1, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_check_gray", bundle: ..., traitCollection: ...)`
@@ -4369,7 +4362,6 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_send_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_send_small' is used in storyboard 'SendConfirmationStoryboard', but couldn't be loaded.") }
         if _R.storyboard.sendConfirmationStoryboard().sendConfirmationView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'sendConfirmationView' could not be loaded from storyboard 'SendConfirmationStoryboard' as 'SendConfirmationViewController'.") }
       }
       
