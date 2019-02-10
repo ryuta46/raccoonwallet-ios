@@ -179,16 +179,10 @@
 "send_amount_setting" = "送金操作";
 "send_mosaic_setting" = "モザイク添付";
 
-"send_mode_select_title" = "送信モードを選んでね";
+"send_mode_select_title" = "送信タイプを選択";
 "send_mode_select_message" = "メッセージを添付しますか？";
-"send_standard_title" = "STANDARD SEND";
-"send_standard_hint" = "メッセージは添付せずに送金します。";
-"send_standard_message" = "普通の送金でいいよ";
-
-
-"send_message_title" = "Message SEND";
-"send_message_hint" = "1024文字以内。取引所への認証番号にも使うよ。";
-"send_message_message" = "トランザクションにメッセージを添えます";
+"send_mode_attach" = "添付する";
+"send_mode_not_attach" = "添付しない";
 
 "send_confirmation_title" = "送金の最終確認画面です";
 "send_confirmation_button" = "タップして認証画面を表示";

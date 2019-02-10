@@ -20,8 +20,8 @@ protocol SendModePresentation: BasePresentation {
     var interactor: SendModeUseCase! { get set }
     var router: SendModeWireframe! { get set }
 
-    func didClickStandard()
-    func didClickMessage()
+    func didClickAttach()
+    func didClickNotAttach()
 }
 
 //sourcery: AutoMockable

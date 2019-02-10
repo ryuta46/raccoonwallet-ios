@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 110 images.
+  /// This `R.image` struct is generated, and contains static references to 109 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -238,10 +238,8 @@ struct R: Rswift.Validatable {
     static let image_lesson_card3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_lesson_card3")
     /// Image `image_menu_default`.
     static let image_menu_default = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_menu_default")
-    /// Image `image_send_card1`.
-    static let image_send_card1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_send_card1")
-    /// Image `image_send_card2`.
-    static let image_send_card2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_send_card2")
+    /// Image `image_send_mode`.
+    static let image_send_mode = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_send_mode")
     /// Image `image_transaction_background_bottom`.
     static let image_transaction_background_bottom = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_transaction_background_bottom")
     /// Image `image_transaction_background_top`.
@@ -741,14 +739,9 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.image_menu_default, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "image_send_card1", bundle: ..., traitCollection: ...)`
-    static func image_send_card1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.image_send_card1, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "image_send_card2", bundle: ..., traitCollection: ...)`
-    static func image_send_card2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.image_send_card2, compatibleWith: traitCollection)
+    /// `UIImage(named: "image_send_mode", bundle: ..., traitCollection: ...)`
+    static func image_send_mode(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.image_send_mode, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "image_transaction_background_bottom", bundle: ..., traitCollection: ...)`
@@ -1320,7 +1313,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 207 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 209 localization keys.
     struct localizable {
       /// en translation: 
       /// 
@@ -1356,8 +1349,8 @@ struct R: Rswift.Validatable {
       static let common_biometrics_enable_message = Rswift.StringResource(key: "common_biometrics_enable_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 1024文字以内。取引所への認証番号にも使うよ。
       /// 
-      /// Locales: en, ja
-      static let send_message_hint = Rswift.StringResource(key: "send_message_hint", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en
+      static let send_message_hint = Rswift.StringResource(key: "send_message_hint", tableName: "localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: About This APP
       /// 
       /// Locales: en, ja
@@ -1372,8 +1365,8 @@ struct R: Rswift.Validatable {
       static let donation_android_engineer_detail = Rswift.StringResource(key: "donation_android_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Message SEND
       /// 
-      /// Locales: en, ja
-      static let send_message_title = Rswift.StringResource(key: "send_message_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en
+      static let send_message_title = Rswift.StringResource(key: "send_message_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: NEM/XEM の送金が完了しました
       /// 
       /// Locales: en, ja
@@ -1464,8 +1457,8 @@ struct R: Rswift.Validatable {
       static let donation_ios_engineer_name = Rswift.StringResource(key: "donation_ios_engineer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: STANDARD SEND
       /// 
-      /// Locales: en, ja
-      static let send_standard_title = Rswift.StringResource(key: "send_standard_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en
+      static let send_standard_title = Rswift.StringResource(key: "send_standard_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: SUCCESS
       /// 
       /// Locales: en, ja
@@ -1756,8 +1749,8 @@ struct R: Rswift.Validatable {
       static let transaction_no_transaction_message = Rswift.StringResource(key: "transaction_no_transaction_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: トランザクションにメッセージを添えます
       /// 
-      /// Locales: en, ja
-      static let send_message_message = Rswift.StringResource(key: "send_message_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en
+      static let send_message_message = Rswift.StringResource(key: "send_message_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: トランザクション一覧
       /// 
       /// Locales: en, ja
@@ -1816,8 +1809,8 @@ struct R: Rswift.Validatable {
       static let transaction_message_is_encrypted = Rswift.StringResource(key: "transaction_message_is_encrypted", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: メッセージは添付せずに送金します。
       /// 
-      /// Locales: en, ja
-      static let send_standard_hint = Rswift.StringResource(key: "send_standard_hint", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en
+      static let send_standard_hint = Rswift.StringResource(key: "send_standard_hint", tableName: "localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: メッセージを入力
       /// 
       /// Locales: en, ja
@@ -1980,8 +1973,8 @@ struct R: Rswift.Validatable {
       static let send_message_standard_message = Rswift.StringResource(key: "send_message_standard_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 普通の送金でいいよ
       /// 
-      /// Locales: en, ja
-      static let send_standard_message = Rswift.StringResource(key: "send_standard_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en
+      static let send_standard_message = Rswift.StringResource(key: "send_standard_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: 暗号化メッセージ
       /// 
       /// Locales: en, ja
@@ -2150,6 +2143,14 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let common_faceID = Rswift.StringResource(key: "common_faceID", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// ja translation: 添付しない
+      /// 
+      /// Locales: ja
+      static let send_mode_not_attach = Rswift.StringResource(key: "send_mode_not_attach", tableName: "localizable", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 添付する
+      /// 
+      /// Locales: ja
+      static let send_mode_attach = Rswift.StringResource(key: "send_mode_attach", tableName: "localizable", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
       
       /// en translation: 
       /// 
@@ -2209,7 +2210,7 @@ struct R: Rswift.Validatable {
       
       /// en translation: 1024文字以内。取引所への認証番号にも使うよ。
       /// 
-      /// Locales: en, ja
+      /// Locales: en
       static func send_message_hint(_: Void = ()) -> String {
         return NSLocalizedString("send_message_hint", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
@@ -2237,7 +2238,7 @@ struct R: Rswift.Validatable {
       
       /// en translation: Message SEND
       /// 
-      /// Locales: en, ja
+      /// Locales: en
       static func send_message_title(_: Void = ()) -> String {
         return NSLocalizedString("send_message_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
@@ -2398,7 +2399,7 @@ struct R: Rswift.Validatable {
       
       /// en translation: STANDARD SEND
       /// 
-      /// Locales: en, ja
+      /// Locales: en
       static func send_standard_title(_: Void = ()) -> String {
         return NSLocalizedString("send_standard_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
@@ -2909,7 +2910,7 @@ struct R: Rswift.Validatable {
       
       /// en translation: トランザクションにメッセージを添えます
       /// 
-      /// Locales: en, ja
+      /// Locales: en
       static func send_message_message(_: Void = ()) -> String {
         return NSLocalizedString("send_message_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
@@ -3014,7 +3015,7 @@ struct R: Rswift.Validatable {
       
       /// en translation: メッセージは添付せずに送金します。
       /// 
-      /// Locales: en, ja
+      /// Locales: en
       static func send_standard_hint(_: Void = ()) -> String {
         return NSLocalizedString("send_standard_hint", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
@@ -3301,7 +3302,7 @@ struct R: Rswift.Validatable {
       
       /// en translation: 普通の送金でいいよ
       /// 
-      /// Locales: en, ja
+      /// Locales: en
       static func send_standard_message(_: Void = ()) -> String {
         return NSLocalizedString("send_standard_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
@@ -3598,6 +3599,20 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func common_faceID(_: Void = ()) -> String {
         return NSLocalizedString("common_faceID", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 添付しない
+      /// 
+      /// Locales: ja
+      static func send_mode_not_attach(_: Void = ()) -> String {
+        return NSLocalizedString("send_mode_not_attach", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 添付する
+      /// 
+      /// Locales: ja
+      static func send_mode_attach(_: Void = ()) -> String {
+        return NSLocalizedString("send_mode_attach", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -4393,10 +4408,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_send_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_send_small' is used in storyboard 'SendModeStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "image_send_card1") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_send_card1' is used in storyboard 'SendModeStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "image_send_card2") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_send_card2' is used in storyboard 'SendModeStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "image_harvest_background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_harvest_background' is used in storyboard 'SendModeStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "image_send_mode") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_send_mode' is used in storyboard 'SendModeStoryboard', but couldn't be loaded.") }
         if _R.storyboard.sendModeStoryboard().sendModeView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'sendModeView' could not be loaded from storyboard 'SendModeStoryboard' as 'SendModeViewController'.") }
       }
       

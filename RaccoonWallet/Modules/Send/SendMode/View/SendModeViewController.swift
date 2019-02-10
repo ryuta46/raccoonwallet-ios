@@ -12,47 +12,25 @@ class SendModeViewController: BaseViewController {
     var presenter: SendModePresentation! { didSet {basePresenter = presenter} }
     
     @IBOutlet weak var headline: UILabel!
-    @IBOutlet weak var standardCard: CardView!
-    @IBOutlet weak var standardHeadline: UILabel!
-    @IBOutlet weak var standardHint: UILabel!
-    @IBOutlet weak var standardMessage: UILabel!
-    @IBOutlet weak var standardImageBackground: UIView!
-    @IBOutlet weak var messageCard: CardView!
-    @IBOutlet weak var messageHeadline: UILabel!
-    @IBOutlet weak var messageHint: UILabel!
-    @IBOutlet weak var messageMessage: UILabel!
-    @IBOutlet weak var messageImageBackground: UIView!
 
+    @IBOutlet weak var attach: PrimaryRoundedButton!
+    @IBOutlet weak var notAttach: PrimaryGhostButton!
     override func setup() {
         super.setup()
         
         title = R.string.localizable.send_mode_select_title()
         hideBackTitle()
         headline.text = R.string.localizable.send_mode_select_message()
-
-        standardHeadline.text = "STANDARD SEND"
-        standardHeadline.textColor = Theme.primary
-        standardHint.text = R.string.localizable.send_standard_hint()
-        standardHint.textColor = Theme.secondary
-        standardMessage.text = R.string.localizable.send_standard_message()
-        standardImageBackground.backgroundColor = Theme.primary
-        standardCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTouchedStandardCard(_:))))
-
-        messageHeadline.text = "Message SEND"
-        messageHeadline.textColor = Theme.primary
-        messageHint.text = R.string.localizable.send_message_hint()
-        messageHint.textColor = Theme.secondary
-        messageMessage.text = R.string.localizable.send_message_message()
-        messageImageBackground.backgroundColor = Theme.primary
-        messageCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTouchedMessageCard(_:))))
+        
+        attach.setTitle(R.string.localizable.send_mode_attach(), for: .normal)
+        notAttach.setTitle(R.string.localizable.send_mode_not_attach(), for: .normal)
     }
 
-    @objc func onTouchedStandardCard(_ sender: Any) {
-        presenter.didClickStandard()
+    @IBAction func onTouchedAttach(_ sender: Any) {
+        presenter.didClickAttach()
     }
-
-    @objc func onTouchedMessageCard(_ sender: Any) {
-        presenter.didClickMessage()
+    @IBAction func onTouchedNotAttach(_ sender: Any) {
+        presenter.didClickNotAttach()
     }
 }
 
