@@ -26,7 +26,7 @@ class Theme {
     static let textSlightGray = UIColor(hex: "929292")
     static let textGray = UIColor(hex: "666666")
     static let textDarkGray = UIColor(hex: "777777")
-    static let textLightGray = UIColor(hex: "A2A2A2")
+    static let textLightGray = UIColor(hex: "ABABAB")
 
     static let nemBlue = UIColor(hex: "66B1E6")
     static let nemOrange = UIColor(hex: "F7A800")

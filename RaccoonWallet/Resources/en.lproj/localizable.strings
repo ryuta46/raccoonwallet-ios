@@ -201,13 +201,14 @@
 
 "send_amount_with_xem" = "XEMを一緒に送る";
 
-"send_message_type_select_title" = "メッセージタイプを選択";
+"send_message_type_select_title" = "メッセージタイプの暗号化設定";
 
-"send_message_standard_title" = "通常のメッセージ";
-"send_message_standard_message" = "普通のお手紙です。\nお礼の言葉を添えたりするときは、こっちでいいと思うよ。\n認証番号もこっち。";
+"send_message_plain_title" = "通常のメッセージ";
+"send_message_plain_description" = "通常のメッセージです。\n取引所への認証番号を入力する際は、必ずこちらで行いましょう。";
 
-"send_message_encryption_title" = "暗号化メッセージ";
-"send_message_encryption_message" = "軍事レベルの暗号化技術でプライバシーを確保しましょう。認証番号などに使う場合は、問題の原因になるからオススメしないよ！";
+"send_message_encrypted_title" = "暗号化メッセージ";
+"send_message_encrypted_description" = "軍事レベルの暗号化技術でメッセージを安全に送信します";
+"send_message_encrypted_caution" = "取引所入金時の認証番号に使う場合は問題の原因になりますので、絶対に暗号化は指定しないでください";
 
 "send_message_no_public_key_title" = "送り先が暗号化メッセージに対応していません。";
 "send_message_no_public_key_message" = "暗号化メッセージを送るには、暗号化に必要な公開鍵と呼ばれるコードを送り先が所持している必要があります。\n現在指定されている送り先は公開鍵を所持していないため、暗号化メッセージは送れません。";

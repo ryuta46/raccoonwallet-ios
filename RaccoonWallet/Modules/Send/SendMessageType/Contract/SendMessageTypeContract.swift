@@ -22,9 +22,8 @@ protocol SendMessageTypePresentation: BasePresentation {
     var interactor: SendMessageTypeUseCase! { get set }
     var router: SendMessageTypeWireframe! { get set }
 
-    func didClickStandard()
-    func didClickEncryption()
-
+    func didSelectPage(_ index: Int)
+    func didClickOk()
     func didConfirmMessage(_ message: String)
 }
 

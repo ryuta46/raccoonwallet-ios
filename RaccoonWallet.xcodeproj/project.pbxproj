@@ -515,6 +515,7 @@
 		690577489B232584041E3A82 /* WalletDeleteStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69057D1BF7EA02F75DA30342 /* WalletDeleteStoryboard.storyboard */; };
 		6905774BEA1E2A7859D25997 /* IntroductionMessageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057DD504820A1B5D681590 /* IntroductionMessageContract.swift */; };
 		69057758E17F5F9CD179C7C6 /* SendEndInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905740820365BB3A327816F /* SendEndInteractor.swift */; };
+		6905775A0A58FA9BBB2441BD /* LightGrayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690578FCEFD382BFEBEB481C /* LightGrayLabel.swift */; };
 		69057765ED99F2D5320B5DF8 /* LessonExpertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057986395C53378AF9993C /* LessonExpertViewController.swift */; };
 		6905776816914765DC3CDE4A /* WalletBackupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690571BBEEC28AB8C98128AB /* WalletBackupRouter.swift */; };
 		6905776DE86C4220D74B15C5 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6905737E0BFF1F59FACF7AFF /* UIScrollViewExtension.swift */; };
@@ -1168,6 +1169,7 @@
 		690578E660700AA930BEE60E /* DonationTopPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTopPresenter.swift; sourceTree = "<group>"; };
 		690578F0647D2F5A603CC293 /* QrScannerDialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrScannerDialogViewController.swift; sourceTree = "<group>"; };
 		690578F9DD03F55C6FB308CA /* PinInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinInputView.swift; sourceTree = "<group>"; };
+		690578FCEFD382BFEBEB481C /* LightGrayLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightGrayLabel.swift; sourceTree = "<group>"; };
 		6905790022591DA15A849558 /* WalletBackupInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletBackupInteractor.swift; sourceTree = "<group>"; };
 		69057900280E1FDD51CE5F7D /* QrScannerDialogPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrScannerDialogPresenter.swift; sourceTree = "<group>"; };
 		69057902F203416BA3C6EDDE /* WalletDeleteContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletDeleteContract.swift; sourceTree = "<group>"; };
@@ -1549,6 +1551,7 @@
 				5F672ED22125A0A90018B163 /* WalletBar.xib */,
 				5F8EA5E9215F4B7400646E6E /* WalletBarButton.swift */,
 				69057EE0517BDAEE46267426 /* PrimaryGhostButton.swift */,
+				690578FCEFD382BFEBEB481C /* LightGrayLabel.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -5629,6 +5632,7 @@
 				69057074DD47E54B793CF2A0 /* BaseBackgroundPanel.swift in Sources */,
 				69057A352B11C9C13B8F7771 /* SlightAccentBackgroundPanel.swift in Sources */,
 				6905724996208F2A13CE41BD /* PrimaryGhostButton.swift in Sources */,
+				6905775A0A58FA9BBB2441BD /* LightGrayLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

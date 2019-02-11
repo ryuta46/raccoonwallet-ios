@@ -12,49 +12,44 @@ import MaterialComponents
 class SendMessageTypeViewController: BaseViewController {
     var presenter: SendMessageTypePresentation! { didSet {basePresenter = presenter} }
     
-    @IBOutlet weak var standardContents: UIStackView!
-    @IBOutlet weak var standardIconContainer: UIView!
-    @IBOutlet weak var standardHeadline: UILabel!
-    @IBOutlet weak var standardMessage: UILabel!
-    @IBOutlet weak var encryptionContents: UIStackView!
-    @IBOutlet weak var encryptionIconContainer: UIView!
-    @IBOutlet weak var encryptionHeadline: UILabel!
-    @IBOutlet weak var encryptionMessage: UILabel!
-
-    private var standardInc: MDCInkTouchController!
-    private var encryptionInc: MDCInkTouchController!
+    @IBOutlet weak var contentsScroll: UIScrollView!
+    @IBOutlet weak var plainMessageCard: CardView!
+    @IBOutlet weak var encryptedMessageCard: CardView!
+    @IBOutlet weak var pager: UIPageControl!
+    
+    @IBOutlet weak var plainMessageHeadline: UILabel!
+    @IBOutlet weak var plainMessageDescription: UILabel!
+    @IBOutlet weak var encryptedMessageHeadline: UILabel!
+    @IBOutlet weak var encryptedMessageDescription: UILabel!
+    @IBOutlet weak var encryptedCautionBackground: UIView!
+    @IBOutlet weak var encryptedCautionDescription: UILabel!
+    
     override func setup() {
         super.setup()
         
         title = R.string.localizable.send_message_type_select_title()
         hideBackTitle()
 
-        // ripple effect on touched
-        standardInc = MDCInkTouchController(view: standardContents)
-        standardInc.addInkView()
+        plainMessageCard.setShadowElevation(ShadowElevation(4.0), for: .normal)
+        encryptedMessageCard.setShadowElevation(ShadowElevation(4.0), for: .normal)
 
-        standardHeadline.text = R.string.localizable.send_message_standard_title()
-        standardHeadline.textColor = Theme.primary
-        standardMessage.text = R.string.localizable.send_message_standard_message()
-        standardContents.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTouchedStandard(_:))))
-
-        standardIconContainer.layer.borderColor = Theme.primary.cgColor
-        standardIconContainer.layer.borderWidth = Constant.outlineWidth
-        standardIconContainer.layer.cornerRadius = Constant.outlineRadius
-
-        // ripple effect on touched
-        encryptionInc = MDCInkTouchController(view: encryptionContents)
-        encryptionInc.addInkView()
-
-        encryptionHeadline.text = R.string.localizable.send_message_encryption_title()
-        encryptionHeadline.textColor = Theme.primary
-        encryptionMessage.text = R.string.localizable.send_message_encryption_message()
-        encryptionContents.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTouchedEncryption(_:))))
-
-        encryptionIconContainer.layer.borderColor = Theme.primary.cgColor
-        encryptionIconContainer.layer.borderWidth = Constant.outlineWidth
-        encryptionIconContainer.layer.cornerRadius = Constant.outlineRadius
+        contentsScroll.delegate = self
+        
+        plainMessageHeadline.text = R.string.localizable.send_message_plain_title()
+        plainMessageDescription.text = R.string.localizable.send_message_plain_description()
+        encryptedMessageHeadline.text = R.string.localizable.send_message_encrypted_title()
+        encryptedMessageDescription.text = R.string.localizable.send_message_encrypted_description()
+        encryptedCautionDescription.text = R.string.localizable.send_message_encrypted_caution()
+        
+        encryptedCautionBackground.backgroundColor = Theme.baseBackground
     }
+    
+    @IBAction func onTouchedOk(_ sender: Any) {
+        presenter.didClickOk()
+    }
+
+    
+    /*
 
     @objc func onTouchedStandard(_ sender: Any) {
         presenter.didClickStandard()
@@ -63,6 +58,7 @@ class SendMessageTypeViewController: BaseViewController {
     @objc func onTouchedEncryption(_ sender: Any) {
         presenter.didClickEncryption()
     }
+ */
 
 }
 
@@ -74,5 +70,19 @@ extension SendMessageTypeViewController: SendMessageTypeView {
             }
         }
         navigationController?.present(dialog, animated: true)
+    }
+}
+
+
+extension SendMessageTypeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageWidth = scrollView.frame.size.width
+
+        let currentPage = Int((scrollView.contentOffset.x / pageWidth).rounded())
+        if pager.currentPage != currentPage {
+            pager.currentPage = currentPage
+        }
+        
+        presenter.didSelectPage(currentPage)
     }
 }

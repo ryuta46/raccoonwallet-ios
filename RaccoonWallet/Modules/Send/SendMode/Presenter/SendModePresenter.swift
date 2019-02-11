@@ -16,12 +16,12 @@ class SendModePresenter: BasePresenter {
 }
 
 extension SendModePresenter: SendModePresentation {
-    func didClickStandard() {
-        router.presentSendConfirmation(sendTransaction)
+    func didClickAttach() {
+        router.presentSendMessageType(sendTransaction)
     }
 
-    func didClickMessage() {
-        router.presentSendMessageType(sendTransaction)
+    func didClickNotAttach() {
+        router.presentSendConfirmation(sendTransaction)
     }
 }
 

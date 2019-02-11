@@ -16,13 +16,14 @@ class SendMessageTypePresenter: BasePresenter {
 }
 
 extension SendMessageTypePresenter: SendMessageTypePresentation {
-    func didClickStandard() {
-        sendTransaction.messageType = .plain
-        view?.showMessageInputDialog()
+    func didSelectPage(_ index: Int) {
+        if index == 0 {
+            sendTransaction.messageType = .plain
+        } else {
+            sendTransaction.messageType = .secure
+        }
     }
-
-    func didClickEncryption() {
-        sendTransaction.messageType = .secure
+    func didClickOk() {
         view?.showMessageInputDialog()
     }
 
