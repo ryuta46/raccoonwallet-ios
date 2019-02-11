@@ -191,7 +191,8 @@
 "send_confirmation_pin_message" = "PINを入力して送金を確定する";
 
 "send_complete_title" = "送金完了！";
-"send_complete_message" = "NEM/XEM\nの送金が完了しました";
+"send_complete_message" = "送金が完了しました";
+"send_complete_transaction_label" = "送金詳細";
 
 "send_amount_with_xem" = "XEMを一緒に送る";
 

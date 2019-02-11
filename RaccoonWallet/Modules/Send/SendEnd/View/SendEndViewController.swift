@@ -11,21 +11,37 @@ import UIKit
 class SendEndViewController: BaseViewController {
     var presenter: SendEndPresentation! { didSet {basePresenter = presenter} }
     
+    @IBOutlet weak var homeCard: CardView!
+    @IBOutlet weak var transactionCard: CardView!
     @IBOutlet weak var message: UILabel!
+    @IBOutlet weak var transactionLabel: UILabel!
     override func setup() {
         super.setup()
-        
+
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+
         title = R.string.localizable.send_complete_title()
         hideBackTitle()
         hideBackButton()
-        
+
+        homeCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTouchedHome(_:))))
+        transactionCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTouchedTransaction(_:))))
+
         message.text = R.string.localizable.send_complete_message()
-        message.textColor = Theme.primary
+        transactionLabel.text = R.string.localizable.send_complete_transaction_label()
+
     }
-    @IBAction func onTouchedHome(_ sender: Any) {
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        super.viewWillDisappear(animated)
+    }
+    
+    @objc func onTouchedHome(_ sender: Any) {
         presenter.didClickHome()
     }
-    @IBAction func onTouchedTransaction(_ sender: Any) {
+    @objc func onTouchedTransaction(_ sender: Any) {
         presenter.didClickTransaction()
     }
 }

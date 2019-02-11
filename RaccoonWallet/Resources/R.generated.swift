@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 111 images.
+  /// This `R.image` struct is generated, and contains static references to 114 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -200,6 +200,10 @@ struct R: Rswift.Validatable {
     static let icon_ryuta = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_ryuta")
     /// Image `icon_scan`.
     static let icon_scan = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_scan")
+    /// Image `icon_send_end_home`.
+    static let icon_send_end_home = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_send_end_home")
+    /// Image `icon_send_end_transaction`.
+    static let icon_send_end_transaction = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_send_end_transaction")
     /// Image `icon_transaction_check`.
     static let icon_transaction_check = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_transaction_check")
     /// Image `icon_transaction_receive_green`.
@@ -258,6 +262,8 @@ struct R: Rswift.Validatable {
     static let logo_pyoko = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_pyoko")
     /// Image `logo_raccoon_color`.
     static let logo_raccoon_color = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_raccoon_color")
+    /// Image `logo_raccoon_watermark`.
+    static let logo_raccoon_watermark = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_raccoon_watermark")
     /// Image `pin_dialog_delete`.
     static let pin_dialog_delete = Rswift.ImageResource(bundle: R.hostingBundle, name: "pin_dialog_delete")
     /// Image `tab_home_balance`.
@@ -648,6 +654,16 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_scan, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icon_send_end_home", bundle: ..., traitCollection: ...)`
+    static func icon_send_end_home(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_send_end_home, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_send_end_transaction", bundle: ..., traitCollection: ...)`
+    static func icon_send_end_transaction(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_send_end_transaction, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icon_transaction_check", bundle: ..., traitCollection: ...)`
     static func icon_transaction_check(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_transaction_check, compatibleWith: traitCollection)
@@ -791,6 +807,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "logo_raccoon_color", bundle: ..., traitCollection: ...)`
     static func logo_raccoon_color(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.logo_raccoon_color, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "logo_raccoon_watermark", bundle: ..., traitCollection: ...)`
+    static func logo_raccoon_watermark(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.logo_raccoon_watermark, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "pin_dialog_delete", bundle: ..., traitCollection: ...)`
@@ -1327,7 +1348,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 210 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 211 localization keys.
     struct localizable {
       /// en translation: 
       /// 
@@ -2169,6 +2190,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: ja
       static let send_mode_attach = Rswift.StringResource(key: "send_mode_attach", tableName: "localizable", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 送金完了
+      /// 
+      /// Locales: ja
+      static let send_complete_transaction_label = Rswift.StringResource(key: "send_complete_transaction_label", tableName: "localizable", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
       
       /// en translation: 
       /// 
@@ -3640,6 +3665,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("send_mode_attach", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// ja translation: 送金完了
+      /// 
+      /// Locales: ja
+      static func send_complete_transaction_label(_: Void = ()) -> String {
+        return NSLocalizedString("send_complete_transaction_label", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       fileprivate init() {}
     }
     
@@ -4378,9 +4410,10 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_send_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_send_small' is used in storyboard 'SendEndStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "image_transaction_background_bottom") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_transaction_background_bottom' is used in storyboard 'SendEndStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_send_end_transaction") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_send_end_transaction' is used in storyboard 'SendEndStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "image_transaction_background_top") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_transaction_background_top' is used in storyboard 'SendEndStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "logo_raccoon_watermark") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo_raccoon_watermark' is used in storyboard 'SendEndStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_send_end_home") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_send_end_home' is used in storyboard 'SendEndStoryboard', but couldn't be loaded.") }
         if _R.storyboard.sendEndStoryboard().sendEndView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'sendEndView' could not be loaded from storyboard 'SendEndStoryboard' as 'SendEndViewController'.") }
       }
       
