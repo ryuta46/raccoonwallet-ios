@@ -30,6 +30,11 @@ extension SettingTopPresenter: SettingTopPresentation {
     func didClickLanguageSelect() {
         view?.showInfo(R.string.localizable.common_coming_soon())
     }
+    
+    func didClickCurrencySelect() {
+        view?.showInfo(R.string.localizable.common_coming_soon())
+    }
+
 
     func didClickNotificationSetting() {
         view?.showInfo(R.string.localizable.common_coming_soon())

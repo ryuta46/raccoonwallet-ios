@@ -31,6 +31,7 @@ protocol SettingTopPresentation: BasePresentation {
 
     func didClickNodeSelect()
     func didClickLanguageSelect()
+    func didClickCurrencySelect()
     func didClickNotificationSetting()
 
     func didClickChangePassword()
