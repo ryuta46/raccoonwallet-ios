@@ -14,12 +14,9 @@ class HomeTabViewController: BaseViewController {
     var transactionViews: [TransactionView]!
 
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var xem: UILabel!
-    @IBOutlet weak var localCurrency: UILabel!
-    @IBOutlet weak var balanceCard: CardView!
+    @IBOutlet weak var balanceCard: BalanceCard!
 
-    @IBOutlet weak var balanceContent: UIStackView!
-
+    @IBOutlet weak var transactionHeadline: UILabel!
     @IBOutlet weak var transactionCard: CardView!
     @IBOutlet weak var transaction0: TransactionView!
     @IBOutlet weak var transaction1: TransactionView!
@@ -27,15 +24,23 @@ class HomeTabViewController: BaseViewController {
     @IBOutlet weak var transaction3: TransactionView!
     @IBOutlet weak var transactionContent: UIStackView!
     @IBOutlet weak var transactionEmpty: UIStackView!
+    @IBOutlet weak var transactionEmptyMessage: UILabel!
 
-    @IBOutlet weak var harvestEmpty: UIStackView!
+    @IBOutlet weak var harvestHeadline: UILabel!
     @IBOutlet weak var harvestView: HarvestView!
-    
+    @IBOutlet weak var harvestEmpty: UIStackView!
+    @IBOutlet weak var harvestEmptyMessage: UILabel!
+
     var loadingView: FullScreenLoadingView!
     var refreshControl: UIRefreshControl!
     
     override func setup() {
         super.setup()
+
+        transactionHeadline.text = R.string.localizable.home_transaction_headline()
+        transactionEmptyMessage.text = R.string.localizable.home_transaction_empty_message()
+        harvestHeadline.text = R.string.localizable.common_harvest()
+        harvestEmptyMessage.text = R.string.localizable.home_harvest_empty_message()
 
         transactionViews = [
             transaction0, transaction1, transaction2, transaction3
@@ -44,7 +49,7 @@ class HomeTabViewController: BaseViewController {
             transactionView.date.font = UIFont.monospacedDigitSystemFont(ofSize: transactionView.date.font.pointSize, weight: UIFont.Weight.light)
         }
 
-        balanceCard.setOnTouchedHandler {
+        balanceCard.card.setOnTouchedHandler {
             self.presenter.didClickBalance()
         }
 
@@ -60,6 +65,10 @@ class HomeTabViewController: BaseViewController {
         
         loadingView = createFullScreenLoadingView()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.title = "HOME"
+    }
 
     @objc func refresh(_ sender: UIRefreshControl) {
         refreshControl.endRefreshing()
@@ -69,8 +78,8 @@ class HomeTabViewController: BaseViewController {
 
 extension HomeTabViewController: HomeTabView {
     func showLoading() {
-        xem.text = "-"
-        localCurrency.text = "-"
+        balanceCard.clearXem()
+        balanceCard.clearLocalCurrency()
         transactionContent.isHidden = true
         transactionEmpty.isHidden = true
         harvestEmpty.isHidden = true
@@ -85,20 +94,20 @@ extension HomeTabViewController: HomeTabView {
 
 
     func showBalance(_ xem: Decimal) {
-        self.xem.text = xem.description
+        balanceCard.xem.text = xem.description
     }
 
     func showBalanceError() {
-        self.xem.text = "-"
-        self.localCurrency.text = "-"
+        balanceCard.clearXem()
+        balanceCard.clearLocalCurrency()
     }
 
     func showLocalCurrency(_ value: Decimal, _ unit: Currency) {
-        self.localCurrency.text = "\(unit.rawValue) : \(value.round(3).description)"
+        balanceCard.setLocalCurrency(value, unit)
     }
 
     func showLocalCurrencyError() {
-        self.localCurrency.text = "-"
+        balanceCard.clearLocalCurrency()
     }
 
     func showTransaction(_ transactions: [TransferTransactionDetail]) {

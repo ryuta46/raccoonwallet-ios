@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 114 images.
+  /// This `R.image` struct is generated, and contains static references to 112 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -266,12 +266,8 @@ struct R: Rswift.Validatable {
     static let logo_raccoon_watermark = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_raccoon_watermark")
     /// Image `pin_dialog_delete`.
     static let pin_dialog_delete = Rswift.ImageResource(bundle: R.hostingBundle, name: "pin_dialog_delete")
-    /// Image `tab_home_balance`.
-    static let tab_home_balance = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_home_balance")
     /// Image `tab_home_harvest`.
     static let tab_home_harvest = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_home_harvest")
-    /// Image `tab_home_transaction`.
-    static let tab_home_transaction = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_home_transaction")
     /// Image `top_icon`.
     static let top_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "top_icon")
     /// Image `top_logo`.
@@ -819,19 +815,9 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.pin_dialog_delete, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "tab_home_balance", bundle: ..., traitCollection: ...)`
-    static func tab_home_balance(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.tab_home_balance, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "tab_home_harvest", bundle: ..., traitCollection: ...)`
     static func tab_home_harvest(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.tab_home_harvest, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "tab_home_transaction", bundle: ..., traitCollection: ...)`
-    static func tab_home_transaction(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.tab_home_transaction, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "top_icon", bundle: ..., traitCollection: ...)`
@@ -1348,7 +1334,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 212 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 216 localization keys.
     struct localizable {
       /// en translation: 
       /// 
@@ -1622,6 +1608,14 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let wallet_go_home_caution2_title = Rswift.StringResource(key: "wallet_go_home_caution2_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: まだハーベストの履歴はありません。
+      /// 
+      /// Locales: en, ja
+      static let home_harvest_empty_message = Rswift.StringResource(key: "home_harvest_empty_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: まだ送受信の履歴はありません。
+      /// 
+      /// Locales: en, ja
+      static let home_transaction_empty_message = Rswift.StringResource(key: "home_transaction_empty_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: また会ったな。 ウォレットのバックアップはできたかい？ さあ次は、アプリのPINコード設定だ。  グッドラック！
       /// 
       /// Locales: en, ja
@@ -1822,6 +1816,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let wallet_name_message = Rswift.StringResource(key: "wallet_name_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: ハーベスト
+      /// 
+      /// Locales: en, ja
+      static let common_harvest = Rswift.StringResource(key: "common_harvest", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: プライベートキー(秘密鍵)について
       /// 
       /// Locales: en, ja
@@ -2130,6 +2128,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let common_error_go_send_title = Rswift.StringResource(key: "common_error_go_send_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 送受信
+      /// 
+      /// Locales: en, ja
+      static let home_transaction_headline = Rswift.StringResource(key: "home_transaction_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 送金の最終確認画面です
       /// 
       /// Locales: en, ja
@@ -2675,6 +2677,20 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("wallet_go_home_caution2_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: まだハーベストの履歴はありません。
+      /// 
+      /// Locales: en, ja
+      static func home_harvest_empty_message(_: Void = ()) -> String {
+        return NSLocalizedString("home_harvest_empty_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: まだ送受信の履歴はありません。
+      /// 
+      /// Locales: en, ja
+      static func home_transaction_empty_message(_: Void = ()) -> String {
+        return NSLocalizedString("home_transaction_empty_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: また会ったな。 ウォレットのバックアップはできたかい？ さあ次は、アプリのPINコード設定だ。  グッドラック！
       /// 
       /// Locales: en, ja
@@ -3023,6 +3039,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func wallet_name_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_name_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: ハーベスト
+      /// 
+      /// Locales: en, ja
+      static func common_harvest(_: Void = ()) -> String {
+        return NSLocalizedString("common_harvest", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: プライベートキー(秘密鍵)について
@@ -3564,6 +3587,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("common_error_go_send_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: 送受信
+      /// 
+      /// Locales: en, ja
+      static func home_transaction_headline(_: Void = ()) -> String {
+        return NSLocalizedString("home_transaction_headline", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: 送金の最終確認画面です
       /// 
       /// Locales: en, ja
@@ -3958,10 +3988,6 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "image_empty1_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_empty1_small' is used in storyboard 'HomeTabStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "image_home_balance_background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_home_balance_background' is used in storyboard 'HomeTabStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "tab_home_harvest") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'tab_home_harvest' is used in storyboard 'HomeTabStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "tab_home_transaction") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'tab_home_transaction' is used in storyboard 'HomeTabStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "tab_home_balance") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'tab_home_balance' is used in storyboard 'HomeTabStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "image_empty2_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_empty2_small' is used in storyboard 'HomeTabStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_home_harvest") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_home_harvest' is used in storyboard 'HomeTabStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_home_transaction") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_home_transaction' is used in storyboard 'HomeTabStoryboard', but couldn't be loaded.") }

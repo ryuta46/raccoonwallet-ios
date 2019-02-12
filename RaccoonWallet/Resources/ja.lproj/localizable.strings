@@ -79,6 +79,8 @@
 
 "common_copy_to_clipboard" = "クリップボードにコピーしました";
 
+"common_harvest" = "ハーベスト";
+
 "about_title" = "About This APP";
 "about_app_concept" = "信頼性が高く\n使いやすいUIで、\n仮想通貨をもっと楽しく。\n\nラクーンウォレットは、これら３つを目標に\n作られた仮想通貨ウォレットです。";
 
@@ -116,6 +118,10 @@
 
 "gallery_no_mosaic_title" = "モザイクがありません。";
 "gallery_no_mosaic_message" = "お見せできるモザイクは、今のところなさそうです。\nすてきなギャラリーになるよう、\nコレクションに励んでみましょう！";
+
+"home_transaction_headline" = "送受信";
+"home_transaction_empty_message" = "まだ送受信の履歴はありません。";
+"home_harvest_empty_message" = "まだハーベストの履歴はありません。";
 
 "lesson_introduction_message" = "ようこそいらっしゃいました！\nセキュリティレッスンですね？\n特別にみなさんに最適なレッスン用意してあります！\n早速やっていきましょう。\n\nそれでは、まず最初にあなたのことを教えてくれますか？\n次の画面でご自分に合うものを選択してみてください。";
 

@@ -28,6 +28,9 @@ class BalanceDetailViewController: BaseViewController {
 
         mosaicListHeadline.text = R.string.localizable.common_mosaic_list()
 
+        // Remove ripple effect
+        balanceCard.card.isInteractable = false
+
         mosaicList.dataSource = self
         mosaicList.delegate = self
 
