@@ -21,7 +21,7 @@ class TopViewController: UITabBarController {
         setupTabs()
         setupMenuButton()
 
-        title = "HELLO NEMber"
+        //title = "HELLO NEMber"
         hideBackTitle()
 
         presenter.viewDidLoad()

@@ -10,6 +10,7 @@ class BalanceCard: UIView {
     @IBOutlet weak var xem: UILabel!
     @IBOutlet weak var localCurrency: UILabel!
     
+    @IBOutlet weak var card: CardView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

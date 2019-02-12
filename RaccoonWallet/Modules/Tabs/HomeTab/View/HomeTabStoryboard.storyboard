@@ -21,252 +21,156 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oCm-h4-AzK">
                                 <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygB-Ky-ZYY" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
-                                        <rect key="frame" x="14" y="60" width="292" height="184.5"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab_home_balance" translatesAutoresizingMaskIntoConstraints="NO" id="rne-38-Qka">
-                                                <rect key="frame" x="16" y="0.0" width="64" height="28"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="64" id="TXT-Mm-0Zs"/>
-                                                    <constraint firstAttribute="height" constant="28" id="ey4-c3-ZHF"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_home_balance_background" translatesAutoresizingMaskIntoConstraints="NO" id="SoI-3A-RBH">
-                                                <rect key="frame" x="16" y="108" width="276" height="76.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="SoI-3A-RBH" secondAttribute="height" multiplier="379:105" id="rdG-5N-Acz"/>
-                                                </constraints>
-                                            </imageView>
-                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fgG-Ie-eEo">
-                                                <rect key="frame" x="12" y="61" width="252" height="63"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="50i-T8-TXm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="252" height="27.5"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123456789.123456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IT5-ZP-Xjg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="210.5" height="27.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="XEM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBz-DB-6Y5">
-                                                                <rect key="frame" x="210.5" y="3.5" width="41.5" height="24"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JPY : 2,000,000,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U04-rb-UQM">
-                                                        <rect key="frame" x="0.0" y="43.5" width="252" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="fgG-Ie-eEo" secondAttribute="trailing" constant="28" id="FhV-ZR-YDF"/>
-                                            <constraint firstItem="rne-38-Qka" firstAttribute="top" secondItem="ygB-Ky-ZYY" secondAttribute="top" id="IAu-Ku-6cS"/>
-                                            <constraint firstAttribute="bottom" secondItem="SoI-3A-RBH" secondAttribute="bottom" id="Ipu-ND-jPN"/>
-                                            <constraint firstItem="fgG-Ie-eEo" firstAttribute="centerY" secondItem="ygB-Ky-ZYY" secondAttribute="centerY" id="KB0-P6-czo"/>
-                                            <constraint firstAttribute="width" secondItem="ygB-Ky-ZYY" secondAttribute="height" multiplier="3:1" id="RwA-g7-Gvi"/>
-                                            <constraint firstItem="fgG-Ie-eEo" firstAttribute="leading" secondItem="ygB-Ky-ZYY" secondAttribute="leading" constant="12" id="Xjh-nz-eeS"/>
-                                            <constraint firstAttribute="trailing" secondItem="SoI-3A-RBH" secondAttribute="trailing" id="XrW-XL-fLM"/>
-                                            <constraint firstAttribute="width" secondItem="ygB-Ky-ZYY" secondAttribute="height" multiplier="348:220" id="gbV-sJ-Ory"/>
-                                            <constraint firstItem="SoI-3A-RBH" firstAttribute="leading" secondItem="ygB-Ky-ZYY" secondAttribute="leading" constant="16" id="iCF-B6-in1"/>
-                                            <constraint firstItem="rne-38-Qka" firstAttribute="leading" secondItem="ygB-Ky-ZYY" secondAttribute="leading" constant="16" id="vTv-oF-ZbF"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="RwA-g7-Gvi"/>
-                                                <exclude reference="gbV-sJ-Ory"/>
-                                                <exclude reference="iCF-B6-in1"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="widthClass=compact">
-                                            <mask key="constraints">
-                                                <include reference="gbV-sJ-Ory"/>
-                                                <include reference="iCF-B6-in1"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="RwA-g7-Gvi"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyR-lO-od2" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
-                                        <rect key="frame" x="14" y="260.5" width="292" height="124"/>
+                                        <rect key="frame" x="12" y="209.5" width="296" height="130"/>
                                         <subviews>
-                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OmK-Sl-YgG" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                <rect key="frame" x="196" y="22" width="80" height="80"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_home_transaction" translatesAutoresizingMaskIntoConstraints="NO" id="mfS-3x-jSQ">
-                                                        <rect key="frame" x="17" y="14.5" width="46" height="51"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="mfS-3x-jSQ" secondAttribute="height" multiplier="93:103" id="7Kb-jp-8x6"/>
-                                                            <constraint firstAttribute="width" constant="46" id="Ecj-0k-VGi"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.40000000000000002" green="0.69411764705882351" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_home_transaction" translatesAutoresizingMaskIntoConstraints="NO" id="Ta3-xC-jbQ">
+                                                <rect key="frame" x="32" y="16" width="12" height="12"/>
                                                 <constraints>
-                                                    <constraint firstItem="mfS-3x-jSQ" firstAttribute="centerX" secondItem="OmK-Sl-YgG" secondAttribute="centerX" id="4vt-sq-58c"/>
-                                                    <constraint firstAttribute="height" constant="80" id="PlY-NH-nAL"/>
-                                                    <constraint firstAttribute="width" constant="80" id="sgr-MH-GHB"/>
-                                                    <constraint firstItem="mfS-3x-jSQ" firstAttribute="centerY" secondItem="OmK-Sl-YgG" secondAttribute="centerY" id="vjS-9a-uQf"/>
-                                                </constraints>
-                                            </view>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab_home_transaction" translatesAutoresizingMaskIntoConstraints="NO" id="Ta3-xC-jbQ">
-                                                <rect key="frame" x="16" y="0.0" width="64" height="28"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="64" id="I3U-y9-h1g"/>
-                                                    <constraint firstAttribute="width" secondItem="Ta3-xC-jbQ" secondAttribute="height" multiplier="128:56" id="pqc-Fk-kCY"/>
+                                                    <constraint firstAttribute="width" constant="12" id="I3U-y9-h1g"/>
+                                                    <constraint firstAttribute="width" secondItem="Ta3-xC-jbQ" secondAttribute="height" multiplier="1:1" id="pqc-Fk-kCY"/>
                                                 </constraints>
                                             </imageView>
-                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="bch-VM-E05">
-                                                <rect key="frame" x="12" y="36" width="176" height="68"/>
+                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="bch-VM-E05">
+                                                <rect key="frame" x="32" y="44" width="232" height="66"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7q-wy-E2q" customClass="TransactionView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="176" height="16.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="12"/>
                                                         <color key="backgroundColor" red="0.40000000000000002" green="0.69411764710000001" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJB-Oq-MHW" customClass="TransactionView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="17.5" width="176" height="16"/>
+                                                        <rect key="frame" x="0.0" y="18" width="232" height="12"/>
                                                         <color key="backgroundColor" red="0.40000000000000002" green="0.69411764710000001" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pal-ad-N54" customClass="TransactionView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="34.5" width="176" height="16.5"/>
+                                                        <rect key="frame" x="0.0" y="36" width="232" height="12"/>
                                                         <color key="backgroundColor" red="0.40000000000000002" green="0.69411764710000001" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ph6-eX-z6X" customClass="TransactionView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="52" width="176" height="16"/>
+                                                        <rect key="frame" x="0.0" y="54" width="232" height="12"/>
                                                         <color key="backgroundColor" red="0.40000000000000002" green="0.69411764710000001" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </view>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="66" id="lVs-3o-Dp5"/>
+                                                </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dmi-FR-ac3">
-                                                <rect key="frame" x="12" y="36" width="176" height="68"/>
+                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dmi-FR-ac3">
+                                                <rect key="frame" x="32" y="44" width="232" height="60"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_empty1_small" translatesAutoresizingMaskIntoConstraints="NO" id="YXa-oI-ANg">
-                                                        <rect key="frame" x="0.0" y="10" width="48" height="48"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="YXa-oI-ANg" secondAttribute="height" multiplier="1:1" id="guz-f9-fQ3"/>
-                                                            <constraint firstAttribute="width" constant="48" id="hiw-4j-RXq"/>
+                                                            <constraint firstAttribute="width" constant="60" id="hiw-4j-RXq"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no current transaction" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uT3-bp-ARe">
-                                                        <rect key="frame" x="48" y="19.5" width="128" height="29"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no current transaction" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uT3-bp-ARe">
+                                                        <rect key="frame" x="76" y="15.5" width="156" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="送受信" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlT-OT-575">
+                                                <rect key="frame" x="52" y="15" width="37" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="bch-VM-E05" firstAttribute="leading" secondItem="jyR-lO-od2" secondAttribute="leading" constant="12" id="58c-g4-Fsv"/>
-                                            <constraint firstItem="bch-VM-E05" firstAttribute="top" secondItem="Ta3-xC-jbQ" secondAttribute="bottom" constant="8" id="8Tg-PW-0bV"/>
-                                            <constraint firstItem="Ta3-xC-jbQ" firstAttribute="leading" secondItem="jyR-lO-od2" secondAttribute="leading" constant="16" id="ECz-Op-2Mx"/>
+                                            <constraint firstItem="bch-VM-E05" firstAttribute="leading" secondItem="jyR-lO-od2" secondAttribute="leading" constant="32" id="58c-g4-Fsv"/>
+                                            <constraint firstItem="dlT-OT-575" firstAttribute="leading" secondItem="Ta3-xC-jbQ" secondAttribute="trailing" constant="8" id="5gS-0U-U1p"/>
+                                            <constraint firstItem="bch-VM-E05" firstAttribute="top" secondItem="Ta3-xC-jbQ" secondAttribute="bottom" constant="16" id="8Tg-PW-0bV"/>
+                                            <constraint firstItem="Ta3-xC-jbQ" firstAttribute="leading" secondItem="jyR-lO-od2" secondAttribute="leading" constant="32" id="ECz-Op-2Mx"/>
                                             <constraint firstItem="dmi-FR-ac3" firstAttribute="trailing" secondItem="bch-VM-E05" secondAttribute="trailing" id="G9F-ii-CDH"/>
                                             <constraint firstItem="dmi-FR-ac3" firstAttribute="top" secondItem="bch-VM-E05" secondAttribute="top" id="GG6-1F-Ev2"/>
                                             <constraint firstItem="dmi-FR-ac3" firstAttribute="leading" secondItem="bch-VM-E05" secondAttribute="leading" id="HRx-ZO-NMe"/>
-                                            <constraint firstAttribute="height" constant="124" id="Min-DR-cPt"/>
-                                            <constraint firstItem="OmK-Sl-YgG" firstAttribute="centerY" secondItem="jyR-lO-od2" secondAttribute="centerY" id="Ufk-S9-O20"/>
-                                            <constraint firstItem="dmi-FR-ac3" firstAttribute="bottom" secondItem="bch-VM-E05" secondAttribute="bottom" id="VE3-1k-9Y9"/>
-                                            <constraint firstItem="OmK-Sl-YgG" firstAttribute="leading" secondItem="bch-VM-E05" secondAttribute="trailing" constant="8" id="aai-tL-2TJ"/>
-                                            <constraint firstItem="Ta3-xC-jbQ" firstAttribute="top" secondItem="jyR-lO-od2" secondAttribute="top" id="atg-z4-ntX"/>
-                                            <constraint firstAttribute="trailing" secondItem="OmK-Sl-YgG" secondAttribute="trailing" constant="16" id="qaZ-w8-VN7"/>
+                                            <constraint firstItem="Ta3-xC-jbQ" firstAttribute="top" secondItem="jyR-lO-od2" secondAttribute="top" constant="16" id="atg-z4-ntX"/>
+                                            <constraint firstItem="dlT-OT-575" firstAttribute="centerY" secondItem="Ta3-xC-jbQ" secondAttribute="centerY" id="eO0-IT-Xdt"/>
                                             <constraint firstAttribute="bottom" secondItem="bch-VM-E05" secondAttribute="bottom" constant="20" id="trI-8d-dbX"/>
+                                            <constraint firstAttribute="trailing" secondItem="bch-VM-E05" secondAttribute="trailing" constant="32" id="yJR-dW-yJL"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebN-bL-svk" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
-                                        <rect key="frame" x="14" y="400.5" width="292" height="85"/>
+                                        <rect key="frame" x="12" y="355.5" width="296" height="92"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab_home_harvest" translatesAutoresizingMaskIntoConstraints="NO" id="e1B-7f-Y5d">
-                                                <rect key="frame" x="16" y="0.0" width="64" height="28"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_home_harvest" translatesAutoresizingMaskIntoConstraints="NO" id="e1B-7f-Y5d">
+                                                <rect key="frame" x="32" y="16" width="10.5" height="8"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="64" id="JJ9-ux-rSk"/>
-                                                    <constraint firstAttribute="width" secondItem="e1B-7f-Y5d" secondAttribute="height" multiplier="128:56" id="YKQ-f3-wuk"/>
+                                                    <constraint firstAttribute="width" constant="10.41" id="JJ9-ux-rSk"/>
+                                                    <constraint firstAttribute="width" secondItem="e1B-7f-Y5d" secondAttribute="height" multiplier="10.41:7.77" id="YKQ-f3-wuk"/>
                                                 </constraints>
                                             </imageView>
-                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12h-BF-Jq4" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                <rect key="frame" x="196" y="24.5" width="80" height="36"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_home_harvest" translatesAutoresizingMaskIntoConstraints="NO" id="44G-Sp-rGo">
-                                                        <rect key="frame" x="24" y="6.5" width="32" height="23.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="32" id="dqm-sZ-27u"/>
-                                                            <constraint firstAttribute="width" secondItem="44G-Sp-rGo" secondAttribute="height" multiplier="61:45" id="nfo-35-Jl9"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.0" green="0.76470588235294112" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstItem="44G-Sp-rGo" firstAttribute="centerX" secondItem="12h-BF-Jq4" secondAttribute="centerX" id="EnR-cu-vSF"/>
-                                                    <constraint firstAttribute="height" constant="36" id="FwW-Si-k5M"/>
-                                                    <constraint firstItem="44G-Sp-rGo" firstAttribute="centerY" secondItem="12h-BF-Jq4" secondAttribute="centerY" id="NYR-EQ-VkM"/>
-                                                    <constraint firstAttribute="width" constant="80" id="eNU-ZZ-pJR"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4p-tb-5EK" customClass="HarvestView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                <rect key="frame" x="12" y="30.5" width="176" height="32"/>
+                                                <rect key="frame" x="32" y="43" width="232" height="32"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="IgE-2Y-U8W"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DxY-sR-uAH">
-                                                <rect key="frame" x="12" y="12" width="176" height="69"/>
+                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DxY-sR-uAH">
+                                                <rect key="frame" x="32" y="40" width="232" height="48"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_empty2_small" translatesAutoresizingMaskIntoConstraints="NO" id="KeE-RW-ueg">
-                                                        <rect key="frame" x="0.0" y="10.5" width="48" height="48"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="48" id="5cd-af-fcf"/>
                                                             <constraint firstAttribute="width" secondItem="KeE-RW-ueg" secondAttribute="height" multiplier="1:1" id="cHP-iL-LCj"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="You have no current harvesting." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRD-XT-NPM">
-                                                        <rect key="frame" x="48" y="20" width="128" height="29"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="You have no current harvesting." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRD-XT-NPM">
+                                                        <rect key="frame" x="64" y="9.5" width="168" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ハーベスト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCt-Qy-0Wx">
+                                                <rect key="frame" x="50.5" y="12.5" width="61.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="e1B-7f-Y5d" firstAttribute="leading" secondItem="ebN-bL-svk" secondAttribute="leading" constant="16" id="6Dj-8T-Us9"/>
-                                            <constraint firstItem="Q4p-tb-5EK" firstAttribute="centerY" secondItem="DxY-sR-uAH" secondAttribute="centerY" id="8n3-Mp-0Ra"/>
-                                            <constraint firstItem="12h-BF-Jq4" firstAttribute="centerY" secondItem="ebN-bL-svk" secondAttribute="centerY" id="Hor-Na-Dv4"/>
+                                            <constraint firstItem="tCt-Qy-0Wx" firstAttribute="leading" secondItem="e1B-7f-Y5d" secondAttribute="trailing" constant="8" id="393-kL-y2l"/>
+                                            <constraint firstItem="e1B-7f-Y5d" firstAttribute="leading" secondItem="ebN-bL-svk" secondAttribute="leading" constant="32" id="6Dj-8T-Us9"/>
                                             <constraint firstItem="Q4p-tb-5EK" firstAttribute="trailing" secondItem="DxY-sR-uAH" secondAttribute="trailing" id="Lsh-O5-0wQ"/>
-                                            <constraint firstItem="e1B-7f-Y5d" firstAttribute="top" secondItem="ebN-bL-svk" secondAttribute="top" id="Lwy-3L-hcH"/>
-                                            <constraint firstItem="DxY-sR-uAH" firstAttribute="leading" secondItem="ebN-bL-svk" secondAttribute="leading" constant="12" id="jrW-U1-AEq"/>
+                                            <constraint firstItem="e1B-7f-Y5d" firstAttribute="top" secondItem="ebN-bL-svk" secondAttribute="top" constant="16" id="Lwy-3L-hcH"/>
+                                            <constraint firstItem="tCt-Qy-0Wx" firstAttribute="centerY" secondItem="e1B-7f-Y5d" secondAttribute="centerY" id="RYs-De-M0N"/>
+                                            <constraint firstItem="Q4p-tb-5EK" firstAttribute="leading" secondItem="ebN-bL-svk" secondAttribute="leading" constant="32" id="bba-Nc-kCo"/>
                                             <constraint firstAttribute="bottom" secondItem="DxY-sR-uAH" secondAttribute="bottom" constant="4" id="kLb-Ho-VqL"/>
-                                            <constraint firstItem="12h-BF-Jq4" firstAttribute="leading" secondItem="DxY-sR-uAH" secondAttribute="trailing" constant="8" id="kRZ-68-miK"/>
                                             <constraint firstItem="Q4p-tb-5EK" firstAttribute="leading" secondItem="DxY-sR-uAH" secondAttribute="leading" id="ryl-ij-6Cz"/>
-                                            <constraint firstAttribute="trailing" secondItem="12h-BF-Jq4" secondAttribute="trailing" constant="16" id="tqf-jp-GV6"/>
-                                            <constraint firstItem="DxY-sR-uAH" firstAttribute="top" secondItem="e1B-7f-Y5d" secondAttribute="bottom" constant="-16" id="uLy-kv-3Hi"/>
-                                            <constraint firstAttribute="height" constant="85" id="vN5-2t-dER"/>
+                                            <constraint firstItem="Q4p-tb-5EK" firstAttribute="top" secondItem="tCt-Qy-0Wx" secondAttribute="bottom" constant="16" id="sf0-R8-0ag"/>
+                                            <constraint firstItem="DxY-sR-uAH" firstAttribute="top" secondItem="e1B-7f-Y5d" secondAttribute="bottom" constant="16" id="uLy-kv-3Hi"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q4p-tb-5EK" secondAttribute="trailing" constant="32" id="uZL-IM-evL"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfk-LZ-g6F" customClass="BalanceCard" customModule="RaccoonWallet" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="60" width="296" height="133.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lfk-LZ-g6F" secondAttribute="height" multiplier="328:148" id="FBo-WD-qs3"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ygB-Ky-ZYY" secondAttribute="trailing" constant="14" id="GkL-hH-jzU"/>
-                                    <constraint firstItem="jyR-lO-od2" firstAttribute="width" secondItem="ygB-Ky-ZYY" secondAttribute="width" id="VuG-uG-JpB"/>
-                                    <constraint firstItem="ygB-Ky-ZYY" firstAttribute="width" secondItem="oCm-h4-AzK" secondAttribute="width" constant="-28" id="WMg-Cj-xeA"/>
-                                    <constraint firstItem="ygB-Ky-ZYY" firstAttribute="top" secondItem="oCm-h4-AzK" secondAttribute="top" constant="60" id="Wz3-Lh-ik9"/>
+                                    <constraint firstItem="lfk-LZ-g6F" firstAttribute="leading" secondItem="oCm-h4-AzK" secondAttribute="leading" constant="12" id="ECV-Ow-eQA"/>
+                                    <constraint firstItem="ebN-bL-svk" firstAttribute="width" secondItem="jyR-lO-od2" secondAttribute="width" id="S70-Pl-Fda"/>
                                     <constraint firstItem="ebN-bL-svk" firstAttribute="top" secondItem="jyR-lO-od2" secondAttribute="bottom" constant="16" id="djR-Vu-gBO"/>
+                                    <constraint firstItem="jyR-lO-od2" firstAttribute="top" secondItem="lfk-LZ-g6F" secondAttribute="bottom" constant="16" id="ekG-A2-uBK"/>
                                     <constraint firstItem="ebN-bL-svk" firstAttribute="centerX" secondItem="oCm-h4-AzK" secondAttribute="centerX" id="hSh-OK-VZr"/>
-                                    <constraint firstItem="jyR-lO-od2" firstAttribute="top" secondItem="ygB-Ky-ZYY" secondAttribute="bottom" constant="16" id="jgj-cR-3Vd"/>
-                                    <constraint firstItem="ebN-bL-svk" firstAttribute="width" secondItem="ygB-Ky-ZYY" secondAttribute="width" id="kj4-6H-rj6"/>
-                                    <constraint firstAttribute="bottom" secondItem="ebN-bL-svk" secondAttribute="bottom" constant="16" id="sIV-ne-00p"/>
-                                    <constraint firstItem="ygB-Ky-ZYY" firstAttribute="leading" secondItem="oCm-h4-AzK" secondAttribute="leading" constant="14" id="x0y-fh-vk6"/>
+                                    <constraint firstItem="jyR-lO-od2" firstAttribute="width" secondItem="lfk-LZ-g6F" secondAttribute="width" id="iXy-kA-MhH"/>
+                                    <constraint firstItem="lfk-LZ-g6F" firstAttribute="width" secondItem="oCm-h4-AzK" secondAttribute="width" constant="-24" id="isA-tF-QnD"/>
+                                    <constraint firstItem="lfk-LZ-g6F" firstAttribute="top" secondItem="oCm-h4-AzK" secondAttribute="top" constant="60" id="leQ-bh-SN6"/>
+                                    <constraint firstAttribute="trailing" secondItem="lfk-LZ-g6F" secondAttribute="trailing" constant="12" id="ojZ-ZC-faZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ebN-bL-svk" secondAttribute="bottom" constant="8" id="sIV-ne-00p"/>
                                     <constraint firstItem="jyR-lO-od2" firstAttribute="centerX" secondItem="oCm-h4-AzK" secondAttribute="centerX" id="yMs-Ap-zOo"/>
                                 </constraints>
                             </scrollView>
@@ -294,11 +198,11 @@
                     <navigationItem key="navigationItem" title="Hello NEMber" id="c4d-FK-hMf"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="balanceCard" destination="ygB-Ky-ZYY" id="crK-Wj-5BR"/>
-                        <outlet property="balanceContent" destination="fgG-Ie-eEo" id="cEv-Di-O8y"/>
+                        <outlet property="balanceCard" destination="lfk-LZ-g6F" id="TXz-Fg-VjX"/>
                         <outlet property="harvestEmpty" destination="DxY-sR-uAH" id="X1I-Hn-4La"/>
+                        <outlet property="harvestEmptyMessage" destination="RRD-XT-NPM" id="wRR-EM-QzR"/>
+                        <outlet property="harvestHeadline" destination="tCt-Qy-0Wx" id="dEp-74-NJg"/>
                         <outlet property="harvestView" destination="Q4p-tb-5EK" id="43G-8I-RMj"/>
-                        <outlet property="localCurrency" destination="U04-rb-UQM" id="YDb-OU-9wz"/>
                         <outlet property="scrollView" destination="oCm-h4-AzK" id="Lcs-7Z-txB"/>
                         <outlet property="transaction0" destination="J7q-wy-E2q" id="xpK-2I-BzM"/>
                         <outlet property="transaction1" destination="hJB-Oq-MHW" id="g45-D4-sMY"/>
@@ -307,7 +211,8 @@
                         <outlet property="transactionCard" destination="jyR-lO-od2" id="kJu-lT-ozY"/>
                         <outlet property="transactionContent" destination="bch-VM-E05" id="f5Q-AE-8Bf"/>
                         <outlet property="transactionEmpty" destination="dmi-FR-ac3" id="efH-Qx-3gj"/>
-                        <outlet property="xem" destination="IT5-ZP-Xjg" id="Dh4-yf-TN2"/>
+                        <outlet property="transactionEmptyMessage" destination="uT3-bp-ARe" id="5lq-5r-lkG"/>
+                        <outlet property="transactionHeadline" destination="dlT-OT-575" id="AE4-SV-YRQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBG-PZ-VpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -317,13 +222,9 @@
     </scenes>
     <resources>
         <image name="bottom_nav_home" width="25" height="25"/>
-        <image name="icon_home_harvest" width="61" height="45"/>
-        <image name="icon_home_transaction" width="93" height="103"/>
-        <image name="image_empty1_small" width="120" height="120"/>
-        <image name="image_empty2_small" width="96" height="96"/>
-        <image name="image_home_balance_background" width="379" height="105"/>
-        <image name="tab_home_balance" width="128" height="56"/>
-        <image name="tab_home_harvest" width="128" height="56"/>
-        <image name="tab_home_transaction" width="128" height="56"/>
+        <image name="icon_home_harvest" width="11" height="8"/>
+        <image name="icon_home_transaction" width="11" height="12"/>
+        <image name="image_empty1_small" width="60" height="60"/>
+        <image name="image_empty2_small" width="48" height="48"/>
     </resources>
 </document>
