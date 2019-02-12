@@ -215,6 +215,7 @@
 
 
 "setting_language_select" = "言語選択";
+"setting_currency_select" = "表示通貨";
 "setting_notification_setting" = "通知設定";
 "setting_change_password" = "PINコードの設定・変更";
 "setting_require_biometrics" = "%@の要求";

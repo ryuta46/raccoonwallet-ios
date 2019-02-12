@@ -1348,7 +1348,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 211 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 212 localization keys.
     struct localizable {
       /// en translation: 
       /// 
@@ -2086,6 +2086,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let first_tutorial_message3 = Rswift.StringResource(key: "first_tutorial_message3", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 表示通貨
+      /// 
+      /// Locales: en, ja
+      static let setting_currency_select = Rswift.StringResource(key: "setting_currency_select", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 言語選択
       /// 
       /// Locales: en, ja
@@ -2190,7 +2194,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: ja
       static let send_mode_attach = Rswift.StringResource(key: "send_mode_attach", tableName: "localizable", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: 送金完了
+      /// ja translation: 送金詳細
       /// 
       /// Locales: ja
       static let send_complete_transaction_label = Rswift.StringResource(key: "send_complete_transaction_label", tableName: "localizable", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
@@ -3483,6 +3487,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("first_tutorial_message3", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: 表示通貨
+      /// 
+      /// Locales: en, ja
+      static func setting_currency_select(_: Void = ()) -> String {
+        return NSLocalizedString("setting_currency_select", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: 言語選択
       /// 
       /// Locales: en, ja
@@ -3665,7 +3676,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("send_mode_attach", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// ja translation: 送金完了
+      /// ja translation: 送金詳細
       /// 
       /// Locales: ja
       static func send_complete_transaction_label(_: Void = ()) -> String {

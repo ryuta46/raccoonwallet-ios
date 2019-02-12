@@ -49,6 +49,7 @@ class SettingTopViewController: BaseViewController {
         menus = [
             [
                 R.string.localizable.setting_language_select(),
+                R.string.localizable.setting_currency_select(),
                 R.string.localizable.setting_notification_setting()
             ],
             [
@@ -168,6 +169,7 @@ extension SettingTopViewController: UITableViewDelegate {
 
         switch menu {
         case R.string.localizable.setting_language_select(): presenter.didClickLanguageSelect()
+        case R.string.localizable.setting_currency_select(): presenter.didClickCurrencySelect()
         case R.string.localizable.setting_notification_setting(): presenter.didClickNotificationSetting()
         case R.string.localizable.setting_change_password(): presenter.didClickChangePassword()
         case R.string.localizable.setting_go_to_security_lesson(): presenter.didClickGoToSecurityLesson()
