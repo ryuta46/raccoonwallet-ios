@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad10_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,27 +15,21 @@
             <objects>
                 <viewController storyboardIdentifier="QrLabAmountView" id="0N3-Wq-2vd" customClass="QrLabAmountViewController" customModule="RaccoonWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mtQ-k8-Vb7">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_qr_labo_small" translatesAutoresizingMaskIntoConstraints="NO" id="iPg-eB-bE8">
-                                <rect key="frame" x="0.0" y="20" width="834" height="231.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="iPg-eB-bE8" secondAttribute="height" multiplier="720:200" id="2we-ZC-yBT"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fp0-L0-dj5" customClass="Calculator" customModule="RaccoonWallet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="667" width="834" height="445"/>
+                                <rect key="frame" x="0.0" y="400" width="375" height="267"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAB-Qb-rxo">
-                                <rect key="frame" x="32" y="267.5" width="27" height="16"/>
+                                <rect key="frame" x="32" y="80" width="27" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gth-Fy-ipX">
-                                <rect key="frame" x="32" y="299.5" width="715" height="26.5"/>
+                                <rect key="frame" x="32" y="112" width="256" height="26.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nq-xF-nlU">
                                         <rect key="frame" x="0.0" y="0.0" width="14" height="26.5"/>
@@ -44,7 +38,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="XEM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xq8-M5-F9m">
-                                        <rect key="frame" x="22" y="0.0" width="693" height="26.5"/>
+                                        <rect key="frame" x="22" y="0.0" width="234" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -52,13 +46,13 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lW1-0z-val" customClass="WalletBar" customModule="RaccoonWallet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="834" height="32"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="72t-C6-fKI"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qkw-1D-RuU">
-                                <rect key="frame" x="32" y="342" width="715" height="20.5"/>
+                                <rect key="frame" x="32" y="154.5" width="256" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccd-zx-lVd">
                                         <rect key="frame" x="0.0" y="0.0" width="11" height="20.5"/>
@@ -73,7 +67,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="JPY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOw-MI-pDH">
-                                        <rect key="frame" x="37.5" y="0.0" width="677.5" height="20.5"/>
+                                        <rect key="frame" x="37.5" y="0.0" width="218.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -81,7 +75,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cw-fI-EqV" customClass="PrimaryFloatingButton" customModule="RaccoonWallet" customModuleProvider="target">
-                                <rect key="frame" x="755" y="299.5" width="64" height="64"/>
+                                <rect key="frame" x="296" y="112" width="64" height="64"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="7As-46-wvE"/>
@@ -98,22 +92,18 @@
                         <constraints>
                             <constraint firstItem="Qkw-1D-RuU" firstAttribute="top" secondItem="Gth-Fy-ipX" secondAttribute="bottom" constant="16" id="0mP-hL-jZg"/>
                             <constraint firstItem="xJa-3o-AcC" firstAttribute="trailing" secondItem="8cw-fI-EqV" secondAttribute="trailing" constant="15" id="4hK-hH-amG"/>
+                            <constraint firstItem="8cw-fI-EqV" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" constant="92" id="6Mu-c7-bfS"/>
                             <constraint firstItem="Gth-Fy-ipX" firstAttribute="top" secondItem="gAB-Qb-rxo" secondAttribute="bottom" constant="16" id="72z-2m-201"/>
-                            <constraint firstItem="iPg-eB-bE8" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" id="91L-fi-ZoJ"/>
                             <constraint firstItem="xJa-3o-AcC" firstAttribute="bottom" secondItem="fp0-L0-dj5" secondAttribute="bottom" id="Dtt-sI-cbV"/>
                             <constraint firstItem="fp0-L0-dj5" firstAttribute="height" secondItem="mtQ-k8-Vb7" secondAttribute="height" multiplier="0.4" id="Dzc-nd-Fr6"/>
-                            <constraint firstItem="8cw-fI-EqV" firstAttribute="top" secondItem="iPg-eB-bE8" secondAttribute="bottom" constant="48" id="IIu-NB-eb9"/>
                             <constraint firstItem="8cw-fI-EqV" firstAttribute="leading" secondItem="Gth-Fy-ipX" secondAttribute="trailing" constant="8" id="IKZ-mt-moe"/>
-                            <constraint firstItem="iPg-eB-bE8" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" id="Tar-Pj-DKa"/>
                             <constraint firstItem="lW1-0z-val" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" id="Wg2-wI-nRY"/>
-                            <constraint firstItem="iPg-eB-bE8" firstAttribute="trailing" secondItem="xJa-3o-AcC" secondAttribute="trailing" id="Z9X-em-Gdr"/>
                             <constraint firstItem="Qkw-1D-RuU" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" constant="32" id="Zzd-8m-ygk"/>
                             <constraint firstItem="8cw-fI-EqV" firstAttribute="leading" secondItem="Qkw-1D-RuU" secondAttribute="trailing" constant="8" id="gIX-aC-keo"/>
                             <constraint firstItem="lW1-0z-val" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" id="i7w-e3-tkg"/>
                             <constraint firstItem="fp0-L0-dj5" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" id="iHq-HV-7dI"/>
-                            <constraint firstItem="iPg-eB-bE8" firstAttribute="width" secondItem="iPg-eB-bE8" secondAttribute="height" multiplier="720:200" id="k8b-iL-AK5"/>
                             <constraint firstItem="Gth-Fy-ipX" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" constant="32" id="l26-9f-1ig"/>
-                            <constraint firstItem="gAB-Qb-rxo" firstAttribute="top" secondItem="iPg-eB-bE8" secondAttribute="bottom" constant="16" id="qU0-cJ-Qnd"/>
+                            <constraint firstItem="gAB-Qb-rxo" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" constant="60" id="qU0-cJ-Qnd"/>
                             <constraint firstAttribute="trailing" secondItem="fp0-L0-dj5" secondAttribute="trailing" id="ynj-GT-28m"/>
                             <constraint firstItem="lW1-0z-val" firstAttribute="trailing" secondItem="xJa-3o-AcC" secondAttribute="trailing" id="zsK-GB-hEm"/>
                             <constraint firstItem="gAB-Qb-rxo" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" constant="32" id="zus-vN-cku"/>
@@ -135,7 +125,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heroimage_qr_labo_small" width="720" height="200"/>
         <image name="icon_recycle" width="128" height="128"/>
     </resources>
 </document>

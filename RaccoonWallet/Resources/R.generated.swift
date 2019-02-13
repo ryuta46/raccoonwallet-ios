@@ -4309,7 +4309,6 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_qr_labo_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_qr_labo_small' is used in storyboard 'QrLabAmountStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_recycle") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_recycle' is used in storyboard 'QrLabAmountStoryboard', but couldn't be loaded.") }
         if _R.storyboard.qrLabAmountStoryboard().qrLabAmountView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'qrLabAmountView' could not be loaded from storyboard 'QrLabAmountStoryboard' as 'QrLabAmountViewController'.") }
       }
