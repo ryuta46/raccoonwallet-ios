@@ -29,6 +29,8 @@ class LessonLevelViewController : BaseViewController{
     override func setup() {
         title = R.string.localizable.lesson_level_title()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        view.backgroundColor = Theme.baseBackground
 
         beginnerCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTouchedBeginnerCard(_:))))
         importCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTouchedImportCard(_:))))

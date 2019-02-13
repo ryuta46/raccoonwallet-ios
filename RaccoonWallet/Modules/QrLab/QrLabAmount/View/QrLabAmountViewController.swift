@@ -24,7 +24,6 @@ class QrLabAmountViewController : BaseViewController {
         hideBackTitle()
 
         amountHeadline.text = R.string.localizable.common_amount()
-        amountHeadline.textColor = Theme.primary
 
         calculator.delegate = self
     }

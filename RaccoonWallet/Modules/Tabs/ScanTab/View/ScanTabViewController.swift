@@ -22,6 +22,11 @@ class ScanTabViewController: BaseViewController {
 
         loadingView = createFullScreenLoadingView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.title = ""
+    }
 }
 
 extension ScanTabViewController: ScanTabView {

@@ -26,10 +26,8 @@ class QrLabInvoiceViewController: BaseViewController {
         title = "My Wallet QR"
 
         amountHeadline.text = R.string.localizable.common_amount()
-        amountHeadline.textColor = Theme.primary
 
         addressHeadline.text = R.string.localizable.common_destination()
-        addressHeadline.textColor = Theme.primary
 
         let done = UIBarButtonItem()
         done.customView = createBarButton(image: R.image.icon_check_green()!, size: Constant.barIconSize, action: #selector(onTouchedOk(_:)))
