@@ -34,6 +34,12 @@ class QrLabViewController : BaseViewController {
         registerHint.text = R.string.localizable.common_coming_soon()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.title = "QR Lab"
+    }
+
+
     @objc func onTouchedAmount(_ sender: Any) {
         presenter.didClickAmount()
     }

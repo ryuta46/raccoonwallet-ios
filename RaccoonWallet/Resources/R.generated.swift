@@ -4347,7 +4347,6 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "bottom_nav_qr_lab") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'bottom_nav_qr_lab' is used in storyboard 'QrLabTabStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_dentaku") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_dentaku' is used in storyboard 'QrLabTabStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_register_84px") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_register_84px' is used in storyboard 'QrLabTabStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "heroimage_qr_labo_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_qr_labo_small' is used in storyboard 'QrLabTabStoryboard', but couldn't be loaded.") }
         if _R.storyboard.qrLabTabStoryboard().qrLabTabView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'qrLabTabView' could not be loaded from storyboard 'QrLabTabStoryboard' as 'QrLabViewController'.") }
       }
       

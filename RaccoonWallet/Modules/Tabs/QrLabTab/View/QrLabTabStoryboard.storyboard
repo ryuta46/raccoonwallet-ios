@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,19 +21,13 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yom-h5-fSt">
                                 <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_qr_labo_small" translatesAutoresizingMaskIntoConstraints="NO" id="MkQ-PX-GTK">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="MkQ-PX-GTK" secondAttribute="height" multiplier="720:200" id="i1Q-YM-gPs"/>
-                                        </constraints>
-                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pi1-hp-pbQ">
-                                        <rect key="frame" x="16" y="105" width="288" height="320"/>
+                                        <rect key="frame" x="16" y="60" width="288" height="144"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" verticalHuggingPriority="254" translatesAutoresizingMaskIntoConstraints="NO" id="lW1-Sg-IKF" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="64"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJv-Ve-tfM">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJv-Ve-tfM" customClass="PrimaryPanel" customModule="RaccoonWallet" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon_dentaku" translatesAutoresizingMaskIntoConstraints="NO" id="3Z2-yz-gBp">
@@ -53,7 +47,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="指定金額を受け取る" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gk6-2Z-oVt">
-                                                        <rect key="frame" x="80" y="21.5" width="208" height="20.5"/>
+                                                        <rect key="frame" x="80" y="22" width="208" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -72,7 +66,7 @@
                                             <view contentMode="scaleToFill" verticalHuggingPriority="254" translatesAutoresizingMaskIntoConstraints="NO" id="mWU-fe-JuF" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="80" width="288" height="64"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVk-eC-SU5">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVk-eC-SU5" customClass="PrimaryPanel" customModule="RaccoonWallet" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon_list" translatesAutoresizingMaskIntoConstraints="NO" id="7Vy-95-EtN">
@@ -90,7 +84,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="売り物リスト機能を使う" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovN-Hl-ZH8">
-                                                        <rect key="frame" x="80" y="21.5" width="208" height="20.5"/>
+                                                        <rect key="frame" x="80" y="22" width="208" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -106,14 +100,14 @@
                                                     <constraint firstItem="ovN-Hl-ZH8" firstAttribute="leading" secondItem="dVk-eC-SU5" secondAttribute="trailing" constant="16" id="ix2-an-h7B"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalHuggingPriority="254" translatesAutoresizingMaskIntoConstraints="NO" id="pnI-ub-rRh" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="160" width="288" height="160"/>
+                                            <view hidden="YES" contentMode="scaleToFill" verticalHuggingPriority="254" translatesAutoresizingMaskIntoConstraints="NO" id="pnI-ub-rRh" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="144" width="288" height="48"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJZ-s6-8yX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="160"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJZ-s6-8yX" customClass="PrimaryPanel" customModule="RaccoonWallet" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="48"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon_register_84px" translatesAutoresizingMaskIntoConstraints="NO" id="yUL-Wd-gfy">
-                                                                <rect key="frame" x="20" y="36" width="88" height="88"/>
+                                                                <rect key="frame" x="20" y="-20" width="88" height="88"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="yUL-Wd-gfy" secondAttribute="height" multiplier="1:1" id="AJB-4C-2V8"/>
                                                                     <constraint firstAttribute="height" constant="88" id="H7n-fp-Xmh"/>
@@ -128,22 +122,22 @@
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pCd-ju-hJv">
-                                                        <rect key="frame" x="144" y="16" width="128" height="128"/>
+                                                        <rect key="frame" x="144" y="16" width="128" height="16"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRレジスター" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcs-ef-Aq6">
-                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="0.0"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="対応コードをスキャンして、合計金額を請求するQRコードを生成する" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsr-Oh-1uk">
-                                                                <rect key="frame" x="0.0" y="28.5" width="128" height="72"/>
+                                                                <rect key="frame" x="0.0" y="8" width="128" height="0.0"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カミングスーン" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bN-en-DUw">
-                                                                <rect key="frame" x="0.0" y="108.5" width="128" height="19.5"/>
+                                                                <rect key="frame" x="0.0" y="16" width="128" height="0.0"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -171,11 +165,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="pi1-hp-pbQ" firstAttribute="leading" secondItem="Yom-h5-fSt" secondAttribute="leading" constant="16" id="6Kt-9D-Dek"/>
-                                    <constraint firstItem="pi1-hp-pbQ" firstAttribute="top" secondItem="MkQ-PX-GTK" secondAttribute="bottom" constant="16" id="LKk-lW-Gqg"/>
-                                    <constraint firstItem="MkQ-PX-GTK" firstAttribute="top" secondItem="Yom-h5-fSt" secondAttribute="top" id="Sfq-Dt-GPf"/>
+                                    <constraint firstItem="pi1-hp-pbQ" firstAttribute="top" secondItem="Yom-h5-fSt" secondAttribute="top" constant="60" id="Nt3-5B-Uki"/>
                                     <constraint firstAttribute="bottom" secondItem="pi1-hp-pbQ" secondAttribute="bottom" constant="16" id="ZJ4-y3-dEm"/>
-                                    <constraint firstAttribute="trailing" secondItem="MkQ-PX-GTK" secondAttribute="trailing" id="hau-AY-V1f"/>
-                                    <constraint firstItem="MkQ-PX-GTK" firstAttribute="leading" secondItem="Yom-h5-fSt" secondAttribute="leading" id="hjx-Jr-QGB"/>
                                     <constraint firstAttribute="trailing" secondItem="pi1-hp-pbQ" secondAttribute="trailing" constant="16" id="t14-de-u0e"/>
                                     <constraint firstItem="pi1-hp-pbQ" firstAttribute="width" secondItem="Yom-h5-fSt" secondAttribute="width" constant="-32" id="tLU-pu-74E"/>
                                 </constraints>
@@ -187,7 +178,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pdC-9v-n0Z" firstAttribute="trailing" secondItem="Yom-h5-fSt" secondAttribute="trailing" id="AuI-7T-n2j"/>
                             <constraint firstItem="Yom-h5-fSt" firstAttribute="leading" secondItem="pdC-9v-n0Z" secondAttribute="leading" id="Pa8-Qc-i3k"/>
@@ -221,9 +212,8 @@
     </scenes>
     <resources>
         <image name="bottom_nav_qr_lab" width="25" height="25"/>
-        <image name="heroimage_qr_labo_small" width="720" height="200"/>
-        <image name="icon_dentaku" width="73" height="73"/>
-        <image name="icon_list" width="73" height="73"/>
+        <image name="icon_dentaku" width="37" height="37"/>
+        <image name="icon_list" width="37" height="37"/>
         <image name="icon_register_84px" width="168" height="168"/>
     </resources>
 </document>
