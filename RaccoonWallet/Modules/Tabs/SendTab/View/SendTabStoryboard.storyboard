@@ -113,10 +113,19 @@
                                     <constraint firstItem="aTg-dv-XEP" firstAttribute="width" secondItem="4wB-Mm-3nh" secondAttribute="width" id="y39-Cb-103"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2i-Gs-ryM" customClass="WalletBar" customModule="RaccoonWallet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="320" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="r5T-7D-Kwb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="J2i-Gs-ryM" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" id="2h7-P7-0i2"/>
+                            <constraint firstItem="J2i-Gs-ryM" firstAttribute="leading" secondItem="mtQ-k8-Vb7" secondAttribute="leading" id="IJr-Ha-P45"/>
                             <constraint firstItem="xJa-3o-AcC" firstAttribute="bottom" secondItem="4wB-Mm-3nh" secondAttribute="bottom" id="JQn-az-ug7"/>
+                            <constraint firstAttribute="trailing" secondItem="J2i-Gs-ryM" secondAttribute="trailing" id="JWH-1B-Y1q"/>
                             <constraint firstItem="4wB-Mm-3nh" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" id="ius-ae-1rZ"/>
                             <constraint firstItem="4wB-Mm-3nh" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" id="njX-ym-7tL"/>
                             <constraint firstItem="xJa-3o-AcC" firstAttribute="trailing" secondItem="4wB-Mm-3nh" secondAttribute="trailing" id="vbt-6b-N8l"/>

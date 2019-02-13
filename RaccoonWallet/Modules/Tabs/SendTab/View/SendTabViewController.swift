@@ -32,7 +32,11 @@ class SendTabViewController : BaseViewController {
         destination.placeholder = R.string.localizable.send_input_address()
 
         loading = createFullScreenLoadingView()
-        //loading.setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.title = R.string.localizable.send_tab_title()
     }
 
     override func keyboardWillShow(keyboardFrame: CGRect, duration: TimeInterval) {

@@ -25,6 +25,8 @@ class BalanceDetailViewController: BaseViewController {
 
         title = R.string.localizable.common_wallet_balance()
         hideBackTitle()
+        
+        view.backgroundColor = Theme.baseBackground
 
         mosaicListHeadline.text = R.string.localizable.common_mosaic_list()
 

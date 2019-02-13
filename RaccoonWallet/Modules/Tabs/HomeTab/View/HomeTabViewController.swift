@@ -37,6 +37,7 @@ class HomeTabViewController: BaseViewController {
     override func setup() {
         super.setup()
 
+        view.backgroundColor = Theme.baseBackground
         transactionHeadline.text = R.string.localizable.home_transaction_headline()
         transactionEmptyMessage.text = R.string.localizable.home_transaction_empty_message()
         harvestHeadline.text = R.string.localizable.common_harvest()
