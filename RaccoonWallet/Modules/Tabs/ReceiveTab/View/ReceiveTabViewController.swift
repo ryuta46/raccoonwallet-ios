@@ -15,9 +15,9 @@ class ReceiveTabViewController : BaseViewController {
     @IBOutlet weak var addressTitle: UILabel!
     @IBOutlet weak var address: UILabel!
     
-    override func setup() {
-        super.setup()
-        addressTitle.textColor = Theme.primary
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.title = R.string.localizable.receive_tab_title()
     }
 }
 

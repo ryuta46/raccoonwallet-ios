@@ -1334,7 +1334,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 216 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 217 localization keys.
     struct localizable {
       /// en translation: 
       /// 
@@ -1956,6 +1956,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let send_message_encrypted_caution = Rswift.StringResource(key: "send_message_encrypted_caution", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 受け取る
+      /// 
+      /// Locales: en, ja
+      static let receive_tab_title = Rswift.StringResource(key: "receive_tab_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 君が送ろうとしているアドレスは、これまで一度もブロックチェーン上で活動していない新参者みたいだね。とはいえアドレスがちゃんとした形式なら、送金は可能だよ。 アドレスは正しいか、送り先は信頼できるか、よく確かめてから手続きしてね。
       /// 
       /// Locales: en, ja
@@ -3286,6 +3290,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("send_message_encrypted_caution", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: 受け取る
+      /// 
+      /// Locales: en, ja
+      static func receive_tab_title(_: Void = ()) -> String {
+        return NSLocalizedString("receive_tab_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: 君が送ろうとしているアドレスは、これまで一度もブロックチェーン上で活動していない新参者みたいだね。とはいえアドレスがちゃんとした形式なら、送金は可能だよ。 アドレスは正しいか、送り先は信頼できるか、よく確かめてから手続きしてね。
       /// 
       /// Locales: en, ja
@@ -4378,7 +4389,6 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_send_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_send_small' is used in storyboard 'ReceiveTabStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "bottom_nav_receive") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'bottom_nav_receive' is used in storyboard 'ReceiveTabStoryboard', but couldn't be loaded.") }
         if _R.storyboard.receiveTabStoryboard().receiveTabView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'receiveTabView' could not be loaded from storyboard 'ReceiveTabStoryboard' as 'ReceiveTabViewController'.") }
       }

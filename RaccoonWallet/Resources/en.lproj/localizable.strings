@@ -172,6 +172,7 @@
 
 "qrlab_amount_title" = "金額の指定";
 
+"receive_tab_title" = "受け取る";
 
 "send_destination" = "送信先";
 "send_input_address" = "送信先アドレスを入力";
