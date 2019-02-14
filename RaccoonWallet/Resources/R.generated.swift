@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 112 images.
+  /// This `R.image` struct is generated, and contains static references to 114 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -100,6 +100,8 @@ struct R: Rswift.Validatable {
     static let heroimage_wallet_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_wallet_small")
     /// Image `ic_background`.
     static let ic_background = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_background")
+    /// Image `ic_menu_white`.
+    static let ic_menu_white = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_menu_white")
     /// Image `icon_addressbook`.
     static let icon_addressbook = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_addressbook")
     /// Image `icon_back`.
@@ -174,6 +176,8 @@ struct R: Rswift.Validatable {
     static let icon_menu_mosaic = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu_mosaic")
     /// Image `icon_menu_setting`.
     static let icon_menu_setting = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu_setting")
+    /// Image `icon_menu`.
+    static let icon_menu = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu")
     /// Image `icon_message_encryption`.
     static let icon_message_encryption = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_message_encryption")
     /// Image `icon_message_standard`.
@@ -400,6 +404,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.ic_background, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "ic_menu_white", bundle: ..., traitCollection: ...)`
+    static func ic_menu_white(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_menu_white, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icon_addressbook", bundle: ..., traitCollection: ...)`
     static func icon_addressbook(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_addressbook, compatibleWith: traitCollection)
@@ -543,6 +552,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_list_next", bundle: ..., traitCollection: ...)`
     static func icon_list_next(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_list_next, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_menu", bundle: ..., traitCollection: ...)`
+    static func icon_menu(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_menu, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_menu_about", bundle: ..., traitCollection: ...)`
