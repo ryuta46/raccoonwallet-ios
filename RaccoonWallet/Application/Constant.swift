@@ -22,7 +22,7 @@ class Constant {
     static let messageMaxLength = 1024
 
     static let barIconSize = 25
-    static let nemIconSize = 36
+    static let menuIconSize = 44
 
     static let shadowOffset = CGSize(width: 0.4, height: 1.0)
     static let shadowOpacity: Float = 0.2

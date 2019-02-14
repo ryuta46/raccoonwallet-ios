@@ -174,6 +174,8 @@ struct R: Rswift.Validatable {
     static let icon_menu_mosaic = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu_mosaic")
     /// Image `icon_menu_setting`.
     static let icon_menu_setting = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu_setting")
+    /// Image `icon_menu`.
+    static let icon_menu = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu")
     /// Image `icon_message_encryption`.
     static let icon_message_encryption = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_message_encryption")
     /// Image `icon_message_standard`.
@@ -182,8 +184,6 @@ struct R: Rswift.Validatable {
     static let icon_multisignature_green = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_multisignature_green")
     /// Image `icon_multisignature_red`.
     static let icon_multisignature_red = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_multisignature_red")
-    /// Image `icon_nem`.
-    static let icon_nem = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_nem")
     /// Image `icon_node`.
     static let icon_node = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_node")
     /// Image `icon_pin_small`.
@@ -545,6 +545,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_list_next, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icon_menu", bundle: ..., traitCollection: ...)`
+    static func icon_menu(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_menu, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icon_menu_about", bundle: ..., traitCollection: ...)`
     static func icon_menu_about(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_menu_about, compatibleWith: traitCollection)
@@ -603,11 +608,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_multisignature_red", bundle: ..., traitCollection: ...)`
     static func icon_multisignature_red(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_multisignature_red, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "icon_nem", bundle: ..., traitCollection: ...)`
-    static func icon_nem(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_nem, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_node", bundle: ..., traitCollection: ...)`

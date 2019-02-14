@@ -17,7 +17,7 @@ class TopViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tabBar.tintColor = Theme.primary
+        tabBar.tintColor = UIColor.black
         setupTabs()
         setupMenuButton()
 
@@ -50,9 +50,9 @@ class TopViewController: UITabBarController {
 
     private func setupMenuButton() {
         menuButton = UIBarButtonItem()
-        menuButton.customView = createBarButton(image: R.image.icon_nem()!, size: Constant.nemIconSize, action: #selector(onTouchedMenu(_:)))
+        menuButton.customView = createBarButton(image: R.image.icon_menu()!, size: Constant.menuIconSize, action: #selector(onTouchedMenu(_:)))
 
-        navigationItem.rightBarButtonItem = menuButton
+        navigationItem.leftBarButtonItem = menuButton
     }
 
     @objc func onTouchedMenu(_ sender: Any) {
