@@ -17,7 +17,7 @@ class TopViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tabBar.tintColor = Theme.primary
+        tabBar.tintColor = UIColor.black
         setupTabs()
         setupMenuButton()
 
