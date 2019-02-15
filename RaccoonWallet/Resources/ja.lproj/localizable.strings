@@ -233,9 +233,9 @@
 
 "transaction_list_title" = "トランザクション一覧";
 "transaction_detail_title" = "トランザクション詳細";
-"transaction_no_transaction_title" = "おっと。まだ取引はないみたい。";
+"transaction_no_transaction_title" = "おっと。まだ取引はないみたいです。";
 
-"transaction_no_transaction_message" = "トランザクションが発生したら\nここに一覧で表示されるよ。";
+"transaction_no_transaction_message" = "トランザクションが発生したら\nここに一覧で表示されます。";
 
 "transaction_message_is_encrypted" = "メッセージは暗号化されています";
 "transaction_failed_to_decrypt" =  "復号に失敗しました";

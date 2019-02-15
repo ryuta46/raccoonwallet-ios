@@ -838,7 +838,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 7 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 8 nibs.
   struct nib {
     /// Nib `BalanceCard`.
     static let balanceCard = _R.nib._BalanceCard()
@@ -850,6 +850,8 @@ struct R: Rswift.Validatable {
     static let pinNumberView = _R.nib._PinNumberView()
     /// Nib `SendAmountPage`.
     static let sendAmountPage = _R.nib._SendAmountPage()
+    /// Nib `TransactionListHeader`.
+    static let transactionListHeader = _R.nib._TransactionListHeader()
     /// Nib `TransactionView`.
     static let transactionView = _R.nib._TransactionView()
     /// Nib `WalletBar`.
@@ -880,6 +882,11 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.sendAmountPage)
     }
     
+    /// `UINib(name: "TransactionListHeader", in: bundle)`
+    static func transactionListHeader(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.transactionListHeader)
+    }
+    
     /// `UINib(name: "TransactionView", in: bundle)`
     static func transactionView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.transactionView)
@@ -893,7 +900,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 11 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 10 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `NodeListCell`.
     static let nodeListCell: Rswift.ReuseIdentifier<NodeListCell> = Rswift.ReuseIdentifier(identifier: "NodeListCell")
@@ -911,8 +918,6 @@ struct R: Rswift.Validatable {
     static let settingTopDisclosureCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "settingTopDisclosureCell")
     /// Reuse identifier `settingTopSwitchCell`.
     static let settingTopSwitchCell: Rswift.ReuseIdentifier<SettingTopSwitchCell> = Rswift.ReuseIdentifier(identifier: "settingTopSwitchCell")
-    /// Reuse identifier `transactionHeroImageCell`.
-    static let transactionHeroImageCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "transactionHeroImageCell")
     /// Reuse identifier `transactionListCell`.
     static let transactionListCell: Rswift.ReuseIdentifier<TransactionListCell> = Rswift.ReuseIdentifier(identifier: "transactionListCell")
     /// Reuse identifier `walletSettingCell`.
@@ -3831,6 +3836,17 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    struct _TransactionListHeader: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "TransactionListHeader"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> TransactionListHeader? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TransactionListHeader
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _TransactionView: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "TransactionView"
@@ -4594,7 +4610,6 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_transaction_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_transaction_small' is used in storyboard 'TransactionDetailStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_transaction_unconfirmed") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_transaction_unconfirmed' is used in storyboard 'TransactionDetailStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_transaction_receive_green") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_transaction_receive_green' is used in storyboard 'TransactionDetailStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_transaction_check") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_transaction_check' is used in storyboard 'TransactionDetailStoryboard', but couldn't be loaded.") }
@@ -4616,13 +4631,12 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_transaction_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_transaction_small' is used in storyboard 'TransactionListStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_transaction_unconfirmed") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_transaction_unconfirmed' is used in storyboard 'TransactionListStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_transaction_receive_green") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_transaction_receive_green' is used in storyboard 'TransactionListStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_transaction_check") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_transaction_check' is used in storyboard 'TransactionListStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_check_gray_on") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_check_gray_on' is used in storyboard 'TransactionListStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "image_empty1_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_empty1_large' is used in storyboard 'TransactionListStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_multisignature_green") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_multisignature_green' is used in storyboard 'TransactionListStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "image_empty1_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_empty1_large' is used in storyboard 'TransactionListStoryboard', but couldn't be loaded.") }
         if _R.storyboard.transactionListStoryboard().transactionListView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'transactionListView' could not be loaded from storyboard 'TransactionListStoryboard' as 'TransactionListViewController'.") }
       }
       

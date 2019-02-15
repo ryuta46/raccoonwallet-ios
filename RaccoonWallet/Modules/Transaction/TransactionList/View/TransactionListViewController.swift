@@ -11,7 +11,6 @@ import UIKit
 class TransactionListViewController: BaseViewController {
     var presenter: TransactionListPresentation! { didSet {basePresenter = presenter} }
     
-    @IBOutlet weak var walletBar: WalletBar!
     @IBOutlet weak var contents: UIStackView!
     @IBOutlet weak var emptyContents: UIStackView!
     @IBOutlet weak var emptyHeadline: UILabel!
@@ -23,11 +22,12 @@ class TransactionListViewController: BaseViewController {
     var loadingView: FullScreenLoadingView!
     var refreshControl: UIRefreshControl!
     
-    var walletBarOriginalFrame: CGRect? = nil
+    var transactions: [[TransferTransactionDetail]] = []
 
-    var transactions: [[TransferTransactionDetail]] = [
-        []  // dummy for hero image
-    ]
+
+    private let transactionListHeaderIdentifier = "transactionListHeader"
+
+    
     override func setup() {
         super.setup()
 
@@ -48,6 +48,9 @@ class TransactionListViewController: BaseViewController {
         transactionList.addSubview(refreshControl)
 
         loadingView = createFullScreenLoadingView()
+
+        let nib = R.nib.transactionListHeader()
+        transactionList.register(nib, forHeaderFooterViewReuseIdentifier: transactionListHeaderIdentifier)
         
     }
     
@@ -78,18 +81,13 @@ extension TransactionListViewController: TransactionListView {
     func showTransactions(_ transactions: [[TransferTransactionDetail]]) {
         emptyContents.isHidden = true
         transactionList.isHidden = false
-        self.transactions = [[]] // for hero image
-            + transactions
+        self.transactions = transactions
         transactionList.reloadData()
     }
 
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentOffset = scrollView.contentOffset.y
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
-        if walletBarOriginalFrame == nil {
-            walletBarOriginalFrame = walletBar.frame
-        }
-        walletBar.frame = walletBarOriginalFrame!.offsetBy(dx: 0, dy: min(-currentOffset, 0))
 
         if maximumOffset - currentOffset <= Constant.tableLoadNextBottomThreshold {
             presenter.didReachLastRow()
@@ -100,27 +98,25 @@ extension TransactionListViewController: TransactionListView {
 
 extension TransactionListViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0 {  // for hero image
-            return
-        }
         presenter.didClickTransaction(transactions[indexPath.section][indexPath.row])
     }
 
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 {
-            return 0 // for hero image
-        }
         return Constant.tableHeaderHeight
     }
     
 }
 
 extension TransactionListViewController: UITableViewDataSource {
-    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return nil // for hero image
+    //public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    //    return transactions[section][0].dateString
+    //}
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: transactionListHeaderIdentifier)
+        if let v = view as? TransactionListHeader {
+            v.title.text = transactions[section][0].dateString
         }
-        return transactions[section][0].dateString
+        return view
     }
 
     public func numberOfSections(in tableView: UITableView) -> Int {
@@ -128,17 +124,10 @@ extension TransactionListViewController: UITableViewDataSource {
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1 // for hero image
-        }
         return transactions[section].count
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {// for hero image
-            return transactionList.dequeueReusableCell(withIdentifier: R.reuseIdentifier.transactionHeroImageCell, for: indexPath)!
-        }
-        
         let transaction = transactions[indexPath.section][indexPath.row]
         let cell = transactionList.dequeueReusableCell(withIdentifier: R.reuseIdentifier.transactionListCell, for: indexPath)!
 
