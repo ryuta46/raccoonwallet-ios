@@ -4610,7 +4610,6 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_transaction_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_transaction_small' is used in storyboard 'TransactionDetailStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_transaction_unconfirmed") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_transaction_unconfirmed' is used in storyboard 'TransactionDetailStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_transaction_receive_green") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_transaction_receive_green' is used in storyboard 'TransactionDetailStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_transaction_check") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_transaction_check' is used in storyboard 'TransactionDetailStoryboard', but couldn't be loaded.") }

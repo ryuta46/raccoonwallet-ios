@@ -21,14 +21,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0X1-MO-8j9">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_transaction_small" translatesAutoresizingMaskIntoConstraints="NO" id="0GX-Qz-EzZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="0GX-Qz-EzZ" secondAttribute="height" multiplier="720:200" id="DT7-zW-YzY"/>
-                                        </constraints>
-                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1SA-g9-Kwf">
-                                        <rect key="frame" x="8" y="112" width="359" height="511"/>
+                                        <rect key="frame" x="8" y="8" width="359" height="511"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="foL-06-8a4">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="50"/>
@@ -295,14 +289,11 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="0GX-Qz-EzZ" secondAttribute="trailing" id="AL9-Tm-8bd"/>
-                                    <constraint firstItem="0GX-Qz-EzZ" firstAttribute="leading" secondItem="0X1-MO-8j9" secondAttribute="leading" id="AbM-qv-fNn"/>
+                                    <constraint firstItem="1SA-g9-Kwf" firstAttribute="top" secondItem="0X1-MO-8j9" secondAttribute="top" constant="8" id="E3w-cx-PAU"/>
                                     <constraint firstAttribute="trailing" secondItem="1SA-g9-Kwf" secondAttribute="trailing" constant="8" id="UrW-er-0nF"/>
-                                    <constraint firstItem="0GX-Qz-EzZ" firstAttribute="width" secondItem="0X1-MO-8j9" secondAttribute="width" id="fFI-1O-aAP"/>
+                                    <constraint firstItem="1SA-g9-Kwf" firstAttribute="width" secondItem="0X1-MO-8j9" secondAttribute="width" constant="-16" id="cEN-dW-Uex"/>
                                     <constraint firstAttribute="bottom" secondItem="1SA-g9-Kwf" secondAttribute="bottom" constant="8" id="geP-vS-Fc0"/>
-                                    <constraint firstItem="0GX-Qz-EzZ" firstAttribute="top" secondItem="0X1-MO-8j9" secondAttribute="top" id="hHE-cJ-B4z"/>
                                     <constraint firstItem="1SA-g9-Kwf" firstAttribute="leading" secondItem="0X1-MO-8j9" secondAttribute="leading" constant="8" id="tBf-OY-Cs0"/>
-                                    <constraint firstItem="1SA-g9-Kwf" firstAttribute="top" secondItem="0GX-Qz-EzZ" secondAttribute="bottom" constant="8" id="wpC-Bd-5Jt"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -354,11 +345,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heroimage_transaction_small" width="720" height="200"/>
         <image name="icon_check_gray_on" width="48" height="48"/>
-        <image name="icon_multisignature_green" width="24" height="24"/>
+        <image name="icon_multisignature_green" width="12" height="12"/>
         <image name="icon_transaction_check" width="32" height="32"/>
-        <image name="icon_transaction_receive_green" width="24" height="24"/>
-        <image name="icon_transaction_unconfirmed" width="162" height="32"/>
+        <image name="icon_transaction_receive_green" width="12" height="12"/>
+        <image name="icon_transaction_unconfirmed" width="81" height="16"/>
     </resources>
 </document>

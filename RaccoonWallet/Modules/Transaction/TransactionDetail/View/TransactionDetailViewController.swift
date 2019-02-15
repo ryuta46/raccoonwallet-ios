@@ -51,19 +51,6 @@ class TransactionDetailViewController: BaseViewController {
 
         title = R.string.localizable.transaction_detail_title()
 
-        peer.textColor = Theme.secondary
-        fromHeadline.textColor = Theme.secondary
-        toHeadline.textColor = Theme.secondary
-        amountHeadline.textColor = Theme.secondary
-        amount.textColor = Theme.secondary
-        feeHeadline.textColor = Theme.secondary
-        fee.textColor = Theme.secondary
-        blockHeadline.textColor = Theme.secondary
-        block.textColor = Theme.secondary
-        transactionHashHeadline.textColor = Theme.secondary
-        messageHeadline.textColor = Theme.secondary
-        message.textColor = Theme.secondary
-
         encryptedButton.setTitle(R.string.localizable.transaction_message_is_encrypted(), for: .normal)
 
         loadingView = createFullScreenLoadingView()
