@@ -242,6 +242,7 @@
 
 
 "wallet_select" = "ウォレットを選択";
+"wallet_creation_new" = " 新しくウォレットを作る";
 "wallet_not_select_message" = "ウォレットが選択されていません";
 
 "wallet_no_wallet_title" = "ウォレットがないみたい。";

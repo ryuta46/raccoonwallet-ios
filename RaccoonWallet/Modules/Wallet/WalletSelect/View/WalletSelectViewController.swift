@@ -15,6 +15,7 @@ class WalletSelectViewController: BaseViewController {
     @IBOutlet weak var walletListHeight: NSLayoutConstraint!
     @IBOutlet weak var walletBar: WalletBar!
 
+    @IBOutlet weak var createNewWalletButton: PrimaryRoundedButton!
     @IBOutlet weak var emptyView: UIView!
 
     var wallets: [Wallet] = []
@@ -22,6 +23,9 @@ class WalletSelectViewController: BaseViewController {
 
     override func setup() {
         super.setup()
+        
+        view.backgroundColor = Theme.baseBackground
+        createNewWalletButton.setTitle(R.string.localizable.wallet_creation_new(), for: .normal)
 
         walletList.dataSource = self
         walletList.delegate = self
@@ -31,6 +35,7 @@ class WalletSelectViewController: BaseViewController {
         showWalletEmptyView(false)
 
         title = R.string.localizable.wallet_select()
+        
         navigationItem.hidesBackButton = true
     }
 
@@ -96,6 +101,10 @@ extension WalletSelectViewController: UITableViewDataSource {
 extension WalletSelectViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.viewWillLayoutSubviews()
+    }
+
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return Constant.walletSelectCellHeight
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

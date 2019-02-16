@@ -1394,13 +1394,13 @@
 				5F672D7A2122D56D0018B163 /* Application */,
 				5F672D742122AE690018B163 /* Enums */,
 				5F672D5F212287FB0018B163 /* Extensions */,
+				6905759DDA9092F25BBBD1DC /* Models */,
 				5F672D64212288090018B163 /* Modules */,
 				5F672D62212288090018B163 /* Network */,
 				5F672EF72127901D0018B163 /* Resources */,
 				5F672EE2212656610018B163 /* Storage */,
 				5F7C58FC212A3C0E00026047 /* Utility */,
 				5F672D772122AE720018B163 /* Widgets */,
-				6905759DDA9092F25BBBD1DC /* Models */,
 			);
 			path = RaccoonWallet;
 			sourceTree = "<group>";
@@ -1443,27 +1443,27 @@
 		5F672D5F212287FB0018B163 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				69057D5A4649C51228B858D0 /* AccountMetaDataPairExtension.swift */,
+				69057A5E4E136CC6F914AAC0 /* CollectionExtension.swift */,
 				5F672E37212541230018B163 /* DateExtension.swift */,
 				5F672E1921250AA00018B163 /* DecimalExtension.swift */,
+				6905721CA915DF40A9AE9725 /* MosaicIdExtension.swift */,
+				690570D9D087C28F65618E3B /* NemAnnounceResultExtension.swift */,
+				5F4D1DD221F7EFBA008F2D41 /* NSLayoutConstraintExtension.swift */,
 				5F672E23212523100018B163 /* NVActivityIndicatorViewExtension.swift */,
 				5F672D67212289710018B163 /* SessionExtension.swift */,
 				5F7C5901212A779000026047 /* StringExtension.swift */,
-				5F672D7F2122D90B0018B163 /* UIColorExtension.swift */,
-				5F672EDE2125B47D0018B163 /* UINavigationControllerExtension.swift */,
-				5F672EDA2125AEE00018B163 /* UIViewExtension.swift */,
-				5F672E33212540370018B163 /* UIntExtension.swift */,
-				690575DE074F499171F98A3A /* UIViewControllerExtension.swift */,
-				69057D5A4649C51228B858D0 /* AccountMetaDataPairExtension.swift */,
-				69057DDFF54A2D61D2E76F0A /* UITableViewControllerExtension.swift */,
-				6905785C246C4240F04B6F34 /* UIImageViewExtension.swift */,
-				69057A5E4E136CC6F914AAC0 /* CollectionExtension.swift */,
-				69057B54A2F06ADC69552CA0 /* UIStackViewExtension.swift */,
-				690570D9D087C28F65618E3B /* NemAnnounceResultExtension.swift */,
 				690574D1F9A16DF926C1329B /* TransactionExtension.swift */,
-				6905721CA915DF40A9AE9725 /* MosaicIdExtension.swift */,
-				6905737E0BFF1F59FACF7AFF /* UIScrollViewExtension.swift */,
 				5F99EC96220273A3002253CC /* TransferMosaicExtension.swift */,
-				5F4D1DD221F7EFBA008F2D41 /* NSLayoutConstraintExtension.swift */,
+				5F672D7F2122D90B0018B163 /* UIColorExtension.swift */,
+				6905785C246C4240F04B6F34 /* UIImageViewExtension.swift */,
+				5F672EDE2125B47D0018B163 /* UINavigationControllerExtension.swift */,
+				5F672E33212540370018B163 /* UIntExtension.swift */,
+				6905737E0BFF1F59FACF7AFF /* UIScrollViewExtension.swift */,
+				69057B54A2F06ADC69552CA0 /* UIStackViewExtension.swift */,
+				69057DDFF54A2D61D2E76F0A /* UITableViewControllerExtension.swift */,
+				690575DE074F499171F98A3A /* UIViewControllerExtension.swift */,
+				5F672EDA2125AEE00018B163 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1472,16 +1472,16 @@
 			isa = PBXGroup;
 			children = (
 				5F672DA721243D780018B163 /* BlockchainInfoService.swift */,
-				5F7C58B4212A2F2100026047 /* ExternalLink.swift */,
 				5F672DA12124385D0018B163 /* DecodableDataParser.swift */,
 				5F672DAB21243F490018B163 /* DecodableRequest.swift */,
+				5F7C58B4212A2F2100026047 /* ExternalLink.swift */,
+				69057A8135F90E3E45878721 /* NemNodesService.swift */,
 				5F672D6B212290FD0018B163 /* NemService.swift */,
+				690571EE6B0F3B8A243826B9 /* NemServiceInteractor.swift */,
 				5F672D8821240AF50018B163 /* PoloniexService.swift */,
 				5F672DB3212444D70018B163 /* RateService.swift */,
-				690571EE6B0F3B8A243826B9 /* NemServiceInteractor.swift */,
 				69057BB7621E2C232FB1DC0D /* RateServiceInteractor.swift */,
 				69057D5D4E7FC005F8473864 /* RxDisposable.swift */,
-				69057A8135F90E3E45878721 /* NemNodesService.swift */,
 				6905733B5C83AD139D4F0F83 /* XEMBookService.swift */,
 			);
 			path = Network;
@@ -1534,6 +1534,7 @@
 				5F0A44FB21368A2C000342D6 /* Calculator.xib */,
 				5F672D782122AE720018B163 /* CardView.swift */,
 				69057B63DAF213D778AA91A6 /* FullScreenLoadingView.swift */,
+				690578FCEFD382BFEBEB481C /* LightGrayLabel.swift */,
 				5F8EA5E5215EC47600646E6E /* LoadingIndicatorView.swift */,
 				69057DA96A9C1AACBA5E9EED /* LoadingView.swift */,
 				6905775CA41E481A01FA4DD9 /* OrangeButton.swift */,
@@ -1542,6 +1543,7 @@
 				69057861B9E9DA52DFE60507 /* PrimaryCircleButton.swift */,
 				690579F85C7F2ABE17B715F6 /* PrimaryCopyableLabel.swift */,
 				69057EC0D1DBB56691C11F44 /* PrimaryFloatingButton.swift */,
+				69057EE0517BDAEE46267426 /* PrimaryGhostButton.swift */,
 				6905767E1CC4E3812FC35CC0 /* PrimaryLabel.swift */,
 				69057C08E7EBCB2A1555EB31 /* PrimaryPanel.swift */,
 				5F99EC9421F80C98002253CC /* PrimaryRoundedButton.swift */,
@@ -1554,8 +1556,6 @@
 				690572E1F3D59A046A8F9237 /* WalletBar.swift */,
 				5F672ED22125A0A90018B163 /* WalletBar.xib */,
 				5F8EA5E9215F4B7400646E6E /* WalletBarButton.swift */,
-				69057EE0517BDAEE46267426 /* PrimaryGhostButton.swift */,
-				690578FCEFD382BFEBEB481C /* LightGrayLabel.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -1566,8 +1566,8 @@
 				5F7C595F212DF14500026047 /* AppDelegate.swift */,
 				5F7C58B8212A2FBD00026047 /* Constant.swift */,
 				5F7C58F8212A39DC00026047 /* NemConfiguration.swift */,
-				5F672D7B2122D57D0018B163 /* Theme.swift */,
 				5F0A44FA2130F320000342D6 /* RaccoonWallet-Bridging-Header.h */,
+				5F672D7B2122D57D0018B163 /* Theme.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -1600,8 +1600,8 @@
 				5F672DD12124F0930018B163 /* HomeTab */,
 				6905769FAC9D573AF1A3DFD8 /* QrLabTab */,
 				69057FE6F45208D1D03DE28F /* ReceiveTab */,
-				69057B6E67E02AB5CF713960 /* SendTab */,
 				690576CF9A148E86ED45AD76 /* ScanTab */,
+				69057B6E67E02AB5CF713960 /* SendTab */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -1637,12 +1637,12 @@
 		5F672DD62124F0930018B163 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6905723E5C4B2E28FDC4DE5C /* HarvestView.swift */,
+				6905717CFA5F4691D4DA3904 /* HarvestView.xib */,
 				5F672DD72124F0930018B163 /* HomeTabStoryboard.storyboard */,
 				5F672E152124FC9E0018B163 /* HomeTabViewController.swift */,
 				5F672E2F212534CE0018B163 /* TransactionView.swift */,
 				5F672E2B212534C10018B163 /* TransactionView.xib */,
-				6905717CFA5F4691D4DA3904 /* HarvestView.xib */,
-				6905723E5C4B2E28FDC4DE5C /* HarvestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1719,21 +1719,21 @@
 		5F672EB321259FF70018B163 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
-				5F7C58DA212A376A00026047 /* WalletNewCompleted */,
-				5F7C591F212D1A6A00026047 /* WalletNewEnd */,
-				5F7C588C212968C900026047 /* WalletNewName */,
-				5F7C586A2129570900026047 /* WalletCreationType */,
-				5F672EB421259FF70018B163 /* WalletSelect */,
-				6905735B23982BDE34AE94A1 /* WalletBackupCaution */,
+				690579F3A979D972DA189AD3 /* WalletAddress */,
 				690577D47AD76BE15F58545F /* WalletBackup */,
+				6905735B23982BDE34AE94A1 /* WalletBackupCaution */,
+				5F7C586A2129570900026047 /* WalletCreationType */,
+				69057D5AF494830649AB1246 /* WalletDelete */,
+				690574E9E3FE74FDB54BB76A /* WalletDetail */,
 				6905781E28599FACFF303F41 /* WalletImportEnd */,
 				69057922A42C32A5E5D75B7C /* WalletImportKey */,
 				69057ABBDB1AB91A4176E591 /* WalletImportName */,
 				69057DB750309D2033D44B72 /* WalletImportNanoPassword */,
-				690579F3A979D972DA189AD3 /* WalletAddress */,
-				69057D5AF494830649AB1246 /* WalletDelete */,
-				690574E9E3FE74FDB54BB76A /* WalletDetail */,
+				5F7C58DA212A376A00026047 /* WalletNewCompleted */,
+				5F7C591F212D1A6A00026047 /* WalletNewEnd */,
+				5F7C588C212968C900026047 /* WalletNewName */,
 				69057B68D6F4EBFDAB9E0B2E /* WalletRename */,
+				5F672EB421259FF70018B163 /* WalletSelect */,
 				690579D6A017156F86EB96E4 /* WalletSetting */,
 			);
 			path = Wallet;
@@ -1797,10 +1797,10 @@
 			isa = PBXGroup;
 			children = (
 				5F7C591B212BFE3600026047 /* ApplicationSetting.swift */,
+				5F8EA5E7215ED2DF00646E6E /* MosaicDefinitionCache.swift */,
 				5F7C590E212AA5A300026047 /* PinPreference.swift */,
 				5F672EE72126568B0018B163 /* Wallet.swift */,
 				5F672EE3212656800018B163 /* WalletStorage.swift */,
-				5F8EA5E7215ED2DF00646E6E /* MosaicDefinitionCache.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -1811,9 +1811,9 @@
 				5F7C5961212DF16500026047 /* Assets.xcassets */,
 				5F7C5969212DF44C00026047 /* Info.plist */,
 				5F7C5967212DF44200026047 /* LaunchScreen.storyboard */,
+				5F7CEBFC214B61F200863D5D /* localizable.strings */,
 				5F7C596D212DF5ED00026047 /* R.generated.swift */,
 				5F0F73262148674C00015784 /* Settings.bundle */,
-				5F7CEBFC214B61F200863D5D /* localizable.strings */,
 				5F4D1DCC21F3C5BD008F2D41 /* VectorResources.xcassets */,
 			);
 			path = Resources;
@@ -2022,11 +2022,11 @@
 		5F7C58FC212A3C0E00026047 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				5F7C590A212AA2EF00026047 /* Logger.swift */,
-				5F7C58FD212A3C2100026047 /* WalletHelper.swift */,
-				690579A62064CD19C44FF569 /* LocalAuthenticationHelper.swift */,
 				690575B12074FFE683ACBA6B /* KeyProvider.swift */,
+				690579A62064CD19C44FF569 /* LocalAuthenticationHelper.swift */,
+				5F7C590A212AA2EF00026047 /* Logger.swift */,
 				69057AC43A15CEB77FEC730C /* MessageDialogPreset.swift */,
+				5F7C58FD212A3C2100026047 /* WalletHelper.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -2158,13 +2158,13 @@
 		5FAF0118212DF9940092B110 /* Lesson */ = {
 			isa = PBXGroup;
 			children = (
-				5FAF013F212E0BEC0092B110 /* LessonLevel */,
-				5FAF0119212DF9940092B110 /* LessonIntroduction */,
 				69057280D5BCBC93A88A26A0 /* LessonBeginner */,
 				69057F86685275AB30A2FEE2 /* LessonBeginnerBackupEnd */,
 				69057EDA8C69F0422C636722 /* LessonEnd */,
 				69057993FA717069ACAF26C9 /* LessonExpert */,
 				69057C7DAB0C650AEC48E8DE /* LessonImporter */,
+				5FAF0119212DF9940092B110 /* LessonIntroduction */,
+				5FAF013F212E0BEC0092B110 /* LessonLevel */,
 				69057B6E6F1404527DF98149 /* LessonPinEnd */,
 			);
 			path = Lesson;
@@ -2227,10 +2227,10 @@
 			isa = PBXGroup;
 			children = (
 				5FAF0140212E0BEC0092B110 /* Contract */,
-				5FAF0142212E0BEC0092B110 /* Presenter */,
-				5FAF0144212E0BEC0092B110 /* View */,
 				5FAF0147212E0BEC0092B110 /* Interactor */,
+				5FAF0142212E0BEC0092B110 /* Presenter */,
 				5FAF0149212E0BEC0092B110 /* Router */,
+				5FAF0144212E0BEC0092B110 /* View */,
 			);
 			path = LessonLevel;
 			sourceTree = "<group>";
@@ -2311,8 +2311,8 @@
 		6905702CB44688E49AF315A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057FFD64775F9FFDF157CD /* WalletDeleteViewController.swift */,
 				69057D1BF7EA02F75DA30342 /* WalletDeleteStoryboard.storyboard */,
+				69057FFD64775F9FFDF157CD /* WalletDeleteViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2320,11 +2320,11 @@
 		6905705E31B4FA7B4B342D55 /* SettingTop */ = {
 			isa = PBXGroup;
 			children = (
-				69057C5ACB8B579D0DA0670B /* View */,
-				69057DD45DFDA5AB906C3077 /* Router */,
 				69057727EA20F0A6D1D7FB50 /* Contract */,
-				690575D98286420BEFC48AB3 /* Presenter */,
 				6905757E158B7F1375FFE5DE /* Interactor */,
+				690575D98286420BEFC48AB3 /* Presenter */,
+				69057DD45DFDA5AB906C3077 /* Router */,
+				69057C5ACB8B579D0DA0670B /* View */,
 			);
 			path = SettingTop;
 			sourceTree = "<group>";
@@ -2364,8 +2364,8 @@
 		690570C1272B9BFF08B48C6E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6905722B488B1CCAA39EC95A /* LessonEndViewController.swift */,
 				69057AB7DB20AC1E1C61C096 /* LessonEndStoryboard.storyboard */,
+				6905722B488B1CCAA39EC95A /* LessonEndViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2421,8 +2421,8 @@
 		6905714549AFC1ED32354130 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				690576B3AFB331CCC9F05F8A /* WalletBackupViewController.swift */,
 				69057505FDAED6E0BD8AF14F /* WalletBackupStoryboard.storyboard */,
+				690576B3AFB331CCC9F05F8A /* WalletBackupViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2462,11 +2462,11 @@
 		690571B537A72231CEEE68F4 /* TransactionDetail */ = {
 			isa = PBXGroup;
 			children = (
-				69057D4C9286EF616C21A76F /* View */,
-				69057F878CF4159D6E9A825A /* Router */,
 				69057134EA776507CF7159E8 /* Contract */,
-				6905738E09F033C9F08CC6AB /* Presenter */,
 				690570266E5ACB5C95538C8F /* Interactor */,
+				6905738E09F033C9F08CC6AB /* Presenter */,
+				69057F878CF4159D6E9A825A /* Router */,
+				69057D4C9286EF616C21A76F /* View */,
 			);
 			path = TransactionDetail;
 			sourceTree = "<group>";
@@ -2490,8 +2490,8 @@
 		690571CA5BA6651F6607AA39 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6905763E5FE8F191906F641A /* WalletBackupCautionViewController.swift */,
 				69057577AC8762172BFCE5FA /* WalletBackupCautionStoryboard.storyboard */,
+				6905763E5FE8F191906F641A /* WalletBackupCautionViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2523,8 +2523,8 @@
 		69057242BEB0DEEEC2C94488 /* Donation */ = {
 			isa = PBXGroup;
 			children = (
-				69057D7627802D4807F3E9F6 /* DonationTop */,
 				69057434B03FF1F85BEB7312 /* DonationDetail */,
+				69057D7627802D4807F3E9F6 /* DonationTop */,
 			);
 			path = Donation;
 			sourceTree = "<group>";
@@ -2532,8 +2532,8 @@
 		6905724AB98E8F023D500AA1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057129F9C8408DC0CD4EAB /* LessonBeginnerViewController.swift */,
 				69057CF511E143F05B992392 /* LessonBeginnerStoryboard.storyboard */,
+				69057129F9C8408DC0CD4EAB /* LessonBeginnerViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2549,11 +2549,11 @@
 		69057280D5BCBC93A88A26A0 /* LessonBeginner */ = {
 			isa = PBXGroup;
 			children = (
-				6905724AB98E8F023D500AA1 /* View */,
-				690577109E546D024E0D4B8F /* Router */,
 				69057FC8017FFA0A592F6854 /* Contract */,
-				690575BC42AA31B50EAA2A87 /* Presenter */,
 				69057CA48F8E19EA553B1C28 /* Interactor */,
+				690575BC42AA31B50EAA2A87 /* Presenter */,
+				690577109E546D024E0D4B8F /* Router */,
+				6905724AB98E8F023D500AA1 /* View */,
 			);
 			path = LessonBeginner;
 			sourceTree = "<group>";
@@ -2561,11 +2561,11 @@
 		6905728515EC8ABEB260DE57 /* IntroductionMessage */ = {
 			isa = PBXGroup;
 			children = (
-				690578876B5D2384A53B4BA2 /* View */,
-				69057C3CF0806A2A713A2018 /* Router */,
 				6905794D95CDD7AB5D48B257 /* Contract */,
-				69057C1DD7DEF07145E879DF /* Presenter */,
 				6905761FE4221E7B95732761 /* Interactor */,
+				69057C1DD7DEF07145E879DF /* Presenter */,
+				69057C3CF0806A2A713A2018 /* Router */,
+				690578876B5D2384A53B4BA2 /* View */,
 			);
 			path = IntroductionMessage;
 			sourceTree = "<group>";
@@ -2573,8 +2573,8 @@
 		690572B67B1AA3EFA0A2CE64 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057570B62929B19E554A9D /* SendMessageViewController.swift */,
 				69057C564303055DE66D4573 /* SendMessageStoryboard.storyboard */,
+				69057570B62929B19E554A9D /* SendMessageViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2582,11 +2582,11 @@
 		690572E4648229074A1552B2 /* SendMode */ = {
 			isa = PBXGroup;
 			children = (
-				69057D501CA0E1CF298C111C /* View */,
-				69057772332E03D0AA527DB9 /* Router */,
 				69057019E08B1700769A4F4F /* Contract */,
-				690578CC86F25A98D69FFBDD /* Presenter */,
 				690573D7E1EF119300792DFA /* Interactor */,
+				690578CC86F25A98D69FFBDD /* Presenter */,
+				69057772332E03D0AA527DB9 /* Router */,
+				69057D501CA0E1CF298C111C /* View */,
 			);
 			path = SendMode;
 			sourceTree = "<group>";
@@ -2604,8 +2604,8 @@
 		690572EF82C02B80FB68DA3D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				690576AC0A6E54E1E36E4B4E /* LessonPinEndViewController.swift */,
 				69057BF0B458146443F80D4F /* LessonPinEndStoryboard.storyboard */,
+				690576AC0A6E54E1E36E4B4E /* LessonPinEndViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2645,9 +2645,9 @@
 		690573370CC649E3A3432C60 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6905742002E515252D632AD8 /* WalletDetailViewController.swift */,
 				69057B7C240966E95EB6CBF7 /* WalletDetailStoryboard.storyboard */,
 				69057DE22A5E235FDFABA2BA /* WalletDetailTableViewController.swift */,
+				6905742002E515252D632AD8 /* WalletDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2679,11 +2679,11 @@
 		6905735B23982BDE34AE94A1 /* WalletBackupCaution */ = {
 			isa = PBXGroup;
 			children = (
-				690571CA5BA6651F6607AA39 /* View */,
-				690575C2DF717EFE032FAC5B /* Router */,
 				69057A37776FAC7D64FB054A /* Contract */,
-				69057BF5E0892694E9644504 /* Presenter */,
 				690578AB033721C530612974 /* Interactor */,
+				69057BF5E0892694E9644504 /* Presenter */,
+				690575C2DF717EFE032FAC5B /* Router */,
+				690571CA5BA6651F6607AA39 /* View */,
 			);
 			path = WalletBackupCaution;
 			sourceTree = "<group>";
@@ -2699,11 +2699,11 @@
 		690573748528D96283BBC5FA /* IntroductionConcept */ = {
 			isa = PBXGroup;
 			children = (
-				69057E32FB5DFF6FDF2B00CA /* View */,
-				690573057A5D28AC58FB6B20 /* Router */,
 				690579ACC04D0C541A2D60CD /* Contract */,
-				690570D559D069817EEE9074 /* Presenter */,
 				69057E18769D45656211AF15 /* Interactor */,
+				690570D559D069817EEE9074 /* Presenter */,
+				690573057A5D28AC58FB6B20 /* Router */,
+				69057E32FB5DFF6FDF2B00CA /* View */,
 			);
 			path = IntroductionConcept;
 			sourceTree = "<group>";
@@ -2799,11 +2799,11 @@
 		69057434B03FF1F85BEB7312 /* DonationDetail */ = {
 			isa = PBXGroup;
 			children = (
-				690579A950F1C38EFA2D409F /* View */,
-				69057E4D023DB5DB19A87768 /* Router */,
 				69057E11883609BD117C063F /* Contract */,
-				69057F792BC29B0F30E32E38 /* Presenter */,
 				69057B5D8F46BB056733F751 /* Interactor */,
+				69057F792BC29B0F30E32E38 /* Presenter */,
+				69057E4D023DB5DB19A87768 /* Router */,
+				690579A950F1C38EFA2D409F /* View */,
 			);
 			path = DonationDetail;
 			sourceTree = "<group>";
@@ -2811,8 +2811,8 @@
 		6905743D8C506AC139C03B43 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6905719DB36D5CC0FABD62AF /* ScanTabViewController.swift */,
 				69057FDD0712EDD02F771378 /* ScanTabStoryboard.storyboard */,
+				6905719DB36D5CC0FABD62AF /* ScanTabViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2820,11 +2820,11 @@
 		6905744194505DC4A8280D62 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				690578CDF0B3261B00BA998F /* TransactionListViewController.swift */,
-				690579A4D350F976599F6EE8 /* TransactionListStoryboard.storyboard */,
 				690571A2755F3011BA1ECC0C /* TransactionListCell.swift */,
 				690574C7FC3C9100FCA0FB7A /* TransactionListHeader.swift */,
 				5F7A724B22176C6F006D70F1 /* TransactionListHeader.xib */,
+				690579A4D350F976599F6EE8 /* TransactionListStoryboard.storyboard */,
+				690578CDF0B3261B00BA998F /* TransactionListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2832,8 +2832,8 @@
 		69057451746FC0A1D9AF1DC8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057BBD41D1445C76427EE2 /* QrLabTabViewController.swift */,
 				69057A4AF3C1A23A339B2A59 /* QrLabTabStoryboard.storyboard */,
+				69057BBD41D1445C76427EE2 /* QrLabTabViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2865,11 +2865,11 @@
 		69057462E4E0BE8B9F1EFEC4 /* PinDialog */ = {
 			isa = PBXGroup;
 			children = (
-				69057EBA3CA680FEBA000E1C /* View */,
-				690579C8FB7270A6491B678E /* Router */,
 				690573C6691AA0F4213835C5 /* Contract */,
-				69057CFC610BA157C3772D4A /* Presenter */,
 				690574198542E8FF8A1FDD4C /* Interactor */,
+				69057CFC610BA157C3772D4A /* Presenter */,
+				690579C8FB7270A6491B678E /* Router */,
+				69057EBA3CA680FEBA000E1C /* View */,
 			);
 			path = PinDialog;
 			sourceTree = "<group>";
@@ -2877,11 +2877,11 @@
 		6905747C4741DF00B39193FA /* QrScannerDialog */ = {
 			isa = PBXGroup;
 			children = (
-				69057B7946B1BE534DA05666 /* View */,
-				69057124D114C2FD1111FC20 /* Router */,
 				69057E957230453580E07ABA /* Contract */,
-				6905734D0489306495EB8C90 /* Presenter */,
 				690579980C991FD2ECB68E30 /* Interactor */,
+				6905734D0489306495EB8C90 /* Presenter */,
+				69057124D114C2FD1111FC20 /* Router */,
+				69057B7946B1BE534DA05666 /* View */,
 			);
 			path = QrScannerDialog;
 			sourceTree = "<group>";
@@ -2922,8 +2922,8 @@
 		690574D0F7E29F6CC438D453 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057F983AD01FF63C2C423D /* DonationTopViewController.swift */,
 				69057C82C50F53CCF590F39C /* DonationTopStoryboard.storyboard */,
+				69057F983AD01FF63C2C423D /* DonationTopViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2939,11 +2939,11 @@
 		690574E9E3FE74FDB54BB76A /* WalletDetail */ = {
 			isa = PBXGroup;
 			children = (
-				690573370CC649E3A3432C60 /* View */,
-				6905760781E1FCCF37D71F5B /* Router */,
 				690573110CEF45D387A596B4 /* Contract */,
-				6905776D5218BFE365152F0C /* Presenter */,
 				690579228B9854C6BE5CD267 /* Interactor */,
+				6905776D5218BFE365152F0C /* Presenter */,
+				6905760781E1FCCF37D71F5B /* Router */,
+				690573370CC649E3A3432C60 /* View */,
 			);
 			path = WalletDetail;
 			sourceTree = "<group>";
@@ -2959,8 +2959,8 @@
 		6905752F5CD158299588CC31 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6905717B299F35628410E72D /* QrLabAmountViewController.swift */,
 				69057524459683497E4E9E8E /* QrLabAmountStoryboard.storyboard */,
+				6905717B299F35628410E72D /* QrLabAmountViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2984,8 +2984,8 @@
 		6905755DA6E0A773028236D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057A2DBBB5DB6E4D5E5D2C /* SendConfirmationViewController.swift */,
 				69057908FC4B90D3A7B2F12F /* SendConfirmationStoryboard.storyboard */,
+				69057A2DBBB5DB6E4D5E5D2C /* SendConfirmationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3009,12 +3009,12 @@
 		6905758555EB2CC70E7D5771 /* Send */ = {
 			isa = PBXGroup;
 			children = (
-				690578B94767B44A665FE8E6 /* SendEnd */,
-				690572E4648229074A1552B2 /* SendMode */,
 				690578B61E16F198531FBF3C /* SendAmount */,
+				6905775CF241EDA7CEDA69D6 /* SendConfirmation */,
+				690578B94767B44A665FE8E6 /* SendEnd */,
 				69057C281C30B5595A62A903 /* SendMessage */,
 				690577E1933A0D881E00C543 /* SendMessageType */,
-				6905775CF241EDA7CEDA69D6 /* SendConfirmation */,
+				690572E4648229074A1552B2 /* SendMode */,
 			);
 			path = Send;
 			sourceTree = "<group>";
@@ -3055,15 +3055,15 @@
 			isa = PBXGroup;
 			children = (
 				690577556B4A6D9F435B4315 /* BlockchainInfoTicker.swift */,
-				690576702F22CDEBB05B55D2 /* PoloniexTicker.swift */,
-				6905708439E12DAE16692A47 /* InvoiceQr.swift */,
-				69057D5CA0D7B5A7D96B8F2F /* WalletQr.swift */,
-				69057808529136DE17FB5149 /* SendTransaction.swift */,
-				690579BD59FD904EBBD0D3AC /* TransferTranasactionDetail.swift */,
 				69057683D3148068700576B4 /* Developer.swift */,
-				690578A1B8BD170C3EE04AD7 /* NemNode.swift */,
+				6905708439E12DAE16692A47 /* InvoiceQr.swift */,
 				6905766A2BC1CC9BAD0AB5BB /* MosaicDetail.swift */,
 				69057EF7ACA1DB44C2D0D570 /* MosaicImageUrl.swift */,
+				690578A1B8BD170C3EE04AD7 /* NemNode.swift */,
+				690576702F22CDEBB05B55D2 /* PoloniexTicker.swift */,
+				69057808529136DE17FB5149 /* SendTransaction.swift */,
+				690579BD59FD904EBBD0D3AC /* TransferTranasactionDetail.swift */,
+				69057D5CA0D7B5A7D96B8F2F /* WalletQr.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3111,8 +3111,8 @@
 		690575E748E4E383DFB65E61 /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
-				690578DBAEE265FE8733A768 /* TransactionList */,
 				690571B537A72231CEEE68F4 /* TransactionDetail */,
+				690578DBAEE265FE8733A768 /* TransactionList */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -3201,11 +3201,11 @@
 		6905769FAC9D573AF1A3DFD8 /* QrLabTab */ = {
 			isa = PBXGroup;
 			children = (
-				69057451746FC0A1D9AF1DC8 /* View */,
-				690576CDAC01E3E980AD43DC /* Router */,
 				690578880C3033876A9436A2 /* Contract */,
-				690571CE121E4EE000DCF19C /* Presenter */,
 				690570BBA57F3A63803595D8 /* Interactor */,
+				690571CE121E4EE000DCF19C /* Presenter */,
+				690576CDAC01E3E980AD43DC /* Router */,
+				69057451746FC0A1D9AF1DC8 /* View */,
 			);
 			path = QrLabTab;
 			sourceTree = "<group>";
@@ -3213,11 +3213,11 @@
 		690576B37BE18DE09551DB9E /* NavigationDrawer */ = {
 			isa = PBXGroup;
 			children = (
-				69057F4387BD5F6C78AD3030 /* View */,
-				69057B75F8013DC44B140260 /* Router */,
 				690577B2C38D980E2D782EAD /* Contract */,
-				6905788C4F35E19C13688089 /* Presenter */,
 				6905753170B6DECB5AB12147 /* Interactor */,
+				6905788C4F35E19C13688089 /* Presenter */,
+				69057B75F8013DC44B140260 /* Router */,
+				69057F4387BD5F6C78AD3030 /* View */,
 			);
 			path = NavigationDrawer;
 			sourceTree = "<group>";
@@ -3241,11 +3241,11 @@
 		690576CF9A148E86ED45AD76 /* ScanTab */ = {
 			isa = PBXGroup;
 			children = (
-				6905743D8C506AC139C03B43 /* View */,
-				69057A456C8FC7DEA0CAE26E /* Router */,
 				69057199EB10A9E448131125 /* Contract */,
-				69057995CB589C25F24B02E1 /* Presenter */,
 				690574C51E2A52656CBC022D /* Interactor */,
+				69057995CB589C25F24B02E1 /* Presenter */,
+				69057A456C8FC7DEA0CAE26E /* Router */,
+				6905743D8C506AC139C03B43 /* View */,
 			);
 			path = ScanTab;
 			sourceTree = "<group>";
@@ -3277,8 +3277,8 @@
 		69057718E7C916F74342183A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				690578B49F7F02BAAAE3E7F3 /* WalletAddressViewController.swift */,
 				69057F1BC9979890B470BB0A /* WalletAddressStoryboard.storyboard */,
+				690578B49F7F02BAAAE3E7F3 /* WalletAddressViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3342,11 +3342,11 @@
 		6905775CF241EDA7CEDA69D6 /* SendConfirmation */ = {
 			isa = PBXGroup;
 			children = (
-				6905755DA6E0A773028236D8 /* View */,
-				69057BD01F8B02480F545812 /* Router */,
 				69057FDB9FD8C56341B89570 /* Contract */,
-				69057C4984BF5B6E52C58B21 /* Presenter */,
 				69057CEBAF80268C89FCB0D8 /* Interactor */,
+				69057C4984BF5B6E52C58B21 /* Presenter */,
+				69057BD01F8B02480F545812 /* Router */,
+				6905755DA6E0A773028236D8 /* View */,
 			);
 			path = SendConfirmation;
 			sourceTree = "<group>";
@@ -3379,9 +3379,9 @@
 		6905779EAE37C1AFBA6CB22D /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				690577DF66886E830A4A3381 /* View */,
 				69057CF20B2AAF6E8FA07E64 /* Contract */,
 				69057D96D74E4F11ECA80425 /* Presenter */,
+				690577DF66886E830A4A3381 /* View */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -3413,8 +3413,8 @@
 		690577B99172884AD021335C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				690577A7CFD03E1A2BAAB364 /* WalletImportKeyViewController.swift */,
 				690576EC72A9305F5B9E22AE /* WalletImportKeyStoryboard.storyboard */,
+				690577A7CFD03E1A2BAAB364 /* WalletImportKeyViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3422,11 +3422,11 @@
 		690577BE1DF6B0BA060FE181 /* BalanceDetail */ = {
 			isa = PBXGroup;
 			children = (
-				69057ED2E92CC1AF98EAAC5A /* View */,
-				6905738FB846A7314890FF45 /* Router */,
 				6905769FA3B49870603C6D18 /* Contract */,
-				690573CA29DBAD9ED4EA9B13 /* Presenter */,
 				6905795A31AFA5DC10790768 /* Interactor */,
+				690573CA29DBAD9ED4EA9B13 /* Presenter */,
+				6905738FB846A7314890FF45 /* Router */,
+				69057ED2E92CC1AF98EAAC5A /* View */,
 			);
 			path = BalanceDetail;
 			sourceTree = "<group>";
@@ -3434,11 +3434,11 @@
 		690577D47AD76BE15F58545F /* WalletBackup */ = {
 			isa = PBXGroup;
 			children = (
-				6905714549AFC1ED32354130 /* View */,
-				69057C6C7988F91031C06042 /* Router */,
 				6905727E6DE22A81CA342CCF /* Contract */,
-				690577099B32FB3C97CD30CF /* Presenter */,
 				69057A3A33234E18ECAE9D15 /* Interactor */,
+				690577099B32FB3C97CD30CF /* Presenter */,
+				69057C6C7988F91031C06042 /* Router */,
+				6905714549AFC1ED32354130 /* View */,
 			);
 			path = WalletBackup;
 			sourceTree = "<group>";
@@ -3454,11 +3454,11 @@
 		690577E1933A0D881E00C543 /* SendMessageType */ = {
 			isa = PBXGroup;
 			children = (
-				69057AB0B521501E5874F3E0 /* View */,
-				690578117663BB207DFE449F /* Router */,
 				6905758D1862BD87E296DFDD /* Contract */,
-				690577E7AAFD8E03B8DFE920 /* Presenter */,
 				690573DEBFF1D3FCE994E96C /* Interactor */,
+				690577E7AAFD8E03B8DFE920 /* Presenter */,
+				690578117663BB207DFE449F /* Router */,
+				69057AB0B521501E5874F3E0 /* View */,
 			);
 			path = SendMessageType;
 			sourceTree = "<group>";
@@ -3466,8 +3466,8 @@
 		690577E4418001DA23088577 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057591AF1C75E303478F19 /* SendEndViewController.swift */,
 				69057B461E4512DF252417DA /* SendEndStoryboard.storyboard */,
+				69057591AF1C75E303478F19 /* SendEndViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3499,11 +3499,11 @@
 		690577FA367EBCD8BB404A3F /* QrLabInvoice */ = {
 			isa = PBXGroup;
 			children = (
-				69057B530D4BC866B55DCE87 /* View */,
-				69057742D922B5767D78DA2C /* Router */,
 				69057CC472BF25AA8337F206 /* Contract */,
-				69057612600111AA5C609D3B /* Presenter */,
 				69057214E2F33CC43CC599A7 /* Interactor */,
+				69057612600111AA5C609D3B /* Presenter */,
+				69057742D922B5767D78DA2C /* Router */,
+				69057B530D4BC866B55DCE87 /* View */,
 			);
 			path = QrLabInvoice;
 			sourceTree = "<group>";
@@ -3519,11 +3519,11 @@
 		69057805664D135FFA060B83 /* MosaicDetail */ = {
 			isa = PBXGroup;
 			children = (
-				690578C7C14F5EA04FBF19EB /* View */,
-				69057A89370AC5158CB0B9F5 /* Router */,
 				69057A12CAE90DA348EAE914 /* Contract */,
-				69057D649FFE1629DFBE7B3E /* Presenter */,
 				690579ADEC6322D08D2A8144 /* Interactor */,
+				69057D649FFE1629DFBE7B3E /* Presenter */,
+				69057A89370AC5158CB0B9F5 /* Router */,
+				690578C7C14F5EA04FBF19EB /* View */,
 			);
 			path = MosaicDetail;
 			sourceTree = "<group>";
@@ -3539,11 +3539,11 @@
 		6905781E28599FACFF303F41 /* WalletImportEnd */ = {
 			isa = PBXGroup;
 			children = (
-				69057B35C149D40E93378E09 /* View */,
-				690571ABE195DD18D34DF0D1 /* Router */,
 				6905747F59DA4B66C754F003 /* Contract */,
-				69057672C498BECF42F28A39 /* Presenter */,
 				690573D037E3E8C3A6DDFEAA /* Interactor */,
+				69057672C498BECF42F28A39 /* Presenter */,
+				690571ABE195DD18D34DF0D1 /* Router */,
+				69057B35C149D40E93378E09 /* View */,
 			);
 			path = WalletImportEnd;
 			sourceTree = "<group>";
@@ -3559,8 +3559,8 @@
 		690578876B5D2384A53B4BA2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				690573C3820E50923CB44261 /* IntroductionMessageViewController.swift */,
 				69057393CA65D915E6B8D84E /* IntroductionMessageStoryboard.storyboard */,
+				690573C3820E50923CB44261 /* IntroductionMessageViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3592,11 +3592,11 @@
 		690578B61E16F198531FBF3C /* SendAmount */ = {
 			isa = PBXGroup;
 			children = (
-				69057C616006F1948D335A39 /* View */,
-				690577AEDE732AFB9123BFB3 /* Router */,
 				69057F19BBD6C8DBD6A3E37A /* Contract */,
-				690572F8E249EA7786B3ED59 /* Presenter */,
 				690571BB81999D3B2CE8310C /* Interactor */,
+				690572F8E249EA7786B3ED59 /* Presenter */,
+				690577AEDE732AFB9123BFB3 /* Router */,
+				69057C616006F1948D335A39 /* View */,
 			);
 			path = SendAmount;
 			sourceTree = "<group>";
@@ -3604,11 +3604,11 @@
 		690578B94767B44A665FE8E6 /* SendEnd */ = {
 			isa = PBXGroup;
 			children = (
-				690577E4418001DA23088577 /* View */,
-				690577F32C744A6061B7F327 /* Router */,
 				69057738ECA4C797AE5620D2 /* Contract */,
-				69057B0926334E66FBF380D0 /* Presenter */,
 				69057CC8AF651A03D2B8BCF1 /* Interactor */,
+				69057B0926334E66FBF380D0 /* Presenter */,
+				690577F32C744A6061B7F327 /* Router */,
+				690577E4418001DA23088577 /* View */,
 			);
 			path = SendEnd;
 			sourceTree = "<group>";
@@ -3624,8 +3624,8 @@
 		690578C7C14F5EA04FBF19EB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				690577AB38104E5C14D7E692 /* MosaicDetailViewController.swift */,
 				6905772AB852AD29B4868310 /* MosaicDetailStoryboard.storyboard */,
+				690577AB38104E5C14D7E692 /* MosaicDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3641,11 +3641,11 @@
 		690578DBAEE265FE8733A768 /* TransactionList */ = {
 			isa = PBXGroup;
 			children = (
-				6905744194505DC4A8280D62 /* View */,
-				690576F8B66BDEB7D47DB548 /* Router */,
 				6905773061C02A1C6FE498A6 /* Contract */,
-				690574B9521D9C309C40AA6D /* Presenter */,
 				69057AC5485CEB056E4A64A1 /* Interactor */,
+				690574B9521D9C309C40AA6D /* Presenter */,
+				690576F8B66BDEB7D47DB548 /* Router */,
+				6905744194505DC4A8280D62 /* View */,
 			);
 			path = TransactionList;
 			sourceTree = "<group>";
@@ -3653,8 +3653,8 @@
 		690578E7A9DB320CEE26BBF8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				690575A495F177D6B912466C /* WalletImportNanoPasswordViewController.swift */,
 				69057E7298FA70D7A95A0F4D /* WalletImportNanoPasswordStoryboard.storyboard */,
+				690575A495F177D6B912466C /* WalletImportNanoPasswordViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3678,11 +3678,11 @@
 		69057922A42C32A5E5D75B7C /* WalletImportKey */ = {
 			isa = PBXGroup;
 			children = (
-				690577B99172884AD021335C /* View */,
-				69057D9131213EFDCB2F5C9F /* Router */,
 				69057830B686BB8B60107EF8 /* Contract */,
-				69057E27E0BA470F969B2FF9 /* Presenter */,
 				69057E9421A74E1A976ED54F /* Interactor */,
+				69057E27E0BA470F969B2FF9 /* Presenter */,
+				69057D9131213EFDCB2F5C9F /* Router */,
+				690577B99172884AD021335C /* View */,
 			);
 			path = WalletImportKey;
 			sourceTree = "<group>";
@@ -3714,8 +3714,8 @@
 		69057976743CF8EBBE6E7E94 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				6905705E31B4FA7B4B342D55 /* SettingTop */,
 				69057E4A0604713C00451EC9 /* NodeSelect */,
+				6905705E31B4FA7B4B342D55 /* SettingTop */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -3723,11 +3723,11 @@
 		69057993FA717069ACAF26C9 /* LessonExpert */ = {
 			isa = PBXGroup;
 			children = (
-				69057C36CE5B0EF04F422211 /* View */,
-				6905742C2889144FEDB50E16 /* Router */,
 				69057461A2E55F4743EF9A2D /* Contract */,
-				6905708061DD7F23D7329DE8 /* Presenter */,
 				69057D15E6AA0450AB9C3C53 /* Interactor */,
+				6905708061DD7F23D7329DE8 /* Presenter */,
+				6905742C2889144FEDB50E16 /* Router */,
+				69057C36CE5B0EF04F422211 /* View */,
 			);
 			path = LessonExpert;
 			sourceTree = "<group>";
@@ -3767,8 +3767,8 @@
 		690579A950F1C38EFA2D409F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057D00EED66AF47158D0D5 /* DonationDetailViewController.swift */,
 				6905718DC9871ABE3BAE8771 /* DonationDetailStoryboard.storyboard */,
+				69057D00EED66AF47158D0D5 /* DonationDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3800,8 +3800,8 @@
 		690579C9E97F35F1E190A177 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				690571388420359F1A9A5FFA /* WalletSettingViewController.swift */,
 				690572A7D0F1942CAF7305D2 /* WalletSettingStoryboard.storyboard */,
+				690571388420359F1A9A5FFA /* WalletSettingViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3809,11 +3809,11 @@
 		690579D6A017156F86EB96E4 /* WalletSetting */ = {
 			isa = PBXGroup;
 			children = (
-				690579C9E97F35F1E190A177 /* View */,
-				690576C76B90EB2FB1B12D4A /* Router */,
 				69057EDD0357B7717E1CEE42 /* Contract */,
-				690577FBCA5641459B651028 /* Presenter */,
 				69057BD0366195F701CB2E9A /* Interactor */,
+				690577FBCA5641459B651028 /* Presenter */,
+				690576C76B90EB2FB1B12D4A /* Router */,
+				690579C9E97F35F1E190A177 /* View */,
 			);
 			path = WalletSetting;
 			sourceTree = "<group>";
@@ -3821,8 +3821,8 @@
 		690579DB94B6DE888EAFD598 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				690574E499F323DFF1909DFE /* WalletRenameViewController.swift */,
 				69057F23E3813AA91A9E89D5 /* WalletRenameStoryboard.storyboard */,
+				690574E499F323DFF1909DFE /* WalletRenameViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3838,11 +3838,11 @@
 		690579F3A979D972DA189AD3 /* WalletAddress */ = {
 			isa = PBXGroup;
 			children = (
-				69057718E7C916F74342183A /* View */,
-				690577A6FCEFE9F6BD0EEFA0 /* Router */,
 				690575BCAE128E5776A5190D /* Contract */,
-				69057CC0701EF96BDACF33AC /* Presenter */,
 				6905759AF00E191E3291A783 /* Interactor */,
+				69057CC0701EF96BDACF33AC /* Presenter */,
+				690577A6FCEFE9F6BD0EEFA0 /* Router */,
+				69057718E7C916F74342183A /* View */,
 			);
 			path = WalletAddress;
 			sourceTree = "<group>";
@@ -3890,8 +3890,8 @@
 		69057A409F56EF370B5DA130 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057DBCF786934E5D717AD3 /* LessonBeginnerBackupEndViewController.swift */,
 				690576B0E15EB00B0C7A14AD /* LessonBeginnerBackupEndStoryboard.storyboard */,
+				69057DBCF786934E5D717AD3 /* LessonBeginnerBackupEndViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3915,9 +3915,9 @@
 		69057A8ACD04F0172E0D0BE5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057FA6E6ED0F30E92759F2 /* NodeSelectViewController.swift */,
-				690576014B1E42804E8AB4A5 /* NodeSelectStoryboard.storyboard */,
 				690579386018DBEDEB86C44E /* NodeListCell.swift */,
+				690576014B1E42804E8AB4A5 /* NodeSelectStoryboard.storyboard */,
+				69057FA6E6ED0F30E92759F2 /* NodeSelectViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3933,8 +3933,8 @@
 		69057AB0B521501E5874F3E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				690573539015C5152849BA03 /* SendMessageTypeViewController.swift */,
 				690579A63288866A30683794 /* SendMessageTypeStoryboard.storyboard */,
+				690573539015C5152849BA03 /* SendMessageTypeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3942,11 +3942,11 @@
 		69057ABBDB1AB91A4176E591 /* WalletImportName */ = {
 			isa = PBXGroup;
 			children = (
-				69057DD3A08E01D3C56E91DF /* View */,
-				69057F9174C0CE9361F37632 /* Router */,
 				6905774FBE81F30FFD3D5808 /* Contract */,
-				690574DEC332D07A5A373E34 /* Presenter */,
 				69057915377C87593BD421A3 /* Interactor */,
+				690574DEC332D07A5A373E34 /* Presenter */,
+				69057F9174C0CE9361F37632 /* Router */,
+				69057DD3A08E01D3C56E91DF /* View */,
 			);
 			path = WalletImportName;
 			sourceTree = "<group>";
@@ -3962,8 +3962,8 @@
 		69057AD5AD1FF356401755CD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6905729364C6A779E4C6EC68 /* LessonImporterViewController.swift */,
 				690575BEEABE0A114C5F9FD7 /* LessonImporterStoryboard.storyboard */,
+				6905729364C6A779E4C6EC68 /* LessonImporterViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3987,8 +3987,8 @@
 		69057B0B3C1B2CC096CC9FB5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6905788DCB991758846A36BE /* ReceiveTabViewController.swift */,
 				690577A14C31EEAD5586DFA3 /* ReceiveTabStoryboard.storyboard */,
+				6905788DCB991758846A36BE /* ReceiveTabViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4004,8 +4004,8 @@
 		69057B35C149D40E93378E09 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057DD59AB5E8FE340F5D09 /* WalletImportEndViewController.swift */,
 				690570C234F1F30D58C5522F /* WalletImportEndStoryboard.storyboard */,
+				69057DD59AB5E8FE340F5D09 /* WalletImportEndViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4021,8 +4021,8 @@
 		69057B530D4BC866B55DCE87 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6905729CBF0729E086ECD333 /* QrLabInvoiceViewController.swift */,
 				69057AADAEC413449100C69E /* QrLabInvoiceStoryboard.storyboard */,
+				6905729CBF0729E086ECD333 /* QrLabInvoiceViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4038,11 +4038,11 @@
 		69057B68D6F4EBFDAB9E0B2E /* WalletRename */ = {
 			isa = PBXGroup;
 			children = (
-				690579DB94B6DE888EAFD598 /* View */,
-				6905796731BB4826F82BD9A1 /* Router */,
 				69057C6BB280FCC30A0E516C /* Contract */,
-				69057629E432D10E27C575F9 /* Presenter */,
 				690576024E42D00F5E52A338 /* Interactor */,
+				69057629E432D10E27C575F9 /* Presenter */,
+				6905796731BB4826F82BD9A1 /* Router */,
+				690579DB94B6DE888EAFD598 /* View */,
 			);
 			path = WalletRename;
 			sourceTree = "<group>";
@@ -4050,11 +4050,11 @@
 		69057B6E67E02AB5CF713960 /* SendTab */ = {
 			isa = PBXGroup;
 			children = (
-				69057CC4B9E1A5BF6123A6CC /* View */,
-				6905735E7506436EAF4C731F /* Router */,
 				69057D4E8D0087DC079128CC /* Contract */,
-				690574623EE23DA58684BE85 /* Presenter */,
 				690579DE5A82AEFFEDCC6A30 /* Interactor */,
+				690574623EE23DA58684BE85 /* Presenter */,
+				6905735E7506436EAF4C731F /* Router */,
+				69057CC4B9E1A5BF6123A6CC /* View */,
 			);
 			path = SendTab;
 			sourceTree = "<group>";
@@ -4062,11 +4062,11 @@
 		69057B6E6F1404527DF98149 /* LessonPinEnd */ = {
 			isa = PBXGroup;
 			children = (
-				690572EF82C02B80FB68DA3D /* View */,
-				69057E47BF5B59053AA80FFB /* Router */,
 				69057DFD8BD3F03C0FEE06D5 /* Contract */,
-				690576261FA776023CCD7165 /* Presenter */,
 				690571D693039F3BD5F75CC9 /* Interactor */,
+				690576261FA776023CCD7165 /* Presenter */,
+				69057E47BF5B59053AA80FFB /* Router */,
+				690572EF82C02B80FB68DA3D /* View */,
 			);
 			path = LessonPinEnd;
 			sourceTree = "<group>";
@@ -4082,8 +4082,8 @@
 		69057B7946B1BE534DA05666 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				690578F0647D2F5A603CC293 /* QrScannerDialogViewController.swift */,
 				69057627104E94C6F16BE6E3 /* QrScannerDialogStoryboard.storyboard */,
+				690578F0647D2F5A603CC293 /* QrScannerDialogViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4152,11 +4152,11 @@
 		69057C281C30B5595A62A903 /* SendMessage */ = {
 			isa = PBXGroup;
 			children = (
-				690572B67B1AA3EFA0A2CE64 /* View */,
-				69057B1BDB24E0079030351A /* Router */,
 				69057D5A9A70F0689F9DFF9A /* Contract */,
-				6905759B81A2176F4DF5E80A /* Presenter */,
 				69057E4FA4E4D6474657C39F /* Interactor */,
+				6905759B81A2176F4DF5E80A /* Presenter */,
+				69057B1BDB24E0079030351A /* Router */,
+				690572B67B1AA3EFA0A2CE64 /* View */,
 			);
 			path = SendMessage;
 			sourceTree = "<group>";
@@ -4164,8 +4164,8 @@
 		69057C36CE5B0EF04F422211 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057986395C53378AF9993C /* LessonExpertViewController.swift */,
 				6905778B1B0AF1B8CB98875F /* LessonExpertStoryboard.storyboard */,
+				69057986395C53378AF9993C /* LessonExpertViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4205,9 +4205,9 @@
 		69057C5ACB8B579D0DA0670B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				69057E158BDC65097CA2879B /* SettingTopStoryboard.storyboard */,
 				690577A6E829D5729E14A311 /* SettingTopSwitchCell.swift */,
 				6905740D70E7B0916C86491B /* SettingTopViewController.swift */,
-				69057E158BDC65097CA2879B /* SettingTopStoryboard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4215,11 +4215,11 @@
 		69057C616006F1948D335A39 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057EBEA4F0FEBAFADA2074 /* SendAmountViewController.swift */,
-				69057527084C9C690B5316F7 /* SendAmountStoryboard.storyboard */,
-				5FD411C0213CC1D400C89151 /* SendAmountPage.xib */,
-				5FD411C4213CC1EA00C89151 /* SendAmountPage.swift */,
 				5F867008213FBCF50043E850 /* SendAmountMosaicCell.swift */,
+				5FD411C4213CC1EA00C89151 /* SendAmountPage.swift */,
+				5FD411C0213CC1D400C89151 /* SendAmountPage.xib */,
+				69057527084C9C690B5316F7 /* SendAmountStoryboard.storyboard */,
+				69057EBEA4F0FEBAFADA2074 /* SendAmountViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4243,11 +4243,11 @@
 		69057C7DAB0C650AEC48E8DE /* LessonImporter */ = {
 			isa = PBXGroup;
 			children = (
-				69057AD5AD1FF356401755CD /* View */,
-				690577F7952D4E61D63E3867 /* Router */,
 				69057DA08F73646D233ABB1C /* Contract */,
-				6905711D0DDE382B5EAD0E77 /* Presenter */,
 				69057067BF30610D4718FFCA /* Interactor */,
+				6905711D0DDE382B5EAD0E77 /* Presenter */,
+				690577F7952D4E61D63E3867 /* Router */,
+				69057AD5AD1FF356401755CD /* View */,
 			);
 			path = LessonImporter;
 			sourceTree = "<group>";
@@ -4279,9 +4279,9 @@
 		69057CC1966A4947189E0ECD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057291DBB5E1907078B6F3 /* MosaicListViewController.swift */,
-				69057A622DBE30E9EE31E731 /* MosaicListStoryboard.storyboard */,
 				69057153A0E774216B7DF6EA /* MosaicListCell.swift */,
+				69057A622DBE30E9EE31E731 /* MosaicListStoryboard.storyboard */,
+				69057291DBB5E1907078B6F3 /* MosaicListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4297,8 +4297,8 @@
 		69057CC4B9E1A5BF6123A6CC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057846D15F57CB9F29E2B0 /* SendTabViewController.swift */,
 				690576093674D9B9CE6FB0A0 /* SendTabStoryboard.storyboard */,
+				69057846D15F57CB9F29E2B0 /* SendTabViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4330,8 +4330,8 @@
 		69057CFC610BA157C3772D4A /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				690570C6FCF9E35EE4E79BDD /* PinDialogPresenter.swift */,
 				6905710F90E284A8DE0BC1B7 /* PinDialogMixinPresentation.swift */,
+				690570C6FCF9E35EE4E79BDD /* PinDialogPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -4363,8 +4363,8 @@
 		69057D4C9286EF616C21A76F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6905713176F38F29DA4A6E03 /* TransactionDetailViewController.swift */,
 				690571D40B2E511ACB3D9D22 /* TransactionDetailStoryboard.storyboard */,
+				6905713176F38F29DA4A6E03 /* TransactionDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4380,8 +4380,8 @@
 		69057D501CA0E1CF298C111C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057802ABD52EB5807D8E5C /* SendModeViewController.swift */,
 				69057A21A140E719D003DC4B /* SendModeStoryboard.storyboard */,
+				69057802ABD52EB5807D8E5C /* SendModeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4397,11 +4397,11 @@
 		69057D5AF494830649AB1246 /* WalletDelete */ = {
 			isa = PBXGroup;
 			children = (
-				6905702CB44688E49AF315A3 /* View */,
-				69057334C20A6CC8C57BD9B5 /* Router */,
 				6905754B12EB16566874D1DF /* Contract */,
-				69057A095978380942B1665C /* Presenter */,
 				6905745C72F01E9F1F3D4210 /* Interactor */,
+				69057A095978380942B1665C /* Presenter */,
+				69057334C20A6CC8C57BD9B5 /* Router */,
+				6905702CB44688E49AF315A3 /* View */,
 			);
 			path = WalletDelete;
 			sourceTree = "<group>";
@@ -4417,11 +4417,11 @@
 		69057D7627802D4807F3E9F6 /* DonationTop */ = {
 			isa = PBXGroup;
 			children = (
-				690574D0F7E29F6CC438D453 /* View */,
-				690578C00420A6E6E69BA34A /* Router */,
 				6905714C7BB18E1CD3662F65 /* Contract */,
-				6905757CD6BC810C651D6F60 /* Presenter */,
 				6905742590386E7A7AE3449C /* Interactor */,
+				6905757CD6BC810C651D6F60 /* Presenter */,
+				690578C00420A6E6E69BA34A /* Router */,
+				690574D0F7E29F6CC438D453 /* View */,
 			);
 			path = DonationTop;
 			sourceTree = "<group>";
@@ -4461,11 +4461,11 @@
 		69057DB750309D2033D44B72 /* WalletImportNanoPassword */ = {
 			isa = PBXGroup;
 			children = (
-				690578E7A9DB320CEE26BBF8 /* View */,
-				69057141BB57F18350FCCAE6 /* Router */,
 				69057EBFC9BE7C65B091E37B /* Contract */,
-				690575D00A8C988DA27A49A1 /* Presenter */,
 				69057ADE74F26544509A3218 /* Interactor */,
+				690575D00A8C988DA27A49A1 /* Presenter */,
+				69057141BB57F18350FCCAE6 /* Router */,
+				690578E7A9DB320CEE26BBF8 /* View */,
 			);
 			path = WalletImportNanoPassword;
 			sourceTree = "<group>";
@@ -4473,8 +4473,8 @@
 		69057DD3A08E01D3C56E91DF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057ABCA7331B83D4677258 /* WalletImportNameViewController.swift */,
 				690571C5000286A850E8A856 /* WalletImportNameStoryboard.storyboard */,
+				69057ABCA7331B83D4677258 /* WalletImportNameViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4498,11 +4498,11 @@
 		69057DFC1C9FCB2DEAE686BE /* MosaicList */ = {
 			isa = PBXGroup;
 			children = (
-				69057CC1966A4947189E0ECD /* View */,
-				690579A36C02ED093915595F /* Router */,
 				6905701E5CD1034FC5040D47 /* Contract */,
-				69057D29BB89910C55FB68F6 /* Presenter */,
 				69057EED0CB4B8B63785009E /* Interactor */,
+				69057D29BB89910C55FB68F6 /* Presenter */,
+				690579A36C02ED093915595F /* Router */,
+				69057CC1966A4947189E0ECD /* View */,
 			);
 			path = MosaicList;
 			sourceTree = "<group>";
@@ -4526,11 +4526,11 @@
 		69057E12C2B462ADCCD8FD84 /* QrLabAmount */ = {
 			isa = PBXGroup;
 			children = (
-				6905752F5CD158299588CC31 /* View */,
-				69057156BF016196A64ED3B5 /* Router */,
 				6905733956E2DA872D17FB9F /* Contract */,
-				690579970FDCB06EA727353A /* Presenter */,
 				69057A93688DC19137AA3B8C /* Interactor */,
+				690579970FDCB06EA727353A /* Presenter */,
+				69057156BF016196A64ED3B5 /* Router */,
+				6905752F5CD158299588CC31 /* View */,
 			);
 			path = QrLabAmount;
 			sourceTree = "<group>";
@@ -4562,8 +4562,8 @@
 		69057E32FB5DFF6FDF2B00CA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6905722C8E7C6E416F0FE8F3 /* IntroductionConceptViewController.swift */,
 				69057FF592A5BB22DD9BFBB8 /* IntroductionConceptStoryboard.storyboard */,
+				6905722C8E7C6E416F0FE8F3 /* IntroductionConceptViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4579,11 +4579,11 @@
 		69057E4A0604713C00451EC9 /* NodeSelect */ = {
 			isa = PBXGroup;
 			children = (
-				69057A8ACD04F0172E0D0BE5 /* View */,
-				69057CAE2E90E3682CF20719 /* Router */,
 				69057C02B53592FBCD175882 /* Contract */,
-				69057C4441CBA567719A620B /* Presenter */,
 				6905772D7B72453574A97D74 /* Interactor */,
+				69057C4441CBA567719A620B /* Presenter */,
+				69057CAE2E90E3682CF20719 /* Router */,
+				69057A8ACD04F0172E0D0BE5 /* View */,
 			);
 			path = NodeSelect;
 			sourceTree = "<group>";
@@ -4639,12 +4639,12 @@
 		69057EBA3CA680FEBA000E1C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				690575E89A7D58DF828BFAAE /* PinDialogViewController.swift */,
+				69057916065E21D084AB14E8 /* PinDialogMixinView.swift */,
 				69057E85061C45E1834BC40D /* PinDialogStoryboard.storyboard */,
+				690575E89A7D58DF828BFAAE /* PinDialogViewController.swift */,
+				690578F9DD03F55C6FB308CA /* PinInputView.swift */,
 				690575D2B82A8B0B932DC51E /* PinNumberView.swift */,
 				5F0A44F4212E5DB6000342D6 /* PinNumberView.xib */,
-				690578F9DD03F55C6FB308CA /* PinInputView.swift */,
-				69057916065E21D084AB14E8 /* PinDialogMixinView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4660,8 +4660,8 @@
 		69057ED2E92CC1AF98EAAC5A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057E22218F9D25D26159A8 /* BalanceDetailViewController.swift */,
 				690577AAAECE3479539C2C4B /* BalanceDetailStoryboard.storyboard */,
+				69057E22218F9D25D26159A8 /* BalanceDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4669,11 +4669,11 @@
 		69057EDA8C69F0422C636722 /* LessonEnd */ = {
 			isa = PBXGroup;
 			children = (
-				690570C1272B9BFF08B48C6E /* View */,
-				6905733EF77D55257732EA35 /* Router */,
 				69057DABFA3A47EA5A4F356A /* Contract */,
-				69057A1D319FB9CA9E3006C4 /* Presenter */,
 				69057E9BC8341D038028A41D /* Interactor */,
+				69057A1D319FB9CA9E3006C4 /* Presenter */,
+				6905733EF77D55257732EA35 /* Router */,
+				690570C1272B9BFF08B48C6E /* View */,
 			);
 			path = LessonEnd;
 			sourceTree = "<group>";
@@ -4705,8 +4705,8 @@
 		69057F4387BD5F6C78AD3030 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				69057CE6EC35BE008FE087C6 /* NavigationDrawerViewController.swift */,
 				69057743787D5721A5EC2630 /* NavigationDrawerStoryboard.storyboard */,
+				69057CE6EC35BE008FE087C6 /* NavigationDrawerViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4722,11 +4722,11 @@
 		69057F86685275AB30A2FEE2 /* LessonBeginnerBackupEnd */ = {
 			isa = PBXGroup;
 			children = (
-				69057A409F56EF370B5DA130 /* View */,
-				69057DF3C5FE0B9018A5BE8E /* Router */,
 				69057C3B382490A8BDBFF252 /* Contract */,
-				69057651130E4EA458E7104B /* Presenter */,
 				69057E796EE1654241232024 /* Interactor */,
+				69057651130E4EA458E7104B /* Presenter */,
+				69057DF3C5FE0B9018A5BE8E /* Router */,
+				69057A409F56EF370B5DA130 /* View */,
 			);
 			path = LessonBeginnerBackupEnd;
 			sourceTree = "<group>";
@@ -4774,11 +4774,11 @@
 		69057FE6F45208D1D03DE28F /* ReceiveTab */ = {
 			isa = PBXGroup;
 			children = (
-				69057B0B3C1B2CC096CC9FB5 /* View */,
-				6905705F01421CAF2A3B5AB1 /* Router */,
 				690570EDC350FCAF8BF35C90 /* Contract */,
-				690575248A4AC1743C366045 /* Presenter */,
 				69057585D98C152602CA8B03 /* Interactor */,
+				690575248A4AC1743C366045 /* Presenter */,
+				6905705F01421CAF2A3B5AB1 /* Router */,
+				69057B0B3C1B2CC096CC9FB5 /* View */,
 			);
 			path = ReceiveTab;
 			sourceTree = "<group>";

@@ -221,7 +221,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bottom_nav_home" width="25" height="25"/>
+        <image name="bottom_nav_home" width="24" height="24"/>
         <image name="icon_home_harvest" width="11" height="8"/>
         <image name="icon_home_transaction" width="11" height="12"/>
         <image name="image_empty1_small" width="60" height="60"/>
