@@ -39,6 +39,8 @@ class Constant {
     static let tableHeaderHeight: CGFloat = 48.0
     static let walletBarButtonTapExpansion: CGFloat = 32.0
 
+    static let walletSelectCellHeight: CGFloat = 52.0
+
     static let maxNemNodes = 30
 
 

@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 112 images.
+  /// This `R.image` struct is generated, and contains static references to 114 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -100,6 +100,10 @@ struct R: Rswift.Validatable {
     static let heroimage_wallet_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_wallet_small")
     /// Image `ic_background`.
     static let ic_background = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_background")
+    /// Image `icon-radio_off_light`.
+    static let iconRadio_off_light = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon-radio_off_light")
+    /// Image `icon-radio_on_light`.
+    static let iconRadio_on_light = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon-radio_on_light")
     /// Image `icon_addressbook`.
     static let icon_addressbook = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_addressbook")
     /// Image `icon_back`.
@@ -398,6 +402,16 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "ic_background", bundle: ..., traitCollection: ...)`
     static func ic_background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ic_background, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon-radio_off_light", bundle: ..., traitCollection: ...)`
+    static func iconRadio_off_light(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.iconRadio_off_light, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon-radio_on_light", bundle: ..., traitCollection: ...)`
+    static func iconRadio_on_light(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.iconRadio_on_light, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_addressbook", bundle: ..., traitCollection: ...)`
@@ -1339,7 +1353,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 218 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 219 localization keys.
     struct localizable {
       /// en translation: 
       /// 
@@ -1353,6 +1367,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let lesson_pin_end_title = Rswift.StringResource(key: "lesson_pin_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation:  新しくウォレットを作る
+      /// 
+      /// Locales: en, ja
+      static let wallet_creation_new = Rswift.StringResource(key: "wallet_creation_new", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: %@で送金します
       /// 
       /// Locales: en, ja
@@ -2233,6 +2251,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func lesson_pin_end_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_pin_end_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation:  新しくウォレットを作る
+      /// 
+      /// Locales: en, ja
+      static func wallet_creation_new(_: Void = ()) -> String {
+        return NSLocalizedString("wallet_creation_new", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: %@で送金します
@@ -4899,7 +4924,10 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "icon_wallet_16x16") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_wallet_16x16' is used in storyboard 'WalletSelectStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "heroimage_wallet_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_wallet_large' is used in storyboard 'WalletSelectStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_menu_setting") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_menu_setting' is used in storyboard 'WalletSelectStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "image_empty2_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_empty2_large' is used in storyboard 'WalletSelectStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon-radio_on_light") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon-radio_on_light' is used in storyboard 'WalletSelectStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon-radio_off_light") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon-radio_off_light' is used in storyboard 'WalletSelectStoryboard', but couldn't be loaded.") }
         if _R.storyboard.walletSelectStoryboard().walletSelectView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'walletSelectView' could not be loaded from storyboard 'WalletSelectStoryboard' as 'WalletSelectViewController'.") }
       }
       

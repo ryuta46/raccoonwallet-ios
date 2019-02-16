@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,11 +23,12 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroimage_wallet_large" translatesAutoresizingMaskIntoConstraints="NO" id="lgZ-Uz-Amw">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="179.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="lgZ-Uz-Amw" secondAttribute="height" multiplier="720:404" id="IjI-og-Ixc"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah6-d9-JHH" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah6-d9-JHH" customClass="PrimaryRoundedButton" customModule="RaccoonWallet" customModuleProvider="target">
                                         <rect key="frame" x="16" y="195.5" width="288" height="48"/>
                                         <color key="backgroundColor" red="0.2643793205896815" green="1" blue="0.4251381034380497" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -46,7 +46,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cv6-Fq-W2M">
-                                        <rect key="frame" x="0.0" y="259.5" width="320" height="320.5"/>
+                                        <rect key="frame" x="0.0" y="259.5" width="320" height="320"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="15D-zW-imt">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
@@ -62,8 +62,8 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Yp-CT-hPD">
-                                                                    <rect key="frame" x="8" y="8" width="304" height="47.5"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Yp-CT-hPD">
+                                                                    <rect key="frame" x="8" y="8" width="296" height="47.5"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2G-dO-vxk" customClass="DLRadioButton">
                                                                             <rect key="frame" x="0.0" y="12" width="24" height="24"/>
@@ -71,17 +71,24 @@
                                                                                 <constraint firstAttribute="width" constant="24" id="BzN-uX-l1S"/>
                                                                                 <constraint firstAttribute="width" secondItem="A2G-dO-vxk" secondAttribute="height" multiplier="1:1" id="Rd4-wi-cP8"/>
                                                                             </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-radio_off_light"/>
+                                                                                <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="icon-radio_on_light"/>
+                                                                            </userDefinedRuntimeAttributes>
                                                                         </button>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0n-qH-nah">
-                                                                            <rect key="frame" x="24" y="13.5" width="232" height="20.5"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Wallet Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0n-qH-nah">
+                                                                            <rect key="frame" x="32" y="13.5" width="232" height="20.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGs-nn-D3y">
-                                                                            <rect key="frame" x="256" y="0.0" width="48" height="47.5"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                            <state key="normal" title="title"/>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGs-nn-D3y">
+                                                                            <rect key="frame" x="272" y="12" width="24" height="24"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="24" id="V0x-5M-ADn"/>
+                                                                                <constraint firstAttribute="width" secondItem="dGs-nn-D3y" secondAttribute="height" multiplier="1:1" id="ZNF-22-Uaq"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="icon_menu_setting"/>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>
@@ -90,7 +97,7 @@
                                                                 <constraint firstItem="2Yp-CT-hPD" firstAttribute="leading" secondItem="su2-a7-LDC" secondAttribute="leading" constant="8" id="9IS-Xi-yhG"/>
                                                                 <constraint firstItem="2Yp-CT-hPD" firstAttribute="top" secondItem="su2-a7-LDC" secondAttribute="top" constant="8" id="Ruq-Hj-08x"/>
                                                                 <constraint firstAttribute="bottom" secondItem="2Yp-CT-hPD" secondAttribute="bottom" constant="8" id="W4t-GA-A5i"/>
-                                                                <constraint firstAttribute="trailing" secondItem="2Yp-CT-hPD" secondAttribute="trailing" constant="8" id="YBv-zB-kLm"/>
+                                                                <constraint firstAttribute="trailing" secondItem="2Yp-CT-hPD" secondAttribute="trailing" constant="16" id="YBv-zB-kLm"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>
@@ -102,26 +109,26 @@
                                                 </prototypes>
                                             </tableView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPe-4r-AFq">
-                                                <rect key="frame" x="0.0" y="80" width="320" height="240.5"/>
+                                                <rect key="frame" x="0.0" y="80" width="320" height="240"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aU5-q3-WJb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="232.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="232"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_empty2_large" translatesAutoresizingMaskIntoConstraints="NO" id="pL8-Mg-QMH">
-                                                                <rect key="frame" x="80" y="0.0" width="160" height="160.5"/>
+                                                                <rect key="frame" x="80" y="0.0" width="160" height="160"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="pL8-Mg-QMH" secondAttribute="height" multiplier="1:1" id="LBm-mI-BQX"/>
                                                                     <constraint firstAttribute="width" constant="160" id="j4X-j9-rGK"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ウォレットがないみたい" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4og-XI-2ly">
-                                                                <rect key="frame" x="64.5" y="161" width="191" height="20.5"/>
+                                                                <rect key="frame" x="64.5" y="160.5" width="191" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上のボタンからウォレットを作成するか アカウントをリンクすると、ここに一覧で表示されるよ。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5E-Wk-TGQ">
-                                                                <rect key="frame" x="3" y="182" width="314.5" height="50.5"/>
+                                                                <rect key="frame" x="3" y="181.5" width="314.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -170,6 +177,7 @@
                         <viewLayoutGuide key="safeArea" id="xJa-3o-AcC"/>
                     </view>
                     <connections>
+                        <outlet property="createNewWalletButton" destination="Ah6-d9-JHH" id="G9B-9P-CbS"/>
                         <outlet property="emptyView" destination="rPe-4r-AFq" id="m5O-cj-2Vh"/>
                         <outlet property="walletBar" destination="niG-wd-CcR" id="RKB-XT-iZ7"/>
                         <outlet property="walletList" destination="15D-zW-imt" id="ae8-k2-WxL"/>
@@ -182,8 +190,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heroimage_wallet_large" width="720" height="404"/>
-        <image name="icon_wallet_16x16" width="16" height="16"/>
-        <image name="image_empty2_large" width="320" height="320"/>
+        <image name="heroimage_wallet_large" width="360" height="202"/>
+        <image name="icon-radio_off_light" width="24" height="24"/>
+        <image name="icon-radio_on_light" width="24" height="24"/>
+        <image name="icon_menu_setting" width="24" height="24"/>
+        <image name="icon_wallet_16x16" width="15" height="14"/>
+        <image name="image_empty2_large" width="160" height="160"/>
     </resources>
 </document>
