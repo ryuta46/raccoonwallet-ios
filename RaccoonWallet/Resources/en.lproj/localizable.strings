@@ -260,18 +260,18 @@
 "wallet_creation_type_new" = "新しくウォレットを作る";
 "wallet_creation_type_import" = "インポート";
 
-"wallet_name_title" = "ようこそ、お客人";
+"wallet_name_title" = "";
 "wallet_name_message" = "ハロー。ウェルカム・トゥ・ラクーン。\n早速、君のウォレットを作っていこう。\nまず最初に、ウォレットにイケてる名前をつけてくれ。";
 "wallet_name_input" = "一番いいウォレットネームを";
-"wallet_create_title" = "準備完了";
+"wallet_create_title" = "";
 
 "wallet_create_message_0" = "おめでとうございます！\nウォレットの作成が完了しました。\nあなたのアドレスは以下になります。";
 "wallet_create_message_1" = "ウォレットのメンテナンスをしたいときは、上に出てきたバーのボタンを押してみてください。\nこの画面では動作しないからあとで試してみてくださいね。";
 
 "wallet_create_address_headline" = "今回作成されたウォレットアドレス";
 
-"wallet_end_title" = "お疲れ様！レッスンはどう？";
-"wallet_end_message" = "以上でウォレットの新規作成作業は完了です。\nこのままウォレットのバックアップなどを行いたい人はレッスンに移動してね。\n\nとりあえず今のままで使い始めたい人は\nHOME からスキップもできるよ。";
+"wallet_end_title" = "";
+"wallet_end_message" = "以上でウォレットの新規作成作業は完了です。\nこのままウォレットのバックアップなどを行いたい人はレッスンに移動してくださいね。\n\nとりあえず今のままで使い始めたい人は\n「HOME」からスキップもできます。";
 
 "wallet_import_title" = "秘密鍵のインポート";
 "wallet_import_message" = "開けゴマ！\n1. NEMの秘密鍵を入力する。\nもしくはQRコードで読み取りましょう。\n2. あなたのNEMアカウントをラクーンにリンクします！";

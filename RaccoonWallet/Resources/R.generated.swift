@@ -1367,6 +1367,18 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let lesson_pin_end_title = Rswift.StringResource(key: "lesson_pin_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 
+      /// 
+      /// Locales: en, ja
+      static let wallet_create_title = Rswift.StringResource(key: "wallet_create_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 
+      /// 
+      /// Locales: en, ja
+      static let wallet_end_title = Rswift.StringResource(key: "wallet_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 
+      /// 
+      /// Locales: en, ja
+      static let wallet_name_title = Rswift.StringResource(key: "wallet_name_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation:  新しくウォレットを作る
       /// 
       /// Locales: en, ja
@@ -1579,10 +1591,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let lesson_end_title = Rswift.StringResource(key: "lesson_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: お疲れ様！レッスンはどう？
-      /// 
-      /// Locales: en, ja
-      static let wallet_end_title = Rswift.StringResource(key: "wallet_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: お見せできるモザイクは、これっぽっちもないよ。 涙がちょちょ切れるほどコレクションに励もう。
       /// 
       /// Locales: en, ja
@@ -1651,10 +1659,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let lesson_level_beginner_message = Rswift.StringResource(key: "lesson_level_beginner_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: ようこそ、お客人
-      /// 
-      /// Locales: en, ja
-      static let wallet_name_title = Rswift.StringResource(key: "wallet_name_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: アカウント情報の復元に失敗しました。
       /// 
       /// Locales: en, ja
@@ -1947,7 +1951,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let wallet_create_address_headline = Rswift.StringResource(key: "wallet_create_address_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: 以上でウォレットの新規作成作業は完了です。 このままウォレットのバックアップなどを行いたい人はレッスンに移動してね。  とりあえず今のままで使い始めたい人は HOME からスキップもできるよ。
+      /// en translation: 以上でウォレットの新規作成作業は完了です。 このままウォレットのバックアップなどを行いたい人はレッスンに移動してくださいね。  とりあえず今のままで使い始めたい人は 「HOME」からスキップもできます。
       /// 
       /// Locales: en, ja
       static let wallet_end_message = Rswift.StringResource(key: "wallet_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
@@ -2091,10 +2095,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let send_mode_attach = Rswift.StringResource(key: "send_mode_attach", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: 準備完了
-      /// 
-      /// Locales: en, ja
-      static let wallet_create_title = Rswift.StringResource(key: "wallet_create_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 無効なアドレスです
       /// 
       /// Locales: en, ja
@@ -2263,6 +2263,27 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func lesson_pin_end_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_pin_end_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 
+      /// 
+      /// Locales: en, ja
+      static func wallet_create_title(_: Void = ()) -> String {
+        return NSLocalizedString("wallet_create_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 
+      /// 
+      /// Locales: en, ja
+      static func wallet_end_title(_: Void = ()) -> String {
+        return NSLocalizedString("wallet_end_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 
+      /// 
+      /// Locales: en, ja
+      static func wallet_name_title(_: Void = ()) -> String {
+        return NSLocalizedString("wallet_name_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation:  新しくウォレットを作る
@@ -2636,13 +2657,6 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("lesson_end_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: お疲れ様！レッスンはどう？
-      /// 
-      /// Locales: en, ja
-      static func wallet_end_title(_: Void = ()) -> String {
-        return NSLocalizedString("wallet_end_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: お見せできるモザイクは、これっぽっちもないよ。 涙がちょちょ切れるほどコレクションに励もう。
       /// 
       /// Locales: en, ja
@@ -2760,13 +2774,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func lesson_level_beginner_message(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_beginner_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: ようこそ、お客人
-      /// 
-      /// Locales: en, ja
-      static func wallet_name_title(_: Void = ()) -> String {
-        return NSLocalizedString("wallet_name_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: アカウント情報の復元に失敗しました。
@@ -3280,7 +3287,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("wallet_create_address_headline", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: 以上でウォレットの新規作成作業は完了です。 このままウォレットのバックアップなどを行いたい人はレッスンに移動してね。  とりあえず今のままで使い始めたい人は HOME からスキップもできるよ。
+      /// en translation: 以上でウォレットの新規作成作業は完了です。 このままウォレットのバックアップなどを行いたい人はレッスンに移動してくださいね。  とりあえず今のままで使い始めたい人は 「HOME」からスキップもできます。
       /// 
       /// Locales: en, ja
       static func wallet_end_message(_: Void = ()) -> String {
@@ -3530,13 +3537,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func send_mode_attach(_: Void = ()) -> String {
         return NSLocalizedString("send_mode_attach", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: 準備完了
-      /// 
-      /// Locales: en, ja
-      static func wallet_create_title(_: Void = ()) -> String {
-        return NSLocalizedString("wallet_create_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 無効なアドレスです
