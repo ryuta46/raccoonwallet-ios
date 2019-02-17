@@ -252,7 +252,7 @@
 "wallet_creation_type_import" = "インポート";
 
 "wallet_name_title" = "ようこそ、お客人";
-"wallet_name_message" = "ハロー。ウェルカム・トゥ・ラクーン。\n早速、君のウォレットを作っていこう。\nまず最初に、ウォレットにイケてる名前をつけてくれ。";
+"wallet_name_message" = "ウォレットの新規作成ですね！\nそれでは早速、あなたのウォレットを作っていきましょう。\nまず最初にウォレットに名前をつけてください。\n決まりはないので、お好きなもので大丈夫ですよ。";
 "wallet_name_input" = "一番いいウォレットネームを";
 "wallet_create_title" = "準備完了";
 

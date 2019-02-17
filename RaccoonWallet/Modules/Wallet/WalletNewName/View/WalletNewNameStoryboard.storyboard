@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,10 +43,11 @@
                                             <action selector="onEndedName:" destination="0N3-Wq-2vd" eventType="editingDidEndOnExit" id="duR-dp-48g"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xa-rg-ks5" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
-                                        <rect key="frame" x="128" y="290.5" width="64" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xa-rg-ks5" customClass="PrimaryRoundedButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                        <rect key="frame" x="115" y="290.5" width="90" height="36"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="64" id="htA-cL-Iih"/>
+                                            <constraint firstAttribute="height" constant="36" id="Bfd-oT-i5c"/>
+                                            <constraint firstAttribute="width" constant="90" id="htA-cL-Iih"/>
                                         </constraints>
                                         <state key="normal" title="OK"/>
                                         <connections>
@@ -84,7 +85,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0Q-iR-Zj6">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0Q-iR-Zj6" customClass="PrimaryTextButton" customModule="RaccoonWallet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="16" width="304" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Button"/>
@@ -122,6 +123,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heroimage_new_large" width="720" height="404"/>
+        <image name="heroimage_new_large" width="360" height="202"/>
     </resources>
 </document>
