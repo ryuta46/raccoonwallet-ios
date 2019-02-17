@@ -11,6 +11,7 @@ import UIKit
 class WalletNewCompletedViewController: BaseViewController {
     var presenter: WalletNewCompletedPresentation! { didSet { basePresenter = presenter } }
 
+    @IBOutlet weak var walletBar: WalletBar!
     @IBOutlet weak var message0: UILabel!
     @IBOutlet weak var addressHeadline: UILabel!
     @IBOutlet weak var address: UILabel!
@@ -19,7 +20,10 @@ class WalletNewCompletedViewController: BaseViewController {
     override func setup() {
         super.setup()
         hideBackButton()
+        walletBar.isHidden = true
+        walletBar.isUserInteractionEnabled = false
         addressHeadline.textColor = Theme.primary
+        addressHeadline.isHidden = true
     }
 
     @IBAction func onTouchedOk(_ sender: Any) {
@@ -31,6 +35,10 @@ extension WalletNewCompletedViewController: PinDialogMixinViewController {
 }
 
 extension WalletNewCompletedViewController: WalletNewCompletedView {
+    func showWalletName(name: String) {
+        walletBar.isHidden = false
+        walletBar.name.text = name
+    }
     func showAddress(address: String) {
         // Title, message and address appear only after address creation has succeeded.
         self.title = R.string.localizable.wallet_create_title()
@@ -39,7 +47,9 @@ extension WalletNewCompletedViewController: WalletNewCompletedView {
         self.message0.text = R.string.localizable.wallet_create_message_0()
         self.message1.text = R.string.localizable.wallet_create_message_1()
 
-        self.addressHeadline.text = "Your Address"
+        addressHeadline.isHidden = false
+        addressHeadline.text = R.string.localizable.wallet_create_address_headline()
+
         self.address.text = address.prettyAddress()
     }
 }

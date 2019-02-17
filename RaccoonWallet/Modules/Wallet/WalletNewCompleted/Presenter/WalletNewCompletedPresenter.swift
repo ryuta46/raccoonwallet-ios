@@ -42,6 +42,7 @@ extension WalletNewCompletedPresenter: WalletNewCompletedPresentation {
 
 extension WalletNewCompletedPresenter: WalletNewCompletedInteractorOutput {
     func walletCreated(wallet: Wallet) {
+        view?.showWalletName(name: wallet.name)
         view?.showAddress(address: wallet.address)
     }
 
