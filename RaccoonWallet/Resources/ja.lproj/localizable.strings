@@ -205,7 +205,7 @@
 
 "send_amount_with_xem" = "XEMを一緒に送る";
 
-"send_message_type_select_title" = "メッセージタイプの暗号化設定";
+"send_message_type_select_title" = "メッセージの暗号化設定";
 
 "send_message_plain_title" = "通常のメッセージ";
 "send_message_plain_description" = "通常のメッセージです。\n取引所への認証番号を入力する際は、必ずこちらで行いましょう。";
@@ -247,16 +247,22 @@
 
 "wallet_no_wallet_title" = "ウォレットがないみたい。";
 "wallet_no_wallet_message" = "上のボタンからウォレットを作成するか\nアカウントをリンクすると、ここに一覧で表示されるよ。";
-"wallet_name_title" = "ようこそ、お客人";
-"wallet_name_message" = "ハロー。ウェルカム・トゥ・ラクーン。\n早速、君のウォレットを作っていこう。\nまず最初に、ウォレットにイケてる名前をつけてくれ。";
+
+"wallet_creation_type_new" = "新しくウォレットを作る";
+"wallet_creation_type_import" = "インポート";
+
+"wallet_name_title" = "";
+"wallet_name_message" = "ウォレットの新規作成ですね！\nそれでは早速、あなたのウォレットを作っていきましょう。\nまず最初にウォレットに名前をつけてください。\n決まりはないので、お好きなもので大丈夫ですよ。";
 "wallet_name_input" = "一番いいウォレットネームを";
-"wallet_create_title" = "準備完了";
+"wallet_create_title" = "";
 
-"wallet_create_message_0" = "すばらしい！ウォレット作成完了です。\nあっという間。驚いた？\nとりあえず君のアドレスはこんな感じ。";
-"wallet_create_message_1" = "…上に出てきたナンバーは何かって？\nウォレットのメンテンスしたいときは押すが良い。\nこの画面では動作しないからあとで試してみてくれ。";
+"wallet_create_message_0" = "おめでとうございます！\nウォレットの作成が完了しました。\nあなたのアドレスは以下になります。";
+"wallet_create_message_1" = "ウォレットのメンテナンスをしたいときは、上に出てきたバーのボタンを押してみてください。\nこの画面では動作しないからあとで試してみてくださいね。";
 
-"wallet_end_title" = "お疲れ様！レッスンはどう？";
-"wallet_end_message" = "以上でウォレットの新規作成作業は完了です。\nこのままウォレットのバックアップなどを行いたい人はレッスンに移動してね。\n\nとりあえず今のままで使い始めたい人は\nHOME からスキップもできるよ。";
+"wallet_create_address_headline" = "今回作成されたウォレットアドレス";
+
+"wallet_end_title" = "";
+"wallet_end_message" = "以上でウォレットの新規作成作業は完了です。\nこのままウォレットのバックアップなどを行いたい人はレッスンに移動してくださいね。\n\nとりあえず今のままで使い始めたい人は\n「HOME」からスキップもできます。";
 
 "wallet_import_title" = "秘密鍵のインポート";
 "wallet_import_message" = "開けゴマ！\n1. NEMの秘密鍵を入力する。\nもしくはQRコードで読み取りましょう。\n2. あなたのNEMアカウントをラクーンにリンクします！";
@@ -294,11 +300,11 @@
 "wallet_rename_title" = "ウォレット名変更";
 "wallet_rename_hint" = "新しいウォレット名";
 
-"wallet_go_home_caution1_title" = "おっと！";
-"wallet_go_home_caution1_message" = "ほんとにHOMEに行くのかい？\nセキュリティはちゃんとしといたほうがいいよ。";
+"wallet_go_home_caution1_title" = "セキュリティ対策をスキップしますか？";
+"wallet_go_home_caution1_message" = "PINコードの設定や、秘密鍵のバックアップなどを行うセキュリティ対策をスキップしようとしています。\nセキュリティ対策はしっかりとしておくことをオススメしますが、それでもHOMEに行きますか？";
 
-"wallet_go_home_caution2_title" = "ほんとに？";
-"wallet_go_home_caution2_message" = "ほんとにほんとだね？止めはしないよ。\nもしウォレットのバックアップやPINコードを設定したくなったら、ウォレットバーやメニューのアプリ設定からいつでも行えるよ。それにレッスンもアプリ設定のセキュリティの項目から受講できるからね。";
+"wallet_go_home_caution2_title" = "了解しました";
+"wallet_go_home_caution2_message" = "もしウォレットのバックアップやPINコードを設定したくなったら、ウォレットバーやメニューのアプリ設定からいつでも行えます。\nそれにセキュリティレッスンもアプリ設定のセキュリティの項目から受講できるので参照してみてくださいね。";
 
 "wallet_import_nano_password_title" = "パスワード入力";
 "wallet_import_nano_password_headline" = "NanoWalletのパスワードを入力";

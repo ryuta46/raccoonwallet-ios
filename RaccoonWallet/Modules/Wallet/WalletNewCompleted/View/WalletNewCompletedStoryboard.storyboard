@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,6 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1R-nK-vAq" customClass="WalletBar" customModule="RaccoonWallet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="HMl-ee-dlU"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TL0-HP-Mey">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
@@ -71,10 +77,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fe-gM-bhz">
                                 <rect key="frame" x="0.0" y="603" width="375" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4P-gD-4zq" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
-                                        <rect key="frame" x="155.5" y="17" width="64" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4P-gD-4zq" customClass="PrimaryRoundedButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                        <rect key="frame" x="139.5" y="14" width="96" height="36"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="64" id="lkW-f1-fJR"/>
+                                            <constraint firstAttribute="width" constant="96" id="4YE-Ed-b0n"/>
+                                            <constraint firstAttribute="height" constant="36" id="tgY-zg-iHy"/>
                                         </constraints>
                                         <state key="normal" title="OK"/>
                                         <connections>
@@ -94,11 +101,14 @@
                         <constraints>
                             <constraint firstItem="xJa-3o-AcC" firstAttribute="trailing" secondItem="TL0-HP-Mey" secondAttribute="trailing" id="6QY-bZ-ltY"/>
                             <constraint firstItem="2fe-gM-bhz" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" id="Ghc-SD-ACb"/>
+                            <constraint firstItem="xJa-3o-AcC" firstAttribute="trailing" secondItem="k1R-nK-vAq" secondAttribute="trailing" id="H3s-AU-VKz"/>
+                            <constraint firstItem="k1R-nK-vAq" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" id="INt-5x-EPI"/>
                             <constraint firstItem="TL0-HP-Mey" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" id="LfX-29-TFt"/>
                             <constraint firstItem="xJa-3o-AcC" firstAttribute="bottom" secondItem="TL0-HP-Mey" secondAttribute="bottom" id="VNi-8P-IpU"/>
                             <constraint firstItem="TL0-HP-Mey" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" id="ZBm-gi-imf"/>
                             <constraint firstItem="xJa-3o-AcC" firstAttribute="bottom" secondItem="2fe-gM-bhz" secondAttribute="bottom" id="bCL-cj-tOs"/>
                             <constraint firstItem="2fe-gM-bhz" firstAttribute="trailing" secondItem="xJa-3o-AcC" secondAttribute="trailing" id="gTz-hZ-ODO"/>
+                            <constraint firstItem="k1R-nK-vAq" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" id="y4O-ml-rnN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xJa-3o-AcC"/>
                     </view>
@@ -107,6 +117,7 @@
                         <outlet property="addressHeadline" destination="IfK-z4-JWu" id="FVr-rU-iXa"/>
                         <outlet property="message0" destination="047-Rg-xY6" id="BfS-gb-OGk"/>
                         <outlet property="message1" destination="qEY-eC-Tj5" id="aii-MG-oHk"/>
+                        <outlet property="walletBar" destination="k1R-nK-vAq" id="LlP-3O-XD8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htF-N7-RCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -115,6 +126,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heroimage_new_large" width="720" height="404"/>
+        <image name="heroimage_new_large" width="360" height="202"/>
     </resources>
 </document>

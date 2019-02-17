@@ -11,6 +11,7 @@ import UIKit
 protocol WalletNewCompletedView: BaseView, PinDialogMixinView {
     var presenter: WalletNewCompletedPresentation! { get set }
 
+    func showWalletName(name: String)
     func showAddress(address: String)
 }
 

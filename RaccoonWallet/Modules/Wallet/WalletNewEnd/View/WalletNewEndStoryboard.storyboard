@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,8 +27,8 @@
                                             <constraint firstAttribute="width" secondItem="nRB-wP-1KR" secondAttribute="height" multiplier="720:404" id="JHj-yj-HSG"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UKr-d3-3YY">
-                                        <rect key="frame" x="16" y="226.5" width="343" height="109"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="UKr-d3-3YY">
+                                        <rect key="frame" x="16" y="226.5" width="343" height="137"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emM-oz-PVL">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="17"/>
@@ -36,15 +36,23 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzA-Y2-lvl" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
-                                                <rect key="frame" x="95" y="33" width="153" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzA-Y2-lvl" customClass="PrimaryRoundedButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                                <rect key="frame" x="75.5" y="41" width="192" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="9bk-yi-bl4"/>
+                                                    <constraint firstAttribute="width" constant="192" id="kGi-7m-V2f"/>
+                                                </constraints>
                                                 <state key="normal" title="セキュリティレッスン"/>
                                                 <connections>
                                                     <action selector="onTouchedLesson:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="emW-Fs-uva"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzA-Hk-N0e" customClass="SecondaryButton" customModule="RaccoonWallet" customModuleProvider="target">
-                                                <rect key="frame" x="149.5" y="79" width="44" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzA-Hk-N0e" customClass="PrimaryGhostButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                                <rect key="frame" x="126.5" y="101" width="90" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="aEq-Ku-LXJ"/>
+                                                    <constraint firstAttribute="height" constant="36" id="wem-Ut-44E"/>
+                                                </constraints>
                                                 <state key="normal" title="HOME"/>
                                                 <connections>
                                                     <action selector="onTouchedHome:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="1xs-kF-eKM"/>
@@ -90,6 +98,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heroimage_new_large" width="720" height="404"/>
+        <image name="heroimage_new_large" width="360" height="202"/>
     </resources>
 </document>

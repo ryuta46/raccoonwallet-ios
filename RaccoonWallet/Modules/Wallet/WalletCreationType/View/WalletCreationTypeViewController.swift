@@ -13,9 +13,16 @@ class WalletCreationTypeViewController: BaseViewController {
 
     @IBOutlet weak var newCard: CardView!
     @IBOutlet weak var loginCard: CardView!
+    @IBOutlet weak var newButton: PrimaryRoundedButton!
+    @IBOutlet weak var importButton: PrimaryGhostButton!
     override func setup() {
         super.setup()
         title = R.string.localizable.wallet_select()
+
+        view.backgroundColor = Theme.baseBackground
+
+        newButton.setTitle(R.string.localizable.wallet_creation_type_new(), for: .normal)
+        importButton.setTitle(R.string.localizable.wallet_creation_type_import(), for: .normal)
         
         // Do not display ripple effect
         newCard.isInteractable = false
