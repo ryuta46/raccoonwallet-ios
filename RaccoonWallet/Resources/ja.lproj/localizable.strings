@@ -205,7 +205,7 @@
 
 "send_amount_with_xem" = "XEMを一緒に送る";
 
-"send_message_type_select_title" = "メッセージタイプの暗号化設定";
+"send_message_type_select_title" = "メッセージの暗号化設定";
 
 "send_message_plain_title" = "通常のメッセージ";
 "send_message_plain_description" = "通常のメッセージです。\n取引所への認証番号を入力する際は、必ずこちらで行いましょう。";
@@ -247,6 +247,10 @@
 
 "wallet_no_wallet_title" = "ウォレットがないみたい。";
 "wallet_no_wallet_message" = "上のボタンからウォレットを作成するか\nアカウントをリンクすると、ここに一覧で表示されるよ。";
+
+"wallet_creation_type_new" = "新しくウォレットを作る";
+"wallet_creation_type_import" = "インポート";
+
 "wallet_name_title" = "ようこそ、お客人";
 "wallet_name_message" = "ハロー。ウェルカム・トゥ・ラクーン。\n早速、君のウォレットを作っていこう。\nまず最初に、ウォレットにイケてる名前をつけてくれ。";
 "wallet_name_input" = "一番いいウォレットネームを";

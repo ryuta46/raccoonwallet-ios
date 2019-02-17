@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,7 +30,7 @@
                                                     <constraint firstAttribute="width" secondItem="mhC-1X-gCs" secondAttribute="height" multiplier="656:308" id="VJI-Zl-u4h"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KB-S3-BkK" customClass="PrimaryButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KB-S3-BkK" customClass="PrimaryRoundedButton" customModule="RaccoonWallet" customModuleProvider="target">
                                                 <rect key="frame" x="64" y="151" width="160" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="kVK-JU-db1"/>
@@ -61,7 +61,7 @@
                                                     <constraint firstAttribute="width" secondItem="nim-59-vrj" secondAttribute="height" multiplier="656:308" id="GQk-S1-XiW"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtW-LY-62m" customClass="BlueButton" customModule="RaccoonWallet" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtW-LY-62m" customClass="PrimaryGhostButton" customModule="RaccoonWallet" customModuleProvider="target">
                                                 <rect key="frame" x="64" y="151.5" width="160" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="ASI-Au-vBP"/>
@@ -107,7 +107,9 @@
                         <viewLayoutGuide key="safeArea" id="xJa-3o-AcC"/>
                     </view>
                     <connections>
+                        <outlet property="importButton" destination="GtW-LY-62m" id="OvV-BP-F6n"/>
                         <outlet property="loginCard" destination="u5V-JF-nQw" id="qgU-lr-0oD"/>
+                        <outlet property="newButton" destination="8KB-S3-BkK" id="Njw-Cn-EKL"/>
                         <outlet property="newCard" destination="3UE-Qw-Rj4" id="daB-Iq-qPU"/>
                     </connections>
                 </viewController>
@@ -117,7 +119,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heroimage_login_card" width="656" height="308"/>
-        <image name="heroimage_new_card" width="656" height="308"/>
+        <image name="heroimage_login_card" width="328" height="154"/>
+        <image name="heroimage_new_card" width="328" height="154"/>
     </resources>
 </document>

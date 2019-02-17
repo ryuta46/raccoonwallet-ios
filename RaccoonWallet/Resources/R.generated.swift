@@ -1353,7 +1353,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 219 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 221 localization keys.
     struct localizable {
       /// en translation: 
       /// 
@@ -1683,6 +1683,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let common_pin_registration_message_0 = Rswift.StringResource(key: "common_pin_registration_message_0", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: インポート
+      /// 
+      /// Locales: en, ja
+      static let wallet_creation_type_import = Rswift.StringResource(key: "wallet_creation_type_import", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: ウォレットがないみたい。
       /// 
       /// Locales: en, ja
@@ -1859,6 +1863,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let common_error_decode_message = Rswift.StringResource(key: "common_error_decode_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: メッセージの暗号化設定
+      /// 
+      /// Locales: en, ja
+      static let send_message_type_select_title = Rswift.StringResource(key: "send_message_type_select_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: メッセージは暗号化されています
       /// 
       /// Locales: en, ja
@@ -1875,10 +1883,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let send_mode_select_message = Rswift.StringResource(key: "send_mode_select_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: メッセージタイプの暗号化設定
-      /// 
-      /// Locales: en, ja
-      static let send_message_type_select_title = Rswift.StringResource(key: "send_message_type_select_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: モザイクなど存在しない。
       /// 
       /// Locales: en, ja
@@ -2031,6 +2035,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let wallet_rename_hint = Rswift.StringResource(key: "wallet_rename_hint", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 新しくウォレットを作る
+      /// 
+      /// Locales: en, ja
+      static let wallet_creation_type_new = Rswift.StringResource(key: "wallet_creation_type_new", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 普通の送金でいいよ
       /// 
       /// Locales: en
@@ -2806,6 +2814,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("common_pin_registration_message_0", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: インポート
+      /// 
+      /// Locales: en, ja
+      static func wallet_creation_type_import(_: Void = ()) -> String {
+        return NSLocalizedString("wallet_creation_type_import", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: ウォレットがないみたい。
       /// 
       /// Locales: en, ja
@@ -3114,6 +3129,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("common_error_decode_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: メッセージの暗号化設定
+      /// 
+      /// Locales: en, ja
+      static func send_message_type_select_title(_: Void = ()) -> String {
+        return NSLocalizedString("send_message_type_select_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: メッセージは暗号化されています
       /// 
       /// Locales: en, ja
@@ -3140,13 +3162,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func send_mode_select_message(_: Void = ()) -> String {
         return NSLocalizedString("send_mode_select_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: メッセージタイプの暗号化設定
-      /// 
-      /// Locales: en, ja
-      static func send_message_type_select_title(_: Void = ()) -> String {
-        return NSLocalizedString("send_message_type_select_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: モザイクなど存在しない。
@@ -3413,6 +3428,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func wallet_rename_hint(_: Void = ()) -> String {
         return NSLocalizedString("wallet_rename_hint", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 新しくウォレットを作る
+      /// 
+      /// Locales: en, ja
+      static func wallet_creation_type_new(_: Void = ()) -> String {
+        return NSLocalizedString("wallet_creation_type_new", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 普通の送金でいいよ
