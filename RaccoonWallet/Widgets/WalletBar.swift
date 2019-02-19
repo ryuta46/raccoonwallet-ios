@@ -21,7 +21,7 @@ class WalletBar: UIView {
             if isOpened {
                 icon.setImage(R.image.icon_wallet_back(), for: .normal)
             } else {
-                icon.setImage(R.image.icon_wallet(), for: .normal)
+                icon.setImage(R.image.icon_wallet_16x16(), for: .normal)
             }
         }
     }

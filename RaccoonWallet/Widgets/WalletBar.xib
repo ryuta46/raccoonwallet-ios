@@ -42,7 +42,7 @@
                         <constraint firstAttribute="height" constant="28" id="t7w-Pg-s84"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    <state key="normal" image="icon_wallet"/>
+                    <state key="normal" image="icon_wallet_16x16"/>
                     <connections>
                         <action selector="onTouchedWalletIcon:" destination="-1" eventType="touchUpInside" id="G8v-ZK-ysW"/>
                     </connections>
@@ -63,7 +63,7 @@
         </view>
     </objects>
     <resources>
-        <image name="icon_wallet" width="32" height="32"/>
+        <image name="icon_wallet_16x16" width="15" height="14"/>
         <image name="image_walletbar" width="556" height="116"/>
     </resources>
 </document>
