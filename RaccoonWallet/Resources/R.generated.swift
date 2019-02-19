@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 114 images.
+  /// This `R.image` struct is generated, and contains static references to 92 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -78,22 +78,10 @@ struct R: Rswift.Validatable {
     static let heroimage_new_card = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_new_card")
     /// Image `heroimage_new_large`.
     static let heroimage_new_large = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_new_large")
-    /// Image `heroimage_qr_labo_small`.
-    static let heroimage_qr_labo_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_qr_labo_small")
-    /// Image `heroimage_seclesson_large`.
-    static let heroimage_seclesson_large = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_seclesson_large")
-    /// Image `heroimage_seclesson_small`.
-    static let heroimage_seclesson_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_seclesson_small")
     /// Image `heroimage_send_large`.
     static let heroimage_send_large = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_send_large")
-    /// Image `heroimage_send_small`.
-    static let heroimage_send_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_send_small")
     /// Image `heroimage_setting_large`.
     static let heroimage_setting_large = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_setting_large")
-    /// Image `heroimage_transaction_small`.
-    static let heroimage_transaction_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_transaction_small")
-    /// Image `heroimage_wallet_large2`.
-    static let heroimage_wallet_large2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_wallet_large2")
     /// Image `heroimage_wallet_large`.
     static let heroimage_wallet_large = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_wallet_large")
     /// Image `heroimage_wallet_small`.
@@ -104,20 +92,14 @@ struct R: Rswift.Validatable {
     static let iconRadio_off_light = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon-radio_off_light")
     /// Image `icon-radio_on_light`.
     static let iconRadio_on_light = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon-radio_on_light")
-    /// Image `icon_addressbook`.
-    static let icon_addressbook = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_addressbook")
     /// Image `icon_back`.
     static let icon_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_back")
     /// Image `icon_balance`.
     static let icon_balance = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_balance")
-    /// Image `icon_box_next`.
-    static let icon_box_next = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_box_next")
     /// Image `icon_caution`.
     static let icon_caution = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_caution")
     /// Image `icon_check_gray_on`.
     static let icon_check_gray_on = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_check_gray_on")
-    /// Image `icon_check_gray`.
-    static let icon_check_gray = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_check_gray")
     /// Image `icon_check_green`.
     static let icon_check_green = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_check_green")
     /// Image `icon_clipboard`.
@@ -128,38 +110,18 @@ struct R: Rswift.Validatable {
     static let icon_close = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_close")
     /// Image `icon_dentaku`.
     static let icon_dentaku = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_dentaku")
-    /// Image `icon_dialog_close`.
-    static let icon_dialog_close = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_dialog_close")
     /// Image `icon_dialog_error`.
     static let icon_dialog_error = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_dialog_error")
     /// Image `icon_dialog_fingerprint`.
     static let icon_dialog_fingerprint = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_dialog_fingerprint")
     /// Image `icon_dialog_success`.
     static let icon_dialog_success = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_dialog_success")
-    /// Image `icon_fingerprint_small`.
-    static let icon_fingerprint_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_fingerprint_small")
     /// Image `icon_harvest_small`.
     static let icon_harvest_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_harvest_small")
     /// Image `icon_home_harvest`.
     static let icon_home_harvest = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_home_harvest")
-    /// Image `icon_home_home_green`.
-    static let icon_home_home_green = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_home_home_green")
-    /// Image `icon_home_qr_labo_green`.
-    static let icon_home_qr_labo_green = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_home_qr_labo_green")
-    /// Image `icon_home_receive_green`.
-    static let icon_home_receive_green = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_home_receive_green")
-    /// Image `icon_home_scan_gray`.
-    static let icon_home_scan_gray = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_home_scan_gray")
-    /// Image `icon_home_scan_green`.
-    static let icon_home_scan_green = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_home_scan_green")
-    /// Image `icon_home_send_green`.
-    static let icon_home_send_green = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_home_send_green")
     /// Image `icon_home_transaction`.
     static let icon_home_transaction = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_home_transaction")
-    /// Image `icon_link`.
-    static let icon_link = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_link")
-    /// Image `icon_list_next`.
-    static let icon_list_next = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_list_next")
     /// Image `icon_list`.
     static let icon_list = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_list")
     /// Image `icon_menu_about`.
@@ -168,8 +130,6 @@ struct R: Rswift.Validatable {
     static let icon_menu_addressbook = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu_addressbook")
     /// Image `icon_menu_donate`.
     static let icon_menu_donate = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu_donate")
-    /// Image `icon_menu_faucet`.
-    static let icon_menu_faucet = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu_faucet")
     /// Image `icon_menu_help`.
     static let icon_menu_help = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu_help")
     /// Image `icon_menu_home`.
@@ -180,10 +140,6 @@ struct R: Rswift.Validatable {
     static let icon_menu_setting = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu_setting")
     /// Image `icon_menu`.
     static let icon_menu = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu")
-    /// Image `icon_message_encryption`.
-    static let icon_message_encryption = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_message_encryption")
-    /// Image `icon_message_standard`.
-    static let icon_message_standard = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_message_standard")
     /// Image `icon_multisignature_green`.
     static let icon_multisignature_green = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_multisignature_green")
     /// Image `icon_multisignature_red`.
@@ -349,29 +305,9 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.heroimage_new_large, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "heroimage_qr_labo_small", bundle: ..., traitCollection: ...)`
-    static func heroimage_qr_labo_small(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.heroimage_qr_labo_small, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "heroimage_seclesson_large", bundle: ..., traitCollection: ...)`
-    static func heroimage_seclesson_large(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.heroimage_seclesson_large, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "heroimage_seclesson_small", bundle: ..., traitCollection: ...)`
-    static func heroimage_seclesson_small(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.heroimage_seclesson_small, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "heroimage_send_large", bundle: ..., traitCollection: ...)`
     static func heroimage_send_large(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.heroimage_send_large, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "heroimage_send_small", bundle: ..., traitCollection: ...)`
-    static func heroimage_send_small(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.heroimage_send_small, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "heroimage_setting_large", bundle: ..., traitCollection: ...)`
@@ -379,19 +315,9 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.heroimage_setting_large, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "heroimage_transaction_small", bundle: ..., traitCollection: ...)`
-    static func heroimage_transaction_small(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.heroimage_transaction_small, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "heroimage_wallet_large", bundle: ..., traitCollection: ...)`
     static func heroimage_wallet_large(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.heroimage_wallet_large, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "heroimage_wallet_large2", bundle: ..., traitCollection: ...)`
-    static func heroimage_wallet_large2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.heroimage_wallet_large2, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "heroimage_wallet_small", bundle: ..., traitCollection: ...)`
@@ -414,11 +340,6 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.iconRadio_on_light, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "icon_addressbook", bundle: ..., traitCollection: ...)`
-    static func icon_addressbook(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_addressbook, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "icon_back", bundle: ..., traitCollection: ...)`
     static func icon_back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_back, compatibleWith: traitCollection)
@@ -429,19 +350,9 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_balance, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "icon_box_next", bundle: ..., traitCollection: ...)`
-    static func icon_box_next(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_box_next, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "icon_caution", bundle: ..., traitCollection: ...)`
     static func icon_caution(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_caution, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "icon_check_gray", bundle: ..., traitCollection: ...)`
-    static func icon_check_gray(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_check_gray, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_check_gray_on", bundle: ..., traitCollection: ...)`
@@ -474,11 +385,6 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_dentaku, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "icon_dialog_close", bundle: ..., traitCollection: ...)`
-    static func icon_dialog_close(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_dialog_close, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "icon_dialog_error", bundle: ..., traitCollection: ...)`
     static func icon_dialog_error(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_dialog_error, compatibleWith: traitCollection)
@@ -494,11 +400,6 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_dialog_success, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "icon_fingerprint_small", bundle: ..., traitCollection: ...)`
-    static func icon_fingerprint_small(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_fingerprint_small, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "icon_harvest_small", bundle: ..., traitCollection: ...)`
     static func icon_harvest_small(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_harvest_small, compatibleWith: traitCollection)
@@ -509,54 +410,14 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_home_harvest, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "icon_home_home_green", bundle: ..., traitCollection: ...)`
-    static func icon_home_home_green(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_home_home_green, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "icon_home_qr_labo_green", bundle: ..., traitCollection: ...)`
-    static func icon_home_qr_labo_green(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_home_qr_labo_green, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "icon_home_receive_green", bundle: ..., traitCollection: ...)`
-    static func icon_home_receive_green(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_home_receive_green, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "icon_home_scan_gray", bundle: ..., traitCollection: ...)`
-    static func icon_home_scan_gray(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_home_scan_gray, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "icon_home_scan_green", bundle: ..., traitCollection: ...)`
-    static func icon_home_scan_green(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_home_scan_green, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "icon_home_send_green", bundle: ..., traitCollection: ...)`
-    static func icon_home_send_green(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_home_send_green, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "icon_home_transaction", bundle: ..., traitCollection: ...)`
     static func icon_home_transaction(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_home_transaction, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "icon_link", bundle: ..., traitCollection: ...)`
-    static func icon_link(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_link, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "icon_list", bundle: ..., traitCollection: ...)`
     static func icon_list(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_list, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "icon_list_next", bundle: ..., traitCollection: ...)`
-    static func icon_list_next(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_list_next, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_menu", bundle: ..., traitCollection: ...)`
@@ -579,11 +440,6 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_menu_donate, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "icon_menu_faucet", bundle: ..., traitCollection: ...)`
-    static func icon_menu_faucet(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_menu_faucet, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "icon_menu_help", bundle: ..., traitCollection: ...)`
     static func icon_menu_help(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_menu_help, compatibleWith: traitCollection)
@@ -602,16 +458,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_menu_setting", bundle: ..., traitCollection: ...)`
     static func icon_menu_setting(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_menu_setting, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "icon_message_encryption", bundle: ..., traitCollection: ...)`
-    static func icon_message_encryption(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_message_encryption, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "icon_message_standard", bundle: ..., traitCollection: ...)`
-    static func icon_message_standard(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_message_standard, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_multisignature_green", bundle: ..., traitCollection: ...)`
@@ -4711,7 +4557,6 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_send_small") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_send_small' is used in storyboard 'WalletAddressStoryboard', but couldn't be loaded.") }
         if _R.storyboard.walletAddressStoryboard().walletAddressView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'walletAddressView' could not be loaded from storyboard 'WalletAddressStoryboard' as 'WalletAddressViewController'.") }
       }
       
@@ -4800,7 +4645,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_wallet_large2") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_wallet_large2' is used in storyboard 'WalletDetailStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_wallet_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_wallet_large' is used in storyboard 'WalletDetailStoryboard', but couldn't be loaded.") }
         if _R.storyboard.walletDetailStoryboard().walletDetailView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'walletDetailView' could not be loaded from storyboard 'WalletDetailStoryboard' as 'WalletDetailViewController'.") }
       }
       
@@ -4938,7 +4783,7 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "image_walletbar") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_walletbar' is used in storyboard 'WalletRenameStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "heroimage_wallet_large2") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_wallet_large2' is used in storyboard 'WalletRenameStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_wallet_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_wallet_large' is used in storyboard 'WalletRenameStoryboard', but couldn't be loaded.") }
         if _R.storyboard.walletRenameStoryboard().walletRenameView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'walletRenameView' could not be loaded from storyboard 'WalletRenameStoryboard' as 'WalletRenameViewController'.") }
       }
       
@@ -4977,7 +4822,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heroimage_wallet_large2") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_wallet_large2' is used in storyboard 'WalletSettingStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heroimage_wallet_large") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heroimage_wallet_large' is used in storyboard 'WalletSettingStoryboard', but couldn't be loaded.") }
         if _R.storyboard.walletSettingStoryboard().walletSettingView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'walletSettingView' could not be loaded from storyboard 'WalletSettingStoryboard' as 'WalletSettingViewController'.") }
       }
       

@@ -36,6 +36,7 @@ class WalletSettingViewController: BaseViewController {
         super.setup()
 
         title = R.string.localizable.wallet_settings_title()
+        view.backgroundColor = Theme.baseBackground
 
         general.text = R.string.localizable.wallet_settings_general()
 

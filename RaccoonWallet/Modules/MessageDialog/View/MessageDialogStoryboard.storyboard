@@ -93,8 +93,9 @@
                                                 <rect key="frame" x="123.5" y="203" width="96" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="0XP-s1-cbf"/>
-                                                    <constraint firstAttribute="width" constant="96" id="9lc-mf-G4W"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="9lc-mf-G4W"/>
                                                 </constraints>
+                                                <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                                 <state key="normal" title="OK"/>
                                                 <connections>
                                                     <action selector="onTouchedOk:" destination="0N3-Wq-2vd" eventType="touchUpInside" id="GDR-J3-VKa"/>

@@ -31,6 +31,8 @@ class WalletDetailViewController : BaseViewController {
         hideBackTitle()
         general.text = R.string.localizable.wallet_settings_general()
 
+        view.backgroundColor = Theme.baseBackground
+
         loading.setup()
         fullScreenLoading = createFullScreenLoadingView()
 
