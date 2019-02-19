@@ -4869,7 +4869,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "top_icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'top_icon' is used in storyboard 'WalletImportNanoPasswordStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "logo_raccoon_color") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo_raccoon_color' is used in storyboard 'WalletImportNanoPasswordStoryboard', but couldn't be loaded.") }
         if _R.storyboard.walletImportNanoPasswordStoryboard().walletImportNanoPasswordView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'walletImportNanoPasswordView' could not be loaded from storyboard 'WalletImportNanoPasswordStoryboard' as 'WalletImportNanoPasswordViewController'.") }
       }
       
