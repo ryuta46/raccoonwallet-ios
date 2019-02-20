@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 83 images.
+  /// This `R.image` struct is generated, and contains static references to 85 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -86,8 +86,6 @@ struct R: Rswift.Validatable {
     static let heroimage_wallet_large = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_wallet_large")
     /// Image `heroimage_wallet_small`.
     static let heroimage_wallet_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "heroimage_wallet_small")
-    /// Image `ic_background`.
-    static let ic_background = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_background")
     /// Image `icon-radio_off_light`.
     static let iconRadio_off_light = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon-radio_off_light")
     /// Image `icon-radio_on_light`.
@@ -206,6 +204,8 @@ struct R: Rswift.Validatable {
     static let image_walletbar = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_walletbar")
     /// Image `image_www_human`.
     static let image_www_human = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_www_human")
+    /// Image `launcher_label`.
+    static let launcher_label = Rswift.ImageResource(bundle: R.hostingBundle, name: "launcher_label")
     /// Image `logo_raccoon_color`.
     static let logo_raccoon_color = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_raccoon_color")
     /// Image `logo_raccoon_watermark`.
@@ -214,8 +214,12 @@ struct R: Rswift.Validatable {
     static let pin_dialog_delete = Rswift.ImageResource(bundle: R.hostingBundle, name: "pin_dialog_delete")
     /// Image `top_icon`.
     static let top_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "top_icon")
+    /// Image `top_logo_type`.
+    static let top_logo_type = Rswift.ImageResource(bundle: R.hostingBundle, name: "top_logo_type")
     /// Image `top_logo`.
     static let top_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "top_logo")
+    /// Image `top_logotype`.
+    static let top_logotype = Rswift.ImageResource(bundle: R.hostingBundle, name: "top_logotype")
     
     /// `UIImage(named: "about_logo", bundle: ..., traitCollection: ...)`
     static func about_logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -305,11 +309,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "heroimage_wallet_small", bundle: ..., traitCollection: ...)`
     static func heroimage_wallet_small(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.heroimage_wallet_small, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "ic_background", bundle: ..., traitCollection: ...)`
-    static func ic_background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ic_background, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon-radio_off_light", bundle: ..., traitCollection: ...)`
@@ -607,6 +606,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.image_www_human, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "launcher_label", bundle: ..., traitCollection: ...)`
+    static func launcher_label(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.launcher_label, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "logo_raccoon_color", bundle: ..., traitCollection: ...)`
     static func logo_raccoon_color(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.logo_raccoon_color, compatibleWith: traitCollection)
@@ -630,6 +634,16 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "top_logo", bundle: ..., traitCollection: ...)`
     static func top_logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.top_logo, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "top_logo_type", bundle: ..., traitCollection: ...)`
+    static func top_logo_type(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.top_logo_type, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "top_logotype", bundle: ..., traitCollection: ...)`
+    static func top_logotype(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.top_logotype, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -3920,9 +3934,8 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
       
       static func validate() throws {
-        if UIKit.UIImage(named: "top_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'top_logo' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "ic_background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_background' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "top_icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'top_icon' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "top_logo_type") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'top_logo_type' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "logo_raccoon_color") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo_raccoon_color' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
