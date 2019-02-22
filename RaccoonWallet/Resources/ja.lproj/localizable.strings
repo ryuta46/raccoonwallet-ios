@@ -6,10 +6,10 @@
   Copyright © 2018年 T TECH, LIMITED LIABILITY CO. All rights reserved.
 */
 
-"common_app_title" = "RaccoonWallet";
+"common_app_title" = "Raccoon";
 "common_done" = "完了";
 "common_success" = "SUCCESS";
-"common_coming_soon" = "カミングスーン";
+"common_coming_soon" = "Coming Soon!";
 "common_privacy_policy_caution" = "アプリの利用を開始する前に、ご確認ください。";
 "common_privacy_policy" = "利用規約とプライバシーポリシー";
 "common_security_lesson" = "セキュリティレッスン";
@@ -26,7 +26,7 @@
 "common_fee" = "手数料";
 "common_amount" = "金額";
 "common_balance" = "残高";
-"common_invalid_address" = "無効なアドレスです";
+"common_invalid_address" = "有効なアドレスではありません";
 "common_message" = "メッセージ";
 "common_message_input" = "メッセージを入力";
 
@@ -60,7 +60,7 @@
 
 "common_invalid_password" = "パスワードが一致しません";
 
-"common_error_network" = "通信エラー";
+"common_error_network" = "Network Error";
 
 "common_error_pin_not_set" = "PINの設定がまだのようですね。先にPINの設定をお願いできますか？";
 "common_error_account_repair" = "アカウント情報の復元に失敗しました。";
@@ -89,24 +89,32 @@
 "about_open_source" = "オープンソースライセンス";
 "about_review" = "レビューを書く";
 
-"create_wallet_tutorial_title" = "Welcome to Raccoon Wallet";
+"create_wallet_tutorial_title" = "ようこそ！";
 "create_wallet_tutorial_message" = "改めまして、こんにちは。\nラクーンへようこそ。\n\nさてこれからあなたがラクーンを始めるにあたって、まずはウォレットの準備をお願いしたいと思います。\n次の画面で新しくウォレットを作るか、それともすでにブロックチェーンに登録済みのアカウントでログインするかを選んでいただけますか？";
 
-"donation_title" = "おや?寄付してくれるのかい!?";
-"donation_detail_title" = "開発の励みになるよ〜";
+"donation_title" = "開発者一覧";
+"donation_detail_title" = "プロフィール";
 
 "donation_android_engineer_name" = "Android Developer";
 "donation_android_engineer_role" = "エンジニア";
-"donation_android_engineer_detail" = "God of Raccoon。創造主でエンジニア。\nすべてはココからはじまった。彼らがいなかったらラクーンは存在していない。\nRaccoonのAndroidエンジニアは二人。@YukiYamadaJPと@Riberd_Puzzle1だ。\n\n・リードエンジニア / コア開発者\n・ベースアプリ（NEM総合アプリ） 開発\n・Android版アプリ開発";
+"donation_android_engineer_detail" = "Androidエンジニア\n@YukiYamadaJP\n@Riberd_Puzzle1\n\n・Android版アプリ開発";
+
+"donation_yuki_name" = "Yuki";
+"donation_yuki_role" = "エンジニア";
+"donation_yuki_detail" = "エンジニア\n・ベースアプリ開発\n・Android版アプリ開発";
+
+"donation_soma_name" = "Soma";
+"donation_soma_role" = "エンジニア";
+"donation_soma_detail" = "エンジニア\n・Android版アプリ開発";
+
 
 "donation_designer_name" = "Rhime";
 "donation_designer_role" = "UIデザイナー";
-
-"donation_designer_detail" = "Raccoonの名付け親。デザイナー。\nこのアプリふざけてんなぁと思ったら、この人のせい。\nラクーンにおけるデザインの大体は、この人が作った。\n使いやすいアプリの構造を考えたりする情報アーキテクチャも兼任した。\n\n・総合コンテンツデザイナー\n・Android / iOSアプリのIA/UI/UXデザイン\n・ビジュアルデザイン/ブランディング（ロゴ・サイト）";
+"donation_designer_detail" = "デザイナー\n・Android / iOSアプリのIA/UI/UXデザイン\n・ビジュアルデザイン/ブランディング";
 
 "donation_ios_engineer_name" = "Ryuta";
 "donation_ios_engineer_role" = "iOSエンジニア";
-"donation_ios_engineer_detail" = "Raccoonの命綱。iOSエンジニア。最強の後衛。\n将棋で例えるなら飛車。\nラクーンを林檎の楽園へといざなう。\n\n・Android→iOS版アプリ移植・開発主任\n・nem-kotlinの創造主。";
+"donation_ios_engineer_detail" = "エンジニア\n・iOS版開発主任\n・PWA(Progressive Web Apps)開発";
 
 "first_tutorial_button" = "はじめる";
 "first_tutorial_title1" = "はじめまして";
@@ -117,10 +125,10 @@
 "first_tutorial_message3" = "自由と共創の新経済が待っています。";
 
 "gallery_no_mosaic_title" = "モザイクがありません";
-"gallery_no_mosaic_message" = "お見せできるモザイクは、今のところなさそうです。\nすてきなギャラリーになるよう、\nコレクションに励んでみましょう！";
+"gallery_no_mosaic_message" = "お見せできるモザイクは、今のところないようです。";
 
 "home_transaction_headline" = "送受信";
-"home_transaction_empty_message" = "まだ送受信の履歴はありません。";
+"home_transaction_empty_message" = "まだ送受信は\nされていないみたいです。";
 "home_harvest_empty_message" = "まだハーベストの記録は\nないようです。";
 
 "lesson_introduction_message" = "ようこそいらっしゃいました！\nセキュリティレッスンですね？\n特別にみなさんに最適なレッスン用意してあります！\n早速やっていきましょう。\n\nそれでは、まず最初にあなたのことを教えてくれますか？\n次の画面でご自分に合うものを選択してみてください。";
@@ -179,7 +187,7 @@
 "send_destination" = "送信先";
 "send_input_address" = "送信先アドレスを入力";
 
-"send_newbie_caution_title" = "気をつけて。送り先はニュービーだ";
+"send_newbie_caution_title" = "おっと、気をつけて。";
 "send_newbie_caution_message" = "あなたが送ろうとしているアドレスは、これまで一度もブロックチェーン上で活動していない初心者のようです。とはいえアドレスがちゃんとした形式なら送金は可能ですから、ご安心ください。\nアドレスは正しいか、送り先は信頼できるか、よく確かめてから手続きしてくださいね。";
 
 "send_invalid_namespace" = "定義されていないネームスペースです";
@@ -188,7 +196,7 @@
 "send_amount_setting" = "送金操作";
 "send_mosaic_setting" = "モザイク添付";
 
-"send_mode_select_title" = "送信タイプを選択";
+"send_mode_select_title" = "送信モードを選んでください";
 "send_mode_select_message" = "メッセージを添付しますか？";
 "send_mode_attach" = "添付する";
 "send_mode_not_attach" = "添付しない";
@@ -199,7 +207,6 @@
 "send_confirmation_dialog_message" = "この画面で指紋認証またはPINの認証が完了すると、送金が完了します。\n表示された情報をよくご確認の上、操作してください。";
 "send_confirmation_pin_message" = "PINを入力して送金を確定する";
 
-"send_complete_title" = "送金完了！";
 "send_complete_message" = "送金手続きが完了しました";
 "send_complete_transaction_label" = "送金詳細";
 
@@ -211,7 +218,7 @@
 "send_message_plain_description" = "通常のメッセージです。\n取引所への認証番号を入力する際は、必ずこちらで行いましょう。";
 
 "send_message_encrypted_title" = "暗号化メッセージ";
-"send_message_encrypted_description" = "軍事レベルの暗号化技術でメッセージを安全に送信します";
+"send_message_encrypted_description" = "軍事レベルの暗号化技術でプライバシーを確保しましょう。";
 "send_message_encrypted_caution" = "取引所入金時の認証番号に使う場合は問題の原因になりますので、絶対に暗号化は指定しないでください";
 
 "send_message_no_public_key_title" = "送り先が暗号化メッセージに対応していません。";
@@ -219,9 +226,9 @@
 
 
 "setting_language_select" = "言語選択";
-"setting_currency_select" = "表示通貨";
+"setting_currency_select" = "通貨";
 "setting_notification_setting" = "通知設定";
-"setting_change_password" = "PINコードの設定・変更";
+"setting_change_password" = "PINコードの設定";
 "setting_require_biometrics" = "%@の要求";
 "setting_require_pin_on_launch" = "起動時にPIN入力を要求する";
 "setting_go_to_security_lesson" = "セキュリティレッスンを受ける";
@@ -245,7 +252,7 @@
 "wallet_creation_new" = "新しくウォレットを作る";
 "wallet_not_select_message" = "ウォレットが選択されていません";
 
-"wallet_no_wallet_title" = "ウォレットがないみたい。";
+"wallet_no_wallet_title" = "ウォレットがありません。";
 "wallet_no_wallet_message" = "上のボタンからウォレットを作成するか\nアカウントをリンクすると、ここに一覧で表示されます。";
 
 "wallet_creation_type_new" = "新しくウォレットを作る";
@@ -298,7 +305,7 @@
 "wallet_detail_general" = "一般情報";
 
 "wallet_rename_title" = "ウォレット名変更";
-"wallet_rename_hint" = "新しいウォレット名";
+"wallet_rename_hint" = "ウォレットの名前を入力";
 
 "wallet_go_home_caution1_title" = "セキュリティ対策をスキップしますか？";
 "wallet_go_home_caution1_message" = "PINコードの設定や、秘密鍵のバックアップなどを行うセキュリティ対策をスキップしようとしています。\nセキュリティ対策はしっかりとしておくことをオススメしますが、それでもHOMEに行きますか？";

@@ -21,7 +21,6 @@ class SendEndViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
 
-        title = R.string.localizable.send_complete_title()
         hideBackTitle()
         hideBackButton()
 
