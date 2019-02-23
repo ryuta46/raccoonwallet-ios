@@ -983,6 +983,7 @@
 		5FD411C4213CC1EA00C89151 /* SendAmountPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAmountPage.swift; sourceTree = "<group>"; };
 		5FD411D3213E193F00C89151 /* TestSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSettings.swift; sourceTree = "<group>"; };
 		5FD411D4213E193F00C89151 /* BaseTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
+		5FDAC07E22212D46009563C4 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/localizable.strings; sourceTree = "<group>"; };
 		6905700B0B98E94C971693ED /* QrScannerDialogContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrScannerDialogContract.swift; sourceTree = "<group>"; };
 		690570326F17D536A462BE76 /* LessonPinEndRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonPinEndRouter.swift; sourceTree = "<group>"; };
 		6905705D2106828158A582CD /* NodeSelectInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeSelectInteractor.swift; sourceTree = "<group>"; };
@@ -4882,6 +4883,7 @@
 				Base,
 				ja,
 				en,
+				th,
 			);
 			mainGroup = 5F672D212122813A0018B163;
 			productRefGroup = 5F672D2B2122813A0018B163 /* Products */;
@@ -5950,6 +5952,7 @@
 			children = (
 				5F7CEBFB214B61F200863D5D /* en */,
 				5F7CEBFD214B61F400863D5D /* ja */,
+				5FDAC07E22212D46009563C4 /* th */,
 			);
 			name = localizable.strings;
 			sourceTree = "<group>";

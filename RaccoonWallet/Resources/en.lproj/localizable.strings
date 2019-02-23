@@ -1,4 +1,4 @@
-/* 
+/*
   localizable.strings
   RaccoonWallet
 
@@ -6,316 +6,314 @@
   Copyright © 2018年 T TECH, LIMITED LIABILITY CO. All rights reserved.
 */
 
-"common_app_title" = "RaccoonWallet";
-"common_done" = "完了";
+"common_app_title" = "Raccoon";
+"common_done" = "Complete";
 "common_success" = "SUCCESS";
-"common_coming_soon" = "カミングスーン";
-"common_privacy_policy_caution" = "アプリの利用を開始する前に、ご確認ください。";
-"common_privacy_policy" = "利用規約とプライバシーポリシー";
-"common_security_lesson" = "セキュリティレッスン";
-"common_pin_settings" = "PINコードの設定";
-"common_pin_retry" = "PIN Code が一致しません。\nもう一度";
-"common_pin_registration_message_0" = "アプリ本体を保護するためのPINコードを設定します。6桁のPINコードを入力してください。\n確認のため二度入力します。\n※数字の繰り返しや誕生日などを含むコードはセキュリティの観点からおすすめしません。\n";
+"common_coming_soon" = "Coming Soon!";
+"common_privacy_policy_caution" = "Please check before using App.";
+"common_privacy_policy" = "Terms of Use and Privacy Policy";
+"common_security_lesson" = "Security Lesson";
+"common_pin_settings" = "Set up PIN Code";
+"common_pin_retry" = "Incorrect PIN code. \nPlease try again.";
+"common_pin_registration_message_0" = "Let\'s set up PIN code to protect your application. Please key in 6 digit number. \n You will need to key in two times the same for the confirmation of your PIN code. \n ※ We strongly advise you to avoid using the repetitive digit number or key in your birth date from security perspective.  ";
 
-"common_pin_registration_message_1" = "このPINコードを忘れた場合、アプリの操作ができなくなります。忘れないようにしてください。ただしPINコードを忘れた場合でもウォレットのXEMが無くなるわけではありません。\nアドレスごとの秘密鍵を紛失した場合のみ資産にアクセスできなくなります。";
+"common_pin_registration_message_1" = "If you have forgotten your PIN code, you will never be able to use this App no matter what. Please do not forget it. That said, your XEM is still in your wallet even if you have forgotten your PIN. You will lose your asset only when you have lost the private key. ";
 
-"common_pin_registration_complete" = "アプリ本体を保護するための6桁のPINコードが設定されました。";
+"common_pin_registration_complete" = "6 digit PIN code has been set up successfully to secure App.";
 
-"common_mosaic_list" = "モザイク一覧";
-"common_destination" = "送り先";
-"common_fee" = "手数料";
-"common_amount" = "金額";
+"common_mosaic_list" = "Mosaics";
+"common_destination" = "Recipient";
+"common_fee" = "Fee";
+"common_amount" = "Amount";
 "common_balance" = "残高";
-"common_invalid_address" = "無効なアドレスです";
-"common_message" = "メッセージ";
-"common_message_input" = "メッセージを入力";
+"common_invalid_address" = "Invalid address";
+"common_message" = "Message";
+"common_message_input" = "Enter message";
 
-"common_address" = "アドレス";
-"common_backup" = "バックアップ";
-"common_delete" = "削除";
+"common_address" = "Address";
+"common_backup" = "Backup";
+"common_delete" = "Remove";
 
-"common_public_key" = "公開鍵";
-"common_not_select" = "未選択";
-"common_not_get" = "未取得";
+"common_public_key" = "Public key";
+"common_not_select" = "Not selected";
+"common_not_get" = "Not acquired ";
 
 
-"common_address_book" = "アドレス帳";
-"common_mosaic_gallery" = "モザイクギャラリー";
-"common_donation" = "寄付";
-"common_settings" = "設定";
+"common_address_book" = "Friends list";
+"common_mosaic_gallery" = "Mosaic Gallery";
+"common_donation" = "Donation";
+"common_settings" = "Settings";
 
-"common_general" = "一般";
-"common_security" = "セキュリティ";
+"common_general" = "General";
+"common_security" = "Security";
 
 "common_touchID" = "指紋認証";
 "common_faceID" = "顔認証";
 
-"common_biometrics_enable_title" = "%@によるアクセス設定";
-"common_biometrics_enable_message" = "%@を使用してアプリのロックを解除できるように設定できます。\nOKを押すと、設定を完了します。";
+"common_biometrics_enable_title" = "Setup access by fingerprint authentication";
+"common_biometrics_enable_message" = "You can unlock the application by fingerprint authentication. Please press \n OK to finish setup. ";
 
-"common_biometrics_enable_success_title" = "SUCCESS！";
-"common_biometrics_enable_success_message" = "%@を使用したログインが設定されました。";
+"common_biometrics_enable_success_title" = "SUCCESS!";
+"common_biometrics_enable_success_message" = "Setup log in by fingerprint authentication is completed. ";
 
-"common_qr_import" = "QRコードのインポート";
+"common_qr_import" = "Import QR code";
 
-"common_invalid_password" = "パスワードが一致しません";
+"common_invalid_password" = "Incorrect password";
 
-"common_error_network" = "通信エラー";
+"common_error_network" = "Network Error";
 
-"common_error_pin_not_set" = "PINコードが未設定です。先にPINコードの設定を行ってください。";
+"common_error_pin_not_set" = "Your PIN setup is uncompleted. Please set up your PIN first. ";
 "common_error_account_repair" = "アカウント情報の復元に失敗しました。";
-"common_error_insufficient_balance" = "残高が足りません！";
-"common_error_decode_message" = "メッセージの復元に失敗しました";
+"common_error_insufficient_balance" = "You don\'t have enough balance";
+"common_error_decode_message" = "Failed to unlock";
 
-"common_error_go_send_title" = "送信画面に移動できません";
-"common_error_go_send_pin_message" = "PINが設定されていないため、送信画面に移動できません。\n送金操作を行うには、設定からPINの設定を行ってください。";
-"common_error_go_send_pin_button" = "PIN設定画面に移動する";
-"common_error_go_send_no_wallet_message" = "ウォレットが選択されていないため、送信画面に移動できません。\n送金操作を行うには、ウォレットを選択してください。";
-"common_error_go_send_no_wallet_button" = "ウォレット選択画面に移動する";
+"common_error_go_send_title" = "You cannot continue to Send screen";
+"common_error_go_send_pin_message" = "You cannot continue to Send screen because no PIN code has been set up yet. \n Set up PIN from Settings tab before you send your crypto.";
+"common_error_go_send_pin_button" = "Continue to setup PIN page";
+"common_error_go_send_no_wallet_message" = "You cannot continue to Send screen because no wallet is selected. \n To send your crypto, you need to select a wallet.";
+"common_error_go_send_no_wallet_button" = "Continue to wallet selection screen. ";
 
-"common_never_remind" = "再度表示させない";
+"common_never_remind" = "Do not show again";
 
-"common_wallet_balance" = "ウォレット残高";
+"common_wallet_balance" = "Wallet balance";
 
-"common_copy_to_clipboard" = "クリップボードにコピーしました";
+"common_copy_to_clipboard" = "Copied to the clipboard";
 
 "common_harvest" = "ハーベスト";
 
 "about_title" = "About This APP";
-"about_app_concept" = "信頼性が高く\n使いやすいUIで、\n仮想通貨をもっと楽しく。\n\nラクーンウォレットは、これら３つを目標に\n作られた仮想通貨ウォレットです。";
+"about_app_concept" = "Raccoon is a cryptocurrency wallet aiming following 3 goals: High reliability, Easy UI and Fun in cryptocurrency than ever.";
 
-"about_official_site" = "公式サイト | raccoonwallet.com";
-"about_discord" = "公式DISCORDサーバー | 紹介リンク";
-"about_open_source" = "オープンソースライセンス";
-"about_review" = "レビューを書く";
+"about_official_site" = "Official Website | raccoonwallet.com";
+"about_discord" = "Official DISCORD Server |  Link ";
+"about_open_source" = "Open Source License";
+"about_review" = "Write a review";
 
-"create_wallet_tutorial_title" = "Welcome to Raccoon Wallet";
-"create_wallet_tutorial_message" = "改めまして、こんにちは。\nラクーンウォレットへようこそ。\n\nさてこれからあなたがラクーンを始めるにあたって、まずはウォレットの準備をお願いしたいと思います。\n次の画面で新しくウォレットを作るか、それともすでにブロックチェーンに登録済みのアカウントでログインするかを選んでいただけますか？";
+"create_wallet_tutorial_title" = "Welcome!";
+"create_wallet_tutorial_message" = "Hello once again! \n Welcome to Raccoon Wallet. \n Before you start Raccoon, you need to prepare a wallet first. \n Please choose if you make a new wallet or import one.";
 
-"donation_title" = "おや?寄付してくれるのかい!?";
-"donation_detail_title" = "開発の励みになるよ〜";
+"donation_title" = "Developers";
+"donation_detail_title" = "Profile";
 
-"donation_android_engineer_name" = "Android Developper";
-"donation_android_engineer_role" = "エンジニア";
-"donation_android_engineer_detail" = "God of Raccoon。創造主でエンジニア。\nすべてはココからはじまった。彼らがいなかったらラクーンは存在していない。\nRaccoonのAndroidエンジニアは二人。@YukiYamadaJPと@Riberd_Puzzle1だ。\n\n・リードエンジニア / コア開発者\n・ベースアプリ（NEM総合アプリ） 開発\n・Android版アプリ開発";
+"donation_android_engineer_name" = "Android Developer";
+"donation_android_engineer_role" = "Engineer";
+"donation_android_engineer_detail" = "Android Engineer \n@YukiYamadaJP\n@Riberd_Puzzle1\n\n・Android App Developer ";
+
+"donation_yuki_name" = "Yuki";
+"donation_yuki_role" = "Engineer";
+"donation_yuki_detail" = "Engineer \n・Base App Developer \n・Android Ver. App Developer ";
+
+"donation_soma_name" = "Soma";
+"donation_soma_role" = "Engineer";
+"donation_soma_detail" = "Engineer \n・Android App Developer ";
+
 
 "donation_designer_name" = "Rhime";
-"donation_designer_role" = "UIデザイナー";
-
-"donation_designer_detail" = "Raccoonの名付け親。デザイナー。\nこのアプリふざけてんなぁと思ったら、この人のせい。\nラクーンにおけるデザインの大体は、この人が作った。\n使いやすいアプリの構造を考えたりする情報アーキテクチャも兼任した。\n\n・総合コンテンツデザイナー\n・Android / iOSアプリのIA/UI/UXデザイン\n・ビジュアルデザイン/ブランディング（ロゴ・サイト）";
+"donation_designer_role" = "UI designer";
+"donation_designer_detail" = "Designer\n・Android / iOS App\'s IA/UI/UX Design \n・Visual Design / Branding ";
 
 "donation_ios_engineer_name" = "Ryuta";
-"donation_ios_engineer_role" = "iOSエンジニア";
-"donation_ios_engineer_detail" = "Raccoonの命綱。iOSエンジニア。最強の後衛。\n将棋で例えるなら飛車。\nラクーンを林檎の楽園へといざなう。\n\n・Android→iOS版アプリ移植・開発主任\n・nem-kotlinの創造主。";
+"donation_ios_engineer_role" = "iOS Engineer";
+"donation_ios_engineer_detail" = "Engineer \n・iOS Development Director \n・PWA(Progressive Web Apps) Developer";
 
-"first_tutorial_button" = "はじめる";
-"first_tutorial_title1" = "はじめまして";
-"first_tutorial_title2" = "信頼の革新を手のひらに";
-"first_tutorial_title3" = "すべての人に経済を。";
-"first_tutorial_message1" = "お会いできて光栄です。\nブロックチェーンを使った新しい経済活動を\n一緒にはじめましょう";
-"first_tutorial_message2" = "すべてが暗号通貨ベースで設計され、\nすべてが新しい考え方で動く、\nニューエコノミープラットフォーム。\n魅力的な体験は、ここからはじまります。";
-"first_tutorial_message3" = "自由と共創の新経済が待っています。";
+"first_tutorial_button" = "Let\'s get started.";
+"first_tutorial_title1" = "It is a pleasure to meet you";
+"first_tutorial_title2" = "Innovation in trust on your hands";
+"first_tutorial_title3" = "Economy for Everybody";
+"first_tutorial_message1" = "Hi, I am glad to see you! \n Let us begin New Economy Movement by Blockchain together! ";
+"first_tutorial_message2" = "New Economy platform based on cryptocurrency and new ideas encourages you to have amazing experiences.";
+"first_tutorial_message3" = "New Economy Movement for liberty and co-creation is already here.";
 
-"gallery_no_mosaic_title" = "モザイクなど存在しない。";
-"gallery_no_mosaic_message" = "お見せできるモザイクは、これっぽっちもないよ。\n涙がちょちょ切れるほどコレクションに励もう。";
+"gallery_no_mosaic_title" = "No mosaics";
+"gallery_no_mosaic_message" = "Currently, there is no mosaic to show here.";
 
 "home_transaction_headline" = "送受信";
-"home_transaction_empty_message" = "まだ送受信の履歴はありません。";
-"home_harvest_empty_message" = "まだハーベストの履歴はありません。";
+"home_transaction_empty_message" = "No transactions yet.";
+"home_harvest_empty_message" = "No harvesting income yet.";
 
-"lesson_introduction_message" = "やあ。セキュリティレッスンを受けに来たのかい？\n感心感心\nよーし、それじゃあ早速やっていこう。\n\nじゃあ、まず最初に君のことを教えてくれないかい？\n次の画面で自分に合うものを選択してくれ。\n特別にみんなに最適なレッスン用意したからさ。";
+"lesson_introduction_message" = "Welcome aboard! \n Are you looking for Security Lesson ? Well, here it is! Let\'s get started. \n\n First of all, can you tell me about yourself by choosing one of the followings. ";
 
-"lesson_level_title" = "セレクトユアレベル！";
-"lesson_level_beginner_title" = "NEM初心者です！";
-"lesson_level_beginner_setup" = "秘密鍵のバックアップ+PINコード設定";
-"lesson_level_beginner_message" = "ようこそNEMの世界へ。";
-"lesson_level_importer_title" = "秘密鍵からのログインです";
-"lesson_level_importer_setup" = "PINコード設定";
-"lesson_level_importer_message" = "ラクーンを選んでくれてありがとう〜";
-"lesson_level_expert_title" = "ラクーンユーザーです";
-"lesson_level_expert_setup" = "ウォレットのバックアップ";
-"lesson_level_expert_message" = "毎度どうも。今日もいい天気ですね。";
+"lesson_level_title" = "";
+"lesson_level_beginner_title" = "Start Cryptocurrency by Raccoon ";
+"lesson_level_beginner_setup" = "Back up Private Key + Set up PIN code";
+"lesson_level_beginner_message" = "Welcome to Raccoon!";
+"lesson_level_importer_title" = "Logged in by Private Key";
+"lesson_level_importer_setup" = "Set up PIN Code";
+"lesson_level_importer_message" = "Thank you for choosing Raccoon. ";
+"lesson_level_expert_title" = "It is a Raccoon user. ";
+"lesson_level_expert_setup" = "Back up Wallet";
+"lesson_level_expert_message" = "Thank you for staying loyal. It\'s a nice weather today. ";
 
-"lesson_beginner_title" = "ニュービーな君へ";
-"lesson_beginner_message" = "NEM初心者の君へ捧ぐメッセージ！\n知っている人もいるかもしれないけど、秘密鍵というのは仮想通貨にとって、すごく大事なものなんだ。NEMの場合もそれは同じだよ。バックアップはしっかりね。\n\nそれからアプリ本体のPINコード。\nスマホをもし落としてしまったりしたとき、アプリにロックをかけておかないと、勝手に送金されてしまうかもしれないよ。\nどっちも大事だ。これから対策していくよ。\n準備はいいかい？\nそれじゃあ、やっていこう。";
+"lesson_beginner_title" = "";
+"lesson_beginner_message" = "For those who are about to start Crypto. \n First above anything, cryptocurrency has \"Private Key,\" which is very significant. \n This Private Key is used to control your asset in the Wallet; it also be used to back up your Wallet in case you lose your devices or whatsoever. \n You might also need to set up PIN code to lock your application - just so you need to protect from fraud as well. \n Hence, we are going to give you lesson regarding to Private Key and PIN code setup. \n And now let\'s move on. Are you ready? ";
 
-"lesson_beginner_backup_end_title" = "次はPINの設定だ！";
-"lesson_beginner_backup_end_message" = "また会ったな。\nウォレットのバックアップはできたかい？\nさあ次は、アプリのPINコード設定だ。\n\nグッドラック！";
+"lesson_beginner_backup_end_title" = "";
+"lesson_beginner_backup_end_message" = "Hello again!   \n Have you done backup your Wallet already? \n Next, you set up PIN code for application. \n\n Wish you good luck! ";
 
-"lesson_importer_message" = "NEMユーザーのあなた！\nラクーンウォレットを選んでくれて嬉しいよ。すでによく知っている君には、僕から説明することはあまりないかな。\nここの画面から、PINコードを設定できるから、サクッと設定しといてくれ。\n\nもし秘密鍵のバックアップを取り忘れてたなら、初心者のカードからレッスンを受けてね。";
+"lesson_importer_message" = "For those who are already professional in cryptocurrency. \n Thank you for choosing Raccoon. \n Well, there might be nothing for you to learn from us. \n Please do setup PIN code from this screen. \n If you have forgotten to back up Private Key, you might want to take Security Lesson from beginner\'s guide. ";
 
-"lesson_end_title" = "お疲れ様！";
-"lesson_beginner_end_message" = "すばらしい！！\nこれで君も立派なクリプトコイナーというわけだ。\n感慨深いね。\n\nてなわけで、セキュリティレッスンは以上で終わり。\n暇があったらメニューからヘルプも覗くと良いよ。\nまあ後は使いながら覚えていってくれ。\n月に叢雲花に風。\nさよならだけが人生さ。\nまた会おうぜ。グッドラック。";
-"lesson_importer_end_message" = "レッスンお疲れ様。仮想通貨の活動をラクーンで行うことを選択した君を後悔させないように頑張るよ。\nこのウォレット自体の使い方は、メニューからアクセスできるヘルプから学習してほしい。\n\nゆく河の流れは絶えずして、しかももとの水にあらず。\nいづかたより来たりて、いづかたへか去る君との出会いに感謝するよ。\nグッドラック。";
-"lesson_expert_end_message" = "いつもラクーンウォレットを使ってくれてありがとう。\n\nてなわけで、セキュリティレッスンは以上で終わり。\nウォレットにもそろそろ慣れてきたんじゃないかい？\nとはいえ事前の対策を疎かにはしないでね。\n\n曾子曰く、人生とは、\n死而後巳（死してのち巳む）。\nくたばって初めて油断できるのさ。\nまた会おうぜ。グッドラック。";
+"lesson_end_title" = "Good job!";
+"lesson_beginner_end_message" = "Good job! n\ You\'ve completed Security Lesson. \n\n If you have any question, access Help page from menu. \n\n We wish you a happy Crypto life! ";
+"lesson_importer_end_message" = "Good job! n\ You\'ve completed Security Lesson. \n Access Help page from menu to learn how to use this wallet. \n\n We wish you a happy Crypto life! ";
+"lesson_expert_end_message" = "Thank you for using Raccoon. \n This is the end of Security Lesson. \n\n We hope you enjoy crypto life! ";
 
-"lesson_expert_title" = "秘密鍵のバックアップ";
-"lesson_expert_message" = "あっ、なんだ君か。\nそうそう、聞いてよ。最近、人にものを教えるのって大変だなって痛感してるんだ。なんでも３倍理解してないとダメだとか。僕の苦労も報われるといいのだけど。\nそう思わない？\nえ？秘密鍵のバックアップ？次の画面だよ。\nそうそう、それでさ～。";
+"lesson_expert_title" = "";
+"lesson_expert_message" = "Good day! \n You want to do back up Private Key, right? \n You can check your Private Key from the next screen. \n Thank you for staying loyal with us. ";
 
-"lesson_cancel_pin_title" = "　おっと！";
-"lesson_cancel_pin_message" = "もうPINは設定してあるみたいだね。\nOKを押してレッスンを終えてもらっていいよ。\nお疲れ様！";
+"lesson_cancel_pin_title" = "Oops!";
+"lesson_cancel_pin_message" = "It seems you have already set up PIN. \n Please press OK to complete lesson. \n Thank you! ";
 
 
 "lesson_pin_end_title" = "";
-"lesson_pin_end_message" = "";
-"lesson_pin_end_set_ok" = "";
-"lesson_pin_end_home" = "レッスンを終える";
+"lesson_pin_end_message" = "Now that you have done setup PIN. \n This may be the last lesson to you. \n\n You might as well want to set up fingerprint and/or face authentication. Do you want to proceed? ";
+"lesson_pin_end_set_ok" = "Set fingerprint authentication";
+"lesson_pin_end_home" = "Complete Lesson";
 
-"lesson_pin_end_not_available_title" = "おっと！";
-"lesson_pin_end_not_available_message" = "端末自体の%@が未設定のようです。\niOSの設定画面に移動して、%@の設定を開始しますか？";
+"lesson_pin_end_not_available_title" = "Oops!";
+"lesson_pin_end_not_available_message" = "It seems you have not set up fingerprint authentication on your device. \n Do you want to continue to iOS setting page to set up fingerprint authentication?";
 
 
-"qrlab_amount_headline" = "指定金額を受け取る";
-"qrlab_list_headline" = "売り物リスト機能を使う";
-"qrlab_register_headline" = "QRレジスター";
-"qrlab_register_description" = "対応コードをスキャンして、合計金額を請求するQRコードを生成する";
+"qrlab_amount_headline" = "Request payment";
+"qrlab_list_headline" = "Use Selling Item list ";
+"qrlab_register_headline" = "QR Register";
+"qrlab_register_description" = "Scan a code to create a QR code to invoice total amount.";
 
-"qrlab_amount_title" = "金額の指定";
+"qrlab_amount_title" = "Amount";
 
 "receive_tab_title" = "受け取る";
 
 "send_tab_title" = "送信手続きをする";
 
-"send_destination" = "送信先";
-"send_input_address" = "送信先アドレスを入力";
+"send_destination" = "Destination";
+"send_input_address" = "Enter destination address";
 
-"send_newbie_caution_title" = "気をつけて。送り先はニュービーだ";
-"send_newbie_caution_message" = "君が送ろうとしているアドレスは、これまで一度もブロックチェーン上で活動していない新参者みたいだね。とはいえアドレスがちゃんとした形式なら、送金は可能だよ。\nアドレスは正しいか、送り先は信頼できるか、よく確かめてから手続きしてね。";
+"send_newbie_caution_title" = "Hey, Watch out! ";
+"send_newbie_caution_message" = "You are about to send some crypto to the newbie address that has never run on Blockchain before. That said, please be assured that it is still legit address and therefore you can transfer cryptocurrency. In the next time, please check whether the \n address is correct or not, as much as you need to double check whether the recipient is reliable or not. ";
 
 "send_invalid_namespace" = "定義されていないネームスペースです";
 
-"send_amount_title" = "金額を入力";
-"send_amount_setting" = "送金操作";
-"send_mosaic_setting" = "モザイク添付";
+"send_amount_title" = "Enter amount";
+"send_amount_setting" = "Handle transfers";
+"send_mosaic_setting" = "Attach Mosaic";
 
-"send_mode_select_title" = "送信モードを選んでね";
-"send_mode_select_message" = "メッセージを添付しますか？";
-"send_mode_attach" = "添付する";
+"send_mode_select_title" = "Select transfer mode";
+"send_mode_select_message" = "Do you want to send with a message? ";
+"send_mode_attach" = "Attach";
 "send_mode_not_attach" = "添付しない";
 
-"send_standard_title" = "STANDARD SEND";
-"send_standard_hint" = "メッセージは添付せずに送金します。";
-"send_standard_message" = "普通の送金でいいよ";
+"send_confirmation_title" = "This is the final page to confirm your transfer";
+"send_confirmation_button" = "Show PIN on screen ";
+"send_confirmation_biometrics" = "Confirm sending by fingerprint authentication";
+"send_confirmation_dialog_message" = "Authenticate by fingerprint or PIN to complete sending. Please check information carefully before authenticating. ";
+"send_confirmation_pin_message" = "Input PIN to confirm your transfer";
 
+"send_complete_message" = "Your transfer request has been completed.  ";
+"send_complete_transaction_label" = "Transfer detail";
 
-"send_message_title" = "Message SEND";
-"send_message_hint" = "1024文字以内。取引所への認証番号にも使うよ。";
-"send_message_message" = "トランザクションにメッセージを添えます";
+"send_amount_with_xem" = "Send with XEM";
 
-"send_confirmation_title" = "送金の最終確認画面です";
-"send_confirmation_button" = "タップして認証画面を表示";
-"send_confirmation_biometrics" = "%@で送金します";
-"send_confirmation_dialog_message" = "この画面で指紋認証またはPINの認証が完了すると、送金が完了します。\n表示された情報をよくご確認の上、操作してください。";
-"send_confirmation_pin_message" = "PINを入力して送金を確定する";
+"send_message_type_select_title" = "Encrypt the message";
 
-"send_complete_title" = "送金完了！";
-"send_complete_message" = "NEM/XEM\nの送金が完了しました";
-"send_complete_transaction_label" = "送金詳細";
+"send_message_plain_title" = "Plain Message";
+"send_message_plain_description" = "Plain message. \n Be sure to input authentication code here when you depositing in crypto exchanges.";
 
-"send_amount_with_xem" = "XEMを一緒に送る";
-
-"send_message_type_select_title" = "メッセージの暗号化設定";
-
-"send_message_plain_title" = "通常のメッセージ";
-"send_message_plain_description" = "通常のメッセージです。\n取引所への認証番号を入力する際は、必ずこちらで行いましょう。";
-
-"send_message_encrypted_title" = "暗号化メッセージ";
-"send_message_encrypted_description" = "軍事レベルの暗号化技術でメッセージを安全に送信します";
+"send_message_encrypted_title" = "Encrypted message";
+"send_message_encrypted_description" = "Let\'s secure your privacy with military grade encryption.  ";
 "send_message_encrypted_caution" = "取引所入金時の認証番号に使う場合は問題の原因になりますので、絶対に暗号化は指定しないでください";
 
-"send_message_no_public_key_title" = "送り先が暗号化メッセージに対応していません。";
-"send_message_no_public_key_message" = "暗号化メッセージを送るには、暗号化に必要な公開鍵と呼ばれるコードを送り先が所持している必要があります。\n現在指定されている送り先は公開鍵を所持していないため、暗号化メッセージは送れません。";
+"send_message_no_public_key_title" = "The recipient can\'t receive an encrypted message. ";
+"send_message_no_public_key_message" = "In order to send an encrypted message, the recipient needs to have their public key. \n Since the current recipient does not have their public key, you can\'t send the encrypted message.";
 
 
-"setting_language_select" = "言語選択";
-"setting_currency_select" = "表示通貨";
-"setting_notification_setting" = "通知設定";
-"setting_change_password" = "PINコードの設定・変更";
-"setting_require_biometrics" = "%@の要求";
-"setting_require_pin_on_launch" = "起動時にPIN入力を要求する";
-"setting_go_to_security_lesson" = "セキュリティレッスンを受ける";
+"setting_language_select" = "Select language";
+"setting_currency_select" = "Currency";
+"setting_notification_setting" = "Notifications";
+"setting_change_password" = "Set up PIN Code";
+"setting_require_biometrics" = "Require Fingerprint";
+"setting_require_pin_on_launch" = "Require PIN at startup";
+"setting_go_to_security_lesson" = "Take Security Lesson";
 
-"setting_node_select" = "ノード選択";
+"setting_node_select" = "Select node";
 
-"setting_pin_not_available_title" = "おっと!";
-"setting_pin_not_available_message" = "PINの設定がまだのようですね。先にPINの設定をしてください。";
+"setting_pin_not_available_title" = "Oops!";
+"setting_pin_not_available_message" = "Your PIN setup is uncompleted. Please set up your PIN first. ";
 
-"transaction_list_title" = "トランザクション一覧";
-"transaction_detail_title" = "トランザクション詳細";
-"transaction_no_transaction_title" = "おっと。まだ取引はないみたい。";
+"transaction_list_title" = "Transactions";
+"transaction_detail_title" = "Transaction detail";
+"transaction_no_transaction_title" = "Oops! No transaction yet.";
 
-"transaction_no_transaction_message" = "トランザクションが発生したら\nここに一覧で表示されるよ。";
+"transaction_no_transaction_message" = "Transactions will be shown here. ";
 
-"transaction_message_is_encrypted" = "メッセージは暗号化されています";
-"transaction_failed_to_decrypt" =  "復号に失敗しました";
+"transaction_message_is_encrypted" = "Message is encrypted";
+"transaction_failed_to_decrypt" = "Failed to unlock";
 
 
-"wallet_select" = "ウォレットを選択";
-"wallet_creation_new" = " 新しくウォレットを作る";
-"wallet_not_select_message" = "ウォレットが選択されていません";
+"wallet_select" = "Select a wallet";
+"wallet_creation_new" = "Create new wallet";
+"wallet_not_select_message" = "No wallet is selected";
 
-"wallet_no_wallet_title" = "ウォレットがないみたい。";
-"wallet_no_wallet_message" = "上のボタンからウォレットを作成するか\nアカウントをリンクすると、ここに一覧で表示されるよ。";
+"wallet_no_wallet_title" = "There is no wallet.";
+"wallet_no_wallet_message" = "The list of wallet(s) will be shown here when creating a new wallet by tapping above \n or linking your existing wallet account. ";
 
-"wallet_creation_type_new" = "新しくウォレットを作る";
-"wallet_creation_type_import" = "インポート";
+"wallet_creation_type_new" = "Create new wallet";
+"wallet_creation_type_import" = "Import";
 
 "wallet_name_title" = "";
-"wallet_name_message" = "ハロー。ウェルカム・トゥ・ラクーン。\n早速、君のウォレットを作っていこう。\nまず最初に、ウォレットにイケてる名前をつけてくれ。";
-"wallet_name_input" = "一番いいウォレットネームを";
+"wallet_name_message" = "So, you chose to create a new wallet!  \n Let us guide you how to create it! \n First of all, please name your wallet. \n Any name is fine as you wish. ";
+"wallet_name_input" = "Wallet name";
 "wallet_create_title" = "";
 
-"wallet_create_message_0" = "おめでとうございます！\nウォレットの作成が完了しました。\nあなたのアドレスは以下になります。";
-"wallet_create_message_1" = "ウォレットのメンテナンスをしたいときは、上に出てきたバーのボタンを押してみてください。\nこの画面では動作しないからあとで試してみてくださいね。";
+"wallet_create_message_0" = "Congratulations! \n Now that your Wallet has been created. Please see your address below. ";
+"wallet_create_message_1" = "If you want to maintain your wallet, press the button in the bar above. \n It is not working in this page so please try later.  ";
 
-"wallet_create_address_headline" = "今回作成されたウォレットアドレス";
+"wallet_create_address_headline" = "Wallet address created this time";
 
 "wallet_end_title" = "";
-"wallet_end_message" = "以上でウォレットの新規作成作業は完了です。\nこのままウォレットのバックアップなどを行いたい人はレッスンに移動してくださいね。\n\nとりあえず今のままで使い始めたい人は\n「HOME」からスキップもできます。";
+"wallet_end_message" = "Creating a new Wallet is now completed. \n If you want to back up your wallet, please go to the lesson. \nn For those who wish to use Wallet now, please move on to \"HOME\" to skip the lesson. ";
 
-"wallet_import_title" = "秘密鍵のインポート";
-"wallet_import_message" = "開けゴマ！\n1. NEMの秘密鍵を入力する。\nもしくはQRコードで読み取りましょう。\n2. あなたのNEMアカウントをラクーンにリンクします！";
+"wallet_import_title" = "Import private key";
+"wallet_import_message" = "Good day, our dearest cryptocoiner. \n Please type in your private key \n or scan the QR code. \n2 Your account will be linked to Raccoon. ";
 
-"wallet_invalid_key" = "無効な秘密鍵です";
-"wallet_login_name_title" = "Walletの名前をインポート";
-"wallet_login_name_message" = "グレイト！\nアカウントのリンクが正常に行われました。\nウォレットに名前をつけると便利です。";
+"wallet_invalid_key" = "Invalid private key";
+"wallet_login_name_title" = "Import Wallet name";
+"wallet_login_name_message" = "Great! \nYour account has been linked successfully. \nGiving a name to the wallet would help you.";
 
 
-"wallet_login_end_title" = "リンク完了";
-"wallet_login_end_message" = "いいセンスだ。\n以上でリンク作業は完了しました。ウォレットの変更や追加をしたい場合は、\nウォレットバーのボタンから管理画面に\nアクセスしてみてくださいね。\nもし時間があるなら、この後のセキュリティレッスンの受講をオススメします。PINコードの設定やウォレットのバックアップを行うぞ。";
+"wallet_login_end_title" = "Link completed. ";
+"wallet_login_end_message" = "Congratulations! \n You have done linking your Wallet to this account.  \n If you want to change or add your Wallet, you can do so by Wallet bar to access management screen. \n If you could spare your time, we advise you to take Security Lesson. You will learn how to set up PIN and how to backup your Wallet. ";
 
-"wallet_settings_title" = "ウォレットの設定";
-"wallet_settings_general" = "一般設定";
-"wallet_settings_detail" = "ウォレットの詳細";
-"wallet_settings_address" = "ウォレットのアドレス";
-"wallet_settings_backup" = "ウォレットのバックアップ";
-"wallet_settings_rename" = "ウォレットの名前を変更する";
-"wallet_settings_delete" = "ウォレットを削除";
+"wallet_settings_title" = "Set up wallet";
+"wallet_settings_general" = "General settings";
+"wallet_settings_detail" = "Wallet detail";
+"wallet_settings_address" = "Wallet address";
+"wallet_settings_backup" = "Back up Wallet";
+"wallet_settings_rename" = "Change wallet name";
+"wallet_settings_delete" = "Delete wallet";
 
-"wallet_key_caution_title" = "プライベートキー(秘密鍵)について";
-"wallet_key_caution_message" = "プライベートキー（秘密鍵）はあなたのアカウント情報において最も重要であり、機密事項として注意して取り扱わなければなりません。\n\nプライベートキーは、関連する資金と資産を制御し、あなたのアカウントを元に戻すために必要なものであり、この知識は誰もが身につける必要があります。\n\nこのプライベートキーは、決してなくさないようにしてください。 また絶対に外部に漏れないように注意して扱ってください。";
+"wallet_key_caution_title" = "About Private Key ";
+"wallet_key_caution_message" = "Private Key is the most significant thing, which you must secure it at all cost. \n\n Private Key controls all assets and account information - it can also be used to restore your Wallet. Therefore, everyone has to know this basic knowledge. \n\n Please do not lose your Private Key, and never tell others. ";
 
-"wallet_key_backup_title" = "スクリーンショットに撮るのは危険です。";
-"wallet_key_backup_message" = "紙に書き留める、またはパスワード管理アプリ・ソフトウェアを使って厳重に保管してください。";
+"wallet_key_backup_title" = "Don\'t take a screen shot of your private key.";
+"wallet_key_backup_message" = "\n Please write on paper or secure it on Password management App/Software";
 
-"wallet_delete_caution_message" = "ウォレットを削除します。\n秘密鍵がないと復元できなくなります。\n本当にウォレットを削除しますか？";
+"wallet_delete_caution_message" = "You are about to delete your wallet. If you do not have private key, you will never be able to restore your wallet. Are you sure you want to delete the wallet? ";
 
-"wallet_detail_title" = "ウォレットの詳細";
-"wallet_detail_structure" = "ウォレット構成 (m-of-n)";
-"wallet_detail_importance" = "重要性スコア";
+"wallet_detail_title" = "Wallet detail";
+"wallet_detail_structure" = "Wallet configuration (m-of-n)";
+"wallet_detail_importance" = "Importance score";
 
-"wallet_detail_general" = "一般情報";
+"wallet_detail_general" = "General Information";
 
-"wallet_rename_title" = "ウォレット名変更";
-"wallet_rename_hint" = "新しいウォレット名";
+"wallet_rename_title" = "Change wallet name";
+"wallet_rename_hint" = "Enter Wallet name";
 
-"wallet_go_home_caution1_title" = "おっと！";
-"wallet_go_home_caution1_message" = "ほんとにHOMEに行くのかい？\nセキュリティはちゃんとしといたほうがいいよ。";
+"wallet_go_home_caution1_title" = "Do you want to skip Security Lesson? ";
+"wallet_go_home_caution1_message" = "You are about to skip the lesson how to set up PIN code and Private Key backup. We strongly advise you to secure your account by understanding Security issues but do you still want to continue to go HOME? ";
 
-"wallet_go_home_caution2_title" = "ほんとに？";
-"wallet_go_home_caution2_message" = "ほんとにほんとだね？止めはしないよ。\nもしウォレットのバックアップやPINコードを設定したくなったら、ウォレットバーやメニューのアプリ設定からいつでも行えるよ。それにレッスンもアプリ設定のセキュリティの項目から受講できるからね。";
+"wallet_go_home_caution2_title" = "Roger that! ";
+"wallet_go_home_caution2_message" = "If you want to back up your Wallet or set up PIN code, you can always do so at Wallet bar or application setting in Menu bar. \n Also, you can take Security Lesson at anytime by go to Security in the application setting. ";
 
-"wallet_import_nano_password_title" = "パスワード入力";
-"wallet_import_nano_password_headline" = "NanoWalletのパスワードを入力";
-"wallet_import_nano_password_message" = "NanoWalletで生成したQRコードからNEMアカウントをリンクしようとしています。\nこの操作には、NanoWalletのパスワードの入力が必要です。";
-"wallet_import_nano_password_hint" = "パスワードを入れてね";
+"wallet_import_nano_password_title" = "Enter password";
+"wallet_import_nano_password_headline" = "Enter NanoWallet password";
+"wallet_import_nano_password_message" = "You are about to link the account from NanoWallet by reading QR code. \n To complete this process, you need to enter NanoWallet password. ";
+"wallet_import_nano_password_hint" = "Enter password";
