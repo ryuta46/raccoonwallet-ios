@@ -1,0 +1,321 @@
+/*
+  localizable.strings
+  RaccoonWallet
+
+  Created by Taizo Kusuda on 2018/09/14.
+  Copyright © 2018年 T TECH, LIMITED LIABILITY CO. All rights reserved.
+*/
+
+"common_app_title" = "Raccoon";
+"common_done" = "เสร็จสิ้น";
+"common_success" = "สำเร็จ";
+"common_coming_soon" = "จะมาเร็วๆ นี้ ! ";
+"common_privacy_policy_caution" = "กรุณาตรวจสอบก่อนที่คุณจะเริ่มใช้แอพ";
+"common_privacy_policy" = "เงื่อนไขการใช้งานและนโยบายการเก็บข้อมูลส่วนตัว";
+"common_security_lesson" = "บทเรียนด้านความปลอดภัย";
+"common_pin_settings" = "ตั้งรหัส PIN";
+"common_pin_retry" = "รหัส PIN ไม่ตรงกัน\nกรุณาใส่อีกครั้ง";
+"common_pin_registration_message_0" = "ตั้งรหัส PIN เพื่อป้องกันแอพพลิเคชั่น โปรดใส่รหัส PIN 6 หลัก\nกรุณาใส่สองครั้งเพื่อยืนยัน\n* เพื่อความปลอดภัย ไม่แนะนำให้ใช้รหัสที่มีตัวเลขซ้ำๆกันหรือใช้วันเกิด เป็นต้น ";
+
+"common_pin_registration_message_1" = "หากคุณลืมรหัส PIN นี้คุณจะไม่สามารถใช้แอพพลิเคชั่นได้ ห้ามลืมนะ แต่ถ้าเกิดลืมขึ้นมา ไม่ได้แปลว่า XEM ของ Wallet จะไม่หายไป\nแต่ถ้าคุณเกิดทำaddress รหัส Private Key หายไป คุณจะไม่สามารถดึงเงินมาใช้ได้อีก โปรดระมัดระวังให้ดีๆนะ";
+
+"common_pin_registration_complete" = "คุณได้ตั้งค่ารหัส PIN 6 หลักสำหรับป้องกันแอพพลิเคชั่นเสร็จสิ้นแล้ว";
+
+"common_mosaic_list" = "รายการ mosaic";
+"common_destination" = "ไปยัง";
+"common_fee" = "ค่าธรรมเนียม";
+"common_amount" = "จำนวนเงิน";
+"common_balance" = "残高";
+"common_invalid_address" = "Address ไม่ถูกต้อง";
+"common_message" = "Message";
+"common_message_input" = "ใส่ข้อความ";
+
+"common_address" = "Address";
+"common_backup" = "สำรองข้อมูล";
+"common_delete" = "ลบ";
+
+"common_public_key" = "คีย์สาธารณะ";
+"common_not_select" = "ยังไม่ได้เลือก";
+"common_not_get" = "ยังไม่ได้รับ";
+
+
+"common_address_book" = "รายชื่อเพื่อน";
+"common_mosaic_gallery" = "Mosaic Gallery";
+"common_donation" = "บริจาค";
+"common_settings" = "การตั้งค่า";
+
+"common_general" = "ทั่วไป";
+"common_security" = "ความปลอดภัย";
+
+"common_touchID" = "指紋認証";
+"common_faceID" = "顔認証";
+
+"common_biometrics_enable_title" = "ตั้งค่าการเข้าด้วยลายนิ้วมือ";
+"common_biometrics_enable_message" = "คุณสามารถตั้งค่าเพื่อปลดล็อกแอพโดยใช้การตรวจสอบลายนิ้วมือ\nกด OK เพื่อสิ้นสุดการตั้งค่า";
+
+"common_biometrics_enable_success_title" = "สำเร็จ!";
+"common_biometrics_enable_success_message" = "ตั้งค่าเข้าสู่ระบบโดยใช้การตรวจสอบลายนิ้วมือสำเร็จ";
+
+"common_qr_import" = "ลิงค์ QR";
+
+"common_invalid_password" = "รหัสผ่านไม่ตรงกัน";
+
+"common_error_network" = "Network Error";
+
+"common_error_pin_not_set" = "คุณยังไม่ได้ตั้งค่า PIN คุณสามารถตั้ง PIN ได้ตอนนี้หรือไม่?";
+"common_error_account_repair" = "アカウント情報の復元に失敗しました。";
+"common_error_insufficient_balance" = "จำนวนเงินคงเหลือไม่เพียงพอ";
+"common_error_decode_message" = "ไม่สามารถเผยแพร่ได้";
+
+"common_error_go_send_title" = "ไม่สามารถย้ายไปที่หน้าทำรายการโอน";
+"common_error_go_send_pin_message" = "คุณไม่สามารถย้ายไปที่หน้าทำรายการโอน เนื่องจากคุณยังไม่มีตั้งค่ารหัส PIN\nเพื่อดำเนินการโอนเงินโปรดตั้งรหัส PIN จากที่หน้าการตั้งค่า";
+"common_error_go_send_pin_button" = "ไปที่หน้าจอการตั้งค่า PIN";
+"common_error_go_send_no_wallet_message" = "คุณไม่สามารถย้ายไปที่หน้าจอการโอนเงิน เนื่องจากยังไม่ได้เลือก Wallet \nสำหรับดำเนินการโอนเงินกรุณาเลือก Wallet";
+"common_error_go_send_no_wallet_button" = "ย้ายไปที่หน้าเลือก Wallet";
+
+"common_never_remind" = "ไม่แสดงอีกครั้ง";
+
+"common_wallet_balance" = "จำนวนเงินคงเหลือ";
+
+"common_copy_to_clipboard" = "คัดลอกไปยังคลิปบอร์ดแล้ว";
+
+"common_harvest" = "ハーベスト";
+
+"about_title" = "เกี่ยวกับ App นี้";
+"about_app_concept" = "เชื่อถือได้\nเป็นUI ที่ใช้ง่าย\nทำมาเพื่อให้โลกคริปโตมีความน่าสนุกเพิ่มขึ้น \n\nRaccoon เป็นกระเป๋าสตางค์สกุลเงินที่มีสามเป้าหมายดังนี้ ";
+
+"about_official_site" = "เว็บไซต์ทางการ | raccoonwallet.com";
+"about_discord" = "เซิร์ฟเวอร์ DISCORD อย่างเป็นทางการ | ลิงก์แนะนำ";
+"about_open_source" = "ใบอนุญาตโอเพนซอร์ส";
+"about_review" = "เขียนรีวิว";
+
+"create_wallet_tutorial_title" = "ยินดีต้อนรับ！";
+"create_wallet_tutorial_message" = "สวัสดีอีกครั้ง!\nยินดีต้อนรับสู่ Raccoon\n\nตั้งแต่นี้เป็นต้นไป คุณกำลังจะเริ่มใช้ Raccoon  กรุณาเตรียม Wallet ให้พร้อม\nคุณสามารถเลือกที่จะสร้างกระเป๋าสตางค์ใหม่บนหน้าจอถัดไป หรือ ลิงค์เข้าบัญชี Wallet ที่มีอยู่แล้ว ";
+
+"donation_title" = "รายชื่อทีมงานสร้างแอป";
+"donation_detail_title" = "โปรไฟล์";
+
+"donation_android_engineer_name" = "Android Developer";
+"donation_android_engineer_role" = "Engineer";
+"donation_android_engineer_detail" = "Android Engineer \n@YukiYamadaJP\n@Riberd_Puzzle1\n\n・For Android App Developer ";
+
+"donation_yuki_name" = "Yuki";
+"donation_yuki_role" = "Engineer";
+"donation_yuki_detail" = "Engineer \n・Base App Developer \n・For Android App Developer ";
+
+"donation_soma_name" = "Soma";
+"donation_soma_role" = "Engineer";
+"donation_soma_detail" = "Engineer \n・For Android App Developer";
+
+
+"donation_designer_name" = "Rhime";
+"donation_designer_role" = "UI Designer";
+"donation_designer_detail" = "Designer \n・Android / iOS App IA/UI/UX Design \n・Visual Design / Branding ";
+
+"donation_ios_engineer_name" = "Ryuta";
+"donation_ios_engineer_role" = "iOS Engineer ";
+"donation_ios_engineer_detail" = "Engineer \n・iOS Head Developer \n・PWA (Progressive Web Apps) Developer";
+
+"first_tutorial_button" = "เริ่มต้น";
+"first_tutorial_title1" = "ยินดีต้อนรับ";
+"first_tutorial_title2" = "ความไว้วางใจของคุณอยู่ในมือเรา";
+"first_tutorial_title3" = "เศรษฐกิจเพื่อทุกๆคน";
+"first_tutorial_message1" = "ยินดีต้อนรับทุกคน \n มาเริ่มกิจกรรมทางเศรษฐกิจใหม่ \n　ที่ใช้บล็อกเชนด้วยกันเถอะ";
+"first_tutorial_message2" = "ทุกอย่างได้รับการออกแบบด้วยพื้นฐานของสกุลเงินที่เข้ารหัสลับ\nทุกอย่างเคลื่อนไหวด้วยแนวความคิดใหม่ๆ\nแพลตฟอร์มเศรษฐกิจใหม่\nประสบการณ์ที่น่าสนใจเริ่มต้นจากที่นี่";
+"first_tutorial_message3" = "เศรษฐกิจใหม่เพื่ออิสรภาพและการสร้างสรรค์กำลังรอคุณอยู่";
+
+"gallery_no_mosaic_title" = "ไม่มี Mosaic";
+"gallery_no_mosaic_message" = "ไม่มี Mosaic ที่สามารถแสดงได้ในขณะนี้";
+
+"home_transaction_headline" = "送受信";
+"home_transaction_empty_message" = "การส่ง/รับเงินยังไม่สำเร็จ";
+"home_harvest_empty_message" = "ยังไม่มีบันทึก Harvesting";
+
+"lesson_introduction_message" = "ยินดีต้อนรับ!\nบทเรียนความปลอดภัยคืออะไร?\nบทเรียนพิเศษนี้เตรียมไว้สำหรับทุกคน!\nมาเริ่มกันเลยเถอะ\nจากนั้นกรุณาบอกเราเกี่ยวกับตัวคุณ \n  กรุณาเลือกข้อมูลที่ตรงกับคุณในหน้าจอถัดไป";
+
+"lesson_level_title" = "";
+"lesson_level_beginner_title" = "เริ่มเข้าสู่โลกคริปโต กับ Raccoon กันเถอะ";
+"lesson_level_beginner_setup" = "การสำรองคีย์ส่วนตัว หรือ Private Key + การตั้งรหัส PIN";
+"lesson_level_beginner_message" = "ยินดีต้อนรับสู่ Raccoon !";
+"lesson_level_importer_title" = "เข้าสู่ระบบจาก Private Key ";
+"lesson_level_importer_setup" = "ตั้งรหัส PIN";
+"lesson_level_importer_message" = "ขอบคุณที่เลือกใช้ Raccoon";
+"lesson_level_expert_title" = "เป็นผู้ใช้ Raccoon";
+"lesson_level_expert_setup" = "สำรองข้อมูล Wallet";
+"lesson_level_expert_message" = "ขอบคุณทุกคนเสมอนะ วันนี้อากาศดีเนอะ";
+
+"lesson_beginner_title" = "";
+"lesson_beginner_message" = "สำหรับคนที่จะเริ่มถือคริปโต ประการแรกสิ่งที่สำคัญที่สุดสำหรับสกุลเงินในการเข้ารหัสคือ \"คีย์ลับ\"  หรือ Private Key\nดังนั้นเพื่อไม่ให้ข้อมูลสูญหาย การสำรองข้อมูลจึงเป็นสิ่งสำคัญ \n\nแล้วก็รหัส PIN หลักของแอพพลิเคชั่น\nหากคุณลืมสมาร์ทโฟน โดยไม่ได้ตั้งรหัส PIN ล็อคไว้ คุณอาจสูญเสียทุกอย่างภายใน Wallet ได้\nแต่มีวิธีแก้ไข ดังนั้นเราจะสอนให้คุณพร้อมรับสถานการณ์ คุณพร้อมแล้วหรือยัง?";
+
+"lesson_beginner_backup_end_title" = "";
+"lesson_beginner_backup_end_message" = "เจอกันอีกแล้วนะ!\nคุณได้สำรอง Wallet หรือยัง?\nถัดไปคือการตั้งค่ารหัส PIN ของแอพพลิเคชั่น\n\nโชคดีนะ! ";
+
+"lesson_importer_message" = "สำหรับมือโปรอย่างคุณที่คุ้นเคยกับสกุลเงินดิจิตอล \nดีใจนะที่คุณเลือกใช้ Raccoon\nสำหรับคนที่คุ้นเคยกับสกุลเงินอย่างคุณ เราอาจจะไม่ต้องอธิบายเพิ่มเติม \nจากหน้าจอนี้คุณสามารถย้ายไปที่หน้าจอการตั้งค่ารหัส PIN ได้　\n ดังนั้นโปรดตั้งค่า\n\nหากคุณลืมสำรอง Private Key คุณสามารถเรียนรู้ข้อมูลทุกอย่างจากได้จากผู้เริ่มใช้ครั้งแรก";
+
+"lesson_end_title" = "ขอบคุณนะ";
+"lesson_beginner_end_message" = "บทเรียนด้านความปลอดภัยจะเสร็จแล้ว\n\nหากคุณมีบางอย่างที่ไม่เข้าใจโปรดดูความช่วยเหลือจากเมนู\n\nขออวยพรให้โชคดีกับไลฟ์สไตล์สกุลเงินลับนะ!";
+"lesson_importer_end_message" = "บทเรียนด้านความปลอดภัยเสร็จแล้วนะ\n\nหากคุณไม่เข้าใจการใช้งานโปรดดูความช่วยเหลือจากเมนู\n\nขออวยพรให้โชคดีกับไลฟ์สไตล์สกุลเงินลับนะ!
+";
+"lesson_expert_end_message" = "ขอบคุณที่ใช้แรคคูนเสมอนะ\nบทเรียนด้านความปลอดภัยจะเสร็จแล้ว\nขอให้คุณโชคดี";
+
+"lesson_expert_title" = "";
+"lesson_expert_message" = "สวัสดี \n สำรองข้อมูลใช่ไหม\nคุณสามารถตรวจสอบ Private Key ได้จากหน้าจอถัดไป\nขอบคุณนะ";
+
+"lesson_cancel_pin_title" = "อ๊ะ!";
+"lesson_cancel_pin_message" = "คุณได้ตั้งค่า PIN แล้ว \n กรุณา กดOK เพื่อไปหน้าต่อไป \n ขอบคุณนะ !";
+
+
+"lesson_pin_end_title" = "";
+"lesson_pin_end_message" = "ดูเหมือนว่าคุณสามารถตั้ง PIN ได้แล้ว\nบทเรียนสุดท้ายแล้วจริงๆนะ\n\nคุณสามารถตั้งค่าลายนิ้วมือเพื่อเข้าใช้แอพด้วยนะ ตั้งค่าไว้ตอนนี้หรือไม่?";
+"lesson_pin_end_set_ok" = "ตั้งค่าการตรวจสอบลายนิ้วมือ";
+"lesson_pin_end_home" = "จบบทเรียน";
+
+"lesson_pin_end_not_available_title" = "อ๊ะ!";
+"lesson_pin_end_not_available_message" = "ดูเหมือนว่าการตรวจสอบลายนิ้วมือของในเครื่องคุณยังไม่ได้รับการตั้งค่า\nคุณต้อง การไปที่หน้าจอการตั้งค่า iOS และเริ่มต้นตั้งค่าการตรวจสอบลายนิ้วมือไหม";
+
+
+"qrlab_amount_headline" = "ระบุจำนวนเงินที่รับ";
+"qrlab_list_headline" = "ใช้รายการผู้ขาย";
+"qrlab_register_headline" = "ลงทะเบียน QR";
+"qrlab_register_description" = "สแกนโค้ด เพื่อสร้าง QR โค้ดเรียกเก็บเงิน";
+
+"qrlab_amount_title" = "กำหนดจำนวนเงิน";
+
+"receive_tab_title" = "受け取る";
+
+"send_tab_title" = "送信手続きをする";
+
+"send_destination" = "ส่งไปยัง";
+"send_input_address" = "ใส่ Address ผู้รับ";
+
+"send_newbie_caution_title" = "โปรดระวังด้วย";
+"send_newbie_caution_message" = "Address ที่คุณกำลังพยายามส่งดูเหมือนจะเป็น Address ที่ไม่เคยใช้งานมาก่อน อย่างไรก็ตามการโอนเงินเป็นไปได้ถ้า Address ถูกต้อง　\n　โปรดตรวจสอบให้แน่ใจว่า Address ถูกต้องและปลายทางน่าเชื่อถือก่อนดำเนินรายการ";
+
+"send_invalid_namespace" = "定義されていないネームスペースです";
+
+"send_amount_title" = "ใส่ตัวเลขจำนวนเงิน";
+"send_amount_setting" = "ทำรายการโอนเงิน";
+"send_mosaic_setting" = "แนบ mosaic";
+
+"send_mode_select_title" = "โปรดเลือกประเภทการส่ง";
+"send_mode_select_message" = "คุณต้องการแนบ Message หรือไม่?";
+"send_mode_attach" = "แนบ";
+"send_mode_not_attach" = "添付しない";
+
+"send_confirmation_title" = "ยืนยันการโอนเงินครั้งสุดท้าย กรุณาตรวจสอบอย่างละเอียด";
+"send_confirmation_button" = "แสดงรหัส PIN";
+"send_confirmation_biometrics" = "โอนเงินโดยการตรวจสอบลายนิ้วมือ";
+"send_confirmation_dialog_message" = "เมื่อยืนยันการโอนเงินครั้งสุดท้ายด้วยการตรวจสอบลายนิ้วมือหรือการตรวจสอบรหัส PIN แล้ว จะถือว่ารายการโอนเงินนี้เสร็จสิ้น กรุณาตรวจสอบอย่างละเอียดก่อนที่คุณจะดำเนินรายการ";
+"send_confirmation_pin_message" = "ใส่รหัส PIN เพื่อยืนยันโอนเงิน";
+
+"send_complete_message" = "กระบวนการโอนเสร็จสิ้น";
+"send_complete_transaction_label" = "รายละเอียดโอนเงิน";
+
+"send_amount_with_xem" = "ส่งพร้อมกับ XEM ด้วย";
+
+"send_message_type_select_title" = "ตั้งค่าเข้ารหัส  Message ";
+
+"send_message_plain_title" = "Message ธรรมดา";
+"send_message_plain_description" = "คุณกำลังจะส่งเป็น Message ธรรมดา ถ้าคุณต้องการใส่รหัสหมายเลขยืนยันกับ \n เว็บซื้อขายคริปโต";
+
+"send_message_encrypted_title" = "Message เข้ารหัส";
+"send_message_encrypted_description" = "มาทำข้อความเป็นส่วนตัวด้วยเทคโนโลยีการเข้ารหัสระดับทหารกันเถอะ";
+"send_message_encrypted_caution" = "取引所入金時の認証番号に使う場合は問題の原因になりますので、絶対に暗号化は指定しないでください";
+
+"send_message_no_public_key_title" = "ปลายทางไม่สอดคล้องกับข้อความที่เข้ารหัส";
+"send_message_no_public_key_message" = "การส่งข้อความที่เข้ารหัสปลายทางต้องมีรหัสที่เรียกว่าคีย์สาธารณะ หรือ Public Key \n ข้อมูลที่ระบุไว้ตอนนี้ไม่มีคีย์สาธารณะดังนั้นคุณจึงไม่สามารถส่งข้อความที่เข้ารหัสได้";
+
+
+"setting_language_select" = "เลือกภาษา";
+"setting_currency_select" = "สกุล";
+"setting_notification_setting" = "ตั้งค่าการแจ้งเตือน";
+"setting_change_password" = "ตั้งรหัส PIN";
+"setting_require_biometrics" = "ขอลายนิ้วมือ";
+"setting_require_pin_on_launch" = "ขอรหัส PIN เพื่อดำเนินการต่อ";
+"setting_go_to_security_lesson" = "ชมบทเรียนด้านความปลอดภัย";
+
+"setting_node_select" = "เลือก Node";
+
+"setting_pin_not_available_title" = "อ๊ะ!";
+"setting_pin_not_available_message" = "คุณยังไม่ได้ตั้งค่า PIN คุณสามารถตั้ง PIN ได้ตอนนี้หรือไม่?";
+
+"transaction_list_title" = "รายการธุรกรรม";
+"transaction_detail_title" = "รายละเอียดธุรกรรม";
+"transaction_no_transaction_title" = "ยังไม่ได้ทำรายการ";
+
+"transaction_no_transaction_message" = "เมื่อเกิดมีการทำธุรกรรม\nจะปรากฏที่นี่";
+
+"transaction_message_is_encrypted" = "Message ถูกเข้ารหัส";
+"transaction_failed_to_decrypt" = "ไม่สามารถเผยแพร่ได้";
+
+
+"wallet_select" = "เลือก Wallet";
+"wallet_creation_new" = "ทำกระเป๋าสตางค์หรือ Wallet ใหม่";
+"wallet_not_select_message" = "คุณยังไม่ได้เลือก Wallet";
+
+"wallet_no_wallet_title" = "ไม่มี Wallet";
+"wallet_no_wallet_message" = "สร้าง Wallet จากปุ่มด้านบน\nหรือลิงค์บัญชีของคุณเพื่อแสดงที่นี่";
+
+"wallet_creation_type_new" = "ทำกระเป๋าสตางค์หรือ Wallet ใหม่";
+"wallet_creation_type_import" = "Import หรือ ลิงค์ Wallet";
+
+"wallet_name_title" = "";
+"wallet_name_message" = "คุณเลือกสร้าง Wallet ใหม่!\nโปรดระบุชื่อ Wallet เป็นอันดับแรก\n
+ไม่มีข้อจำกัดการตั้งชื่อ ตั้งชื่อได้ตามที่ชอบเลยนะ";
+"wallet_name_input" = "ชื่อ Wallet";
+"wallet_create_title" = "";
+
+"wallet_create_message_0" = "ขอแสดงความยินดีด้วย!\nการสร้าง Wallet เสร็จสมบูรณ์แล้ว\nAddress ของคุณจะอยู่ด้านล่าง";
+"wallet_create_message_1" = "หากต้องการซ่อมบำรุง Wallet โปรดกดปุ่มที่แสดงขึ้นมา\nไม่สามารถทดลองผ่านหน้าจอนี้ได้ กรุณาลองอีกครั้ง";
+
+"wallet_create_address_headline" = "นี่คือ Address ของ Wallet คุณ";
+
+"wallet_end_title" = "";
+"wallet_end_message" = "การสร้าง Wallet เสร็จสมบูรณ์แล้ว\nหากคุณต้องการสำรองข้อมูล Wallet กรุณาไปต่อที่บทเรียนด้านการสำรองข้อมูล\n\nหากต้องการเริ่มใช้งาน สามารถกด \n \"หน้าหลัก\" เพื่อข้ามไปได้";
+
+"wallet_import_title" = "Import หรือ ลิงค์ Private Key";
+"wallet_import_message" = "สวัสดี ชาวคริปโต\n1. ใส่ Private Key  ของสกุลเงินที่คุณต้องการลิงค์ \nหรืออ่าน QR โค้ด\n2. ลิงค์บัญชีของคุณกับ Raccoon";
+
+"wallet_invalid_key" = "Private Key ไม่ถูกต้อง";
+"wallet_login_name_title" = "ลิงค์ชื่อ Wallet";
+"wallet_login_name_message" = "ดีมาก!\nลิงก์บัญชีสำเร็จแล้ว คุณจะสะดวกขึ้น เมื่อตั้งชื่อ Wallet ของคุณ";
+
+
+"wallet_login_end_title" = "ลิงค์สำเร็จ";
+"wallet_login_end_message" = "ยินดีด้วย!\nการลิงค์เสร็จสมบูรณ์แล้ว\nหากคุณต้องการเปลี่ยนหรือเพิ่ม Wallet\nเข้าสู่หน้าจอการดูแล\nด้วยปุ่มบน Wallet bar\nหากคุณมีเวลาเราขอแนะนำให้เข้าชมบทเรียนด้านความปลอดภัยหลังจากนี้ เพื่อตั้งรหัส PIN และสำรองข้อมูล Wallet";
+
+"wallet_settings_title" = "ตั้งค่า Wallet";
+"wallet_settings_general" = "ตั้งค่าทั่วไป";
+"wallet_settings_detail" = "รายละเอียด Wallet";
+"wallet_settings_address" = "Address ของ Wallet ";
+"wallet_settings_backup" = "สำรองข้อมูล Wallet";
+"wallet_settings_rename" = "เปลี่ยนชื่อ Wallet ";
+"wallet_settings_delete" = "ลบ Wallet";
+
+"wallet_key_caution_title" = "เกี่ยวกับคีย์ส่วนตัว (Private Key) ";
+"wallet_key_caution_message" = "คีย์ส่วนตัว (Private Key) เป็นข้อมูลที่สำคัญที่สุดในข้อมูลบัญชี Wallet ของคุณและต้องได้รับการจัดการอย่างรอบคอบเพราะเป็นข้อมูลลับ\n\nPrivate Key จำเป็นต่อการควบคุมเงินและสินทรัพย์ รวมถึงการเรียกคืนบัญชีของคุณ ดังนั้นความรู้นี้จะต้องให้ทุกคนเข้าใจก่อนใช้ Wallet\n\nโปรดอย่าลบ Private Key นี้ และต้องระวังอย่าให้เกิดการรั่วและสูญหายของข้อมูลนี้ ";
+
+"wallet_key_backup_title" = "Screen Shot หน้าจอนี้เป็นเรื่องอันตราย";
+"wallet_key_backup_message" = "\n\nควรเขียนลงบนกระดาษหรือบันทึกในแอ็พพลิเคชั่น / หรือซอฟต์แวร์บันทึกรหัสผ่าน";
+
+"wallet_delete_caution_message" = "คุณกำลังจะลบ Wallet  คุณจะไม่สามารถเรียกคืนได้โดยไม่มี Private Key\nคุณแน่ใจที่จะทำรายการต่อ?";
+
+"wallet_detail_title" = "รายละเอียด Wallet";
+"wallet_detail_structure" = "ส่วนประกอบ Wallet（m-of-n）";
+"wallet_detail_importance" = "คะแนนความสำคัญ";
+
+"wallet_detail_general" = "ข้อมูลทั่วไป";
+
+"wallet_rename_title" = "เปลี่ยนชื่อ Wallet ";
+"wallet_rename_hint" = "ตั้งชื่อ Wallet ";
+
+"wallet_go_home_caution1_title" = "คุณต้องการข้ามบทเรียนด้านความปลอดภัยหรือไม่?";
+"wallet_go_home_caution1_message" = "คุณต้องการข้ามบทเรียนด้านความปลอดภัย วิธีการใช้งาน การสร้างรหัส PIN และวิธีการสำรองข้อมูล Wallet \n เราแนะนำให้คุณศึกษาระบบความปลอดภัยให้ดีก่อน แต่หากต้องการเริ่มใช้งานเลย กรุณายืนยันไปต่อที่ หน้าหลัก";
+
+"wallet_go_home_caution2_title" = "เข้าใจแล้วนะ";
+"wallet_go_home_caution2_message" = "หากคุณต้องการตั้งค่าการสำรองข้อมูล Wallet หรือรหัส PIN คุณสามารถทำได้ที่ตั้งค่าในแอปพลิเคชัน หรือที่เมนูWallet\nหากคุณต้องการรับบทเรียนด้านความปลอดภัย ไปดูได้ที่การตั้งค่าความปลอดภัยของแอพ";
+
+"wallet_import_nano_password_title" = "ใส่รหัสผ่าน";
+"wallet_import_nano_password_headline" = "ใส่รหัสผ่าน NanoWallet";
+"wallet_import_nano_password_message" = "คุณพยายามลิงค์บัญชี NEM จาก QRโค้ด ที่สร้างโดย NanoWallet\nการดำเนินการนี้ต้องใช้รหัสผ่าน NanoWallet";
+"wallet_import_nano_password_hint" = "กรุณาใส่รหัสผ่าน";

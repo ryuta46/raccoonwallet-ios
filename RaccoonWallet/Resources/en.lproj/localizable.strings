@@ -170,7 +170,7 @@
 "lesson_pin_end_home" = "Complete Lesson";
 
 "lesson_pin_end_not_available_title" = "Oops!";
-"lesson_pin_end_not_available_message" = "It seems you have not set up fingerprint authentication on your device. \n Do you want to continue to Android OS setting page to set up fingerprint authentication?";
+"lesson_pin_end_not_available_message" = "It seems you have not set up fingerprint authentication on your device. \n Do you want to continue to iOS setting page to set up fingerprint authentication?";
 
 
 "qrlab_amount_headline" = "Request payment";

@@ -1126,2432 +1126,2432 @@ struct R: Rswift.Validatable {
     struct localizable {
       /// en translation: 
       /// 
-      /// Locales: en, ja
-      static let lesson_beginner_backup_end_title = Rswift.StringResource(key: "lesson_beginner_backup_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_beginner_backup_end_title = Rswift.StringResource(key: "lesson_beginner_backup_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 
       /// 
-      /// Locales: en, ja
-      static let lesson_beginner_title = Rswift.StringResource(key: "lesson_beginner_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_beginner_title = Rswift.StringResource(key: "lesson_beginner_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 
       /// 
-      /// Locales: en, ja
-      static let lesson_expert_title = Rswift.StringResource(key: "lesson_expert_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_expert_title = Rswift.StringResource(key: "lesson_expert_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 
       /// 
-      /// Locales: en, ja
-      static let lesson_level_title = Rswift.StringResource(key: "lesson_level_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_level_title = Rswift.StringResource(key: "lesson_level_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 
       /// 
-      /// Locales: en, ja
-      static let lesson_pin_end_title = Rswift.StringResource(key: "lesson_pin_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_pin_end_title = Rswift.StringResource(key: "lesson_pin_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 
       /// 
-      /// Locales: en, ja
-      static let wallet_create_title = Rswift.StringResource(key: "wallet_create_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_create_title = Rswift.StringResource(key: "wallet_create_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 
       /// 
-      /// Locales: en, ja
-      static let wallet_end_title = Rswift.StringResource(key: "wallet_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_end_title = Rswift.StringResource(key: "wallet_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 
       /// 
-      /// Locales: en, ja
-      static let wallet_name_title = Rswift.StringResource(key: "wallet_name_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation:   Please write down on a paper or secure it on Password management App/Software
+      /// Locales: en, ja, th
+      static let wallet_name_title = Rswift.StringResource(key: "wallet_name_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation:   Please write on paper or secure it on Password management App/Software
       /// 
-      /// Locales: en, ja
-      static let wallet_key_backup_message = Rswift.StringResource(key: "wallet_key_backup_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_key_backup_message = Rswift.StringResource(key: "wallet_key_backup_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 6 digit PIN code has been set up successfully to secure App.
       /// 
-      /// Locales: en, ja
-      static let common_pin_registration_complete = Rswift.StringResource(key: "common_pin_registration_complete", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_pin_registration_complete = Rswift.StringResource(key: "common_pin_registration_complete", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: About Private Key 
       /// 
-      /// Locales: en, ja
-      static let wallet_key_caution_title = Rswift.StringResource(key: "wallet_key_caution_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_key_caution_title = Rswift.StringResource(key: "wallet_key_caution_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: About This APP
       /// 
-      /// Locales: en, ja
-      static let about_title = Rswift.StringResource(key: "about_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let about_title = Rswift.StringResource(key: "about_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Address
       /// 
-      /// Locales: en, ja
-      static let common_address = Rswift.StringResource(key: "common_address", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: All transactions will be shown here. 
-      /// 
-      /// Locales: en, ja
-      static let transaction_no_transaction_message = Rswift.StringResource(key: "transaction_no_transaction_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_address = Rswift.StringResource(key: "common_address", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Amount
       /// 
-      /// Locales: en, ja
-      static let common_amount = Rswift.StringResource(key: "common_amount", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_amount = Rswift.StringResource(key: "common_amount", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Amount
       /// 
-      /// Locales: en, ja
-      static let qrlab_amount_title = Rswift.StringResource(key: "qrlab_amount_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let qrlab_amount_title = Rswift.StringResource(key: "qrlab_amount_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Android Developer
       /// 
-      /// Locales: en, ja
-      static let donation_android_engineer_name = Rswift.StringResource(key: "donation_android_engineer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_android_engineer_name = Rswift.StringResource(key: "donation_android_engineer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Android Engineer  @YukiYamadaJP @Riberd_Puzzle1  ・Android App Developer 
       /// 
-      /// Locales: en, ja
-      static let donation_android_engineer_detail = Rswift.StringResource(key: "donation_android_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_android_engineer_detail = Rswift.StringResource(key: "donation_android_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Attach
       /// 
-      /// Locales: en, ja
-      static let send_mode_attach = Rswift.StringResource(key: "send_mode_attach", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_mode_attach = Rswift.StringResource(key: "send_mode_attach", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Attach Mosaic
       /// 
-      /// Locales: en, ja
-      static let send_mosaic_setting = Rswift.StringResource(key: "send_mosaic_setting", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_mosaic_setting = Rswift.StringResource(key: "send_mosaic_setting", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Authenticate by fingerprint or PIN to complete sending. Please check information carefully before authenticating. 
       /// 
-      /// Locales: en, ja
-      static let send_confirmation_dialog_message = Rswift.StringResource(key: "send_confirmation_dialog_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_confirmation_dialog_message = Rswift.StringResource(key: "send_confirmation_dialog_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Back up Private Key + Set up PIN code
       /// 
-      /// Locales: en, ja
-      static let lesson_level_beginner_setup = Rswift.StringResource(key: "lesson_level_beginner_setup", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_level_beginner_setup = Rswift.StringResource(key: "lesson_level_beginner_setup", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Back up Wallet
       /// 
-      /// Locales: en, ja
-      static let lesson_level_expert_setup = Rswift.StringResource(key: "lesson_level_expert_setup", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_level_expert_setup = Rswift.StringResource(key: "lesson_level_expert_setup", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Back up Wallet
       /// 
-      /// Locales: en, ja
-      static let wallet_settings_backup = Rswift.StringResource(key: "wallet_settings_backup", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_settings_backup = Rswift.StringResource(key: "wallet_settings_backup", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Backup
       /// 
-      /// Locales: en, ja
-      static let common_backup = Rswift.StringResource(key: "common_backup", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_backup = Rswift.StringResource(key: "common_backup", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Change wallet name
       /// 
-      /// Locales: en, ja
-      static let wallet_rename_title = Rswift.StringResource(key: "wallet_rename_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_rename_title = Rswift.StringResource(key: "wallet_rename_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Change wallet name
       /// 
-      /// Locales: en, ja
-      static let wallet_settings_rename = Rswift.StringResource(key: "wallet_settings_rename", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_settings_rename = Rswift.StringResource(key: "wallet_settings_rename", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Coming Soon!
       /// 
-      /// Locales: en, ja
-      static let common_coming_soon = Rswift.StringResource(key: "common_coming_soon", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_coming_soon = Rswift.StringResource(key: "common_coming_soon", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Complete
       /// 
-      /// Locales: en, ja
-      static let common_done = Rswift.StringResource(key: "common_done", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_done = Rswift.StringResource(key: "common_done", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Complete Lesson
       /// 
-      /// Locales: en, ja
-      static let lesson_pin_end_home = Rswift.StringResource(key: "lesson_pin_end_home", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_pin_end_home = Rswift.StringResource(key: "lesson_pin_end_home", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Confirm sending by fingerprint authentication
       /// 
-      /// Locales: en, ja
-      static let send_confirmation_biometrics = Rswift.StringResource(key: "send_confirmation_biometrics", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_confirmation_biometrics = Rswift.StringResource(key: "send_confirmation_biometrics", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Congratulations!   Now that your Wallet has been created. Please see your address below. 
       /// 
-      /// Locales: en, ja
-      static let wallet_create_message_0 = Rswift.StringResource(key: "wallet_create_message_0", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_create_message_0 = Rswift.StringResource(key: "wallet_create_message_0", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Congratulations!   You have done linking your Wallet to this account.    If you want to change or add your Wallet, you can do so by Wallet bar to access management screen.   If you could spare your time, we advise you to take Security Lesson. You will learn how to set up PIN and how to backup your Wallet. 
       /// 
-      /// Locales: en, ja
-      static let wallet_login_end_message = Rswift.StringResource(key: "wallet_login_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Continue to Wallet selection screen. 
+      /// Locales: en, ja, th
+      static let wallet_login_end_message = Rswift.StringResource(key: "wallet_login_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: Continue to setup PIN page
       /// 
-      /// Locales: en, ja
-      static let common_error_go_send_no_wallet_button = Rswift.StringResource(key: "common_error_go_send_no_wallet_button", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_error_go_send_pin_button = Rswift.StringResource(key: "common_error_go_send_pin_button", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: Continue to wallet selection screen. 
+      /// 
+      /// Locales: en, ja, th
+      static let common_error_go_send_no_wallet_button = Rswift.StringResource(key: "common_error_go_send_no_wallet_button", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Copied to the clipboard
       /// 
-      /// Locales: en, ja
-      static let common_copy_to_clipboard = Rswift.StringResource(key: "common_copy_to_clipboard", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Create QR invoice with total amount by scanning a code. 
-      /// 
-      /// Locales: en, ja
-      static let qrlab_register_description = Rswift.StringResource(key: "qrlab_register_description", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_copy_to_clipboard = Rswift.StringResource(key: "common_copy_to_clipboard", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Create new wallet
       /// 
-      /// Locales: en, ja
-      static let wallet_creation_new = Rswift.StringResource(key: "wallet_creation_new", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_creation_new = Rswift.StringResource(key: "wallet_creation_new", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Create new wallet
       /// 
-      /// Locales: en, ja
-      static let wallet_creation_type_new = Rswift.StringResource(key: "wallet_creation_type_new", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_creation_type_new = Rswift.StringResource(key: "wallet_creation_type_new", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Creating a new Wallet is now completed.   If you want to back up your wallet, please go to the lesson.  n For those who wish to use Wallet now, please move on to "HOME" to skip the lesson. 
       /// 
-      /// Locales: en, ja
-      static let wallet_end_message = Rswift.StringResource(key: "wallet_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_end_message = Rswift.StringResource(key: "wallet_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Currency
       /// 
-      /// Locales: en, ja
-      static let setting_currency_select = Rswift.StringResource(key: "setting_currency_select", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let setting_currency_select = Rswift.StringResource(key: "setting_currency_select", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Currently, there is no mosaic to show here.
       /// 
-      /// Locales: en, ja
-      static let gallery_no_mosaic_message = Rswift.StringResource(key: "gallery_no_mosaic_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let gallery_no_mosaic_message = Rswift.StringResource(key: "gallery_no_mosaic_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Delete wallet
       /// 
-      /// Locales: en, ja
-      static let wallet_settings_delete = Rswift.StringResource(key: "wallet_settings_delete", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_settings_delete = Rswift.StringResource(key: "wallet_settings_delete", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Designer ・Android / iOS App's IA/UI/UX Design  ・Visual Design / Branding 
       /// 
-      /// Locales: en, ja
-      static let donation_designer_detail = Rswift.StringResource(key: "donation_designer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_designer_detail = Rswift.StringResource(key: "donation_designer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Destination
       /// 
-      /// Locales: en, ja
-      static let send_destination = Rswift.StringResource(key: "send_destination", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_destination = Rswift.StringResource(key: "send_destination", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Developers
       /// 
-      /// Locales: en, ja
-      static let donation_title = Rswift.StringResource(key: "donation_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_title = Rswift.StringResource(key: "donation_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Do not show again
       /// 
-      /// Locales: en, ja
-      static let common_never_remind = Rswift.StringResource(key: "common_never_remind", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_never_remind = Rswift.StringResource(key: "common_never_remind", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Do you want to send with a message? 
       /// 
-      /// Locales: en, ja
-      static let send_mode_select_message = Rswift.StringResource(key: "send_mode_select_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_mode_select_message = Rswift.StringResource(key: "send_mode_select_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Do you want to skip Security Lesson? 
       /// 
-      /// Locales: en, ja
-      static let wallet_go_home_caution1_title = Rswift.StringResource(key: "wallet_go_home_caution1_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_go_home_caution1_title = Rswift.StringResource(key: "wallet_go_home_caution1_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Don't take a screen shot of your private key.
       /// 
-      /// Locales: en, ja
-      static let wallet_key_backup_title = Rswift.StringResource(key: "wallet_key_backup_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_key_backup_title = Rswift.StringResource(key: "wallet_key_backup_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Donation
       /// 
-      /// Locales: en, ja
-      static let common_donation = Rswift.StringResource(key: "common_donation", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_donation = Rswift.StringResource(key: "common_donation", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Economy for Everybody
       /// 
-      /// Locales: en, ja
-      static let first_tutorial_title3 = Rswift.StringResource(key: "first_tutorial_title3", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let first_tutorial_title3 = Rswift.StringResource(key: "first_tutorial_title3", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Encrypt the message
       /// 
-      /// Locales: en, ja
-      static let send_message_type_select_title = Rswift.StringResource(key: "send_message_type_select_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_message_type_select_title = Rswift.StringResource(key: "send_message_type_select_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Encrypted message
       /// 
-      /// Locales: en, ja
-      static let send_message_encrypted_title = Rswift.StringResource(key: "send_message_encrypted_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_message_encrypted_title = Rswift.StringResource(key: "send_message_encrypted_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Engineer
       /// 
-      /// Locales: en, ja
-      static let donation_android_engineer_role = Rswift.StringResource(key: "donation_android_engineer_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_android_engineer_role = Rswift.StringResource(key: "donation_android_engineer_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Engineer
       /// 
-      /// Locales: en, ja
-      static let donation_soma_role = Rswift.StringResource(key: "donation_soma_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_soma_role = Rswift.StringResource(key: "donation_soma_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Engineer
       /// 
-      /// Locales: en, ja
-      static let donation_yuki_role = Rswift.StringResource(key: "donation_yuki_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_yuki_role = Rswift.StringResource(key: "donation_yuki_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: Engineer  ・Android App Developer 
+      /// 
+      /// Locales: en, ja, th
+      static let donation_soma_detail = Rswift.StringResource(key: "donation_soma_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: Engineer  ・Base App Developer  ・Android Ver. App Developer 
+      /// 
+      /// Locales: en, ja, th
+      static let donation_yuki_detail = Rswift.StringResource(key: "donation_yuki_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Engineer  ・iOS Development Director  ・PWA(Progressive Web Apps) Developer
       /// 
-      /// Locales: en, ja
-      static let donation_ios_engineer_detail = Rswift.StringResource(key: "donation_ios_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_ios_engineer_detail = Rswift.StringResource(key: "donation_ios_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Enter NanoWallet password
       /// 
-      /// Locales: en, ja
-      static let wallet_import_nano_password_headline = Rswift.StringResource(key: "wallet_import_nano_password_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_import_nano_password_headline = Rswift.StringResource(key: "wallet_import_nano_password_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Enter Wallet name
       /// 
-      /// Locales: en, ja
-      static let wallet_rename_hint = Rswift.StringResource(key: "wallet_rename_hint", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_rename_hint = Rswift.StringResource(key: "wallet_rename_hint", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Enter amount
       /// 
-      /// Locales: en, ja
-      static let send_amount_title = Rswift.StringResource(key: "send_amount_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_amount_title = Rswift.StringResource(key: "send_amount_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Enter destination address
       /// 
-      /// Locales: en, ja
-      static let send_input_address = Rswift.StringResource(key: "send_input_address", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_input_address = Rswift.StringResource(key: "send_input_address", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Enter message
       /// 
-      /// Locales: en, ja
-      static let common_message_input = Rswift.StringResource(key: "common_message_input", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_message_input = Rswift.StringResource(key: "common_message_input", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Enter password
       /// 
-      /// Locales: en, ja
-      static let wallet_import_nano_password_hint = Rswift.StringResource(key: "wallet_import_nano_password_hint", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_import_nano_password_hint = Rswift.StringResource(key: "wallet_import_nano_password_hint", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Enter password
       /// 
-      /// Locales: en, ja
-      static let wallet_import_nano_password_title = Rswift.StringResource(key: "wallet_import_nano_password_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_import_nano_password_title = Rswift.StringResource(key: "wallet_import_nano_password_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Failed to unlock
       /// 
-      /// Locales: en, ja
-      static let common_error_decode_message = Rswift.StringResource(key: "common_error_decode_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_error_decode_message = Rswift.StringResource(key: "common_error_decode_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Failed to unlock
       /// 
-      /// Locales: en, ja
-      static let transaction_failed_to_decrypt = Rswift.StringResource(key: "transaction_failed_to_decrypt", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let transaction_failed_to_decrypt = Rswift.StringResource(key: "transaction_failed_to_decrypt", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Fee
       /// 
-      /// Locales: en, ja
-      static let common_fee = Rswift.StringResource(key: "common_fee", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Fingerprint required
-      /// 
-      /// Locales: en, ja
-      static let setting_require_biometrics = Rswift.StringResource(key: "setting_require_biometrics", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_fee = Rswift.StringResource(key: "common_fee", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: For those who are about to start Crypto.   First above anything, cryptocurrency has "Private Key," which is very significant.   This Private Key is used to control your asset in the Wallet; it also be used to back up your Wallet in case you lose your devices or whatsoever.   You might also need to set up PIN code to lock your application - just so you need to protect from fraud as well.   Hence, we are going to give you lesson regarding to Private Key and PIN code setup.   And now let's move on. Are you ready? 
       /// 
-      /// Locales: en, ja
-      static let lesson_beginner_message = Rswift.StringResource(key: "lesson_beginner_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_beginner_message = Rswift.StringResource(key: "lesson_beginner_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: For those who are already professional in cryptocurrency.   Thank you for choosing Raccoon.   Well, there might be nothing for you to learn from us.   Please do setup PIN code from this screen.   If you have forgotten to back up Private Key, you might want to take Security Lesson from beginner's guide. 
       /// 
-      /// Locales: en, ja
-      static let lesson_importer_message = Rswift.StringResource(key: "lesson_importer_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_importer_message = Rswift.StringResource(key: "lesson_importer_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Friends list
       /// 
-      /// Locales: en, ja
-      static let common_address_book = Rswift.StringResource(key: "common_address_book", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_address_book = Rswift.StringResource(key: "common_address_book", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: General
       /// 
-      /// Locales: en, ja
-      static let common_general = Rswift.StringResource(key: "common_general", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_general = Rswift.StringResource(key: "common_general", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: General Information
       /// 
-      /// Locales: en, ja
-      static let wallet_detail_general = Rswift.StringResource(key: "wallet_detail_general", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_detail_general = Rswift.StringResource(key: "wallet_detail_general", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: General settings
       /// 
-      /// Locales: en, ja
-      static let wallet_settings_general = Rswift.StringResource(key: "wallet_settings_general", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_settings_general = Rswift.StringResource(key: "wallet_settings_general", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Good day!   You want to do back up Private Key, right?   You can check your Private Key from the next screen.   Thank you for staying loyal with us. 
       /// 
-      /// Locales: en, ja
-      static let lesson_expert_message = Rswift.StringResource(key: "lesson_expert_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_expert_message = Rswift.StringResource(key: "lesson_expert_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Good day, our dearest cryptocoiner.   Please type in your private key   or scan the QR code.  2 Your account will be linked to Raccoon. 
       /// 
-      /// Locales: en, ja
-      static let wallet_import_message = Rswift.StringResource(key: "wallet_import_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_import_message = Rswift.StringResource(key: "wallet_import_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Good job!
       /// 
-      /// Locales: en, ja
-      static let lesson_end_title = Rswift.StringResource(key: "lesson_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_end_title = Rswift.StringResource(key: "lesson_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: Good job! n You've completed Security Lesson.    If you have any question, access Help page from menu.    We wish you a happy Crypto life! 
+      /// 
+      /// Locales: en, ja, th
+      static let lesson_beginner_end_message = Rswift.StringResource(key: "lesson_beginner_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: Good job! n You've completed Security Lesson.   Access Help page from menu to learn how to use this wallet.    We wish you a happy Crypto life! 
+      /// 
+      /// Locales: en, ja, th
+      static let lesson_importer_end_message = Rswift.StringResource(key: "lesson_importer_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Great!  Your account has been linked successfully.  Giving a name to the wallet would help you.
       /// 
-      /// Locales: en, ja
-      static let wallet_login_name_message = Rswift.StringResource(key: "wallet_login_name_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_login_name_message = Rswift.StringResource(key: "wallet_login_name_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: Handle transfers
+      /// 
+      /// Locales: en, ja, th
+      static let send_amount_setting = Rswift.StringResource(key: "send_amount_setting", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Hello again!     Have you done backup your Wallet already?   Next, you set up PIN code for application.    Wish you good luck! 
       /// 
-      /// Locales: en, ja
-      static let lesson_beginner_backup_end_message = Rswift.StringResource(key: "lesson_beginner_backup_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_beginner_backup_end_message = Rswift.StringResource(key: "lesson_beginner_backup_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Hello once again!   Welcome to Raccoon Wallet.   Before you start Raccoon, you need to prepare a wallet first.   Please choose if you make a new wallet or import one.
       /// 
-      /// Locales: en, ja
-      static let create_wallet_tutorial_message = Rswift.StringResource(key: "create_wallet_tutorial_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let create_wallet_tutorial_message = Rswift.StringResource(key: "create_wallet_tutorial_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Hey, Watch out! 
       /// 
-      /// Locales: en, ja
-      static let send_newbie_caution_title = Rswift.StringResource(key: "send_newbie_caution_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_newbie_caution_title = Rswift.StringResource(key: "send_newbie_caution_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Hi, I am glad to see you!   Let us begin New Economy Movement by Blockchain together! 
       /// 
-      /// Locales: en, ja
-      static let first_tutorial_message1 = Rswift.StringResource(key: "first_tutorial_message1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: If you have forgotten your PIN code, you will never be able to access to your account no matter what, therefore please do not forget it. That said, your asset is still in your Wallet account. By this mean, you will lose your asset only when you have lost Private Key. 
+      /// Locales: en, ja, th
+      static let first_tutorial_message1 = Rswift.StringResource(key: "first_tutorial_message1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: If you have forgotten your PIN code, you will never be able to use this App no matter what. Please do not forget it. That said, your XEM is still in your wallet even if you have forgotten your PIN. You will lose your asset only when you have lost the private key. 
       /// 
-      /// Locales: en, ja
-      static let common_pin_registration_message_1 = Rswift.StringResource(key: "common_pin_registration_message_1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_pin_registration_message_1 = Rswift.StringResource(key: "common_pin_registration_message_1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: If you want to back up your Wallet or set up PIN code, you can always do so at Wallet bar or application setting in Menu bar.   Also, you can take Security Lesson at anytime by go to Security in the application setting. 
       /// 
-      /// Locales: en, ja
-      static let wallet_go_home_caution2_message = Rswift.StringResource(key: "wallet_go_home_caution2_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_go_home_caution2_message = Rswift.StringResource(key: "wallet_go_home_caution2_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: If you want to maintain your wallet, press the button in the bar above.   It is not working in this page so please try later.  
       /// 
-      /// Locales: en, ja
-      static let wallet_create_message_1 = Rswift.StringResource(key: "wallet_create_message_1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_create_message_1 = Rswift.StringResource(key: "wallet_create_message_1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Import
       /// 
-      /// Locales: en, ja
-      static let wallet_creation_type_import = Rswift.StringResource(key: "wallet_creation_type_import", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_creation_type_import = Rswift.StringResource(key: "wallet_creation_type_import", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Import QR code
       /// 
-      /// Locales: en, ja
-      static let common_qr_import = Rswift.StringResource(key: "common_qr_import", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_qr_import = Rswift.StringResource(key: "common_qr_import", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Import Wallet name
       /// 
-      /// Locales: en, ja
-      static let wallet_login_name_title = Rswift.StringResource(key: "wallet_login_name_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_login_name_title = Rswift.StringResource(key: "wallet_login_name_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Import private key
       /// 
-      /// Locales: en, ja
-      static let wallet_import_title = Rswift.StringResource(key: "wallet_import_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_import_title = Rswift.StringResource(key: "wallet_import_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Importance score
       /// 
-      /// Locales: en, ja
-      static let wallet_detail_importance = Rswift.StringResource(key: "wallet_detail_importance", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_detail_importance = Rswift.StringResource(key: "wallet_detail_importance", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: In order to send an encrypted message, the recipient needs to have their public key.   Since the current recipient does not have their public key, you can't send the encrypted message.
       /// 
-      /// Locales: en, ja
-      static let send_message_no_public_key_message = Rswift.StringResource(key: "send_message_no_public_key_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_message_no_public_key_message = Rswift.StringResource(key: "send_message_no_public_key_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Incorrect PIN code.  Please try again.
       /// 
-      /// Locales: en, ja
-      static let common_pin_retry = Rswift.StringResource(key: "common_pin_retry", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_pin_retry = Rswift.StringResource(key: "common_pin_retry", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Incorrect password
       /// 
-      /// Locales: en, ja
-      static let common_invalid_password = Rswift.StringResource(key: "common_invalid_password", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_invalid_password = Rswift.StringResource(key: "common_invalid_password", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Innovation in trust on your hands
       /// 
-      /// Locales: en, ja
-      static let first_tutorial_title2 = Rswift.StringResource(key: "first_tutorial_title2", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let first_tutorial_title2 = Rswift.StringResource(key: "first_tutorial_title2", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Input PIN to confirm your transfer
       /// 
-      /// Locales: en, ja
-      static let send_confirmation_pin_message = Rswift.StringResource(key: "send_confirmation_pin_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_confirmation_pin_message = Rswift.StringResource(key: "send_confirmation_pin_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Invalid address
       /// 
-      /// Locales: en, ja
-      static let common_invalid_address = Rswift.StringResource(key: "common_invalid_address", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_invalid_address = Rswift.StringResource(key: "common_invalid_address", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Invalid private key
       /// 
-      /// Locales: en, ja
-      static let wallet_invalid_key = Rswift.StringResource(key: "wallet_invalid_key", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_invalid_key = Rswift.StringResource(key: "wallet_invalid_key", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: It is a Raccoon user. 
       /// 
-      /// Locales: en, ja
-      static let lesson_level_expert_title = Rswift.StringResource(key: "lesson_level_expert_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_level_expert_title = Rswift.StringResource(key: "lesson_level_expert_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: It is a pleasure to meet you
       /// 
-      /// Locales: en, ja
-      static let first_tutorial_title1 = Rswift.StringResource(key: "first_tutorial_title1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let first_tutorial_title1 = Rswift.StringResource(key: "first_tutorial_title1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: It seems you have already set up PIN.   Please press OK to complete lesson.   Thank you! 
       /// 
-      /// Locales: en, ja
-      static let lesson_cancel_pin_message = Rswift.StringResource(key: "lesson_cancel_pin_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: It seems you have not done with setup fingerprint authentication on your device.   Do you want to continue with fingerprint setup on Android OS setting? 
+      /// Locales: en, ja, th
+      static let lesson_cancel_pin_message = Rswift.StringResource(key: "lesson_cancel_pin_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: It seems you have not set up fingerprint authentication on your device.   Do you want to continue to iOS setting page to set up fingerprint authentication?
       /// 
-      /// Locales: en, ja
-      static let lesson_pin_end_not_available_message = Rswift.StringResource(key: "lesson_pin_end_not_available_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_pin_end_not_available_message = Rswift.StringResource(key: "lesson_pin_end_not_available_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Let's get started.
       /// 
-      /// Locales: en, ja
-      static let first_tutorial_button = Rswift.StringResource(key: "first_tutorial_button", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let first_tutorial_button = Rswift.StringResource(key: "first_tutorial_button", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Let's secure your privacy with military grade encryption.  
       /// 
-      /// Locales: en, ja
-      static let send_message_encrypted_description = Rswift.StringResource(key: "send_message_encrypted_description", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_message_encrypted_description = Rswift.StringResource(key: "send_message_encrypted_description", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Let's set up PIN code to protect your application. Please key in 6 digit number.   You will need to key in two times the same for the confirmation of your PIN code.   ※ We strongly advise you to avoid using the repetitive digit number or key in your birth date from security perspective.  
       /// 
-      /// Locales: en, ja
-      static let common_pin_registration_message_0 = Rswift.StringResource(key: "common_pin_registration_message_0", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_pin_registration_message_0 = Rswift.StringResource(key: "common_pin_registration_message_0", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Link completed. 
       /// 
-      /// Locales: en, ja
-      static let wallet_login_end_title = Rswift.StringResource(key: "wallet_login_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_login_end_title = Rswift.StringResource(key: "wallet_login_end_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Logged in by Private Key
       /// 
-      /// Locales: en, ja
-      static let lesson_level_importer_title = Rswift.StringResource(key: "lesson_level_importer_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_level_importer_title = Rswift.StringResource(key: "lesson_level_importer_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Message
       /// 
-      /// Locales: en, ja
-      static let common_message = Rswift.StringResource(key: "common_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_message = Rswift.StringResource(key: "common_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Message is encrypted
       /// 
-      /// Locales: en, ja
-      static let transaction_message_is_encrypted = Rswift.StringResource(key: "transaction_message_is_encrypted", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let transaction_message_is_encrypted = Rswift.StringResource(key: "transaction_message_is_encrypted", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Mosaic Gallery
       /// 
-      /// Locales: en, ja
-      static let common_mosaic_gallery = Rswift.StringResource(key: "common_mosaic_gallery", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_mosaic_gallery = Rswift.StringResource(key: "common_mosaic_gallery", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Mosaics
       /// 
-      /// Locales: en, ja
-      static let common_mosaic_list = Rswift.StringResource(key: "common_mosaic_list", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Move to setup PIN page
-      /// 
-      /// Locales: en, ja
-      static let common_error_go_send_pin_button = Rswift.StringResource(key: "common_error_go_send_pin_button", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_mosaic_list = Rswift.StringResource(key: "common_mosaic_list", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Network Error
       /// 
-      /// Locales: en, ja
-      static let common_error_network = Rswift.StringResource(key: "common_error_network", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_error_network = Rswift.StringResource(key: "common_error_network", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: New Economy Movement for liberty and co-creation is already here.
       /// 
-      /// Locales: en, ja
-      static let first_tutorial_message3 = Rswift.StringResource(key: "first_tutorial_message3", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let first_tutorial_message3 = Rswift.StringResource(key: "first_tutorial_message3", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: New Economy platform based on cryptocurrency and new ideas encourages you to have amazing experiences.
       /// 
-      /// Locales: en, ja
-      static let first_tutorial_message2 = Rswift.StringResource(key: "first_tutorial_message2", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let first_tutorial_message2 = Rswift.StringResource(key: "first_tutorial_message2", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: No harvesting income yet.
       /// 
-      /// Locales: en, ja
-      static let home_harvest_empty_message = Rswift.StringResource(key: "home_harvest_empty_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let home_harvest_empty_message = Rswift.StringResource(key: "home_harvest_empty_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: No mosaics
       /// 
-      /// Locales: en, ja
-      static let gallery_no_mosaic_title = Rswift.StringResource(key: "gallery_no_mosaic_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let gallery_no_mosaic_title = Rswift.StringResource(key: "gallery_no_mosaic_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: No transactions yet.
       /// 
-      /// Locales: en, ja
-      static let home_transaction_empty_message = Rswift.StringResource(key: "home_transaction_empty_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let home_transaction_empty_message = Rswift.StringResource(key: "home_transaction_empty_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: No wallet is selected
       /// 
-      /// Locales: en, ja
-      static let wallet_not_select_message = Rswift.StringResource(key: "wallet_not_select_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_not_select_message = Rswift.StringResource(key: "wallet_not_select_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Not acquired 
       /// 
-      /// Locales: en, ja
-      static let common_not_get = Rswift.StringResource(key: "common_not_get", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_not_get = Rswift.StringResource(key: "common_not_get", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Not selected
       /// 
-      /// Locales: en, ja
-      static let common_not_select = Rswift.StringResource(key: "common_not_select", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_not_select = Rswift.StringResource(key: "common_not_select", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Notifications
       /// 
-      /// Locales: en, ja
-      static let setting_notification_setting = Rswift.StringResource(key: "setting_notification_setting", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let setting_notification_setting = Rswift.StringResource(key: "setting_notification_setting", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Now that you have done setup PIN.   This may be the last lesson to you.    You might as well want to set up fingerprint and/or face authentication. Do you want to proceed? 
       /// 
-      /// Locales: en, ja
-      static let lesson_pin_end_message = Rswift.StringResource(key: "lesson_pin_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_pin_end_message = Rswift.StringResource(key: "lesson_pin_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Official DISCORD Server |  Link 
       /// 
-      /// Locales: en, ja
-      static let about_discord = Rswift.StringResource(key: "about_discord", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let about_discord = Rswift.StringResource(key: "about_discord", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Official Website | raccoonwallet.com
       /// 
-      /// Locales: en, ja
-      static let about_official_site = Rswift.StringResource(key: "about_official_site", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let about_official_site = Rswift.StringResource(key: "about_official_site", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Oops!
       /// 
-      /// Locales: en, ja
-      static let lesson_cancel_pin_title = Rswift.StringResource(key: "lesson_cancel_pin_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_cancel_pin_title = Rswift.StringResource(key: "lesson_cancel_pin_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Oops!
       /// 
-      /// Locales: en, ja
-      static let lesson_pin_end_not_available_title = Rswift.StringResource(key: "lesson_pin_end_not_available_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_pin_end_not_available_title = Rswift.StringResource(key: "lesson_pin_end_not_available_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Oops!
       /// 
-      /// Locales: en, ja
-      static let setting_pin_not_available_title = Rswift.StringResource(key: "setting_pin_not_available_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let setting_pin_not_available_title = Rswift.StringResource(key: "setting_pin_not_available_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Oops! No transaction yet.
       /// 
-      /// Locales: en, ja
-      static let transaction_no_transaction_title = Rswift.StringResource(key: "transaction_no_transaction_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let transaction_no_transaction_title = Rswift.StringResource(key: "transaction_no_transaction_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Open Source License
       /// 
-      /// Locales: en, ja
-      static let about_open_source = Rswift.StringResource(key: "about_open_source", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Otsukaresama deshita m (    ) m n This is the end of Security Lesson.    If you want to learn more, please take a look at Help at Menu section.    We wish you a happy Crypto life! 
-      /// 
-      /// Locales: en, ja
-      static let lesson_beginner_end_message = Rswift.StringResource(key: "lesson_beginner_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Otsukaresama deshita m (    ) m n This is the end of Security Lesson.   You can learn how to use this Wallet by Help in Menu section.    We wish you a happy Crypto life! 
-      /// 
-      /// Locales: en, ja
-      static let lesson_importer_end_message = Rswift.StringResource(key: "lesson_importer_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let about_open_source = Rswift.StringResource(key: "about_open_source", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Plain Message
       /// 
-      /// Locales: en, ja
-      static let send_message_plain_title = Rswift.StringResource(key: "send_message_plain_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_message_plain_title = Rswift.StringResource(key: "send_message_plain_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Plain message.   Be sure to input authentication code here when you depositing in crypto exchanges.
       /// 
-      /// Locales: en, ja
-      static let send_message_plain_description = Rswift.StringResource(key: "send_message_plain_description", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_message_plain_description = Rswift.StringResource(key: "send_message_plain_description", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Please check before using App.
       /// 
-      /// Locales: en, ja
-      static let common_privacy_policy_caution = Rswift.StringResource(key: "common_privacy_policy_caution", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_privacy_policy_caution = Rswift.StringResource(key: "common_privacy_policy_caution", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Private Key is the most significant thing, which you must secure it at all cost.    Private Key controls all assets and account information - it can also be used to restore your Wallet. Therefore, everyone has to know this basic knowledge.    Please do not lose your Private Key, and never tell others. 
       /// 
-      /// Locales: en, ja
-      static let wallet_key_caution_message = Rswift.StringResource(key: "wallet_key_caution_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_key_caution_message = Rswift.StringResource(key: "wallet_key_caution_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Profile
       /// 
-      /// Locales: en, ja
-      static let donation_detail_title = Rswift.StringResource(key: "donation_detail_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_detail_title = Rswift.StringResource(key: "donation_detail_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Public key
       /// 
-      /// Locales: en, ja
-      static let common_public_key = Rswift.StringResource(key: "common_public_key", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_public_key = Rswift.StringResource(key: "common_public_key", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: QR Register
       /// 
-      /// Locales: en, ja
-      static let qrlab_register_headline = Rswift.StringResource(key: "qrlab_register_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let qrlab_register_headline = Rswift.StringResource(key: "qrlab_register_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Raccoon
       /// 
-      /// Locales: en, ja
-      static let common_app_title = Rswift.StringResource(key: "common_app_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Raccoon is made by these pure three visions: reliable, UI is easy to use, and make cryptocurrency enjoyable than ever. 
+      /// Locales: en, ja, th
+      static let common_app_title = Rswift.StringResource(key: "common_app_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: Raccoon is a cryptocurrency wallet aiming following 3 goals: High reliability, Easy UI and Fun in cryptocurrency than ever.
       /// 
-      /// Locales: en, ja
-      static let about_app_concept = Rswift.StringResource(key: "about_app_concept", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let about_app_concept = Rswift.StringResource(key: "about_app_concept", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Recipient
       /// 
-      /// Locales: en, ja
-      static let common_destination = Rswift.StringResource(key: "common_destination", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Remit processing
-      /// 
-      /// Locales: en, ja
-      static let send_amount_setting = Rswift.StringResource(key: "send_amount_setting", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_destination = Rswift.StringResource(key: "common_destination", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Remove
       /// 
-      /// Locales: en, ja
-      static let common_delete = Rswift.StringResource(key: "common_delete", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_delete = Rswift.StringResource(key: "common_delete", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Request payment
       /// 
-      /// Locales: en, ja
-      static let qrlab_amount_headline = Rswift.StringResource(key: "qrlab_amount_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let qrlab_amount_headline = Rswift.StringResource(key: "qrlab_amount_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: Require Fingerprint
+      /// 
+      /// Locales: en, ja, th
+      static let setting_require_biometrics = Rswift.StringResource(key: "setting_require_biometrics", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Require PIN at startup
       /// 
-      /// Locales: en, ja
-      static let setting_require_pin_on_launch = Rswift.StringResource(key: "setting_require_pin_on_launch", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let setting_require_pin_on_launch = Rswift.StringResource(key: "setting_require_pin_on_launch", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Rhime
       /// 
-      /// Locales: en, ja
-      static let donation_designer_name = Rswift.StringResource(key: "donation_designer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_designer_name = Rswift.StringResource(key: "donation_designer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Roger that! 
       /// 
-      /// Locales: en, ja
-      static let wallet_go_home_caution2_title = Rswift.StringResource(key: "wallet_go_home_caution2_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_go_home_caution2_title = Rswift.StringResource(key: "wallet_go_home_caution2_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Ryuta
       /// 
-      /// Locales: en, ja
-      static let donation_ios_engineer_name = Rswift.StringResource(key: "donation_ios_engineer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_ios_engineer_name = Rswift.StringResource(key: "donation_ios_engineer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: SUCCESS
       /// 
-      /// Locales: en, ja
-      static let common_success = Rswift.StringResource(key: "common_success", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_success = Rswift.StringResource(key: "common_success", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: SUCCESS!
       /// 
-      /// Locales: en, ja
-      static let common_biometrics_enable_success_title = Rswift.StringResource(key: "common_biometrics_enable_success_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_biometrics_enable_success_title = Rswift.StringResource(key: "common_biometrics_enable_success_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: Scan a code to create a QR code to invoice total amount.
+      /// 
+      /// Locales: en, ja, th
+      static let qrlab_register_description = Rswift.StringResource(key: "qrlab_register_description", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Security
       /// 
-      /// Locales: en, ja
-      static let common_security = Rswift.StringResource(key: "common_security", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_security = Rswift.StringResource(key: "common_security", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Security Lesson
       /// 
-      /// Locales: en, ja
-      static let common_security_lesson = Rswift.StringResource(key: "common_security_lesson", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_security_lesson = Rswift.StringResource(key: "common_security_lesson", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Select a wallet
       /// 
-      /// Locales: en, ja
-      static let wallet_select = Rswift.StringResource(key: "wallet_select", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_select = Rswift.StringResource(key: "wallet_select", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Select language
       /// 
-      /// Locales: en, ja
-      static let setting_language_select = Rswift.StringResource(key: "setting_language_select", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let setting_language_select = Rswift.StringResource(key: "setting_language_select", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Select node
       /// 
-      /// Locales: en, ja
-      static let setting_node_select = Rswift.StringResource(key: "setting_node_select", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let setting_node_select = Rswift.StringResource(key: "setting_node_select", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Select transfer mode
       /// 
-      /// Locales: en, ja
-      static let send_mode_select_title = Rswift.StringResource(key: "send_mode_select_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_mode_select_title = Rswift.StringResource(key: "send_mode_select_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Send with XEM
       /// 
-      /// Locales: en, ja
-      static let send_amount_with_xem = Rswift.StringResource(key: "send_amount_with_xem", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_amount_with_xem = Rswift.StringResource(key: "send_amount_with_xem", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Set fingerprint authentication
       /// 
-      /// Locales: en, ja
-      static let lesson_pin_end_set_ok = Rswift.StringResource(key: "lesson_pin_end_set_ok", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_pin_end_set_ok = Rswift.StringResource(key: "lesson_pin_end_set_ok", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Set up PIN Code
       /// 
-      /// Locales: en, ja
-      static let common_pin_settings = Rswift.StringResource(key: "common_pin_settings", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_pin_settings = Rswift.StringResource(key: "common_pin_settings", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Set up PIN Code
       /// 
-      /// Locales: en, ja
-      static let lesson_level_importer_setup = Rswift.StringResource(key: "lesson_level_importer_setup", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_level_importer_setup = Rswift.StringResource(key: "lesson_level_importer_setup", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Set up PIN Code
       /// 
-      /// Locales: en, ja
-      static let setting_change_password = Rswift.StringResource(key: "setting_change_password", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let setting_change_password = Rswift.StringResource(key: "setting_change_password", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Set up wallet
       /// 
-      /// Locales: en, ja
-      static let wallet_settings_title = Rswift.StringResource(key: "wallet_settings_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_settings_title = Rswift.StringResource(key: "wallet_settings_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Settings
       /// 
-      /// Locales: en, ja
-      static let common_settings = Rswift.StringResource(key: "common_settings", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_settings = Rswift.StringResource(key: "common_settings", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Setup access by fingerprint authentication
       /// 
-      /// Locales: en, ja
-      static let common_biometrics_enable_title = Rswift.StringResource(key: "common_biometrics_enable_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_biometrics_enable_title = Rswift.StringResource(key: "common_biometrics_enable_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Setup log in by fingerprint authentication is completed. 
       /// 
-      /// Locales: en, ja
-      static let common_biometrics_enable_success_message = Rswift.StringResource(key: "common_biometrics_enable_success_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_biometrics_enable_success_message = Rswift.StringResource(key: "common_biometrics_enable_success_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Show PIN on screen 
       /// 
-      /// Locales: en, ja
-      static let send_confirmation_button = Rswift.StringResource(key: "send_confirmation_button", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_confirmation_button = Rswift.StringResource(key: "send_confirmation_button", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: So, you chose to create a new wallet!    Let us guide you how to create it!   First of all, please name your wallet.   Any name is fine as you wish. 
       /// 
-      /// Locales: en, ja
-      static let wallet_name_message = Rswift.StringResource(key: "wallet_name_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_name_message = Rswift.StringResource(key: "wallet_name_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Soma
       /// 
-      /// Locales: en, ja
-      static let donation_soma_name = Rswift.StringResource(key: "donation_soma_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_soma_name = Rswift.StringResource(key: "donation_soma_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Start Cryptocurrency by Raccoon 
       /// 
-      /// Locales: en, ja
-      static let lesson_level_beginner_title = Rswift.StringResource(key: "lesson_level_beginner_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_level_beginner_title = Rswift.StringResource(key: "lesson_level_beginner_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Take Security Lesson
       /// 
-      /// Locales: en, ja
-      static let setting_go_to_security_lesson = Rswift.StringResource(key: "setting_go_to_security_lesson", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let setting_go_to_security_lesson = Rswift.StringResource(key: "setting_go_to_security_lesson", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Terms of Use and Privacy Policy
       /// 
-      /// Locales: en, ja
-      static let common_privacy_policy = Rswift.StringResource(key: "common_privacy_policy", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_privacy_policy = Rswift.StringResource(key: "common_privacy_policy", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Thank you for choosing Raccoon. 
       /// 
-      /// Locales: en, ja
-      static let lesson_level_importer_message = Rswift.StringResource(key: "lesson_level_importer_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_level_importer_message = Rswift.StringResource(key: "lesson_level_importer_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Thank you for staying loyal. It's a nice weather today. 
       /// 
-      /// Locales: en, ja
-      static let lesson_level_expert_message = Rswift.StringResource(key: "lesson_level_expert_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Thank you for using Raccoon.   So this is the end of Security Lesson.    We hope you continue enjoying crypto life. 
+      /// Locales: en, ja, th
+      static let lesson_level_expert_message = Rswift.StringResource(key: "lesson_level_expert_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: Thank you for using Raccoon.   This is the end of Security Lesson.    We hope you enjoy crypto life! 
       /// 
-      /// Locales: en, ja
-      static let lesson_expert_end_message = Rswift.StringResource(key: "lesson_expert_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_expert_end_message = Rswift.StringResource(key: "lesson_expert_end_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: The list of wallet(s) will be shown here when creating a new wallet by tapping above   or linking your existing wallet account. 
       /// 
-      /// Locales: en, ja
-      static let wallet_no_wallet_message = Rswift.StringResource(key: "wallet_no_wallet_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_no_wallet_message = Rswift.StringResource(key: "wallet_no_wallet_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: The recipient can't receive an encrypted message. 
       /// 
-      /// Locales: en, ja
-      static let send_message_no_public_key_title = Rswift.StringResource(key: "send_message_no_public_key_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_message_no_public_key_title = Rswift.StringResource(key: "send_message_no_public_key_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: There is no wallet.
       /// 
-      /// Locales: en, ja
-      static let wallet_no_wallet_title = Rswift.StringResource(key: "wallet_no_wallet_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: This is the final remittance confirmation screen
+      /// Locales: en, ja, th
+      static let wallet_no_wallet_title = Rswift.StringResource(key: "wallet_no_wallet_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: This is the final page to confirm your transfer
       /// 
-      /// Locales: en, ja
-      static let send_confirmation_title = Rswift.StringResource(key: "send_confirmation_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_confirmation_title = Rswift.StringResource(key: "send_confirmation_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Transaction detail
       /// 
-      /// Locales: en, ja
-      static let transaction_detail_title = Rswift.StringResource(key: "transaction_detail_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let transaction_detail_title = Rswift.StringResource(key: "transaction_detail_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Transactions
       /// 
-      /// Locales: en, ja
-      static let transaction_list_title = Rswift.StringResource(key: "transaction_list_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let transaction_list_title = Rswift.StringResource(key: "transaction_list_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: Transactions will be shown here. 
+      /// 
+      /// Locales: en, ja, th
+      static let transaction_no_transaction_message = Rswift.StringResource(key: "transaction_no_transaction_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Transfer detail
       /// 
-      /// Locales: en, ja
-      static let send_complete_transaction_label = Rswift.StringResource(key: "send_complete_transaction_label", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_complete_transaction_label = Rswift.StringResource(key: "send_complete_transaction_label", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: UI designer
       /// 
-      /// Locales: en, ja
-      static let donation_designer_role = Rswift.StringResource(key: "donation_designer_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_designer_role = Rswift.StringResource(key: "donation_designer_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Use Selling Item list 
       /// 
-      /// Locales: en, ja
-      static let qrlab_list_headline = Rswift.StringResource(key: "qrlab_list_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let qrlab_list_headline = Rswift.StringResource(key: "qrlab_list_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Wallet address
       /// 
-      /// Locales: en, ja
-      static let wallet_settings_address = Rswift.StringResource(key: "wallet_settings_address", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_settings_address = Rswift.StringResource(key: "wallet_settings_address", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Wallet address created this time
       /// 
-      /// Locales: en, ja
-      static let wallet_create_address_headline = Rswift.StringResource(key: "wallet_create_address_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_create_address_headline = Rswift.StringResource(key: "wallet_create_address_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Wallet balance
       /// 
-      /// Locales: en, ja
-      static let common_wallet_balance = Rswift.StringResource(key: "common_wallet_balance", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_wallet_balance = Rswift.StringResource(key: "common_wallet_balance", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Wallet configuration (m-of-n)
       /// 
-      /// Locales: en, ja
-      static let wallet_detail_structure = Rswift.StringResource(key: "wallet_detail_structure", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_detail_structure = Rswift.StringResource(key: "wallet_detail_structure", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Wallet detail
       /// 
-      /// Locales: en, ja
-      static let wallet_detail_title = Rswift.StringResource(key: "wallet_detail_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_detail_title = Rswift.StringResource(key: "wallet_detail_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Wallet detail
       /// 
-      /// Locales: en, ja
-      static let wallet_settings_detail = Rswift.StringResource(key: "wallet_settings_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_settings_detail = Rswift.StringResource(key: "wallet_settings_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Wallet name
       /// 
-      /// Locales: en, ja
-      static let wallet_name_input = Rswift.StringResource(key: "wallet_name_input", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_name_input = Rswift.StringResource(key: "wallet_name_input", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Welcome aboard!   Are you looking for Security Lesson ? Well, here it is! Let's get started.    First of all, can you tell me about yourself by choosing one of the followings. 
       /// 
-      /// Locales: en, ja
-      static let lesson_introduction_message = Rswift.StringResource(key: "lesson_introduction_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_introduction_message = Rswift.StringResource(key: "lesson_introduction_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Welcome to Raccoon!
       /// 
-      /// Locales: en, ja
-      static let lesson_level_beginner_message = Rswift.StringResource(key: "lesson_level_beginner_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let lesson_level_beginner_message = Rswift.StringResource(key: "lesson_level_beginner_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Welcome!
       /// 
-      /// Locales: en, ja
-      static let create_wallet_tutorial_title = Rswift.StringResource(key: "create_wallet_tutorial_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let create_wallet_tutorial_title = Rswift.StringResource(key: "create_wallet_tutorial_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Write a review
       /// 
-      /// Locales: en, ja
-      static let about_review = Rswift.StringResource(key: "about_review", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: You are about to delete your Wallet. If you do not have Private Key, you will never be able to restore your data. Are you sure you want to continue? 
+      /// Locales: en, ja, th
+      static let about_review = Rswift.StringResource(key: "about_review", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: You are about to delete your wallet. If you do not have private key, you will never be able to restore your wallet. Are you sure you want to delete the wallet? 
       /// 
-      /// Locales: en, ja
-      static let wallet_delete_caution_message = Rswift.StringResource(key: "wallet_delete_caution_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_delete_caution_message = Rswift.StringResource(key: "wallet_delete_caution_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: You are about to link the account from NanoWallet by reading QR code.   To complete this process, you need to enter NanoWallet password. 
       /// 
-      /// Locales: en, ja
-      static let wallet_import_nano_password_message = Rswift.StringResource(key: "wallet_import_nano_password_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_import_nano_password_message = Rswift.StringResource(key: "wallet_import_nano_password_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: You are about to send some crypto to the newbie address that has never run on Blockchain before. That said, please be assured that it is still legit address and therefore you can transfer cryptocurrency. In the next time, please check whether the   address is correct or not, as much as you need to double check whether the recipient is reliable or not. 
       /// 
-      /// Locales: en, ja
-      static let send_newbie_caution_message = Rswift.StringResource(key: "send_newbie_caution_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_newbie_caution_message = Rswift.StringResource(key: "send_newbie_caution_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: You are about to skip the lesson how to set up PIN code and Private Key backup. We strongly advise you to secure your account by understanding Security issues but do you still want to continue to go HOME? 
       /// 
-      /// Locales: en, ja
-      static let wallet_go_home_caution1_message = Rswift.StringResource(key: "wallet_go_home_caution1_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let wallet_go_home_caution1_message = Rswift.StringResource(key: "wallet_go_home_caution1_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: You can unlock the application by fingerprint authentication. Please press   OK to finish setup. 
       /// 
-      /// Locales: en, ja
-      static let common_biometrics_enable_message = Rswift.StringResource(key: "common_biometrics_enable_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_biometrics_enable_message = Rswift.StringResource(key: "common_biometrics_enable_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: You cannot continue to Send screen
       /// 
-      /// Locales: en, ja
-      static let common_error_go_send_title = Rswift.StringResource(key: "common_error_go_send_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_error_go_send_title = Rswift.StringResource(key: "common_error_go_send_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: You cannot continue to Send screen because no PIN code has been set up yet.   Set up PIN from Settings tab before you send your crypto.
       /// 
-      /// Locales: en, ja
-      static let common_error_go_send_pin_message = Rswift.StringResource(key: "common_error_go_send_pin_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: You cannot continue to Send screen due to no Wallet has been selected.   In order to continue to remit asset, you need to select Wallet.
+      /// Locales: en, ja, th
+      static let common_error_go_send_pin_message = Rswift.StringResource(key: "common_error_go_send_pin_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: You cannot continue to Send screen because no wallet is selected.   To send your crypto, you need to select a wallet.
       /// 
-      /// Locales: en, ja
-      static let common_error_go_send_no_wallet_message = Rswift.StringResource(key: "common_error_go_send_no_wallet_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_error_go_send_no_wallet_message = Rswift.StringResource(key: "common_error_go_send_no_wallet_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: You don't have enough balance
       /// 
-      /// Locales: en, ja
-      static let common_error_insufficient_balance = Rswift.StringResource(key: "common_error_insufficient_balance", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_error_insufficient_balance = Rswift.StringResource(key: "common_error_insufficient_balance", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Your PIN setup is uncompleted. Please set up your PIN first. 
       /// 
-      /// Locales: en, ja
-      static let common_error_pin_not_set = Rswift.StringResource(key: "common_error_pin_not_set", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_error_pin_not_set = Rswift.StringResource(key: "common_error_pin_not_set", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Your PIN setup is uncompleted. Please set up your PIN first. 
       /// 
-      /// Locales: en, ja
-      static let setting_pin_not_available_message = Rswift.StringResource(key: "setting_pin_not_available_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let setting_pin_not_available_message = Rswift.StringResource(key: "setting_pin_not_available_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Your transfer request has been completed.  
       /// 
-      /// Locales: en, ja
-      static let send_complete_message = Rswift.StringResource(key: "send_complete_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_complete_message = Rswift.StringResource(key: "send_complete_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Yuki
       /// 
-      /// Locales: en, ja
-      static let donation_yuki_name = Rswift.StringResource(key: "donation_yuki_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_yuki_name = Rswift.StringResource(key: "donation_yuki_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: iOS Engineer
       /// 
-      /// Locales: en, ja
-      static let donation_ios_engineer_role = Rswift.StringResource(key: "donation_ios_engineer_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let donation_ios_engineer_role = Rswift.StringResource(key: "donation_ios_engineer_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: アカウント情報の復元に失敗しました。
       /// 
-      /// Locales: en, ja
-      static let common_error_account_repair = Rswift.StringResource(key: "common_error_account_repair", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: エンジニア ・Android版アプリ開発
-      /// 
-      /// Locales: en, ja
-      static let donation_soma_detail = Rswift.StringResource(key: "donation_soma_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: エンジニア ・ベースアプリ開発 ・Android版アプリ開発
-      /// 
-      /// Locales: en, ja
-      static let donation_yuki_detail = Rswift.StringResource(key: "donation_yuki_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_error_account_repair = Rswift.StringResource(key: "common_error_account_repair", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: ハーベスト
       /// 
-      /// Locales: en, ja
-      static let common_harvest = Rswift.StringResource(key: "common_harvest", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_harvest = Rswift.StringResource(key: "common_harvest", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 取引所入金時の認証番号に使う場合は問題の原因になりますので、絶対に暗号化は指定しないでください
       /// 
-      /// Locales: en, ja
-      static let send_message_encrypted_caution = Rswift.StringResource(key: "send_message_encrypted_caution", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_message_encrypted_caution = Rswift.StringResource(key: "send_message_encrypted_caution", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 受け取る
       /// 
-      /// Locales: en, ja
-      static let receive_tab_title = Rswift.StringResource(key: "receive_tab_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let receive_tab_title = Rswift.StringResource(key: "receive_tab_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 定義されていないネームスペースです
       /// 
-      /// Locales: en, ja
-      static let send_invalid_namespace = Rswift.StringResource(key: "send_invalid_namespace", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_invalid_namespace = Rswift.StringResource(key: "send_invalid_namespace", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 指紋認証
       /// 
-      /// Locales: en, ja
-      static let common_touchID = Rswift.StringResource(key: "common_touchID", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_touchID = Rswift.StringResource(key: "common_touchID", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 残高
       /// 
-      /// Locales: en, ja
-      static let common_balance = Rswift.StringResource(key: "common_balance", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_balance = Rswift.StringResource(key: "common_balance", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 添付しない
       /// 
-      /// Locales: en, ja
-      static let send_mode_not_attach = Rswift.StringResource(key: "send_mode_not_attach", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_mode_not_attach = Rswift.StringResource(key: "send_mode_not_attach", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 送信手続きをする
       /// 
-      /// Locales: en, ja
-      static let send_tab_title = Rswift.StringResource(key: "send_tab_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let send_tab_title = Rswift.StringResource(key: "send_tab_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 送受信
       /// 
-      /// Locales: en, ja
-      static let home_transaction_headline = Rswift.StringResource(key: "home_transaction_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let home_transaction_headline = Rswift.StringResource(key: "home_transaction_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 顔認証
       /// 
-      /// Locales: en, ja
-      static let common_faceID = Rswift.StringResource(key: "common_faceID", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// Locales: en, ja, th
+      static let common_faceID = Rswift.StringResource(key: "common_faceID", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       
       /// en translation: 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_beginner_backup_end_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_beginner_backup_end_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_beginner_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_beginner_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_expert_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_expert_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_level_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_pin_end_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_pin_end_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_create_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_create_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_end_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_end_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_name_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_name_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation:   Please write down on a paper or secure it on Password management App/Software
+      /// en translation:   Please write on paper or secure it on Password management App/Software
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_key_backup_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_key_backup_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 6 digit PIN code has been set up successfully to secure App.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_pin_registration_complete(_: Void = ()) -> String {
         return NSLocalizedString("common_pin_registration_complete", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: About Private Key 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_key_caution_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_key_caution_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: About This APP
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func about_title(_: Void = ()) -> String {
         return NSLocalizedString("about_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Address
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_address(_: Void = ()) -> String {
         return NSLocalizedString("common_address", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: All transactions will be shown here. 
-      /// 
-      /// Locales: en, ja
-      static func transaction_no_transaction_message(_: Void = ()) -> String {
-        return NSLocalizedString("transaction_no_transaction_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: Amount
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_amount(_: Void = ()) -> String {
         return NSLocalizedString("common_amount", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Amount
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func qrlab_amount_title(_: Void = ()) -> String {
         return NSLocalizedString("qrlab_amount_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Android Developer
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_android_engineer_name(_: Void = ()) -> String {
         return NSLocalizedString("donation_android_engineer_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Android Engineer  @YukiYamadaJP @Riberd_Puzzle1  ・Android App Developer 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_android_engineer_detail(_: Void = ()) -> String {
         return NSLocalizedString("donation_android_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Attach
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_mode_attach(_: Void = ()) -> String {
         return NSLocalizedString("send_mode_attach", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Attach Mosaic
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_mosaic_setting(_: Void = ()) -> String {
         return NSLocalizedString("send_mosaic_setting", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Authenticate by fingerprint or PIN to complete sending. Please check information carefully before authenticating. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_confirmation_dialog_message(_: Void = ()) -> String {
         return NSLocalizedString("send_confirmation_dialog_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Back up Private Key + Set up PIN code
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_level_beginner_setup(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_beginner_setup", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Back up Wallet
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_level_expert_setup(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_expert_setup", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Back up Wallet
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_settings_backup(_: Void = ()) -> String {
         return NSLocalizedString("wallet_settings_backup", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Backup
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_backup(_: Void = ()) -> String {
         return NSLocalizedString("common_backup", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Change wallet name
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_rename_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_rename_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Change wallet name
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_settings_rename(_: Void = ()) -> String {
         return NSLocalizedString("wallet_settings_rename", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Coming Soon!
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_coming_soon(_: Void = ()) -> String {
         return NSLocalizedString("common_coming_soon", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Complete
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_done(_: Void = ()) -> String {
         return NSLocalizedString("common_done", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Complete Lesson
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_pin_end_home(_: Void = ()) -> String {
         return NSLocalizedString("lesson_pin_end_home", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Confirm sending by fingerprint authentication
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_confirmation_biometrics(_ value1: String) -> String {
         return String(format: NSLocalizedString("send_confirmation_biometrics", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
       /// en translation: Congratulations!   Now that your Wallet has been created. Please see your address below. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_create_message_0(_: Void = ()) -> String {
         return NSLocalizedString("wallet_create_message_0", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Congratulations!   You have done linking your Wallet to this account.    If you want to change or add your Wallet, you can do so by Wallet bar to access management screen.   If you could spare your time, we advise you to take Security Lesson. You will learn how to set up PIN and how to backup your Wallet. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_login_end_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_login_end_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Continue to Wallet selection screen. 
+      /// en translation: Continue to setup PIN page
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
+      static func common_error_go_send_pin_button(_: Void = ()) -> String {
+        return NSLocalizedString("common_error_go_send_pin_button", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Continue to wallet selection screen. 
+      /// 
+      /// Locales: en, ja, th
       static func common_error_go_send_no_wallet_button(_: Void = ()) -> String {
         return NSLocalizedString("common_error_go_send_no_wallet_button", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Copied to the clipboard
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_copy_to_clipboard(_: Void = ()) -> String {
         return NSLocalizedString("common_copy_to_clipboard", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Create QR invoice with total amount by scanning a code. 
-      /// 
-      /// Locales: en, ja
-      static func qrlab_register_description(_: Void = ()) -> String {
-        return NSLocalizedString("qrlab_register_description", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: Create new wallet
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_creation_new(_: Void = ()) -> String {
         return NSLocalizedString("wallet_creation_new", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Create new wallet
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_creation_type_new(_: Void = ()) -> String {
         return NSLocalizedString("wallet_creation_type_new", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Creating a new Wallet is now completed.   If you want to back up your wallet, please go to the lesson.  n For those who wish to use Wallet now, please move on to "HOME" to skip the lesson. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_end_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_end_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Currency
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func setting_currency_select(_: Void = ()) -> String {
         return NSLocalizedString("setting_currency_select", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Currently, there is no mosaic to show here.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func gallery_no_mosaic_message(_: Void = ()) -> String {
         return NSLocalizedString("gallery_no_mosaic_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Delete wallet
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_settings_delete(_: Void = ()) -> String {
         return NSLocalizedString("wallet_settings_delete", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Designer ・Android / iOS App's IA/UI/UX Design  ・Visual Design / Branding 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_designer_detail(_: Void = ()) -> String {
         return NSLocalizedString("donation_designer_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Destination
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_destination(_: Void = ()) -> String {
         return NSLocalizedString("send_destination", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Developers
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_title(_: Void = ()) -> String {
         return NSLocalizedString("donation_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Do not show again
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_never_remind(_: Void = ()) -> String {
         return NSLocalizedString("common_never_remind", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Do you want to send with a message? 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_mode_select_message(_: Void = ()) -> String {
         return NSLocalizedString("send_mode_select_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Do you want to skip Security Lesson? 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_go_home_caution1_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_go_home_caution1_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Don't take a screen shot of your private key.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_key_backup_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_key_backup_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Donation
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_donation(_: Void = ()) -> String {
         return NSLocalizedString("common_donation", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Economy for Everybody
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func first_tutorial_title3(_: Void = ()) -> String {
         return NSLocalizedString("first_tutorial_title3", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Encrypt the message
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_message_type_select_title(_: Void = ()) -> String {
         return NSLocalizedString("send_message_type_select_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Encrypted message
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_message_encrypted_title(_: Void = ()) -> String {
         return NSLocalizedString("send_message_encrypted_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Engineer
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_android_engineer_role(_: Void = ()) -> String {
         return NSLocalizedString("donation_android_engineer_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Engineer
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_soma_role(_: Void = ()) -> String {
         return NSLocalizedString("donation_soma_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Engineer
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_yuki_role(_: Void = ()) -> String {
         return NSLocalizedString("donation_yuki_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Engineer  ・Android App Developer 
+      /// 
+      /// Locales: en, ja, th
+      static func donation_soma_detail(_: Void = ()) -> String {
+        return NSLocalizedString("donation_soma_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Engineer  ・Base App Developer  ・Android Ver. App Developer 
+      /// 
+      /// Locales: en, ja, th
+      static func donation_yuki_detail(_: Void = ()) -> String {
+        return NSLocalizedString("donation_yuki_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Engineer  ・iOS Development Director  ・PWA(Progressive Web Apps) Developer
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_ios_engineer_detail(_: Void = ()) -> String {
         return NSLocalizedString("donation_ios_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Enter NanoWallet password
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_import_nano_password_headline(_: Void = ()) -> String {
         return NSLocalizedString("wallet_import_nano_password_headline", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Enter Wallet name
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_rename_hint(_: Void = ()) -> String {
         return NSLocalizedString("wallet_rename_hint", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Enter amount
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_amount_title(_: Void = ()) -> String {
         return NSLocalizedString("send_amount_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Enter destination address
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_input_address(_: Void = ()) -> String {
         return NSLocalizedString("send_input_address", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Enter message
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_message_input(_: Void = ()) -> String {
         return NSLocalizedString("common_message_input", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Enter password
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_import_nano_password_hint(_: Void = ()) -> String {
         return NSLocalizedString("wallet_import_nano_password_hint", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Enter password
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_import_nano_password_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_import_nano_password_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Failed to unlock
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_error_decode_message(_: Void = ()) -> String {
         return NSLocalizedString("common_error_decode_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Failed to unlock
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func transaction_failed_to_decrypt(_: Void = ()) -> String {
         return NSLocalizedString("transaction_failed_to_decrypt", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Fee
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_fee(_: Void = ()) -> String {
         return NSLocalizedString("common_fee", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Fingerprint required
-      /// 
-      /// Locales: en, ja
-      static func setting_require_biometrics(_ value1: String) -> String {
-        return String(format: NSLocalizedString("setting_require_biometrics", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
-      }
-      
       /// en translation: For those who are about to start Crypto.   First above anything, cryptocurrency has "Private Key," which is very significant.   This Private Key is used to control your asset in the Wallet; it also be used to back up your Wallet in case you lose your devices or whatsoever.   You might also need to set up PIN code to lock your application - just so you need to protect from fraud as well.   Hence, we are going to give you lesson regarding to Private Key and PIN code setup.   And now let's move on. Are you ready? 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_beginner_message(_: Void = ()) -> String {
         return NSLocalizedString("lesson_beginner_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: For those who are already professional in cryptocurrency.   Thank you for choosing Raccoon.   Well, there might be nothing for you to learn from us.   Please do setup PIN code from this screen.   If you have forgotten to back up Private Key, you might want to take Security Lesson from beginner's guide. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_importer_message(_: Void = ()) -> String {
         return NSLocalizedString("lesson_importer_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Friends list
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_address_book(_: Void = ()) -> String {
         return NSLocalizedString("common_address_book", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: General
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_general(_: Void = ()) -> String {
         return NSLocalizedString("common_general", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: General Information
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_detail_general(_: Void = ()) -> String {
         return NSLocalizedString("wallet_detail_general", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: General settings
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_settings_general(_: Void = ()) -> String {
         return NSLocalizedString("wallet_settings_general", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Good day!   You want to do back up Private Key, right?   You can check your Private Key from the next screen.   Thank you for staying loyal with us. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_expert_message(_: Void = ()) -> String {
         return NSLocalizedString("lesson_expert_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Good day, our dearest cryptocoiner.   Please type in your private key   or scan the QR code.  2 Your account will be linked to Raccoon. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_import_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_import_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Good job!
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_end_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_end_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Good job! n You've completed Security Lesson.    If you have any question, access Help page from menu.    We wish you a happy Crypto life! 
+      /// 
+      /// Locales: en, ja, th
+      static func lesson_beginner_end_message(_: Void = ()) -> String {
+        return NSLocalizedString("lesson_beginner_end_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Good job! n You've completed Security Lesson.   Access Help page from menu to learn how to use this wallet.    We wish you a happy Crypto life! 
+      /// 
+      /// Locales: en, ja, th
+      static func lesson_importer_end_message(_: Void = ()) -> String {
+        return NSLocalizedString("lesson_importer_end_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Great!  Your account has been linked successfully.  Giving a name to the wallet would help you.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_login_name_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_login_name_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Handle transfers
+      /// 
+      /// Locales: en, ja, th
+      static func send_amount_setting(_: Void = ()) -> String {
+        return NSLocalizedString("send_amount_setting", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Hello again!     Have you done backup your Wallet already?   Next, you set up PIN code for application.    Wish you good luck! 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_beginner_backup_end_message(_: Void = ()) -> String {
         return NSLocalizedString("lesson_beginner_backup_end_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Hello once again!   Welcome to Raccoon Wallet.   Before you start Raccoon, you need to prepare a wallet first.   Please choose if you make a new wallet or import one.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func create_wallet_tutorial_message(_: Void = ()) -> String {
         return NSLocalizedString("create_wallet_tutorial_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Hey, Watch out! 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_newbie_caution_title(_: Void = ()) -> String {
         return NSLocalizedString("send_newbie_caution_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Hi, I am glad to see you!   Let us begin New Economy Movement by Blockchain together! 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func first_tutorial_message1(_: Void = ()) -> String {
         return NSLocalizedString("first_tutorial_message1", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: If you have forgotten your PIN code, you will never be able to access to your account no matter what, therefore please do not forget it. That said, your asset is still in your Wallet account. By this mean, you will lose your asset only when you have lost Private Key. 
+      /// en translation: If you have forgotten your PIN code, you will never be able to use this App no matter what. Please do not forget it. That said, your XEM is still in your wallet even if you have forgotten your PIN. You will lose your asset only when you have lost the private key. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_pin_registration_message_1(_: Void = ()) -> String {
         return NSLocalizedString("common_pin_registration_message_1", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: If you want to back up your Wallet or set up PIN code, you can always do so at Wallet bar or application setting in Menu bar.   Also, you can take Security Lesson at anytime by go to Security in the application setting. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_go_home_caution2_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_go_home_caution2_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: If you want to maintain your wallet, press the button in the bar above.   It is not working in this page so please try later.  
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_create_message_1(_: Void = ()) -> String {
         return NSLocalizedString("wallet_create_message_1", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Import
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_creation_type_import(_: Void = ()) -> String {
         return NSLocalizedString("wallet_creation_type_import", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Import QR code
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_qr_import(_: Void = ()) -> String {
         return NSLocalizedString("common_qr_import", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Import Wallet name
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_login_name_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_login_name_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Import private key
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_import_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_import_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Importance score
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_detail_importance(_: Void = ()) -> String {
         return NSLocalizedString("wallet_detail_importance", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: In order to send an encrypted message, the recipient needs to have their public key.   Since the current recipient does not have their public key, you can't send the encrypted message.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_message_no_public_key_message(_: Void = ()) -> String {
         return NSLocalizedString("send_message_no_public_key_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Incorrect PIN code.  Please try again.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_pin_retry(_: Void = ()) -> String {
         return NSLocalizedString("common_pin_retry", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Incorrect password
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_invalid_password(_: Void = ()) -> String {
         return NSLocalizedString("common_invalid_password", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Innovation in trust on your hands
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func first_tutorial_title2(_: Void = ()) -> String {
         return NSLocalizedString("first_tutorial_title2", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Input PIN to confirm your transfer
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_confirmation_pin_message(_: Void = ()) -> String {
         return NSLocalizedString("send_confirmation_pin_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Invalid address
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_invalid_address(_: Void = ()) -> String {
         return NSLocalizedString("common_invalid_address", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Invalid private key
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_invalid_key(_: Void = ()) -> String {
         return NSLocalizedString("wallet_invalid_key", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: It is a Raccoon user. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_level_expert_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_expert_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: It is a pleasure to meet you
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func first_tutorial_title1(_: Void = ()) -> String {
         return NSLocalizedString("first_tutorial_title1", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: It seems you have already set up PIN.   Please press OK to complete lesson.   Thank you! 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_cancel_pin_message(_: Void = ()) -> String {
         return NSLocalizedString("lesson_cancel_pin_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: It seems you have not done with setup fingerprint authentication on your device.   Do you want to continue with fingerprint setup on Android OS setting? 
+      /// en translation: It seems you have not set up fingerprint authentication on your device.   Do you want to continue to iOS setting page to set up fingerprint authentication?
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_pin_end_not_available_message(_ value1: String, _ value2: String) -> String {
         return String(format: NSLocalizedString("lesson_pin_end_not_available_message", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1, value2)
       }
       
       /// en translation: Let's get started.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func first_tutorial_button(_: Void = ()) -> String {
         return NSLocalizedString("first_tutorial_button", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Let's secure your privacy with military grade encryption.  
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_message_encrypted_description(_: Void = ()) -> String {
         return NSLocalizedString("send_message_encrypted_description", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Let's set up PIN code to protect your application. Please key in 6 digit number.   You will need to key in two times the same for the confirmation of your PIN code.   ※ We strongly advise you to avoid using the repetitive digit number or key in your birth date from security perspective.  
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_pin_registration_message_0(_: Void = ()) -> String {
         return NSLocalizedString("common_pin_registration_message_0", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Link completed. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_login_end_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_login_end_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Logged in by Private Key
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_level_importer_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_importer_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Message
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_message(_: Void = ()) -> String {
         return NSLocalizedString("common_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Message is encrypted
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func transaction_message_is_encrypted(_: Void = ()) -> String {
         return NSLocalizedString("transaction_message_is_encrypted", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Mosaic Gallery
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_mosaic_gallery(_: Void = ()) -> String {
         return NSLocalizedString("common_mosaic_gallery", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Mosaics
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_mosaic_list(_: Void = ()) -> String {
         return NSLocalizedString("common_mosaic_list", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Move to setup PIN page
-      /// 
-      /// Locales: en, ja
-      static func common_error_go_send_pin_button(_: Void = ()) -> String {
-        return NSLocalizedString("common_error_go_send_pin_button", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: Network Error
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_error_network(_: Void = ()) -> String {
         return NSLocalizedString("common_error_network", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: New Economy Movement for liberty and co-creation is already here.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func first_tutorial_message3(_: Void = ()) -> String {
         return NSLocalizedString("first_tutorial_message3", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: New Economy platform based on cryptocurrency and new ideas encourages you to have amazing experiences.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func first_tutorial_message2(_: Void = ()) -> String {
         return NSLocalizedString("first_tutorial_message2", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: No harvesting income yet.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func home_harvest_empty_message(_: Void = ()) -> String {
         return NSLocalizedString("home_harvest_empty_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: No mosaics
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func gallery_no_mosaic_title(_: Void = ()) -> String {
         return NSLocalizedString("gallery_no_mosaic_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: No transactions yet.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func home_transaction_empty_message(_: Void = ()) -> String {
         return NSLocalizedString("home_transaction_empty_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: No wallet is selected
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_not_select_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_not_select_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Not acquired 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_not_get(_: Void = ()) -> String {
         return NSLocalizedString("common_not_get", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Not selected
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_not_select(_: Void = ()) -> String {
         return NSLocalizedString("common_not_select", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Notifications
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func setting_notification_setting(_: Void = ()) -> String {
         return NSLocalizedString("setting_notification_setting", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Now that you have done setup PIN.   This may be the last lesson to you.    You might as well want to set up fingerprint and/or face authentication. Do you want to proceed? 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_pin_end_message(_: Void = ()) -> String {
         return NSLocalizedString("lesson_pin_end_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Official DISCORD Server |  Link 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func about_discord(_: Void = ()) -> String {
         return NSLocalizedString("about_discord", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Official Website | raccoonwallet.com
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func about_official_site(_: Void = ()) -> String {
         return NSLocalizedString("about_official_site", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Oops!
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_cancel_pin_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_cancel_pin_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Oops!
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_pin_end_not_available_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_pin_end_not_available_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Oops!
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func setting_pin_not_available_title(_: Void = ()) -> String {
         return NSLocalizedString("setting_pin_not_available_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Oops! No transaction yet.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func transaction_no_transaction_title(_: Void = ()) -> String {
         return NSLocalizedString("transaction_no_transaction_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Open Source License
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func about_open_source(_: Void = ()) -> String {
         return NSLocalizedString("about_open_source", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Otsukaresama deshita m (    ) m n This is the end of Security Lesson.    If you want to learn more, please take a look at Help at Menu section.    We wish you a happy Crypto life! 
-      /// 
-      /// Locales: en, ja
-      static func lesson_beginner_end_message(_: Void = ()) -> String {
-        return NSLocalizedString("lesson_beginner_end_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Otsukaresama deshita m (    ) m n This is the end of Security Lesson.   You can learn how to use this Wallet by Help in Menu section.    We wish you a happy Crypto life! 
-      /// 
-      /// Locales: en, ja
-      static func lesson_importer_end_message(_: Void = ()) -> String {
-        return NSLocalizedString("lesson_importer_end_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: Plain Message
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_message_plain_title(_: Void = ()) -> String {
         return NSLocalizedString("send_message_plain_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Plain message.   Be sure to input authentication code here when you depositing in crypto exchanges.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_message_plain_description(_: Void = ()) -> String {
         return NSLocalizedString("send_message_plain_description", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Please check before using App.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_privacy_policy_caution(_: Void = ()) -> String {
         return NSLocalizedString("common_privacy_policy_caution", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Private Key is the most significant thing, which you must secure it at all cost.    Private Key controls all assets and account information - it can also be used to restore your Wallet. Therefore, everyone has to know this basic knowledge.    Please do not lose your Private Key, and never tell others. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_key_caution_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_key_caution_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Profile
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_detail_title(_: Void = ()) -> String {
         return NSLocalizedString("donation_detail_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Public key
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_public_key(_: Void = ()) -> String {
         return NSLocalizedString("common_public_key", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: QR Register
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func qrlab_register_headline(_: Void = ()) -> String {
         return NSLocalizedString("qrlab_register_headline", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Raccoon
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_app_title(_: Void = ()) -> String {
         return NSLocalizedString("common_app_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Raccoon is made by these pure three visions: reliable, UI is easy to use, and make cryptocurrency enjoyable than ever. 
+      /// en translation: Raccoon is a cryptocurrency wallet aiming following 3 goals: High reliability, Easy UI and Fun in cryptocurrency than ever.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func about_app_concept(_: Void = ()) -> String {
         return NSLocalizedString("about_app_concept", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Recipient
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_destination(_: Void = ()) -> String {
         return NSLocalizedString("common_destination", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Remit processing
-      /// 
-      /// Locales: en, ja
-      static func send_amount_setting(_: Void = ()) -> String {
-        return NSLocalizedString("send_amount_setting", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: Remove
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_delete(_: Void = ()) -> String {
         return NSLocalizedString("common_delete", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Request payment
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func qrlab_amount_headline(_: Void = ()) -> String {
         return NSLocalizedString("qrlab_amount_headline", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Require Fingerprint
+      /// 
+      /// Locales: en, ja, th
+      static func setting_require_biometrics(_ value1: String) -> String {
+        return String(format: NSLocalizedString("setting_require_biometrics", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
+      
       /// en translation: Require PIN at startup
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func setting_require_pin_on_launch(_: Void = ()) -> String {
         return NSLocalizedString("setting_require_pin_on_launch", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Rhime
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_designer_name(_: Void = ()) -> String {
         return NSLocalizedString("donation_designer_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Roger that! 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_go_home_caution2_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_go_home_caution2_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Ryuta
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_ios_engineer_name(_: Void = ()) -> String {
         return NSLocalizedString("donation_ios_engineer_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: SUCCESS
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_success(_: Void = ()) -> String {
         return NSLocalizedString("common_success", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: SUCCESS!
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_biometrics_enable_success_title(_: Void = ()) -> String {
         return NSLocalizedString("common_biometrics_enable_success_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Scan a code to create a QR code to invoice total amount.
+      /// 
+      /// Locales: en, ja, th
+      static func qrlab_register_description(_: Void = ()) -> String {
+        return NSLocalizedString("qrlab_register_description", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Security
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_security(_: Void = ()) -> String {
         return NSLocalizedString("common_security", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Security Lesson
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_security_lesson(_: Void = ()) -> String {
         return NSLocalizedString("common_security_lesson", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Select a wallet
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_select(_: Void = ()) -> String {
         return NSLocalizedString("wallet_select", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Select language
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func setting_language_select(_: Void = ()) -> String {
         return NSLocalizedString("setting_language_select", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Select node
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func setting_node_select(_: Void = ()) -> String {
         return NSLocalizedString("setting_node_select", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Select transfer mode
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_mode_select_title(_: Void = ()) -> String {
         return NSLocalizedString("send_mode_select_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Send with XEM
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_amount_with_xem(_: Void = ()) -> String {
         return NSLocalizedString("send_amount_with_xem", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Set fingerprint authentication
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_pin_end_set_ok(_: Void = ()) -> String {
         return NSLocalizedString("lesson_pin_end_set_ok", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Set up PIN Code
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_pin_settings(_: Void = ()) -> String {
         return NSLocalizedString("common_pin_settings", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Set up PIN Code
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_level_importer_setup(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_importer_setup", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Set up PIN Code
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func setting_change_password(_: Void = ()) -> String {
         return NSLocalizedString("setting_change_password", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Set up wallet
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_settings_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_settings_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Settings
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_settings(_: Void = ()) -> String {
         return NSLocalizedString("common_settings", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Setup access by fingerprint authentication
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_biometrics_enable_title(_ value1: String) -> String {
         return String(format: NSLocalizedString("common_biometrics_enable_title", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
       /// en translation: Setup log in by fingerprint authentication is completed. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_biometrics_enable_success_message(_ value1: String) -> String {
         return String(format: NSLocalizedString("common_biometrics_enable_success_message", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
       /// en translation: Show PIN on screen 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_confirmation_button(_: Void = ()) -> String {
         return NSLocalizedString("send_confirmation_button", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: So, you chose to create a new wallet!    Let us guide you how to create it!   First of all, please name your wallet.   Any name is fine as you wish. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_name_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_name_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Soma
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_soma_name(_: Void = ()) -> String {
         return NSLocalizedString("donation_soma_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Start Cryptocurrency by Raccoon 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_level_beginner_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_beginner_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Take Security Lesson
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func setting_go_to_security_lesson(_: Void = ()) -> String {
         return NSLocalizedString("setting_go_to_security_lesson", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Terms of Use and Privacy Policy
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_privacy_policy(_: Void = ()) -> String {
         return NSLocalizedString("common_privacy_policy", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Thank you for choosing Raccoon. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_level_importer_message(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_importer_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Thank you for staying loyal. It's a nice weather today. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_level_expert_message(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_expert_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Thank you for using Raccoon.   So this is the end of Security Lesson.    We hope you continue enjoying crypto life. 
+      /// en translation: Thank you for using Raccoon.   This is the end of Security Lesson.    We hope you enjoy crypto life! 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_expert_end_message(_: Void = ()) -> String {
         return NSLocalizedString("lesson_expert_end_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: The list of wallet(s) will be shown here when creating a new wallet by tapping above   or linking your existing wallet account. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_no_wallet_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_no_wallet_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: The recipient can't receive an encrypted message. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_message_no_public_key_title(_: Void = ()) -> String {
         return NSLocalizedString("send_message_no_public_key_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: There is no wallet.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_no_wallet_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_no_wallet_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: This is the final remittance confirmation screen
+      /// en translation: This is the final page to confirm your transfer
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_confirmation_title(_: Void = ()) -> String {
         return NSLocalizedString("send_confirmation_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Transaction detail
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func transaction_detail_title(_: Void = ()) -> String {
         return NSLocalizedString("transaction_detail_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Transactions
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func transaction_list_title(_: Void = ()) -> String {
         return NSLocalizedString("transaction_list_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Transactions will be shown here. 
+      /// 
+      /// Locales: en, ja, th
+      static func transaction_no_transaction_message(_: Void = ()) -> String {
+        return NSLocalizedString("transaction_no_transaction_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Transfer detail
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_complete_transaction_label(_: Void = ()) -> String {
         return NSLocalizedString("send_complete_transaction_label", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: UI designer
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_designer_role(_: Void = ()) -> String {
         return NSLocalizedString("donation_designer_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Use Selling Item list 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func qrlab_list_headline(_: Void = ()) -> String {
         return NSLocalizedString("qrlab_list_headline", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Wallet address
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_settings_address(_: Void = ()) -> String {
         return NSLocalizedString("wallet_settings_address", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Wallet address created this time
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_create_address_headline(_: Void = ()) -> String {
         return NSLocalizedString("wallet_create_address_headline", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Wallet balance
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_wallet_balance(_: Void = ()) -> String {
         return NSLocalizedString("common_wallet_balance", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Wallet configuration (m-of-n)
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_detail_structure(_: Void = ()) -> String {
         return NSLocalizedString("wallet_detail_structure", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Wallet detail
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_detail_title(_: Void = ()) -> String {
         return NSLocalizedString("wallet_detail_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Wallet detail
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_settings_detail(_: Void = ()) -> String {
         return NSLocalizedString("wallet_settings_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Wallet name
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_name_input(_: Void = ()) -> String {
         return NSLocalizedString("wallet_name_input", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Welcome aboard!   Are you looking for Security Lesson ? Well, here it is! Let's get started.    First of all, can you tell me about yourself by choosing one of the followings. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_introduction_message(_: Void = ()) -> String {
         return NSLocalizedString("lesson_introduction_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Welcome to Raccoon!
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func lesson_level_beginner_message(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_beginner_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Welcome!
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func create_wallet_tutorial_title(_: Void = ()) -> String {
         return NSLocalizedString("create_wallet_tutorial_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Write a review
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func about_review(_: Void = ()) -> String {
         return NSLocalizedString("about_review", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: You are about to delete your Wallet. If you do not have Private Key, you will never be able to restore your data. Are you sure you want to continue? 
+      /// en translation: You are about to delete your wallet. If you do not have private key, you will never be able to restore your wallet. Are you sure you want to delete the wallet? 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_delete_caution_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_delete_caution_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: You are about to link the account from NanoWallet by reading QR code.   To complete this process, you need to enter NanoWallet password. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_import_nano_password_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_import_nano_password_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: You are about to send some crypto to the newbie address that has never run on Blockchain before. That said, please be assured that it is still legit address and therefore you can transfer cryptocurrency. In the next time, please check whether the   address is correct or not, as much as you need to double check whether the recipient is reliable or not. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_newbie_caution_message(_: Void = ()) -> String {
         return NSLocalizedString("send_newbie_caution_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: You are about to skip the lesson how to set up PIN code and Private Key backup. We strongly advise you to secure your account by understanding Security issues but do you still want to continue to go HOME? 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func wallet_go_home_caution1_message(_: Void = ()) -> String {
         return NSLocalizedString("wallet_go_home_caution1_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: You can unlock the application by fingerprint authentication. Please press   OK to finish setup. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_biometrics_enable_message(_ value1: String) -> String {
         return String(format: NSLocalizedString("common_biometrics_enable_message", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
       /// en translation: You cannot continue to Send screen
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_error_go_send_title(_: Void = ()) -> String {
         return NSLocalizedString("common_error_go_send_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: You cannot continue to Send screen because no PIN code has been set up yet.   Set up PIN from Settings tab before you send your crypto.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_error_go_send_pin_message(_: Void = ()) -> String {
         return NSLocalizedString("common_error_go_send_pin_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: You cannot continue to Send screen due to no Wallet has been selected.   In order to continue to remit asset, you need to select Wallet.
+      /// en translation: You cannot continue to Send screen because no wallet is selected.   To send your crypto, you need to select a wallet.
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_error_go_send_no_wallet_message(_: Void = ()) -> String {
         return NSLocalizedString("common_error_go_send_no_wallet_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: You don't have enough balance
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_error_insufficient_balance(_: Void = ()) -> String {
         return NSLocalizedString("common_error_insufficient_balance", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Your PIN setup is uncompleted. Please set up your PIN first. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_error_pin_not_set(_: Void = ()) -> String {
         return NSLocalizedString("common_error_pin_not_set", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Your PIN setup is uncompleted. Please set up your PIN first. 
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func setting_pin_not_available_message(_: Void = ()) -> String {
         return NSLocalizedString("setting_pin_not_available_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Your transfer request has been completed.  
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_complete_message(_: Void = ()) -> String {
         return NSLocalizedString("send_complete_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Yuki
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_yuki_name(_: Void = ()) -> String {
         return NSLocalizedString("donation_yuki_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: iOS Engineer
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func donation_ios_engineer_role(_: Void = ()) -> String {
         return NSLocalizedString("donation_ios_engineer_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: アカウント情報の復元に失敗しました。
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_error_account_repair(_: Void = ()) -> String {
         return NSLocalizedString("common_error_account_repair", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: エンジニア ・Android版アプリ開発
-      /// 
-      /// Locales: en, ja
-      static func donation_soma_detail(_: Void = ()) -> String {
-        return NSLocalizedString("donation_soma_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: エンジニア ・ベースアプリ開発 ・Android版アプリ開発
-      /// 
-      /// Locales: en, ja
-      static func donation_yuki_detail(_: Void = ()) -> String {
-        return NSLocalizedString("donation_yuki_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: ハーベスト
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_harvest(_: Void = ()) -> String {
         return NSLocalizedString("common_harvest", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 取引所入金時の認証番号に使う場合は問題の原因になりますので、絶対に暗号化は指定しないでください
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_message_encrypted_caution(_: Void = ()) -> String {
         return NSLocalizedString("send_message_encrypted_caution", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 受け取る
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func receive_tab_title(_: Void = ()) -> String {
         return NSLocalizedString("receive_tab_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 定義されていないネームスペースです
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_invalid_namespace(_: Void = ()) -> String {
         return NSLocalizedString("send_invalid_namespace", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 指紋認証
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_touchID(_: Void = ()) -> String {
         return NSLocalizedString("common_touchID", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 残高
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_balance(_: Void = ()) -> String {
         return NSLocalizedString("common_balance", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 添付しない
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_mode_not_attach(_: Void = ()) -> String {
         return NSLocalizedString("send_mode_not_attach", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 送信手続きをする
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func send_tab_title(_: Void = ()) -> String {
         return NSLocalizedString("send_tab_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 送受信
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func home_transaction_headline(_: Void = ()) -> String {
         return NSLocalizedString("home_transaction_headline", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 顔認証
       /// 
-      /// Locales: en, ja
+      /// Locales: en, ja, th
       static func common_faceID(_: Void = ()) -> String {
         return NSLocalizedString("common_faceID", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
