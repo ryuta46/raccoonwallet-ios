@@ -17,7 +17,7 @@
 "common_pin_retry" = "Incorrect PIN code. \nPlease try again.";
 "common_pin_registration_message_0" = "Let\'s set up PIN code to protect your application. Please key in 6 digit number. \n You will need to key in two times the same for the confirmation of your PIN code. \n ※ We strongly advise you to avoid using the repetitive digit number or key in your birth date from security perspective.  ";
 
-"common_pin_registration_message_1" = "If you have forgotten your PIN code, you will never be able to access to your account no matter what, therefore please do not forget it. That said, your asset is still in your Wallet account. By this mean, you will lose your asset only when you have lost Private Key. ";
+"common_pin_registration_message_1" = "If you have forgotten your PIN code, you will never be able to use this App no matter what. Please do not forget it. That said, your XEM is still in your wallet even if you have forgotten your PIN. You will lose your asset only when you have lost the private key. ";
 
 "common_pin_registration_complete" = "6 digit PIN code has been set up successfully to secure App.";
 
@@ -69,9 +69,9 @@
 
 "common_error_go_send_title" = "You cannot continue to Send screen";
 "common_error_go_send_pin_message" = "You cannot continue to Send screen because no PIN code has been set up yet. \n Set up PIN from Settings tab before you send your crypto.";
-"common_error_go_send_pin_button" = "Move to setup PIN page";
-"common_error_go_send_no_wallet_message" = "You cannot continue to Send screen due to no Wallet has been selected. \n In order to continue to remit asset, you need to select Wallet.";
-"common_error_go_send_no_wallet_button" = "Continue to Wallet selection screen. ";
+"common_error_go_send_pin_button" = "Continue to setup PIN page";
+"common_error_go_send_no_wallet_message" = "You cannot continue to Send screen because no wallet is selected. \n To send your crypto, you need to select a wallet.";
+"common_error_go_send_no_wallet_button" = "Continue to wallet selection screen. ";
 
 "common_never_remind" = "Do not show again";
 
@@ -82,7 +82,7 @@
 "common_harvest" = "ハーベスト";
 
 "about_title" = "About This APP";
-"about_app_concept" = "Raccoon is made by these pure three visions: reliable, UI is easy to use, and make cryptocurrency enjoyable than ever. ";
+"about_app_concept" = "Raccoon is a cryptocurrency wallet aiming following 3 goals: High reliability, Easy UI and Fun in cryptocurrency than ever.";
 
 "about_official_site" = "Official Website | raccoonwallet.com";
 "about_discord" = "Official DISCORD Server |  Link ";
@@ -101,11 +101,11 @@
 
 "donation_yuki_name" = "Yuki";
 "donation_yuki_role" = "Engineer";
-"donation_yuki_detail" = "エンジニア\n・ベースアプリ開発\n・Android版アプリ開発";
+"donation_yuki_detail" = "Engineer \n・Base App Developer \n・Android Ver. App Developer ";
 
 "donation_soma_name" = "Soma";
 "donation_soma_role" = "Engineer";
-"donation_soma_detail" = "エンジニア\n・Android版アプリ開発";
+"donation_soma_detail" = "Engineer \n・Android App Developer ";
 
 
 "donation_designer_name" = "Rhime";
@@ -117,9 +117,9 @@
 "donation_ios_engineer_detail" = "Engineer \n・iOS Development Director \n・PWA(Progressive Web Apps) Developer";
 
 "first_tutorial_button" = "Let\'s get started.";
-"first_tutorial_title1" = "はじめまして";
-"first_tutorial_title2" = "信頼の革新を手のひらに";
-"first_tutorial_title3" = "すべての人に経済を。";
+"first_tutorial_title1" = "It is a pleasure to meet you";
+"first_tutorial_title2" = "Innovation in trust on your hands";
+"first_tutorial_title3" = "Economy for Everybody";
 "first_tutorial_message1" = "Hi, I am glad to see you! \n Let us begin New Economy Movement by Blockchain together! ";
 "first_tutorial_message2" = "New Economy platform based on cryptocurrency and new ideas encourages you to have amazing experiences.";
 "first_tutorial_message3" = "New Economy Movement for liberty and co-creation is already here.";
@@ -153,9 +153,9 @@
 "lesson_importer_message" = "For those who are already professional in cryptocurrency. \n Thank you for choosing Raccoon. \n Well, there might be nothing for you to learn from us. \n Please do setup PIN code from this screen. \n If you have forgotten to back up Private Key, you might want to take Security Lesson from beginner\'s guide. ";
 
 "lesson_end_title" = "Good job!";
-"lesson_beginner_end_message" = "Otsukaresama deshita m (    ) m n\ This is the end of Security Lesson. \n\n If you want to learn more, please take a look at Help at Menu section. \n\n We wish you a happy Crypto life! ";
-"lesson_importer_end_message" = "Otsukaresama deshita m (    ) m n\ This is the end of Security Lesson. \n You can learn how to use this Wallet by Help in Menu section. \n\n We wish you a happy Crypto life! ";
-"lesson_expert_end_message" = "Thank you for using Raccoon. \n So this is the end of Security Lesson. \n\n We hope you continue enjoying crypto life. ";
+"lesson_beginner_end_message" = "Good job! n\ You\'ve completed Security Lesson. \n\n If you have any question, access Help page from menu. \n\n We wish you a happy Crypto life! ";
+"lesson_importer_end_message" = "Good job! n\ You\'ve completed Security Lesson. \n Access Help page from menu to learn how to use this wallet. \n\n We wish you a happy Crypto life! ";
+"lesson_expert_end_message" = "Thank you for using Raccoon. \n This is the end of Security Lesson. \n\n We hope you enjoy crypto life! ";
 
 "lesson_expert_title" = "";
 "lesson_expert_message" = "Good day! \n You want to do back up Private Key, right? \n You can check your Private Key from the next screen. \n Thank you for staying loyal with us. ";
@@ -170,13 +170,13 @@
 "lesson_pin_end_home" = "Complete Lesson";
 
 "lesson_pin_end_not_available_title" = "Oops!";
-"lesson_pin_end_not_available_message" = "It seems you have not done with setup fingerprint authentication on your device. \n Do you want to continue with fingerprint setup on Android OS setting? ";
+"lesson_pin_end_not_available_message" = "It seems you have not set up fingerprint authentication on your device. \n Do you want to continue to Android OS setting page to set up fingerprint authentication?";
 
 
 "qrlab_amount_headline" = "Request payment";
 "qrlab_list_headline" = "Use Selling Item list ";
 "qrlab_register_headline" = "QR Register";
-"qrlab_register_description" = "Create QR invoice with total amount by scanning a code. ";
+"qrlab_register_description" = "Scan a code to create a QR code to invoice total amount.";
 
 "qrlab_amount_title" = "Amount";
 
@@ -193,7 +193,7 @@
 "send_invalid_namespace" = "定義されていないネームスペースです";
 
 "send_amount_title" = "Enter amount";
-"send_amount_setting" = "Remit processing";
+"send_amount_setting" = "Handle transfers";
 "send_mosaic_setting" = "Attach Mosaic";
 
 "send_mode_select_title" = "Select transfer mode";
@@ -201,7 +201,7 @@
 "send_mode_attach" = "Attach";
 "send_mode_not_attach" = "添付しない";
 
-"send_confirmation_title" = "This is the final remittance confirmation screen";
+"send_confirmation_title" = "This is the final page to confirm your transfer";
 "send_confirmation_button" = "Show PIN on screen ";
 "send_confirmation_biometrics" = "Confirm sending by fingerprint authentication";
 "send_confirmation_dialog_message" = "Authenticate by fingerprint or PIN to complete sending. Please check information carefully before authenticating. ";
@@ -229,7 +229,7 @@
 "setting_currency_select" = "Currency";
 "setting_notification_setting" = "Notifications";
 "setting_change_password" = "Set up PIN Code";
-"setting_require_biometrics" = "Fingerprint required";
+"setting_require_biometrics" = "Require Fingerprint";
 "setting_require_pin_on_launch" = "Require PIN at startup";
 "setting_go_to_security_lesson" = "Take Security Lesson";
 
@@ -242,7 +242,7 @@
 "transaction_detail_title" = "Transaction detail";
 "transaction_no_transaction_title" = "Oops! No transaction yet.";
 
-"transaction_no_transaction_message" = "All transactions will be shown here. ";
+"transaction_no_transaction_message" = "Transactions will be shown here. ";
 
 "transaction_message_is_encrypted" = "Message is encrypted";
 "transaction_failed_to_decrypt" = "Failed to unlock";
@@ -294,9 +294,9 @@
 "wallet_key_caution_message" = "Private Key is the most significant thing, which you must secure it at all cost. \n\n Private Key controls all assets and account information - it can also be used to restore your Wallet. Therefore, everyone has to know this basic knowledge. \n\n Please do not lose your Private Key, and never tell others. ";
 
 "wallet_key_backup_title" = "Don\'t take a screen shot of your private key.";
-"wallet_key_backup_message" = "\n Please write down on a paper or secure it on Password management App/Software";
+"wallet_key_backup_message" = "\n Please write on paper or secure it on Password management App/Software";
 
-"wallet_delete_caution_message" = "You are about to delete your Wallet. If you do not have Private Key, you will never be able to restore your data. Are you sure you want to continue? ";
+"wallet_delete_caution_message" = "You are about to delete your wallet. If you do not have private key, you will never be able to restore your wallet. Are you sure you want to delete the wallet? ";
 
 "wallet_detail_title" = "Wallet detail";
 "wallet_detail_structure" = "Wallet configuration (m-of-n)";

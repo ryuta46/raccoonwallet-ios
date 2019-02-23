@@ -1324,6 +1324,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let common_donation = Rswift.StringResource(key: "common_donation", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Economy for Everybody
+      /// 
+      /// Locales: en, ja
+      static let first_tutorial_title3 = Rswift.StringResource(key: "first_tutorial_title3", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Encrypt the message
       /// 
       /// Locales: en, ja
@@ -1492,6 +1496,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let common_invalid_password = Rswift.StringResource(key: "common_invalid_password", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Innovation in trust on your hands
+      /// 
+      /// Locales: en, ja
+      static let first_tutorial_title2 = Rswift.StringResource(key: "first_tutorial_title2", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Input PIN to confirm your transfer
       /// 
       /// Locales: en, ja
@@ -1508,6 +1516,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let lesson_level_expert_title = Rswift.StringResource(key: "lesson_level_expert_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: It is a pleasure to meet you
+      /// 
+      /// Locales: en, ja
+      static let first_tutorial_title1 = Rswift.StringResource(key: "first_tutorial_title1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: It seems you have already set up PIN.   Please press OK to complete lesson.   Thank you! 
       /// 
       /// Locales: en, ja
@@ -1944,14 +1956,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let donation_ios_engineer_role = Rswift.StringResource(key: "donation_ios_engineer_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: すべての人に経済を。
-      /// 
-      /// Locales: en, ja
-      static let first_tutorial_title3 = Rswift.StringResource(key: "first_tutorial_title3", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: はじめまして
-      /// 
-      /// Locales: en, ja
-      static let first_tutorial_title1 = Rswift.StringResource(key: "first_tutorial_title1", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: アカウント情報の復元に失敗しました。
       /// 
       /// Locales: en, ja
@@ -1968,10 +1972,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let common_harvest = Rswift.StringResource(key: "common_harvest", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: 信頼の革新を手のひらに
-      /// 
-      /// Locales: en, ja
-      static let first_tutorial_title2 = Rswift.StringResource(key: "first_tutorial_title2", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: 取引所入金時の認証番号に使う場合は問題の原因になりますので、絶対に暗号化は指定しないでください
       /// 
       /// Locales: en, ja
@@ -2359,6 +2359,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("common_donation", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Economy for Everybody
+      /// 
+      /// Locales: en, ja
+      static func first_tutorial_title3(_: Void = ()) -> String {
+        return NSLocalizedString("first_tutorial_title3", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Encrypt the message
       /// 
       /// Locales: en, ja
@@ -2653,6 +2660,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("common_invalid_password", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Innovation in trust on your hands
+      /// 
+      /// Locales: en, ja
+      static func first_tutorial_title2(_: Void = ()) -> String {
+        return NSLocalizedString("first_tutorial_title2", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Input PIN to confirm your transfer
       /// 
       /// Locales: en, ja
@@ -2679,6 +2693,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func lesson_level_expert_title(_: Void = ()) -> String {
         return NSLocalizedString("lesson_level_expert_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: It is a pleasure to meet you
+      /// 
+      /// Locales: en, ja
+      static func first_tutorial_title1(_: Void = ()) -> String {
+        return NSLocalizedString("first_tutorial_title1", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: It seems you have already set up PIN.   Please press OK to complete lesson.   Thank you! 
@@ -3444,20 +3465,6 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("donation_ios_engineer_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: すべての人に経済を。
-      /// 
-      /// Locales: en, ja
-      static func first_tutorial_title3(_: Void = ()) -> String {
-        return NSLocalizedString("first_tutorial_title3", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: はじめまして
-      /// 
-      /// Locales: en, ja
-      static func first_tutorial_title1(_: Void = ()) -> String {
-        return NSLocalizedString("first_tutorial_title1", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: アカウント情報の復元に失敗しました。
       /// 
       /// Locales: en, ja
@@ -3484,13 +3491,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func common_harvest(_: Void = ()) -> String {
         return NSLocalizedString("common_harvest", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: 信頼の革新を手のひらに
-      /// 
-      /// Locales: en, ja
-      static func first_tutorial_title2(_: Void = ()) -> String {
-        return NSLocalizedString("first_tutorial_title2", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: 取引所入金時の認証番号に使う場合は問題の原因になりますので、絶対に暗号化は指定しないでください

@@ -25,7 +25,7 @@ class WalletSelectViewController: BaseViewController {
         super.setup()
         
         view.backgroundColor = Theme.baseBackground
-        createNewWalletButton.setTitle(R.string.localizable.wallet_creation_new(), for: .normal)
+        createNewWalletButton.setTitle(" " + R.string.localizable.wallet_creation_new(), for: .normal)
 
         walletList.dataSource = self
         walletList.delegate = self
