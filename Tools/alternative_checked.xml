@@ -1,0 +1,13 @@
+<resources>
+    <string name="fingerprint_setting_authenticate_title" original="指紋認証によるアクセス設定">%@によるアクセス設定</string>
+    <string name="fingerprint_setting_authenticate_message" original="指紋認証を使用してアプリのロックを解除できるように設定できます。\nOKを押すと、設定を完了します。">%@を使用してアプリのロックを解除できるように設定できます。\nOKを押すと、設定を完了します。</string>
+    <string name="fingerprint_setting_authenticate_success_message" original="指紋認証を使用したログインが設定されました。">%@を使用したログインが設定されました。</string>
+    <string name="pin_code_setting_end_fragment_button_finger" original="指紋認証を設定する">生体認証を設定する</string>
+    <string name="pin_code_setting_end_not_available_message" original="端末自体の指紋認証が未設定のようです。\nAndroidOSの設定画面に移動して、指紋認証の設定を開始しますか？">端末自体の%@が未設定のようです。\niOSの設定画面に移動して、%@の設定を開始しますか？</string>
+    <string name="send_confirm_fragment_pin_code_send" original="PIN画面を表示します">タップして認証画面を表示</string>
+    <string name="send_confirm_fragment_finger_print_send" original="指紋認証で送金します">%@で送金します</string>
+    <string name="select_message_type_fragment_normal_message_description" original="通常のメッセージです。\n取引所への認証番号を入力する際は、">通常のメッセージです。\n取引所への認証番号を入力する際は、必ずこちらで行いましょう。</string>
+    <string name="address_error_dialog_title" original="送り先が暗号化メッセージに 対応していません。">送り先が暗号化メッセージに対応していません。</string>
+    <string name="setting_home_fingerprint" original="指紋の要求">%@の要求</string>
+    <string name="private_key_display_fragment_description_2" original="\n\n紙に書き留める、またはパスワード管理アプリ・ソフトウェアを使って厳重に保管してください。">紙に書き留める、またはパスワード管理アプリ・ソフトウェアを使って厳重に保管してください。</string>
+</resources>
