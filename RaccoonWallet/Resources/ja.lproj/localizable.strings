@@ -204,7 +204,7 @@
 "send_confirmation_title" = "送金の最終確認画面です";
 "send_confirmation_button" = "タップして認証画面を表示";
 "send_confirmation_biometrics" = "%@で送金します";
-"send_confirmation_dialog_message" = "この画面で指紋認証またはPINの認証が完了すると、送金が完了します。\n表示された情報をよくご確認の上、操作してください。";
+"send_confirmation_dialog_message" = "この画面で%@またはPINの認証が完了すると、送金が完了します。\n表示された情報をよくご確認の上、操作してください。";
 "send_confirmation_pin_message" = "PINを入力して送金を確定する";
 
 "send_complete_message" = "送金手続きが完了しました";

@@ -66,9 +66,10 @@ extension SendConfirmationViewController: PinDialogMixinViewController {
 
 extension SendConfirmationViewController: SendConfirmationView {
     func showCaution() {
+        let biometrics = LocalAuthenticationHelper.checkBiometrics()
         let dialog = MessageDialogRouter.assembleModule(
                 headline: R.string.localizable.send_confirmation_title(),
-                messages: [R.string.localizable.send_confirmation_dialog_message()],
+                messages: [R.string.localizable.send_confirmation_dialog_message(biometrics.description)],
                 mode: .neverRemind) { [weak self] result in
             if result == .neverRemind {
                 self?.presenter.didClickNeverRemind()
