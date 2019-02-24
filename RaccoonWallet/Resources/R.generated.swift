@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 84 images.
+  /// This `R.image` struct is generated, and contains static references to 83 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -188,8 +188,6 @@ struct R: Rswift.Validatable {
     static let image_empty2_large = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_empty2_large")
     /// Image `image_empty2_small`.
     static let image_empty2_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_empty2_small")
-    /// Image `image_harvest_background`.
-    static let image_harvest_background = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_harvest_background")
     /// Image `image_key`.
     static let image_key = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_key")
     /// Image `image_lesson_card1`.
@@ -562,11 +560,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "image_empty2_small", bundle: ..., traitCollection: ...)`
     static func image_empty2_small(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.image_empty2_small, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "image_harvest_background", bundle: ..., traitCollection: ...)`
-    static func image_harvest_background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.image_harvest_background, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "image_key", bundle: ..., traitCollection: ...)`
