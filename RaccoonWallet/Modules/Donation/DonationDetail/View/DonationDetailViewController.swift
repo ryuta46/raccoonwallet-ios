@@ -20,10 +20,15 @@ class DonationDetailViewController: BaseViewController {
         super.setup()
         
         title = R.string.localizable.donation_detail_title()
-        name.textColor = Theme.primary
         role.textColor = Theme.secondary
         
         card.isInteractable = false
+    }
+    @IBAction func onTouchedGithub(_ sender: Any) {
+        presenter.didClickGithub()
+    }
+    @IBAction func onTouchedTwitter(_ sender: Any) {
+        presenter.dicClickTwitter()
     }
     @IBAction func onTouchedDonate(_ sender: Any) {
         presenter.didClickDonate()

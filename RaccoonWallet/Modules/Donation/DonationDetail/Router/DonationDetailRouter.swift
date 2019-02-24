@@ -41,5 +41,12 @@ class DonationDetailRouter: DonationDetailWireframe {
     func presentWalletSelect() {
         viewController?.navigationController?.pushViewControllerFromTop(WalletSelectRouter.assembleModule())
     }
+
+    func openUrl(_ urlString: String) {
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        ExternalLink.open(url: url)
+    }
 }
 

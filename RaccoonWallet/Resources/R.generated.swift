@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 82 images.
+  /// This `R.image` struct is generated, and contains static references to 84 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -114,6 +114,8 @@ struct R: Rswift.Validatable {
     static let icon_dialog_fingerprint = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_dialog_fingerprint")
     /// Image `icon_dialog_success`.
     static let icon_dialog_success = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_dialog_success")
+    /// Image `icon_github`.
+    static let icon_github = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_github")
     /// Image `icon_harvest_small`.
     static let icon_harvest_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_harvest_small")
     /// Image `icon_home_harvest`.
@@ -170,6 +172,8 @@ struct R: Rswift.Validatable {
     static let icon_transaction_receive_red = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_transaction_receive_red")
     /// Image `icon_transaction_unconfirmed`.
     static let icon_transaction_unconfirmed = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_transaction_unconfirmed")
+    /// Image `icon_twitter_black`.
+    static let icon_twitter_black = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_twitter_black")
     /// Image `icon_wallet_16x16`.
     static let icon_wallet_16x16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_wallet_16x16")
     /// Image `icon_wallet_back`.
@@ -375,6 +379,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_dialog_success, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icon_github", bundle: ..., traitCollection: ...)`
+    static func icon_github(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_github, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icon_harvest_small", bundle: ..., traitCollection: ...)`
     static func icon_harvest_small(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_harvest_small, compatibleWith: traitCollection)
@@ -513,6 +522,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_transaction_unconfirmed", bundle: ..., traitCollection: ...)`
     static func icon_transaction_unconfirmed(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_transaction_unconfirmed, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_twitter_black", bundle: ..., traitCollection: ...)`
+    static func icon_twitter_black(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_twitter_black, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_wallet_16x16", bundle: ..., traitCollection: ...)`
@@ -3775,8 +3789,9 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "image_harvest_background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_harvest_background' is used in storyboard 'DonationDetailStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_yuki") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_yuki' is used in storyboard 'DonationDetailStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_github") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_github' is used in storyboard 'DonationDetailStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_twitter_black") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_twitter_black' is used in storyboard 'DonationDetailStoryboard', but couldn't be loaded.") }
         if _R.storyboard.donationDetailStoryboard().donationDetailView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'donationDetailView' could not be loaded from storyboard 'DonationDetailStoryboard' as 'DonationDetailViewController'.") }
       }
       

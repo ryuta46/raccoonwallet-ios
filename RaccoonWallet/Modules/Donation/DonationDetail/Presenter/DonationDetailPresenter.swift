@@ -22,6 +22,14 @@ class DonationDetailPresenter: BasePresenter {
 }
 
 extension DonationDetailPresenter: DonationDetailPresentation {
+    func didClickGithub() {
+        router.openUrl("https://github.com/\(developer.github)")
+    }
+
+    func dicClickTwitter() {
+        router.openUrl("https://twitter.com/\(developer.twitter)")
+    }
+
     func didClickDonate() {
         guard PinPreference.shared.saved else {
             view?.showNotSetPinError()
