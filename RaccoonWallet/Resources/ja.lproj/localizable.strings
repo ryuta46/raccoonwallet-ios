@@ -95,10 +95,6 @@
 "donation_title" = "開発者一覧";
 "donation_detail_title" = "プロフィール";
 
-"donation_android_engineer_name" = "Android Developer";
-"donation_android_engineer_role" = "エンジニア";
-"donation_android_engineer_detail" = "Androidエンジニア\n@YukiYamadaJP\n@Riberd_Puzzle1\n\n・Android版アプリ開発";
-
 "donation_yuki_name" = "Yuki";
 "donation_yuki_role" = "エンジニア";
 "donation_yuki_detail" = "エンジニア\n・ベースアプリ開発\n・Android版アプリ開発";
@@ -107,14 +103,13 @@
 "donation_soma_role" = "エンジニア";
 "donation_soma_detail" = "エンジニア\n・Android版アプリ開発";
 
+"donation_rhime_name" = "Rhime";
+"donation_rhime_role" = "UIデザイナー";
+"donation_rhime_detail" = "デザイナー\n・Android / iOSアプリのIA/UI/UXデザイン\n・ビジュアルデザイン/ブランディング";
 
-"donation_designer_name" = "Rhime";
-"donation_designer_role" = "UIデザイナー";
-"donation_designer_detail" = "デザイナー\n・Android / iOSアプリのIA/UI/UXデザイン\n・ビジュアルデザイン/ブランディング";
-
-"donation_ios_engineer_name" = "Ryuta";
-"donation_ios_engineer_role" = "iOSエンジニア";
-"donation_ios_engineer_detail" = "エンジニア\n・iOS版開発主任\n・PWA(Progressive Web Apps)開発";
+"donation_ryuta_name" = "Ryuta";
+"donation_ryuta_role" = "iOSエンジニア";
+"donation_ryuta_detail" = "エンジニア\n・iOS版開発主任\n・PWA(Progressive Web Apps)開発";
 
 "first_tutorial_button" = "はじめる";
 "first_tutorial_title1" = "はじめまして";
@@ -204,7 +199,7 @@
 "send_confirmation_title" = "送金の最終確認画面です";
 "send_confirmation_button" = "タップして認証画面を表示";
 "send_confirmation_biometrics" = "%@で送金します";
-"send_confirmation_dialog_message" = "この画面で指紋認証またはPINの認証が完了すると、送金が完了します。\n表示された情報をよくご確認の上、操作してください。";
+"send_confirmation_dialog_message" = "この画面で%@またはPINの認証が完了すると、送金が完了します。\n表示された情報をよくご確認の上、操作してください。";
 "send_confirmation_pin_message" = "PINを入力して送金を確定する";
 
 "send_complete_message" = "送金手続きが完了しました";

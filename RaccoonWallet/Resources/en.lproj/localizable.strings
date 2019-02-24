@@ -47,14 +47,14 @@
 "common_general" = "General";
 "common_security" = "Security";
 
-"common_touchID" = "指紋認証";
-"common_faceID" = "顔認証";
+"common_touchID" = "fingerprint";
+"common_faceID" = "face";
 
-"common_biometrics_enable_title" = "Setup access by fingerprint authentication";
-"common_biometrics_enable_message" = "You can unlock the application by fingerprint authentication. Please press \n OK to finish setup. ";
+"common_biometrics_enable_title" = "Setup access by %@ authentication";
+"common_biometrics_enable_message" = "You can unlock the application by %@ authentication. Please press \n OK to finish setup. ";
 
 "common_biometrics_enable_success_title" = "SUCCESS!";
-"common_biometrics_enable_success_message" = "Setup log in by fingerprint authentication is completed. ";
+"common_biometrics_enable_success_message" = "Setup log in by %@ authentication is completed. ";
 
 "common_qr_import" = "Import QR code";
 
@@ -95,10 +95,6 @@
 "donation_title" = "Developers";
 "donation_detail_title" = "Profile";
 
-"donation_android_engineer_name" = "Android Developer";
-"donation_android_engineer_role" = "Engineer";
-"donation_android_engineer_detail" = "Android Engineer \n@YukiYamadaJP\n@Riberd_Puzzle1\n\n・Android App Developer ";
-
 "donation_yuki_name" = "Yuki";
 "donation_yuki_role" = "Engineer";
 "donation_yuki_detail" = "Engineer \n・Base App Developer \n・Android Ver. App Developer ";
@@ -107,14 +103,13 @@
 "donation_soma_role" = "Engineer";
 "donation_soma_detail" = "Engineer \n・Android App Developer ";
 
+"donation_rhime_name" = "Rhime";
+"donation_rhime_role" = "UI designer";
+"donation_rhime_detail" = "Designer\n・Android / iOS App\'s IA/UI/UX Design \n・Visual Design / Branding ";
 
-"donation_designer_name" = "Rhime";
-"donation_designer_role" = "UI designer";
-"donation_designer_detail" = "Designer\n・Android / iOS App\'s IA/UI/UX Design \n・Visual Design / Branding ";
-
-"donation_ios_engineer_name" = "Ryuta";
-"donation_ios_engineer_role" = "iOS Engineer";
-"donation_ios_engineer_detail" = "Engineer \n・iOS Development Director \n・PWA(Progressive Web Apps) Developer";
+"donation_ryuta_name" = "Ryuta";
+"donation_ryuta_role" = "iOS Engineer";
+"donation_ryuta_detail" = "Engineer \n・iOS Development Director \n・PWA(Progressive Web Apps) Developer";
 
 "first_tutorial_button" = "Let\'s get started.";
 "first_tutorial_title1" = "It is a pleasure to meet you";
@@ -170,7 +165,7 @@
 "lesson_pin_end_home" = "Complete Lesson";
 
 "lesson_pin_end_not_available_title" = "Oops!";
-"lesson_pin_end_not_available_message" = "It seems you have not set up fingerprint authentication on your device. \n Do you want to continue to iOS setting page to set up fingerprint authentication?";
+"lesson_pin_end_not_available_message" = "It seems you have not set up %@ authentication on your device. \n Do you want to continue to iOS setting page to set up %@ authentication?";
 
 
 "qrlab_amount_headline" = "Request payment";
@@ -203,8 +198,8 @@
 
 "send_confirmation_title" = "This is the final page to confirm your transfer";
 "send_confirmation_button" = "Show PIN on screen ";
-"send_confirmation_biometrics" = "Confirm sending by fingerprint authentication";
-"send_confirmation_dialog_message" = "Authenticate by fingerprint or PIN to complete sending. Please check information carefully before authenticating. ";
+"send_confirmation_biometrics" = "Confirm sending by %@ authentication";
+"send_confirmation_dialog_message" = "Authenticate by %@ or PIN to complete sending. Please check information carefully before authenticating. ";
 "send_confirmation_pin_message" = "Input PIN to confirm your transfer";
 
 "send_complete_message" = "Your transfer request has been completed.  ";
@@ -229,7 +224,7 @@
 "setting_currency_select" = "Currency";
 "setting_notification_setting" = "Notifications";
 "setting_change_password" = "Set up PIN Code";
-"setting_require_biometrics" = "Require Fingerprint";
+"setting_require_biometrics" = "Require %@ authentication";
 "setting_require_pin_on_launch" = "Require PIN at startup";
 "setting_go_to_security_lesson" = "Take Security Lesson";
 

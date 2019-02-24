@@ -95,9 +95,6 @@
 "donation_title" = "รายชื่อทีมงานสร้างแอป";
 "donation_detail_title" = "โปรไฟล์";
 
-"donation_android_engineer_name" = "Android Developer";
-"donation_android_engineer_role" = "Engineer";
-"donation_android_engineer_detail" = "Android Engineer \n@YukiYamadaJP\n@Riberd_Puzzle1\n\n・For Android App Developer ";
 
 "donation_yuki_name" = "Yuki";
 "donation_yuki_role" = "Engineer";
@@ -107,14 +104,13 @@
 "donation_soma_role" = "Engineer";
 "donation_soma_detail" = "Engineer \n・For Android App Developer";
 
+"donation_rhime_name" = "Rhime";
+"donation_rhime_role" = "UI Designer";
+"donation_rhime_detail" = "Designer \n・Android / iOS App IA/UI/UX Design \n・Visual Design / Branding ";
 
-"donation_designer_name" = "Rhime";
-"donation_designer_role" = "UI Designer";
-"donation_designer_detail" = "Designer \n・Android / iOS App IA/UI/UX Design \n・Visual Design / Branding ";
-
-"donation_ios_engineer_name" = "Ryuta";
-"donation_ios_engineer_role" = "iOS Engineer ";
-"donation_ios_engineer_detail" = "Engineer \n・iOS Head Developer \n・PWA (Progressive Web Apps) Developer";
+"donation_ryuta_name" = "Ryuta";
+"donation_ryuta_role" = "iOS Engineer ";
+"donation_ryuta_detail" = "Engineer \n・iOS Head Developer \n・PWA (Progressive Web Apps) Developer";
 
 "first_tutorial_button" = "เริ่มต้น";
 "first_tutorial_title1" = "ยินดีต้อนรับ";

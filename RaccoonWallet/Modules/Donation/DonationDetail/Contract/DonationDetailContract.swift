@@ -25,6 +25,8 @@ protocol DonationDetailPresentation: BasePresentation {
     var interactor: DonationDetailUseCase! { get set }
     var router: DonationDetailWireframe! { get set }
 
+    func didClickGithub()
+    func dicClickTwitter()
     func didClickDonate()
 
     func didClickGoPinSetting()
@@ -50,4 +52,6 @@ protocol DonationDetailWireframe: class {
 
     func presentSetting()
     func presentWalletSelect()
+
+    func openUrl(_ urlString: String)
 }

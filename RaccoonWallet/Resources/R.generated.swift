@@ -48,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 81 images.
+  /// This `R.image` struct is generated, and contains static references to 83 images.
   struct image {
     /// Image `about_logo`.
     static let about_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "about_logo")
@@ -114,6 +114,8 @@ struct R: Rswift.Validatable {
     static let icon_dialog_fingerprint = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_dialog_fingerprint")
     /// Image `icon_dialog_success`.
     static let icon_dialog_success = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_dialog_success")
+    /// Image `icon_github`.
+    static let icon_github = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_github")
     /// Image `icon_harvest_small`.
     static let icon_harvest_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_harvest_small")
     /// Image `icon_home_harvest`.
@@ -160,6 +162,8 @@ struct R: Rswift.Validatable {
     static let icon_send_end_home = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_send_end_home")
     /// Image `icon_send_end_transaction`.
     static let icon_send_end_transaction = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_send_end_transaction")
+    /// Image `icon_soma`.
+    static let icon_soma = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_soma")
     /// Image `icon_transaction_check`.
     static let icon_transaction_check = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_transaction_check")
     /// Image `icon_transaction_receive_green`.
@@ -168,6 +172,8 @@ struct R: Rswift.Validatable {
     static let icon_transaction_receive_red = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_transaction_receive_red")
     /// Image `icon_transaction_unconfirmed`.
     static let icon_transaction_unconfirmed = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_transaction_unconfirmed")
+    /// Image `icon_twitter_black`.
+    static let icon_twitter_black = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_twitter_black")
     /// Image `icon_wallet_16x16`.
     static let icon_wallet_16x16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_wallet_16x16")
     /// Image `icon_wallet_back`.
@@ -182,8 +188,6 @@ struct R: Rswift.Validatable {
     static let image_empty2_large = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_empty2_large")
     /// Image `image_empty2_small`.
     static let image_empty2_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_empty2_small")
-    /// Image `image_harvest_background`.
-    static let image_harvest_background = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_harvest_background")
     /// Image `image_key`.
     static let image_key = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_key")
     /// Image `image_lesson_card1`.
@@ -373,6 +377,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_dialog_success, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icon_github", bundle: ..., traitCollection: ...)`
+    static func icon_github(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_github, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icon_harvest_small", bundle: ..., traitCollection: ...)`
     static func icon_harvest_small(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_harvest_small, compatibleWith: traitCollection)
@@ -488,6 +497,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_send_end_transaction, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icon_soma", bundle: ..., traitCollection: ...)`
+    static func icon_soma(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_soma, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icon_transaction_check", bundle: ..., traitCollection: ...)`
     static func icon_transaction_check(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_transaction_check, compatibleWith: traitCollection)
@@ -506,6 +520,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_transaction_unconfirmed", bundle: ..., traitCollection: ...)`
     static func icon_transaction_unconfirmed(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_transaction_unconfirmed, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_twitter_black", bundle: ..., traitCollection: ...)`
+    static func icon_twitter_black(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_twitter_black, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_wallet_16x16", bundle: ..., traitCollection: ...)`
@@ -541,11 +560,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "image_empty2_small", bundle: ..., traitCollection: ...)`
     static func image_empty2_small(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.image_empty2_small, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "image_harvest_background", bundle: ..., traitCollection: ...)`
-    static func image_harvest_background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.image_harvest_background, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "image_key", bundle: ..., traitCollection: ...)`
@@ -1122,7 +1136,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 221 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 218 localization keys.
     struct localizable {
       /// en translation: 
       /// 
@@ -1184,14 +1198,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja, th
       static let qrlab_amount_title = Rswift.StringResource(key: "qrlab_amount_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: Android Developer
-      /// 
-      /// Locales: en, ja, th
-      static let donation_android_engineer_name = Rswift.StringResource(key: "donation_android_engineer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: Android Engineer  @YukiYamadaJP @Riberd_Puzzle1  ・Android App Developer 
-      /// 
-      /// Locales: en, ja, th
-      static let donation_android_engineer_detail = Rswift.StringResource(key: "donation_android_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Attach
       /// 
       /// Locales: en, ja, th
@@ -1200,7 +1206,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja, th
       static let send_mosaic_setting = Rswift.StringResource(key: "send_mosaic_setting", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: Authenticate by fingerprint or PIN to complete sending. Please check information carefully before authenticating. 
+      /// en translation: Authenticate by %@ or PIN to complete sending. Please check information carefully before authenticating. 
       /// 
       /// Locales: en, ja, th
       static let send_confirmation_dialog_message = Rswift.StringResource(key: "send_confirmation_dialog_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
@@ -1240,7 +1246,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja, th
       static let lesson_pin_end_home = Rswift.StringResource(key: "lesson_pin_end_home", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: Confirm sending by fingerprint authentication
+      /// en translation: Confirm sending by %@ authentication
       /// 
       /// Locales: en, ja, th
       static let send_confirmation_biometrics = Rswift.StringResource(key: "send_confirmation_biometrics", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
@@ -1291,7 +1297,7 @@ struct R: Rswift.Validatable {
       /// en translation: Designer ・Android / iOS App's IA/UI/UX Design  ・Visual Design / Branding 
       /// 
       /// Locales: en, ja, th
-      static let donation_designer_detail = Rswift.StringResource(key: "donation_designer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      static let donation_rhime_detail = Rswift.StringResource(key: "donation_rhime_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Destination
       /// 
       /// Locales: en, ja, th
@@ -1335,10 +1341,6 @@ struct R: Rswift.Validatable {
       /// en translation: Engineer
       /// 
       /// Locales: en, ja, th
-      static let donation_android_engineer_role = Rswift.StringResource(key: "donation_android_engineer_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: Engineer
-      /// 
-      /// Locales: en, ja, th
       static let donation_soma_role = Rswift.StringResource(key: "donation_soma_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Engineer
       /// 
@@ -1355,7 +1357,7 @@ struct R: Rswift.Validatable {
       /// en translation: Engineer  ・iOS Development Director  ・PWA(Progressive Web Apps) Developer
       /// 
       /// Locales: en, ja, th
-      static let donation_ios_engineer_detail = Rswift.StringResource(key: "donation_ios_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      static let donation_ryuta_detail = Rswift.StringResource(key: "donation_ryuta_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Enter NanoWallet password
       /// 
       /// Locales: en, ja, th
@@ -1536,7 +1538,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja, th
       static let lesson_cancel_pin_message = Rswift.StringResource(key: "lesson_cancel_pin_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: It seems you have not set up fingerprint authentication on your device.   Do you want to continue to iOS setting page to set up fingerprint authentication?
+      /// en translation: It seems you have not set up %@ authentication on your device.   Do you want to continue to iOS setting page to set up %@ authentication?
       /// 
       /// Locales: en, ja, th
       static let lesson_pin_end_not_available_message = Rswift.StringResource(key: "lesson_pin_end_not_available_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
@@ -1696,7 +1698,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja, th
       static let qrlab_amount_headline = Rswift.StringResource(key: "qrlab_amount_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: Require Fingerprint
+      /// en translation: Require %@ authentication
       /// 
       /// Locales: en, ja, th
       static let setting_require_biometrics = Rswift.StringResource(key: "setting_require_biometrics", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
@@ -1707,7 +1709,7 @@ struct R: Rswift.Validatable {
       /// en translation: Rhime
       /// 
       /// Locales: en, ja, th
-      static let donation_designer_name = Rswift.StringResource(key: "donation_designer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      static let donation_rhime_name = Rswift.StringResource(key: "donation_rhime_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Roger that! 
       /// 
       /// Locales: en, ja, th
@@ -1715,7 +1717,7 @@ struct R: Rswift.Validatable {
       /// en translation: Ryuta
       /// 
       /// Locales: en, ja, th
-      static let donation_ios_engineer_name = Rswift.StringResource(key: "donation_ios_engineer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      static let donation_ryuta_name = Rswift.StringResource(key: "donation_ryuta_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: SUCCESS
       /// 
       /// Locales: en, ja, th
@@ -1780,11 +1782,11 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja, th
       static let common_settings = Rswift.StringResource(key: "common_settings", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: Setup access by fingerprint authentication
+      /// en translation: Setup access by %@ authentication
       /// 
       /// Locales: en, ja, th
       static let common_biometrics_enable_title = Rswift.StringResource(key: "common_biometrics_enable_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: Setup log in by fingerprint authentication is completed. 
+      /// en translation: Setup log in by %@ authentication is completed. 
       /// 
       /// Locales: en, ja, th
       static let common_biometrics_enable_success_message = Rswift.StringResource(key: "common_biometrics_enable_success_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
@@ -1859,7 +1861,7 @@ struct R: Rswift.Validatable {
       /// en translation: UI designer
       /// 
       /// Locales: en, ja, th
-      static let donation_designer_role = Rswift.StringResource(key: "donation_designer_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      static let donation_rhime_role = Rswift.StringResource(key: "donation_rhime_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Use Selling Item list 
       /// 
       /// Locales: en, ja, th
@@ -1924,7 +1926,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja, th
       static let wallet_go_home_caution1_message = Rswift.StringResource(key: "wallet_go_home_caution1_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: You can unlock the application by fingerprint authentication. Please press   OK to finish setup. 
+      /// en translation: You can unlock the application by %@ authentication. Please press   OK to finish setup. 
       /// 
       /// Locales: en, ja, th
       static let common_biometrics_enable_message = Rswift.StringResource(key: "common_biometrics_enable_message", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
@@ -1960,10 +1962,18 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja, th
       static let donation_yuki_name = Rswift.StringResource(key: "donation_yuki_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: face
+      /// 
+      /// Locales: en, ja, th
+      static let common_faceID = Rswift.StringResource(key: "common_faceID", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      /// en translation: fingerprint
+      /// 
+      /// Locales: en, ja, th
+      static let common_touchID = Rswift.StringResource(key: "common_touchID", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: iOS Engineer
       /// 
       /// Locales: en, ja, th
-      static let donation_ios_engineer_role = Rswift.StringResource(key: "donation_ios_engineer_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      static let donation_ryuta_role = Rswift.StringResource(key: "donation_ryuta_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: アカウント情報の復元に失敗しました。
       /// 
       /// Locales: en, ja, th
@@ -1984,10 +1994,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja, th
       static let send_invalid_namespace = Rswift.StringResource(key: "send_invalid_namespace", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: 指紋認証
-      /// 
-      /// Locales: en, ja, th
-      static let common_touchID = Rswift.StringResource(key: "common_touchID", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: 残高
       /// 
       /// Locales: en, ja, th
@@ -2004,10 +2010,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja, th
       static let home_transaction_headline = Rswift.StringResource(key: "home_transaction_headline", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: 顔認証
-      /// 
-      /// Locales: en, ja, th
-      static let common_faceID = Rswift.StringResource(key: "common_faceID", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       
       /// en translation: 
       /// 
@@ -2114,20 +2116,6 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("qrlab_amount_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Android Developer
-      /// 
-      /// Locales: en, ja, th
-      static func donation_android_engineer_name(_: Void = ()) -> String {
-        return NSLocalizedString("donation_android_engineer_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Android Engineer  @YukiYamadaJP @Riberd_Puzzle1  ・Android App Developer 
-      /// 
-      /// Locales: en, ja, th
-      static func donation_android_engineer_detail(_: Void = ()) -> String {
-        return NSLocalizedString("donation_android_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: Attach
       /// 
       /// Locales: en, ja, th
@@ -2142,11 +2130,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("send_mosaic_setting", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Authenticate by fingerprint or PIN to complete sending. Please check information carefully before authenticating. 
+      /// en translation: Authenticate by %@ or PIN to complete sending. Please check information carefully before authenticating. 
       /// 
       /// Locales: en, ja, th
-      static func send_confirmation_dialog_message(_: Void = ()) -> String {
-        return NSLocalizedString("send_confirmation_dialog_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func send_confirmation_dialog_message(_ value1: String) -> String {
+        return String(format: NSLocalizedString("send_confirmation_dialog_message", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
       /// en translation: Back up Private Key + Set up PIN code
@@ -2212,7 +2200,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("lesson_pin_end_home", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Confirm sending by fingerprint authentication
+      /// en translation: Confirm sending by %@ authentication
       /// 
       /// Locales: en, ja, th
       static func send_confirmation_biometrics(_ value1: String) -> String {
@@ -2299,8 +2287,8 @@ struct R: Rswift.Validatable {
       /// en translation: Designer ・Android / iOS App's IA/UI/UX Design  ・Visual Design / Branding 
       /// 
       /// Locales: en, ja, th
-      static func donation_designer_detail(_: Void = ()) -> String {
-        return NSLocalizedString("donation_designer_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func donation_rhime_detail(_: Void = ()) -> String {
+        return NSLocalizedString("donation_rhime_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Destination
@@ -2376,13 +2364,6 @@ struct R: Rswift.Validatable {
       /// en translation: Engineer
       /// 
       /// Locales: en, ja, th
-      static func donation_android_engineer_role(_: Void = ()) -> String {
-        return NSLocalizedString("donation_android_engineer_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Engineer
-      /// 
-      /// Locales: en, ja, th
       static func donation_soma_role(_: Void = ()) -> String {
         return NSLocalizedString("donation_soma_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
@@ -2411,8 +2392,8 @@ struct R: Rswift.Validatable {
       /// en translation: Engineer  ・iOS Development Director  ・PWA(Progressive Web Apps) Developer
       /// 
       /// Locales: en, ja, th
-      static func donation_ios_engineer_detail(_: Void = ()) -> String {
-        return NSLocalizedString("donation_ios_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func donation_ryuta_detail(_: Void = ()) -> String {
+        return NSLocalizedString("donation_ryuta_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Enter NanoWallet password
@@ -2730,7 +2711,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("lesson_cancel_pin_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: It seems you have not set up fingerprint authentication on your device.   Do you want to continue to iOS setting page to set up fingerprint authentication?
+      /// en translation: It seems you have not set up %@ authentication on your device.   Do you want to continue to iOS setting page to set up %@ authentication?
       /// 
       /// Locales: en, ja, th
       static func lesson_pin_end_not_available_message(_ value1: String, _ value2: String) -> String {
@@ -3010,7 +2991,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("qrlab_amount_headline", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Require Fingerprint
+      /// en translation: Require %@ authentication
       /// 
       /// Locales: en, ja, th
       static func setting_require_biometrics(_ value1: String) -> String {
@@ -3027,8 +3008,8 @@ struct R: Rswift.Validatable {
       /// en translation: Rhime
       /// 
       /// Locales: en, ja, th
-      static func donation_designer_name(_: Void = ()) -> String {
-        return NSLocalizedString("donation_designer_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func donation_rhime_name(_: Void = ()) -> String {
+        return NSLocalizedString("donation_rhime_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Roger that! 
@@ -3041,8 +3022,8 @@ struct R: Rswift.Validatable {
       /// en translation: Ryuta
       /// 
       /// Locales: en, ja, th
-      static func donation_ios_engineer_name(_: Void = ()) -> String {
-        return NSLocalizedString("donation_ios_engineer_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func donation_ryuta_name(_: Void = ()) -> String {
+        return NSLocalizedString("donation_ryuta_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: SUCCESS
@@ -3157,14 +3138,14 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("common_settings", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Setup access by fingerprint authentication
+      /// en translation: Setup access by %@ authentication
       /// 
       /// Locales: en, ja, th
       static func common_biometrics_enable_title(_ value1: String) -> String {
         return String(format: NSLocalizedString("common_biometrics_enable_title", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
-      /// en translation: Setup log in by fingerprint authentication is completed. 
+      /// en translation: Setup log in by %@ authentication is completed. 
       /// 
       /// Locales: en, ja, th
       static func common_biometrics_enable_success_message(_ value1: String) -> String {
@@ -3293,8 +3274,8 @@ struct R: Rswift.Validatable {
       /// en translation: UI designer
       /// 
       /// Locales: en, ja, th
-      static func donation_designer_role(_: Void = ()) -> String {
-        return NSLocalizedString("donation_designer_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func donation_rhime_role(_: Void = ()) -> String {
+        return NSLocalizedString("donation_rhime_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Use Selling Item list 
@@ -3409,7 +3390,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("wallet_go_home_caution1_message", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: You can unlock the application by fingerprint authentication. Please press   OK to finish setup. 
+      /// en translation: You can unlock the application by %@ authentication. Please press   OK to finish setup. 
       /// 
       /// Locales: en, ja, th
       static func common_biometrics_enable_message(_ value1: String) -> String {
@@ -3472,11 +3453,25 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("donation_yuki_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: face
+      /// 
+      /// Locales: en, ja, th
+      static func common_faceID(_: Void = ()) -> String {
+        return NSLocalizedString("common_faceID", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: fingerprint
+      /// 
+      /// Locales: en, ja, th
+      static func common_touchID(_: Void = ()) -> String {
+        return NSLocalizedString("common_touchID", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: iOS Engineer
       /// 
       /// Locales: en, ja, th
-      static func donation_ios_engineer_role(_: Void = ()) -> String {
-        return NSLocalizedString("donation_ios_engineer_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func donation_ryuta_role(_: Void = ()) -> String {
+        return NSLocalizedString("donation_ryuta_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: アカウント情報の復元に失敗しました。
@@ -3514,13 +3509,6 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("send_invalid_namespace", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: 指紋認証
-      /// 
-      /// Locales: en, ja, th
-      static func common_touchID(_: Void = ()) -> String {
-        return NSLocalizedString("common_touchID", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: 残高
       /// 
       /// Locales: en, ja, th
@@ -3547,13 +3535,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja, th
       static func home_transaction_headline(_: Void = ()) -> String {
         return NSLocalizedString("home_transaction_headline", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: 顔認証
-      /// 
-      /// Locales: en, ja, th
-      static func common_faceID(_: Void = ()) -> String {
-        return NSLocalizedString("common_faceID", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -3801,8 +3782,9 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "image_harvest_background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_harvest_background' is used in storyboard 'DonationDetailStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_yuki") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_yuki' is used in storyboard 'DonationDetailStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_github") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_github' is used in storyboard 'DonationDetailStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_twitter_black") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_twitter_black' is used in storyboard 'DonationDetailStoryboard', but couldn't be loaded.") }
         if _R.storyboard.donationDetailStoryboard().donationDetailView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'donationDetailView' could not be loaded from storyboard 'DonationDetailStoryboard' as 'DonationDetailViewController'.") }
       }
       
@@ -3819,10 +3801,10 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "icon_rhime") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_rhime' is used in storyboard 'DonationTopStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon_ryuta") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_ryuta' is used in storyboard 'DonationTopStoryboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "image_harvest_background") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image_harvest_background' is used in storyboard 'DonationTopStoryboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_yuki") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_yuki' is used in storyboard 'DonationTopStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_ryuta") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_ryuta' is used in storyboard 'DonationTopStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_soma") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_soma' is used in storyboard 'DonationTopStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_rhime") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_rhime' is used in storyboard 'DonationTopStoryboard', but couldn't be loaded.") }
         if _R.storyboard.donationTopStoryboard().donationTopView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'donationTopView' could not be loaded from storyboard 'DonationTopStoryboard' as 'DonationTopViewController'.") }
       }
       
