@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,50 +18,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_harvest_background" translatesAutoresizingMaskIntoConstraints="NO" id="wYK-3N-8Gg">
-                                <rect key="frame" x="0.0" y="470" width="320" height="98"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="wYK-3N-8Gg" secondAttribute="height" multiplier="1440:440" id="fKP-JY-TjF"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oom-Gr-628" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
-                                <rect key="frame" x="16" y="68" width="288" height="147"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Mxl-LG-khR">
+                                <rect key="frame" x="16" y="36" width="288" height="147"/>
                                 <subviews>
-                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-7D-Wci">
-                                        <rect key="frame" x="0.0" y="16" width="288" height="115"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oom-Gr-628" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="147"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_yuki" translatesAutoresizingMaskIntoConstraints="NO" id="TXj-cw-9Va">
-                                                <rect key="frame" x="112" y="0.0" width="64" height="64"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="TXj-cw-9Va" secondAttribute="height" multiplier="1:1" id="NnL-Dm-wHb"/>
-                                                    <constraint firstAttribute="width" constant="64" id="jn5-LZ-neE"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk5-gA-S5L">
-                                                <rect key="frame" x="80.5" y="72" width="127.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="エンジニア" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6i-DI-9XN">
-                                                <rect key="frame" x="108.5" y="98" width="71.5" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-7D-Wci">
+                                                <rect key="frame" x="0.0" y="16" width="136" height="115"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_yuki" translatesAutoresizingMaskIntoConstraints="NO" id="TXj-cw-9Va">
+                                                        <rect key="frame" x="36" y="0.0" width="64" height="64"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="TXj-cw-9Va" secondAttribute="height" multiplier="1:1" id="NnL-Dm-wHb"/>
+                                                            <constraint firstAttribute="width" constant="64" id="jn5-LZ-neE"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk5-gA-S5L">
+                                                        <rect key="frame" x="4.5" y="72" width="127.5" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="エンジニア" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6i-DI-9XN">
+                                                        <rect key="frame" x="32.5" y="98" width="71.5" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="e7e-7D-Wci" secondAttribute="trailing" id="FG2-JI-XRY"/>
+                                            <constraint firstItem="e7e-7D-Wci" firstAttribute="top" secondItem="Oom-Gr-628" secondAttribute="top" constant="16" id="onH-7c-Eyd"/>
+                                            <constraint firstItem="e7e-7D-Wci" firstAttribute="leading" secondItem="Oom-Gr-628" secondAttribute="leading" id="qDU-8s-sVg"/>
+                                            <constraint firstAttribute="bottom" secondItem="e7e-7D-Wci" secondAttribute="bottom" constant="16" id="sDh-0M-vAS"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSe-d2-7Kj" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
+                                        <rect key="frame" x="152" y="0.0" width="136" height="147"/>
+                                        <subviews>
+                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="byA-pk-Sph">
+                                                <rect key="frame" x="0.0" y="16" width="136" height="115"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_soma" translatesAutoresizingMaskIntoConstraints="NO" id="Hl1-8N-8jn">
+                                                        <rect key="frame" x="36" y="0.0" width="64" height="64"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="73K-NM-VPn"/>
+                                                            <constraint firstAttribute="width" secondItem="Hl1-8N-8jn" secondAttribute="height" multiplier="1:1" id="KjZ-C7-sSh"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYP-N6-pEk">
+                                                        <rect key="frame" x="4.5" y="72" width="127.5" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="エンジニア" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIU-VE-GAP">
+                                                        <rect key="frame" x="32.5" y="98" width="71.5" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="byA-pk-Sph" firstAttribute="leading" secondItem="nSe-d2-7Kj" secondAttribute="leading" id="UFO-hu-u1P"/>
+                                            <constraint firstItem="byA-pk-Sph" firstAttribute="top" secondItem="nSe-d2-7Kj" secondAttribute="top" constant="16" id="kgb-de-1Yn"/>
+                                            <constraint firstAttribute="bottom" secondItem="byA-pk-Sph" secondAttribute="bottom" constant="16" id="mgo-s9-9IO"/>
+                                            <constraint firstAttribute="trailing" secondItem="byA-pk-Sph" secondAttribute="trailing" id="uCd-fQ-Zzw"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="e7e-7D-Wci" secondAttribute="trailing" id="FG2-JI-XRY"/>
-                                    <constraint firstItem="e7e-7D-Wci" firstAttribute="top" secondItem="Oom-Gr-628" secondAttribute="top" constant="16" id="onH-7c-Eyd"/>
-                                    <constraint firstItem="e7e-7D-Wci" firstAttribute="leading" secondItem="Oom-Gr-628" secondAttribute="leading" id="qDU-8s-sVg"/>
-                                    <constraint firstAttribute="bottom" secondItem="e7e-7D-Wci" secondAttribute="bottom" constant="16" id="sDh-0M-vAS"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eyx-u7-n23">
-                                <rect key="frame" x="16" y="231" width="288" height="147"/>
+                                <rect key="frame" x="16" y="199" width="288" height="147"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4pp-LY-U44" customClass="CardView" customModule="RaccoonWallet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="136" height="147"/>
@@ -138,40 +172,31 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnM-Db-hB6" customClass="WalletBar" customModule="RaccoonWallet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="320" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="3Dd-MC-FSs"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xJa-3o-AcC" firstAttribute="bottom" secondItem="wYK-3N-8Gg" secondAttribute="bottom" id="0Rr-5S-GgC"/>
                             <constraint firstAttribute="trailing" secondItem="eyx-u7-n23" secondAttribute="trailing" constant="16" id="0lQ-n1-Es9"/>
                             <constraint firstItem="eyx-u7-n23" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" constant="16" id="2EM-46-gQF"/>
-                            <constraint firstItem="xJa-3o-AcC" firstAttribute="trailing" secondItem="wYK-3N-8Gg" secondAttribute="trailing" id="C2c-Us-KQg"/>
-                            <constraint firstItem="XnM-Db-hB6" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" id="Hkf-So-Eae"/>
-                            <constraint firstItem="wYK-3N-8Gg" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" id="bni-4S-Zmh"/>
-                            <constraint firstItem="Oom-Gr-628" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" constant="16" id="coG-TF-hqX"/>
-                            <constraint firstItem="XnM-Db-hB6" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" id="eeJ-kN-a7Q"/>
-                            <constraint firstItem="eyx-u7-n23" firstAttribute="top" secondItem="Oom-Gr-628" secondAttribute="bottom" constant="16" id="jnv-8D-jZ4"/>
-                            <constraint firstItem="Oom-Gr-628" firstAttribute="top" secondItem="XnM-Db-hB6" secondAttribute="bottom" constant="16" id="xZz-yT-EAW"/>
-                            <constraint firstItem="xJa-3o-AcC" firstAttribute="trailing" secondItem="XnM-Db-hB6" secondAttribute="trailing" id="xgk-YY-yLH"/>
-                            <constraint firstItem="xJa-3o-AcC" firstAttribute="trailing" secondItem="Oom-Gr-628" secondAttribute="trailing" constant="16" id="yPu-ah-g5A"/>
+                            <constraint firstAttribute="trailing" secondItem="Mxl-LG-khR" secondAttribute="trailing" constant="16" id="7Wu-we-RYk"/>
+                            <constraint firstItem="Mxl-LG-khR" firstAttribute="leading" secondItem="xJa-3o-AcC" secondAttribute="leading" constant="16" id="CZq-Sv-FnR"/>
+                            <constraint firstItem="Mxl-LG-khR" firstAttribute="top" secondItem="xJa-3o-AcC" secondAttribute="top" constant="16" id="nEs-vX-bXj"/>
+                            <constraint firstItem="eyx-u7-n23" firstAttribute="top" secondItem="Mxl-LG-khR" secondAttribute="bottom" constant="16" id="sh7-aT-ZU1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xJa-3o-AcC"/>
                     </view>
                     <connections>
-                        <outlet property="androidCard" destination="Oom-Gr-628" id="EMO-kV-dbh"/>
-                        <outlet property="androidName" destination="rk5-gA-S5L" id="yr3-bO-dXu"/>
-                        <outlet property="androidRole" destination="x6i-DI-9XN" id="JGz-pn-XmV"/>
-                        <outlet property="designerCard" destination="4pp-LY-U44" id="aZN-s4-Oxa"/>
-                        <outlet property="designerName" destination="Z6J-pj-l9S" id="QBX-2y-oWk"/>
-                        <outlet property="designerRole" destination="m2L-La-IcN" id="6Ir-2r-SEC"/>
-                        <outlet property="iosCard" destination="63O-hO-qkg" id="nL8-kI-dd4"/>
-                        <outlet property="iosName" destination="npq-XX-zEm" id="CxR-cA-fxh"/>
-                        <outlet property="iosRole" destination="JYn-J1-vI6" id="X8e-pP-D0U"/>
+                        <outlet property="rhimeCard" destination="4pp-LY-U44" id="QRC-G7-Znn"/>
+                        <outlet property="rhimeName" destination="Z6J-pj-l9S" id="tLA-Qi-Bvs"/>
+                        <outlet property="rhimeRole" destination="m2L-La-IcN" id="DHR-7A-TyP"/>
+                        <outlet property="ryutaCard" destination="63O-hO-qkg" id="Njz-kz-dtJ"/>
+                        <outlet property="ryutaName" destination="npq-XX-zEm" id="4mA-Hv-6o6"/>
+                        <outlet property="ryutaRole" destination="JYn-J1-vI6" id="NOv-4p-U33"/>
+                        <outlet property="somaCard" destination="nSe-d2-7Kj" id="Ajk-Iz-34b"/>
+                        <outlet property="somaName" destination="fYP-N6-pEk" id="ROG-V3-PbC"/>
+                        <outlet property="somaRole" destination="IIU-VE-GAP" id="9Ky-a4-i14"/>
+                        <outlet property="yukiCard" destination="Oom-Gr-628" id="spX-P1-d4c"/>
+                        <outlet property="yukiName" destination="rk5-gA-S5L" id="y3f-Jo-Hux"/>
+                        <outlet property="yukiRole" destination="x6i-DI-9XN" id="z7F-tK-QJl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htF-N7-RCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -180,9 +205,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_rhime" width="144" height="144"/>
-        <image name="icon_ryuta" width="144" height="144"/>
-        <image name="icon_yuki" width="144" height="144"/>
-        <image name="image_harvest_background" width="1440" height="440"/>
+        <image name="icon_rhime" width="72" height="72"/>
+        <image name="icon_ryuta" width="72" height="72"/>
+        <image name="icon_soma" width="72" height="72"/>
+        <image name="icon_yuki" width="72" height="72"/>
     </resources>
 </document>

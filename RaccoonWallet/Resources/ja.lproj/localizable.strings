@@ -95,10 +95,6 @@
 "donation_title" = "開発者一覧";
 "donation_detail_title" = "プロフィール";
 
-"donation_android_engineer_name" = "Android Developer";
-"donation_android_engineer_role" = "エンジニア";
-"donation_android_engineer_detail" = "Androidエンジニア\n@YukiYamadaJP\n@Riberd_Puzzle1\n\n・Android版アプリ開発";
-
 "donation_yuki_name" = "Yuki";
 "donation_yuki_role" = "エンジニア";
 "donation_yuki_detail" = "エンジニア\n・ベースアプリ開発\n・Android版アプリ開発";
@@ -107,14 +103,13 @@
 "donation_soma_role" = "エンジニア";
 "donation_soma_detail" = "エンジニア\n・Android版アプリ開発";
 
+"donation_rhime_name" = "Rhime";
+"donation_rhime_role" = "UIデザイナー";
+"donation_rhime_detail" = "デザイナー\n・Android / iOSアプリのIA/UI/UXデザイン\n・ビジュアルデザイン/ブランディング";
 
-"donation_designer_name" = "Rhime";
-"donation_designer_role" = "UIデザイナー";
-"donation_designer_detail" = "デザイナー\n・Android / iOSアプリのIA/UI/UXデザイン\n・ビジュアルデザイン/ブランディング";
-
-"donation_ios_engineer_name" = "Ryuta";
-"donation_ios_engineer_role" = "iOSエンジニア";
-"donation_ios_engineer_detail" = "エンジニア\n・iOS版開発主任\n・PWA(Progressive Web Apps)開発";
+"donation_ryuta_name" = "Ryuta";
+"donation_ryuta_role" = "iOSエンジニア";
+"donation_ryuta_detail" = "エンジニア\n・iOS版開発主任\n・PWA(Progressive Web Apps)開発";
 
 "first_tutorial_button" = "はじめる";
 "first_tutorial_title1" = "はじめまして";

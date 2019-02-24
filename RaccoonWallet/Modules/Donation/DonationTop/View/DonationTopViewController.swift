@@ -11,41 +11,48 @@ import UIKit
 class DonationTopViewController: BaseViewController {
     var presenter: DonationTopPresentation! { didSet {basePresenter = presenter} }
     
-    @IBOutlet weak var androidCard: CardView!
-    @IBOutlet weak var androidName: UILabel!
-    @IBOutlet weak var androidRole: UILabel!
-    @IBOutlet weak var designerCard: CardView!
-    @IBOutlet weak var designerName: UILabel!
-    @IBOutlet weak var designerRole: UILabel!
-    @IBOutlet weak var iosCard: CardView!
-    @IBOutlet weak var iosName: UILabel!
-    @IBOutlet weak var iosRole: UILabel!
-
+    @IBOutlet weak var yukiCard: CardView!
+    @IBOutlet weak var yukiName: UILabel!
+    @IBOutlet weak var yukiRole: UILabel!
+    @IBOutlet weak var somaCard: CardView!
+    @IBOutlet weak var somaName: UILabel!
+    @IBOutlet weak var somaRole: UILabel!
+    @IBOutlet weak var rhimeCard: CardView!
+    @IBOutlet weak var rhimeName: UILabel!
+    @IBOutlet weak var rhimeRole: UILabel!
+    @IBOutlet weak var ryutaCard: CardView!
+    @IBOutlet weak var ryutaName: UILabel!
+    @IBOutlet weak var ryutaRole: UILabel!
+    
     override func setup() {
         super.setup()
         
         title = R.string.localizable.donation_title()
 
-        setDeveloperText(name: androidName, role: androidRole, developer: Developer.android)
-        setDeveloperText(name: designerName, role: designerRole, developer: Developer.designer)
-        setDeveloperText(name: iosName, role: iosRole, developer: Developer.ios)
+        setDeveloperText(name: yukiName, role: yukiRole, developer: Developer.yuki)
+        setDeveloperText(name: somaName, role: somaRole, developer: Developer.soma)
+        setDeveloperText(name: rhimeName, role: rhimeRole, developer: Developer.rhime)
+        setDeveloperText(name: ryutaName, role: ryutaRole, developer: Developer.ryuta)
 
-        androidCard.setOnTouchedHandler {
-            self.presenter.didClickDeveloper(Developer.android)
+        yukiCard.setOnTouchedHandler {
+            self.presenter.didClickDeveloper(Developer.yuki)
         }
 
-        designerCard.setOnTouchedHandler {
-            self.presenter.didClickDeveloper(Developer.designer)
+        somaCard.setOnTouchedHandler {
+            self.presenter.didClickDeveloper(Developer.soma)
         }
 
-        iosCard.setOnTouchedHandler {
-            self.presenter.didClickDeveloper(Developer.ios)
+        rhimeCard.setOnTouchedHandler {
+            self.presenter.didClickDeveloper(Developer.rhime)
+        }
+
+        ryutaCard.setOnTouchedHandler {
+            self.presenter.didClickDeveloper(Developer.ryuta)
         }
     }
 
     func setDeveloperText(name: UILabel, role: UILabel, developer: Developer) {
         name.text = developer.name
-        name.textColor = Theme.primary
         role.text = developer.role
         role.textColor = Theme.secondary
     }

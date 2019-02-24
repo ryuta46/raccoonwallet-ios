@@ -1129,7 +1129,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 221 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 218 localization keys.
     struct localizable {
       /// en translation: 
       /// 
@@ -1191,14 +1191,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja, th
       static let qrlab_amount_title = Rswift.StringResource(key: "qrlab_amount_title", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: Android Developer
-      /// 
-      /// Locales: en, ja, th
-      static let donation_android_engineer_name = Rswift.StringResource(key: "donation_android_engineer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: Android Engineer  @YukiYamadaJP @Riberd_Puzzle1  ・Android App Developer 
-      /// 
-      /// Locales: en, ja, th
-      static let donation_android_engineer_detail = Rswift.StringResource(key: "donation_android_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Attach
       /// 
       /// Locales: en, ja, th
@@ -1298,7 +1290,7 @@ struct R: Rswift.Validatable {
       /// en translation: Designer ・Android / iOS App's IA/UI/UX Design  ・Visual Design / Branding 
       /// 
       /// Locales: en, ja, th
-      static let donation_designer_detail = Rswift.StringResource(key: "donation_designer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      static let donation_rhime_detail = Rswift.StringResource(key: "donation_rhime_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Destination
       /// 
       /// Locales: en, ja, th
@@ -1342,10 +1334,6 @@ struct R: Rswift.Validatable {
       /// en translation: Engineer
       /// 
       /// Locales: en, ja, th
-      static let donation_android_engineer_role = Rswift.StringResource(key: "donation_android_engineer_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
-      /// en translation: Engineer
-      /// 
-      /// Locales: en, ja, th
       static let donation_soma_role = Rswift.StringResource(key: "donation_soma_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Engineer
       /// 
@@ -1362,7 +1350,7 @@ struct R: Rswift.Validatable {
       /// en translation: Engineer  ・iOS Development Director  ・PWA(Progressive Web Apps) Developer
       /// 
       /// Locales: en, ja, th
-      static let donation_ios_engineer_detail = Rswift.StringResource(key: "donation_ios_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      static let donation_ryuta_detail = Rswift.StringResource(key: "donation_ryuta_detail", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Enter NanoWallet password
       /// 
       /// Locales: en, ja, th
@@ -1714,7 +1702,7 @@ struct R: Rswift.Validatable {
       /// en translation: Rhime
       /// 
       /// Locales: en, ja, th
-      static let donation_designer_name = Rswift.StringResource(key: "donation_designer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      static let donation_rhime_name = Rswift.StringResource(key: "donation_rhime_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Roger that! 
       /// 
       /// Locales: en, ja, th
@@ -1722,7 +1710,7 @@ struct R: Rswift.Validatable {
       /// en translation: Ryuta
       /// 
       /// Locales: en, ja, th
-      static let donation_ios_engineer_name = Rswift.StringResource(key: "donation_ios_engineer_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      static let donation_ryuta_name = Rswift.StringResource(key: "donation_ryuta_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: SUCCESS
       /// 
       /// Locales: en, ja, th
@@ -1866,7 +1854,7 @@ struct R: Rswift.Validatable {
       /// en translation: UI designer
       /// 
       /// Locales: en, ja, th
-      static let donation_designer_role = Rswift.StringResource(key: "donation_designer_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      static let donation_rhime_role = Rswift.StringResource(key: "donation_rhime_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: Use Selling Item list 
       /// 
       /// Locales: en, ja, th
@@ -1978,7 +1966,7 @@ struct R: Rswift.Validatable {
       /// en translation: iOS Engineer
       /// 
       /// Locales: en, ja, th
-      static let donation_ios_engineer_role = Rswift.StringResource(key: "donation_ios_engineer_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
+      static let donation_ryuta_role = Rswift.StringResource(key: "donation_ryuta_role", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja", "th"], comment: nil)
       /// en translation: アカウント情報の復元に失敗しました。
       /// 
       /// Locales: en, ja, th
@@ -2119,20 +2107,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja, th
       static func qrlab_amount_title(_: Void = ()) -> String {
         return NSLocalizedString("qrlab_amount_title", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Android Developer
-      /// 
-      /// Locales: en, ja, th
-      static func donation_android_engineer_name(_: Void = ()) -> String {
-        return NSLocalizedString("donation_android_engineer_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Android Engineer  @YukiYamadaJP @Riberd_Puzzle1  ・Android App Developer 
-      /// 
-      /// Locales: en, ja, th
-      static func donation_android_engineer_detail(_: Void = ()) -> String {
-        return NSLocalizedString("donation_android_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Attach
@@ -2306,8 +2280,8 @@ struct R: Rswift.Validatable {
       /// en translation: Designer ・Android / iOS App's IA/UI/UX Design  ・Visual Design / Branding 
       /// 
       /// Locales: en, ja, th
-      static func donation_designer_detail(_: Void = ()) -> String {
-        return NSLocalizedString("donation_designer_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func donation_rhime_detail(_: Void = ()) -> String {
+        return NSLocalizedString("donation_rhime_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Destination
@@ -2383,13 +2357,6 @@ struct R: Rswift.Validatable {
       /// en translation: Engineer
       /// 
       /// Locales: en, ja, th
-      static func donation_android_engineer_role(_: Void = ()) -> String {
-        return NSLocalizedString("donation_android_engineer_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Engineer
-      /// 
-      /// Locales: en, ja, th
       static func donation_soma_role(_: Void = ()) -> String {
         return NSLocalizedString("donation_soma_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
@@ -2418,8 +2385,8 @@ struct R: Rswift.Validatable {
       /// en translation: Engineer  ・iOS Development Director  ・PWA(Progressive Web Apps) Developer
       /// 
       /// Locales: en, ja, th
-      static func donation_ios_engineer_detail(_: Void = ()) -> String {
-        return NSLocalizedString("donation_ios_engineer_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func donation_ryuta_detail(_: Void = ()) -> String {
+        return NSLocalizedString("donation_ryuta_detail", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Enter NanoWallet password
@@ -3034,8 +3001,8 @@ struct R: Rswift.Validatable {
       /// en translation: Rhime
       /// 
       /// Locales: en, ja, th
-      static func donation_designer_name(_: Void = ()) -> String {
-        return NSLocalizedString("donation_designer_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func donation_rhime_name(_: Void = ()) -> String {
+        return NSLocalizedString("donation_rhime_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Roger that! 
@@ -3048,8 +3015,8 @@ struct R: Rswift.Validatable {
       /// en translation: Ryuta
       /// 
       /// Locales: en, ja, th
-      static func donation_ios_engineer_name(_: Void = ()) -> String {
-        return NSLocalizedString("donation_ios_engineer_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func donation_ryuta_name(_: Void = ()) -> String {
+        return NSLocalizedString("donation_ryuta_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: SUCCESS
@@ -3300,8 +3267,8 @@ struct R: Rswift.Validatable {
       /// en translation: UI designer
       /// 
       /// Locales: en, ja, th
-      static func donation_designer_role(_: Void = ()) -> String {
-        return NSLocalizedString("donation_designer_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func donation_rhime_role(_: Void = ()) -> String {
+        return NSLocalizedString("donation_rhime_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Use Selling Item list 
@@ -3496,8 +3463,8 @@ struct R: Rswift.Validatable {
       /// en translation: iOS Engineer
       /// 
       /// Locales: en, ja, th
-      static func donation_ios_engineer_role(_: Void = ()) -> String {
-        return NSLocalizedString("donation_ios_engineer_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      static func donation_ryuta_role(_: Void = ()) -> String {
+        return NSLocalizedString("donation_ryuta_role", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: アカウント情報の復元に失敗しました。
