@@ -20,5 +20,16 @@ class XEMBookService {
 
         return Session.rx_send(XEMBookMosaicListRequest(baseURL: self.baseURL))
     }
+
+    static func activeNodeList() -> Single<ActiveNodeList> {
+        class XEMBookMosaicListRequest: DecodableGetRequest<ActiveNodeList> {
+            init(baseURL: URL) {
+                super.init(baseURL: baseURL, path: "/xembook.net/data/v3/node.json")
+            }
+        }
+
+        return Session.rx_send(XEMBookMosaicListRequest(baseURL: self.baseURL))
+    }
+
 }
 
