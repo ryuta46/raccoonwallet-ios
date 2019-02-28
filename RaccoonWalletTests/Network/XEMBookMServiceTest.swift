@@ -15,7 +15,7 @@ class XEMBookServiceTest: XCTestCase {
     func testNodes() {
         let mosaics: [MosaicImageUrl] = try! XEMBookService.mosaicList().toBlocking().first()!
         print(mosaics)
-
+        
         for mosaic in mosaics {
             XCTAssertGreaterThan(mosaic.namespace.count, 0)
             XCTAssertGreaterThan(mosaic.name.count, 0)
@@ -29,4 +29,13 @@ class XEMBookServiceTest: XCTestCase {
 
         XCTAssertThrowsError(try XEMBookService.mosaicList().toBlocking().first())
     }
+    
+    func testActiveNodes() {
+        let activeNodeList: ActiveNodeList = try! XEMBookService.activeNodeList().toBlocking().first()!
+        print(activeNodeList)
+        
+        XCTAssertGreaterThan(activeNodeList.http.count, 0)
+        XCTAssertGreaterThan(activeNodeList.https.count, 0)
+    }
+
 }

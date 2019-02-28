@@ -447,6 +447,7 @@
 		69057527FD4571017B8511FC /* WalletBackupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057B7D6997BE93DC3BB13B /* WalletBackupPresenter.swift */; };
 		69057531899824EBD9EBA387 /* ScanTabInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69057EC2ADB87AFE1E2A174B /* ScanTabInteractor.swift */; };
 		69057551F7D65D13B54D8E08 /* WalletAddressInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690573D4BDB140964E3C2EA7 /* WalletAddressInteractor.swift */; };
+		6905755EBAC6463D2B6C15F6 /* ActiveNodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690578964BB57914560295CD /* ActiveNodeList.swift */; };
 		6905756438D0F5A2CE8B0C89 /* LessonImporterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690571DCCC0FEF23DFEB1B29 /* LessonImporterPresenter.swift */; };
 		690575655D7C64911E193C59 /* LessonImporterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690573F32222F88115B7CA35 /* LessonImporterContract.swift */; };
 		69057565EF0D5458F3F67D12 /* WalletImportNanoPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690571B11F2A3845737DB7CA /* WalletImportNanoPasswordRouter.swift */; };
@@ -1159,6 +1160,7 @@
 		69057861B9E9DA52DFE60507 /* PrimaryCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryCircleButton.swift; sourceTree = "<group>"; };
 		69057885286187715E75BCB3 /* WalletRenamePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletRenamePresenter.swift; sourceTree = "<group>"; };
 		6905788DCB991758846A36BE /* ReceiveTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveTabViewController.swift; sourceTree = "<group>"; };
+		690578964BB57914560295CD /* ActiveNodeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveNodeList.swift; sourceTree = "<group>"; };
 		690578A00D3D0BA53B55015B /* WalletImportKeyInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletImportKeyInteractor.swift; sourceTree = "<group>"; };
 		690578A1B8BD170C3EE04AD7 /* NemNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NemNode.swift; sourceTree = "<group>"; };
 		690578B28CB86BD87D29C6C6 /* WalletImportEndContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletImportEndContract.swift; sourceTree = "<group>"; };
@@ -3065,6 +3067,7 @@
 				69057808529136DE17FB5149 /* SendTransaction.swift */,
 				690579BD59FD904EBBD0D3AC /* TransferTranasactionDetail.swift */,
 				69057D5CA0D7B5A7D96B8F2F /* WalletQr.swift */,
+				690578964BB57914560295CD /* ActiveNodeList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -5643,6 +5646,7 @@
 				6905724996208F2A13CE41BD /* PrimaryGhostButton.swift in Sources */,
 				6905775A0A58FA9BBB2441BD /* LightGrayLabel.swift in Sources */,
 				69057B4FF73BBE6EDDC69F3D /* TransactionListHeader.swift in Sources */,
+				6905755EBAC6463D2B6C15F6 /* ActiveNodeList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

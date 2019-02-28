@@ -44,22 +44,17 @@ class SendAmountPresenterTest: XCTestCase {
         Verify(view, .showMosaic())
     }
 
-    func testDidChangeAmountPage() {
-        let page = 5
-        presenter.didChangeAmountPage(page)
-
-        XCTAssertEqual(page, presenter.activePageIndex)
-    }
 
     func testDidChangeFormula() {
-        Perform(view, .setAmounts(amounts: .any([String].self), perform: { (amounts) in print(amounts)}))
+        Perform(view, .setSendMosaicDescriptions(mosaicDescriptions: .any([SendMosaicDescription].self), perform: { (mosaicDescriptions) in print(mosaicDescriptions.map { $0.amount})}))
 
-        let mosaics = [MosaicDetail(namespace: "ttech", mosaic: "ryuta", quantity: 10, supply: 100, divisibility: 0, description: "description")]
+        let mosaics = [MosaicDetail(namespace: "ttech", mosaic: "ryuta", quantity: 10, divisibility: 0, description: "description")]
         presenter.mosaicOwnedFetched(mosaics)
 
         // pages are [xem , mosaic].
         presenter.didSelectMosaicOwned(mosaics[0]) // select mosaic
         presenter.didChangeMosaicWithXem(true) // and with xem
+        
 
         // set page index 1
         presenter.didChangeAmountPage(1)
@@ -69,24 +64,25 @@ class SendAmountPresenterTest: XCTestCase {
         presenter.didChangeFormula(formula)
 
         let expected = [
-            "0 XEM",
-            "5 + 4 ttech:ryuta"
-        ]
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil),
+            SendMosaicDescription(amount: "5 + 4 ttech:ryuta", localCurrency: nil, balance: nil)
+         ]
 
-        Verify(view, .setAmounts(amounts: .value(expected)))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value(expected)))
     }
 
     func testDidCalculateFormula() {
-        Perform(view, .setAmounts(amounts: .any([String].self), perform: { (amounts) in print(amounts)}))
+        Perform(view, .setSendMosaicDescriptions(mosaicDescriptions: .any([SendMosaicDescription].self), perform: { (mosaicDescriptions) in print(mosaicDescriptions.map { $0.amount})}))
 
-        let mosaics = [MosaicDetail(namespace: "ttech", mosaic: "ryuta", quantity: 10, supply: 100, divisibility: 0, description: "description")]
+        let mosaics = [MosaicDetail(namespace: "ttech", mosaic: "ryuta", quantity: 10, divisibility: 0, description: "description")]
         presenter.mosaicOwnedFetched(mosaics)
 
         // pages are [xem , mosaic].
 
-
         presenter.didSelectMosaicOwned(mosaics[0]) // select mosaic
-        Verify(view, .setAmounts(amounts: .value(["0 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
 
         presenter.didChangeMosaicWithXem(true) // and with xem
 
@@ -95,17 +91,17 @@ class SendAmountPresenterTest: XCTestCase {
 
         // set formula
         let expected = [
-            "0 XEM",
-            "90 ttech:ryuta"
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil),
+            SendMosaicDescription(amount: "90 ttech:ryuta", localCurrency: nil, balance: nil)
         ]
 
         presenter.didChangeFormula("90")
-        Verify(view, .setAmounts(amounts: .value(expected)))
+
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value(expected)))
 
         // Formula is used
         presenter.didCalculateFormula(100)
-        Verify(view, .setAmounts(amounts: .value(expected)))
-
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value(expected)))
     }
 
 
@@ -113,7 +109,7 @@ class SendAmountPresenterTest: XCTestCase {
         var transaction = SendTransaction(address: "test", publicKey: nil)
         presenter.sendTransaction = transaction
 
-        let mosaics = [MosaicDetail(namespace: "ttech", mosaic: "ryuta", quantity: 10, supply: 100, divisibility: 0, description: "description")]
+        let mosaics = [MosaicDetail(namespace: "ttech", mosaic: "ryuta", quantity: 10, divisibility: 0, description: "description")]
         presenter.mosaicOwnedFetched(mosaics)
 
         // pages are [xem , mosaic].
@@ -125,14 +121,14 @@ class SendAmountPresenterTest: XCTestCase {
 
         // set value
         let expected = [
-            "0 XEM",
-            "100 ttech:ryuta"
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil),
+            SendMosaicDescription(amount: "100 ttech:ryuta", localCurrency: nil, balance: nil)
         ]
         presenter.didChangeFormula("100")
-        Verify(view, .setAmounts(amounts: .value(expected)))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value(expected)))
 
         presenter.didCalculateFormula(100)
-        Verify(view, .setAmounts(amounts: .value(expected)))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value(expected)))
 
         presenter.didConfirm()
 
@@ -145,79 +141,122 @@ class SendAmountPresenterTest: XCTestCase {
     }
 
     func testDidChangeMosaicWithXem() {
-        Perform(view, .setAmounts(amounts: .any([String].self), perform: { (amounts) in print(amounts)}))
+        Perform(view, .setSendMosaicDescriptions(mosaicDescriptions: .any([SendMosaicDescription].self), perform: { (mosaicDescriptions) in print(mosaicDescriptions.map { $0.amount})}))
 
-        let mosaics = [MosaicDetail(namespace: "ttech", mosaic: "ryuta", quantity: 10, supply: 100, divisibility: 0, description: "description")]
+        let mosaics = [MosaicDetail(namespace: "ttech", mosaic: "ryuta", quantity: 10, divisibility: 0, description: "description")]
         presenter.mosaicOwnedFetched(mosaics)
 
         // default is not with xem
         presenter.didSelectMosaicOwned(mosaics[0]) // select mosaic
-        Verify(view, .setAmounts(amounts: .value(["0 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
 
         presenter.didChangeMosaicWithXem(true) // with xem
-        Verify(view, .setAmounts(amounts: .value(["0 XEM", "0 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil),
+            SendMosaicDescription(amount: "0 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
+
 
         presenter.didChangeMosaicWithXem(false) // not with xem
-        Verify(view, .setAmounts(amounts: .value(["0 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
 
         presenter.didChangeMosaicWithXem(true) // with xem
-        Verify(view, .setAmounts(amounts: .value(["0 XEM", "0 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil),
+            SendMosaicDescription(amount: "0 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
 
         presenter.didChangeAmountPage(0)
 
         presenter.didChangeFormula("10")
         presenter.didCalculateFormula(10)
 
-        Verify(view, .setAmounts(amounts: .value(["10 XEM", "0 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "10 XEM", localCurrency: nil, balance: nil),
+            SendMosaicDescription(amount: "0 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
 
         presenter.didChangeMosaicWithXem(false)
-        Verify(view, .setAmounts(amounts: .value(["0 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
 
         presenter.didChangeMosaicWithXem(true) // xem amount is clear
-        Verify(view, .setAmounts(amounts: .value(["0 XEM", "0 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil),
+            SendMosaicDescription(amount: "0 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
     }
 
     func testDidClickMosaicOwned() {
-        Perform(view, .setAmounts(amounts: .any([String].self), perform: { (amounts) in print(amounts)}))
+        Perform(view, .setSendMosaicDescriptions(mosaicDescriptions: .any([SendMosaicDescription].self), perform: { (mosaicDescriptions) in print(mosaicDescriptions.map { $0.amount})}))
 
         // default is only xem
         presenter.viewDidLoad()
-        Verify(view, .setAmounts(amounts: .value(["0 XEM"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil)
+        ])))
 
-        let mosaics = [MosaicDetail(namespace: "ttech", mosaic: "ryuta", quantity: 10, supply: 100, divisibility: 0, description: "description")]
+        let mosaics = [MosaicDetail(namespace: "ttech", mosaic: "ryuta", quantity: 10, divisibility: 0, description: "description")]
         presenter.mosaicOwnedFetched(mosaics)
 
         presenter.didSelectMosaicOwned(mosaics[0]) // select mosaic
-        Verify(view, .setAmounts(amounts: .value(["0 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
 
         presenter.didChangeMosaicWithXem(true) // with xem
-        Verify(view, .setAmounts(amounts: .value(["0 XEM", "0 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil),
+            SendMosaicDescription(amount: "0 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
 
         presenter.didDeselectMosaicOwned(mosaics[0]) // deselect mosaic
-        Verify(view, .setAmounts(amounts: .value(["0 XEM"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil)
+        ])))
 
         presenter.didSelectMosaicOwned(mosaics[0]) // select mosaic
-        Verify(view, .setAmounts(amounts: .value(["0 XEM", "0 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil),
+            SendMosaicDescription(amount: "0 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
 
         presenter.didChangeAmountPage(1)
 
         presenter.didChangeFormula("10")
         presenter.didCalculateFormula(10)
 
-        Verify(view, .setAmounts(amounts: .value(["0 XEM", "10 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil),
+            SendMosaicDescription(amount: "10 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
 
         presenter.didDeselectMosaicOwned(mosaics[0]) // deselect mosaic
-        Verify(view, .setAmounts(amounts: .value(["0 XEM"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil)
+        ])))
 
         presenter.didSelectMosaicOwned(mosaics[0]) // clear mosaic amount
-        Verify(view, .setAmounts(amounts: .value(["0 XEM", "0 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil),
+            SendMosaicDescription(amount: "0 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
 
 
         presenter.didChangeMosaicWithXem(false)
-        Verify(view, .setAmounts(amounts: .value(["0 ttech:ryuta"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 ttech:ryuta", localCurrency: nil, balance: nil)
+        ])))
 
         presenter.didDeselectMosaicOwned(mosaics[0]) // clear list results in only xem.
-        Verify(view, .setAmounts(amounts: .value(["0 XEM"])))
+        Verify(view, .setSendMosaicDescriptions(mosaicDescriptions: .value([
+            SendMosaicDescription(amount: "0 XEM", localCurrency: nil, balance: nil)
+        ])))
     }
 }
 

@@ -15,6 +15,8 @@ class NodeSelectInteractor: NodeSelectUseCase {
     let disposeBag = DisposeBag()
 
     func fetchNodes() {
+
+        /*
         NemNodesService
                 .nodes()
                 .subscribe(
@@ -22,6 +24,17 @@ class NodeSelectInteractor: NodeSelectUseCase {
                         onError: { error in self.output.nodesFetchFailed(error) }
                 )
                 .disposed(by: disposeBag)
+                */
 
+        XEMBookService
+                .activeNodeList()
+                .subscribe(
+                        onSuccess: { activeNodes in
+                            self.output.nodesFetched(activeNodes.http.map { host in
+                                NemNode(ip: host, nisPort: 7890)
+                            })
+                        },
+                        onError: { error in self.output.nodesFetchFailed(error) }
+                ).disposed(by: disposeBag)
     }
 }

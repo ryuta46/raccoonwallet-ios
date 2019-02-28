@@ -13,7 +13,11 @@ import REFrostedViewController
 class RootRouter: RootWireframe {
 
     func presentScreen(in window: UIWindow) {
+        #if DEBUG
+        NemSwiftConfiguration.logLevel = .verbose
+        #else
         NemSwiftConfiguration.logLevel = .none
+        #endif
         NemService.nis = URL(string: ApplicationSetting.shared.nisUrl) ?? URL(string: "http://176.9.68.110:7890")!
         
         let config = URLSessionConfiguration.default

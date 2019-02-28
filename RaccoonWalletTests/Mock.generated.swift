@@ -43,7 +43,6 @@ import SourceryRuntime
 #endif
 
 
-
 // MARK: - AboutInteractorOutput
 class AboutInteractorOutputMock: AboutInteractorOutput, Mock {
     init(sequencing sequencingPolicy: SequencingPolicy = .lastWrittenResolvedFirst, stubbing stubbingPolicy: StubbingPolicy = .wrap, file: StaticString = #file, line: UInt = #line) {
@@ -115,7 +114,7 @@ class AboutInteractorOutputMock: AboutInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -431,7 +430,7 @@ class AboutPresentationMock: AboutPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -573,7 +572,7 @@ class AboutUseCaseMock: AboutUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -771,7 +770,7 @@ class AboutViewMock: AboutView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -1062,7 +1061,7 @@ class AboutWireframeMock: AboutWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -1117,7 +1116,7 @@ class AboutWireframeMock: AboutWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -1199,10 +1198,24 @@ class BalanceDetailInteractorOutputMock: BalanceDetailInteractorOutput, Mock {
 		perform?(`error`)
     }
 
+    func rateFetched(_ rate: Decimal) {
+        addInvocation(.m_rateFetched__rate(Parameter<Decimal>.value(`rate`)))
+		let perform = methodPerformValue(.m_rateFetched__rate(Parameter<Decimal>.value(`rate`))) as? (Decimal) -> Void
+		perform?(`rate`)
+    }
+
+    func rateFetchFailed(_ error: Error) {
+        addInvocation(.m_rateFetchFailed__error(Parameter<Error>.value(`error`)))
+		let perform = methodPerformValue(.m_rateFetchFailed__error(Parameter<Error>.value(`error`))) as? (Error) -> Void
+		perform?(`error`)
+    }
+
 
     fileprivate enum MethodType {
         case m_mosaicOwnedFetched__mosaics(Parameter<[MosaicDetail]>)
         case m_mosaicOwnedFetchFailed__error(Parameter<Error>)
+        case m_rateFetched__rate(Parameter<Decimal>)
+        case m_rateFetchFailed__error(Parameter<Error>)
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Bool {
             switch (lhs, rhs) {
@@ -1210,6 +1223,12 @@ class BalanceDetailInteractorOutputMock: BalanceDetailInteractorOutput, Mock {
                 guard Parameter.compare(lhs: lhsMosaics, rhs: rhsMosaics, with: matcher) else { return false } 
                 return true 
             case (.m_mosaicOwnedFetchFailed__error(let lhsError), .m_mosaicOwnedFetchFailed__error(let rhsError)):
+                guard Parameter.compare(lhs: lhsError, rhs: rhsError, with: matcher) else { return false } 
+                return true 
+            case (.m_rateFetched__rate(let lhsRate), .m_rateFetched__rate(let rhsRate)):
+                guard Parameter.compare(lhs: lhsRate, rhs: rhsRate, with: matcher) else { return false } 
+                return true 
+            case (.m_rateFetchFailed__error(let lhsError), .m_rateFetchFailed__error(let rhsError)):
                 guard Parameter.compare(lhs: lhsError, rhs: rhsError, with: matcher) else { return false } 
                 return true 
             default: return false
@@ -1220,6 +1239,8 @@ class BalanceDetailInteractorOutputMock: BalanceDetailInteractorOutput, Mock {
             switch self {
             case let .m_mosaicOwnedFetched__mosaics(p0): return p0.intValue
             case let .m_mosaicOwnedFetchFailed__error(p0): return p0.intValue
+            case let .m_rateFetched__rate(p0): return p0.intValue
+            case let .m_rateFetchFailed__error(p0): return p0.intValue
             }
         }
     }
@@ -1244,6 +1265,12 @@ class BalanceDetailInteractorOutputMock: BalanceDetailInteractorOutput, Mock {
         static func mosaicOwnedFetchFailed(_ error: Parameter<Error>) -> Verify { return Verify(method: .m_mosaicOwnedFetchFailed__error(`error`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `error` label")
 		static func mosaicOwnedFetchFailed(error: Parameter<Error>) -> Verify { return Verify(method: .m_mosaicOwnedFetchFailed__error(`error`))}
+        static func rateFetched(_ rate: Parameter<Decimal>) -> Verify { return Verify(method: .m_rateFetched__rate(`rate`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `rate` label")
+		static func rateFetched(rate: Parameter<Decimal>) -> Verify { return Verify(method: .m_rateFetched__rate(`rate`))}
+        static func rateFetchFailed(_ error: Parameter<Error>) -> Verify { return Verify(method: .m_rateFetchFailed__error(`error`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `error` label")
+		static func rateFetchFailed(error: Parameter<Error>) -> Verify { return Verify(method: .m_rateFetchFailed__error(`error`))}
     }
 
     struct Perform {
@@ -1264,6 +1291,20 @@ class BalanceDetailInteractorOutputMock: BalanceDetailInteractorOutput, Mock {
 		static func mosaicOwnedFetchFailed(error: Parameter<Error>, perform: @escaping (Error) -> Void) -> Perform {
             return Perform(method: .m_mosaicOwnedFetchFailed__error(`error`), performs: perform)
         }
+        static func rateFetched(_ rate: Parameter<Decimal>, perform: @escaping (Decimal) -> Void) -> Perform {
+            return Perform(method: .m_rateFetched__rate(`rate`), performs: perform)
+        }
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `rate` label")
+		static func rateFetched(rate: Parameter<Decimal>, perform: @escaping (Decimal) -> Void) -> Perform {
+            return Perform(method: .m_rateFetched__rate(`rate`), performs: perform)
+        }
+        static func rateFetchFailed(_ error: Parameter<Error>, perform: @escaping (Error) -> Void) -> Perform {
+            return Perform(method: .m_rateFetchFailed__error(`error`), performs: perform)
+        }
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `error` label")
+		static func rateFetchFailed(error: Parameter<Error>, perform: @escaping (Error) -> Void) -> Perform {
+            return Perform(method: .m_rateFetchFailed__error(`error`), performs: perform)
+        }
     }
 
     public func given(_ method: Given) {
@@ -1277,7 +1318,7 @@ class BalanceDetailInteractorOutputMock: BalanceDetailInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -1523,7 +1564,7 @@ class BalanceDetailPresentationMock: BalanceDetailPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -1612,9 +1653,16 @@ class BalanceDetailUseCaseMock: BalanceDetailUseCase, Mock {
 		perform?(`address`)
     }
 
+    func fetchRate(_ currency: Currency) {
+        addInvocation(.m_fetchRate__currency(Parameter<Currency>.value(`currency`)))
+		let perform = methodPerformValue(.m_fetchRate__currency(Parameter<Currency>.value(`currency`))) as? (Currency) -> Void
+		perform?(`currency`)
+    }
+
 
     fileprivate enum MethodType {
         case m_fetchMosaicOwned__address(Parameter<String>)
+        case m_fetchRate__currency(Parameter<Currency>)
         case p_output_get
 		case p_output_set(Parameter<BalanceDetailInteractorOutput?>)
 
@@ -1622,6 +1670,9 @@ class BalanceDetailUseCaseMock: BalanceDetailUseCase, Mock {
             switch (lhs, rhs) {
             case (.m_fetchMosaicOwned__address(let lhsAddress), .m_fetchMosaicOwned__address(let rhsAddress)):
                 guard Parameter.compare(lhs: lhsAddress, rhs: rhsAddress, with: matcher) else { return false } 
+                return true 
+            case (.m_fetchRate__currency(let lhsCurrency), .m_fetchRate__currency(let rhsCurrency)):
+                guard Parameter.compare(lhs: lhsCurrency, rhs: rhsCurrency, with: matcher) else { return false } 
                 return true 
             case (.p_output_get,.p_output_get): return true
 			case (.p_output_set(let left),.p_output_set(let right)): return Parameter<BalanceDetailInteractorOutput?>.compare(lhs: left, rhs: right, with: matcher)
@@ -1632,6 +1683,7 @@ class BalanceDetailUseCaseMock: BalanceDetailUseCase, Mock {
         func intValue() -> Int {
             switch self {
             case let .m_fetchMosaicOwned__address(p0): return p0.intValue
+            case let .m_fetchRate__currency(p0): return p0.intValue
             case .p_output_get: return 0
 			case .p_output_set(let newValue): return newValue.intValue
             }
@@ -1658,6 +1710,9 @@ class BalanceDetailUseCaseMock: BalanceDetailUseCase, Mock {
         static func fetchMosaicOwned(_ address: Parameter<String>) -> Verify { return Verify(method: .m_fetchMosaicOwned__address(`address`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `address` label")
 		static func fetchMosaicOwned(address: Parameter<String>) -> Verify { return Verify(method: .m_fetchMosaicOwned__address(`address`))}
+        static func fetchRate(_ currency: Parameter<Currency>) -> Verify { return Verify(method: .m_fetchRate__currency(`currency`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `currency` label")
+		static func fetchRate(currency: Parameter<Currency>) -> Verify { return Verify(method: .m_fetchRate__currency(`currency`))}
         static var output: Verify { return Verify(method: .p_output_get) }
 		static func output(set newValue: Parameter<BalanceDetailInteractorOutput?>) -> Verify { return Verify(method: .p_output_set(newValue)) }
     }
@@ -1673,6 +1728,13 @@ class BalanceDetailUseCaseMock: BalanceDetailUseCase, Mock {
 		static func fetchMosaicOwned(address: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
             return Perform(method: .m_fetchMosaicOwned__address(`address`), performs: perform)
         }
+        static func fetchRate(_ currency: Parameter<Currency>, perform: @escaping (Currency) -> Void) -> Perform {
+            return Perform(method: .m_fetchRate__currency(`currency`), performs: perform)
+        }
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `currency` label")
+		static func fetchRate(currency: Parameter<Currency>, perform: @escaping (Currency) -> Void) -> Perform {
+            return Perform(method: .m_fetchRate__currency(`currency`), performs: perform)
+        }
     }
 
     public func given(_ method: Given) {
@@ -1686,7 +1748,7 @@ class BalanceDetailUseCaseMock: BalanceDetailUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -1775,10 +1837,28 @@ class BalanceDetailViewMock: BalanceDetailView, Mock {
 		perform?()
     }
 
-    func showBalance(_ xem: String) {
-        addInvocation(.m_showBalance__xem(Parameter<String>.value(`xem`)))
-		let perform = methodPerformValue(.m_showBalance__xem(Parameter<String>.value(`xem`))) as? (String) -> Void
+    func showBalance(_ xem: Decimal) {
+        addInvocation(.m_showBalance__xem(Parameter<Decimal>.value(`xem`)))
+		let perform = methodPerformValue(.m_showBalance__xem(Parameter<Decimal>.value(`xem`))) as? (Decimal) -> Void
 		perform?(`xem`)
+    }
+
+    func showBalanceError() {
+        addInvocation(.m_showBalanceError)
+		let perform = methodPerformValue(.m_showBalanceError) as? () -> Void
+		perform?()
+    }
+
+    func showLocalCurrency(_ value: Decimal, _ unit: Currency) {
+        addInvocation(.m_showLocalCurrency__value_unit(Parameter<Decimal>.value(`value`), Parameter<Currency>.value(`unit`)))
+		let perform = methodPerformValue(.m_showLocalCurrency__value_unit(Parameter<Decimal>.value(`value`), Parameter<Currency>.value(`unit`))) as? (Decimal, Currency) -> Void
+		perform?(`value`, `unit`)
+    }
+
+    func showLocalCurrencyError() {
+        addInvocation(.m_showLocalCurrencyError)
+		let perform = methodPerformValue(.m_showLocalCurrencyError) as? () -> Void
+		perform?()
     }
 
     func showMosaicListLoading() {
@@ -1808,7 +1888,10 @@ class BalanceDetailViewMock: BalanceDetailView, Mock {
 
     fileprivate enum MethodType {
         case m_showBalanceLoading
-        case m_showBalance__xem(Parameter<String>)
+        case m_showBalance__xem(Parameter<Decimal>)
+        case m_showBalanceError
+        case m_showLocalCurrency__value_unit(Parameter<Decimal>, Parameter<Currency>)
+        case m_showLocalCurrencyError
         case m_showMosaicListLoading
         case m_showMosaics__mosaics(Parameter<[MosaicDetail]>)
         case m_showInfo__message(Parameter<String>)
@@ -1822,6 +1905,14 @@ class BalanceDetailViewMock: BalanceDetailView, Mock {
                 return true 
             case (.m_showBalance__xem(let lhsXem), .m_showBalance__xem(let rhsXem)):
                 guard Parameter.compare(lhs: lhsXem, rhs: rhsXem, with: matcher) else { return false } 
+                return true 
+            case (.m_showBalanceError, .m_showBalanceError):
+                return true 
+            case (.m_showLocalCurrency__value_unit(let lhsValue, let lhsUnit), .m_showLocalCurrency__value_unit(let rhsValue, let rhsUnit)):
+                guard Parameter.compare(lhs: lhsValue, rhs: rhsValue, with: matcher) else { return false } 
+                guard Parameter.compare(lhs: lhsUnit, rhs: rhsUnit, with: matcher) else { return false } 
+                return true 
+            case (.m_showLocalCurrencyError, .m_showLocalCurrencyError):
                 return true 
             case (.m_showMosaicListLoading, .m_showMosaicListLoading):
                 return true 
@@ -1844,6 +1935,9 @@ class BalanceDetailViewMock: BalanceDetailView, Mock {
             switch self {
             case .m_showBalanceLoading: return 0
             case let .m_showBalance__xem(p0): return p0.intValue
+            case .m_showBalanceError: return 0
+            case let .m_showLocalCurrency__value_unit(p0, p1): return p0.intValue + p1.intValue
+            case .m_showLocalCurrencyError: return 0
             case .m_showMosaicListLoading: return 0
             case let .m_showMosaics__mosaics(p0): return p0.intValue
             case let .m_showInfo__message(p0): return p0.intValue
@@ -1872,9 +1966,14 @@ class BalanceDetailViewMock: BalanceDetailView, Mock {
         fileprivate var method: MethodType
 
         static func showBalanceLoading() -> Verify { return Verify(method: .m_showBalanceLoading)}
-        static func showBalance(_ xem: Parameter<String>) -> Verify { return Verify(method: .m_showBalance__xem(`xem`))}
+        static func showBalance(_ xem: Parameter<Decimal>) -> Verify { return Verify(method: .m_showBalance__xem(`xem`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `xem` label")
-		static func showBalance(xem: Parameter<String>) -> Verify { return Verify(method: .m_showBalance__xem(`xem`))}
+		static func showBalance(xem: Parameter<Decimal>) -> Verify { return Verify(method: .m_showBalance__xem(`xem`))}
+        static func showBalanceError() -> Verify { return Verify(method: .m_showBalanceError)}
+        static func showLocalCurrency(_ value: Parameter<Decimal>, _ unit: Parameter<Currency>) -> Verify { return Verify(method: .m_showLocalCurrency__value_unit(`value`, `unit`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `value` label, remove `unit` label")
+		static func showLocalCurrency(value: Parameter<Decimal>, unit: Parameter<Currency>) -> Verify { return Verify(method: .m_showLocalCurrency__value_unit(`value`, `unit`))}
+        static func showLocalCurrencyError() -> Verify { return Verify(method: .m_showLocalCurrencyError)}
         static func showMosaicListLoading() -> Verify { return Verify(method: .m_showMosaicListLoading)}
         static func showMosaics(_ mosaics: Parameter<[MosaicDetail]>) -> Verify { return Verify(method: .m_showMosaics__mosaics(`mosaics`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `mosaics` label")
@@ -1896,12 +1995,25 @@ class BalanceDetailViewMock: BalanceDetailView, Mock {
         static func showBalanceLoading(perform: @escaping () -> Void) -> Perform {
             return Perform(method: .m_showBalanceLoading, performs: perform)
         }
-        static func showBalance(_ xem: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
+        static func showBalance(_ xem: Parameter<Decimal>, perform: @escaping (Decimal) -> Void) -> Perform {
             return Perform(method: .m_showBalance__xem(`xem`), performs: perform)
         }
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `xem` label")
-		static func showBalance(xem: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
+		static func showBalance(xem: Parameter<Decimal>, perform: @escaping (Decimal) -> Void) -> Perform {
             return Perform(method: .m_showBalance__xem(`xem`), performs: perform)
+        }
+        static func showBalanceError(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_showBalanceError, performs: perform)
+        }
+        static func showLocalCurrency(_ value: Parameter<Decimal>, _ unit: Parameter<Currency>, perform: @escaping (Decimal, Currency) -> Void) -> Perform {
+            return Perform(method: .m_showLocalCurrency__value_unit(`value`, `unit`), performs: perform)
+        }
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `value` label, remove `unit` label")
+		static func showLocalCurrency(value: Parameter<Decimal>, unit: Parameter<Currency>, perform: @escaping (Decimal, Currency) -> Void) -> Perform {
+            return Perform(method: .m_showLocalCurrency__value_unit(`value`, `unit`), performs: perform)
+        }
+        static func showLocalCurrencyError(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_showLocalCurrencyError, performs: perform)
         }
         static func showMosaicListLoading(perform: @escaping () -> Void) -> Perform {
             return Perform(method: .m_showMosaicListLoading, performs: perform)
@@ -1940,7 +2052,7 @@ class BalanceDetailViewMock: BalanceDetailView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -2161,7 +2273,7 @@ class BalanceDetailWireframeMock: BalanceDetailWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -2216,7 +2328,7 @@ class BalanceDetailWireframeMock: BalanceDetailWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -2325,7 +2437,7 @@ class BaseInteractorOutputMock: BaseInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -2520,7 +2632,7 @@ class BasePresentationMock: BasePresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -2636,7 +2748,7 @@ class BaseUseCaseMock: BaseUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -2803,7 +2915,7 @@ class BaseViewMock: BaseView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -2919,7 +3031,7 @@ class BaseWireframeMock: BaseWireframe, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -3035,7 +3147,7 @@ class DonationDetailInteractorOutputMock: DonationDetailInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -3130,6 +3242,18 @@ class DonationDetailPresentationMock: DonationDetailPresentation, Mock {
 
 
 
+    func didClickGithub() {
+        addInvocation(.m_didClickGithub)
+		let perform = methodPerformValue(.m_didClickGithub) as? () -> Void
+		perform?()
+    }
+
+    func dicClickTwitter() {
+        addInvocation(.m_dicClickTwitter)
+		let perform = methodPerformValue(.m_dicClickTwitter) as? () -> Void
+		perform?()
+    }
+
     func didClickDonate() {
         addInvocation(.m_didClickDonate)
 		let perform = methodPerformValue(.m_didClickDonate) as? () -> Void
@@ -3180,6 +3304,8 @@ class DonationDetailPresentationMock: DonationDetailPresentation, Mock {
 
 
     fileprivate enum MethodType {
+        case m_didClickGithub
+        case m_dicClickTwitter
         case m_didClickDonate
         case m_didClickGoPinSetting
         case m_didClickGoWalletSelect
@@ -3197,6 +3323,10 @@ class DonationDetailPresentationMock: DonationDetailPresentation, Mock {
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Bool {
             switch (lhs, rhs) {
+            case (.m_didClickGithub, .m_didClickGithub):
+                return true 
+            case (.m_dicClickTwitter, .m_dicClickTwitter):
+                return true 
             case (.m_didClickDonate, .m_didClickDonate):
                 return true 
             case (.m_didClickGoPinSetting, .m_didClickGoPinSetting):
@@ -3225,6 +3355,8 @@ class DonationDetailPresentationMock: DonationDetailPresentation, Mock {
 
         func intValue() -> Int {
             switch self {
+            case .m_didClickGithub: return 0
+            case .m_dicClickTwitter: return 0
             case .m_didClickDonate: return 0
             case .m_didClickGoPinSetting: return 0
             case .m_didClickGoWalletSelect: return 0
@@ -3266,6 +3398,8 @@ class DonationDetailPresentationMock: DonationDetailPresentation, Mock {
     struct Verify {
         fileprivate var method: MethodType
 
+        static func didClickGithub() -> Verify { return Verify(method: .m_didClickGithub)}
+        static func dicClickTwitter() -> Verify { return Verify(method: .m_dicClickTwitter)}
         static func didClickDonate() -> Verify { return Verify(method: .m_didClickDonate)}
         static func didClickGoPinSetting() -> Verify { return Verify(method: .m_didClickGoPinSetting)}
         static func didClickGoWalletSelect() -> Verify { return Verify(method: .m_didClickGoWalletSelect)}
@@ -3286,6 +3420,12 @@ class DonationDetailPresentationMock: DonationDetailPresentation, Mock {
         fileprivate var method: MethodType
         var performs: Any
 
+        static func didClickGithub(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_didClickGithub, performs: perform)
+        }
+        static func dicClickTwitter(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_dicClickTwitter, performs: perform)
+        }
         static func didClickDonate(perform: @escaping () -> Void) -> Perform {
             return Perform(method: .m_didClickDonate, performs: perform)
         }
@@ -3323,7 +3463,7 @@ class DonationDetailPresentationMock: DonationDetailPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -3465,7 +3605,7 @@ class DonationDetailUseCaseMock: DonationDetailUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -3698,7 +3838,7 @@ class DonationDetailViewMock: DonationDetailView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -3825,6 +3965,12 @@ class DonationDetailWireframeMock: DonationDetailWireframe, Mock, StaticMock {
 		perform?()
     }
 
+    func openUrl(_ urlString: String) {
+        addInvocation(.m_openUrl__urlString(Parameter<String>.value(`urlString`)))
+		let perform = methodPerformValue(.m_openUrl__urlString(Parameter<String>.value(`urlString`))) as? (String) -> Void
+		perform?(`urlString`)
+    }
+
     fileprivate enum StaticMethodType {
         case sm_assembleModule__developer(Parameter<Developer>)
 
@@ -3894,6 +4040,7 @@ class DonationDetailWireframeMock: DonationDetailWireframe, Mock, StaticMock {
         case m_presentSendAmount__sendTransaction_sendTransaction(Parameter<SendTransaction>)
         case m_presentSetting
         case m_presentWalletSelect
+        case m_openUrl__urlString(Parameter<String>)
         case p_viewController_get
 		case p_viewController_set(Parameter<UIViewController?>)
 
@@ -3906,6 +4053,9 @@ class DonationDetailWireframeMock: DonationDetailWireframe, Mock, StaticMock {
                 return true 
             case (.m_presentWalletSelect, .m_presentWalletSelect):
                 return true 
+            case (.m_openUrl__urlString(let lhsUrlstring), .m_openUrl__urlString(let rhsUrlstring)):
+                guard Parameter.compare(lhs: lhsUrlstring, rhs: rhsUrlstring, with: matcher) else { return false } 
+                return true 
             case (.p_viewController_get,.p_viewController_get): return true
 			case (.p_viewController_set(let left),.p_viewController_set(let right)): return Parameter<UIViewController?>.compare(lhs: left, rhs: right, with: matcher)
             default: return false
@@ -3917,6 +4067,7 @@ class DonationDetailWireframeMock: DonationDetailWireframe, Mock, StaticMock {
             case let .m_presentSendAmount__sendTransaction_sendTransaction(p0): return p0.intValue
             case .m_presentSetting: return 0
             case .m_presentWalletSelect: return 0
+            case let .m_openUrl__urlString(p0): return p0.intValue
             case .p_viewController_get: return 0
 			case .p_viewController_set(let newValue): return newValue.intValue
             }
@@ -3943,6 +4094,9 @@ class DonationDetailWireframeMock: DonationDetailWireframe, Mock, StaticMock {
         static func presentSendAmount(sendTransaction: Parameter<SendTransaction>) -> Verify { return Verify(method: .m_presentSendAmount__sendTransaction_sendTransaction(`sendTransaction`))}
         static func presentSetting() -> Verify { return Verify(method: .m_presentSetting)}
         static func presentWalletSelect() -> Verify { return Verify(method: .m_presentWalletSelect)}
+        static func openUrl(_ urlString: Parameter<String>) -> Verify { return Verify(method: .m_openUrl__urlString(`urlString`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `urlString` label")
+		static func openUrl(urlString: Parameter<String>) -> Verify { return Verify(method: .m_openUrl__urlString(`urlString`))}
         static var viewController: Verify { return Verify(method: .p_viewController_get) }
 		static func viewController(set newValue: Parameter<UIViewController?>) -> Verify { return Verify(method: .p_viewController_set(newValue)) }
     }
@@ -3960,6 +4114,13 @@ class DonationDetailWireframeMock: DonationDetailWireframe, Mock, StaticMock {
         static func presentWalletSelect(perform: @escaping () -> Void) -> Perform {
             return Perform(method: .m_presentWalletSelect, performs: perform)
         }
+        static func openUrl(_ urlString: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
+            return Perform(method: .m_openUrl__urlString(`urlString`), performs: perform)
+        }
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `urlString` label")
+		static func openUrl(urlString: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
+            return Perform(method: .m_openUrl__urlString(`urlString`), performs: perform)
+        }
     }
 
     public func given(_ method: Given) {
@@ -3973,7 +4134,7 @@ class DonationDetailWireframeMock: DonationDetailWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -4028,7 +4189,7 @@ class DonationDetailWireframeMock: DonationDetailWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -4137,7 +4298,7 @@ class DonationTopInteractorOutputMock: DonationTopInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -4404,7 +4565,7 @@ class DonationTopPresentationMock: DonationTopPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -4546,7 +4707,7 @@ class DonationTopUseCaseMock: DonationTopUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -4730,7 +4891,7 @@ class DonationTopViewMock: DonationTopView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -4972,7 +5133,7 @@ class DonationTopWireframeMock: DonationTopWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -5027,7 +5188,7 @@ class DonationTopWireframeMock: DonationTopWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -5136,7 +5297,7 @@ class IntroductionConceptInteractorOutputMock: IntroductionConceptInteractorOutp
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -5417,7 +5578,7 @@ class IntroductionConceptPresentationMock: IntroductionConceptPresentation, Mock
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -5559,7 +5720,7 @@ class IntroductionConceptUseCaseMock: IntroductionConceptUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -5642,24 +5803,6 @@ class IntroductionConceptViewMock: IntroductionConceptView, Mock {
 
 
 
-    func showMessage(_ message: String) {
-        addInvocation(.m_showMessage__message(Parameter<String>.value(`message`)))
-		let perform = methodPerformValue(.m_showMessage__message(Parameter<String>.value(`message`))) as? (String) -> Void
-		perform?(`message`)
-    }
-
-    func showGetStarted() {
-        addInvocation(.m_showGetStarted)
-		let perform = methodPerformValue(.m_showGetStarted) as? () -> Void
-		perform?()
-    }
-
-    func hideGetStarted() {
-        addInvocation(.m_hideGetStarted)
-		let perform = methodPerformValue(.m_hideGetStarted) as? () -> Void
-		perform?()
-    }
-
     func showInfo(_ message: String) {
         addInvocation(.m_showInfo__message(Parameter<String>.value(`message`)))
 		let perform = methodPerformValue(.m_showInfo__message(Parameter<String>.value(`message`))) as? (String) -> Void
@@ -5674,9 +5817,6 @@ class IntroductionConceptViewMock: IntroductionConceptView, Mock {
 
 
     fileprivate enum MethodType {
-        case m_showMessage__message(Parameter<String>)
-        case m_showGetStarted
-        case m_hideGetStarted
         case m_showInfo__message(Parameter<String>)
         case m_showError__message(Parameter<String>)
         case p_presenter_get
@@ -5684,13 +5824,6 @@ class IntroductionConceptViewMock: IntroductionConceptView, Mock {
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Bool {
             switch (lhs, rhs) {
-            case (.m_showMessage__message(let lhsMessage), .m_showMessage__message(let rhsMessage)):
-                guard Parameter.compare(lhs: lhsMessage, rhs: rhsMessage, with: matcher) else { return false } 
-                return true 
-            case (.m_showGetStarted, .m_showGetStarted):
-                return true 
-            case (.m_hideGetStarted, .m_hideGetStarted):
-                return true 
             case (.m_showInfo__message(let lhsMessage), .m_showInfo__message(let rhsMessage)):
                 guard Parameter.compare(lhs: lhsMessage, rhs: rhsMessage, with: matcher) else { return false } 
                 return true 
@@ -5705,9 +5838,6 @@ class IntroductionConceptViewMock: IntroductionConceptView, Mock {
 
         func intValue() -> Int {
             switch self {
-            case let .m_showMessage__message(p0): return p0.intValue
-            case .m_showGetStarted: return 0
-            case .m_hideGetStarted: return 0
             case let .m_showInfo__message(p0): return p0.intValue
             case let .m_showError__message(p0): return p0.intValue
             case .p_presenter_get: return 0
@@ -5733,11 +5863,6 @@ class IntroductionConceptViewMock: IntroductionConceptView, Mock {
     struct Verify {
         fileprivate var method: MethodType
 
-        static func showMessage(_ message: Parameter<String>) -> Verify { return Verify(method: .m_showMessage__message(`message`))}
-        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `message` label")
-		static func showMessage(message: Parameter<String>) -> Verify { return Verify(method: .m_showMessage__message(`message`))}
-        static func showGetStarted() -> Verify { return Verify(method: .m_showGetStarted)}
-        static func hideGetStarted() -> Verify { return Verify(method: .m_hideGetStarted)}
         static func showInfo(_ message: Parameter<String>) -> Verify { return Verify(method: .m_showInfo__message(`message`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `message` label")
 		static func showInfo(message: Parameter<String>) -> Verify { return Verify(method: .m_showInfo__message(`message`))}
@@ -5752,19 +5877,6 @@ class IntroductionConceptViewMock: IntroductionConceptView, Mock {
         fileprivate var method: MethodType
         var performs: Any
 
-        static func showMessage(_ message: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
-            return Perform(method: .m_showMessage__message(`message`), performs: perform)
-        }
-        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `message` label")
-		static func showMessage(message: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
-            return Perform(method: .m_showMessage__message(`message`), performs: perform)
-        }
-        static func showGetStarted(perform: @escaping () -> Void) -> Perform {
-            return Perform(method: .m_showGetStarted, performs: perform)
-        }
-        static func hideGetStarted(perform: @escaping () -> Void) -> Perform {
-            return Perform(method: .m_hideGetStarted, performs: perform)
-        }
         static func showInfo(_ message: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
             return Perform(method: .m_showInfo__message(`message`), performs: perform)
         }
@@ -5792,7 +5904,7 @@ class IntroductionConceptViewMock: IntroductionConceptView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -6027,7 +6139,7 @@ class IntroductionConceptWireframeMock: IntroductionConceptWireframe, Mock, Stat
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -6082,7 +6194,7 @@ class IntroductionConceptWireframeMock: IntroductionConceptWireframe, Mock, Stat
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -6191,7 +6303,7 @@ class IntroductionMessageInteractorOutputMock: IntroductionMessageInteractorOutp
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -6451,7 +6563,7 @@ class IntroductionMessagePresentationMock: IntroductionMessagePresentation, Mock
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -6593,7 +6705,7 @@ class IntroductionMessageUseCaseMock: IntroductionMessageUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -6777,7 +6889,7 @@ class IntroductionMessageViewMock: IntroductionMessageView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -7012,7 +7124,7 @@ class IntroductionMessageWireframeMock: IntroductionMessageWireframe, Mock, Stat
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -7067,7 +7179,7 @@ class IntroductionMessageWireframeMock: IntroductionMessageWireframe, Mock, Stat
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -7176,7 +7288,7 @@ class MosaicDetailInteractorOutputMock: MosaicDetailInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -7436,7 +7548,7 @@ class MosaicDetailPresentationMock: MosaicDetailPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -7578,7 +7690,7 @@ class MosaicDetailUseCaseMock: MosaicDetailUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -7805,7 +7917,7 @@ class MosaicDetailViewMock: MosaicDetailView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -8051,7 +8163,7 @@ class MosaicDetailWireframeMock: MosaicDetailWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -8106,7 +8218,7 @@ class MosaicDetailWireframeMock: MosaicDetailWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -8308,7 +8420,7 @@ class MosaicListInteractorOutputMock: MosaicListInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -8575,7 +8687,7 @@ class MosaicListPresentationMock: MosaicListPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -8752,7 +8864,7 @@ class MosaicListUseCaseMock: MosaicListUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -9020,7 +9132,7 @@ class MosaicListViewMock: MosaicListView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -9241,7 +9353,7 @@ class MosaicListWireframeMock: MosaicListWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -9296,7 +9408,7 @@ class MosaicListWireframeMock: MosaicListWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -9405,7 +9517,7 @@ class NavigationDrawerInteractorOutputMock: NavigationDrawerInteractorOutput, Mo
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -9749,7 +9861,7 @@ class NavigationDrawerPresentationMock: NavigationDrawerPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -9891,7 +10003,7 @@ class NavigationDrawerUseCaseMock: NavigationDrawerUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -9980,12 +10092,6 @@ class NavigationDrawerViewMock: NavigationDrawerView, Mock {
 		perform?(`name`)
     }
 
-    func showAddress(_ address: String) {
-        addInvocation(.m_showAddress__address(Parameter<String>.value(`address`)))
-		let perform = methodPerformValue(.m_showAddress__address(Parameter<String>.value(`address`))) as? (String) -> Void
-		perform?(`address`)
-    }
-
     func showInfo(_ message: String) {
         addInvocation(.m_showInfo__message(Parameter<String>.value(`message`)))
 		let perform = methodPerformValue(.m_showInfo__message(Parameter<String>.value(`message`))) as? (String) -> Void
@@ -10001,7 +10107,6 @@ class NavigationDrawerViewMock: NavigationDrawerView, Mock {
 
     fileprivate enum MethodType {
         case m_showName__name(Parameter<String>)
-        case m_showAddress__address(Parameter<String>)
         case m_showInfo__message(Parameter<String>)
         case m_showError__message(Parameter<String>)
         case p_presenter_get
@@ -10011,9 +10116,6 @@ class NavigationDrawerViewMock: NavigationDrawerView, Mock {
             switch (lhs, rhs) {
             case (.m_showName__name(let lhsName), .m_showName__name(let rhsName)):
                 guard Parameter.compare(lhs: lhsName, rhs: rhsName, with: matcher) else { return false } 
-                return true 
-            case (.m_showAddress__address(let lhsAddress), .m_showAddress__address(let rhsAddress)):
-                guard Parameter.compare(lhs: lhsAddress, rhs: rhsAddress, with: matcher) else { return false } 
                 return true 
             case (.m_showInfo__message(let lhsMessage), .m_showInfo__message(let rhsMessage)):
                 guard Parameter.compare(lhs: lhsMessage, rhs: rhsMessage, with: matcher) else { return false } 
@@ -10030,7 +10132,6 @@ class NavigationDrawerViewMock: NavigationDrawerView, Mock {
         func intValue() -> Int {
             switch self {
             case let .m_showName__name(p0): return p0.intValue
-            case let .m_showAddress__address(p0): return p0.intValue
             case let .m_showInfo__message(p0): return p0.intValue
             case let .m_showError__message(p0): return p0.intValue
             case .p_presenter_get: return 0
@@ -10059,9 +10160,6 @@ class NavigationDrawerViewMock: NavigationDrawerView, Mock {
         static func showName(_ name: Parameter<String>) -> Verify { return Verify(method: .m_showName__name(`name`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `name` label")
 		static func showName(name: Parameter<String>) -> Verify { return Verify(method: .m_showName__name(`name`))}
-        static func showAddress(_ address: Parameter<String>) -> Verify { return Verify(method: .m_showAddress__address(`address`))}
-        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `address` label")
-		static func showAddress(address: Parameter<String>) -> Verify { return Verify(method: .m_showAddress__address(`address`))}
         static func showInfo(_ message: Parameter<String>) -> Verify { return Verify(method: .m_showInfo__message(`message`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `message` label")
 		static func showInfo(message: Parameter<String>) -> Verify { return Verify(method: .m_showInfo__message(`message`))}
@@ -10082,13 +10180,6 @@ class NavigationDrawerViewMock: NavigationDrawerView, Mock {
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `name` label")
 		static func showName(name: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
             return Perform(method: .m_showName__name(`name`), performs: perform)
-        }
-        static func showAddress(_ address: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
-            return Perform(method: .m_showAddress__address(`address`), performs: perform)
-        }
-        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `address` label")
-		static func showAddress(address: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
-            return Perform(method: .m_showAddress__address(`address`), performs: perform)
         }
         static func showInfo(_ message: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
             return Perform(method: .m_showInfo__message(`message`), performs: perform)
@@ -10117,7 +10208,7 @@ class NavigationDrawerViewMock: NavigationDrawerView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -10436,7 +10527,7 @@ class NavigationDrawerWireframeMock: NavigationDrawerWireframe, Mock, StaticMock
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -10491,7 +10582,7 @@ class NavigationDrawerWireframeMock: NavigationDrawerWireframe, Mock, StaticMock
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -10651,7 +10742,7 @@ class NodeSelectInteractorOutputMock: NodeSelectInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -10918,7 +11009,7 @@ class NodeSelectPresentationMock: NodeSelectPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -11074,7 +11165,7 @@ class NodeSelectUseCaseMock: NodeSelectUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -11328,7 +11419,7 @@ class NodeSelectViewMock: NodeSelectView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -11549,7 +11640,7 @@ class NodeSelectWireframeMock: NodeSelectWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -11604,7 +11695,7 @@ class NodeSelectWireframeMock: NodeSelectWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -11674,30 +11765,32 @@ class PinDialogInteractorOutputMock: PinDialogInteractorOutput, Mock {
 
 
 
-    func pinValidated(_ result: Bool) {
-        addInvocation(.m_pinValidated__result(Parameter<Bool>.value(`result`)))
-		let perform = methodPerformValue(.m_pinValidated__result(Parameter<Bool>.value(`result`))) as? (Bool) -> Void
-		perform?(`result`)
+    func pinValidated(_ result: Bool, _ pin: String) {
+        addInvocation(.m_pinValidated__result_pin(Parameter<Bool>.value(`result`), Parameter<String>.value(`pin`)))
+		let perform = methodPerformValue(.m_pinValidated__result_pin(Parameter<Bool>.value(`result`), Parameter<String>.value(`pin`))) as? (Bool, String) -> Void
+		perform?(`result`, `pin`)
     }
 
-    func pinRegistered(_ result: Bool) {
-        addInvocation(.m_pinRegistered__result(Parameter<Bool>.value(`result`)))
-		let perform = methodPerformValue(.m_pinRegistered__result(Parameter<Bool>.value(`result`))) as? (Bool) -> Void
-		perform?(`result`)
+    func pinRegistered(_ result: Bool, _ pin: String) {
+        addInvocation(.m_pinRegistered__result_pin(Parameter<Bool>.value(`result`), Parameter<String>.value(`pin`)))
+		let perform = methodPerformValue(.m_pinRegistered__result_pin(Parameter<Bool>.value(`result`), Parameter<String>.value(`pin`))) as? (Bool, String) -> Void
+		perform?(`result`, `pin`)
     }
 
 
     fileprivate enum MethodType {
-        case m_pinValidated__result(Parameter<Bool>)
-        case m_pinRegistered__result(Parameter<Bool>)
+        case m_pinValidated__result_pin(Parameter<Bool>, Parameter<String>)
+        case m_pinRegistered__result_pin(Parameter<Bool>, Parameter<String>)
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Bool {
             switch (lhs, rhs) {
-            case (.m_pinValidated__result(let lhsResult), .m_pinValidated__result(let rhsResult)):
+            case (.m_pinValidated__result_pin(let lhsResult, let lhsPin), .m_pinValidated__result_pin(let rhsResult, let rhsPin)):
                 guard Parameter.compare(lhs: lhsResult, rhs: rhsResult, with: matcher) else { return false } 
+                guard Parameter.compare(lhs: lhsPin, rhs: rhsPin, with: matcher) else { return false } 
                 return true 
-            case (.m_pinRegistered__result(let lhsResult), .m_pinRegistered__result(let rhsResult)):
+            case (.m_pinRegistered__result_pin(let lhsResult, let lhsPin), .m_pinRegistered__result_pin(let rhsResult, let rhsPin)):
                 guard Parameter.compare(lhs: lhsResult, rhs: rhsResult, with: matcher) else { return false } 
+                guard Parameter.compare(lhs: lhsPin, rhs: rhsPin, with: matcher) else { return false } 
                 return true 
             default: return false
             }
@@ -11705,8 +11798,8 @@ class PinDialogInteractorOutputMock: PinDialogInteractorOutput, Mock {
 
         func intValue() -> Int {
             switch self {
-            case let .m_pinValidated__result(p0): return p0.intValue
-            case let .m_pinRegistered__result(p0): return p0.intValue
+            case let .m_pinValidated__result_pin(p0, p1): return p0.intValue + p1.intValue
+            case let .m_pinRegistered__result_pin(p0, p1): return p0.intValue + p1.intValue
             }
         }
     }
@@ -11725,31 +11818,31 @@ class PinDialogInteractorOutputMock: PinDialogInteractorOutput, Mock {
     struct Verify {
         fileprivate var method: MethodType
 
-        static func pinValidated(_ result: Parameter<Bool>) -> Verify { return Verify(method: .m_pinValidated__result(`result`))}
-        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `result` label")
-		static func pinValidated(result: Parameter<Bool>) -> Verify { return Verify(method: .m_pinValidated__result(`result`))}
-        static func pinRegistered(_ result: Parameter<Bool>) -> Verify { return Verify(method: .m_pinRegistered__result(`result`))}
-        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `result` label")
-		static func pinRegistered(result: Parameter<Bool>) -> Verify { return Verify(method: .m_pinRegistered__result(`result`))}
+        static func pinValidated(_ result: Parameter<Bool>, _ pin: Parameter<String>) -> Verify { return Verify(method: .m_pinValidated__result_pin(`result`, `pin`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `result` label, remove `pin` label")
+		static func pinValidated(result: Parameter<Bool>, pin: Parameter<String>) -> Verify { return Verify(method: .m_pinValidated__result_pin(`result`, `pin`))}
+        static func pinRegistered(_ result: Parameter<Bool>, _ pin: Parameter<String>) -> Verify { return Verify(method: .m_pinRegistered__result_pin(`result`, `pin`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `result` label, remove `pin` label")
+		static func pinRegistered(result: Parameter<Bool>, pin: Parameter<String>) -> Verify { return Verify(method: .m_pinRegistered__result_pin(`result`, `pin`))}
     }
 
     struct Perform {
         fileprivate var method: MethodType
         var performs: Any
 
-        static func pinValidated(_ result: Parameter<Bool>, perform: @escaping (Bool) -> Void) -> Perform {
-            return Perform(method: .m_pinValidated__result(`result`), performs: perform)
+        static func pinValidated(_ result: Parameter<Bool>, _ pin: Parameter<String>, perform: @escaping (Bool, String) -> Void) -> Perform {
+            return Perform(method: .m_pinValidated__result_pin(`result`, `pin`), performs: perform)
         }
-        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `result` label")
-		static func pinValidated(result: Parameter<Bool>, perform: @escaping (Bool) -> Void) -> Perform {
-            return Perform(method: .m_pinValidated__result(`result`), performs: perform)
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `result` label, remove `pin` label")
+		static func pinValidated(result: Parameter<Bool>, pin: Parameter<String>, perform: @escaping (Bool, String) -> Void) -> Perform {
+            return Perform(method: .m_pinValidated__result_pin(`result`, `pin`), performs: perform)
         }
-        static func pinRegistered(_ result: Parameter<Bool>, perform: @escaping (Bool) -> Void) -> Perform {
-            return Perform(method: .m_pinRegistered__result(`result`), performs: perform)
+        static func pinRegistered(_ result: Parameter<Bool>, _ pin: Parameter<String>, perform: @escaping (Bool, String) -> Void) -> Perform {
+            return Perform(method: .m_pinRegistered__result_pin(`result`, `pin`), performs: perform)
         }
-        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `result` label")
-		static func pinRegistered(result: Parameter<Bool>, perform: @escaping (Bool) -> Void) -> Perform {
-            return Perform(method: .m_pinRegistered__result(`result`), performs: perform)
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `result` label, remove `pin` label")
+		static func pinRegistered(result: Parameter<Bool>, pin: Parameter<String>, perform: @escaping (Bool, String) -> Void) -> Perform {
+            return Perform(method: .m_pinRegistered__result_pin(`result`, `pin`), performs: perform)
         }
     }
 
@@ -11764,7 +11857,7 @@ class PinDialogInteractorOutputMock: PinDialogInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -11865,6 +11958,12 @@ class PinDialogPresentationMock: PinDialogPresentation, Mock {
 		perform?(`number`)
     }
 
+    func didClickDelete() {
+        addInvocation(.m_didClickDelete)
+		let perform = methodPerformValue(.m_didClickDelete) as? () -> Void
+		perform?()
+    }
+
     func didClickCancel() {
         addInvocation(.m_didClickCancel)
 		let perform = methodPerformValue(.m_didClickCancel) as? () -> Void
@@ -11904,6 +12003,7 @@ class PinDialogPresentationMock: PinDialogPresentation, Mock {
 
     fileprivate enum MethodType {
         case m_didClickNumber__number(Parameter<Int>)
+        case m_didClickDelete
         case m_didClickCancel
         case m_viewDidLoad
         case m_viewWillAppear
@@ -11921,6 +12021,8 @@ class PinDialogPresentationMock: PinDialogPresentation, Mock {
             switch (lhs, rhs) {
             case (.m_didClickNumber__number(let lhsNumber), .m_didClickNumber__number(let rhsNumber)):
                 guard Parameter.compare(lhs: lhsNumber, rhs: rhsNumber, with: matcher) else { return false } 
+                return true 
+            case (.m_didClickDelete, .m_didClickDelete):
                 return true 
             case (.m_didClickCancel, .m_didClickCancel):
                 return true 
@@ -11947,6 +12049,7 @@ class PinDialogPresentationMock: PinDialogPresentation, Mock {
         func intValue() -> Int {
             switch self {
             case let .m_didClickNumber__number(p0): return p0.intValue
+            case .m_didClickDelete: return 0
             case .m_didClickCancel: return 0
             case .m_viewDidLoad: return 0
             case .m_viewWillAppear: return 0
@@ -11989,6 +12092,7 @@ class PinDialogPresentationMock: PinDialogPresentation, Mock {
         static func didClickNumber(_ number: Parameter<Int>) -> Verify { return Verify(method: .m_didClickNumber__number(`number`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `number` label")
 		static func didClickNumber(number: Parameter<Int>) -> Verify { return Verify(method: .m_didClickNumber__number(`number`))}
+        static func didClickDelete() -> Verify { return Verify(method: .m_didClickDelete)}
         static func didClickCancel() -> Verify { return Verify(method: .m_didClickCancel)}
         static func viewDidLoad() -> Verify { return Verify(method: .m_viewDidLoad)}
         static func viewWillAppear() -> Verify { return Verify(method: .m_viewWillAppear)}
@@ -12013,6 +12117,9 @@ class PinDialogPresentationMock: PinDialogPresentation, Mock {
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `number` label")
 		static func didClickNumber(number: Parameter<Int>, perform: @escaping (Int) -> Void) -> Perform {
             return Perform(method: .m_didClickNumber__number(`number`), performs: perform)
+        }
+        static func didClickDelete(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_didClickDelete, performs: perform)
         }
         static func didClickCancel(perform: @escaping () -> Void) -> Perform {
             return Perform(method: .m_didClickCancel, performs: perform)
@@ -12045,7 +12152,7 @@ class PinDialogPresentationMock: PinDialogPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -12230,7 +12337,7 @@ class PinDialogUseCaseMock: PinDialogUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -12505,7 +12612,7 @@ class PinDialogViewMock: PinDialogView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -12752,7 +12859,7 @@ class PinDialogWireframeMock: PinDialogWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -12807,7 +12914,7 @@ class PinDialogWireframeMock: PinDialogWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -12967,7 +13074,7 @@ class ScanTabInteractorOutputMock: ScanTabInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -13304,7 +13411,7 @@ class ScanTabPresentationMock: ScanTabPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -13467,7 +13574,7 @@ class ScanTabUseCaseMock: ScanTabUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -13756,7 +13863,7 @@ class ScanTabViewMock: ScanTabView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -14068,7 +14175,7 @@ class ScanTabWireframeMock: ScanTabWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -14123,7 +14230,7 @@ class ScanTabWireframeMock: ScanTabWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -14205,10 +14312,24 @@ class SendAmountInteractorOutputMock: SendAmountInteractorOutput, Mock {
 		perform?(`error`)
     }
 
+    func rateFetched(_ rate: Decimal) {
+        addInvocation(.m_rateFetched__rate(Parameter<Decimal>.value(`rate`)))
+		let perform = methodPerformValue(.m_rateFetched__rate(Parameter<Decimal>.value(`rate`))) as? (Decimal) -> Void
+		perform?(`rate`)
+    }
+
+    func rateFetchFailed(_ error: Error) {
+        addInvocation(.m_rateFetchFailed__error(Parameter<Error>.value(`error`)))
+		let perform = methodPerformValue(.m_rateFetchFailed__error(Parameter<Error>.value(`error`))) as? (Error) -> Void
+		perform?(`error`)
+    }
+
 
     fileprivate enum MethodType {
         case m_mosaicOwnedFetched__mosaics(Parameter<[MosaicDetail]>)
         case m_mosaicOwnedFetchFailed__error(Parameter<Error>)
+        case m_rateFetched__rate(Parameter<Decimal>)
+        case m_rateFetchFailed__error(Parameter<Error>)
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Bool {
             switch (lhs, rhs) {
@@ -14216,6 +14337,12 @@ class SendAmountInteractorOutputMock: SendAmountInteractorOutput, Mock {
                 guard Parameter.compare(lhs: lhsMosaics, rhs: rhsMosaics, with: matcher) else { return false } 
                 return true 
             case (.m_mosaicOwnedFetchFailed__error(let lhsError), .m_mosaicOwnedFetchFailed__error(let rhsError)):
+                guard Parameter.compare(lhs: lhsError, rhs: rhsError, with: matcher) else { return false } 
+                return true 
+            case (.m_rateFetched__rate(let lhsRate), .m_rateFetched__rate(let rhsRate)):
+                guard Parameter.compare(lhs: lhsRate, rhs: rhsRate, with: matcher) else { return false } 
+                return true 
+            case (.m_rateFetchFailed__error(let lhsError), .m_rateFetchFailed__error(let rhsError)):
                 guard Parameter.compare(lhs: lhsError, rhs: rhsError, with: matcher) else { return false } 
                 return true 
             default: return false
@@ -14226,6 +14353,8 @@ class SendAmountInteractorOutputMock: SendAmountInteractorOutput, Mock {
             switch self {
             case let .m_mosaicOwnedFetched__mosaics(p0): return p0.intValue
             case let .m_mosaicOwnedFetchFailed__error(p0): return p0.intValue
+            case let .m_rateFetched__rate(p0): return p0.intValue
+            case let .m_rateFetchFailed__error(p0): return p0.intValue
             }
         }
     }
@@ -14250,6 +14379,12 @@ class SendAmountInteractorOutputMock: SendAmountInteractorOutput, Mock {
         static func mosaicOwnedFetchFailed(_ error: Parameter<Error>) -> Verify { return Verify(method: .m_mosaicOwnedFetchFailed__error(`error`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `error` label")
 		static func mosaicOwnedFetchFailed(error: Parameter<Error>) -> Verify { return Verify(method: .m_mosaicOwnedFetchFailed__error(`error`))}
+        static func rateFetched(_ rate: Parameter<Decimal>) -> Verify { return Verify(method: .m_rateFetched__rate(`rate`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `rate` label")
+		static func rateFetched(rate: Parameter<Decimal>) -> Verify { return Verify(method: .m_rateFetched__rate(`rate`))}
+        static func rateFetchFailed(_ error: Parameter<Error>) -> Verify { return Verify(method: .m_rateFetchFailed__error(`error`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `error` label")
+		static func rateFetchFailed(error: Parameter<Error>) -> Verify { return Verify(method: .m_rateFetchFailed__error(`error`))}
     }
 
     struct Perform {
@@ -14270,6 +14405,20 @@ class SendAmountInteractorOutputMock: SendAmountInteractorOutput, Mock {
 		static func mosaicOwnedFetchFailed(error: Parameter<Error>, perform: @escaping (Error) -> Void) -> Perform {
             return Perform(method: .m_mosaicOwnedFetchFailed__error(`error`), performs: perform)
         }
+        static func rateFetched(_ rate: Parameter<Decimal>, perform: @escaping (Decimal) -> Void) -> Perform {
+            return Perform(method: .m_rateFetched__rate(`rate`), performs: perform)
+        }
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `rate` label")
+		static func rateFetched(rate: Parameter<Decimal>, perform: @escaping (Decimal) -> Void) -> Perform {
+            return Perform(method: .m_rateFetched__rate(`rate`), performs: perform)
+        }
+        static func rateFetchFailed(_ error: Parameter<Error>, perform: @escaping (Error) -> Void) -> Perform {
+            return Perform(method: .m_rateFetchFailed__error(`error`), performs: perform)
+        }
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `error` label")
+		static func rateFetchFailed(error: Parameter<Error>, perform: @escaping (Error) -> Void) -> Perform {
+            return Perform(method: .m_rateFetchFailed__error(`error`), performs: perform)
+        }
     }
 
     public func given(_ method: Given) {
@@ -14283,7 +14432,7 @@ class SendAmountInteractorOutputMock: SendAmountInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -14697,7 +14846,7 @@ class SendAmountPresentationMock: SendAmountPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -14786,9 +14935,16 @@ class SendAmountUseCaseMock: SendAmountUseCase, Mock {
 		perform?(`address`)
     }
 
+    func fetchRate(_ currency: Currency) {
+        addInvocation(.m_fetchRate__currency(Parameter<Currency>.value(`currency`)))
+		let perform = methodPerformValue(.m_fetchRate__currency(Parameter<Currency>.value(`currency`))) as? (Currency) -> Void
+		perform?(`currency`)
+    }
+
 
     fileprivate enum MethodType {
         case m_fetchMosaicOwned__address(Parameter<String>)
+        case m_fetchRate__currency(Parameter<Currency>)
         case p_output_get
 		case p_output_set(Parameter<SendAmountInteractorOutput?>)
 
@@ -14796,6 +14952,9 @@ class SendAmountUseCaseMock: SendAmountUseCase, Mock {
             switch (lhs, rhs) {
             case (.m_fetchMosaicOwned__address(let lhsAddress), .m_fetchMosaicOwned__address(let rhsAddress)):
                 guard Parameter.compare(lhs: lhsAddress, rhs: rhsAddress, with: matcher) else { return false } 
+                return true 
+            case (.m_fetchRate__currency(let lhsCurrency), .m_fetchRate__currency(let rhsCurrency)):
+                guard Parameter.compare(lhs: lhsCurrency, rhs: rhsCurrency, with: matcher) else { return false } 
                 return true 
             case (.p_output_get,.p_output_get): return true
 			case (.p_output_set(let left),.p_output_set(let right)): return Parameter<SendAmountInteractorOutput?>.compare(lhs: left, rhs: right, with: matcher)
@@ -14806,6 +14965,7 @@ class SendAmountUseCaseMock: SendAmountUseCase, Mock {
         func intValue() -> Int {
             switch self {
             case let .m_fetchMosaicOwned__address(p0): return p0.intValue
+            case let .m_fetchRate__currency(p0): return p0.intValue
             case .p_output_get: return 0
 			case .p_output_set(let newValue): return newValue.intValue
             }
@@ -14832,6 +14992,9 @@ class SendAmountUseCaseMock: SendAmountUseCase, Mock {
         static func fetchMosaicOwned(_ address: Parameter<String>) -> Verify { return Verify(method: .m_fetchMosaicOwned__address(`address`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `address` label")
 		static func fetchMosaicOwned(address: Parameter<String>) -> Verify { return Verify(method: .m_fetchMosaicOwned__address(`address`))}
+        static func fetchRate(_ currency: Parameter<Currency>) -> Verify { return Verify(method: .m_fetchRate__currency(`currency`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `currency` label")
+		static func fetchRate(currency: Parameter<Currency>) -> Verify { return Verify(method: .m_fetchRate__currency(`currency`))}
         static var output: Verify { return Verify(method: .p_output_get) }
 		static func output(set newValue: Parameter<SendAmountInteractorOutput?>) -> Verify { return Verify(method: .p_output_set(newValue)) }
     }
@@ -14847,6 +15010,13 @@ class SendAmountUseCaseMock: SendAmountUseCase, Mock {
 		static func fetchMosaicOwned(address: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
             return Perform(method: .m_fetchMosaicOwned__address(`address`), performs: perform)
         }
+        static func fetchRate(_ currency: Parameter<Currency>, perform: @escaping (Currency) -> Void) -> Perform {
+            return Perform(method: .m_fetchRate__currency(`currency`), performs: perform)
+        }
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `currency` label")
+		static func fetchRate(currency: Parameter<Currency>, perform: @escaping (Currency) -> Void) -> Perform {
+            return Perform(method: .m_fetchRate__currency(`currency`), performs: perform)
+        }
     }
 
     public func given(_ method: Given) {
@@ -14860,7 +15030,7 @@ class SendAmountUseCaseMock: SendAmountUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -14961,10 +15131,10 @@ class SendAmountViewMock: SendAmountView, Mock {
 		perform?()
     }
 
-    func setAmounts(_ amounts: [String]) {
-        addInvocation(.m_setAmounts__amounts(Parameter<[String]>.value(`amounts`)))
-		let perform = methodPerformValue(.m_setAmounts__amounts(Parameter<[String]>.value(`amounts`))) as? ([String]) -> Void
-		perform?(`amounts`)
+    func setSendMosaicDescriptions(_ mosaicDescriptions: [SendMosaicDescription]) {
+        addInvocation(.m_setSendMosaicDescriptions__mosaicDescriptions(Parameter<[SendMosaicDescription]>.value(`mosaicDescriptions`)))
+		let perform = methodPerformValue(.m_setSendMosaicDescriptions__mosaicDescriptions(Parameter<[SendMosaicDescription]>.value(`mosaicDescriptions`))) as? ([SendMosaicDescription]) -> Void
+		perform?(`mosaicDescriptions`)
     }
 
     func setFormula(_ formula: String) {
@@ -15014,7 +15184,7 @@ class SendAmountViewMock: SendAmountView, Mock {
         case m_showAmount
         case m_showMosaic
         case m_showFirstAmountPage
-        case m_setAmounts__amounts(Parameter<[String]>)
+        case m_setSendMosaicDescriptions__mosaicDescriptions(Parameter<[SendMosaicDescription]>)
         case m_setFormula__formula(Parameter<String>)
         case m_showLoading
         case m_showMosaicWithXem
@@ -15033,8 +15203,8 @@ class SendAmountViewMock: SendAmountView, Mock {
                 return true 
             case (.m_showFirstAmountPage, .m_showFirstAmountPage):
                 return true 
-            case (.m_setAmounts__amounts(let lhsAmounts), .m_setAmounts__amounts(let rhsAmounts)):
-                guard Parameter.compare(lhs: lhsAmounts, rhs: rhsAmounts, with: matcher) else { return false } 
+            case (.m_setSendMosaicDescriptions__mosaicDescriptions(let lhsMosaicdescriptions), .m_setSendMosaicDescriptions__mosaicDescriptions(let rhsMosaicdescriptions)):
+                guard Parameter.compare(lhs: lhsMosaicdescriptions, rhs: rhsMosaicdescriptions, with: matcher) else { return false } 
                 return true 
             case (.m_setFormula__formula(let lhsFormula), .m_setFormula__formula(let rhsFormula)):
                 guard Parameter.compare(lhs: lhsFormula, rhs: rhsFormula, with: matcher) else { return false } 
@@ -15067,7 +15237,7 @@ class SendAmountViewMock: SendAmountView, Mock {
             case .m_showAmount: return 0
             case .m_showMosaic: return 0
             case .m_showFirstAmountPage: return 0
-            case let .m_setAmounts__amounts(p0): return p0.intValue
+            case let .m_setSendMosaicDescriptions__mosaicDescriptions(p0): return p0.intValue
             case let .m_setFormula__formula(p0): return p0.intValue
             case .m_showLoading: return 0
             case .m_showMosaicWithXem: return 0
@@ -15101,9 +15271,9 @@ class SendAmountViewMock: SendAmountView, Mock {
         static func showAmount() -> Verify { return Verify(method: .m_showAmount)}
         static func showMosaic() -> Verify { return Verify(method: .m_showMosaic)}
         static func showFirstAmountPage() -> Verify { return Verify(method: .m_showFirstAmountPage)}
-        static func setAmounts(_ amounts: Parameter<[String]>) -> Verify { return Verify(method: .m_setAmounts__amounts(`amounts`))}
-        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `amounts` label")
-		static func setAmounts(amounts: Parameter<[String]>) -> Verify { return Verify(method: .m_setAmounts__amounts(`amounts`))}
+        static func setSendMosaicDescriptions(_ mosaicDescriptions: Parameter<[SendMosaicDescription]>) -> Verify { return Verify(method: .m_setSendMosaicDescriptions__mosaicDescriptions(`mosaicDescriptions`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `mosaicDescriptions` label")
+		static func setSendMosaicDescriptions(mosaicDescriptions: Parameter<[SendMosaicDescription]>) -> Verify { return Verify(method: .m_setSendMosaicDescriptions__mosaicDescriptions(`mosaicDescriptions`))}
         static func setFormula(_ formula: Parameter<String>) -> Verify { return Verify(method: .m_setFormula__formula(`formula`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `formula` label")
 		static func setFormula(formula: Parameter<String>) -> Verify { return Verify(method: .m_setFormula__formula(`formula`))}
@@ -15136,12 +15306,12 @@ class SendAmountViewMock: SendAmountView, Mock {
         static func showFirstAmountPage(perform: @escaping () -> Void) -> Perform {
             return Perform(method: .m_showFirstAmountPage, performs: perform)
         }
-        static func setAmounts(_ amounts: Parameter<[String]>, perform: @escaping ([String]) -> Void) -> Perform {
-            return Perform(method: .m_setAmounts__amounts(`amounts`), performs: perform)
+        static func setSendMosaicDescriptions(_ mosaicDescriptions: Parameter<[SendMosaicDescription]>, perform: @escaping ([SendMosaicDescription]) -> Void) -> Perform {
+            return Perform(method: .m_setSendMosaicDescriptions__mosaicDescriptions(`mosaicDescriptions`), performs: perform)
         }
-        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `amounts` label")
-		static func setAmounts(amounts: Parameter<[String]>, perform: @escaping ([String]) -> Void) -> Perform {
-            return Perform(method: .m_setAmounts__amounts(`amounts`), performs: perform)
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `mosaicDescriptions` label")
+		static func setSendMosaicDescriptions(mosaicDescriptions: Parameter<[SendMosaicDescription]>, perform: @escaping ([SendMosaicDescription]) -> Void) -> Perform {
+            return Perform(method: .m_setSendMosaicDescriptions__mosaicDescriptions(`mosaicDescriptions`), performs: perform)
         }
         static func setFormula(_ formula: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
             return Perform(method: .m_setFormula__formula(`formula`), performs: perform)
@@ -15193,7 +15363,7 @@ class SendAmountViewMock: SendAmountView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -15446,7 +15616,7 @@ class SendAmountWireframeMock: SendAmountWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -15501,7 +15671,7 @@ class SendAmountWireframeMock: SendAmountWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -15571,6 +15741,18 @@ class SendConfirmationInteractorOutputMock: SendConfirmationInteractorOutput, Mo
 
 
 
+    func mosaicSupplyListFetched(_ mosaicSupplyList: [MosaicSupply]) {
+        addInvocation(.m_mosaicSupplyListFetched__mosaicSupplyList(Parameter<[MosaicSupply]>.value(`mosaicSupplyList`)))
+		let perform = methodPerformValue(.m_mosaicSupplyListFetched__mosaicSupplyList(Parameter<[MosaicSupply]>.value(`mosaicSupplyList`))) as? ([MosaicSupply]) -> Void
+		perform?(`mosaicSupplyList`)
+    }
+
+    func mosaicSupplyListFetchFailed(_ error: Error) {
+        addInvocation(.m_mosaicSupplyListFetchFailed__error(Parameter<Error>.value(`error`)))
+		let perform = methodPerformValue(.m_mosaicSupplyListFetchFailed__error(Parameter<Error>.value(`error`))) as? (Error) -> Void
+		perform?(`error`)
+    }
+
     func transactionSent(_ result: NemAnnounceResult) {
         addInvocation(.m_transactionSent__result(Parameter<NemAnnounceResult>.value(`result`)))
 		let perform = methodPerformValue(.m_transactionSent__result(Parameter<NemAnnounceResult>.value(`result`))) as? (NemAnnounceResult) -> Void
@@ -15585,11 +15767,19 @@ class SendConfirmationInteractorOutputMock: SendConfirmationInteractorOutput, Mo
 
 
     fileprivate enum MethodType {
+        case m_mosaicSupplyListFetched__mosaicSupplyList(Parameter<[MosaicSupply]>)
+        case m_mosaicSupplyListFetchFailed__error(Parameter<Error>)
         case m_transactionSent__result(Parameter<NemAnnounceResult>)
         case m_transactionSendFailed__error(Parameter<Error>)
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Bool {
             switch (lhs, rhs) {
+            case (.m_mosaicSupplyListFetched__mosaicSupplyList(let lhsMosaicsupplylist), .m_mosaicSupplyListFetched__mosaicSupplyList(let rhsMosaicsupplylist)):
+                guard Parameter.compare(lhs: lhsMosaicsupplylist, rhs: rhsMosaicsupplylist, with: matcher) else { return false } 
+                return true 
+            case (.m_mosaicSupplyListFetchFailed__error(let lhsError), .m_mosaicSupplyListFetchFailed__error(let rhsError)):
+                guard Parameter.compare(lhs: lhsError, rhs: rhsError, with: matcher) else { return false } 
+                return true 
             case (.m_transactionSent__result(let lhsResult), .m_transactionSent__result(let rhsResult)):
                 guard Parameter.compare(lhs: lhsResult, rhs: rhsResult, with: matcher) else { return false } 
                 return true 
@@ -15602,6 +15792,8 @@ class SendConfirmationInteractorOutputMock: SendConfirmationInteractorOutput, Mo
 
         func intValue() -> Int {
             switch self {
+            case let .m_mosaicSupplyListFetched__mosaicSupplyList(p0): return p0.intValue
+            case let .m_mosaicSupplyListFetchFailed__error(p0): return p0.intValue
             case let .m_transactionSent__result(p0): return p0.intValue
             case let .m_transactionSendFailed__error(p0): return p0.intValue
             }
@@ -15622,6 +15814,12 @@ class SendConfirmationInteractorOutputMock: SendConfirmationInteractorOutput, Mo
     struct Verify {
         fileprivate var method: MethodType
 
+        static func mosaicSupplyListFetched(_ mosaicSupplyList: Parameter<[MosaicSupply]>) -> Verify { return Verify(method: .m_mosaicSupplyListFetched__mosaicSupplyList(`mosaicSupplyList`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `mosaicSupplyList` label")
+		static func mosaicSupplyListFetched(mosaicSupplyList: Parameter<[MosaicSupply]>) -> Verify { return Verify(method: .m_mosaicSupplyListFetched__mosaicSupplyList(`mosaicSupplyList`))}
+        static func mosaicSupplyListFetchFailed(_ error: Parameter<Error>) -> Verify { return Verify(method: .m_mosaicSupplyListFetchFailed__error(`error`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `error` label")
+		static func mosaicSupplyListFetchFailed(error: Parameter<Error>) -> Verify { return Verify(method: .m_mosaicSupplyListFetchFailed__error(`error`))}
         static func transactionSent(_ result: Parameter<NemAnnounceResult>) -> Verify { return Verify(method: .m_transactionSent__result(`result`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `result` label")
 		static func transactionSent(result: Parameter<NemAnnounceResult>) -> Verify { return Verify(method: .m_transactionSent__result(`result`))}
@@ -15634,6 +15832,20 @@ class SendConfirmationInteractorOutputMock: SendConfirmationInteractorOutput, Mo
         fileprivate var method: MethodType
         var performs: Any
 
+        static func mosaicSupplyListFetched(_ mosaicSupplyList: Parameter<[MosaicSupply]>, perform: @escaping ([MosaicSupply]) -> Void) -> Perform {
+            return Perform(method: .m_mosaicSupplyListFetched__mosaicSupplyList(`mosaicSupplyList`), performs: perform)
+        }
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `mosaicSupplyList` label")
+		static func mosaicSupplyListFetched(mosaicSupplyList: Parameter<[MosaicSupply]>, perform: @escaping ([MosaicSupply]) -> Void) -> Perform {
+            return Perform(method: .m_mosaicSupplyListFetched__mosaicSupplyList(`mosaicSupplyList`), performs: perform)
+        }
+        static func mosaicSupplyListFetchFailed(_ error: Parameter<Error>, perform: @escaping (Error) -> Void) -> Perform {
+            return Perform(method: .m_mosaicSupplyListFetchFailed__error(`error`), performs: perform)
+        }
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `error` label")
+		static func mosaicSupplyListFetchFailed(error: Parameter<Error>, perform: @escaping (Error) -> Void) -> Perform {
+            return Perform(method: .m_mosaicSupplyListFetchFailed__error(`error`), performs: perform)
+        }
         static func transactionSent(_ result: Parameter<NemAnnounceResult>, perform: @escaping (NemAnnounceResult) -> Void) -> Perform {
             return Perform(method: .m_transactionSent__result(`result`), performs: perform)
         }
@@ -15661,7 +15873,7 @@ class SendConfirmationInteractorOutputMock: SendConfirmationInteractorOutput, Mo
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -15991,7 +16203,7 @@ class SendConfirmationPresentationMock: SendConfirmationPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -16074,6 +16286,12 @@ class SendConfirmationUseCaseMock: SendConfirmationUseCase, Mock {
 
 
 
+    func fetchMosaicSupply(_ mosaicIds: [MosaicId]) {
+        addInvocation(.m_fetchMosaicSupply__mosaicIds(Parameter<[MosaicId]>.value(`mosaicIds`)))
+		let perform = methodPerformValue(.m_fetchMosaicSupply__mosaicIds(Parameter<[MosaicId]>.value(`mosaicIds`))) as? ([MosaicId]) -> Void
+		perform?(`mosaicIds`)
+    }
+
     func sendTransaction(_ request: [UInt8], _ keyPair: KeyPair) {
         addInvocation(.m_sendTransaction__request_keyPair(Parameter<[UInt8]>.value(`request`), Parameter<KeyPair>.value(`keyPair`)))
 		let perform = methodPerformValue(.m_sendTransaction__request_keyPair(Parameter<[UInt8]>.value(`request`), Parameter<KeyPair>.value(`keyPair`))) as? ([UInt8], KeyPair) -> Void
@@ -16082,12 +16300,16 @@ class SendConfirmationUseCaseMock: SendConfirmationUseCase, Mock {
 
 
     fileprivate enum MethodType {
+        case m_fetchMosaicSupply__mosaicIds(Parameter<[MosaicId]>)
         case m_sendTransaction__request_keyPair(Parameter<[UInt8]>, Parameter<KeyPair>)
         case p_output_get
 		case p_output_set(Parameter<SendConfirmationInteractorOutput?>)
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Bool {
             switch (lhs, rhs) {
+            case (.m_fetchMosaicSupply__mosaicIds(let lhsMosaicids), .m_fetchMosaicSupply__mosaicIds(let rhsMosaicids)):
+                guard Parameter.compare(lhs: lhsMosaicids, rhs: rhsMosaicids, with: matcher) else { return false } 
+                return true 
             case (.m_sendTransaction__request_keyPair(let lhsRequest, let lhsKeypair), .m_sendTransaction__request_keyPair(let rhsRequest, let rhsKeypair)):
                 guard Parameter.compare(lhs: lhsRequest, rhs: rhsRequest, with: matcher) else { return false } 
                 guard Parameter.compare(lhs: lhsKeypair, rhs: rhsKeypair, with: matcher) else { return false } 
@@ -16100,6 +16322,7 @@ class SendConfirmationUseCaseMock: SendConfirmationUseCase, Mock {
 
         func intValue() -> Int {
             switch self {
+            case let .m_fetchMosaicSupply__mosaicIds(p0): return p0.intValue
             case let .m_sendTransaction__request_keyPair(p0, p1): return p0.intValue + p1.intValue
             case .p_output_get: return 0
 			case .p_output_set(let newValue): return newValue.intValue
@@ -16124,6 +16347,9 @@ class SendConfirmationUseCaseMock: SendConfirmationUseCase, Mock {
     struct Verify {
         fileprivate var method: MethodType
 
+        static func fetchMosaicSupply(_ mosaicIds: Parameter<[MosaicId]>) -> Verify { return Verify(method: .m_fetchMosaicSupply__mosaicIds(`mosaicIds`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `mosaicIds` label")
+		static func fetchMosaicSupply(mosaicIds: Parameter<[MosaicId]>) -> Verify { return Verify(method: .m_fetchMosaicSupply__mosaicIds(`mosaicIds`))}
         static func sendTransaction(_ request: Parameter<[UInt8]>, _ keyPair: Parameter<KeyPair>) -> Verify { return Verify(method: .m_sendTransaction__request_keyPair(`request`, `keyPair`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `request` label, remove `keyPair` label")
 		static func sendTransaction(request: Parameter<[UInt8]>, keyPair: Parameter<KeyPair>) -> Verify { return Verify(method: .m_sendTransaction__request_keyPair(`request`, `keyPair`))}
@@ -16135,6 +16361,13 @@ class SendConfirmationUseCaseMock: SendConfirmationUseCase, Mock {
         fileprivate var method: MethodType
         var performs: Any
 
+        static func fetchMosaicSupply(_ mosaicIds: Parameter<[MosaicId]>, perform: @escaping ([MosaicId]) -> Void) -> Perform {
+            return Perform(method: .m_fetchMosaicSupply__mosaicIds(`mosaicIds`), performs: perform)
+        }
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `mosaicIds` label")
+		static func fetchMosaicSupply(mosaicIds: Parameter<[MosaicId]>, perform: @escaping ([MosaicId]) -> Void) -> Perform {
+            return Perform(method: .m_fetchMosaicSupply__mosaicIds(`mosaicIds`), performs: perform)
+        }
         static func sendTransaction(_ request: Parameter<[UInt8]>, _ keyPair: Parameter<KeyPair>, perform: @escaping ([UInt8], KeyPair) -> Void) -> Perform {
             return Perform(method: .m_sendTransaction__request_keyPair(`request`, `keyPair`), performs: perform)
         }
@@ -16155,7 +16388,7 @@ class SendConfirmationUseCaseMock: SendConfirmationUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -16514,7 +16747,7 @@ class SendConfirmationViewMock: SendConfirmationView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -16760,7 +16993,7 @@ class SendConfirmationWireframeMock: SendConfirmationWireframe, Mock, StaticMock
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -16815,7 +17048,7 @@ class SendConfirmationWireframeMock: SendConfirmationWireframe, Mock, StaticMock
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -16924,7 +17157,7 @@ class SendEndInteractorOutputMock: SendEndInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -17198,7 +17431,7 @@ class SendEndPresentationMock: SendEndPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -17340,7 +17573,7 @@ class SendEndUseCaseMock: SendEndUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -17524,7 +17757,7 @@ class SendEndViewMock: SendEndView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -17773,7 +18006,7 @@ class SendEndWireframeMock: SendEndWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -17828,7 +18061,7 @@ class SendEndWireframeMock: SendEndWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -17937,7 +18170,7 @@ class SendMessageInteractorOutputMock: SendMessageInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -18232,7 +18465,7 @@ class SendMessagePresentationMock: SendMessagePresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -18348,7 +18581,7 @@ class SendMessageTypeInteractorOutputMock: SendMessageTypeInteractorOutput, Mock
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -18443,15 +18676,15 @@ class SendMessageTypePresentationMock: SendMessageTypePresentation, Mock {
 
 
 
-    func didClickStandard() {
-        addInvocation(.m_didClickStandard)
-		let perform = methodPerformValue(.m_didClickStandard) as? () -> Void
-		perform?()
+    func didSelectPage(_ index: Int) {
+        addInvocation(.m_didSelectPage__index(Parameter<Int>.value(`index`)))
+		let perform = methodPerformValue(.m_didSelectPage__index(Parameter<Int>.value(`index`))) as? (Int) -> Void
+		perform?(`index`)
     }
 
-    func didClickEncryption() {
-        addInvocation(.m_didClickEncryption)
-		let perform = methodPerformValue(.m_didClickEncryption) as? () -> Void
+    func didClickOk() {
+        addInvocation(.m_didClickOk)
+		let perform = methodPerformValue(.m_didClickOk) as? () -> Void
 		perform?()
     }
 
@@ -18493,8 +18726,8 @@ class SendMessageTypePresentationMock: SendMessageTypePresentation, Mock {
 
 
     fileprivate enum MethodType {
-        case m_didClickStandard
-        case m_didClickEncryption
+        case m_didSelectPage__index(Parameter<Int>)
+        case m_didClickOk
         case m_didConfirmMessage__message(Parameter<String>)
         case m_viewDidLoad
         case m_viewWillAppear
@@ -18510,9 +18743,10 @@ class SendMessageTypePresentationMock: SendMessageTypePresentation, Mock {
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Bool {
             switch (lhs, rhs) {
-            case (.m_didClickStandard, .m_didClickStandard):
+            case (.m_didSelectPage__index(let lhsIndex), .m_didSelectPage__index(let rhsIndex)):
+                guard Parameter.compare(lhs: lhsIndex, rhs: rhsIndex, with: matcher) else { return false } 
                 return true 
-            case (.m_didClickEncryption, .m_didClickEncryption):
+            case (.m_didClickOk, .m_didClickOk):
                 return true 
             case (.m_didConfirmMessage__message(let lhsMessage), .m_didConfirmMessage__message(let rhsMessage)):
                 guard Parameter.compare(lhs: lhsMessage, rhs: rhsMessage, with: matcher) else { return false } 
@@ -18539,8 +18773,8 @@ class SendMessageTypePresentationMock: SendMessageTypePresentation, Mock {
 
         func intValue() -> Int {
             switch self {
-            case .m_didClickStandard: return 0
-            case .m_didClickEncryption: return 0
+            case let .m_didSelectPage__index(p0): return p0.intValue
+            case .m_didClickOk: return 0
             case let .m_didConfirmMessage__message(p0): return p0.intValue
             case .m_viewDidLoad: return 0
             case .m_viewWillAppear: return 0
@@ -18580,8 +18814,10 @@ class SendMessageTypePresentationMock: SendMessageTypePresentation, Mock {
     struct Verify {
         fileprivate var method: MethodType
 
-        static func didClickStandard() -> Verify { return Verify(method: .m_didClickStandard)}
-        static func didClickEncryption() -> Verify { return Verify(method: .m_didClickEncryption)}
+        static func didSelectPage(_ index: Parameter<Int>) -> Verify { return Verify(method: .m_didSelectPage__index(`index`))}
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `index` label")
+		static func didSelectPage(index: Parameter<Int>) -> Verify { return Verify(method: .m_didSelectPage__index(`index`))}
+        static func didClickOk() -> Verify { return Verify(method: .m_didClickOk)}
         static func didConfirmMessage(_ message: Parameter<String>) -> Verify { return Verify(method: .m_didConfirmMessage__message(`message`))}
         @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `message` label")
 		static func didConfirmMessage(message: Parameter<String>) -> Verify { return Verify(method: .m_didConfirmMessage__message(`message`))}
@@ -18602,11 +18838,15 @@ class SendMessageTypePresentationMock: SendMessageTypePresentation, Mock {
         fileprivate var method: MethodType
         var performs: Any
 
-        static func didClickStandard(perform: @escaping () -> Void) -> Perform {
-            return Perform(method: .m_didClickStandard, performs: perform)
+        static func didSelectPage(_ index: Parameter<Int>, perform: @escaping (Int) -> Void) -> Perform {
+            return Perform(method: .m_didSelectPage__index(`index`), performs: perform)
         }
-        static func didClickEncryption(perform: @escaping () -> Void) -> Perform {
-            return Perform(method: .m_didClickEncryption, performs: perform)
+        @available(*, deprecated, message: "This constructor is deprecated, and will be removed in v3.1 Possible fix:  remove `index` label")
+		static func didSelectPage(index: Parameter<Int>, perform: @escaping (Int) -> Void) -> Perform {
+            return Perform(method: .m_didSelectPage__index(`index`), performs: perform)
+        }
+        static func didClickOk(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_didClickOk, performs: perform)
         }
         static func didConfirmMessage(_ message: Parameter<String>, perform: @escaping (String) -> Void) -> Perform {
             return Perform(method: .m_didConfirmMessage__message(`message`), performs: perform)
@@ -18643,7 +18883,7 @@ class SendMessageTypePresentationMock: SendMessageTypePresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -18785,7 +19025,7 @@ class SendMessageTypeUseCaseMock: SendMessageTypeUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -18983,7 +19223,7 @@ class SendMessageTypeViewMock: SendMessageTypeView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -19236,7 +19476,7 @@ class SendMessageTypeWireframeMock: SendMessageTypeWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -19291,7 +19531,7 @@ class SendMessageTypeWireframeMock: SendMessageTypeWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -19426,7 +19666,7 @@ class SendMessageUseCaseMock: SendMessageUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -19659,7 +19899,7 @@ class SendMessageViewMock: SendMessageView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -19913,7 +20153,7 @@ class SendMessageWireframeMock: SendMessageWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -19968,7 +20208,7 @@ class SendMessageWireframeMock: SendMessageWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -20077,7 +20317,7 @@ class SendModeInteractorOutputMock: SendModeInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -20172,15 +20412,15 @@ class SendModePresentationMock: SendModePresentation, Mock {
 
 
 
-    func didClickStandard() {
-        addInvocation(.m_didClickStandard)
-		let perform = methodPerformValue(.m_didClickStandard) as? () -> Void
+    func didClickAttach() {
+        addInvocation(.m_didClickAttach)
+		let perform = methodPerformValue(.m_didClickAttach) as? () -> Void
 		perform?()
     }
 
-    func didClickMessage() {
-        addInvocation(.m_didClickMessage)
-		let perform = methodPerformValue(.m_didClickMessage) as? () -> Void
+    func didClickNotAttach() {
+        addInvocation(.m_didClickNotAttach)
+		let perform = methodPerformValue(.m_didClickNotAttach) as? () -> Void
 		perform?()
     }
 
@@ -20216,8 +20456,8 @@ class SendModePresentationMock: SendModePresentation, Mock {
 
 
     fileprivate enum MethodType {
-        case m_didClickStandard
-        case m_didClickMessage
+        case m_didClickAttach
+        case m_didClickNotAttach
         case m_viewDidLoad
         case m_viewWillAppear
         case m_viewDidAppear
@@ -20232,9 +20472,9 @@ class SendModePresentationMock: SendModePresentation, Mock {
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Bool {
             switch (lhs, rhs) {
-            case (.m_didClickStandard, .m_didClickStandard):
+            case (.m_didClickAttach, .m_didClickAttach):
                 return true 
-            case (.m_didClickMessage, .m_didClickMessage):
+            case (.m_didClickNotAttach, .m_didClickNotAttach):
                 return true 
             case (.m_viewDidLoad, .m_viewDidLoad):
                 return true 
@@ -20258,8 +20498,8 @@ class SendModePresentationMock: SendModePresentation, Mock {
 
         func intValue() -> Int {
             switch self {
-            case .m_didClickStandard: return 0
-            case .m_didClickMessage: return 0
+            case .m_didClickAttach: return 0
+            case .m_didClickNotAttach: return 0
             case .m_viewDidLoad: return 0
             case .m_viewWillAppear: return 0
             case .m_viewDidAppear: return 0
@@ -20298,8 +20538,8 @@ class SendModePresentationMock: SendModePresentation, Mock {
     struct Verify {
         fileprivate var method: MethodType
 
-        static func didClickStandard() -> Verify { return Verify(method: .m_didClickStandard)}
-        static func didClickMessage() -> Verify { return Verify(method: .m_didClickMessage)}
+        static func didClickAttach() -> Verify { return Verify(method: .m_didClickAttach)}
+        static func didClickNotAttach() -> Verify { return Verify(method: .m_didClickNotAttach)}
         static func viewDidLoad() -> Verify { return Verify(method: .m_viewDidLoad)}
         static func viewWillAppear() -> Verify { return Verify(method: .m_viewWillAppear)}
         static func viewDidAppear() -> Verify { return Verify(method: .m_viewDidAppear)}
@@ -20317,11 +20557,11 @@ class SendModePresentationMock: SendModePresentation, Mock {
         fileprivate var method: MethodType
         var performs: Any
 
-        static func didClickStandard(perform: @escaping () -> Void) -> Perform {
-            return Perform(method: .m_didClickStandard, performs: perform)
+        static func didClickAttach(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_didClickAttach, performs: perform)
         }
-        static func didClickMessage(perform: @escaping () -> Void) -> Perform {
-            return Perform(method: .m_didClickMessage, performs: perform)
+        static func didClickNotAttach(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_didClickNotAttach, performs: perform)
         }
         static func viewDidLoad(perform: @escaping () -> Void) -> Perform {
             return Perform(method: .m_viewDidLoad, performs: perform)
@@ -20351,7 +20591,7 @@ class SendModePresentationMock: SendModePresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -20493,7 +20733,7 @@ class SendModeUseCaseMock: SendModeUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -20677,7 +20917,7 @@ class SendModeViewMock: SendModeView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -20951,7 +21191,7 @@ class SendModeWireframeMock: SendModeWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -21006,7 +21246,7 @@ class SendModeWireframeMock: SendModeWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -21115,7 +21355,7 @@ class SettingTopInteractorOutputMock: SettingTopInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -21222,6 +21462,12 @@ class SettingTopPresentationMock: SettingTopPresentation, Mock {
 		perform?()
     }
 
+    func didClickCurrencySelect() {
+        addInvocation(.m_didClickCurrencySelect)
+		let perform = methodPerformValue(.m_didClickCurrencySelect) as? () -> Void
+		perform?()
+    }
+
     func didClickNotificationSetting() {
         addInvocation(.m_didClickNotificationSetting)
 		let perform = methodPerformValue(.m_didClickNotificationSetting) as? () -> Void
@@ -21310,6 +21556,7 @@ class SettingTopPresentationMock: SettingTopPresentation, Mock {
     fileprivate enum MethodType {
         case m_didClickNodeSelect
         case m_didClickLanguageSelect
+        case m_didClickCurrencySelect
         case m_didClickNotificationSetting
         case m_didClickChangePassword
         case m_didRegisterPin__pin(Parameter<String>)
@@ -21336,6 +21583,8 @@ class SettingTopPresentationMock: SettingTopPresentation, Mock {
             case (.m_didClickNodeSelect, .m_didClickNodeSelect):
                 return true 
             case (.m_didClickLanguageSelect, .m_didClickLanguageSelect):
+                return true 
+            case (.m_didClickCurrencySelect, .m_didClickCurrencySelect):
                 return true 
             case (.m_didClickNotificationSetting, .m_didClickNotificationSetting):
                 return true 
@@ -21383,6 +21632,7 @@ class SettingTopPresentationMock: SettingTopPresentation, Mock {
             switch self {
             case .m_didClickNodeSelect: return 0
             case .m_didClickLanguageSelect: return 0
+            case .m_didClickCurrencySelect: return 0
             case .m_didClickNotificationSetting: return 0
             case .m_didClickChangePassword: return 0
             case let .m_didRegisterPin__pin(p0): return p0.intValue
@@ -21432,6 +21682,7 @@ class SettingTopPresentationMock: SettingTopPresentation, Mock {
 
         static func didClickNodeSelect() -> Verify { return Verify(method: .m_didClickNodeSelect)}
         static func didClickLanguageSelect() -> Verify { return Verify(method: .m_didClickLanguageSelect)}
+        static func didClickCurrencySelect() -> Verify { return Verify(method: .m_didClickCurrencySelect)}
         static func didClickNotificationSetting() -> Verify { return Verify(method: .m_didClickNotificationSetting)}
         static func didClickChangePassword() -> Verify { return Verify(method: .m_didClickChangePassword)}
         static func didRegisterPin(_ pin: Parameter<String>) -> Verify { return Verify(method: .m_didRegisterPin__pin(`pin`))}
@@ -21471,6 +21722,9 @@ class SettingTopPresentationMock: SettingTopPresentation, Mock {
         }
         static func didClickLanguageSelect(perform: @escaping () -> Void) -> Perform {
             return Perform(method: .m_didClickLanguageSelect, performs: perform)
+        }
+        static func didClickCurrencySelect(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_didClickCurrencySelect, performs: perform)
         }
         static func didClickNotificationSetting(perform: @escaping () -> Void) -> Perform {
             return Perform(method: .m_didClickNotificationSetting, performs: perform)
@@ -21543,7 +21797,7 @@ class SettingTopPresentationMock: SettingTopPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -21685,7 +21939,7 @@ class SettingTopUseCaseMock: SettingTopUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -21981,7 +22235,7 @@ class SettingTopViewMock: SettingTopView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -22230,7 +22484,7 @@ class SettingTopWireframeMock: SettingTopWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -22285,7 +22539,7 @@ class SettingTopWireframeMock: SettingTopWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -22445,7 +22699,7 @@ class TransactionDetailInteractorOutputMock: TransactionDetailInteractorOutput, 
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -22761,7 +23015,7 @@ class TransactionDetailPresentationMock: TransactionDetailPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -22924,7 +23178,7 @@ class TransactionDetailUseCaseMock: TransactionDetailUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -23240,7 +23494,7 @@ class TransactionDetailViewMock: TransactionDetailView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -23472,7 +23726,7 @@ class TransactionDetailWireframeMock: TransactionDetailWireframe, Mock, StaticMo
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -23527,7 +23781,7 @@ class TransactionDetailWireframeMock: TransactionDetailWireframe, Mock, StaticMo
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -23687,7 +23941,7 @@ class TransactionListInteractorOutputMock: TransactionListInteractorOutput, Mock
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -23982,7 +24236,7 @@ class TransactionListPresentationMock: TransactionListPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -24147,7 +24401,7 @@ class TransactionListUseCaseMock: TransactionListUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -24408,7 +24662,7 @@ class TransactionListViewMock: TransactionListView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -24650,7 +24904,7 @@ class TransactionListWireframeMock: TransactionListWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -24705,7 +24959,7 @@ class TransactionListWireframeMock: TransactionListWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
@@ -24865,7 +25119,7 @@ class WalletSelectInteractorOutputMock: WalletSelectInteractorOutput, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -25167,7 +25421,7 @@ class WalletSelectPresentationMock: WalletSelectPresentation, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -25358,7 +25612,7 @@ class WalletSelectUseCaseMock: WalletSelectUseCase, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -25598,7 +25852,7 @@ class WalletSelectViewMock: WalletSelectView, Mock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -25848,7 +26102,7 @@ class WalletSelectWireframeMock: WalletSelectWireframe, Mock, StaticMock {
 
     public func verify(_ method: Verify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     private func addInvocation(_ call: MethodType) {
@@ -25903,7 +26157,7 @@ class WalletSelectWireframeMock: WalletSelectWireframe, Mock, StaticMock {
 
     static public func verify(_ method: StaticVerify, count: Count = Count.moreOrEqual(to: 1), file: StaticString = #file, line: UInt = #line) {
         let invocations = matchingCalls(method.method)
-        MockyAssert(count.matches(invocations.count), "Expeced: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
+        MockyAssert(count.matches(invocations.count), "Expected: \(count) invocations of `\(method.method)`, but was: \(invocations.count)", file: file, line: line)
     }
 
     static private func addInvocation(_ call: StaticMethodType) {
