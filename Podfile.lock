@@ -128,11 +128,11 @@ PODS:
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
-  - Realm (3.13.1):
-    - Realm/Headers (= 3.13.1)
-  - Realm/Headers (3.13.1)
-  - RealmSwift (3.13.1):
-    - Realm (= 3.13.1)
+  - Realm (3.18.0):
+    - Realm/Headers (= 3.18.0)
+  - Realm/Headers (3.18.0)
+  - RealmSwift (3.18.0):
+    - Realm (= 3.18.0)
   - REFrostedViewController (2.4.8)
   - Result (4.1.0)
   - RxAtomic (4.4.0)
@@ -176,7 +176,7 @@ DEPENDENCIES:
   - Nuke (~> 7.0)
   - NVActivityIndicatorView
   - R.swift (~> 4.0.0)
-  - RealmSwift
+  - RealmSwift (~> 3.18.0)
   - REFrostedViewController (~> 2.4)
   - RxBlocking (~> 4.0)
   - RxCocoa (~> 4.0)
@@ -262,8 +262,8 @@ SPEC CHECKSUMS:
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
-  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
-  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  Realm: 7b3d04740facf45e958a514b466a32b04f1113d6
+  RealmSwift: c817b5f374668cf08f649afb05f55d92a787649c
   REFrostedViewController: a893b4979ba1f200c547aef9ff4c3fd5a18f5923
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
@@ -275,6 +275,6 @@ SPEC CHECKSUMS:
   XCGLogger: 4fc1bc0bdd5828cb8dc8da7a843536cda1bea8f3
   ZXingObjC: 2c95a0dc52daac69b23ec78fad8fa2fec05f8981
 
-PODFILE CHECKSUM: 1d4d2e2553f9672fe369ffd63b01f56534f86522
+PODFILE CHECKSUM: 9ec0dca0290274d757acb86da0f4f2f91febc77c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
