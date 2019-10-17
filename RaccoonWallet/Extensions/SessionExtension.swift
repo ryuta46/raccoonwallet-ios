@@ -8,7 +8,6 @@
 
 import APIKit
 import RxSwift
-import Result
 
 extension Session {
     func rx_send<T: Request>(_ request: T) -> Single<T.Response> {

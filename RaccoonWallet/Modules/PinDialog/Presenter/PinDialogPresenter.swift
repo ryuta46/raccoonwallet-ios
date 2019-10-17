@@ -41,7 +41,7 @@ class PinDialogPresenter : BasePresenter {
             if ApplicationSetting.shared.isEnabledBiometry {
                 PinPreference.shared.getForBiometrics(
                         onSuccess: { pin in
-                            self.pin = pin
+                            self.pin = String(pin.prefix(PinDialogPresenter.PIN_LENGTH))
                             DispatchQueue.main.async {
                                 self.proceed()
                             }
@@ -65,8 +65,10 @@ class PinDialogPresenter : BasePresenter {
 
 extension PinDialogPresenter : PinDialogPresentation {
     func didClickNumber(_ number: Int) {
-        pin += String(number)
-        proceed()
+        if (pin.count < PinDialogPresenter.PIN_LENGTH) {
+            pin += String(number)
+            proceed()
+        }
     }
     func didClickCancel() {
         router.dismiss(pin: nil, handler)
