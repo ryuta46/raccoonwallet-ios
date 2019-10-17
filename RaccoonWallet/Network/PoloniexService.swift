@@ -9,7 +9,6 @@
 import Foundation
 import APIKit
 import RxSwift
-import Result
 
 class PoloniexService {
     static let defaultURL = URL(string: "https://poloniex.com")!

@@ -6,7 +6,7 @@ target 'RaccoonWallet' do
   use_frameworks!
 
   # Pods for RaccoonWallet
-  pod "NemSwift"
+  pod "NemSwift", '~> 0.5.1'
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~> 4.0'
   pod 'R.swift', '~> 4.0.0'

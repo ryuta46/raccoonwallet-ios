@@ -1,10 +1,9 @@
 PODS:
-  - APIKit (4.0.0):
-    - Result (~> 4.0)
+  - APIKit (5.0.0)
   - BCryptSwift (1.1)
   - Crashlytics (3.10.9):
     - Fabric (~> 1.7.13)
-  - CryptoSwift (0.13.1)
+  - CryptoSwift (1.1.2)
   - DDMathParser (2.0.0)
   - DLRadioButton (1.4.12)
   - Fabric (1.7.13)
@@ -115,7 +114,7 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - NemSwift (0.5.0):
+  - NemSwift (0.5.1):
     - APIKit
     - CryptoSwift
   - Nuke (7.5.2)
@@ -134,7 +133,6 @@ PODS:
   - RealmSwift (3.18.0):
     - Realm (= 3.18.0)
   - REFrostedViewController (2.4.8)
-  - Result (4.1.0)
   - RxAtomic (4.4.0)
   - RxBlocking (4.4.0):
     - RxAtomic (~> 4.4)
@@ -172,7 +170,7 @@ DEPENDENCIES:
   - MaterialComponents/ShadowElevations
   - MaterialComponents/Snackbar
   - MaterialComponents/Tabs
-  - NemSwift
+  - NemSwift (~> 0.5.1)
   - Nuke (~> 7.0)
   - NVActivityIndicatorView
   - R.swift (~> 4.0.0)
@@ -215,7 +213,6 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - REFrostedViewController
-    - Result
     - RxAtomic
     - RxBlocking
     - RxCocoa
@@ -236,10 +233,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/davedelong/DDMathParser.git
 
 SPEC CHECKSUMS:
-  APIKit: 23ddce4be7eccd746d2ab3c62713cd80d5846d5a
+  APIKit: b27d79b022733b2f50e7a092e67c4cb9ea30f968
   BCryptSwift: f69992ea5685f6714260842c2770688043b89ab2
   Crashlytics: 55e24fc23989680285a21cb1146578d9d18e432c
-  CryptoSwift: ff68c35a53e03177d31aaa2c1e8b3e010aeed6cb
+  CryptoSwift: 31dacd1f13427439ddae5b5cbaae4c8dbc43047e
   DDMathParser: 74cddd0aa652cfed79e68fdd076f1ee63ab43a16
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
   Fabric: 25d0963b691fc97be566392243ff0ecef5a68338
@@ -256,7 +253,7 @@ SPEC CHECKSUMS:
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  NemSwift: f82bc378fb1eb76b81903d6bf945e1380e11b9f0
+  NemSwift: e28f3495e231d767284d3b1c9163431e80fe5932
   Nuke: 0350d346a688426e8f2331253ef28dc2fc4f6178
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
@@ -265,7 +262,6 @@ SPEC CHECKSUMS:
   Realm: 7b3d04740facf45e958a514b466a32b04f1113d6
   RealmSwift: c817b5f374668cf08f649afb05f55d92a787649c
   REFrostedViewController: a893b4979ba1f200c547aef9ff4c3fd5a18f5923
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxBlocking: 138ad53217434444d6eeeb4fb406a45431d92e31
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
@@ -275,6 +271,6 @@ SPEC CHECKSUMS:
   XCGLogger: 4fc1bc0bdd5828cb8dc8da7a843536cda1bea8f3
   ZXingObjC: 2c95a0dc52daac69b23ec78fad8fa2fec05f8981
 
-PODFILE CHECKSUM: 9ec0dca0290274d757acb86da0f4f2f91febc77c
+PODFILE CHECKSUM: a3a5806dd0c37e0a8b24b40272433cc230d52962
 
 COCOAPODS: 1.6.1
