@@ -6,12 +6,12 @@ target 'RaccoonWallet' do
   use_frameworks!
 
   # Pods for RaccoonWallet
-  pod "NemSwift"
+  pod "NemSwift", '~> 0.5.1'
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~> 4.0'
   pod 'R.swift', '~> 4.0.0'
   pod 'NVActivityIndicatorView'
-  pod 'RealmSwift'
+  pod 'RealmSwift', '~> 3.18.0'
   pod 'DLRadioButton', '~> 1.4'
   pod 'FontAwesome.swift'
   pod 'XCGLogger', '~> 6.0.4'
