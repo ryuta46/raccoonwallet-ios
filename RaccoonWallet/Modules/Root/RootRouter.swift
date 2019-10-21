@@ -43,6 +43,8 @@ class RootRouter: RootWireframe {
         if let frontViewController = frontViewController {
             navigationController.pushViewController(frontViewController, animated: false)
         }
+        
+        frostedViewController.modalPresentationStyle = .fullScreen
 
         return frostedViewController
     }
